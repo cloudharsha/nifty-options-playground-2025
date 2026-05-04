@@ -77,6 +77,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--entry-time", default="15:20")
     parser.add_argument("--exit-time", default="09:16")
     parser.add_argument("--brokerage-per-order", type=float, default=25.0)
+    parser.add_argument("--lot-size", type=int, default=65)
+    parser.add_argument("--lots", type=int, default=4)
+    parser.add_argument("--slippage-points-per-order", type=float, default=1.0)
     return parser.parse_args()
 
 
@@ -96,6 +99,10 @@ def round_to_nearest_50(price: float) -> int:
 
 def format_money(value: float) -> str:
     return f"{value:.2f}"
+
+
+def leg_pnl_after_slippage(raw_points_pnl: float, slippage_points_per_order: float) -> float:
+    return raw_points_pnl - (2 * slippage_points_per_order)
 
 
 def configure_logger(log_path: Path) -> logging.Logger:
@@ -221,6 +228,7 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
     entry_time_text = args.entry_time
     exit_time_text = args.exit_time
     round_trip_brokerage = args.brokerage_per_order * 4
+    contract_multiplier = args.lot_size * args.lots
 
     try:
         for entry_date in trading_days:
@@ -338,9 +346,15 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
                 )
                 continue
 
-            ce_pnl = ce_entry_row.open_value - ce_exit_row.open_value
-            pe_pnl = pe_entry_row.open_value - pe_exit_row.open_value
-            gross_pnl = ce_pnl + pe_pnl
+            ce_points_pnl = leg_pnl_after_slippage(
+                ce_entry_row.open_value - ce_exit_row.open_value,
+                args.slippage_points_per_order,
+            )
+            pe_points_pnl = leg_pnl_after_slippage(
+                pe_entry_row.open_value - pe_exit_row.open_value,
+                args.slippage_points_per_order,
+            )
+            gross_pnl = (ce_points_pnl + pe_points_pnl) * contract_multiplier
             brokerage = round_trip_brokerage
             net_pnl = gross_pnl - brokerage
 
@@ -435,6 +449,8 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
         "- ATM rule: nearest 50 using spot 15:20 open",
         "- Expiry rule: first weekly expiry strictly after entry date",
         "- Pricing rule: option open price at exact timestamps",
+        f"- Contract multiplier: {args.lot_size} x {args.lots} = {args.lot_size * args.lots} rupees per option point",
+        f"- Execution slippage: {format_money(args.slippage_points_per_order)} point per order, applied against every entry and exit",
         (
             f"- Brokerage rule: Rs {int(args.brokerage_per_order)} per order per leg, "
             f"Rs {int(args.brokerage_per_order * 4)} per completed straddle"
@@ -467,6 +483,7 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
             "## Remarks",
             "",
             "- The backtest uses exact timestamp matching for both entry and exit; no nearest-candle fallback is allowed.",
+            "- Profit/Loss without Brokerage includes the configured execution slippage but excludes brokerage.",
             "- The NIFTY spot file is the source of truth for the trading calendar.",
             "- `2025-10-21` is a special session that starts at `13:45`, which is why the `2025-10-20` trade is skipped.",
             "- `2025-12-30` is skipped because there is no later weekly expiry folder in the dataset.",
