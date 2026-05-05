@@ -3,7 +3,9 @@
 2025 NIFTY market data for backtesting:
 
 - expiry-wise NIFTY option contract candles in `Options_2025/`
-- 1-minute NIFTY 50 index candles in `nifty/`
+- derived 15-minute option contract candles in `Options_2025_15m/`
+- 1-minute and 15-minute NIFTY 50 index candles in `nifty/`
+- local conversion utilities in `scripts/`
 - FYERS helper scripts in `fyers-api/` to pull the index data again if needed
 
 ## Repo contents
@@ -47,11 +49,54 @@ Important behavior:
 - the strike ladder is typically in `50` point intervals
 - do not hardcode Thursday expiry; use the folder date as truth
 
+### `Options_2025_15m/`
+
+Derived 15-minute option contract data, grouped by the same expiry folders and filenames as `Options_2025/`.
+
+Generation command:
+
+```bash
+python3 scripts/build_options_2025_15m.py --clean-output
+```
+
+Structure:
+
+```text
+Options_2025_15m/
+  2025-01-02/
+    NIFTY_21600_CE_02_JAN_25.csv
+    NIFTY_21600_PE_02_JAN_25.csv
+    ...
+  2025-01-09/
+  ...
+  2025-12-30/
+```
+
+Schema:
+
+```csv
+timestamp,open,high,low,close,volume,oi
+```
+
+Aggregation rules:
+
+- the folder and filename layout mirrors `Options_2025/` exactly
+- timestamps are floored to 15-minute IST clock boundaries such as `09:15`, `09:30`, `09:45`, and `15:15`
+- `open` is the first 1-minute row in the bucket
+- `high` is the highest `high` in the bucket
+- `low` is the lowest `low` in the bucket
+- `close` is the last `close` in the bucket
+- `volume` is summed across the bucket
+- `oi` is taken from the last 1-minute row in the bucket
+- partial buckets are preserved when a contract starts late or has sparse source minutes
+- header-only source contracts remain header-only in `Options_2025_15m/`
+
 ### `nifty/`
 
 Underlying NIFTY 50 index candles for the same year.
 
 - file: `nifty/NIFTY50_INDEX_1m_2025.csv`
+- file: `nifty/NIFTY50_INDEX_15m_last_4y.csv`
 - `93,061` minute rows
 - date span: `2025-01-01T09:15:00+05:30` to `2025-12-31T15:29:00+05:30`
 
@@ -107,6 +152,7 @@ Practical loader assumptions:
 - do not assume every expiry has the same strike set
 - do not assume CE and PE files both exist for every strike, even though they usually do
 - do not assume all contracts have the same row count
+- if you use `Options_2025_15m/`, pair it with a 15-minute spot series and matching timestamps
 
 ## Backtesting
 
@@ -116,6 +162,7 @@ Both backtest scripts:
 - use exact option timestamps from `Options_2025/`
 - write outputs into `backtesting/results/`
 - support default runs and explicit parameter overrides
+- are intentionally unchanged by the 15-minute dataset build
 
 Current default execution assumptions:
 
@@ -231,10 +278,18 @@ Count option files in one expiry:
 find Options_2025/2025-01-02 -maxdepth 1 -type f -name '*.csv' | wc -l
 ```
 
+Build the 15-minute options dataset:
+
+```bash
+python3 scripts/build_options_2025_15m.py --clean-output
+```
+
 ## Summary
 
 The main testing model in this repository is:
 
 - `Options_2025/` = option contracts by expiry
-- `nifty/` = underlying index minute data
+- `Options_2025_15m/` = derived 15-minute option contracts by expiry
+- `nifty/` = underlying index data
+- `scripts/` = local conversion utilities
 - `fyers-api/` = data pull utilities
