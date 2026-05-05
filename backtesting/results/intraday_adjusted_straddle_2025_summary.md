@@ -11,7 +11,7 @@
 - Slippage: `1.00` point per order, applied against every executed entry and exit
 - Brokerage: `Rs 25` per order per leg
 - First-add band and target: `20%-30%`, target `25.00%` of the stronger-side value
-- Rebalance band and target: `70%-80%`, target `75.00%` combined with the retained weak-side short
+- Rebalance band and target: `65%-85%`, target `75.00%` combined with the retained weak-side short
 - Reversal rule: exit the smaller leg on the two-short side when the single-side value is `<= 100.00%` of the combined two-short side
 - Adjustments are symmetric for upside and downside moves
 - Final exit happens at the exact 15:20 open
@@ -24,176 +24,19 @@
 - Total Brokerage: `11600.00`
 - Profit/Loss without Brokerage: `188617.00`
 
+## Exception Trade Results
+
+- No of exception trades: `168`
+- No of exception adjustments before forced exit: `303`
+- Total Exception Profit/Loss: `-371870.00`
+- Total Exception Brokerage: `28150.00`
+- Exception Profit/Loss without Brokerage: `-343720.00`
+- Daywise file: `intraday_adjusted_straddle_2025_exception_daywise.csv`
+- Events file: `intraday_adjusted_straddle_2025_exception_events.csv`
+- These rows are not included in the main Results Summary totals.
+
 ## Exceptions
 
-- `2025-01-01`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 170.80-195.20 at 2025-01-01T12:22:00+05:30 while also having exact final exit timestamp 2025-01-01T15:20:00+05:30.
-- `2025-01-02`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 120.22-137.40 at 2025-01-02T09:56:00+05:30 while also having exact final exit timestamp 2025-01-02T15:20:00+05:30.
-- `2025-01-06`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 186.27-212.88 at 2025-01-06T10:43:00+05:30 while also having exact final exit timestamp 2025-01-06T15:20:00+05:30.
-- `2025-01-08`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 104.82-119.80 at 2025-01-08T10:44:00+05:30 while also having exact final exit timestamp 2025-01-08T15:20:00+05:30.
-- `2025-01-09`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 18.22-27.33 at 2025-01-09T10:48:00+05:30 while also having exact final exit timestamp 2025-01-09T15:20:00+05:30.
-- `2025-01-13`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 161.21-184.24 at 2025-01-13T14:36:00+05:30 while also having exact final exit timestamp 2025-01-13T15:20:00+05:30.
-- `2025-01-15`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 90.41-103.32 at 2025-01-15T10:47:00+05:30 while also having exact final exit timestamp 2025-01-15T15:20:00+05:30.
-- `2025-01-16`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 42.59-48.68 at 2025-01-16T09:44:00+05:30 while also having exact final exit timestamp 2025-01-16T15:20:00+05:30.
-- `2025-01-20`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 178.99-204.56 at 2025-01-20T11:33:00+05:30 while also having exact final exit timestamp 2025-01-20T15:20:00+05:30.
-- `2025-01-21`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 207.20-236.80 at 2025-01-21T10:22:00+05:30 while also having exact final exit timestamp 2025-01-21T15:20:00+05:30.
-- `2025-01-22`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 90.72-103.68 at 2025-01-22T13:41:00+05:30 while also having exact final exit timestamp 2025-01-22T15:20:00+05:30.
-- `2025-01-23`: `no_valid_first_add_candidate`. No OTM PE contract satisfied the value band 18.77-28.15 at 2025-01-23T09:36:00+05:30 while also having exact final exit timestamp 2025-01-23T15:20:00+05:30.
-- `2025-01-28`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 169.89-194.16 at 2025-01-28T12:55:00+05:30 while also having exact final exit timestamp 2025-01-28T15:20:00+05:30.
-- `2025-01-30`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 133.28-152.32 at 2025-01-30T10:11:00+05:30 while also having exact final exit timestamp 2025-01-30T15:20:00+05:30.
-- `2025-02-04`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 168.10-192.12 at 2025-02-04T13:35:00+05:30 while also having exact final exit timestamp 2025-02-04T15:20:00+05:30.
-- `2025-02-06`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 75.60-86.40 at 2025-02-06T09:56:00+05:30 while also having exact final exit timestamp 2025-02-06T15:20:00+05:30.
-- `2025-02-11`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 157.11-179.56 at 2025-02-11T13:05:00+05:30 while also having exact final exit timestamp 2025-02-11T15:20:00+05:30.
-- `2025-02-12`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 122.43-139.92 at 2025-02-12T09:58:00+05:30 while also having exact final exit timestamp 2025-02-12T15:20:00+05:30.
-- `2025-02-13`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 99.78-114.04 at 2025-02-13T09:33:00+05:30 while also having exact final exit timestamp 2025-02-13T15:20:00+05:30.
-- `2025-02-14`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 204.92-234.20 at 2025-02-14T12:23:00+05:30 while also having exact final exit timestamp 2025-02-14T15:20:00+05:30.
-- `2025-02-19`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 128.62-147.00 at 2025-02-19T09:50:00+05:30 while also having exact final exit timestamp 2025-02-19T15:20:00+05:30.
-- `2025-02-20`: `no_valid_first_add_candidate`. No OTM PE contract satisfied the value band 16.93-25.39 at 2025-02-20T09:38:00+05:30 while also having exact final exit timestamp 2025-02-20T15:20:00+05:30.
-- `2025-02-25`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 93.93-107.35 at 2025-02-25T09:50:00+05:30 while also having exact final exit timestamp 2025-02-25T15:20:00+05:30.
-- `2025-02-27`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 4.55-6.83 at 2025-02-27T11:39:00+05:30 while also having exact final exit timestamp 2025-02-27T15:20:00+05:30.
-- `2025-02-28`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 157.78-180.32 at 2025-02-28T12:54:00+05:30 while also having exact final exit timestamp 2025-02-28T15:20:00+05:30.
-- `2025-03-04`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 124.53-142.32 at 2025-03-04T11:07:00+05:30 while also having exact final exit timestamp 2025-03-04T15:20:00+05:30.
-- `2025-03-05`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 94.19-107.64 at 2025-03-05T11:35:00+05:30 while also having exact final exit timestamp 2025-03-05T15:20:00+05:30.
-- `2025-03-06`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 78.57-89.80 at 2025-03-06T09:48:00+05:30 while also having exact final exit timestamp 2025-03-06T15:20:00+05:30.
-- `2025-03-10`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 151.90-173.60 at 2025-03-10T14:30:00+05:30 while also having exact final exit timestamp 2025-03-10T15:20:00+05:30.
-- `2025-03-11`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 139.51-159.44 at 2025-03-11T10:58:00+05:30 while also having exact final exit timestamp 2025-03-11T15:20:00+05:30.
-- `2025-03-12`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 88.48-101.12 at 2025-03-12T11:38:00+05:30 while also having exact final exit timestamp 2025-03-12T15:20:00+05:30.
-- `2025-03-13`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 13.12-19.68 at 2025-03-13T09:31:00+05:30 while also having exact final exit timestamp 2025-03-13T15:20:00+05:30.
-- `2025-03-18`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 136.88-156.44 at 2025-03-18T10:45:00+05:30 while also having exact final exit timestamp 2025-03-18T15:20:00+05:30.
-- `2025-03-19`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 95.86-109.55 at 2025-03-19T14:49:00+05:30 while also having exact final exit timestamp 2025-03-19T15:20:00+05:30.
-- `2025-03-20`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 16.17-24.25 at 2025-03-20T10:07:00+05:30 while also having exact final exit timestamp 2025-03-20T15:20:00+05:30.
-- `2025-03-21`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 162.75-186.00 at 2025-03-21T10:48:00+05:30 while also having exact final exit timestamp 2025-03-21T15:20:00+05:30.
-- `2025-03-24`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 165.20-188.80 at 2025-03-24T12:19:00+05:30 while also having exact final exit timestamp 2025-03-24T15:20:00+05:30.
-- `2025-03-25`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 161.91-185.04 at 2025-03-25T09:53:00+05:30 while also having exact final exit timestamp 2025-03-25T15:20:00+05:30.
-- `2025-03-26`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 102.20-116.80 at 2025-03-26T13:08:00+05:30 while also having exact final exit timestamp 2025-03-26T15:20:00+05:30.
-- `2025-03-27`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 63.10-72.12 at 2025-03-27T10:05:00+05:30 while also having exact final exit timestamp 2025-03-27T15:20:00+05:30.
-- `2025-04-01`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 132.54-151.48 at 2025-04-01T10:32:00+05:30 while also having exact final exit timestamp 2025-04-01T15:20:00+05:30.
-- `2025-04-02`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 87.11-99.56 at 2025-04-02T15:03:00+05:30 while also having exact final exit timestamp 2025-04-02T15:20:00+05:30.
-- `2025-04-03`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 11.93-17.89 at 2025-04-03T09:46:00+05:30 while also having exact final exit timestamp 2025-04-03T15:20:00+05:30.
-- `2025-04-04`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 166.21-189.96 at 2025-04-04T10:14:00+05:30 while also having exact final exit timestamp 2025-04-04T15:20:00+05:30.
-- `2025-04-08`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 176.71-201.96 at 2025-04-08T10:18:00+05:30 while also having exact final exit timestamp 2025-04-08T15:20:00+05:30.
-- `2025-04-09`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 29.47-33.68 at 2025-04-09T11:04:00+05:30 while also having exact final exit timestamp 2025-04-09T15:20:00+05:30.
-- `2025-04-16`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 81.90-93.60 at 2025-04-16T10:22:00+05:30 while also having exact final exit timestamp 2025-04-16T15:20:00+05:30.
-- `2025-04-17`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 71.96-82.24 at 2025-04-17T09:43:00+05:30 while also having exact final exit timestamp 2025-04-17T15:20:00+05:30.
-- `2025-04-21`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 171.22-195.68 at 2025-04-21T10:57:00+05:30 while also having exact final exit timestamp 2025-04-21T15:20:00+05:30.
-- `2025-04-23`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 108.43-123.92 at 2025-04-23T10:15:00+05:30 while also having exact final exit timestamp 2025-04-23T15:20:00+05:30.
-- `2025-04-24`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 67.97-77.68 at 2025-04-24T09:35:00+05:30 while also having exact final exit timestamp 2025-04-24T15:20:00+05:30.
-- `2025-04-25`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 233.97-267.40 at 2025-04-25T10:01:00+05:30 while also having exact final exit timestamp 2025-04-25T15:20:00+05:30.
-- `2025-04-28`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 157.64-180.16 at 2025-04-28T09:40:00+05:30 while also having exact final exit timestamp 2025-04-28T15:20:00+05:30.
-- `2025-04-29`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 93.62-107.00 at 2025-04-29T10:31:00+05:30 while also having exact final exit timestamp 2025-04-29T15:20:00+05:30.
-- `2025-04-30`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 45.78-52.32 at 2025-04-30T09:37:00+05:30 while also having exact final exit timestamp 2025-04-30T15:20:00+05:30.
-- `2025-05-02`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 213.19-243.64 at 2025-05-02T12:17:00+05:30 while also having exact final exit timestamp 2025-05-02T15:20:00+05:30.
-- `2025-05-06`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 80.22-91.68 at 2025-05-06T11:29:00+05:30 while also having exact final exit timestamp 2025-05-06T15:20:00+05:30.
-- `2025-05-07`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 97.30-111.20 at 2025-05-07T09:48:00+05:30 while also having exact final exit timestamp 2025-05-07T15:20:00+05:30.
-- `2025-05-08`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 35.73-40.84 at 2025-05-08T09:49:00+05:30 while also having exact final exit timestamp 2025-05-08T15:20:00+05:30.
-- `2025-05-12`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 245.38-280.44 at 2025-05-12T13:25:00+05:30 while also having exact final exit timestamp 2025-05-12T15:20:00+05:30.
-- `2025-05-13`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 188.22-215.11 at 2025-05-13T14:16:00+05:30 while also having exact final exit timestamp 2025-05-13T15:20:00+05:30.
-- `2025-05-14`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 126.49-144.56 at 2025-05-14T12:50:00+05:30 while also having exact final exit timestamp 2025-05-14T15:20:00+05:30.
-- `2025-05-15`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 108.11-123.55 at 2025-05-15T09:46:00+05:30 while also having exact final exit timestamp 2025-05-15T15:20:00+05:30.
-- `2025-05-20`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 160.06-182.92 at 2025-05-20T13:19:00+05:30 while also having exact final exit timestamp 2025-05-20T15:20:00+05:30.
-- `2025-05-21`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 154.35-176.40 at 2025-05-21T10:16:00+05:30 while also having exact final exit timestamp 2025-05-21T15:20:00+05:30.
-- `2025-05-22`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 58.69-67.08 at 2025-05-22T11:38:00+05:30 while also having exact final exit timestamp 2025-05-22T15:20:00+05:30.
-- `2025-05-23`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 264.88-302.72 at 2025-05-23T10:57:00+05:30 while also having exact final exit timestamp 2025-05-23T15:20:00+05:30.
-- `2025-05-27`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 263.62-301.28 at 2025-05-27T11:30:00+05:30 while also having exact final exit timestamp 2025-05-27T15:20:00+05:30.
-- `2025-05-29`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 63.73-72.84 at 2025-05-29T10:06:00+05:30 while also having exact final exit timestamp 2025-05-29T15:20:00+05:30.
-- `2025-06-04`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 94.64-108.16 at 2025-06-04T14:09:00+05:30 while also having exact final exit timestamp 2025-06-04T15:20:00+05:30.
-- `2025-06-05`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 58.24-66.56 at 2025-06-05T09:53:00+05:30 while also having exact final exit timestamp 2025-06-05T15:20:00+05:30.
-- `2025-06-06`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 223.19-255.08 at 2025-06-06T10:48:00+05:30 while also having exact final exit timestamp 2025-06-06T15:20:00+05:30.
-- `2025-06-12`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 72.59-82.96 at 2025-06-12T09:47:00+05:30 while also having exact final exit timestamp 2025-06-12T15:20:00+05:30.
-- `2025-06-16`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 181.93-207.92 at 2025-06-16T13:42:00+05:30 while also having exact final exit timestamp 2025-06-16T15:20:00+05:30.
-- `2025-06-18`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 107.91-123.32 at 2025-06-18T11:32:00+05:30 while also having exact final exit timestamp 2025-06-18T15:20:00+05:30.
-- `2025-06-19`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 50.75-58.00 at 2025-06-19T09:46:00+05:30 while also having exact final exit timestamp 2025-06-19T15:20:00+05:30.
-- `2025-06-20`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 220.95-252.52 at 2025-06-20T10:31:00+05:30 while also having exact final exit timestamp 2025-06-20T15:20:00+05:30.
-- `2025-06-23`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 179.90-205.60 at 2025-06-23T14:03:00+05:30 while also having exact final exit timestamp 2025-06-23T15:20:00+05:30.
-- `2025-06-24`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 150.08-171.52 at 2025-06-24T12:13:00+05:30 while also having exact final exit timestamp 2025-06-24T15:20:00+05:30.
-- `2025-06-25`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 92.26-105.44 at 2025-06-25T12:40:00+05:30 while also having exact final exit timestamp 2025-06-25T15:20:00+05:30.
-- `2025-06-26`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 77.42-88.48 at 2025-06-26T09:56:00+05:30 while also having exact final exit timestamp 2025-06-26T15:20:00+05:30.
-- `2025-06-30`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 156.66-179.04 at 2025-06-30T13:16:00+05:30 while also having exact final exit timestamp 2025-06-30T15:20:00+05:30.
-- `2025-07-02`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 81.13-92.72 at 2025-07-02T12:52:00+05:30 while also having exact final exit timestamp 2025-07-02T15:20:00+05:30.
-- `2025-07-03`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 54.77-62.60 at 2025-07-03T09:46:00+05:30 while also having exact final exit timestamp 2025-07-03T15:20:00+05:30.
-- `2025-07-10`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 56.70-64.80 at 2025-07-10T10:53:00+05:30 while also having exact final exit timestamp 2025-07-10T15:20:00+05:30.
-- `2025-07-15`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 107.10-122.40 at 2025-07-15T11:10:00+05:30 while also having exact final exit timestamp 2025-07-15T15:20:00+05:30.
-- `2025-07-16`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 73.25-83.72 at 2025-07-16T12:47:00+05:30 while also having exact final exit timestamp 2025-07-16T15:20:00+05:30.
-- `2025-07-17`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 48.23-55.12 at 2025-07-17T10:31:00+05:30 while also having exact final exit timestamp 2025-07-17T15:20:00+05:30.
-- `2025-07-21`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 134.29-153.48 at 2025-07-21T09:51:00+05:30 while also having exact final exit timestamp 2025-07-21T15:20:00+05:30.
-- `2025-07-23`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 68.00-77.72 at 2025-07-23T12:05:00+05:30 while also having exact final exit timestamp 2025-07-23T15:20:00+05:30.
-- `2025-07-24`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 34.47-39.40 at 2025-07-24T10:14:00+05:30 while also having exact final exit timestamp 2025-07-24T15:20:00+05:30.
-- `2025-07-25`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 153.61-175.56 at 2025-07-25T11:49:00+05:30 while also having exact final exit timestamp 2025-07-25T15:20:00+05:30.
-- `2025-07-28`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 131.53-150.32 at 2025-07-28T10:31:00+05:30 while also having exact final exit timestamp 2025-07-28T15:20:00+05:30.
-- `2025-07-29`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 108.67-124.20 at 2025-07-29T13:54:00+05:30 while also having exact final exit timestamp 2025-07-29T15:20:00+05:30.
-- `2025-07-31`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 57.12-65.28 at 2025-07-31T11:04:00+05:30 while also having exact final exit timestamp 2025-07-31T15:20:00+05:30.
-- `2025-08-06`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 76.82-87.80 at 2025-08-06T14:35:00+05:30 while also having exact final exit timestamp 2025-08-06T15:20:00+05:30.
-- `2025-08-07`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 55.30-63.20 at 2025-08-07T09:59:00+05:30 while also having exact final exit timestamp 2025-08-07T15:20:00+05:30.
-- `2025-08-11`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 135.13-154.44 at 2025-08-11T13:02:00+05:30 while also having exact final exit timestamp 2025-08-11T15:20:00+05:30.
-- `2025-08-12`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 118.75-135.72 at 2025-08-12T10:02:00+05:30 while also having exact final exit timestamp 2025-08-12T15:20:00+05:30.
-- `2025-08-13`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 80.88-92.44 at 2025-08-13T12:32:00+05:30 while also having exact final exit timestamp 2025-08-13T15:20:00+05:30.
-- `2025-08-14`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 11.86-17.79 at 2025-08-14T11:43:00+05:30 while also having exact final exit timestamp 2025-08-14T15:20:00+05:30.
-- `2025-08-19`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 99.75-114.00 at 2025-08-19T12:15:00+05:30 while also having exact final exit timestamp 2025-08-19T15:20:00+05:30.
-- `2025-08-20`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 82.95-94.80 at 2025-08-20T11:13:00+05:30 while also having exact final exit timestamp 2025-08-20T15:20:00+05:30.
-- `2025-08-21`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 42.98-49.12 at 2025-08-21T09:58:00+05:30 while also having exact final exit timestamp 2025-08-21T15:20:00+05:30.
-- `2025-08-26`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 86.27-98.60 at 2025-08-26T15:14:00+05:30 while also having exact final exit timestamp 2025-08-26T15:20:00+05:30.
-- `2025-08-28`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 53.79-61.48 at 2025-08-28T09:55:00+05:30 while also having exact final exit timestamp 2025-08-28T15:20:00+05:30.
-- `2025-08-29`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 108.43-123.92 at 2025-08-29T15:12:00+05:30 while also having exact final exit timestamp 2025-08-29T15:20:00+05:30.
-- `2025-09-01`: `no_valid_first_add_candidate`. No OTM PE contract satisfied the value band 16.63-24.95 at 2025-09-01T12:29:00+05:30 while also having exact final exit timestamp 2025-09-01T15:20:00+05:30.
-- `2025-09-02`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 43.85-50.12 at 2025-09-02T09:45:00+05:30 while also having exact final exit timestamp 2025-09-02T15:20:00+05:30.
-- `2025-09-03`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 136.43-155.92 at 2025-09-03T15:10:00+05:30 while also having exact final exit timestamp 2025-09-03T15:20:00+05:30.
-- `2025-09-04`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 122.25-139.72 at 2025-09-04T14:17:00+05:30 while also having exact final exit timestamp 2025-09-04T15:20:00+05:30.
-- `2025-09-05`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 127.85-146.12 at 2025-09-05T10:16:00+05:30 while also having exact final exit timestamp 2025-09-05T15:20:00+05:30.
-- `2025-09-08`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 70.84-80.96 at 2025-09-08T12:36:00+05:30 while also having exact final exit timestamp 2025-09-08T15:20:00+05:30.
-- `2025-09-09`: `no_valid_first_add_candidate`. No OTM PE contract satisfied the value band 8.01-12.01 at 2025-09-09T14:06:00+05:30 while also having exact final exit timestamp 2025-09-09T15:20:00+05:30.
-- `2025-09-12`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 96.14-109.88 at 2025-09-12T11:28:00+05:30 while also having exact final exit timestamp 2025-09-12T15:20:00+05:30.
-- `2025-09-16`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 47.49-54.28 at 2025-09-16T09:45:00+05:30 while also having exact final exit timestamp 2025-09-16T15:20:00+05:30.
-- `2025-09-22`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 65.45-74.80 at 2025-09-22T14:43:00+05:30 while also having exact final exit timestamp 2025-09-22T15:20:00+05:30.
-- `2025-09-23`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 53.87-61.56 at 2025-09-23T09:43:00+05:30 while also having exact final exit timestamp 2025-09-23T15:20:00+05:30.
-- `2025-09-24`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 129.25-147.72 at 2025-09-24T13:01:00+05:30 while also having exact final exit timestamp 2025-09-24T15:20:00+05:30.
-- `2025-09-26`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 112.00-128.00 at 2025-09-26T13:59:00+05:30 while also having exact final exit timestamp 2025-09-26T15:20:00+05:30.
-- `2025-09-29`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 85.33-97.52 at 2025-09-29T09:36:00+05:30 while also having exact final exit timestamp 2025-09-29T15:20:00+05:30.
-- `2025-09-30`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 7.66-11.49 at 2025-09-30T13:55:00+05:30 while also having exact final exit timestamp 2025-09-30T15:20:00+05:30.
-- `2025-10-01`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 132.23-151.12 at 2025-10-01T11:32:00+05:30 while also having exact final exit timestamp 2025-10-01T15:20:00+05:30.
-- `2025-10-03`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 86.77-99.16 at 2025-10-03T14:38:00+05:30 while also having exact final exit timestamp 2025-10-03T15:20:00+05:30.
-- `2025-10-06`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 67.13-76.72 at 2025-10-06T09:50:00+05:30 while also having exact final exit timestamp 2025-10-06T15:20:00+05:30.
-- `2025-10-07`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 48.27-55.16 at 2025-10-07T09:41:00+05:30 while also having exact final exit timestamp 2025-10-07T15:20:00+05:30.
-- `2025-10-08`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 128.03-146.32 at 2025-10-08T11:10:00+05:30 while also having exact final exit timestamp 2025-10-08T15:20:00+05:30.
-- `2025-10-09`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 115.25-131.72 at 2025-10-09T11:36:00+05:30 while also having exact final exit timestamp 2025-10-09T15:20:00+05:30.
-- `2025-10-10`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 106.54-121.76 at 2025-10-10T10:57:00+05:30 while also having exact final exit timestamp 2025-10-10T15:20:00+05:30.
-- `2025-10-13`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 70.11-80.12 at 2025-10-13T14:29:00+05:30 while also having exact final exit timestamp 2025-10-13T15:20:00+05:30.
-- `2025-10-14`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 60.76-69.44 at 2025-10-14T09:56:00+05:30 while also having exact final exit timestamp 2025-10-14T15:20:00+05:30.
-- `2025-10-15`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 135.59-154.96 at 2025-10-15T10:54:00+05:30 while also having exact final exit timestamp 2025-10-15T15:20:00+05:30.
-- `2025-10-16`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 112.56-128.64 at 2025-10-16T12:14:00+05:30 while also having exact final exit timestamp 2025-10-16T15:20:00+05:30.
-- `2025-10-17`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 113.85-130.12 at 2025-10-17T10:32:00+05:30 while also having exact final exit timestamp 2025-10-17T15:20:00+05:30.
-- `2025-10-20`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 85.33-97.52 at 2025-10-20T09:47:00+05:30 while also having exact final exit timestamp 2025-10-20T15:20:00+05:30.
-- `2025-10-24`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 113.40-129.60 at 2025-10-24T13:33:00+05:30 while also having exact final exit timestamp 2025-10-24T15:20:00+05:30.
-- `2025-10-27`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 106.09-121.24 at 2025-10-27T09:42:00+05:30 while also having exact final exit timestamp 2025-10-27T15:20:00+05:30.
-- `2025-10-28`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 85.54-97.76 at 2025-10-28T10:08:00+05:30 while also having exact final exit timestamp 2025-10-28T15:20:00+05:30.
-- `2025-10-29`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 171.43-195.92 at 2025-10-29T12:31:00+05:30 while also having exact final exit timestamp 2025-10-29T15:20:00+05:30.
-- `2025-11-03`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 104.09-118.96 at 2025-11-03T10:39:00+05:30 while also having exact final exit timestamp 2025-11-03T15:20:00+05:30.
-- `2025-11-04`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 66.85-76.40 at 2025-11-04T09:48:00+05:30 while also having exact final exit timestamp 2025-11-04T15:20:00+05:30.
-- `2025-11-07`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 111.41-127.32 at 2025-11-07T11:29:00+05:30 while also having exact final exit timestamp 2025-11-07T15:20:00+05:30.
-- `2025-11-10`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 83.12-95.00 at 2025-11-10T10:24:00+05:30 while also having exact final exit timestamp 2025-11-10T15:20:00+05:30.
-- `2025-11-11`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 53.97-61.68 at 2025-11-11T10:25:00+05:30 while also having exact final exit timestamp 2025-11-11T15:20:00+05:30.
-- `2025-11-12`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 160.12-183.00 at 2025-11-12T12:31:00+05:30 while also having exact final exit timestamp 2025-11-12T15:20:00+05:30.
-- `2025-11-14`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 132.61-151.56 at 2025-11-14T15:08:00+05:30 while also having exact final exit timestamp 2025-11-14T15:20:00+05:30.
-- `2025-11-17`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 84.80-96.92 at 2025-11-17T14:05:00+05:30 while also having exact final exit timestamp 2025-11-17T15:20:00+05:30.
-- `2025-11-18`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 63.00-72.00 at 2025-11-18T10:33:00+05:30 while also having exact final exit timestamp 2025-11-18T15:20:00+05:30.
-- `2025-11-19`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 168.91-193.04 at 2025-11-19T14:14:00+05:30 while also having exact final exit timestamp 2025-11-19T15:20:00+05:30.
-- `2025-11-20`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 150.50-172.00 at 2025-11-20T13:51:00+05:30 while also having exact final exit timestamp 2025-11-20T15:20:00+05:30.
-- `2025-11-24`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 95.62-109.28 at 2025-11-24T15:05:00+05:30 while also having exact final exit timestamp 2025-11-24T15:20:00+05:30.
-- `2025-11-25`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 62.72-71.68 at 2025-11-25T10:10:00+05:30 while also having exact final exit timestamp 2025-11-25T15:20:00+05:30.
-- `2025-11-26`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 168.00-192.00 at 2025-11-26T10:46:00+05:30 while also having exact final exit timestamp 2025-11-26T15:20:00+05:30.
-- `2025-11-27`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 134.09-153.24 at 2025-11-27T13:27:00+05:30 while also having exact final exit timestamp 2025-11-27T15:20:00+05:30.
-- `2025-12-01`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 19.86-29.79 at 2025-12-01T11:10:00+05:30 while also having exact final exit timestamp 2025-12-01T15:20:00+05:30.
-- `2025-12-02`: `no_valid_rebalance_candidate`. No OTM CE contract satisfied the value band 59.60-68.12 at 2025-12-02T09:45:00+05:30 while also having exact final exit timestamp 2025-12-02T15:20:00+05:30.
-- `2025-12-04`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 132.30-151.20 at 2025-12-04T10:37:00+05:30 while also having exact final exit timestamp 2025-12-04T15:20:00+05:30.
-- `2025-12-05`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 109.20-124.80 at 2025-12-05T10:17:00+05:30 while also having exact final exit timestamp 2025-12-05T15:20:00+05:30.
-- `2025-12-08`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 19.10-28.65 at 2025-12-08T10:34:00+05:30 while also having exact final exit timestamp 2025-12-08T15:20:00+05:30.
-- `2025-12-09`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 15.61-23.41 at 2025-12-09T09:49:00+05:30 while also having exact final exit timestamp 2025-12-09T15:20:00+05:30.
-- `2025-12-11`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 133.38-152.44 at 2025-12-11T12:05:00+05:30 while also having exact final exit timestamp 2025-12-11T15:20:00+05:30.
-- `2025-12-15`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 80.81-92.36 at 2025-12-15T10:30:00+05:30 while also having exact final exit timestamp 2025-12-15T15:20:00+05:30.
-- `2025-12-16`: `no_valid_first_add_candidate`. No OTM PE contract satisfied the value band 7.82-11.73 at 2025-12-16T13:46:00+05:30 while also having exact final exit timestamp 2025-12-16T15:20:00+05:30.
-- `2025-12-18`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 122.43-139.92 at 2025-12-18T12:12:00+05:30 while also having exact final exit timestamp 2025-12-18T15:20:00+05:30.
-- `2025-12-23`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 44.13-50.44 at 2025-12-23T10:12:00+05:30 while also having exact final exit timestamp 2025-12-23T15:20:00+05:30.
-- `2025-12-26`: `no_valid_first_add_candidate`. No OTM CE contract satisfied the value band 20.97-31.45 at 2025-12-26T09:44:00+05:30 while also having exact final exit timestamp 2025-12-26T15:20:00+05:30.
-- `2025-12-29`: `no_valid_first_add_candidate`. No OTM PE contract satisfied the value band 15.07-22.60 at 2025-12-29T09:34:00+05:30 while also having exact final exit timestamp 2025-12-29T15:20:00+05:30.
-- `2025-12-30`: `no_valid_rebalance_candidate`. No OTM PE contract satisfied the value band 49.38-56.44 at 2025-12-30T09:44:00+05:30 while also having exact final exit timestamp 2025-12-30T15:20:00+05:30.
 - `2025-12-31`: `no_same_or_next_weekly_expiry`. No weekly expiry folder exists on or after this entry date.
 
 ## Remarks
@@ -201,6 +44,7 @@
 - Candidate days are limited to sessions with exact spot candles at `09:30` and `15:20`.
 - The engine evaluates at most one adjustment cycle per minute, with `REVERSAL_EXIT` taking priority over trend adds and rebalances.
 - Profit/Loss without Brokerage includes the configured execution slippage but excludes brokerage.
-- If a later intraday validation fails, the full day is marked as skipped and all partial events and P/L are discarded.
+- Candidate-selection failures after entry are force-closed immediately and reported only in the exception trade result files.
+- Other validation failures remain skipped when the engine cannot price every active leg.
 - Same-day expiry trades are allowed because the expiry rule is `expiry >= entry_date`.
 - `2025-10-21` is excluded as a candidate day because the spot dataset does not contain an exact `09:30` candle for that special session.

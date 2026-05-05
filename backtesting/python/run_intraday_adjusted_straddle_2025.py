@@ -14,6 +14,8 @@ from typing import Dict, List, Optional, Tuple
 IST_SUFFIX = "+05:30"
 DAYWISE_FILENAME = "intraday_adjusted_straddle_2025_daywise.csv"
 EVENTS_FILENAME = "intraday_adjusted_straddle_2025_events.csv"
+EXCEPTION_DAYWISE_FILENAME = "intraday_adjusted_straddle_2025_exception_daywise.csv"
+EXCEPTION_EVENTS_FILENAME = "intraday_adjusted_straddle_2025_exception_events.csv"
 SUMMARY_FILENAME = "intraday_adjusted_straddle_2025_summary.md"
 LOG_FILENAME = "intraday_adjusted_straddle_2025.log"
 
@@ -141,8 +143,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--first-add-min-ratio", type=float, default=0.20)
     parser.add_argument("--first-add-max-ratio", type=float, default=0.30)
     parser.add_argument("--first-add-target-ratio", type=float, default=0.25)
-    parser.add_argument("--rebalance-min-ratio", type=float, default=0.70)
-    parser.add_argument("--rebalance-max-ratio", type=float, default=0.80)
+    parser.add_argument("--rebalance-min-ratio", type=float, default=0.65)
+    parser.add_argument("--rebalance-max-ratio", type=float, default=0.85)
     parser.add_argument("--rebalance-target-ratio", type=float, default=0.75)
     parser.add_argument("--reversal-parity-ratio", type=float, default=1.00)
     return parser.parse_args()
@@ -289,6 +291,75 @@ def make_skipped_result(
         gross_pnl="0.00",
         brokerage="0.00",
         net_pnl="0.00",
+        remarks=remarks,
+    )
+
+
+def calculate_gross_pnl(
+    closed_legs: List[ClosedLeg],
+    slippage_points_per_order: float,
+    contract_multiplier: int,
+) -> float:
+    gross_pnl = 0.0
+    for closed_leg in closed_legs:
+        gross_pnl += leg_pnl_after_slippage(
+            closed_leg.entry_price - closed_leg.exit_price,
+            slippage_points_per_order,
+        ) * contract_multiplier
+    return gross_pnl
+
+
+def make_trade_result(
+    entry_date: str,
+    status: str,
+    skip_reason: str,
+    expiry_date: str,
+    spot_entry_timestamp: str,
+    spot_entry_open: str,
+    atm_strike: str,
+    ce_entry_row: PriceRow,
+    pe_entry_row: PriceRow,
+    contract_multiplier: int,
+    first_add_count: int,
+    rebalance_count: int,
+    reversal_exit_count: int,
+    orders_executed: int,
+    exit_timestamp: str,
+    closed_legs: List[ClosedLeg],
+    brokerage_per_order: float,
+    slippage_points_per_order: float,
+    remarks: str,
+) -> TradeResult:
+    gross_pnl = calculate_gross_pnl(
+        closed_legs=closed_legs,
+        slippage_points_per_order=slippage_points_per_order,
+        contract_multiplier=contract_multiplier,
+    )
+    brokerage = orders_executed * brokerage_per_order
+    net_pnl = gross_pnl - brokerage
+    entry_credit_points = ce_entry_row.open_value + pe_entry_row.open_value
+    adjustments = first_add_count + rebalance_count + reversal_exit_count
+    return TradeResult(
+        entry_date=entry_date,
+        status=status,
+        skip_reason=skip_reason,
+        expiry_date=expiry_date,
+        spot_entry_timestamp=spot_entry_timestamp,
+        spot_entry_open=spot_entry_open,
+        atm_strike=atm_strike,
+        initial_ce_entry_open=ce_entry_row.open_text,
+        initial_pe_entry_open=pe_entry_row.open_text,
+        entry_credit_points=format_money(entry_credit_points),
+        entry_credit_rupees=format_money(entry_credit_points * contract_multiplier),
+        adjustments=str(adjustments),
+        first_add_count=str(first_add_count),
+        rebalance_count=str(rebalance_count),
+        reversal_exit_count=str(reversal_exit_count),
+        orders_executed=str(orders_executed),
+        exit_timestamp=exit_timestamp,
+        gross_pnl=format_money(gross_pnl),
+        brokerage=format_money(brokerage),
+        net_pnl=format_money(net_pnl),
         remarks=remarks,
     )
 
@@ -471,7 +542,63 @@ def close_leg(
     )
 
 
-def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[EventRow]]:
+def exit_all_active_legs(
+    active_legs: List[ActiveLeg],
+    closed_legs: List[ClosedLeg],
+    events: List[EventRow],
+    entry_date: str,
+    exit_timestamp: str,
+    exit_rows: Dict[int, PriceRow],
+    event_sequence: int,
+    event_group: str,
+    exit_reason: str,
+    remarks: str,
+) -> int:
+    ce_before, pe_before = compute_active_side_values(active_legs, exit_rows)
+    higher_side_before, higher_value_before, lower_side_before, lower_value_before = (
+        current_higher_lower(ce_before, pe_before)
+    )
+    orders_executed = 0
+    while active_legs:
+        leg_to_close = active_legs[0]
+        exit_row = exit_rows[leg_to_close.leg_id]
+        close_leg(
+            active_legs=active_legs,
+            closed_legs=closed_legs,
+            leg_to_close=leg_to_close,
+            exit_timestamp=exit_timestamp,
+            exit_price=exit_row.open_value,
+            exit_reason=exit_reason,
+        )
+        orders_executed += 1
+        ce_after_value, pe_after_value = compute_active_side_values(active_legs, exit_rows)
+        append_event(
+            events=events,
+            entry_date=entry_date,
+            event_timestamp=exit_timestamp,
+            event_sequence=event_sequence,
+            event_group=event_group,
+            order_action="BUY",
+            side=leg_to_close.side,
+            strike=leg_to_close.strike,
+            price=exit_row.open_text,
+            higher_side_before=higher_side_before,
+            higher_value_before=higher_value_before,
+            lower_side_before=lower_side_before,
+            lower_value_before=lower_value_before,
+            target_low=None,
+            target_high=None,
+            target_value=None,
+            active_ce_value_after=ce_after_value,
+            active_pe_value_after=pe_after_value,
+            remarks=remarks,
+        )
+    return orders_executed
+
+
+def run_backtest(
+    args: argparse.Namespace,
+) -> Tuple[List[TradeResult], List[EventRow], List[TradeResult], List[EventRow]]:
     args.results_dir.mkdir(parents=True, exist_ok=True)
     logger = configure_logger(args.results_dir / LOG_FILENAME)
 
@@ -483,6 +610,8 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[Even
 
     results: List[TradeResult] = []
     events: List[EventRow] = []
+    exception_results: List[TradeResult] = []
+    exception_events: List[EventRow] = []
     candidate_days = 0
     total_adjustments = 0
     contract_multiplier = args.lot_size * args.lots
@@ -599,6 +728,8 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[Even
             reversal_exit_count = 0
             skip_reason = ""
             skip_remarks = ""
+            exception_exit_timestamp = ""
+            exception_exit_rows: Optional[Dict[int, PriceRow]] = None
 
             ce_leg = ActiveLeg(
                 leg_id=leg_id_counter,
@@ -792,6 +923,8 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[Even
                         if candidate is None:
                             skip_reason = "no_valid_first_add_candidate"
                             skip_remarks = error_message
+                            exception_exit_timestamp = eval_timestamp
+                            exception_exit_rows = current_rows
                             break
 
                         event_sequence = next_event_sequence
@@ -877,6 +1010,8 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[Even
                         if candidate is None:
                             skip_reason = "no_valid_rebalance_candidate"
                             skip_remarks = error_message
+                            exception_exit_timestamp = eval_timestamp
+                            exception_exit_rows = current_rows
                             break
 
                         event_sequence = next_event_sequence
@@ -971,6 +1106,61 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[Even
                         continue
 
             if skip_reason:
+                if exception_exit_rows is not None:
+                    forced_exit_sequence = next_event_sequence
+                    next_event_sequence += 1
+                    forced_exit_remarks = f"Forced exit after {skip_reason}: {skip_remarks}"
+                    orders_executed += exit_all_active_legs(
+                        active_legs=active_legs,
+                        closed_legs=closed_legs,
+                        events=temp_events,
+                        entry_date=entry_date,
+                        exit_timestamp=exception_exit_timestamp,
+                        exit_rows=exception_exit_rows,
+                        event_sequence=forced_exit_sequence,
+                        event_group="EXCEPTION_EXIT",
+                        exit_reason="EXCEPTION_EXIT",
+                        remarks=forced_exit_remarks,
+                    )
+                    result = make_trade_result(
+                        entry_date=entry_date,
+                        status="EXCEPTION_EXIT",
+                        skip_reason=skip_reason,
+                        expiry_date=expiry_date,
+                        spot_entry_timestamp=entry_timestamp,
+                        spot_entry_open=spot_entry_row.open_text,
+                        atm_strike=atm_strike_text,
+                        ce_entry_row=ce_entry_row,
+                        pe_entry_row=pe_entry_row,
+                        contract_multiplier=contract_multiplier,
+                        first_add_count=first_add_count,
+                        rebalance_count=rebalance_count,
+                        reversal_exit_count=reversal_exit_count,
+                        orders_executed=orders_executed,
+                        exit_timestamp=exception_exit_timestamp,
+                        closed_legs=closed_legs,
+                        brokerage_per_order=args.brokerage_per_order,
+                        slippage_points_per_order=args.slippage_points_per_order,
+                        remarks=skip_remarks,
+                    )
+                    exception_results.append(result)
+                    exception_events.extend(temp_events)
+                    for log_line in pending_cycle_logs:
+                        logger.info(log_line)
+                    logger.info(
+                        "EXCEPTION_EXIT date=%s expiry=%s atm=%s reason=%s exit=%s orders=%s gross=%s brokerage=%s net=%s",
+                        entry_date,
+                        expiry_date,
+                        atm_strike_text,
+                        skip_reason,
+                        result.exit_timestamp,
+                        result.orders_executed,
+                        result.gross_pnl,
+                        result.brokerage,
+                        result.net_pnl,
+                    )
+                    continue
+
                 result = make_skipped_result(
                     entry_date=entry_date,
                     expiry_date=expiry_date,
@@ -1058,19 +1248,9 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[Even
                     remarks="End-of-day exit for active short leg.",
                 )
 
-            gross_pnl = 0.0
-            for closed_leg in closed_legs:
-                gross_pnl += leg_pnl_after_slippage(
-                    closed_leg.entry_price - closed_leg.exit_price,
-                    args.slippage_points_per_order,
-                ) * contract_multiplier
-
             adjustments = first_add_count + rebalance_count + reversal_exit_count
             total_adjustments += adjustments
-            brokerage = orders_executed * args.brokerage_per_order
-            net_pnl = gross_pnl - brokerage
-            entry_credit_points = ce_entry_row.open_value + pe_entry_row.open_value
-            result = TradeResult(
+            result = make_trade_result(
                 entry_date=entry_date,
                 status="TRADED",
                 skip_reason="",
@@ -1078,19 +1258,17 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[Even
                 spot_entry_timestamp=entry_timestamp,
                 spot_entry_open=spot_entry_row.open_text,
                 atm_strike=atm_strike_text,
-                initial_ce_entry_open=ce_entry_row.open_text,
-                initial_pe_entry_open=pe_entry_row.open_text,
-                entry_credit_points=format_money(entry_credit_points),
-                entry_credit_rupees=format_money(entry_credit_points * contract_multiplier),
-                adjustments=str(adjustments),
-                first_add_count=str(first_add_count),
-                rebalance_count=str(rebalance_count),
-                reversal_exit_count=str(reversal_exit_count),
-                orders_executed=str(orders_executed),
+                ce_entry_row=ce_entry_row,
+                pe_entry_row=pe_entry_row,
+                contract_multiplier=contract_multiplier,
+                first_add_count=first_add_count,
+                rebalance_count=rebalance_count,
+                reversal_exit_count=reversal_exit_count,
+                orders_executed=orders_executed,
                 exit_timestamp=exit_timestamp,
-                gross_pnl=format_money(gross_pnl),
-                brokerage=format_money(brokerage),
-                net_pnl=format_money(net_pnl),
+                closed_legs=closed_legs,
+                brokerage_per_order=args.brokerage_per_order,
+                slippage_points_per_order=args.slippage_points_per_order,
                 remarks="",
             )
             results.append(result)
@@ -1115,13 +1293,14 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[Even
     traded_count = sum(1 for result in results if result.status == "TRADED")
     skipped_count = sum(1 for result in results if result.status == "SKIPPED")
     logger.info(
-        "COMPLETED candidate_days=%s traded=%s skipped=%s total_adjustments=%s",
+        "COMPLETED candidate_days=%s traded=%s skipped=%s exception_exits=%s total_adjustments=%s",
         candidate_days,
         traded_count,
         skipped_count,
+        len(exception_results),
         total_adjustments,
     )
-    return results, events
+    return results, events, exception_results, exception_events
 
 
 def write_daywise_csv(results: List[TradeResult], output_path: Path) -> None:
@@ -1183,13 +1362,22 @@ def write_events_csv(events: List[EventRow], output_path: Path) -> None:
             writer.writerow(event.__dict__)
 
 
-def write_summary(results: List[TradeResult], output_path: Path, args: argparse.Namespace) -> None:
+def write_summary(
+    results: List[TradeResult],
+    exception_results: List[TradeResult],
+    output_path: Path,
+    args: argparse.Namespace,
+) -> None:
     traded_results = [result for result in results if result.status == "TRADED"]
     skipped_results = [result for result in results if result.status == "SKIPPED"]
     gross_total = sum(float(result.gross_pnl) for result in traded_results)
     brokerage_total = sum(float(result.brokerage) for result in traded_results)
     net_total = sum(float(result.net_pnl) for result in traded_results)
     total_adjustments = sum(int(result.adjustments) for result in traded_results)
+    exception_gross_total = sum(float(result.gross_pnl) for result in exception_results)
+    exception_brokerage_total = sum(float(result.brokerage) for result in exception_results)
+    exception_net_total = sum(float(result.net_pnl) for result in exception_results)
+    exception_adjustments = sum(int(result.adjustments) for result in exception_results)
 
     lines: List[str] = [
         "# 2025 Intraday Adjusted Weekly Straddle Backtest",
@@ -1232,6 +1420,17 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
         f"- Total Brokerage: `{format_money(brokerage_total)}`",
         f"- Profit/Loss without Brokerage: `{format_money(gross_total)}`",
         "",
+        "## Exception Trade Results",
+        "",
+        f"- No of exception trades: `{len(exception_results)}`",
+        f"- No of exception adjustments before forced exit: `{exception_adjustments}`",
+        f"- Total Exception Profit/Loss: `{format_money(exception_net_total)}`",
+        f"- Total Exception Brokerage: `{format_money(exception_brokerage_total)}`",
+        f"- Exception Profit/Loss without Brokerage: `{format_money(exception_gross_total)}`",
+        f"- Daywise file: `{EXCEPTION_DAYWISE_FILENAME}`",
+        f"- Events file: `{EXCEPTION_EVENTS_FILENAME}`",
+        "- These rows are not included in the main Results Summary totals.",
+        "",
         "## Exceptions",
         "",
     ]
@@ -1250,7 +1449,8 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
             "- Candidate days are limited to sessions with exact spot candles at `09:30` and `15:20`.",
             "- The engine evaluates at most one adjustment cycle per minute, with `REVERSAL_EXIT` taking priority over trend adds and rebalances.",
             "- Profit/Loss without Brokerage includes the configured execution slippage but excludes brokerage.",
-            "- If a later intraday validation fails, the full day is marked as skipped and all partial events and P/L are discarded.",
+            "- Candidate-selection failures after entry are force-closed immediately and reported only in the exception trade result files.",
+            "- Other validation failures remain skipped when the engine cannot price every active leg.",
             "- Same-day expiry trades are allowed because the expiry rule is `expiry >= entry_date`.",
             "- `2025-10-21` is excluded as a candidate day because the spot dataset does not contain an exact `09:30` candle for that special session.",
         ]
@@ -1263,10 +1463,12 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
 def main() -> None:
     args = parse_args()
     args.results_dir.mkdir(parents=True, exist_ok=True)
-    results, events = run_backtest(args)
+    results, events, exception_results, exception_events = run_backtest(args)
     write_daywise_csv(results, args.results_dir / DAYWISE_FILENAME)
     write_events_csv(events, args.results_dir / EVENTS_FILENAME)
-    write_summary(results, args.results_dir / SUMMARY_FILENAME, args)
+    write_daywise_csv(exception_results, args.results_dir / EXCEPTION_DAYWISE_FILENAME)
+    write_events_csv(exception_events, args.results_dir / EXCEPTION_EVENTS_FILENAME)
+    write_summary(results, exception_results, args.results_dir / SUMMARY_FILENAME, args)
 
 
 if __name__ == "__main__":

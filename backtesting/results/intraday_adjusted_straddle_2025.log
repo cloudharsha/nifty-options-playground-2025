@@ -1,370 +1,673 @@
-2026-05-05 00:27:33,514 INFO SKIPPED date=2025-01-01 expiry=2025-01-02 strike=23650 reason=No OTM PE contract satisfied the value band 170.80-195.20 at 2025-01-01T12:22:00+05:30 while also having exact final exit timestamp 2025-01-01T15:20:00+05:30.
-2026-05-05 00:27:33,665 INFO SKIPPED date=2025-01-02 expiry=2025-01-02 strike=23750 reason=No OTM PE contract satisfied the value band 120.22-137.40 at 2025-01-02T09:56:00+05:30 while also having exact final exit timestamp 2025-01-02T15:20:00+05:30.
-2026-05-05 00:27:35,696 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T10:14:00+05:30 group=FIRST_ADD side=CE strike=24350 higher_value=241.90 target_band=48.38-72.57
-2026-05-05 00:27:35,709 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T11:21:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24350 single_value=200.00 double_value=203.75
-2026-05-05 00:27:35,710 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T12:30:00+05:30 group=FIRST_ADD side=CE strike=24350 higher_value=216.40 target_band=43.28-64.92
-2026-05-05 00:27:35,710 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T13:05:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24350 single_value=174.95 double_value=191.55
-2026-05-05 00:27:35,711 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T13:58:00+05:30 group=FIRST_ADD side=CE strike=24300 higher_value=217.35 target_band=43.47-65.20
-2026-05-05 00:27:35,711 INFO TRADED date=2025-01-03 expiry=2025-01-09 atm=24150 adjustments=5 orders=10 gross=851.50 brokerage=250.00 net=601.50
-2026-05-05 00:27:35,830 INFO SKIPPED date=2025-01-06 expiry=2025-01-09 strike=24050 reason=No OTM CE contract satisfied the value band 186.27-212.88 at 2025-01-06T10:43:00+05:30 while also having exact final exit timestamp 2025-01-06T15:20:00+05:30.
-2026-05-05 00:27:35,903 INFO TRADED date=2025-01-07 expiry=2025-01-09 atm=23750 adjustments=0 orders=4 gross=8528.00 brokerage=100.00 net=8428.00
-2026-05-05 00:27:36,290 INFO SKIPPED date=2025-01-08 expiry=2025-01-09 strike=23650 reason=No OTM CE contract satisfied the value band 104.82-119.80 at 2025-01-08T10:44:00+05:30 while also having exact final exit timestamp 2025-01-08T15:20:00+05:30.
-2026-05-05 00:27:37,560 INFO SKIPPED date=2025-01-09 expiry=2025-01-09 strike=23600 reason=No OTM CE contract satisfied the value band 18.22-27.33 at 2025-01-09T10:48:00+05:30 while also having exact final exit timestamp 2025-01-09T15:20:00+05:30.
-2026-05-05 00:27:39,058 INFO ADJUSTMENT date=2025-01-10 timestamp=2025-01-10T11:32:00+05:30 group=FIRST_ADD side=PE strike=23250 higher_value=247.15 target_band=49.43-74.14
-2026-05-05 00:27:39,059 INFO ADJUSTMENT date=2025-01-10 timestamp=2025-01-10T11:42:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23250 single_value=212.10 double_value=216.50
-2026-05-05 00:27:39,059 INFO TRADED date=2025-01-10 expiry=2025-01-16 atm=23500 adjustments=2 orders=6 gross=4152.20 brokerage=150.00 net=4002.20
-2026-05-05 00:27:41,790 INFO SKIPPED date=2025-01-13 expiry=2025-01-16 strike=23250 reason=No OTM CE contract satisfied the value band 161.21-184.24 at 2025-01-13T14:36:00+05:30 while also having exact final exit timestamp 2025-01-13T15:20:00+05:30.
-2026-05-05 00:27:41,821 INFO ADJUSTMENT date=2025-01-14 timestamp=2025-01-14T11:07:00+05:30 group=FIRST_ADD side=PE strike=23050 higher_value=141.69 target_band=28.34-42.51
-2026-05-05 00:27:41,822 INFO ADJUSTMENT date=2025-01-14 timestamp=2025-01-14T11:38:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23050 single_value=118.45 double_value=120.55
-2026-05-05 00:27:41,822 INFO TRADED date=2025-01-14 expiry=2025-01-16 atm=23200 adjustments=2 orders=6 gross=5718.70 brokerage=150.00 net=5568.70
-2026-05-05 00:27:41,823 INFO SKIPPED date=2025-01-15 expiry=2025-01-16 strike=23200 reason=No OTM PE contract satisfied the value band 90.41-103.32 at 2025-01-15T10:47:00+05:30 while also having exact final exit timestamp 2025-01-15T15:20:00+05:30.
-2026-05-05 00:27:41,825 INFO SKIPPED date=2025-01-16 expiry=2025-01-16 strike=23350 reason=No OTM CE contract satisfied the value band 42.59-48.68 at 2025-01-16T09:44:00+05:30 while also having exact final exit timestamp 2025-01-16T15:20:00+05:30.
-2026-05-05 00:27:41,959 INFO TRADED date=2025-01-17 expiry=2025-01-23 atm=23200 adjustments=0 orders=4 gross=2379.00 brokerage=100.00 net=2279.00
-2026-05-05 00:27:43,085 INFO SKIPPED date=2025-01-20 expiry=2025-01-23 strike=23200 reason=No OTM PE contract satisfied the value band 178.99-204.56 at 2025-01-20T11:33:00+05:30 while also having exact final exit timestamp 2025-01-20T15:20:00+05:30.
-2026-05-05 00:27:46,279 INFO SKIPPED date=2025-01-21 expiry=2025-01-23 strike=23400 reason=No OTM CE contract satisfied the value band 207.20-236.80 at 2025-01-21T10:22:00+05:30 while also having exact final exit timestamp 2025-01-21T15:20:00+05:30.
-2026-05-05 00:27:46,548 INFO SKIPPED date=2025-01-22 expiry=2025-01-23 strike=23100 reason=No OTM CE contract satisfied the value band 90.72-103.68 at 2025-01-22T13:41:00+05:30 while also having exact final exit timestamp 2025-01-22T15:20:00+05:30.
-2026-05-05 00:27:46,550 INFO SKIPPED date=2025-01-23 expiry=2025-01-23 strike=23100 reason=No OTM PE contract satisfied the value band 18.77-28.15 at 2025-01-23T09:36:00+05:30 while also having exact final exit timestamp 2025-01-23T15:20:00+05:30.
-2026-05-05 00:27:57,283 INFO ADJUSTMENT date=2025-01-24 timestamp=2025-01-24T11:58:00+05:30 group=FIRST_ADD side=PE strike=23050 higher_value=241.00 target_band=48.20-72.30
-2026-05-05 00:27:57,284 INFO ADJUSTMENT date=2025-01-24 timestamp=2025-01-24T12:29:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23050 single_value=209.00 double_value=209.34
-2026-05-05 00:27:57,284 INFO ADJUSTMENT date=2025-01-24 timestamp=2025-01-24T14:39:00+05:30 group=FIRST_ADD side=CE strike=23450 higher_value=233.00 target_band=46.60-69.90
-2026-05-05 00:27:57,284 INFO TRADED date=2025-01-24 expiry=2025-01-30 atm=23250 adjustments=3 orders=8 gross=3979.30 brokerage=200.00 net=3779.30
-2026-05-05 00:27:57,946 INFO ADJUSTMENT date=2025-01-27 timestamp=2025-01-27T13:38:00+05:30 group=FIRST_ADD side=CE strike=23100 higher_value=229.90 target_band=45.98-68.97
-2026-05-05 00:27:57,946 INFO TRADED date=2025-01-27 expiry=2025-01-30 atm=22950 adjustments=1 orders=6 gross=3581.50 brokerage=150.00 net=3431.50
-2026-05-05 00:27:58,000 INFO SKIPPED date=2025-01-28 expiry=2025-01-30 strike=22900 reason=No OTM PE contract satisfied the value band 169.89-194.16 at 2025-01-28T12:55:00+05:30 while also having exact final exit timestamp 2025-01-28T15:20:00+05:30.
-2026-05-05 00:27:58,003 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T10:23:00+05:30 group=FIRST_ADD side=PE strike=22850 higher_value=208.35 target_band=41.67-62.50
-2026-05-05 00:27:58,003 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T10:48:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22850 single_value=195.25 double_value=196.09
-2026-05-05 00:27:58,004 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T11:00:00+05:30 group=FIRST_ADD side=PE strike=22850 higher_value=236.35 target_band=47.27-70.91
-2026-05-05 00:27:58,004 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T11:23:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22850 single_value=194.20 double_value=195.25
-2026-05-05 00:27:58,005 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T11:32:00+05:30 group=FIRST_ADD side=PE strike=22850 higher_value=221.10 target_band=44.22-66.33
-2026-05-05 00:27:58,005 INFO TRADED date=2025-01-29 expiry=2025-01-30 atm=23000 adjustments=5 orders=10 gross=-8539.70 brokerage=250.00 net=-8789.70
-2026-05-05 00:27:58,006 INFO SKIPPED date=2025-01-30 expiry=2025-01-30 strike=23150 reason=No OTM PE contract satisfied the value band 133.28-152.32 at 2025-01-30T10:11:00+05:30 while also having exact final exit timestamp 2025-01-30T15:20:00+05:30.
-2026-05-05 00:27:59,931 INFO ADJUSTMENT date=2025-01-31 timestamp=2025-01-31T12:34:00+05:30 group=FIRST_ADD side=PE strike=22950 higher_value=375.50 target_band=75.10-112.65
-2026-05-05 00:27:59,932 INFO TRADED date=2025-01-31 expiry=2025-02-06 atm=23350 adjustments=1 orders=6 gross=15034.50 brokerage=150.00 net=14884.50
-2026-05-05 00:28:00,182 INFO ADJUSTMENT date=2025-02-01 timestamp=2025-02-01T11:32:00+05:30 group=FIRST_ADD side=PE strike=23200 higher_value=313.85 target_band=62.77-94.16
-2026-05-05 00:28:00,183 INFO ADJUSTMENT date=2025-02-01 timestamp=2025-02-01T11:51:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23200 single_value=243.90 double_value=308.20
-2026-05-05 00:28:00,183 INFO TRADED date=2025-02-01 expiry=2025-02-06 atm=23500 adjustments=2 orders=6 gross=20113.60 brokerage=150.00 net=19963.60
-2026-05-05 00:28:02,705 INFO ADJUSTMENT date=2025-02-03 timestamp=2025-02-03T09:48:00+05:30 group=FIRST_ADD side=CE strike=23500 higher_value=183.35 target_band=36.67-55.00
-2026-05-05 00:28:02,706 INFO ADJUSTMENT date=2025-02-03 timestamp=2025-02-03T10:08:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23500 single_value=153.00 double_value=154.60
-2026-05-05 00:28:02,706 INFO TRADED date=2025-02-03 expiry=2025-02-06 atm=23350 adjustments=2 orders=6 gross=2982.20 brokerage=150.00 net=2832.20
-2026-05-05 00:28:02,712 INFO SKIPPED date=2025-02-04 expiry=2025-02-06 strike=23500 reason=No OTM PE contract satisfied the value band 168.10-192.12 at 2025-02-04T13:35:00+05:30 while also having exact final exit timestamp 2025-02-04T15:20:00+05:30.
-2026-05-05 00:28:02,754 INFO ADJUSTMENT date=2025-02-05 timestamp=2025-02-05T15:02:00+05:30 group=FIRST_ADD side=CE strike=23850 higher_value=119.75 target_band=23.95-35.92
-2026-05-05 00:28:02,755 INFO TRADED date=2025-02-05 expiry=2025-02-06 atm=23750 adjustments=1 orders=6 gross=1677.00 brokerage=150.00 net=1527.00
-2026-05-05 00:28:02,816 INFO SKIPPED date=2025-02-06 expiry=2025-02-06 strike=23700 reason=No OTM CE contract satisfied the value band 75.60-86.40 at 2025-02-06T09:56:00+05:30 while also having exact final exit timestamp 2025-02-06T15:20:00+05:30.
-2026-05-05 00:28:06,171 INFO ADJUSTMENT date=2025-02-07 timestamp=2025-02-07T11:24:00+05:30 group=FIRST_ADD side=PE strike=23400 higher_value=226.40 target_band=45.28-67.92
-2026-05-05 00:28:06,172 INFO ADJUSTMENT date=2025-02-07 timestamp=2025-02-07T12:04:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23400 single_value=185.55 double_value=202.30
-2026-05-05 00:28:06,172 INFO ADJUSTMENT date=2025-02-07 timestamp=2025-02-07T14:14:00+05:30 group=FIRST_ADD side=CE strike=23800 higher_value=223.55 target_band=44.71-67.06
-2026-05-05 00:28:06,173 INFO ADJUSTMENT date=2025-02-07 timestamp=2025-02-07T15:04:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23800 single_value=178.25 double_value=178.70
-2026-05-05 00:28:06,173 INFO TRADED date=2025-02-07 expiry=2025-02-13 atm=23600 adjustments=4 orders=8 gross=8131.50 brokerage=200.00 net=7931.50
-2026-05-05 00:28:06,280 INFO ADJUSTMENT date=2025-02-10 timestamp=2025-02-10T13:35:00+05:30 group=FIRST_ADD side=CE strike=23600 higher_value=199.60 target_band=39.92-59.88
-2026-05-05 00:28:06,280 INFO ADJUSTMENT date=2025-02-10 timestamp=2025-02-10T13:52:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23600 single_value=170.25 double_value=196.95
-2026-05-05 00:28:06,280 INFO ADJUSTMENT date=2025-02-10 timestamp=2025-02-10T14:24:00+05:30 group=FIRST_ADD side=CE strike=23600 higher_value=198.40 target_band=39.68-59.52
-2026-05-05 00:28:06,281 INFO ADJUSTMENT date=2025-02-10 timestamp=2025-02-10T14:36:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23600 single_value=171.60 double_value=171.80
-2026-05-05 00:28:06,281 INFO TRADED date=2025-02-10 expiry=2025-02-13 atm=23450 adjustments=4 orders=8 gross=-2158.00 brokerage=200.00 net=-2358.00
-2026-05-05 00:28:06,512 INFO SKIPPED date=2025-02-11 expiry=2025-02-13 strike=23300 reason=No OTM CE contract satisfied the value band 157.11-179.56 at 2025-02-11T13:05:00+05:30 while also having exact final exit timestamp 2025-02-11T15:20:00+05:30.
-2026-05-05 00:28:06,769 INFO SKIPPED date=2025-02-12 expiry=2025-02-13 strike=23000 reason=No OTM CE contract satisfied the value band 122.43-139.92 at 2025-02-12T09:58:00+05:30 while also having exact final exit timestamp 2025-02-12T15:20:00+05:30.
-2026-05-05 00:28:06,771 INFO SKIPPED date=2025-02-13 expiry=2025-02-13 strike=23000 reason=No OTM PE contract satisfied the value band 99.78-114.04 at 2025-02-13T09:33:00+05:30 while also having exact final exit timestamp 2025-02-13T15:20:00+05:30.
-2026-05-05 00:28:09,311 INFO SKIPPED date=2025-02-14 expiry=2025-02-20 strike=23050 reason=No OTM CE contract satisfied the value band 204.92-234.20 at 2025-02-14T12:23:00+05:30 while also having exact final exit timestamp 2025-02-14T15:20:00+05:30.
-2026-05-05 00:28:10,558 INFO ADJUSTMENT date=2025-02-17 timestamp=2025-02-17T10:51:00+05:30 group=FIRST_ADD side=PE strike=22650 higher_value=235.10 target_band=47.02-70.53
-2026-05-05 00:28:10,558 INFO ADJUSTMENT date=2025-02-17 timestamp=2025-02-17T10:59:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22650 single_value=205.30 double_value=206.19
-2026-05-05 00:28:10,558 INFO ADJUSTMENT date=2025-02-17 timestamp=2025-02-17T13:35:00+05:30 group=FIRST_ADD side=PE strike=22650 higher_value=227.75 target_band=45.55-68.33
-2026-05-05 00:28:10,559 INFO TRADED date=2025-02-17 expiry=2025-02-20 atm=22850 adjustments=3 orders=8 gross=617.50 brokerage=200.00 net=417.50
-2026-05-05 00:28:10,651 INFO TRADED date=2025-02-18 expiry=2025-02-20 atm=22900 adjustments=0 orders=4 gross=8421.40 brokerage=100.00 net=8321.40
-2026-05-05 00:28:10,652 INFO SKIPPED date=2025-02-19 expiry=2025-02-20 strike=22850 reason=No OTM PE contract satisfied the value band 128.62-147.00 at 2025-02-19T09:50:00+05:30 while also having exact final exit timestamp 2025-02-19T15:20:00+05:30.
-2026-05-05 00:28:10,653 INFO SKIPPED date=2025-02-20 expiry=2025-02-20 strike=22850 reason=No OTM PE contract satisfied the value band 16.93-25.39 at 2025-02-20T09:38:00+05:30 while also having exact final exit timestamp 2025-02-20T15:20:00+05:30.
-2026-05-05 00:28:18,460 INFO ADJUSTMENT date=2025-02-21 timestamp=2025-02-21T13:02:00+05:30 group=FIRST_ADD side=CE strike=23050 higher_value=214.25 target_band=42.85-64.27
-2026-05-05 00:28:18,461 INFO ADJUSTMENT date=2025-02-21 timestamp=2025-02-21T14:50:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23050 single_value=171.85 double_value=172.30
-2026-05-05 00:28:18,461 INFO TRADED date=2025-02-21 expiry=2025-02-27 atm=22900 adjustments=2 orders=6 gross=1729.00 brokerage=150.00 net=1579.00
-2026-05-05 00:28:18,619 INFO TRADED date=2025-02-24 expiry=2025-02-27 atm=22600 adjustments=0 orders=4 gross=6636.50 brokerage=100.00 net=6536.50
-2026-05-05 00:28:21,162 INFO SKIPPED date=2025-02-25 expiry=2025-02-27 strike=22550 reason=No OTM PE contract satisfied the value band 93.93-107.35 at 2025-02-25T09:50:00+05:30 while also having exact final exit timestamp 2025-02-25T15:20:00+05:30.
-2026-05-05 00:28:21,450 INFO SKIPPED date=2025-02-27 expiry=2025-02-27 strike=22550 reason=No OTM CE contract satisfied the value band 4.55-6.83 at 2025-02-27T11:39:00+05:30 while also having exact final exit timestamp 2025-02-27T15:20:00+05:30.
-2026-05-05 00:28:24,057 INFO SKIPPED date=2025-02-28 expiry=2025-03-06 strike=22350 reason=No OTM CE contract satisfied the value band 157.78-180.32 at 2025-02-28T12:54:00+05:30 while also having exact final exit timestamp 2025-02-28T15:20:00+05:30.
-2026-05-05 00:28:24,249 INFO ADJUSTMENT date=2025-03-03 timestamp=2025-03-03T11:12:00+05:30 group=FIRST_ADD side=CE strike=22300 higher_value=180.45 target_band=36.09-54.13
-2026-05-05 00:28:24,250 INFO ADJUSTMENT date=2025-03-03 timestamp=2025-03-03T12:15:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22300 single_value=147.00 double_value=147.95
-2026-05-05 00:28:24,250 INFO TRADED date=2025-03-03 expiry=2025-03-06 atm=22150 adjustments=2 orders=6 gross=3412.50 brokerage=150.00 net=3262.50
-2026-05-05 00:28:25,655 INFO SKIPPED date=2025-03-04 expiry=2025-03-06 strike=22000 reason=No OTM PE contract satisfied the value band 124.53-142.32 at 2025-03-04T11:07:00+05:30 while also having exact final exit timestamp 2025-03-04T15:20:00+05:30.
-2026-05-05 00:28:25,783 INFO SKIPPED date=2025-03-05 expiry=2025-03-06 strike=22200 reason=No OTM PE contract satisfied the value band 94.19-107.64 at 2025-03-05T11:35:00+05:30 while also having exact final exit timestamp 2025-03-05T15:20:00+05:30.
-2026-05-05 00:28:25,785 INFO SKIPPED date=2025-03-06 expiry=2025-03-06 strike=22350 reason=No OTM CE contract satisfied the value band 78.57-89.80 at 2025-03-06T09:48:00+05:30 while also having exact final exit timestamp 2025-03-06T15:20:00+05:30.
-2026-05-05 00:28:27,141 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T10:09:00+05:30 group=FIRST_ADD side=PE strike=22350 higher_value=212.75 target_band=42.55-63.82
-2026-05-05 00:28:27,142 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T11:50:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22350 single_value=180.85 double_value=188.79
-2026-05-05 00:28:27,142 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T12:38:00+05:30 group=FIRST_ADD side=PE strike=22350 higher_value=206.45 target_band=41.29-61.93
-2026-05-05 00:28:27,143 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T12:54:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22350 single_value=177.80 double_value=180.70
-2026-05-05 00:28:27,143 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T14:34:00+05:30 group=FIRST_ADD side=PE strike=22350 higher_value=203.65 target_band=40.73-61.09
-2026-05-05 00:28:27,143 INFO TRADED date=2025-03-07 expiry=2025-03-13 atm=22500 adjustments=5 orders=10 gross=-2787.20 brokerage=250.00 net=-3037.20
-2026-05-05 00:28:29,281 INFO SKIPPED date=2025-03-10 expiry=2025-03-13 strike=22600 reason=No OTM CE contract satisfied the value band 151.90-173.60 at 2025-03-10T14:30:00+05:30 while also having exact final exit timestamp 2025-03-10T15:20:00+05:30.
-2026-05-05 00:28:29,312 INFO SKIPPED date=2025-03-11 expiry=2025-03-13 strike=22350 reason=No OTM PE contract satisfied the value band 139.51-159.44 at 2025-03-11T10:58:00+05:30 while also having exact final exit timestamp 2025-03-11T15:20:00+05:30.
-2026-05-05 00:28:29,372 INFO SKIPPED date=2025-03-12 expiry=2025-03-13 strike=22450 reason=No OTM CE contract satisfied the value band 88.48-101.12 at 2025-03-12T11:38:00+05:30 while also having exact final exit timestamp 2025-03-12T15:20:00+05:30.
-2026-05-05 00:28:29,373 INFO SKIPPED date=2025-03-13 expiry=2025-03-13 strike=22500 reason=No OTM CE contract satisfied the value band 13.12-19.68 at 2025-03-13T09:31:00+05:30 while also having exact final exit timestamp 2025-03-13T15:20:00+05:30.
-2026-05-05 00:28:31,005 INFO ADJUSTMENT date=2025-03-17 timestamp=2025-03-17T12:35:00+05:30 group=FIRST_ADD side=CE strike=22650 higher_value=163.90 target_band=32.78-49.17
-2026-05-05 00:28:31,006 INFO ADJUSTMENT date=2025-03-17 timestamp=2025-03-17T13:29:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22650 single_value=140.44 double_value=143.10
-2026-05-05 00:28:31,006 INFO TRADED date=2025-03-17 expiry=2025-03-20 atm=22550 adjustments=2 orders=6 gross=-488.80 brokerage=150.00 net=-638.80
-2026-05-05 00:28:32,451 INFO SKIPPED date=2025-03-18 expiry=2025-03-20 strike=22650 reason=No OTM PE contract satisfied the value band 136.88-156.44 at 2025-03-18T10:45:00+05:30 while also having exact final exit timestamp 2025-03-18T15:20:00+05:30.
-2026-05-05 00:28:32,576 INFO SKIPPED date=2025-03-19 expiry=2025-03-20 strike=22850 reason=No OTM PE contract satisfied the value band 95.86-109.55 at 2025-03-19T14:49:00+05:30 while also having exact final exit timestamp 2025-03-19T15:20:00+05:30.
-2026-05-05 00:28:32,602 INFO SKIPPED date=2025-03-20 expiry=2025-03-20 strike=23050 reason=No OTM CE contract satisfied the value band 16.17-24.25 at 2025-03-20T10:07:00+05:30 while also having exact final exit timestamp 2025-03-20T15:20:00+05:30.
-2026-05-05 00:28:36,647 INFO SKIPPED date=2025-03-21 expiry=2025-03-27 strike=23200 reason=No OTM PE contract satisfied the value band 162.75-186.00 at 2025-03-21T10:48:00+05:30 while also having exact final exit timestamp 2025-03-21T15:20:00+05:30.
-2026-05-05 00:28:37,608 INFO SKIPPED date=2025-03-24 expiry=2025-03-27 strike=23500 reason=No OTM PE contract satisfied the value band 165.20-188.80 at 2025-03-24T12:19:00+05:30 while also having exact final exit timestamp 2025-03-24T15:20:00+05:30.
-2026-05-05 00:28:38,241 INFO SKIPPED date=2025-03-25 expiry=2025-03-27 strike=23700 reason=No OTM PE contract satisfied the value band 161.91-185.04 at 2025-03-25T09:53:00+05:30 while also having exact final exit timestamp 2025-03-25T15:20:00+05:30.
-2026-05-05 00:28:42,603 INFO SKIPPED date=2025-03-26 expiry=2025-03-27 strike=23700 reason=No OTM CE contract satisfied the value band 102.20-116.80 at 2025-03-26T13:08:00+05:30 while also having exact final exit timestamp 2025-03-26T15:20:00+05:30.
-2026-05-05 00:28:42,719 INFO SKIPPED date=2025-03-27 expiry=2025-03-27 strike=23550 reason=No OTM PE contract satisfied the value band 63.10-72.12 at 2025-03-27T10:05:00+05:30 while also having exact final exit timestamp 2025-03-27T15:20:00+05:30.
-2026-05-05 00:28:45,393 INFO ADJUSTMENT date=2025-03-28 timestamp=2025-03-28T10:34:00+05:30 group=FIRST_ADD side=PE strike=23350 higher_value=211.15 target_band=42.23-63.34
-2026-05-05 00:28:45,393 INFO ADJUSTMENT date=2025-03-28 timestamp=2025-03-28T11:26:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23350 single_value=167.60 double_value=177.10
-2026-05-05 00:28:45,394 INFO TRADED date=2025-03-28 expiry=2025-04-03 atm=23550 adjustments=2 orders=6 gross=8105.50 brokerage=150.00 net=7955.50
-2026-05-05 00:28:47,242 INFO SKIPPED date=2025-04-01 expiry=2025-04-03 strike=23450 reason=No OTM CE contract satisfied the value band 132.54-151.48 at 2025-04-01T10:32:00+05:30 while also having exact final exit timestamp 2025-04-01T15:20:00+05:30.
-2026-05-05 00:28:47,281 INFO SKIPPED date=2025-04-02 expiry=2025-04-03 strike=23250 reason=No OTM PE contract satisfied the value band 87.11-99.56 at 2025-04-02T15:03:00+05:30 while also having exact final exit timestamp 2025-04-02T15:20:00+05:30.
-2026-05-05 00:28:47,407 INFO SKIPPED date=2025-04-03 expiry=2025-04-03 strike=23250 reason=No OTM CE contract satisfied the value band 11.93-17.89 at 2025-04-03T09:46:00+05:30 while also having exact final exit timestamp 2025-04-03T15:20:00+05:30.
-2026-05-05 00:28:48,914 INFO SKIPPED date=2025-04-04 expiry=2025-04-09 strike=23100 reason=No OTM CE contract satisfied the value band 166.21-189.96 at 2025-04-04T10:14:00+05:30 while also having exact final exit timestamp 2025-04-04T15:20:00+05:30.
-2026-05-05 00:28:49,696 INFO ADJUSTMENT date=2025-04-07 timestamp=2025-04-07T12:35:00+05:30 group=FIRST_ADD side=CE strike=22350 higher_value=448.05 target_band=89.61-134.41
-2026-05-05 00:28:49,696 INFO ADJUSTMENT date=2025-04-07 timestamp=2025-04-07T12:49:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22350 single_value=372.75 double_value=377.39
-2026-05-05 00:28:49,696 INFO ADJUSTMENT date=2025-04-07 timestamp=2025-04-07T13:06:00+05:30 group=FIRST_ADD side=CE strike=22350 higher_value=440.30 target_band=88.06-132.09
-2026-05-05 00:28:49,697 INFO ADJUSTMENT date=2025-04-07 timestamp=2025-04-07T13:33:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22350 single_value=347.90 double_value=377.80
-2026-05-05 00:28:49,697 INFO TRADED date=2025-04-07 expiry=2025-04-09 atm=22050 adjustments=4 orders=8 gross=-17979.00 brokerage=200.00 net=-18179.00
-2026-05-05 00:28:49,745 INFO SKIPPED date=2025-04-08 expiry=2025-04-09 strike=22550 reason=No OTM CE contract satisfied the value band 176.71-201.96 at 2025-04-08T10:18:00+05:30 while also having exact final exit timestamp 2025-04-08T15:20:00+05:30.
-2026-05-05 00:28:51,009 INFO SKIPPED date=2025-04-09 expiry=2025-04-09 strike=22400 reason=No OTM CE contract satisfied the value band 29.47-33.68 at 2025-04-09T11:04:00+05:30 while also having exact final exit timestamp 2025-04-09T15:20:00+05:30.
-2026-05-05 00:28:52,625 INFO ADJUSTMENT date=2025-04-11 timestamp=2025-04-11T11:35:00+05:30 group=FIRST_ADD side=PE strike=22450 higher_value=305.45 target_band=61.09-91.63
-2026-05-05 00:28:52,626 INFO ADJUSTMENT date=2025-04-11 timestamp=2025-04-11T13:55:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22450 single_value=289.85 double_value=294.50
-2026-05-05 00:28:52,626 INFO TRADED date=2025-04-11 expiry=2025-04-17 atm=22750 adjustments=2 orders=6 gross=-9581.00 brokerage=150.00 net=-9731.00
-2026-05-05 00:28:52,705 INFO TRADED date=2025-04-15 expiry=2025-04-17 atm=23300 adjustments=0 orders=4 gross=10348.00 brokerage=100.00 net=10248.00
-2026-05-05 00:28:54,327 INFO SKIPPED date=2025-04-16 expiry=2025-04-17 strike=23350 reason=No OTM CE contract satisfied the value band 81.90-93.60 at 2025-04-16T10:22:00+05:30 while also having exact final exit timestamp 2025-04-16T15:20:00+05:30.
-2026-05-05 00:28:54,693 INFO SKIPPED date=2025-04-17 expiry=2025-04-17 strike=23300 reason=No OTM PE contract satisfied the value band 71.96-82.24 at 2025-04-17T09:43:00+05:30 while also having exact final exit timestamp 2025-04-17T15:20:00+05:30.
-2026-05-05 00:29:01,253 INFO SKIPPED date=2025-04-21 expiry=2025-04-24 strike=23950 reason=No OTM PE contract satisfied the value band 171.22-195.68 at 2025-04-21T10:57:00+05:30 while also having exact final exit timestamp 2025-04-21T15:20:00+05:30.
-2026-05-05 00:29:01,608 INFO ADJUSTMENT date=2025-04-22 timestamp=2025-04-22T10:59:00+05:30 group=FIRST_ADD side=PE strike=24050 higher_value=141.94 target_band=28.39-42.58
-2026-05-05 00:29:01,609 INFO ADJUSTMENT date=2025-04-22 timestamp=2025-04-22T11:27:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24050 single_value=120.20 double_value=133.40
-2026-05-05 00:29:01,609 INFO TRADED date=2025-04-22 expiry=2025-04-24 atm=24150 adjustments=2 orders=6 gross=1027.00 brokerage=150.00 net=877.00
-2026-05-05 00:29:04,224 INFO SKIPPED date=2025-04-23 expiry=2025-04-24 strike=24300 reason=No OTM CE contract satisfied the value band 108.43-123.92 at 2025-04-23T10:15:00+05:30 while also having exact final exit timestamp 2025-04-23T15:20:00+05:30.
-2026-05-05 00:29:04,434 INFO SKIPPED date=2025-04-24 expiry=2025-04-24 strike=24250 reason=No OTM PE contract satisfied the value band 67.97-77.68 at 2025-04-24T09:35:00+05:30 while also having exact final exit timestamp 2025-04-24T15:20:00+05:30.
-2026-05-05 00:29:06,058 INFO SKIPPED date=2025-04-25 expiry=2025-04-30 strike=24300 reason=No OTM CE contract satisfied the value band 233.97-267.40 at 2025-04-25T10:01:00+05:30 while also having exact final exit timestamp 2025-04-25T15:20:00+05:30.
-2026-05-05 00:29:09,558 INFO SKIPPED date=2025-04-28 expiry=2025-04-30 strike=24100 reason=No OTM PE contract satisfied the value band 157.64-180.16 at 2025-04-28T09:40:00+05:30 while also having exact final exit timestamp 2025-04-28T15:20:00+05:30.
-2026-05-05 00:29:09,717 INFO SKIPPED date=2025-04-29 expiry=2025-04-30 strike=24400 reason=No OTM CE contract satisfied the value band 93.62-107.00 at 2025-04-29T10:31:00+05:30 while also having exact final exit timestamp 2025-04-29T15:20:00+05:30.
-2026-05-05 00:29:09,797 INFO SKIPPED date=2025-04-30 expiry=2025-04-30 strike=24300 reason=No OTM PE contract satisfied the value band 45.78-52.32 at 2025-04-30T09:37:00+05:30 while also having exact final exit timestamp 2025-04-30T15:20:00+05:30.
-2026-05-05 00:29:13,777 INFO SKIPPED date=2025-05-02 expiry=2025-05-08 strike=24500 reason=No OTM CE contract satisfied the value band 213.19-243.64 at 2025-05-02T12:17:00+05:30 while also having exact final exit timestamp 2025-05-02T15:20:00+05:30.
-2026-05-05 00:29:13,817 INFO ADJUSTMENT date=2025-05-05 timestamp=2025-05-05T10:38:00+05:30 group=FIRST_ADD side=PE strike=24250 higher_value=176.00 target_band=35.20-52.80
-2026-05-05 00:29:13,818 INFO ADJUSTMENT date=2025-05-05 timestamp=2025-05-05T10:56:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24250 single_value=143.80 double_value=157.85
-2026-05-05 00:29:13,818 INFO TRADED date=2025-05-05 expiry=2025-05-08 atm=24450 adjustments=2 orders=6 gross=7116.20 brokerage=150.00 net=6966.20
-2026-05-05 00:29:13,820 INFO SKIPPED date=2025-05-06 expiry=2025-05-08 strike=24450 reason=No OTM CE contract satisfied the value band 80.22-91.68 at 2025-05-06T11:29:00+05:30 while also having exact final exit timestamp 2025-05-06T15:20:00+05:30.
-2026-05-05 00:29:13,821 INFO SKIPPED date=2025-05-07 expiry=2025-05-08 strike=24450 reason=No OTM CE contract satisfied the value band 97.30-111.20 at 2025-05-07T09:48:00+05:30 while also having exact final exit timestamp 2025-05-07T15:20:00+05:30.
-2026-05-05 00:29:13,855 INFO SKIPPED date=2025-05-08 expiry=2025-05-08 strike=24400 reason=No OTM CE contract satisfied the value band 35.73-40.84 at 2025-05-08T09:49:00+05:30 while also having exact final exit timestamp 2025-05-08T15:20:00+05:30.
-2026-05-05 00:29:15,620 INFO ADJUSTMENT date=2025-05-09 timestamp=2025-05-09T13:29:00+05:30 group=FIRST_ADD side=CE strike=24300 higher_value=325.45 target_band=65.09-97.63
-2026-05-05 00:29:15,621 INFO ADJUSTMENT date=2025-05-09 timestamp=2025-05-09T14:18:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24300 single_value=277.30 double_value=284.80
-2026-05-05 00:29:15,622 INFO ADJUSTMENT date=2025-05-09 timestamp=2025-05-09T14:26:00+05:30 group=FIRST_ADD side=CE strike=24300 higher_value=314.30 target_band=62.86-94.29
-2026-05-05 00:29:15,622 INFO TRADED date=2025-05-09 expiry=2025-05-15 atm=24100 adjustments=3 orders=8 gross=2243.80 brokerage=200.00 net=2043.80
-2026-05-05 00:29:18,779 INFO SKIPPED date=2025-05-12 expiry=2025-05-15 strike=24600 reason=No OTM PE contract satisfied the value band 245.38-280.44 at 2025-05-12T13:25:00+05:30 while also having exact final exit timestamp 2025-05-12T15:20:00+05:30.
-2026-05-05 00:29:18,816 INFO SKIPPED date=2025-05-13 expiry=2025-05-15 strike=24750 reason=No OTM CE contract satisfied the value band 188.22-215.11 at 2025-05-13T14:16:00+05:30 while also having exact final exit timestamp 2025-05-13T15:20:00+05:30.
-2026-05-05 00:29:18,860 INFO SKIPPED date=2025-05-14 expiry=2025-05-15 strike=24700 reason=No OTM CE contract satisfied the value band 126.49-144.56 at 2025-05-14T12:50:00+05:30 while also having exact final exit timestamp 2025-05-14T15:20:00+05:30.
-2026-05-05 00:29:18,863 INFO SKIPPED date=2025-05-15 expiry=2025-05-15 strike=24600 reason=No OTM CE contract satisfied the value band 108.11-123.55 at 2025-05-15T09:46:00+05:30 while also having exact final exit timestamp 2025-05-15T15:20:00+05:30.
-2026-05-05 00:29:19,012 INFO TRADED date=2025-05-16 expiry=2025-05-22 atm=25050 adjustments=0 orders=4 gross=2047.50 brokerage=100.00 net=1947.50
-2026-05-05 00:29:19,106 INFO TRADED date=2025-05-19 expiry=2025-05-22 atm=25000 adjustments=0 orders=4 gross=3048.50 brokerage=100.00 net=2948.50
-2026-05-05 00:29:20,425 INFO SKIPPED date=2025-05-20 expiry=2025-05-22 strike=24950 reason=No OTM CE contract satisfied the value band 160.06-182.92 at 2025-05-20T13:19:00+05:30 while also having exact final exit timestamp 2025-05-20T15:20:00+05:30.
-2026-05-05 00:29:22,323 INFO SKIPPED date=2025-05-21 expiry=2025-05-22 strike=24750 reason=No OTM PE contract satisfied the value band 154.35-176.40 at 2025-05-21T10:16:00+05:30 while also having exact final exit timestamp 2025-05-21T15:20:00+05:30.
-2026-05-05 00:29:22,675 INFO SKIPPED date=2025-05-22 expiry=2025-05-22 strike=24600 reason=No OTM CE contract satisfied the value band 58.69-67.08 at 2025-05-22T11:38:00+05:30 while also having exact final exit timestamp 2025-05-22T15:20:00+05:30.
-2026-05-05 00:29:32,067 INFO SKIPPED date=2025-05-23 expiry=2025-05-29 strike=24700 reason=No OTM PE contract satisfied the value band 264.88-302.72 at 2025-05-23T10:57:00+05:30 while also having exact final exit timestamp 2025-05-23T15:20:00+05:30.
-2026-05-05 00:29:32,231 INFO TRADED date=2025-05-26 expiry=2025-05-29 atm=25050 adjustments=0 orders=4 gross=-182.00 brokerage=100.00 net=-282.00
-2026-05-05 00:29:32,743 INFO SKIPPED date=2025-05-27 expiry=2025-05-29 strike=24800 reason=No OTM PE contract satisfied the value band 263.62-301.28 at 2025-05-27T11:30:00+05:30 while also having exact final exit timestamp 2025-05-27T15:20:00+05:30.
-2026-05-05 00:29:32,834 INFO ADJUSTMENT date=2025-05-28 timestamp=2025-05-28T12:53:00+05:30 group=FIRST_ADD side=PE strike=24650 higher_value=196.45 target_band=39.29-58.93
-2026-05-05 00:29:32,835 INFO ADJUSTMENT date=2025-05-28 timestamp=2025-05-28T13:19:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24650 single_value=151.35 double_value=158.55
-2026-05-05 00:29:32,836 INFO TRADED date=2025-05-28 expiry=2025-05-29 atm=24750 adjustments=2 orders=6 gross=17010.50 brokerage=150.00 net=16860.50
-2026-05-05 00:29:32,838 INFO SKIPPED date=2025-05-29 expiry=2025-05-29 strike=24800 reason=No OTM PE contract satisfied the value band 63.73-72.84 at 2025-05-29T10:06:00+05:30 while also having exact final exit timestamp 2025-05-29T15:20:00+05:30.
-2026-05-05 00:29:33,068 INFO TRADED date=2025-05-30 expiry=2025-06-05 atm=24850 adjustments=0 orders=4 gross=1248.00 brokerage=100.00 net=1148.00
-2026-05-05 00:29:34,643 INFO ADJUSTMENT date=2025-06-02 timestamp=2025-06-02T12:21:00+05:30 group=FIRST_ADD side=PE strike=24300 higher_value=316.70 target_band=63.34-95.01
-2026-05-05 00:29:34,643 INFO TRADED date=2025-06-02 expiry=2025-06-05 atm=24550 adjustments=1 orders=6 gross=-6935.50 brokerage=150.00 net=-7085.50
-2026-05-05 00:29:34,719 INFO TRADED date=2025-06-03 expiry=2025-06-05 atm=24650 adjustments=0 orders=4 gross=19123.00 brokerage=100.00 net=19023.00
-2026-05-05 00:29:34,731 INFO SKIPPED date=2025-06-04 expiry=2025-06-05 strike=24550 reason=No OTM PE contract satisfied the value band 94.64-108.16 at 2025-06-04T14:09:00+05:30 while also having exact final exit timestamp 2025-06-04T15:20:00+05:30.
-2026-05-05 00:29:34,850 INFO SKIPPED date=2025-06-05 expiry=2025-06-05 strike=24700 reason=No OTM PE contract satisfied the value band 58.24-66.56 at 2025-06-05T09:53:00+05:30 while also having exact final exit timestamp 2025-06-05T15:20:00+05:30.
-2026-05-05 00:29:36,769 INFO SKIPPED date=2025-06-06 expiry=2025-06-12 strike=24750 reason=No OTM PE contract satisfied the value band 223.19-255.08 at 2025-06-06T10:48:00+05:30 while also having exact final exit timestamp 2025-06-06T15:20:00+05:30.
-2026-05-05 00:29:36,909 INFO TRADED date=2025-06-09 expiry=2025-06-12 atm=25100 adjustments=0 orders=4 gross=5362.50 brokerage=100.00 net=5262.50
-2026-05-05 00:29:36,910 INFO TRADED date=2025-06-10 expiry=2025-06-12 atm=25100 adjustments=0 orders=4 gross=6389.50 brokerage=100.00 net=6289.50
-2026-05-05 00:29:37,224 INFO ADJUSTMENT date=2025-06-11 timestamp=2025-06-11T11:55:00+05:30 group=FIRST_ADD side=PE strike=25050 higher_value=121.90 target_band=24.38-36.57
-2026-05-05 00:29:37,225 INFO ADJUSTMENT date=2025-06-11 timestamp=2025-06-11T13:30:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25050 single_value=86.40 double_value=90.50
-2026-05-05 00:29:37,225 INFO TRADED date=2025-06-11 expiry=2025-06-12 atm=25150 adjustments=2 orders=6 gross=832.00 brokerage=150.00 net=682.00
-2026-05-05 00:29:38,614 INFO SKIPPED date=2025-06-12 expiry=2025-06-12 strike=25150 reason=No OTM CE contract satisfied the value band 72.59-82.96 at 2025-06-12T09:47:00+05:30 while also having exact final exit timestamp 2025-06-12T15:20:00+05:30.
-2026-05-05 00:29:38,733 INFO TRADED date=2025-06-13 expiry=2025-06-19 atm=24650 adjustments=0 orders=4 gross=2795.00 brokerage=100.00 net=2695.00
-2026-05-05 00:29:40,205 INFO SKIPPED date=2025-06-16 expiry=2025-06-19 strike=24800 reason=No OTM PE contract satisfied the value band 181.93-207.92 at 2025-06-16T13:42:00+05:30 while also having exact final exit timestamp 2025-06-16T15:20:00+05:30.
-2026-05-05 00:29:41,812 INFO ADJUSTMENT date=2025-06-17 timestamp=2025-06-17T12:52:00+05:30 group=FIRST_ADD side=CE strike=25000 higher_value=145.95 target_band=29.19-43.78
-2026-05-05 00:29:41,813 INFO ADJUSTMENT date=2025-06-17 timestamp=2025-06-17T13:37:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25000 single_value=126.20 double_value=126.30
-2026-05-05 00:29:41,813 INFO TRADED date=2025-06-17 expiry=2025-06-19 atm=24900 adjustments=2 orders=6 gross=3074.50 brokerage=150.00 net=2924.50
-2026-05-05 00:29:41,814 INFO SKIPPED date=2025-06-18 expiry=2025-06-19 strike=24900 reason=No OTM CE contract satisfied the value band 107.91-123.32 at 2025-06-18T11:32:00+05:30 while also having exact final exit timestamp 2025-06-18T15:20:00+05:30.
-2026-05-05 00:29:41,816 INFO SKIPPED date=2025-06-19 expiry=2025-06-19 strike=24800 reason=No OTM PE contract satisfied the value band 50.75-58.00 at 2025-06-19T09:46:00+05:30 while also having exact final exit timestamp 2025-06-19T15:20:00+05:30.
-2026-05-05 00:29:53,348 INFO SKIPPED date=2025-06-20 expiry=2025-06-26 strike=24850 reason=No OTM PE contract satisfied the value band 220.95-252.52 at 2025-06-20T10:31:00+05:30 while also having exact final exit timestamp 2025-06-20T15:20:00+05:30.
-2026-05-05 00:29:53,542 INFO SKIPPED date=2025-06-23 expiry=2025-06-26 strike=24900 reason=No OTM PE contract satisfied the value band 179.90-205.60 at 2025-06-23T14:03:00+05:30 while also having exact final exit timestamp 2025-06-23T15:20:00+05:30.
-2026-05-05 00:29:54,770 INFO SKIPPED date=2025-06-24 expiry=2025-06-26 strike=25200 reason=No OTM PE contract satisfied the value band 150.08-171.52 at 2025-06-24T12:13:00+05:30 while also having exact final exit timestamp 2025-06-24T15:20:00+05:30.
-2026-05-05 00:29:54,853 INFO SKIPPED date=2025-06-25 expiry=2025-06-26 strike=25150 reason=No OTM PE contract satisfied the value band 92.26-105.44 at 2025-06-25T12:40:00+05:30 while also having exact final exit timestamp 2025-06-25T15:20:00+05:30.
-2026-05-05 00:29:55,218 INFO SKIPPED date=2025-06-26 expiry=2025-06-26 strike=25350 reason=No OTM PE contract satisfied the value band 77.42-88.48 at 2025-06-26T09:56:00+05:30 while also having exact final exit timestamp 2025-06-26T15:20:00+05:30.
-2026-05-05 00:29:57,443 INFO ADJUSTMENT date=2025-06-27 timestamp=2025-06-27T12:18:00+05:30 group=FIRST_ADD side=PE strike=25350 higher_value=203.85 target_band=40.77-61.15
-2026-05-05 00:29:57,443 INFO TRADED date=2025-06-27 expiry=2025-07-03 atm=25550 adjustments=1 orders=6 gross=5063.50 brokerage=150.00 net=4913.50
-2026-05-05 00:29:58,800 INFO SKIPPED date=2025-06-30 expiry=2025-07-03 strike=25650 reason=No OTM CE contract satisfied the value band 156.66-179.04 at 2025-06-30T13:16:00+05:30 while also having exact final exit timestamp 2025-06-30T15:20:00+05:30.
-2026-05-05 00:29:58,802 INFO TRADED date=2025-07-01 expiry=2025-07-03 atm=25550 adjustments=0 orders=4 gross=6084.00 brokerage=100.00 net=5984.00
-2026-05-05 00:29:58,854 INFO SKIPPED date=2025-07-02 expiry=2025-07-03 strike=25550 reason=No OTM CE contract satisfied the value band 81.13-92.72 at 2025-07-02T12:52:00+05:30 while also having exact final exit timestamp 2025-07-02T15:20:00+05:30.
-2026-05-05 00:29:58,901 INFO SKIPPED date=2025-07-03 expiry=2025-07-03 strike=25450 reason=No OTM PE contract satisfied the value band 54.77-62.60 at 2025-07-03T09:46:00+05:30 while also having exact final exit timestamp 2025-07-03T15:20:00+05:30.
-2026-05-05 00:29:59,020 INFO TRADED date=2025-07-04 expiry=2025-07-10 atm=25400 adjustments=0 orders=4 gross=2320.50 brokerage=100.00 net=2220.50
-2026-05-05 00:29:59,085 INFO TRADED date=2025-07-07 expiry=2025-07-10 atm=25450 adjustments=0 orders=4 gross=1157.00 brokerage=100.00 net=1057.00
-2026-05-05 00:29:59,154 INFO TRADED date=2025-07-08 expiry=2025-07-10 atm=25500 adjustments=0 orders=4 gross=2606.50 brokerage=100.00 net=2506.50
-2026-05-05 00:30:01,305 INFO ADJUSTMENT date=2025-07-09 timestamp=2025-07-09T10:16:00+05:30 group=FIRST_ADD side=PE strike=25400 higher_value=101.45 target_band=20.29-30.43
-2026-05-05 00:30:01,306 INFO ADJUSTMENT date=2025-07-09 timestamp=2025-07-09T13:05:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25400 single_value=82.60 double_value=85.25
-2026-05-05 00:30:01,307 INFO ADJUSTMENT date=2025-07-09 timestamp=2025-07-09T13:14:00+05:30 group=FIRST_ADD side=PE strike=25400 higher_value=93.00 target_band=18.60-27.90
-2026-05-05 00:30:01,307 INFO ADJUSTMENT date=2025-07-09 timestamp=2025-07-09T14:25:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25400 single_value=75.05 double_value=81.65
-2026-05-05 00:30:01,307 INFO TRADED date=2025-07-09 expiry=2025-07-10 atm=25500 adjustments=4 orders=8 gross=-838.50 brokerage=200.00 net=-1038.50
-2026-05-05 00:30:02,833 INFO SKIPPED date=2025-07-10 expiry=2025-07-10 strike=25450 reason=No OTM CE contract satisfied the value band 56.70-64.80 at 2025-07-10T10:53:00+05:30 while also having exact final exit timestamp 2025-07-10T15:20:00+05:30.
-2026-05-05 00:30:04,330 INFO ADJUSTMENT date=2025-07-11 timestamp=2025-07-11T10:58:00+05:30 group=FIRST_ADD side=CE strike=25450 higher_value=179.90 target_band=35.98-53.97
-2026-05-05 00:30:04,331 INFO TRADED date=2025-07-11 expiry=2025-07-17 atm=25300 adjustments=1 orders=6 gross=-513.50 brokerage=150.00 net=-663.50
-2026-05-05 00:30:06,013 INFO ADJUSTMENT date=2025-07-14 timestamp=2025-07-14T09:54:00+05:30 group=FIRST_ADD side=PE strike=24900 higher_value=161.35 target_band=32.27-48.40
-2026-05-05 00:30:06,014 INFO ADJUSTMENT date=2025-07-14 timestamp=2025-07-14T11:09:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24900 single_value=131.95 double_value=134.00
-2026-05-05 00:30:06,014 INFO ADJUSTMENT date=2025-07-14 timestamp=2025-07-14T14:54:00+05:30 group=FIRST_ADD side=PE strike=24900 higher_value=144.50 target_band=28.90-43.35
-2026-05-05 00:30:06,014 INFO TRADED date=2025-07-14 expiry=2025-07-17 atm=25050 adjustments=3 orders=8 gross=-611.00 brokerage=200.00 net=-811.00
-2026-05-05 00:30:06,234 INFO SKIPPED date=2025-07-15 expiry=2025-07-17 strike=25150 reason=No OTM PE contract satisfied the value band 107.10-122.40 at 2025-07-15T11:10:00+05:30 while also having exact final exit timestamp 2025-07-15T15:20:00+05:30.
-2026-05-05 00:30:06,236 INFO SKIPPED date=2025-07-16 expiry=2025-07-17 strike=25150 reason=No OTM PE contract satisfied the value band 73.25-83.72 at 2025-07-16T12:47:00+05:30 while also having exact final exit timestamp 2025-07-16T15:20:00+05:30.
-2026-05-05 00:30:06,368 INFO SKIPPED date=2025-07-17 expiry=2025-07-17 strike=25200 reason=No OTM CE contract satisfied the value band 48.23-55.12 at 2025-07-17T10:31:00+05:30 while also having exact final exit timestamp 2025-07-17T15:20:00+05:30.
-2026-05-05 00:30:06,500 INFO TRADED date=2025-07-18 expiry=2025-07-24 atm=25050 adjustments=0 orders=4 gross=266.50 brokerage=100.00 net=166.50
-2026-05-05 00:30:08,115 INFO SKIPPED date=2025-07-21 expiry=2025-07-24 strike=24900 reason=No OTM PE contract satisfied the value band 134.29-153.48 at 2025-07-21T09:51:00+05:30 while also having exact final exit timestamp 2025-07-21T15:20:00+05:30.
-2026-05-05 00:30:08,200 INFO TRADED date=2025-07-22 expiry=2025-07-24 atm=25100 adjustments=0 orders=4 gross=3146.00 brokerage=100.00 net=3046.00
-2026-05-05 00:30:08,300 INFO SKIPPED date=2025-07-23 expiry=2025-07-24 strike=25100 reason=No OTM PE contract satisfied the value band 68.00-77.72 at 2025-07-23T12:05:00+05:30 while also having exact final exit timestamp 2025-07-23T15:20:00+05:30.
-2026-05-05 00:30:10,177 INFO SKIPPED date=2025-07-24 expiry=2025-07-24 strike=25200 reason=No OTM CE contract satisfied the value band 34.47-39.40 at 2025-07-24T10:14:00+05:30 while also having exact final exit timestamp 2025-07-24T15:20:00+05:30.
-2026-05-05 00:30:14,682 INFO SKIPPED date=2025-07-25 expiry=2025-07-31 strike=25000 reason=No OTM CE contract satisfied the value band 153.61-175.56 at 2025-07-25T11:49:00+05:30 while also having exact final exit timestamp 2025-07-25T15:20:00+05:30.
-2026-05-05 00:30:21,158 INFO SKIPPED date=2025-07-28 expiry=2025-07-31 strike=24800 reason=No OTM PE contract satisfied the value band 131.53-150.32 at 2025-07-28T10:31:00+05:30 while also having exact final exit timestamp 2025-07-28T15:20:00+05:30.
-2026-05-05 00:30:21,294 INFO SKIPPED date=2025-07-29 expiry=2025-07-31 strike=24700 reason=No OTM PE contract satisfied the value band 108.67-124.20 at 2025-07-29T13:54:00+05:30 while also having exact final exit timestamp 2025-07-29T15:20:00+05:30.
-2026-05-05 00:30:21,760 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T10:42:00+05:30 group=FIRST_ADD side=CE strike=24950 higher_value=99.85 target_band=19.97-29.95
-2026-05-05 00:30:21,760 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T10:58:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24950 single_value=82.40 double_value=83.65
-2026-05-05 00:30:21,761 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T11:29:00+05:30 group=FIRST_ADD side=PE strike=24750 higher_value=103.00 target_band=20.60-30.90
-2026-05-05 00:30:21,761 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T11:50:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24750 single_value=79.50 double_value=81.00
-2026-05-05 00:30:21,761 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T11:57:00+05:30 group=FIRST_ADD side=PE strike=24750 higher_value=94.55 target_band=18.91-28.36
-2026-05-05 00:30:21,762 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T12:10:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24750 single_value=78.05 double_value=80.00
-2026-05-05 00:30:21,762 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T14:29:00+05:30 group=FIRST_ADD side=PE strike=24750 higher_value=84.75 target_band=16.95-25.43
-2026-05-05 00:30:21,762 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T15:09:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24750 single_value=65.80 double_value=69.10
-2026-05-05 00:30:21,763 INFO TRADED date=2025-07-30 expiry=2025-07-31 atm=24850 adjustments=8 orders=12 gross=-266.50 brokerage=300.00 net=-566.50
-2026-05-05 00:30:21,877 INFO SKIPPED date=2025-07-31 expiry=2025-07-31 strike=24700 reason=No OTM PE contract satisfied the value band 57.12-65.28 at 2025-07-31T11:04:00+05:30 while also having exact final exit timestamp 2025-07-31T15:20:00+05:30.
-2026-05-05 00:30:24,092 INFO ADJUSTMENT date=2025-08-01 timestamp=2025-08-01T15:07:00+05:30 group=FIRST_ADD side=CE strike=24850 higher_value=197.95 target_band=39.59-59.38
-2026-05-05 00:30:24,092 INFO TRADED date=2025-08-01 expiry=2025-08-07 atm=24700 adjustments=1 orders=6 gross=-2197.00 brokerage=150.00 net=-2347.00
-2026-05-05 00:30:25,365 INFO ADJUSTMENT date=2025-08-04 timestamp=2025-08-04T13:47:00+05:30 group=FIRST_ADD side=PE strike=24500 higher_value=178.75 target_band=35.75-53.62
-2026-05-05 00:30:25,366 INFO TRADED date=2025-08-04 expiry=2025-08-07 atm=24650 adjustments=1 orders=6 gross=2294.50 brokerage=150.00 net=2144.50
-2026-05-05 00:30:25,367 INFO TRADED date=2025-08-05 expiry=2025-08-07 atm=24650 adjustments=0 orders=4 gross=3536.00 brokerage=100.00 net=3436.00
-2026-05-05 00:30:25,375 INFO SKIPPED date=2025-08-06 expiry=2025-08-07 strike=24650 reason=No OTM CE contract satisfied the value band 76.82-87.80 at 2025-08-06T14:35:00+05:30 while also having exact final exit timestamp 2025-08-06T15:20:00+05:30.
-2026-05-05 00:30:25,426 INFO SKIPPED date=2025-08-07 expiry=2025-08-07 strike=24550 reason=No OTM CE contract satisfied the value band 55.30-63.20 at 2025-08-07T09:59:00+05:30 while also having exact final exit timestamp 2025-08-07T15:20:00+05:30.
-2026-05-05 00:30:27,219 INFO ADJUSTMENT date=2025-08-08 timestamp=2025-08-08T15:13:00+05:30 group=FIRST_ADD side=CE strike=24600 higher_value=200.15 target_band=40.03-60.05
-2026-05-05 00:30:27,220 INFO TRADED date=2025-08-08 expiry=2025-08-14 atm=24500 adjustments=1 orders=6 gross=-2255.50 brokerage=150.00 net=-2405.50
-2026-05-05 00:30:28,279 INFO SKIPPED date=2025-08-11 expiry=2025-08-14 strike=24400 reason=No OTM PE contract satisfied the value band 135.13-154.44 at 2025-08-11T13:02:00+05:30 while also having exact final exit timestamp 2025-08-11T15:20:00+05:30.
-2026-05-05 00:30:28,401 INFO SKIPPED date=2025-08-12 expiry=2025-08-14 strike=24600 reason=No OTM PE contract satisfied the value band 118.75-135.72 at 2025-08-12T10:02:00+05:30 while also having exact final exit timestamp 2025-08-12T15:20:00+05:30.
-2026-05-05 00:30:28,403 INFO SKIPPED date=2025-08-13 expiry=2025-08-14 strike=24550 reason=No OTM PE contract satisfied the value band 80.88-92.44 at 2025-08-13T12:32:00+05:30 while also having exact final exit timestamp 2025-08-13T15:20:00+05:30.
-2026-05-05 00:30:28,447 INFO SKIPPED date=2025-08-14 expiry=2025-08-14 strike=24650 reason=No OTM CE contract satisfied the value band 11.86-17.79 at 2025-08-14T11:43:00+05:30 while also having exact final exit timestamp 2025-08-14T15:20:00+05:30.
-2026-05-05 00:30:30,297 INFO ADJUSTMENT date=2025-08-18 timestamp=2025-08-18T09:50:00+05:30 group=FIRST_ADD side=PE strike=24800 higher_value=189.50 target_band=37.90-56.85
-2026-05-05 00:30:30,297 INFO ADJUSTMENT date=2025-08-18 timestamp=2025-08-18T10:28:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24800 single_value=157.25 double_value=158.55
-2026-05-05 00:30:30,298 INFO TRADED date=2025-08-18 expiry=2025-08-21 atm=24950 adjustments=2 orders=6 gross=4888.00 brokerage=150.00 net=4738.00
-2026-05-05 00:30:30,344 INFO SKIPPED date=2025-08-19 expiry=2025-08-21 strike=24900 reason=No OTM PE contract satisfied the value band 99.75-114.00 at 2025-08-19T12:15:00+05:30 while also having exact final exit timestamp 2025-08-19T15:20:00+05:30.
-2026-05-05 00:30:30,346 INFO SKIPPED date=2025-08-20 expiry=2025-08-21 strike=24950 reason=No OTM PE contract satisfied the value band 82.95-94.80 at 2025-08-20T11:13:00+05:30 while also having exact final exit timestamp 2025-08-20T15:20:00+05:30.
-2026-05-05 00:30:30,471 INFO SKIPPED date=2025-08-21 expiry=2025-08-21 strike=25050 reason=No OTM PE contract satisfied the value band 42.98-49.12 at 2025-08-21T09:58:00+05:30 while also having exact final exit timestamp 2025-08-21T15:20:00+05:30.
-2026-05-05 00:30:35,014 INFO ADJUSTMENT date=2025-08-22 timestamp=2025-08-22T14:24:00+05:30 group=FIRST_ADD side=CE strike=25150 higher_value=154.30 target_band=30.86-46.29
-2026-05-05 00:30:35,014 INFO TRADED date=2025-08-22 expiry=2025-08-28 atm=25000 adjustments=1 orders=6 gross=-1131.00 brokerage=150.00 net=-1281.00
-2026-05-05 00:30:39,909 INFO ADJUSTMENT date=2025-08-25 timestamp=2025-08-25T12:19:00+05:30 group=FIRST_ADD side=PE strike=24850 higher_value=117.80 target_band=23.56-35.34
-2026-05-05 00:30:39,910 INFO ADJUSTMENT date=2025-08-25 timestamp=2025-08-25T14:41:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24850 single_value=92.00 double_value=96.25
-2026-05-05 00:30:39,910 INFO ADJUSTMENT date=2025-08-25 timestamp=2025-08-25T14:57:00+05:30 group=FIRST_ADD side=PE strike=24850 higher_value=111.25 target_band=22.25-33.38
-2026-05-05 00:30:39,910 INFO TRADED date=2025-08-25 expiry=2025-08-28 atm=24950 adjustments=3 orders=8 gross=1332.50 brokerage=200.00 net=1132.50
-2026-05-05 00:30:40,245 INFO SKIPPED date=2025-08-26 expiry=2025-08-28 strike=24800 reason=No OTM CE contract satisfied the value band 86.27-98.60 at 2025-08-26T15:14:00+05:30 while also having exact final exit timestamp 2025-08-26T15:20:00+05:30.
-2026-05-05 00:30:40,308 INFO SKIPPED date=2025-08-28 expiry=2025-08-28 strike=24550 reason=No OTM PE contract satisfied the value band 53.79-61.48 at 2025-08-28T09:55:00+05:30 while also having exact final exit timestamp 2025-08-28T15:20:00+05:30.
-2026-05-05 00:30:41,927 INFO SKIPPED date=2025-08-29 expiry=2025-09-02 strike=24550 reason=No OTM CE contract satisfied the value band 108.43-123.92 at 2025-08-29T15:12:00+05:30 while also having exact final exit timestamp 2025-08-29T15:20:00+05:30.
-2026-05-05 00:30:43,225 INFO SKIPPED date=2025-09-01 expiry=2025-09-02 strike=24550 reason=No OTM PE contract satisfied the value band 16.63-24.95 at 2025-09-01T12:29:00+05:30 while also having exact final exit timestamp 2025-09-01T15:20:00+05:30.
-2026-05-05 00:30:43,291 INFO SKIPPED date=2025-09-02 expiry=2025-09-02 strike=24650 reason=No OTM PE contract satisfied the value band 43.85-50.12 at 2025-09-02T09:45:00+05:30 while also having exact final exit timestamp 2025-09-02T15:20:00+05:30.
-2026-05-05 00:30:44,590 INFO SKIPPED date=2025-09-03 expiry=2025-09-09 strike=24600 reason=No OTM PE contract satisfied the value band 136.43-155.92 at 2025-09-03T15:10:00+05:30 while also having exact final exit timestamp 2025-09-03T15:20:00+05:30.
-2026-05-05 00:30:45,704 INFO SKIPPED date=2025-09-04 expiry=2025-09-09 strike=24900 reason=No OTM CE contract satisfied the value band 122.25-139.72 at 2025-09-04T14:17:00+05:30 while also having exact final exit timestamp 2025-09-04T15:20:00+05:30.
-2026-05-05 00:30:45,798 INFO SKIPPED date=2025-09-05 expiry=2025-09-09 strike=24800 reason=No OTM CE contract satisfied the value band 127.85-146.12 at 2025-09-05T10:16:00+05:30 while also having exact final exit timestamp 2025-09-05T15:20:00+05:30.
-2026-05-05 00:30:45,884 INFO SKIPPED date=2025-09-08 expiry=2025-09-09 strike=24800 reason=No OTM PE contract satisfied the value band 70.84-80.96 at 2025-09-08T12:36:00+05:30 while also having exact final exit timestamp 2025-09-08T15:20:00+05:30.
-2026-05-05 00:30:45,915 INFO SKIPPED date=2025-09-09 expiry=2025-09-09 strike=24850 reason=No OTM PE contract satisfied the value band 8.01-12.01 at 2025-09-09T14:06:00+05:30 while also having exact final exit timestamp 2025-09-09T15:20:00+05:30.
-2026-05-05 00:30:46,037 INFO TRADED date=2025-09-10 expiry=2025-09-16 atm=25000 adjustments=0 orders=4 gross=1410.50 brokerage=100.00 net=1310.50
-2026-05-05 00:30:46,039 INFO TRADED date=2025-09-11 expiry=2025-09-16 atm=25000 adjustments=0 orders=4 gross=1027.00 brokerage=100.00 net=927.00
-2026-05-05 00:30:47,560 INFO SKIPPED date=2025-09-12 expiry=2025-09-16 strike=25050 reason=No OTM PE contract satisfied the value band 96.14-109.88 at 2025-09-12T11:28:00+05:30 while also having exact final exit timestamp 2025-09-12T15:20:00+05:30.
-2026-05-05 00:30:47,635 INFO TRADED date=2025-09-15 expiry=2025-09-16 atm=25100 adjustments=0 orders=4 gross=3471.00 brokerage=100.00 net=3371.00
-2026-05-05 00:30:47,636 INFO SKIPPED date=2025-09-16 expiry=2025-09-16 strike=25100 reason=No OTM PE contract satisfied the value band 47.49-54.28 at 2025-09-16T09:45:00+05:30 while also having exact final exit timestamp 2025-09-16T15:20:00+05:30.
-2026-05-05 00:30:49,728 INFO ADJUSTMENT date=2025-09-17 timestamp=2025-09-17T09:38:00+05:30 group=FIRST_ADD side=PE strike=25150 higher_value=154.35 target_band=30.87-46.30
-2026-05-05 00:30:49,728 INFO TRADED date=2025-09-17 expiry=2025-09-23 atm=25300 adjustments=1 orders=6 gross=-1157.00 brokerage=150.00 net=-1307.00
-2026-05-05 00:30:49,808 INFO ADJUSTMENT date=2025-09-18 timestamp=2025-09-18T09:31:00+05:30 group=FIRST_ADD side=PE strike=25300 higher_value=128.30 target_band=25.66-38.49
-2026-05-05 00:30:49,808 INFO ADJUSTMENT date=2025-09-18 timestamp=2025-09-18T12:38:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25300 single_value=105.25 double_value=112.80
-2026-05-05 00:30:49,808 INFO ADJUSTMENT date=2025-09-18 timestamp=2025-09-18T15:05:00+05:30 group=FIRST_ADD side=PE strike=25300 higher_value=115.15 target_band=23.03-34.55
-2026-05-05 00:30:49,809 INFO TRADED date=2025-09-18 expiry=2025-09-23 atm=25400 adjustments=3 orders=8 gross=-214.50 brokerage=200.00 net=-414.50
-2026-05-05 00:30:49,829 INFO TRADED date=2025-09-19 expiry=2025-09-23 atm=25350 adjustments=0 orders=4 gross=1014.00 brokerage=100.00 net=914.00
-2026-05-05 00:30:50,853 INFO SKIPPED date=2025-09-22 expiry=2025-09-23 strike=25300 reason=No OTM CE contract satisfied the value band 65.45-74.80 at 2025-09-22T14:43:00+05:30 while also having exact final exit timestamp 2025-09-22T15:20:00+05:30.
-2026-05-05 00:30:50,927 INFO SKIPPED date=2025-09-23 expiry=2025-09-23 strike=25200 reason=No OTM CE contract satisfied the value band 53.87-61.56 at 2025-09-23T09:43:00+05:30 while also having exact final exit timestamp 2025-09-23T15:20:00+05:30.
-2026-05-05 00:30:57,412 INFO SKIPPED date=2025-09-24 expiry=2025-09-30 strike=25050 reason=No OTM PE contract satisfied the value band 129.25-147.72 at 2025-09-24T13:01:00+05:30 while also having exact final exit timestamp 2025-09-24T15:20:00+05:30.
-2026-05-05 00:31:02,848 INFO ADJUSTMENT date=2025-09-25 timestamp=2025-09-25T15:01:00+05:30 group=FIRST_ADD side=CE strike=25200 higher_value=132.80 target_band=26.56-39.84
-2026-05-05 00:31:02,849 INFO TRADED date=2025-09-25 expiry=2025-09-30 atm=25050 adjustments=1 orders=6 gross=-552.50 brokerage=150.00 net=-702.50
-2026-05-05 00:31:03,816 INFO SKIPPED date=2025-09-26 expiry=2025-09-30 strike=24800 reason=No OTM CE contract satisfied the value band 112.00-128.00 at 2025-09-26T13:59:00+05:30 while also having exact final exit timestamp 2025-09-26T15:20:00+05:30.
-2026-05-05 00:31:03,927 INFO SKIPPED date=2025-09-29 expiry=2025-09-30 strike=24700 reason=No OTM PE contract satisfied the value band 85.33-97.52 at 2025-09-29T09:36:00+05:30 while also having exact final exit timestamp 2025-09-29T15:20:00+05:30.
-2026-05-05 00:31:04,713 INFO SKIPPED date=2025-09-30 expiry=2025-09-30 strike=24650 reason=No OTM CE contract satisfied the value band 7.66-11.49 at 2025-09-30T13:55:00+05:30 while also having exact final exit timestamp 2025-09-30T15:20:00+05:30.
-2026-05-05 00:31:06,018 INFO SKIPPED date=2025-10-01 expiry=2025-10-07 strike=24650 reason=No OTM PE contract satisfied the value band 132.23-151.12 at 2025-10-01T11:32:00+05:30 while also having exact final exit timestamp 2025-10-01T15:20:00+05:30.
-2026-05-05 00:31:06,172 INFO SKIPPED date=2025-10-03 expiry=2025-10-07 strike=24800 reason=No OTM PE contract satisfied the value band 86.77-99.16 at 2025-10-03T14:38:00+05:30 while also having exact final exit timestamp 2025-10-03T15:20:00+05:30.
-2026-05-05 00:31:06,288 INFO SKIPPED date=2025-10-06 expiry=2025-10-07 strike=24900 reason=No OTM PE contract satisfied the value band 67.13-76.72 at 2025-10-06T09:50:00+05:30 while also having exact final exit timestamp 2025-10-06T15:20:00+05:30.
-2026-05-05 00:31:06,475 INFO SKIPPED date=2025-10-07 expiry=2025-10-07 strike=25100 reason=No OTM PE contract satisfied the value band 48.27-55.16 at 2025-10-07T09:41:00+05:30 while also having exact final exit timestamp 2025-10-07T15:20:00+05:30.
-2026-05-05 00:31:07,730 INFO SKIPPED date=2025-10-08 expiry=2025-10-14 strike=25200 reason=No OTM CE contract satisfied the value band 128.03-146.32 at 2025-10-08T11:10:00+05:30 while also having exact final exit timestamp 2025-10-08T15:20:00+05:30.
-2026-05-05 00:31:09,261 INFO SKIPPED date=2025-10-09 expiry=2025-10-14 strike=25100 reason=No OTM PE contract satisfied the value band 115.25-131.72 at 2025-10-09T11:36:00+05:30 while also having exact final exit timestamp 2025-10-09T15:20:00+05:30.
-2026-05-05 00:31:09,321 INFO SKIPPED date=2025-10-10 expiry=2025-10-14 strike=25250 reason=No OTM PE contract satisfied the value band 106.54-121.76 at 2025-10-10T10:57:00+05:30 while also having exact final exit timestamp 2025-10-10T15:20:00+05:30.
-2026-05-05 00:31:09,323 INFO SKIPPED date=2025-10-13 expiry=2025-10-14 strike=25200 reason=No OTM PE contract satisfied the value band 70.11-80.12 at 2025-10-13T14:29:00+05:30 while also having exact final exit timestamp 2025-10-13T15:20:00+05:30.
-2026-05-05 00:31:09,364 INFO SKIPPED date=2025-10-14 expiry=2025-10-14 strike=25300 reason=No OTM CE contract satisfied the value band 60.76-69.44 at 2025-10-14T09:56:00+05:30 while also having exact final exit timestamp 2025-10-14T15:20:00+05:30.
-2026-05-05 00:31:10,831 INFO SKIPPED date=2025-10-15 expiry=2025-10-20 strike=25250 reason=No OTM PE contract satisfied the value band 135.59-154.96 at 2025-10-15T10:54:00+05:30 while also having exact final exit timestamp 2025-10-15T15:20:00+05:30.
-2026-05-05 00:31:11,045 INFO SKIPPED date=2025-10-16 expiry=2025-10-20 strike=25400 reason=No OTM PE contract satisfied the value band 112.56-128.64 at 2025-10-16T12:14:00+05:30 while also having exact final exit timestamp 2025-10-16T15:20:00+05:30.
-2026-05-05 00:31:11,191 INFO SKIPPED date=2025-10-17 expiry=2025-10-20 strike=25600 reason=No OTM PE contract satisfied the value band 113.85-130.12 at 2025-10-17T10:32:00+05:30 while also having exact final exit timestamp 2025-10-17T15:20:00+05:30.
-2026-05-05 00:31:12,044 INFO SKIPPED date=2025-10-20 expiry=2025-10-20 strike=25900 reason=No OTM CE contract satisfied the value band 85.33-97.52 at 2025-10-20T09:47:00+05:30 while also having exact final exit timestamp 2025-10-20T15:20:00+05:30.
-2026-05-05 00:31:20,968 INFO ADJUSTMENT date=2025-10-23 timestamp=2025-10-23T09:31:00+05:30 group=FIRST_ADD side=PE strike=25900 higher_value=184.15 target_band=36.83-55.24
-2026-05-05 00:31:20,968 INFO ADJUSTMENT date=2025-10-23 timestamp=2025-10-23T13:35:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25900 single_value=134.35 double_value=137.80
-2026-05-05 00:31:20,969 INFO ADJUSTMENT date=2025-10-23 timestamp=2025-10-23T15:11:00+05:30 group=FIRST_ADD side=CE strike=26150 higher_value=159.95 target_band=31.99-47.98
-2026-05-05 00:31:20,969 INFO TRADED date=2025-10-23 expiry=2025-10-28 atm=26050 adjustments=3 orders=8 gross=3432.00 brokerage=200.00 net=3232.00
-2026-05-05 00:31:21,235 INFO SKIPPED date=2025-10-24 expiry=2025-10-28 strike=25900 reason=No OTM CE contract satisfied the value band 113.40-129.60 at 2025-10-24T13:33:00+05:30 while also having exact final exit timestamp 2025-10-24T15:20:00+05:30.
-2026-05-05 00:31:21,238 INFO SKIPPED date=2025-10-27 expiry=2025-10-28 strike=25900 reason=No OTM PE contract satisfied the value band 106.09-121.24 at 2025-10-27T09:42:00+05:30 while also having exact final exit timestamp 2025-10-27T15:20:00+05:30.
-2026-05-05 00:31:21,241 INFO SKIPPED date=2025-10-28 expiry=2025-10-28 strike=26000 reason=No OTM CE contract satisfied the value band 85.54-97.76 at 2025-10-28T10:08:00+05:30 while also having exact final exit timestamp 2025-10-28T15:20:00+05:30.
-2026-05-05 00:31:23,619 INFO SKIPPED date=2025-10-29 expiry=2025-11-04 strike=26000 reason=No OTM PE contract satisfied the value band 171.43-195.92 at 2025-10-29T12:31:00+05:30 while also having exact final exit timestamp 2025-10-29T15:20:00+05:30.
-2026-05-05 00:31:24,650 INFO ADJUSTMENT date=2025-10-30 timestamp=2025-10-30T13:35:00+05:30 group=FIRST_ADD side=CE strike=26150 higher_value=176.10 target_band=35.22-52.83
-2026-05-05 00:31:24,651 INFO ADJUSTMENT date=2025-10-30 timestamp=2025-10-30T14:22:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=26150 single_value=145.20 double_value=150.80
-2026-05-05 00:31:24,651 INFO TRADED date=2025-10-30 expiry=2025-11-04 atm=26000 adjustments=2 orders=6 gross=468.00 brokerage=150.00 net=318.00
-2026-05-05 00:31:24,721 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T09:33:00+05:30 group=FIRST_ADD side=PE strike=25750 higher_value=160.50 target_band=32.10-48.15
-2026-05-05 00:31:24,721 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T10:06:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25750 single_value=130.00 double_value=132.45
-2026-05-05 00:31:24,721 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T11:01:00+05:30 group=FIRST_ADD side=CE strike=26000 higher_value=156.15 target_band=31.23-46.84
-2026-05-05 00:31:24,721 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T11:54:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=26000 single_value=130.00 double_value=134.90
-2026-05-05 00:31:24,722 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T12:25:00+05:30 group=FIRST_ADD side=CE strike=26050 higher_value=145.05 target_band=29.01-43.52
-2026-05-05 00:31:24,722 INFO TRADED date=2025-10-31 expiry=2025-11-04 atm=25900 adjustments=5 orders=10 gross=-253.50 brokerage=250.00 net=-503.50
-2026-05-05 00:31:24,760 INFO SKIPPED date=2025-11-03 expiry=2025-11-04 strike=25700 reason=No OTM PE contract satisfied the value band 104.09-118.96 at 2025-11-03T10:39:00+05:30 while also having exact final exit timestamp 2025-11-03T15:20:00+05:30.
-2026-05-05 00:31:24,858 INFO SKIPPED date=2025-11-04 expiry=2025-11-04 strike=25750 reason=No OTM CE contract satisfied the value band 66.85-76.40 at 2025-11-04T09:48:00+05:30 while also having exact final exit timestamp 2025-11-04T15:20:00+05:30.
-2026-05-05 00:31:26,199 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T10:34:00+05:30 group=FIRST_ADD side=CE strike=25800 higher_value=170.55 target_band=34.11-51.16
-2026-05-05 00:31:26,200 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T11:05:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25800 single_value=139.75 double_value=143.30
-2026-05-05 00:31:26,200 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T11:24:00+05:30 group=FIRST_ADD side=CE strike=25800 higher_value=164.95 target_band=32.99-49.48
-2026-05-05 00:31:26,201 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T12:49:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25800 single_value=135.90 double_value=137.45
-2026-05-05 00:31:26,202 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T13:49:00+05:30 group=FIRST_ADD side=CE strike=25750 higher_value=154.50 target_band=30.90-46.35
-2026-05-05 00:31:26,202 INFO TRADED date=2025-11-06 expiry=2025-11-11 atm=25650 adjustments=5 orders=10 gross=1631.50 brokerage=250.00 net=1381.50
-2026-05-05 00:31:27,464 INFO SKIPPED date=2025-11-07 expiry=2025-11-11 strike=25350 reason=No OTM PE contract satisfied the value band 111.41-127.32 at 2025-11-07T11:29:00+05:30 while also having exact final exit timestamp 2025-11-07T15:20:00+05:30.
-2026-05-05 00:31:27,720 INFO SKIPPED date=2025-11-10 expiry=2025-11-11 strike=25550 reason=No OTM PE contract satisfied the value band 83.12-95.00 at 2025-11-10T10:24:00+05:30 while also having exact final exit timestamp 2025-11-10T15:20:00+05:30.
-2026-05-05 00:31:27,761 INFO SKIPPED date=2025-11-11 expiry=2025-11-11 strike=25550 reason=No OTM CE contract satisfied the value band 53.97-61.68 at 2025-11-11T10:25:00+05:30 while also having exact final exit timestamp 2025-11-11T15:20:00+05:30.
-2026-05-05 00:31:29,648 INFO SKIPPED date=2025-11-12 expiry=2025-11-18 strike=25800 reason=No OTM PE contract satisfied the value band 160.12-183.00 at 2025-11-12T12:31:00+05:30 while also having exact final exit timestamp 2025-11-12T15:20:00+05:30.
-2026-05-05 00:31:29,765 INFO ADJUSTMENT date=2025-11-13 timestamp=2025-11-13T10:50:00+05:30 group=FIRST_ADD side=PE strike=25750 higher_value=173.40 target_band=34.68-52.02
-2026-05-05 00:31:29,766 INFO ADJUSTMENT date=2025-11-13 timestamp=2025-11-13T14:01:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25750 single_value=151.40 double_value=165.70
-2026-05-05 00:31:29,766 INFO TRADED date=2025-11-13 expiry=2025-11-18 atm=25900 adjustments=2 orders=6 gross=-5284.50 brokerage=150.00 net=-5434.50
-2026-05-05 00:31:29,769 INFO SKIPPED date=2025-11-14 expiry=2025-11-18 strike=25800 reason=No OTM PE contract satisfied the value band 132.61-151.56 at 2025-11-14T15:08:00+05:30 while also having exact final exit timestamp 2025-11-14T15:20:00+05:30.
-2026-05-05 00:31:29,846 INFO SKIPPED date=2025-11-17 expiry=2025-11-18 strike=25950 reason=No OTM PE contract satisfied the value band 84.80-96.92 at 2025-11-17T14:05:00+05:30 while also having exact final exit timestamp 2025-11-17T15:20:00+05:30.
-2026-05-05 00:31:31,216 INFO SKIPPED date=2025-11-18 expiry=2025-11-18 strike=25950 reason=No OTM CE contract satisfied the value band 63.00-72.00 at 2025-11-18T10:33:00+05:30 while also having exact final exit timestamp 2025-11-18T15:20:00+05:30.
-2026-05-05 00:31:37,230 INFO SKIPPED date=2025-11-19 expiry=2025-11-25 strike=25900 reason=No OTM PE contract satisfied the value band 168.91-193.04 at 2025-11-19T14:14:00+05:30 while also having exact final exit timestamp 2025-11-19T15:20:00+05:30.
-2026-05-05 00:31:37,645 INFO SKIPPED date=2025-11-20 expiry=2025-11-25 strike=26100 reason=No OTM PE contract satisfied the value band 150.50-172.00 at 2025-11-20T13:51:00+05:30 while also having exact final exit timestamp 2025-11-20T15:20:00+05:30.
-2026-05-05 00:31:37,983 INFO TRADED date=2025-11-21 expiry=2025-11-25 atm=26150 adjustments=0 orders=4 gross=1852.50 brokerage=100.00 net=1752.50
-2026-05-05 00:31:40,311 INFO SKIPPED date=2025-11-24 expiry=2025-11-25 strike=26100 reason=No OTM CE contract satisfied the value band 95.62-109.28 at 2025-11-24T15:05:00+05:30 while also having exact final exit timestamp 2025-11-24T15:20:00+05:30.
-2026-05-05 00:31:40,383 INFO SKIPPED date=2025-11-25 expiry=2025-11-25 strike=25950 reason=No OTM PE contract satisfied the value band 62.72-71.68 at 2025-11-25T10:10:00+05:30 while also having exact final exit timestamp 2025-11-25T15:20:00+05:30.
-2026-05-05 00:31:42,710 INFO SKIPPED date=2025-11-26 expiry=2025-12-02 strike=26000 reason=No OTM PE contract satisfied the value band 168.00-192.00 at 2025-11-26T10:46:00+05:30 while also having exact final exit timestamp 2025-11-26T15:20:00+05:30.
-2026-05-05 00:31:44,241 INFO SKIPPED date=2025-11-27 expiry=2025-12-02 strike=26300 reason=No OTM CE contract satisfied the value band 134.09-153.24 at 2025-11-27T13:27:00+05:30 while also having exact final exit timestamp 2025-11-27T15:20:00+05:30.
-2026-05-05 00:31:44,338 INFO TRADED date=2025-11-28 expiry=2025-12-02 atm=26250 adjustments=0 orders=4 gross=3614.00 brokerage=100.00 net=3514.00
-2026-05-05 00:31:44,340 INFO SKIPPED date=2025-12-01 expiry=2025-12-02 strike=26300 reason=No OTM CE contract satisfied the value band 19.86-29.79 at 2025-12-01T11:10:00+05:30 while also having exact final exit timestamp 2025-12-01T15:20:00+05:30.
-2026-05-05 00:31:44,601 INFO SKIPPED date=2025-12-02 expiry=2025-12-02 strike=26150 reason=No OTM CE contract satisfied the value band 59.60-68.12 at 2025-12-02T09:45:00+05:30 while also having exact final exit timestamp 2025-12-02T15:20:00+05:30.
-2026-05-05 00:31:46,473 INFO ADJUSTMENT date=2025-12-03 timestamp=2025-12-03T15:12:00+05:30 group=FIRST_ADD side=PE strike=25800 higher_value=173.25 target_band=34.65-51.98
-2026-05-05 00:31:46,474 INFO TRADED date=2025-12-03 expiry=2025-12-09 atm=25950 adjustments=1 orders=6 gross=1547.00 brokerage=150.00 net=1397.00
-2026-05-05 00:31:46,570 INFO SKIPPED date=2025-12-04 expiry=2025-12-09 strike=26000 reason=No OTM PE contract satisfied the value band 132.30-151.20 at 2025-12-04T10:37:00+05:30 while also having exact final exit timestamp 2025-12-04T15:20:00+05:30.
-2026-05-05 00:31:46,658 INFO SKIPPED date=2025-12-05 expiry=2025-12-09 strike=26050 reason=No OTM PE contract satisfied the value band 109.20-124.80 at 2025-12-05T10:17:00+05:30 while also having exact final exit timestamp 2025-12-05T15:20:00+05:30.
-2026-05-05 00:31:48,097 INFO SKIPPED date=2025-12-08 expiry=2025-12-09 strike=26150 reason=No OTM CE contract satisfied the value band 19.10-28.65 at 2025-12-08T10:34:00+05:30 while also having exact final exit timestamp 2025-12-08T15:20:00+05:30.
-2026-05-05 00:31:48,305 INFO SKIPPED date=2025-12-09 expiry=2025-12-09 strike=25800 reason=No OTM CE contract satisfied the value band 15.61-23.41 at 2025-12-09T09:49:00+05:30 while also having exact final exit timestamp 2025-12-09T15:20:00+05:30.
-2026-05-05 00:31:50,180 INFO ADJUSTMENT date=2025-12-10 timestamp=2025-12-10T12:37:00+05:30 group=FIRST_ADD side=CE strike=26050 higher_value=186.60 target_band=37.32-55.98
-2026-05-05 00:31:50,181 INFO ADJUSTMENT date=2025-12-10 timestamp=2025-12-10T13:20:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=26050 single_value=147.45 double_value=155.80
-2026-05-05 00:31:50,181 INFO ADJUSTMENT date=2025-12-10 timestamp=2025-12-10T14:03:00+05:30 group=FIRST_ADD side=CE strike=26050 higher_value=176.75 target_band=35.35-53.02
-2026-05-05 00:31:50,181 INFO TRADED date=2025-12-10 expiry=2025-12-16 atm=25900 adjustments=3 orders=8 gross=-3237.00 brokerage=200.00 net=-3437.00
-2026-05-05 00:31:51,666 INFO SKIPPED date=2025-12-11 expiry=2025-12-16 strike=25800 reason=No OTM PE contract satisfied the value band 133.38-152.44 at 2025-12-11T12:05:00+05:30 while also having exact final exit timestamp 2025-12-11T15:20:00+05:30.
-2026-05-05 00:31:51,805 INFO ADJUSTMENT date=2025-12-12 timestamp=2025-12-12T14:05:00+05:30 group=FIRST_ADD side=PE strike=25900 higher_value=119.60 target_band=23.92-35.88
-2026-05-05 00:31:51,805 INFO TRADED date=2025-12-12 expiry=2025-12-16 atm=26000 adjustments=1 orders=6 gross=3315.00 brokerage=150.00 net=3165.00
-2026-05-05 00:31:51,807 INFO SKIPPED date=2025-12-15 expiry=2025-12-16 strike=25900 reason=No OTM PE contract satisfied the value band 80.81-92.36 at 2025-12-15T10:30:00+05:30 while also having exact final exit timestamp 2025-12-15T15:20:00+05:30.
-2026-05-05 00:31:51,809 INFO SKIPPED date=2025-12-16 expiry=2025-12-16 strike=25900 reason=No OTM PE contract satisfied the value band 7.82-11.73 at 2025-12-16T13:46:00+05:30 while also having exact final exit timestamp 2025-12-16T15:20:00+05:30.
-2026-05-05 00:31:51,948 INFO TRADED date=2025-12-17 expiry=2025-12-23 atm=25900 adjustments=0 orders=4 gross=1937.00 brokerage=100.00 net=1837.00
-2026-05-05 00:31:53,472 INFO SKIPPED date=2025-12-18 expiry=2025-12-23 strike=25800 reason=No OTM PE contract satisfied the value band 122.43-139.92 at 2025-12-18T12:12:00+05:30 while also having exact final exit timestamp 2025-12-18T15:20:00+05:30.
-2026-05-05 00:31:53,556 INFO TRADED date=2025-12-19 expiry=2025-12-23 atm=25950 adjustments=0 orders=4 gross=3510.00 brokerage=100.00 net=3410.00
-2026-05-05 00:31:53,708 INFO TRADED date=2025-12-22 expiry=2025-12-23 atm=26150 adjustments=0 orders=4 gross=2899.00 brokerage=100.00 net=2799.00
-2026-05-05 00:31:55,403 INFO SKIPPED date=2025-12-23 expiry=2025-12-23 strike=26150 reason=No OTM PE contract satisfied the value band 44.13-50.44 at 2025-12-23T10:12:00+05:30 while also having exact final exit timestamp 2025-12-23T15:20:00+05:30.
-2026-05-05 00:31:55,715 INFO TRADED date=2025-12-24 expiry=2025-12-30 atm=26200 adjustments=0 orders=4 gross=4239.30 brokerage=100.00 net=4139.30
-2026-05-05 00:31:59,693 INFO SKIPPED date=2025-12-26 expiry=2025-12-30 strike=26150 reason=No OTM CE contract satisfied the value band 20.97-31.45 at 2025-12-26T09:44:00+05:30 while also having exact final exit timestamp 2025-12-26T15:20:00+05:30.
-2026-05-05 00:32:11,137 INFO SKIPPED date=2025-12-29 expiry=2025-12-30 strike=26050 reason=No OTM PE contract satisfied the value band 15.07-22.60 at 2025-12-29T09:34:00+05:30 while also having exact final exit timestamp 2025-12-29T15:20:00+05:30.
-2026-05-05 00:32:11,325 INFO SKIPPED date=2025-12-30 expiry=2025-12-30 strike=25900 reason=No OTM PE contract satisfied the value band 49.38-56.44 at 2025-12-30T09:44:00+05:30 while also having exact final exit timestamp 2025-12-30T15:20:00+05:30.
-2026-05-05 00:32:11,325 INFO SKIPPED date=2025-12-31 reason=no_same_or_next_weekly_expiry
-2026-05-05 00:32:11,326 INFO COMPLETED candidate_days=248 traded=79 skipped=169 total_adjustments=121
+2026-05-05 14:30:47,554 INFO ADJUSTMENT date=2025-01-01 timestamp=2025-01-01T10:50:00+05:30 group=FIRST_ADD side=PE strike=23500 higher_value=198.45 target_band=39.69-59.53
+2026-05-05 14:30:47,554 INFO EXCEPTION_EXIT date=2025-01-01 expiry=2025-01-02 atm=23650 reason=no_valid_rebalance_candidate exit=2025-01-01T12:22:00+05:30 orders=6 gross=-11986.00 brokerage=150.00 net=-12136.00
+2026-05-05 14:30:47,701 INFO ADJUSTMENT date=2025-01-02 timestamp=2025-01-02T09:38:00+05:30 group=FIRST_ADD side=PE strike=23600 higher_value=153.85 target_band=30.77-46.15
+2026-05-05 14:30:47,702 INFO EXCEPTION_EXIT date=2025-01-02 expiry=2025-01-02 atm=23750 reason=no_valid_rebalance_candidate exit=2025-01-02T09:56:00+05:30 orders=6 gross=928.20 brokerage=150.00 net=778.20
+2026-05-05 14:30:50,173 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T10:14:00+05:30 group=FIRST_ADD side=CE strike=24350 higher_value=241.90 target_band=48.38-72.57
+2026-05-05 14:30:50,174 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T11:21:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24350 single_value=200.00 double_value=203.75
+2026-05-05 14:30:50,174 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T12:30:00+05:30 group=FIRST_ADD side=CE strike=24350 higher_value=216.40 target_band=43.28-64.92
+2026-05-05 14:30:50,174 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T13:05:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24350 single_value=174.95 double_value=191.55
+2026-05-05 14:30:50,175 INFO ADJUSTMENT date=2025-01-03 timestamp=2025-01-03T13:58:00+05:30 group=FIRST_ADD side=CE strike=24300 higher_value=217.35 target_band=43.47-65.20
+2026-05-05 14:30:50,175 INFO TRADED date=2025-01-03 expiry=2025-01-09 atm=24150 adjustments=5 orders=10 gross=851.50 brokerage=250.00 net=601.50
+2026-05-05 14:30:50,312 INFO ADJUSTMENT date=2025-01-06 timestamp=2025-01-06T09:36:00+05:30 group=FIRST_ADD side=CE strike=24250 higher_value=229.25 target_band=45.85-68.77
+2026-05-05 14:30:50,313 INFO ADJUSTMENT date=2025-01-06 timestamp=2025-01-06T10:01:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24250 single_value=191.50 double_value=195.10
+2026-05-05 14:30:50,313 INFO ADJUSTMENT date=2025-01-06 timestamp=2025-01-06T10:33:00+05:30 group=FIRST_ADD side=CE strike=24200 higher_value=220.95 target_band=44.19-66.28
+2026-05-05 14:30:50,314 INFO EXCEPTION_EXIT date=2025-01-06 expiry=2025-01-09 atm=24050 reason=no_valid_rebalance_candidate exit=2025-01-06T10:43:00+05:30 orders=8 gross=-6552.00 brokerage=200.00 net=-6752.00
+2026-05-05 14:30:50,398 INFO TRADED date=2025-01-07 expiry=2025-01-09 atm=23750 adjustments=0 orders=4 gross=8528.00 brokerage=100.00 net=8428.00
+2026-05-05 14:30:50,869 INFO ADJUSTMENT date=2025-01-08 timestamp=2025-01-08T10:27:00+05:30 group=FIRST_ADD side=CE strike=23750 higher_value=123.30 target_band=24.66-36.99
+2026-05-05 14:30:50,870 INFO EXCEPTION_EXIT date=2025-01-08 expiry=2025-01-09 atm=23650 reason=no_valid_rebalance_candidate exit=2025-01-08T10:44:00+05:30 orders=6 gross=-650.00 brokerage=150.00 net=-800.00
+2026-05-05 14:30:52,501 INFO ADJUSTMENT date=2025-01-09 timestamp=2025-01-09T10:17:00+05:30 group=FIRST_ADD side=PE strike=23550 higher_value=58.25 target_band=11.65-17.47
+2026-05-05 14:30:52,501 INFO ADJUSTMENT date=2025-01-09 timestamp=2025-01-09T10:31:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23550 single_value=36.45 double_value=46.24
+2026-05-05 14:30:52,501 INFO EXCEPTION_EXIT date=2025-01-09 expiry=2025-01-09 atm=23600 reason=no_valid_first_add_candidate exit=2025-01-09T10:48:00+05:30 orders=6 gross=-4607.20 brokerage=150.00 net=-4757.20
+2026-05-05 14:30:54,344 INFO ADJUSTMENT date=2025-01-10 timestamp=2025-01-10T11:32:00+05:30 group=FIRST_ADD side=PE strike=23250 higher_value=247.15 target_band=49.43-74.14
+2026-05-05 14:30:54,345 INFO ADJUSTMENT date=2025-01-10 timestamp=2025-01-10T11:42:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23250 single_value=212.10 double_value=216.50
+2026-05-05 14:30:54,345 INFO TRADED date=2025-01-10 expiry=2025-01-16 atm=23500 adjustments=2 orders=6 gross=4152.20 brokerage=150.00 net=4002.20
+2026-05-05 14:30:57,602 INFO ADJUSTMENT date=2025-01-13 timestamp=2025-01-13T10:36:00+05:30 group=FIRST_ADD side=PE strike=23050 higher_value=226.00 target_band=45.20-67.80
+2026-05-05 14:30:57,602 INFO ADJUSTMENT date=2025-01-13 timestamp=2025-01-13T10:43:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23050 single_value=186.75 double_value=208.94
+2026-05-05 14:30:57,603 INFO ADJUSTMENT date=2025-01-13 timestamp=2025-01-13T13:48:00+05:30 group=FIRST_ADD side=CE strike=23400 higher_value=192.80 target_band=38.56-57.84
+2026-05-05 14:30:57,603 INFO EXCEPTION_EXIT date=2025-01-13 expiry=2025-01-16 atm=23250 reason=no_valid_rebalance_candidate exit=2025-01-13T14:36:00+05:30 orders=8 gross=977.60 brokerage=200.00 net=777.60
+2026-05-05 14:30:57,642 INFO ADJUSTMENT date=2025-01-14 timestamp=2025-01-14T11:07:00+05:30 group=FIRST_ADD side=PE strike=23050 higher_value=141.69 target_band=28.34-42.51
+2026-05-05 14:30:57,642 INFO ADJUSTMENT date=2025-01-14 timestamp=2025-01-14T11:38:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23050 single_value=118.45 double_value=120.55
+2026-05-05 14:30:57,642 INFO TRADED date=2025-01-14 expiry=2025-01-16 atm=23200 adjustments=2 orders=6 gross=5718.70 brokerage=150.00 net=5568.70
+2026-05-05 14:30:57,644 INFO ADJUSTMENT date=2025-01-15 timestamp=2025-01-15T10:36:00+05:30 group=FIRST_ADD side=PE strike=23100 higher_value=97.35 target_band=19.47-29.20
+2026-05-05 14:30:57,644 INFO EXCEPTION_EXIT date=2025-01-15 expiry=2025-01-16 atm=23200 reason=no_valid_rebalance_candidate exit=2025-01-15T10:47:00+05:30 orders=6 gross=-1735.50 brokerage=150.00 net=-1885.50
+2026-05-05 14:30:57,646 INFO ADJUSTMENT date=2025-01-16 timestamp=2025-01-16T09:38:00+05:30 group=FIRST_ADD side=CE strike=23450 higher_value=50.55 target_band=10.11-15.16
+2026-05-05 14:30:57,646 INFO EXCEPTION_EXIT date=2025-01-16 expiry=2025-01-16 atm=23350 reason=no_valid_rebalance_candidate exit=2025-01-16T09:44:00+05:30 orders=6 gross=-1617.20 brokerage=150.00 net=-1767.20
+2026-05-05 14:30:57,803 INFO TRADED date=2025-01-17 expiry=2025-01-23 atm=23200 adjustments=0 orders=4 gross=2379.00 brokerage=100.00 net=2279.00
+2026-05-05 14:30:59,301 INFO ADJUSTMENT date=2025-01-20 timestamp=2025-01-20T11:18:00+05:30 group=FIRST_ADD side=PE strike=23050 higher_value=224.35 target_band=44.87-67.30
+2026-05-05 14:30:59,302 INFO EXCEPTION_EXIT date=2025-01-20 expiry=2025-01-23 atm=23200 reason=no_valid_rebalance_candidate exit=2025-01-20T11:33:00+05:30 orders=6 gross=2267.20 brokerage=150.00 net=2117.20
+2026-05-05 14:31:02,885 INFO ADJUSTMENT date=2025-01-21 timestamp=2025-01-21T10:01:00+05:30 group=FIRST_ADD side=CE strike=23550 higher_value=205.65 target_band=41.13-61.70
+2026-05-05 14:31:02,886 INFO EXCEPTION_EXIT date=2025-01-21 expiry=2025-01-23 atm=23400 reason=no_valid_rebalance_candidate exit=2025-01-21T10:22:00+05:30 orders=6 gross=-13175.50 brokerage=150.00 net=-13325.50
+2026-05-05 14:31:03,199 INFO ADJUSTMENT date=2025-01-22 timestamp=2025-01-22T12:08:00+05:30 group=FIRST_ADD side=CE strike=23200 higher_value=108.65 target_band=21.73-32.59
+2026-05-05 14:31:03,200 INFO EXCEPTION_EXIT date=2025-01-22 expiry=2025-01-23 atm=23100 reason=no_valid_rebalance_candidate exit=2025-01-22T13:41:00+05:30 orders=6 gross=6344.00 brokerage=150.00 net=6194.00
+2026-05-05 14:31:03,200 INFO EXCEPTION_EXIT date=2025-01-23 expiry=2025-01-23 atm=23100 reason=no_valid_first_add_candidate exit=2025-01-23T09:36:00+05:30 orders=4 gross=-4667.00 brokerage=100.00 net=-4767.00
+2026-05-05 14:31:15,330 INFO ADJUSTMENT date=2025-01-24 timestamp=2025-01-24T11:58:00+05:30 group=FIRST_ADD side=PE strike=23050 higher_value=241.00 target_band=48.20-72.30
+2026-05-05 14:31:15,330 INFO ADJUSTMENT date=2025-01-24 timestamp=2025-01-24T12:29:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23050 single_value=209.00 double_value=209.34
+2026-05-05 14:31:15,330 INFO ADJUSTMENT date=2025-01-24 timestamp=2025-01-24T14:39:00+05:30 group=FIRST_ADD side=CE strike=23450 higher_value=233.00 target_band=46.60-69.90
+2026-05-05 14:31:15,331 INFO TRADED date=2025-01-24 expiry=2025-01-30 atm=23250 adjustments=3 orders=8 gross=3979.30 brokerage=200.00 net=3779.30
+2026-05-05 14:31:16,065 INFO ADJUSTMENT date=2025-01-27 timestamp=2025-01-27T13:38:00+05:30 group=FIRST_ADD side=CE strike=23100 higher_value=229.90 target_band=45.98-68.97
+2026-05-05 14:31:16,066 INFO TRADED date=2025-01-27 expiry=2025-01-30 atm=22950 adjustments=1 orders=6 gross=3581.50 brokerage=150.00 net=3431.50
+2026-05-05 14:31:16,137 INFO ADJUSTMENT date=2025-01-28 timestamp=2025-01-28T11:41:00+05:30 group=FIRST_ADD side=PE strike=22750 higher_value=244.35 target_band=48.87-73.30
+2026-05-05 14:31:16,138 INFO EXCEPTION_EXIT date=2025-01-28 expiry=2025-01-30 atm=22900 reason=no_valid_rebalance_candidate exit=2025-01-28T12:55:00+05:30 orders=6 gross=752.70 brokerage=150.00 net=602.70
+2026-05-05 14:31:16,140 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T10:23:00+05:30 group=FIRST_ADD side=PE strike=22850 higher_value=208.35 target_band=41.67-62.50
+2026-05-05 14:31:16,141 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T10:48:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22850 single_value=195.25 double_value=196.09
+2026-05-05 14:31:16,141 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T11:00:00+05:30 group=FIRST_ADD side=PE strike=22850 higher_value=236.35 target_band=47.27-70.91
+2026-05-05 14:31:16,142 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T11:23:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22850 single_value=194.20 double_value=195.25
+2026-05-05 14:31:16,142 INFO ADJUSTMENT date=2025-01-29 timestamp=2025-01-29T11:32:00+05:30 group=FIRST_ADD side=PE strike=22850 higher_value=221.10 target_band=44.22-66.33
+2026-05-05 14:31:16,142 INFO TRADED date=2025-01-29 expiry=2025-01-30 atm=23000 adjustments=5 orders=10 gross=-8539.70 brokerage=250.00 net=-8789.70
+2026-05-05 14:31:16,144 INFO ADJUSTMENT date=2025-01-30 timestamp=2025-01-30T10:01:00+05:30 group=FIRST_ADD side=PE strike=23000 higher_value=137.44 target_band=27.49-41.23
+2026-05-05 14:31:16,144 INFO EXCEPTION_EXIT date=2025-01-30 expiry=2025-01-30 atm=23150 reason=no_valid_rebalance_candidate exit=2025-01-30T10:11:00+05:30 orders=6 gross=408.20 brokerage=150.00 net=258.20
+2026-05-05 14:31:18,768 INFO ADJUSTMENT date=2025-01-31 timestamp=2025-01-31T12:34:00+05:30 group=FIRST_ADD side=PE strike=22950 higher_value=375.50 target_band=75.10-112.65
+2026-05-05 14:31:18,769 INFO TRADED date=2025-01-31 expiry=2025-02-06 atm=23350 adjustments=1 orders=6 gross=15034.50 brokerage=150.00 net=14884.50
+2026-05-05 14:31:19,012 INFO ADJUSTMENT date=2025-02-01 timestamp=2025-02-01T11:32:00+05:30 group=FIRST_ADD side=PE strike=23200 higher_value=313.85 target_band=62.77-94.16
+2026-05-05 14:31:19,013 INFO ADJUSTMENT date=2025-02-01 timestamp=2025-02-01T11:51:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23200 single_value=243.90 double_value=308.20
+2026-05-05 14:31:19,013 INFO TRADED date=2025-02-01 expiry=2025-02-06 atm=23500 adjustments=2 orders=6 gross=20113.60 brokerage=150.00 net=19963.60
+2026-05-05 14:31:21,966 INFO ADJUSTMENT date=2025-02-03 timestamp=2025-02-03T09:48:00+05:30 group=FIRST_ADD side=CE strike=23500 higher_value=183.35 target_band=36.67-55.00
+2026-05-05 14:31:21,966 INFO ADJUSTMENT date=2025-02-03 timestamp=2025-02-03T10:08:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23500 single_value=153.00 double_value=154.60
+2026-05-05 14:31:21,966 INFO TRADED date=2025-02-03 expiry=2025-02-06 atm=23350 adjustments=2 orders=6 gross=2982.20 brokerage=150.00 net=2832.20
+2026-05-05 14:31:21,970 INFO ADJUSTMENT date=2025-02-04 timestamp=2025-02-04T12:33:00+05:30 group=FIRST_ADD side=PE strike=23300 higher_value=195.95 target_band=39.19-58.78
+2026-05-05 14:31:21,971 INFO EXCEPTION_EXIT date=2025-02-04 expiry=2025-02-06 atm=23500 reason=no_valid_rebalance_candidate exit=2025-02-04T13:35:00+05:30 orders=6 gross=-11191.70 brokerage=150.00 net=-11341.70
+2026-05-05 14:31:22,012 INFO ADJUSTMENT date=2025-02-05 timestamp=2025-02-05T15:02:00+05:30 group=FIRST_ADD side=CE strike=23850 higher_value=119.75 target_band=23.95-35.92
+2026-05-05 14:31:22,013 INFO TRADED date=2025-02-05 expiry=2025-02-06 atm=23750 adjustments=1 orders=6 gross=1677.00 brokerage=150.00 net=1527.00
+2026-05-05 14:31:22,067 INFO ADJUSTMENT date=2025-02-06 timestamp=2025-02-06T09:34:00+05:30 group=FIRST_ADD side=CE strike=23800 higher_value=105.50 target_band=21.10-31.65
+2026-05-05 14:31:22,068 INFO EXCEPTION_EXIT date=2025-02-06 expiry=2025-02-06 atm=23700 reason=no_valid_rebalance_candidate exit=2025-02-06T09:56:00+05:30 orders=6 gross=1267.50 brokerage=150.00 net=1117.50
+2026-05-05 14:31:26,196 INFO ADJUSTMENT date=2025-02-07 timestamp=2025-02-07T11:24:00+05:30 group=FIRST_ADD side=PE strike=23400 higher_value=226.40 target_band=45.28-67.92
+2026-05-05 14:31:26,197 INFO ADJUSTMENT date=2025-02-07 timestamp=2025-02-07T12:04:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23400 single_value=185.55 double_value=202.30
+2026-05-05 14:31:26,197 INFO ADJUSTMENT date=2025-02-07 timestamp=2025-02-07T14:14:00+05:30 group=FIRST_ADD side=CE strike=23800 higher_value=223.55 target_band=44.71-67.06
+2026-05-05 14:31:26,197 INFO ADJUSTMENT date=2025-02-07 timestamp=2025-02-07T15:04:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23800 single_value=178.25 double_value=178.70
+2026-05-05 14:31:26,197 INFO TRADED date=2025-02-07 expiry=2025-02-13 atm=23600 adjustments=4 orders=8 gross=8131.50 brokerage=200.00 net=7931.50
+2026-05-05 14:31:26,335 INFO ADJUSTMENT date=2025-02-10 timestamp=2025-02-10T13:35:00+05:30 group=FIRST_ADD side=CE strike=23600 higher_value=199.60 target_band=39.92-59.88
+2026-05-05 14:31:26,335 INFO ADJUSTMENT date=2025-02-10 timestamp=2025-02-10T13:52:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23600 single_value=170.25 double_value=196.95
+2026-05-05 14:31:26,335 INFO ADJUSTMENT date=2025-02-10 timestamp=2025-02-10T14:24:00+05:30 group=FIRST_ADD side=CE strike=23600 higher_value=198.40 target_band=39.68-59.52
+2026-05-05 14:31:26,336 INFO ADJUSTMENT date=2025-02-10 timestamp=2025-02-10T14:36:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23600 single_value=171.60 double_value=171.80
+2026-05-05 14:31:26,336 INFO TRADED date=2025-02-10 expiry=2025-02-13 atm=23450 adjustments=4 orders=8 gross=-2158.00 brokerage=200.00 net=-2358.00
+2026-05-05 14:31:26,578 INFO ADJUSTMENT date=2025-02-11 timestamp=2025-02-11T12:57:00+05:30 group=FIRST_ADD side=CE strike=23400 higher_value=176.40 target_band=35.28-52.92
+2026-05-05 14:31:26,579 INFO EXCEPTION_EXIT date=2025-02-11 expiry=2025-02-13 atm=23300 reason=no_valid_rebalance_candidate exit=2025-02-11T13:05:00+05:30 orders=6 gross=-1093.30 brokerage=150.00 net=-1243.30
+2026-05-05 14:31:26,919 INFO ADJUSTMENT date=2025-02-12 timestamp=2025-02-12T09:46:00+05:30 group=FIRST_ADD side=CE strike=23100 higher_value=139.50 target_band=27.90-41.85
+2026-05-05 14:31:26,920 INFO EXCEPTION_EXIT date=2025-02-12 expiry=2025-02-13 atm=23000 reason=no_valid_rebalance_candidate exit=2025-02-12T09:58:00+05:30 orders=6 gross=-2880.80 brokerage=150.00 net=-3030.80
+2026-05-05 14:31:26,921 INFO ADJUSTMENT date=2025-02-13 timestamp=2025-02-13T09:32:00+05:30 group=FIRST_ADD side=PE strike=22900 higher_value=115.95 target_band=23.19-34.78
+2026-05-05 14:31:26,922 INFO EXCEPTION_EXIT date=2025-02-13 expiry=2025-02-13 atm=23000 reason=no_valid_rebalance_candidate exit=2025-02-13T09:33:00+05:30 orders=6 gross=-1844.70 brokerage=150.00 net=-1994.70
+2026-05-05 14:31:30,129 INFO ADJUSTMENT date=2025-02-14 timestamp=2025-02-14T10:49:00+05:30 group=FIRST_ADD side=CE strike=23250 higher_value=249.35 target_band=49.87-74.80
+2026-05-05 14:31:30,130 INFO EXCEPTION_EXIT date=2025-02-14 expiry=2025-02-20 atm=23050 reason=no_valid_rebalance_candidate exit=2025-02-14T12:23:00+05:30 orders=6 gross=-2684.50 brokerage=150.00 net=-2834.50
+2026-05-05 14:31:31,719 INFO ADJUSTMENT date=2025-02-17 timestamp=2025-02-17T10:51:00+05:30 group=FIRST_ADD side=PE strike=22650 higher_value=235.10 target_band=47.02-70.53
+2026-05-05 14:31:31,720 INFO ADJUSTMENT date=2025-02-17 timestamp=2025-02-17T10:59:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22650 single_value=205.30 double_value=206.19
+2026-05-05 14:31:31,721 INFO ADJUSTMENT date=2025-02-17 timestamp=2025-02-17T13:35:00+05:30 group=FIRST_ADD side=PE strike=22650 higher_value=227.75 target_band=45.55-68.33
+2026-05-05 14:31:31,722 INFO TRADED date=2025-02-17 expiry=2025-02-20 atm=22850 adjustments=3 orders=8 gross=617.50 brokerage=200.00 net=417.50
+2026-05-05 14:31:31,842 INFO TRADED date=2025-02-18 expiry=2025-02-20 atm=22900 adjustments=0 orders=4 gross=8421.40 brokerage=100.00 net=8321.40
+2026-05-05 14:31:31,843 INFO ADJUSTMENT date=2025-02-19 timestamp=2025-02-19T09:44:00+05:30 group=FIRST_ADD side=PE strike=22750 higher_value=140.69 target_band=28.14-42.21
+2026-05-05 14:31:31,844 INFO EXCEPTION_EXIT date=2025-02-19 expiry=2025-02-20 atm=22850 reason=no_valid_rebalance_candidate exit=2025-02-19T09:50:00+05:30 orders=6 gross=-3854.50 brokerage=150.00 net=-4004.50
+2026-05-05 14:31:31,844 INFO EXCEPTION_EXIT date=2025-02-20 expiry=2025-02-20 atm=22850 reason=no_valid_first_add_candidate exit=2025-02-20T09:38:00+05:30 orders=4 gross=-981.50 brokerage=100.00 net=-1081.50
+2026-05-05 14:31:40,192 INFO ADJUSTMENT date=2025-02-21 timestamp=2025-02-21T13:02:00+05:30 group=FIRST_ADD side=CE strike=23050 higher_value=214.25 target_band=42.85-64.27
+2026-05-05 14:31:40,193 INFO ADJUSTMENT date=2025-02-21 timestamp=2025-02-21T14:50:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23050 single_value=171.85 double_value=172.30
+2026-05-05 14:31:40,194 INFO TRADED date=2025-02-21 expiry=2025-02-27 atm=22900 adjustments=2 orders=6 gross=1729.00 brokerage=150.00 net=1579.00
+2026-05-05 14:31:40,381 INFO TRADED date=2025-02-24 expiry=2025-02-27 atm=22600 adjustments=0 orders=4 gross=6636.50 brokerage=100.00 net=6536.50
+2026-05-05 14:31:43,497 INFO ADJUSTMENT date=2025-02-25 timestamp=2025-02-25T09:35:00+05:30 group=FIRST_ADD side=PE strike=22450 higher_value=115.60 target_band=23.12-34.68
+2026-05-05 14:31:43,498 INFO EXCEPTION_EXIT date=2025-02-25 expiry=2025-02-27 atm=22550 reason=no_valid_rebalance_candidate exit=2025-02-25T09:50:00+05:30 orders=6 gross=-1051.70 brokerage=150.00 net=-1201.70
+2026-05-05 14:31:43,990 INFO ADJUSTMENT date=2025-02-27 timestamp=2025-02-27T09:34:00+05:30 group=FIRST_ADD side=PE strike=22500 higher_value=46.85 target_band=9.37-14.05
+2026-05-05 14:31:43,991 INFO ADJUSTMENT date=2025-02-27 timestamp=2025-02-27T09:39:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22500 single_value=31.85 double_value=49.45
+2026-05-05 14:31:43,991 INFO ADJUSTMENT date=2025-02-27 timestamp=2025-02-27T10:52:00+05:30 group=FIRST_ADD side=PE strike=22500 higher_value=31.50 target_band=6.30-9.45
+2026-05-05 14:31:43,992 INFO ADJUSTMENT date=2025-02-27 timestamp=2025-02-27T10:58:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22500 single_value=23.20 double_value=24.50
+2026-05-05 14:31:43,992 INFO ADJUSTMENT date=2025-02-27 timestamp=2025-02-27T11:16:00+05:30 group=FIRST_ADD side=PE strike=22500 higher_value=24.05 target_band=4.81-7.21
+2026-05-05 14:31:43,993 INFO ADJUSTMENT date=2025-02-27 timestamp=2025-02-27T11:18:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22500 single_value=20.75 double_value=21.05
+2026-05-05 14:31:43,993 INFO EXCEPTION_EXIT date=2025-02-27 expiry=2025-02-27 atm=22550 reason=no_valid_first_add_candidate exit=2025-02-27T11:39:00+05:30 orders=10 gross=1735.50 brokerage=250.00 net=1485.50
+2026-05-05 14:31:47,787 INFO ADJUSTMENT date=2025-02-28 timestamp=2025-02-28T12:35:00+05:30 group=FIRST_ADD side=CE strike=22500 higher_value=186.40 target_band=37.28-55.92
+2026-05-05 14:31:47,788 INFO EXCEPTION_EXIT date=2025-02-28 expiry=2025-03-06 atm=22350 reason=no_valid_rebalance_candidate exit=2025-02-28T12:54:00+05:30 orders=6 gross=-1916.20 brokerage=150.00 net=-2066.20
+2026-05-05 14:31:48,029 INFO ADJUSTMENT date=2025-03-03 timestamp=2025-03-03T11:12:00+05:30 group=FIRST_ADD side=CE strike=22300 higher_value=180.45 target_band=36.09-54.13
+2026-05-05 14:31:48,029 INFO ADJUSTMENT date=2025-03-03 timestamp=2025-03-03T12:15:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22300 single_value=147.00 double_value=147.95
+2026-05-05 14:31:48,030 INFO TRADED date=2025-03-03 expiry=2025-03-06 atm=22150 adjustments=2 orders=6 gross=3412.50 brokerage=150.00 net=3262.50
+2026-05-05 14:31:50,040 INFO ADJUSTMENT date=2025-03-04 timestamp=2025-03-04T09:43:00+05:30 group=FIRST_ADD side=PE strike=21900 higher_value=156.60 target_band=31.32-46.98
+2026-05-05 14:31:50,041 INFO ADJUSTMENT date=2025-03-04 timestamp=2025-03-04T09:46:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=21900 single_value=122.25 double_value=134.70
+2026-05-05 14:31:50,041 INFO ADJUSTMENT date=2025-03-04 timestamp=2025-03-04T09:51:00+05:30 group=FIRST_ADD side=PE strike=21900 higher_value=146.35 target_band=29.27-43.90
+2026-05-05 14:31:50,041 INFO EXCEPTION_EXIT date=2025-03-04 expiry=2025-03-06 atm=22000 reason=no_valid_rebalance_candidate exit=2025-03-04T11:07:00+05:30 orders=8 gross=-3614.00 brokerage=200.00 net=-3814.00
+2026-05-05 14:31:50,201 INFO ADJUSTMENT date=2025-03-05 timestamp=2025-03-05T09:49:00+05:30 group=FIRST_ADD side=PE strike=22100 higher_value=132.40 target_band=26.48-39.72
+2026-05-05 14:31:50,201 INFO ADJUSTMENT date=2025-03-05 timestamp=2025-03-05T09:54:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22100 single_value=109.55 double_value=112.15
+2026-05-05 14:31:50,202 INFO ADJUSTMENT date=2025-03-05 timestamp=2025-03-05T10:34:00+05:30 group=FIRST_ADD side=PE strike=22100 higher_value=118.95 target_band=23.79-35.69
+2026-05-05 14:31:50,202 INFO EXCEPTION_EXIT date=2025-03-05 expiry=2025-03-06 atm=22200 reason=no_valid_rebalance_candidate exit=2025-03-05T11:35:00+05:30 orders=8 gross=-1677.00 brokerage=200.00 net=-1877.00
+2026-05-05 14:31:50,205 INFO ADJUSTMENT date=2025-03-06 timestamp=2025-03-06T09:33:00+05:30 group=FIRST_ADD side=CE strike=22400 higher_value=90.00 target_band=18.00-27.00
+2026-05-05 14:31:50,205 INFO EXCEPTION_EXIT date=2025-03-06 expiry=2025-03-06 atm=22350 reason=no_valid_rebalance_candidate exit=2025-03-06T09:48:00+05:30 orders=6 gross=-3341.00 brokerage=150.00 net=-3491.00
+2026-05-05 14:31:52,129 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T10:09:00+05:30 group=FIRST_ADD side=PE strike=22350 higher_value=212.75 target_band=42.55-63.82
+2026-05-05 14:31:52,130 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T11:50:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22350 single_value=180.85 double_value=188.79
+2026-05-05 14:31:52,130 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T12:38:00+05:30 group=FIRST_ADD side=PE strike=22350 higher_value=206.45 target_band=41.29-61.93
+2026-05-05 14:31:52,131 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T12:54:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22350 single_value=177.80 double_value=180.70
+2026-05-05 14:31:52,131 INFO ADJUSTMENT date=2025-03-07 timestamp=2025-03-07T14:34:00+05:30 group=FIRST_ADD side=PE strike=22350 higher_value=203.65 target_band=40.73-61.09
+2026-05-05 14:31:52,131 INFO TRADED date=2025-03-07 expiry=2025-03-13 atm=22500 adjustments=5 orders=10 gross=-2787.20 brokerage=250.00 net=-3037.20
+2026-05-05 14:31:54,846 INFO ADJUSTMENT date=2025-03-10 timestamp=2025-03-10T14:20:00+05:30 group=FIRST_ADD side=CE strike=22700 higher_value=169.75 target_band=33.95-50.92
+2026-05-05 14:31:54,846 INFO EXCEPTION_EXIT date=2025-03-10 expiry=2025-03-13 atm=22600 reason=no_valid_rebalance_candidate exit=2025-03-10T14:30:00+05:30 orders=6 gross=-1781.00 brokerage=150.00 net=-1931.00
+2026-05-05 14:31:54,886 INFO ADJUSTMENT date=2025-03-11 timestamp=2025-03-11T10:16:00+05:30 group=FIRST_ADD side=PE strike=22200 higher_value=165.55 target_band=33.11-49.66
+2026-05-05 14:31:54,886 INFO EXCEPTION_EXIT date=2025-03-11 expiry=2025-03-13 atm=22350 reason=no_valid_rebalance_candidate exit=2025-03-11T10:58:00+05:30 orders=6 gross=-3341.00 brokerage=150.00 net=-3491.00
+2026-05-05 14:31:54,975 INFO ADJUSTMENT date=2025-03-12 timestamp=2025-03-12T11:05:00+05:30 group=FIRST_ADD side=CE strike=22550 higher_value=108.00 target_band=21.60-32.40
+2026-05-05 14:31:54,975 INFO EXCEPTION_EXIT date=2025-03-12 expiry=2025-03-13 atm=22450 reason=no_valid_rebalance_candidate exit=2025-03-12T11:38:00+05:30 orders=6 gross=3198.00 brokerage=150.00 net=3048.00
+2026-05-05 14:31:54,976 INFO EXCEPTION_EXIT date=2025-03-13 expiry=2025-03-13 atm=22500 reason=no_valid_first_add_candidate exit=2025-03-13T09:31:00+05:30 orders=4 gross=-1696.50 brokerage=100.00 net=-1796.50
+2026-05-05 14:31:57,131 INFO ADJUSTMENT date=2025-03-17 timestamp=2025-03-17T12:35:00+05:30 group=FIRST_ADD side=CE strike=22650 higher_value=163.90 target_band=32.78-49.17
+2026-05-05 14:31:57,132 INFO ADJUSTMENT date=2025-03-17 timestamp=2025-03-17T13:29:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22650 single_value=140.44 double_value=143.10
+2026-05-05 14:31:57,132 INFO TRADED date=2025-03-17 expiry=2025-03-20 atm=22550 adjustments=2 orders=6 gross=-488.80 brokerage=150.00 net=-638.80
+2026-05-05 14:31:59,165 INFO ADJUSTMENT date=2025-03-18 timestamp=2025-03-18T10:02:00+05:30 group=FIRST_ADD side=PE strike=22500 higher_value=169.25 target_band=33.85-50.77
+2026-05-05 14:31:59,165 INFO EXCEPTION_EXIT date=2025-03-18 expiry=2025-03-20 atm=22650 reason=no_valid_rebalance_candidate exit=2025-03-18T10:45:00+05:30 orders=6 gross=-3172.00 brokerage=150.00 net=-3322.00
+2026-05-05 14:31:59,344 INFO ADJUSTMENT date=2025-03-19 timestamp=2025-03-19T10:17:00+05:30 group=FIRST_ADD side=PE strike=22750 higher_value=119.00 target_band=23.80-35.70
+2026-05-05 14:31:59,345 INFO ADJUSTMENT date=2025-03-19 timestamp=2025-03-19T10:52:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22750 single_value=105.65 double_value=106.65
+2026-05-05 14:31:59,345 INFO ADJUSTMENT date=2025-03-19 timestamp=2025-03-19T10:58:00+05:30 group=FIRST_ADD side=PE strike=22750 higher_value=121.45 target_band=24.29-36.44
+2026-05-05 14:31:59,345 INFO EXCEPTION_EXIT date=2025-03-19 expiry=2025-03-20 atm=22850 reason=no_valid_rebalance_candidate exit=2025-03-19T14:49:00+05:30 orders=8 gross=-1339.00 brokerage=200.00 net=-1539.00
+2026-05-05 14:31:59,390 INFO EXCEPTION_EXIT date=2025-03-20 expiry=2025-03-20 atm=23050 reason=no_valid_first_add_candidate exit=2025-03-20T10:07:00+05:30 orders=4 gross=-447.20 brokerage=100.00 net=-547.20
+2026-05-05 14:32:04,179 INFO ADJUSTMENT date=2025-03-21 timestamp=2025-03-21T09:46:00+05:30 group=FIRST_ADD side=PE strike=23050 higher_value=186.50 target_band=37.30-55.95
+2026-05-05 14:32:04,180 INFO EXCEPTION_EXIT date=2025-03-21 expiry=2025-03-27 atm=23200 reason=no_valid_rebalance_candidate exit=2025-03-21T10:48:00+05:30 orders=6 gross=-5551.00 brokerage=150.00 net=-5701.00
+2026-05-05 14:32:05,095 INFO ADJUSTMENT date=2025-03-24 timestamp=2025-03-24T10:48:00+05:30 group=FIRST_ADD side=PE strike=23350 higher_value=203.25 target_band=40.65-60.97
+2026-05-05 14:32:05,095 INFO EXCEPTION_EXIT date=2025-03-24 expiry=2025-03-27 atm=23500 reason=no_valid_rebalance_candidate exit=2025-03-24T12:19:00+05:30 orders=6 gross=-6240.00 brokerage=150.00 net=-6390.00
+2026-05-05 14:32:05,681 INFO ADJUSTMENT date=2025-03-25 timestamp=2025-03-25T09:39:00+05:30 group=FIRST_ADD side=PE strike=23550 higher_value=193.35 target_band=38.67-58.00
+2026-05-05 14:32:05,682 INFO EXCEPTION_EXIT date=2025-03-25 expiry=2025-03-27 atm=23700 reason=no_valid_rebalance_candidate exit=2025-03-25T09:53:00+05:30 orders=6 gross=-1579.50 brokerage=150.00 net=-1729.50
+2026-05-05 14:32:10,012 INFO ADJUSTMENT date=2025-03-26 timestamp=2025-03-26T11:59:00+05:30 group=FIRST_ADD side=CE strike=23800 higher_value=132.55 target_band=26.51-39.77
+2026-05-05 14:32:10,012 INFO ADJUSTMENT date=2025-03-26 timestamp=2025-03-26T12:49:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=23800 single_value=106.10 double_value=110.40
+2026-05-05 14:32:10,012 INFO ADJUSTMENT date=2025-03-26 timestamp=2025-03-26T13:03:00+05:30 group=FIRST_ADD side=CE strike=23800 higher_value=125.05 target_band=25.01-37.52
+2026-05-05 14:32:10,013 INFO EXCEPTION_EXIT date=2025-03-26 expiry=2025-03-27 atm=23700 reason=no_valid_rebalance_candidate exit=2025-03-26T13:08:00+05:30 orders=8 gross=143.00 brokerage=200.00 net=-57.00
+2026-05-05 14:32:10,126 INFO ADJUSTMENT date=2025-03-27 timestamp=2025-03-27T09:56:00+05:30 group=FIRST_ADD side=PE strike=23450 higher_value=74.09 target_band=14.82-22.23
+2026-05-05 14:32:10,126 INFO EXCEPTION_EXIT date=2025-03-27 expiry=2025-03-27 atm=23550 reason=no_valid_rebalance_candidate exit=2025-03-27T10:05:00+05:30 orders=6 gross=604.50 brokerage=150.00 net=454.50
+2026-05-05 14:32:13,603 INFO ADJUSTMENT date=2025-03-28 timestamp=2025-03-28T10:34:00+05:30 group=FIRST_ADD side=PE strike=23350 higher_value=211.15 target_band=42.23-63.34
+2026-05-05 14:32:13,603 INFO ADJUSTMENT date=2025-03-28 timestamp=2025-03-28T11:26:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23350 single_value=167.60 double_value=177.10
+2026-05-05 14:32:13,603 INFO TRADED date=2025-03-28 expiry=2025-04-03 atm=23550 adjustments=2 orders=6 gross=8105.50 brokerage=150.00 net=7955.50
+2026-05-05 14:32:16,045 INFO ADJUSTMENT date=2025-04-01 timestamp=2025-04-01T09:40:00+05:30 group=FIRST_ADD side=PE strike=23350 higher_value=164.60 target_band=32.92-49.38
+2026-05-05 14:32:16,046 INFO ADJUSTMENT date=2025-04-01 timestamp=2025-04-01T10:02:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23350 single_value=128.85 double_value=142.10
+2026-05-05 14:32:16,046 INFO ADJUSTMENT date=2025-04-01 timestamp=2025-04-01T10:27:00+05:30 group=FIRST_ADD side=CE strike=23550 higher_value=157.25 target_band=31.45-47.17
+2026-05-05 14:32:16,046 INFO EXCEPTION_EXIT date=2025-04-01 expiry=2025-04-03 atm=23450 reason=no_valid_rebalance_candidate exit=2025-04-01T10:32:00+05:30 orders=8 gross=-4764.50 brokerage=200.00 net=-4964.50
+2026-05-05 14:32:16,092 INFO ADJUSTMENT date=2025-04-02 timestamp=2025-04-02T10:53:00+05:30 group=FIRST_ADD side=PE strike=23100 higher_value=121.50 target_band=24.30-36.45
+2026-05-05 14:32:16,093 INFO ADJUSTMENT date=2025-04-02 timestamp=2025-04-02T11:18:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23100 single_value=94.65 double_value=102.65
+2026-05-05 14:32:16,093 INFO ADJUSTMENT date=2025-04-02 timestamp=2025-04-02T15:02:00+05:30 group=FIRST_ADD side=PE strike=23150 higher_value=98.85 target_band=19.77-29.65
+2026-05-05 14:32:16,093 INFO EXCEPTION_EXIT date=2025-04-02 expiry=2025-04-03 atm=23250 reason=no_valid_rebalance_candidate exit=2025-04-02T15:03:00+05:30 orders=8 gross=3003.00 brokerage=200.00 net=2803.00
+2026-05-05 14:32:16,261 INFO EXCEPTION_EXIT date=2025-04-03 expiry=2025-04-03 atm=23250 reason=no_valid_first_add_candidate exit=2025-04-03T09:46:00+05:30 orders=4 gross=1144.00 brokerage=100.00 net=1044.00
+2026-05-05 14:32:18,362 INFO ADJUSTMENT date=2025-04-04 timestamp=2025-04-04T09:55:00+05:30 group=FIRST_ADD side=CE strike=23250 higher_value=212.65 target_band=42.53-63.80
+2026-05-05 14:32:18,363 INFO EXCEPTION_EXIT date=2025-04-04 expiry=2025-04-09 atm=23100 reason=no_valid_rebalance_candidate exit=2025-04-04T10:14:00+05:30 orders=6 gross=-370.50 brokerage=150.00 net=-520.50
+2026-05-05 14:32:19,279 INFO ADJUSTMENT date=2025-04-07 timestamp=2025-04-07T12:35:00+05:30 group=FIRST_ADD side=CE strike=22350 higher_value=448.05 target_band=89.61-134.41
+2026-05-05 14:32:19,279 INFO ADJUSTMENT date=2025-04-07 timestamp=2025-04-07T12:49:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22350 single_value=372.75 double_value=377.39
+2026-05-05 14:32:19,280 INFO ADJUSTMENT date=2025-04-07 timestamp=2025-04-07T13:06:00+05:30 group=FIRST_ADD side=CE strike=22350 higher_value=440.30 target_band=88.06-132.09
+2026-05-05 14:32:19,280 INFO ADJUSTMENT date=2025-04-07 timestamp=2025-04-07T13:33:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22350 single_value=347.90 double_value=377.80
+2026-05-05 14:32:19,281 INFO TRADED date=2025-04-07 expiry=2025-04-09 atm=22050 adjustments=4 orders=8 gross=-17979.00 brokerage=200.00 net=-18179.00
+2026-05-05 14:32:19,329 INFO ADJUSTMENT date=2025-04-08 timestamp=2025-04-08T09:58:00+05:30 group=FIRST_ADD side=CE strike=22700 higher_value=231.90 target_band=46.38-69.57
+2026-05-05 14:32:19,330 INFO EXCEPTION_EXIT date=2025-04-08 expiry=2025-04-09 atm=22550 reason=no_valid_rebalance_candidate exit=2025-04-08T10:18:00+05:30 orders=6 gross=-708.50 brokerage=150.00 net=-858.50
+2026-05-05 14:32:21,095 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T09:45:00+05:30 group=FIRST_ADD side=PE strike=22300 higher_value=105.00 target_band=21.00-31.50
+2026-05-05 14:32:21,096 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T09:48:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22300 single_value=74.00 double_value=90.55
+2026-05-05 14:32:21,096 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T10:13:00+05:30 group=FIRST_ADD side=CE strike=22500 higher_value=71.45 target_band=14.29-21.43
+2026-05-05 14:32:21,097 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T10:17:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22500 single_value=47.45 double_value=47.85
+2026-05-05 14:32:21,097 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T10:32:00+05:30 group=FIRST_ADD side=CE strike=22450 higher_value=52.00 target_band=10.40-15.60
+2026-05-05 14:32:21,097 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T10:42:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22450 single_value=36.25 double_value=38.65
+2026-05-05 14:32:21,098 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T10:45:00+05:30 group=FIRST_ADD side=CE strike=22450 higher_value=38.70 target_band=7.74-11.61
+2026-05-05 14:32:21,098 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T10:50:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22450 single_value=30.30 double_value=35.55
+2026-05-05 14:32:21,098 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T10:57:00+05:30 group=FIRST_ADD side=CE strike=22450 higher_value=33.15 target_band=6.63-9.94
+2026-05-05 14:32:21,099 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T10:58:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=22450 single_value=28.70 double_value=29.69
+2026-05-05 14:32:21,099 INFO ADJUSTMENT date=2025-04-09 timestamp=2025-04-09T11:00:00+05:30 group=FIRST_ADD side=CE strike=22450 higher_value=34.20 target_band=6.84-10.26
+2026-05-05 14:32:21,099 INFO EXCEPTION_EXIT date=2025-04-09 expiry=2025-04-09 atm=22400 reason=no_valid_rebalance_candidate exit=2025-04-09T11:04:00+05:30 orders=16 gross=14839.50 brokerage=400.00 net=14439.50
+2026-05-05 14:32:23,326 INFO ADJUSTMENT date=2025-04-11 timestamp=2025-04-11T11:35:00+05:30 group=FIRST_ADD side=PE strike=22450 higher_value=305.45 target_band=61.09-91.63
+2026-05-05 14:32:23,327 INFO ADJUSTMENT date=2025-04-11 timestamp=2025-04-11T13:55:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=22450 single_value=289.85 double_value=294.50
+2026-05-05 14:32:23,327 INFO TRADED date=2025-04-11 expiry=2025-04-17 atm=22750 adjustments=2 orders=6 gross=-9581.00 brokerage=150.00 net=-9731.00
+2026-05-05 14:32:23,419 INFO TRADED date=2025-04-15 expiry=2025-04-17 atm=23300 adjustments=0 orders=4 gross=10348.00 brokerage=100.00 net=10248.00
+2026-05-05 14:32:25,455 INFO ADJUSTMENT date=2025-04-16 timestamp=2025-04-16T10:18:00+05:30 group=FIRST_ADD side=CE strike=23450 higher_value=101.45 target_band=20.29-30.43
+2026-05-05 14:32:25,456 INFO EXCEPTION_EXIT date=2025-04-16 expiry=2025-04-17 atm=23350 reason=no_valid_rebalance_candidate exit=2025-04-16T10:22:00+05:30 orders=6 gross=-2592.20 brokerage=150.00 net=-2742.20
+2026-05-05 14:32:25,923 INFO ADJUSTMENT date=2025-04-17 timestamp=2025-04-17T09:41:00+05:30 group=FIRST_ADD side=PE strike=23250 higher_value=84.55 target_band=16.91-25.36
+2026-05-05 14:32:25,923 INFO EXCEPTION_EXIT date=2025-04-17 expiry=2025-04-17 atm=23300 reason=no_valid_rebalance_candidate exit=2025-04-17T09:43:00+05:30 orders=6 gross=-4920.50 brokerage=150.00 net=-5070.50
+2026-05-05 14:32:32,657 INFO ADJUSTMENT date=2025-04-21 timestamp=2025-04-21T10:08:00+05:30 group=FIRST_ADD side=PE strike=23750 higher_value=212.90 target_band=42.58-63.87
+2026-05-05 14:32:32,658 INFO ADJUSTMENT date=2025-04-21 timestamp=2025-04-21T10:22:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=23750 single_value=188.75 double_value=197.55
+2026-05-05 14:32:32,658 INFO ADJUSTMENT date=2025-04-21 timestamp=2025-04-21T10:34:00+05:30 group=FIRST_ADD side=PE strike=23750 higher_value=212.60 target_band=42.52-63.78
+2026-05-05 14:32:32,658 INFO EXCEPTION_EXIT date=2025-04-21 expiry=2025-04-24 atm=23950 reason=no_valid_rebalance_candidate exit=2025-04-21T10:57:00+05:30 orders=8 gross=45.50 brokerage=200.00 net=-154.50
+2026-05-05 14:32:33,027 INFO ADJUSTMENT date=2025-04-22 timestamp=2025-04-22T10:59:00+05:30 group=FIRST_ADD side=PE strike=24050 higher_value=141.94 target_band=28.39-42.58
+2026-05-05 14:32:33,027 INFO ADJUSTMENT date=2025-04-22 timestamp=2025-04-22T11:27:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24050 single_value=120.20 double_value=133.40
+2026-05-05 14:32:33,027 INFO TRADED date=2025-04-22 expiry=2025-04-24 atm=24150 adjustments=2 orders=6 gross=1027.00 brokerage=150.00 net=877.00
+2026-05-05 14:32:35,724 INFO ADJUSTMENT date=2025-04-23 timestamp=2025-04-23T10:07:00+05:30 group=FIRST_ADD side=CE strike=24400 higher_value=120.20 target_band=24.04-36.06
+2026-05-05 14:32:35,725 INFO EXCEPTION_EXIT date=2025-04-23 expiry=2025-04-24 atm=24300 reason=no_valid_rebalance_candidate exit=2025-04-23T10:15:00+05:30 orders=6 gross=-3016.00 brokerage=150.00 net=-3166.00
+2026-05-05 14:32:35,934 INFO ADJUSTMENT date=2025-04-24 timestamp=2025-04-24T09:32:00+05:30 group=FIRST_ADD side=PE strike=24150 higher_value=51.15 target_band=10.23-15.34
+2026-05-05 14:32:35,934 INFO EXCEPTION_EXIT date=2025-04-24 expiry=2025-04-24 atm=24250 reason=no_valid_rebalance_candidate exit=2025-04-24T09:35:00+05:30 orders=6 gross=-5830.50 brokerage=150.00 net=-5980.50
+2026-05-05 14:32:37,847 INFO ADJUSTMENT date=2025-04-25 timestamp=2025-04-25T09:55:00+05:30 group=FIRST_ADD side=CE strike=24500 higher_value=253.55 target_band=50.71-76.06
+2026-05-05 14:32:37,847 INFO EXCEPTION_EXIT date=2025-04-25 expiry=2025-04-30 atm=24300 reason=no_valid_rebalance_candidate exit=2025-04-25T10:01:00+05:30 orders=6 gross=-9113.00 brokerage=150.00 net=-9263.00
+2026-05-05 14:32:43,375 INFO ADJUSTMENT date=2025-04-28 timestamp=2025-04-28T09:35:00+05:30 group=FIRST_ADD side=PE strike=23950 higher_value=199.85 target_band=39.97-59.95
+2026-05-05 14:32:43,375 INFO EXCEPTION_EXIT date=2025-04-28 expiry=2025-04-30 atm=24100 reason=no_valid_rebalance_candidate exit=2025-04-28T09:40:00+05:30 orders=6 gross=-4043.00 brokerage=150.00 net=-4193.00
+2026-05-05 14:32:43,521 INFO ADJUSTMENT date=2025-04-29 timestamp=2025-04-29T09:43:00+05:30 group=FIRST_ADD side=CE strike=24500 higher_value=128.25 target_band=25.65-38.48
+2026-05-05 14:32:43,521 INFO ADJUSTMENT date=2025-04-29 timestamp=2025-04-29T09:56:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24500 single_value=107.00 double_value=110.40
+2026-05-05 14:32:43,522 INFO ADJUSTMENT date=2025-04-29 timestamp=2025-04-29T10:16:00+05:30 group=FIRST_ADD side=CE strike=24500 higher_value=110.60 target_band=22.12-33.18
+2026-05-05 14:32:43,522 INFO EXCEPTION_EXIT date=2025-04-29 expiry=2025-04-30 atm=24400 reason=no_valid_rebalance_candidate exit=2025-04-29T10:31:00+05:30 orders=8 gross=-1991.60 brokerage=200.00 net=-2191.60
+2026-05-05 14:32:43,644 INFO ADJUSTMENT date=2025-04-30 timestamp=2025-04-30T09:31:00+05:30 group=FIRST_ADD side=PE strike=24250 higher_value=54.55 target_band=10.91-16.36
+2026-05-05 14:32:43,644 INFO EXCEPTION_EXIT date=2025-04-30 expiry=2025-04-30 atm=24300 reason=no_valid_rebalance_candidate exit=2025-04-30T09:37:00+05:30 orders=6 gross=-2795.00 brokerage=150.00 net=-2945.00
+2026-05-05 14:32:50,071 INFO ADJUSTMENT date=2025-05-02 timestamp=2025-05-02T10:14:00+05:30 group=FIRST_ADD side=PE strike=24200 higher_value=272.00 target_band=54.40-81.60
+2026-05-05 14:32:50,072 INFO ADJUSTMENT date=2025-05-02 timestamp=2025-05-02T10:28:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24200 single_value=230.40 double_value=234.74
+2026-05-05 14:32:50,072 INFO ADJUSTMENT date=2025-05-02 timestamp=2025-05-02T11:32:00+05:30 group=FIRST_ADD side=CE strike=24700 higher_value=258.60 target_band=51.72-77.58
+2026-05-05 14:32:50,073 INFO EXCEPTION_EXIT date=2025-05-02 expiry=2025-05-08 atm=24500 reason=no_valid_rebalance_candidate exit=2025-05-02T12:17:00+05:30 orders=8 gross=-3828.50 brokerage=200.00 net=-4028.50
+2026-05-05 14:32:50,135 INFO ADJUSTMENT date=2025-05-05 timestamp=2025-05-05T10:38:00+05:30 group=FIRST_ADD side=PE strike=24250 higher_value=176.00 target_band=35.20-52.80
+2026-05-05 14:32:50,135 INFO ADJUSTMENT date=2025-05-05 timestamp=2025-05-05T10:56:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24250 single_value=143.80 double_value=157.85
+2026-05-05 14:32:50,136 INFO TRADED date=2025-05-05 expiry=2025-05-08 atm=24450 adjustments=2 orders=6 gross=7116.20 brokerage=150.00 net=6966.20
+2026-05-05 14:32:50,137 INFO ADJUSTMENT date=2025-05-06 timestamp=2025-05-06T10:00:00+05:30 group=FIRST_ADD side=CE strike=24550 higher_value=107.25 target_band=21.45-32.17
+2026-05-05 14:32:50,138 INFO EXCEPTION_EXIT date=2025-05-06 expiry=2025-05-08 atm=24450 reason=no_valid_rebalance_candidate exit=2025-05-06T11:29:00+05:30 orders=6 gross=2958.80 brokerage=150.00 net=2808.80
+2026-05-05 14:32:50,139 INFO ADJUSTMENT date=2025-05-07 timestamp=2025-05-07T09:46:00+05:30 group=FIRST_ADD side=CE strike=24550 higher_value=121.75 target_band=24.35-36.52
+2026-05-05 14:32:50,139 INFO EXCEPTION_EXIT date=2025-05-07 expiry=2025-05-08 atm=24450 reason=no_valid_rebalance_candidate exit=2025-05-07T09:48:00+05:30 orders=6 gross=461.50 brokerage=150.00 net=311.50
+2026-05-05 14:32:50,188 INFO ADJUSTMENT date=2025-05-08 timestamp=2025-05-08T09:31:00+05:30 group=FIRST_ADD side=CE strike=24450 higher_value=47.60 target_band=9.52-14.28
+2026-05-05 14:32:50,188 INFO EXCEPTION_EXIT date=2025-05-08 expiry=2025-05-08 atm=24400 reason=no_valid_rebalance_candidate exit=2025-05-08T09:49:00+05:30 orders=6 gross=-767.00 brokerage=150.00 net=-917.00
+2026-05-05 14:32:52,547 INFO ADJUSTMENT date=2025-05-09 timestamp=2025-05-09T13:29:00+05:30 group=FIRST_ADD side=CE strike=24300 higher_value=325.45 target_band=65.09-97.63
+2026-05-05 14:32:52,548 INFO ADJUSTMENT date=2025-05-09 timestamp=2025-05-09T14:18:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24300 single_value=277.30 double_value=284.80
+2026-05-05 14:32:52,548 INFO ADJUSTMENT date=2025-05-09 timestamp=2025-05-09T14:26:00+05:30 group=FIRST_ADD side=CE strike=24300 higher_value=314.30 target_band=62.86-94.29
+2026-05-05 14:32:52,549 INFO TRADED date=2025-05-09 expiry=2025-05-15 atm=24100 adjustments=3 orders=8 gross=2243.80 brokerage=200.00 net=2043.80
+2026-05-05 14:32:56,638 INFO ADJUSTMENT date=2025-05-12 timestamp=2025-05-12T09:59:00+05:30 group=FIRST_ADD side=PE strike=24400 higher_value=248.55 target_band=49.71-74.56
+2026-05-05 14:32:56,638 INFO ADJUSTMENT date=2025-05-12 timestamp=2025-05-12T10:59:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24400 single_value=217.50 double_value=221.10
+2026-05-05 14:32:56,639 INFO ADJUSTMENT date=2025-05-12 timestamp=2025-05-12T11:25:00+05:30 group=FIRST_ADD side=PE strike=24350 higher_value=265.00 target_band=53.00-79.50
+2026-05-05 14:32:56,639 INFO EXCEPTION_EXIT date=2025-05-12 expiry=2025-05-15 atm=24600 reason=no_valid_rebalance_candidate exit=2025-05-12T13:25:00+05:30 orders=8 gross=-25376.00 brokerage=200.00 net=-25576.00
+2026-05-05 14:32:56,678 INFO ADJUSTMENT date=2025-05-13 timestamp=2025-05-13T12:55:00+05:30 group=FIRST_ADD side=CE strike=24950 higher_value=262.80 target_band=52.56-78.84
+2026-05-05 14:32:56,678 INFO EXCEPTION_EXIT date=2025-05-13 expiry=2025-05-15 atm=24750 reason=no_valid_rebalance_candidate exit=2025-05-13T14:16:00+05:30 orders=6 gross=5162.30 brokerage=150.00 net=5012.30
+2026-05-05 14:32:56,723 INFO ADJUSTMENT date=2025-05-14 timestamp=2025-05-14T11:50:00+05:30 group=FIRST_ADD side=CE strike=24800 higher_value=148.60 target_band=29.72-44.58
+2026-05-05 14:32:56,723 INFO ADJUSTMENT date=2025-05-14 timestamp=2025-05-14T12:11:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24800 single_value=118.30 double_value=123.39
+2026-05-05 14:32:56,724 INFO ADJUSTMENT date=2025-05-14 timestamp=2025-05-14T12:38:00+05:30 group=FIRST_ADD side=CE strike=24800 higher_value=141.25 target_band=28.25-42.38
+2026-05-05 14:32:56,724 INFO EXCEPTION_EXIT date=2025-05-14 expiry=2025-05-15 atm=24700 reason=no_valid_rebalance_candidate exit=2025-05-14T12:50:00+05:30 orders=8 gross=1194.70 brokerage=200.00 net=994.70
+2026-05-05 14:32:56,726 INFO ADJUSTMENT date=2025-05-15 timestamp=2025-05-15T09:39:00+05:30 group=FIRST_ADD side=CE strike=24700 higher_value=99.60 target_band=19.92-29.88
+2026-05-05 14:32:56,726 INFO EXCEPTION_EXIT date=2025-05-15 expiry=2025-05-15 atm=24600 reason=no_valid_rebalance_candidate exit=2025-05-15T09:46:00+05:30 orders=6 gross=-8123.70 brokerage=150.00 net=-8273.70
+2026-05-05 14:32:56,862 INFO TRADED date=2025-05-16 expiry=2025-05-22 atm=25050 adjustments=0 orders=4 gross=2047.50 brokerage=100.00 net=1947.50
+2026-05-05 14:32:56,971 INFO TRADED date=2025-05-19 expiry=2025-05-22 atm=25000 adjustments=0 orders=4 gross=3048.50 brokerage=100.00 net=2948.50
+2026-05-05 14:32:58,652 INFO ADJUSTMENT date=2025-05-20 timestamp=2025-05-20T12:50:00+05:30 group=FIRST_ADD side=CE strike=25100 higher_value=188.00 target_band=37.60-56.40
+2026-05-05 14:32:58,653 INFO EXCEPTION_EXIT date=2025-05-20 expiry=2025-05-22 atm=24950 reason=no_valid_rebalance_candidate exit=2025-05-20T13:19:00+05:30 orders=6 gross=-3094.00 brokerage=150.00 net=-3244.00
+2026-05-05 14:33:01,141 INFO ADJUSTMENT date=2025-05-21 timestamp=2025-05-21T09:49:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=180.00 target_band=36.00-54.00
+2026-05-05 14:33:01,141 INFO EXCEPTION_EXIT date=2025-05-21 expiry=2025-05-22 atm=24750 reason=no_valid_rebalance_candidate exit=2025-05-21T10:16:00+05:30 orders=6 gross=-7025.20 brokerage=150.00 net=-7175.20
+2026-05-05 14:33:01,527 INFO ADJUSTMENT date=2025-05-22 timestamp=2025-05-22T09:33:00+05:30 group=FIRST_ADD side=CE strike=24750 higher_value=121.65 target_band=24.33-36.49
+2026-05-05 14:33:01,528 INFO ADJUSTMENT date=2025-05-22 timestamp=2025-05-22T09:38:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24750 single_value=91.00 double_value=98.70
+2026-05-05 14:33:01,529 INFO ADJUSTMENT date=2025-05-22 timestamp=2025-05-22T09:46:00+05:30 group=FIRST_ADD side=CE strike=24750 higher_value=92.45 target_band=18.49-27.73
+2026-05-05 14:33:01,529 INFO ADJUSTMENT date=2025-05-22 timestamp=2025-05-22T09:57:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24750 single_value=65.65 double_value=75.15
+2026-05-05 14:33:01,529 INFO ADJUSTMENT date=2025-05-22 timestamp=2025-05-22T10:28:00+05:30 group=FIRST_ADD side=CE strike=24650 higher_value=69.34 target_band=13.87-20.80
+2026-05-05 14:33:01,530 INFO ADJUSTMENT date=2025-05-22 timestamp=2025-05-22T10:34:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24650 single_value=49.70 double_value=51.40
+2026-05-05 14:33:01,530 INFO ADJUSTMENT date=2025-05-22 timestamp=2025-05-22T11:05:00+05:30 group=FIRST_ADD side=CE strike=24700 higher_value=44.35 target_band=8.87-13.30
+2026-05-05 14:33:01,530 INFO EXCEPTION_EXIT date=2025-05-22 expiry=2025-05-22 atm=24600 reason=no_valid_rebalance_candidate exit=2025-05-22T11:38:00+05:30 orders=12 gross=7384.00 brokerage=300.00 net=7084.00
+2026-05-05 14:33:11,405 INFO ADJUSTMENT date=2025-05-23 timestamp=2025-05-23T10:04:00+05:30 group=FIRST_ADD side=PE strike=24450 higher_value=300.14 target_band=60.03-90.04
+2026-05-05 14:33:11,406 INFO ADJUSTMENT date=2025-05-23 timestamp=2025-05-23T10:35:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24450 single_value=248.10 double_value=249.85
+2026-05-05 14:33:11,407 INFO ADJUSTMENT date=2025-05-23 timestamp=2025-05-23T10:44:00+05:30 group=FIRST_ADD side=PE strike=24450 higher_value=287.00 target_band=57.40-86.10
+2026-05-05 14:33:11,407 INFO EXCEPTION_EXIT date=2025-05-23 expiry=2025-05-29 atm=24700 reason=no_valid_rebalance_candidate exit=2025-05-23T10:57:00+05:30 orders=8 gross=-15905.50 brokerage=200.00 net=-16105.50
+2026-05-05 14:33:11,593 INFO TRADED date=2025-05-26 expiry=2025-05-29 atm=25050 adjustments=0 orders=4 gross=-182.00 brokerage=100.00 net=-282.00
+2026-05-05 14:33:12,105 INFO ADJUSTMENT date=2025-05-27 timestamp=2025-05-27T11:17:00+05:30 group=FIRST_ADD side=PE strike=24550 higher_value=295.10 target_band=59.02-88.53
+2026-05-05 14:33:12,105 INFO EXCEPTION_EXIT date=2025-05-27 expiry=2025-05-29 atm=24800 reason=no_valid_rebalance_candidate exit=2025-05-27T11:30:00+05:30 orders=6 gross=-7995.00 brokerage=150.00 net=-8145.00
+2026-05-05 14:33:12,205 INFO ADJUSTMENT date=2025-05-28 timestamp=2025-05-28T12:53:00+05:30 group=FIRST_ADD side=PE strike=24650 higher_value=196.45 target_band=39.29-58.93
+2026-05-05 14:33:12,206 INFO ADJUSTMENT date=2025-05-28 timestamp=2025-05-28T13:19:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24650 single_value=151.35 double_value=158.55
+2026-05-05 14:33:12,206 INFO TRADED date=2025-05-28 expiry=2025-05-29 atm=24750 adjustments=2 orders=6 gross=17010.50 brokerage=150.00 net=16860.50
+2026-05-05 14:33:12,208 INFO ADJUSTMENT date=2025-05-29 timestamp=2025-05-29T10:04:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=74.00 target_band=14.80-22.20
+2026-05-05 14:33:12,209 INFO EXCEPTION_EXIT date=2025-05-29 expiry=2025-05-29 atm=24800 reason=no_valid_rebalance_candidate exit=2025-05-29T10:06:00+05:30 orders=6 gross=-3075.80 brokerage=150.00 net=-3225.80
+2026-05-05 14:33:12,457 INFO TRADED date=2025-05-30 expiry=2025-06-05 atm=24850 adjustments=0 orders=4 gross=1248.00 brokerage=100.00 net=1148.00
+2026-05-05 14:33:15,080 INFO ADJUSTMENT date=2025-06-02 timestamp=2025-06-02T12:21:00+05:30 group=FIRST_ADD side=PE strike=24300 higher_value=316.70 target_band=63.34-95.01
+2026-05-05 14:33:15,081 INFO TRADED date=2025-06-02 expiry=2025-06-05 atm=24550 adjustments=1 orders=6 gross=-6935.50 brokerage=150.00 net=-7085.50
+2026-05-05 14:33:15,204 INFO TRADED date=2025-06-03 expiry=2025-06-05 atm=24650 adjustments=0 orders=4 gross=19123.00 brokerage=100.00 net=19023.00
+2026-05-05 14:33:15,218 INFO ADJUSTMENT date=2025-06-04 timestamp=2025-06-04T10:44:00+05:30 group=FIRST_ADD side=PE strike=24450 higher_value=126.20 target_band=25.24-37.86
+2026-05-05 14:33:15,218 INFO ADJUSTMENT date=2025-06-04 timestamp=2025-06-04T11:17:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24450 single_value=100.90 double_value=104.40
+2026-05-05 14:33:15,219 INFO ADJUSTMENT date=2025-06-04 timestamp=2025-06-04T11:31:00+05:30 group=FIRST_ADD side=PE strike=24450 higher_value=116.35 target_band=23.27-34.90
+2026-05-05 14:33:15,219 INFO EXCEPTION_EXIT date=2025-06-04 expiry=2025-06-05 atm=24550 reason=no_valid_rebalance_candidate exit=2025-06-04T14:09:00+05:30 orders=8 gross=2021.50 brokerage=200.00 net=1821.50
+2026-05-05 14:33:15,390 INFO ADJUSTMENT date=2025-06-05 timestamp=2025-06-05T09:36:00+05:30 group=FIRST_ADD side=PE strike=24650 higher_value=91.90 target_band=18.38-27.57
+2026-05-05 14:33:15,391 INFO EXCEPTION_EXIT date=2025-06-05 expiry=2025-06-05 atm=24700 reason=no_valid_rebalance_candidate exit=2025-06-05T09:53:00+05:30 orders=6 gross=4517.50 brokerage=150.00 net=4367.50
+2026-05-05 14:33:18,111 INFO ADJUSTMENT date=2025-06-06 timestamp=2025-06-06T10:33:00+05:30 group=FIRST_ADD side=PE strike=24550 higher_value=239.95 target_band=47.99-71.98
+2026-05-05 14:33:18,112 INFO EXCEPTION_EXIT date=2025-06-06 expiry=2025-06-12 atm=24750 reason=no_valid_rebalance_candidate exit=2025-06-06T10:48:00+05:30 orders=6 gross=-9626.50 brokerage=150.00 net=-9776.50
+2026-05-05 14:33:18,274 INFO TRADED date=2025-06-09 expiry=2025-06-12 atm=25100 adjustments=0 orders=4 gross=5362.50 brokerage=100.00 net=5262.50
+2026-05-05 14:33:18,276 INFO TRADED date=2025-06-10 expiry=2025-06-12 atm=25100 adjustments=0 orders=4 gross=6389.50 brokerage=100.00 net=6289.50
+2026-05-05 14:33:18,684 INFO ADJUSTMENT date=2025-06-11 timestamp=2025-06-11T11:55:00+05:30 group=FIRST_ADD side=PE strike=25050 higher_value=121.90 target_band=24.38-36.57
+2026-05-05 14:33:18,685 INFO ADJUSTMENT date=2025-06-11 timestamp=2025-06-11T13:30:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25050 single_value=86.40 double_value=90.50
+2026-05-05 14:33:18,685 INFO TRADED date=2025-06-11 expiry=2025-06-12 atm=25150 adjustments=2 orders=6 gross=832.00 brokerage=150.00 net=682.00
+2026-05-05 14:33:20,505 INFO ADJUSTMENT date=2025-06-12 timestamp=2025-06-12T09:44:00+05:30 group=FIRST_ADD side=CE strike=25250 higher_value=85.90 target_band=17.18-25.77
+2026-05-05 14:33:20,506 INFO EXCEPTION_EXIT date=2025-06-12 expiry=2025-06-12 atm=25150 reason=no_valid_rebalance_candidate exit=2025-06-12T09:47:00+05:30 orders=6 gross=-5388.50 brokerage=150.00 net=-5538.50
+2026-05-05 14:33:20,643 INFO TRADED date=2025-06-13 expiry=2025-06-19 atm=24650 adjustments=0 orders=4 gross=2795.00 brokerage=100.00 net=2695.00
+2026-05-05 14:33:22,725 INFO ADJUSTMENT date=2025-06-16 timestamp=2025-06-16T10:48:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=214.40 target_band=42.88-64.32
+2026-05-05 14:33:22,725 INFO EXCEPTION_EXIT date=2025-06-16 expiry=2025-06-19 atm=24800 reason=no_valid_rebalance_candidate exit=2025-06-16T13:42:00+05:30 orders=6 gross=-5882.50 brokerage=150.00 net=-6032.50
+2026-05-05 14:33:25,004 INFO ADJUSTMENT date=2025-06-17 timestamp=2025-06-17T12:52:00+05:30 group=FIRST_ADD side=CE strike=25000 higher_value=145.95 target_band=29.19-43.78
+2026-05-05 14:33:25,004 INFO ADJUSTMENT date=2025-06-17 timestamp=2025-06-17T13:37:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25000 single_value=126.20 double_value=126.30
+2026-05-05 14:33:25,005 INFO TRADED date=2025-06-17 expiry=2025-06-19 atm=24900 adjustments=2 orders=6 gross=3074.50 brokerage=150.00 net=2924.50
+2026-05-05 14:33:25,007 INFO ADJUSTMENT date=2025-06-18 timestamp=2025-06-18T10:53:00+05:30 group=FIRST_ADD side=CE strike=25000 higher_value=122.85 target_band=24.57-36.85
+2026-05-05 14:33:25,008 INFO EXCEPTION_EXIT date=2025-06-18 expiry=2025-06-19 atm=24900 reason=no_valid_rebalance_candidate exit=2025-06-18T11:32:00+05:30 orders=6 gross=-676.00 brokerage=150.00 net=-826.00
+2026-05-05 14:33:25,010 INFO ADJUSTMENT date=2025-06-19 timestamp=2025-06-19T09:35:00+05:30 group=FIRST_ADD side=PE strike=24750 higher_value=60.00 target_band=12.00-18.00
+2026-05-05 14:33:25,010 INFO EXCEPTION_EXIT date=2025-06-19 expiry=2025-06-19 atm=24800 reason=no_valid_rebalance_candidate exit=2025-06-19T09:46:00+05:30 orders=6 gross=-58.50 brokerage=150.00 net=-208.50
+2026-05-05 14:33:37,286 INFO ADJUSTMENT date=2025-06-20 timestamp=2025-06-20T10:16:00+05:30 group=FIRST_ADD side=PE strike=24650 higher_value=236.30 target_band=47.26-70.89
+2026-05-05 14:33:37,287 INFO EXCEPTION_EXIT date=2025-06-20 expiry=2025-06-26 atm=24850 reason=no_valid_rebalance_candidate exit=2025-06-20T10:31:00+05:30 orders=6 gross=-11700.00 brokerage=150.00 net=-11850.00
+2026-05-05 14:33:37,572 INFO ADJUSTMENT date=2025-06-23 timestamp=2025-06-23T13:21:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=216.45 target_band=43.29-64.93
+2026-05-05 14:33:37,573 INFO EXCEPTION_EXIT date=2025-06-23 expiry=2025-06-26 atm=24900 reason=no_valid_rebalance_candidate exit=2025-06-23T14:03:00+05:30 orders=6 gross=-6012.50 brokerage=150.00 net=-6162.50
+2026-05-05 14:33:39,250 INFO ADJUSTMENT date=2025-06-24 timestamp=2025-06-24T11:07:00+05:30 group=FIRST_ADD side=PE strike=25050 higher_value=179.95 target_band=35.99-53.98
+2026-05-05 14:33:39,251 INFO EXCEPTION_EXIT date=2025-06-24 expiry=2025-06-26 atm=25200 reason=no_valid_rebalance_candidate exit=2025-06-24T12:13:00+05:30 orders=6 gross=-5486.00 brokerage=150.00 net=-5636.00
+2026-05-05 14:33:39,348 INFO ADJUSTMENT date=2025-06-25 timestamp=2025-06-25T09:42:00+05:30 group=FIRST_ADD side=PE strike=25050 higher_value=126.80 target_band=25.36-38.04
+2026-05-05 14:33:39,349 INFO EXCEPTION_EXIT date=2025-06-25 expiry=2025-06-26 atm=25150 reason=no_valid_rebalance_candidate exit=2025-06-25T12:40:00+05:30 orders=6 gross=812.50 brokerage=150.00 net=662.50
+2026-05-05 14:33:39,755 INFO ADJUSTMENT date=2025-06-26 timestamp=2025-06-26T09:50:00+05:30 group=FIRST_ADD side=PE strike=25250 higher_value=96.60 target_band=19.32-28.98
+2026-05-05 14:33:39,756 INFO EXCEPTION_EXIT date=2025-06-26 expiry=2025-06-26 atm=25350 reason=no_valid_rebalance_candidate exit=2025-06-26T09:56:00+05:30 orders=6 gross=-2242.50 brokerage=150.00 net=-2392.50
+2026-05-05 14:33:42,990 INFO ADJUSTMENT date=2025-06-27 timestamp=2025-06-27T12:18:00+05:30 group=FIRST_ADD side=PE strike=25350 higher_value=203.85 target_band=40.77-61.15
+2026-05-05 14:33:42,991 INFO TRADED date=2025-06-27 expiry=2025-07-03 atm=25550 adjustments=1 orders=6 gross=5063.50 brokerage=150.00 net=4913.50
+2026-05-05 14:33:44,747 INFO ADJUSTMENT date=2025-06-30 timestamp=2025-06-30T12:45:00+05:30 group=FIRST_ADD side=CE strike=25800 higher_value=178.40 target_band=35.68-53.52
+2026-05-05 14:33:44,748 INFO EXCEPTION_EXIT date=2025-06-30 expiry=2025-07-03 atm=25650 reason=no_valid_rebalance_candidate exit=2025-06-30T13:16:00+05:30 orders=6 gross=-2704.00 brokerage=150.00 net=-2854.00
+2026-05-05 14:33:44,749 INFO TRADED date=2025-07-01 expiry=2025-07-03 atm=25550 adjustments=0 orders=4 gross=6084.00 brokerage=100.00 net=5984.00
+2026-05-05 14:33:44,810 INFO ADJUSTMENT date=2025-07-02 timestamp=2025-07-02T11:02:00+05:30 group=FIRST_ADD side=CE strike=25650 higher_value=105.80 target_band=21.16-31.74
+2026-05-05 14:33:44,811 INFO EXCEPTION_EXIT date=2025-07-02 expiry=2025-07-03 atm=25550 reason=no_valid_rebalance_candidate exit=2025-07-02T12:52:00+05:30 orders=6 gross=513.50 brokerage=150.00 net=363.50
+2026-05-05 14:33:44,870 INFO ADJUSTMENT date=2025-07-03 timestamp=2025-07-03T09:44:00+05:30 group=FIRST_ADD side=PE strike=25400 higher_value=55.90 target_band=11.18-16.77
+2026-05-05 14:33:44,871 INFO EXCEPTION_EXIT date=2025-07-03 expiry=2025-07-03 atm=25450 reason=no_valid_rebalance_candidate exit=2025-07-03T09:46:00+05:30 orders=6 gross=260.00 brokerage=150.00 net=110.00
+2026-05-05 14:33:45,013 INFO TRADED date=2025-07-04 expiry=2025-07-10 atm=25400 adjustments=0 orders=4 gross=2320.50 brokerage=100.00 net=2220.50
+2026-05-05 14:33:45,106 INFO TRADED date=2025-07-07 expiry=2025-07-10 atm=25450 adjustments=0 orders=4 gross=1157.00 brokerage=100.00 net=1057.00
+2026-05-05 14:33:45,207 INFO TRADED date=2025-07-08 expiry=2025-07-10 atm=25500 adjustments=0 orders=4 gross=2606.50 brokerage=100.00 net=2506.50
+2026-05-05 14:33:47,867 INFO ADJUSTMENT date=2025-07-09 timestamp=2025-07-09T10:16:00+05:30 group=FIRST_ADD side=PE strike=25400 higher_value=101.45 target_band=20.29-30.43
+2026-05-05 14:33:47,867 INFO ADJUSTMENT date=2025-07-09 timestamp=2025-07-09T13:05:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25400 single_value=82.60 double_value=85.25
+2026-05-05 14:33:47,868 INFO ADJUSTMENT date=2025-07-09 timestamp=2025-07-09T13:14:00+05:30 group=FIRST_ADD side=PE strike=25400 higher_value=93.00 target_band=18.60-27.90
+2026-05-05 14:33:47,868 INFO ADJUSTMENT date=2025-07-09 timestamp=2025-07-09T14:25:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25400 single_value=75.05 double_value=81.65
+2026-05-05 14:33:47,869 INFO TRADED date=2025-07-09 expiry=2025-07-10 atm=25500 adjustments=4 orders=8 gross=-838.50 brokerage=200.00 net=-1038.50
+2026-05-05 14:33:49,665 INFO ADJUSTMENT date=2025-07-10 timestamp=2025-07-10T10:14:00+05:30 group=FIRST_ADD side=CE strike=25500 higher_value=71.55 target_band=14.31-21.46
+2026-05-05 14:33:49,666 INFO ADJUSTMENT date=2025-07-10 timestamp=2025-07-10T10:17:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25500 single_value=59.70 double_value=60.35
+2026-05-05 14:33:49,666 INFO ADJUSTMENT date=2025-07-10 timestamp=2025-07-10T10:49:00+05:30 group=FIRST_ADD side=CE strike=25500 higher_value=65.10 target_band=13.02-19.53
+2026-05-05 14:33:49,667 INFO EXCEPTION_EXIT date=2025-07-10 expiry=2025-07-10 atm=25450 reason=no_valid_rebalance_candidate exit=2025-07-10T10:53:00+05:30 orders=8 gross=-2242.50 brokerage=200.00 net=-2442.50
+2026-05-05 14:33:51,842 INFO ADJUSTMENT date=2025-07-11 timestamp=2025-07-11T10:58:00+05:30 group=FIRST_ADD side=CE strike=25450 higher_value=179.90 target_band=35.98-53.97
+2026-05-05 14:33:51,842 INFO TRADED date=2025-07-11 expiry=2025-07-17 atm=25300 adjustments=1 orders=6 gross=-513.50 brokerage=150.00 net=-663.50
+2026-05-05 14:33:54,286 INFO ADJUSTMENT date=2025-07-14 timestamp=2025-07-14T09:54:00+05:30 group=FIRST_ADD side=PE strike=24900 higher_value=161.35 target_band=32.27-48.40
+2026-05-05 14:33:54,287 INFO ADJUSTMENT date=2025-07-14 timestamp=2025-07-14T11:09:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24900 single_value=131.95 double_value=134.00
+2026-05-05 14:33:54,287 INFO ADJUSTMENT date=2025-07-14 timestamp=2025-07-14T14:54:00+05:30 group=FIRST_ADD side=PE strike=24900 higher_value=144.50 target_band=28.90-43.35
+2026-05-05 14:33:54,288 INFO TRADED date=2025-07-14 expiry=2025-07-17 atm=25050 adjustments=3 orders=8 gross=-611.00 brokerage=200.00 net=-811.00
+2026-05-05 14:33:54,563 INFO ADJUSTMENT date=2025-07-15 timestamp=2025-07-15T11:02:00+05:30 group=FIRST_ADD side=PE strike=25050 higher_value=127.55 target_band=25.51-38.27
+2026-05-05 14:33:54,564 INFO EXCEPTION_EXIT date=2025-07-15 expiry=2025-07-17 atm=25150 reason=no_valid_rebalance_candidate exit=2025-07-15T11:10:00+05:30 orders=6 gross=-2964.00 brokerage=150.00 net=-3114.00
+2026-05-05 14:33:54,566 INFO ADJUSTMENT date=2025-07-16 timestamp=2025-07-16T11:54:00+05:30 group=FIRST_ADD side=PE strike=25050 higher_value=84.20 target_band=16.84-25.26
+2026-05-05 14:33:54,567 INFO EXCEPTION_EXIT date=2025-07-16 expiry=2025-07-17 atm=25150 reason=no_valid_rebalance_candidate exit=2025-07-16T12:47:00+05:30 orders=6 gross=-1170.00 brokerage=150.00 net=-1320.00
+2026-05-05 14:33:54,738 INFO ADJUSTMENT date=2025-07-17 timestamp=2025-07-17T10:13:00+05:30 group=FIRST_ADD side=CE strike=25250 higher_value=54.80 target_band=10.96-16.44
+2026-05-05 14:33:54,738 INFO EXCEPTION_EXIT date=2025-07-17 expiry=2025-07-17 atm=25200 reason=no_valid_rebalance_candidate exit=2025-07-17T10:31:00+05:30 orders=6 gross=-2795.00 brokerage=150.00 net=-2945.00
+2026-05-05 14:33:54,897 INFO TRADED date=2025-07-18 expiry=2025-07-24 atm=25050 adjustments=0 orders=4 gross=266.50 brokerage=100.00 net=166.50
+2026-05-05 14:33:56,920 INFO ADJUSTMENT date=2025-07-21 timestamp=2025-07-21T09:48:00+05:30 group=FIRST_ADD side=PE strike=24800 higher_value=171.85 target_band=34.37-51.55
+2026-05-05 14:33:56,920 INFO EXCEPTION_EXIT date=2025-07-21 expiry=2025-07-24 atm=24900 reason=no_valid_rebalance_candidate exit=2025-07-21T09:51:00+05:30 orders=6 gross=-4231.50 brokerage=150.00 net=-4381.50
+2026-05-05 14:33:57,062 INFO TRADED date=2025-07-22 expiry=2025-07-24 atm=25100 adjustments=0 orders=4 gross=3146.00 brokerage=100.00 net=3046.00
+2026-05-05 14:33:57,201 INFO ADJUSTMENT date=2025-07-23 timestamp=2025-07-23T11:02:00+05:30 group=FIRST_ADD side=PE strike=25000 higher_value=80.65 target_band=16.13-24.20
+2026-05-05 14:33:57,201 INFO EXCEPTION_EXIT date=2025-07-23 expiry=2025-07-24 atm=25100 reason=no_valid_rebalance_candidate exit=2025-07-23T12:05:00+05:30 orders=6 gross=-851.50 brokerage=150.00 net=-1001.50
+2026-05-05 14:33:59,681 INFO ADJUSTMENT date=2025-07-24 timestamp=2025-07-24T09:55:00+05:30 group=FIRST_ADD side=CE strike=25250 higher_value=45.00 target_band=9.00-13.50
+2026-05-05 14:33:59,681 INFO EXCEPTION_EXIT date=2025-07-24 expiry=2025-07-24 atm=25200 reason=no_valid_rebalance_candidate exit=2025-07-24T10:14:00+05:30 orders=6 gross=-448.50 brokerage=150.00 net=-598.50
+2026-05-05 14:34:04,779 INFO ADJUSTMENT date=2025-07-25 timestamp=2025-07-25T10:16:00+05:30 group=FIRST_ADD side=CE strike=25150 higher_value=177.75 target_band=35.55-53.32
+2026-05-05 14:34:04,779 INFO EXCEPTION_EXIT date=2025-07-25 expiry=2025-07-31 atm=25000 reason=no_valid_rebalance_candidate exit=2025-07-25T11:49:00+05:30 orders=6 gross=-3939.00 brokerage=150.00 net=-4089.00
+2026-05-05 14:34:11,712 INFO ADJUSTMENT date=2025-07-28 timestamp=2025-07-28T09:35:00+05:30 group=FIRST_ADD side=PE strike=24650 higher_value=164.70 target_band=32.94-49.41
+2026-05-05 14:34:11,713 INFO ADJUSTMENT date=2025-07-28 timestamp=2025-07-28T09:42:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24650 single_value=136.25 double_value=142.85
+2026-05-05 14:34:11,714 INFO ADJUSTMENT date=2025-07-28 timestamp=2025-07-28T10:15:00+05:30 group=FIRST_ADD side=PE strike=24650 higher_value=163.00 target_band=32.60-48.90
+2026-05-05 14:34:11,714 INFO EXCEPTION_EXIT date=2025-07-28 expiry=2025-07-31 atm=24800 reason=no_valid_rebalance_candidate exit=2025-07-28T10:31:00+05:30 orders=8 gross=-4290.00 brokerage=200.00 net=-4490.00
+2026-05-05 14:34:11,883 INFO ADJUSTMENT date=2025-07-29 timestamp=2025-07-29T13:33:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=118.65 target_band=23.73-35.59
+2026-05-05 14:34:11,883 INFO EXCEPTION_EXIT date=2025-07-29 expiry=2025-07-31 atm=24700 reason=no_valid_rebalance_candidate exit=2025-07-29T13:54:00+05:30 orders=6 gross=1092.00 brokerage=150.00 net=942.00
+2026-05-05 14:34:12,453 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T10:42:00+05:30 group=FIRST_ADD side=CE strike=24950 higher_value=99.85 target_band=19.97-29.95
+2026-05-05 14:34:12,454 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T10:58:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24950 single_value=82.40 double_value=83.65
+2026-05-05 14:34:12,454 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T11:29:00+05:30 group=FIRST_ADD side=PE strike=24750 higher_value=103.00 target_band=20.60-30.90
+2026-05-05 14:34:12,455 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T11:50:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24750 single_value=79.50 double_value=81.00
+2026-05-05 14:34:12,455 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T11:57:00+05:30 group=FIRST_ADD side=PE strike=24750 higher_value=94.55 target_band=18.91-28.36
+2026-05-05 14:34:12,455 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T12:10:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24750 single_value=78.05 double_value=80.00
+2026-05-05 14:34:12,456 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T14:29:00+05:30 group=FIRST_ADD side=PE strike=24750 higher_value=84.75 target_band=16.95-25.43
+2026-05-05 14:34:12,456 INFO ADJUSTMENT date=2025-07-30 timestamp=2025-07-30T15:09:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24750 single_value=65.80 double_value=69.10
+2026-05-05 14:34:12,456 INFO TRADED date=2025-07-30 expiry=2025-07-31 atm=24850 adjustments=8 orders=12 gross=-266.50 brokerage=300.00 net=-566.50
+2026-05-05 14:34:12,594 INFO ADJUSTMENT date=2025-07-31 timestamp=2025-07-31T10:01:00+05:30 group=FIRST_ADD side=CE strike=24750 higher_value=74.35 target_band=14.87-22.30
+2026-05-05 14:34:12,595 INFO ADJUSTMENT date=2025-07-31 timestamp=2025-07-31T10:45:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24750 single_value=51.85 double_value=53.65
+2026-05-05 14:34:12,595 INFO ADJUSTMENT date=2025-07-31 timestamp=2025-07-31T11:02:00+05:30 group=FIRST_ADD side=PE strike=24650 higher_value=68.85 target_band=13.77-20.65
+2026-05-05 14:34:12,595 INFO EXCEPTION_EXIT date=2025-07-31 expiry=2025-07-31 atm=24700 reason=no_valid_rebalance_candidate exit=2025-07-31T11:04:00+05:30 orders=8 gross=-390.00 brokerage=200.00 net=-590.00
+2026-05-05 14:34:15,896 INFO ADJUSTMENT date=2025-08-01 timestamp=2025-08-01T15:07:00+05:30 group=FIRST_ADD side=CE strike=24850 higher_value=197.95 target_band=39.59-59.38
+2026-05-05 14:34:15,897 INFO TRADED date=2025-08-01 expiry=2025-08-07 atm=24700 adjustments=1 orders=6 gross=-2197.00 brokerage=150.00 net=-2347.00
+2026-05-05 14:34:17,782 INFO ADJUSTMENT date=2025-08-04 timestamp=2025-08-04T13:47:00+05:30 group=FIRST_ADD side=PE strike=24500 higher_value=178.75 target_band=35.75-53.62
+2026-05-05 14:34:17,782 INFO TRADED date=2025-08-04 expiry=2025-08-07 atm=24650 adjustments=1 orders=6 gross=2294.50 brokerage=150.00 net=2144.50
+2026-05-05 14:34:17,783 INFO TRADED date=2025-08-05 expiry=2025-08-07 atm=24650 adjustments=0 orders=4 gross=3536.00 brokerage=100.00 net=3436.00
+2026-05-05 14:34:17,793 INFO ADJUSTMENT date=2025-08-06 timestamp=2025-08-06T10:36:00+05:30 group=FIRST_ADD side=CE strike=24750 higher_value=114.65 target_band=22.93-34.40
+2026-05-05 14:34:17,794 INFO ADJUSTMENT date=2025-08-06 timestamp=2025-08-06T12:20:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24750 single_value=88.90 double_value=89.30
+2026-05-05 14:34:17,794 INFO ADJUSTMENT date=2025-08-06 timestamp=2025-08-06T12:54:00+05:30 group=FIRST_ADD side=CE strike=24750 higher_value=100.00 target_band=20.00-30.00
+2026-05-05 14:34:17,795 INFO ADJUSTMENT date=2025-08-06 timestamp=2025-08-06T13:03:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24750 single_value=84.85 double_value=85.20
+2026-05-05 14:34:17,795 INFO ADJUSTMENT date=2025-08-06 timestamp=2025-08-06T14:01:00+05:30 group=FIRST_ADD side=CE strike=24750 higher_value=97.00 target_band=19.40-29.10
+2026-05-05 14:34:17,795 INFO EXCEPTION_EXIT date=2025-08-06 expiry=2025-08-07 atm=24650 reason=no_valid_rebalance_candidate exit=2025-08-06T14:35:00+05:30 orders=10 gross=1794.00 brokerage=250.00 net=1544.00
+2026-05-05 14:34:17,876 INFO ADJUSTMENT date=2025-08-07 timestamp=2025-08-07T09:37:00+05:30 group=FIRST_ADD side=CE strike=24600 higher_value=69.40 target_band=13.88-20.82
+2026-05-05 14:34:17,877 INFO EXCEPTION_EXIT date=2025-08-07 expiry=2025-08-07 atm=24550 reason=no_valid_rebalance_candidate exit=2025-08-07T09:59:00+05:30 orders=6 gross=-533.00 brokerage=150.00 net=-683.00
+2026-05-05 14:34:20,748 INFO ADJUSTMENT date=2025-08-08 timestamp=2025-08-08T15:13:00+05:30 group=FIRST_ADD side=CE strike=24600 higher_value=200.15 target_band=40.03-60.05
+2026-05-05 14:34:20,749 INFO TRADED date=2025-08-08 expiry=2025-08-14 atm=24500 adjustments=1 orders=6 gross=-2255.50 brokerage=150.00 net=-2405.50
+2026-05-05 14:34:22,338 INFO ADJUSTMENT date=2025-08-11 timestamp=2025-08-11T10:52:00+05:30 group=FIRST_ADD side=PE strike=24250 higher_value=168.60 target_band=33.72-50.58
+2026-05-05 14:34:22,338 INFO ADJUSTMENT date=2025-08-11 timestamp=2025-08-11T11:45:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24250 single_value=140.60 double_value=140.60
+2026-05-05 14:34:22,339 INFO ADJUSTMENT date=2025-08-11 timestamp=2025-08-11T12:27:00+05:30 group=FIRST_ADD side=PE strike=24250 higher_value=157.60 target_band=31.52-47.28
+2026-05-05 14:34:22,339 INFO EXCEPTION_EXIT date=2025-08-11 expiry=2025-08-14 atm=24400 reason=no_valid_rebalance_candidate exit=2025-08-11T13:02:00+05:30 orders=8 gross=-2002.00 brokerage=200.00 net=-2202.00
+2026-05-05 14:34:22,513 INFO ADJUSTMENT date=2025-08-12 timestamp=2025-08-12T09:54:00+05:30 group=FIRST_ADD side=PE strike=24500 higher_value=129.80 target_band=25.96-38.94
+2026-05-05 14:34:22,513 INFO EXCEPTION_EXIT date=2025-08-12 expiry=2025-08-14 atm=24600 reason=no_valid_rebalance_candidate exit=2025-08-12T10:02:00+05:30 orders=6 gross=-4043.00 brokerage=150.00 net=-4193.00
+2026-05-05 14:34:22,515 INFO ADJUSTMENT date=2025-08-13 timestamp=2025-08-13T09:42:00+05:30 group=FIRST_ADD side=PE strike=24450 higher_value=109.60 target_band=21.92-32.88
+2026-05-05 14:34:22,516 INFO ADJUSTMENT date=2025-08-13 timestamp=2025-08-13T12:00:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24450 single_value=83.25 double_value=83.60
+2026-05-05 14:34:22,516 INFO ADJUSTMENT date=2025-08-13 timestamp=2025-08-13T12:14:00+05:30 group=FIRST_ADD side=PE strike=24450 higher_value=94.25 target_band=18.85-28.27
+2026-05-05 14:34:22,517 INFO EXCEPTION_EXIT date=2025-08-13 expiry=2025-08-14 atm=24550 reason=no_valid_rebalance_candidate exit=2025-08-13T12:32:00+05:30 orders=8 gross=-468.00 brokerage=200.00 net=-668.00
+2026-05-05 14:34:22,656 INFO ADJUSTMENT date=2025-08-14 timestamp=2025-08-14T09:35:00+05:30 group=FIRST_ADD side=CE strike=24700 higher_value=63.20 target_band=12.64-18.96
+2026-05-05 14:34:22,656 INFO ADJUSTMENT date=2025-08-14 timestamp=2025-08-14T09:39:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24700 single_value=50.65 double_value=61.35
+2026-05-05 14:34:22,656 INFO EXCEPTION_EXIT date=2025-08-14 expiry=2025-08-14 atm=24650 reason=no_valid_first_add_candidate exit=2025-08-14T11:43:00+05:30 orders=6 gross=1215.50 brokerage=150.00 net=1065.50
+2026-05-05 14:34:24,934 INFO ADJUSTMENT date=2025-08-18 timestamp=2025-08-18T09:50:00+05:30 group=FIRST_ADD side=PE strike=24800 higher_value=189.50 target_band=37.90-56.85
+2026-05-05 14:34:24,934 INFO ADJUSTMENT date=2025-08-18 timestamp=2025-08-18T10:28:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24800 single_value=157.25 double_value=158.55
+2026-05-05 14:34:24,935 INFO TRADED date=2025-08-18 expiry=2025-08-21 atm=24950 adjustments=2 orders=6 gross=4888.00 brokerage=150.00 net=4738.00
+2026-05-05 14:34:24,997 INFO ADJUSTMENT date=2025-08-19 timestamp=2025-08-19T11:13:00+05:30 group=FIRST_ADD side=PE strike=24800 higher_value=117.45 target_band=23.49-35.23
+2026-05-05 14:34:24,997 INFO EXCEPTION_EXIT date=2025-08-19 expiry=2025-08-21 atm=24900 reason=no_valid_rebalance_candidate exit=2025-08-19T12:15:00+05:30 orders=6 gross=156.00 brokerage=150.00 net=6.00
+2026-05-05 14:34:24,999 INFO ADJUSTMENT date=2025-08-20 timestamp=2025-08-20T10:18:00+05:30 group=FIRST_ADD side=PE strike=24850 higher_value=96.80 target_band=19.36-29.04
+2026-05-05 14:34:25,000 INFO EXCEPTION_EXIT date=2025-08-20 expiry=2025-08-21 atm=24950 reason=no_valid_rebalance_candidate exit=2025-08-20T11:13:00+05:30 orders=6 gross=-2476.50 brokerage=150.00 net=-2626.50
+2026-05-05 14:34:25,165 INFO ADJUSTMENT date=2025-08-21 timestamp=2025-08-21T09:33:00+05:30 group=FIRST_ADD side=PE strike=25000 higher_value=54.90 target_band=10.98-16.47
+2026-05-05 14:34:25,166 INFO ADJUSTMENT date=2025-08-21 timestamp=2025-08-21T09:39:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25000 single_value=43.80 double_value=50.80
+2026-05-05 14:34:25,166 INFO ADJUSTMENT date=2025-08-21 timestamp=2025-08-21T09:49:00+05:30 group=FIRST_ADD side=PE strike=25000 higher_value=54.85 target_band=10.97-16.45
+2026-05-05 14:34:25,167 INFO EXCEPTION_EXIT date=2025-08-21 expiry=2025-08-21 atm=25050 reason=no_valid_rebalance_candidate exit=2025-08-21T09:58:00+05:30 orders=8 gross=-1365.00 brokerage=200.00 net=-1565.00
+2026-05-05 14:34:30,400 INFO ADJUSTMENT date=2025-08-22 timestamp=2025-08-22T14:24:00+05:30 group=FIRST_ADD side=CE strike=25150 higher_value=154.30 target_band=30.86-46.29
+2026-05-05 14:34:30,400 INFO TRADED date=2025-08-22 expiry=2025-08-28 atm=25000 adjustments=1 orders=6 gross=-1131.00 brokerage=150.00 net=-1281.00
+2026-05-05 14:34:35,878 INFO ADJUSTMENT date=2025-08-25 timestamp=2025-08-25T12:19:00+05:30 group=FIRST_ADD side=PE strike=24850 higher_value=117.80 target_band=23.56-35.34
+2026-05-05 14:34:35,878 INFO ADJUSTMENT date=2025-08-25 timestamp=2025-08-25T14:41:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24850 single_value=92.00 double_value=96.25
+2026-05-05 14:34:35,879 INFO ADJUSTMENT date=2025-08-25 timestamp=2025-08-25T14:57:00+05:30 group=FIRST_ADD side=PE strike=24850 higher_value=111.25 target_band=22.25-33.38
+2026-05-05 14:34:35,879 INFO TRADED date=2025-08-25 expiry=2025-08-28 atm=24950 adjustments=3 orders=8 gross=1332.50 brokerage=200.00 net=1132.50
+2026-05-05 14:34:36,250 INFO ADJUSTMENT date=2025-08-26 timestamp=2025-08-26T15:03:00+05:30 group=FIRST_ADD side=CE strike=24900 higher_value=97.95 target_band=19.59-29.38
+2026-05-05 14:34:36,250 INFO EXCEPTION_EXIT date=2025-08-26 expiry=2025-08-28 atm=24800 reason=no_valid_rebalance_candidate exit=2025-08-26T15:14:00+05:30 orders=6 gross=-1105.00 brokerage=150.00 net=-1255.00
+2026-05-05 14:34:36,326 INFO ADJUSTMENT date=2025-08-28 timestamp=2025-08-28T09:46:00+05:30 group=FIRST_ADD side=PE strike=24500 higher_value=67.90 target_band=13.58-20.37
+2026-05-05 14:34:36,326 INFO ADJUSTMENT date=2025-08-28 timestamp=2025-08-28T09:49:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24500 single_value=51.35 double_value=62.65
+2026-05-05 14:34:36,327 INFO ADJUSTMENT date=2025-08-28 timestamp=2025-08-28T09:53:00+05:30 group=FIRST_ADD side=PE strike=24500 higher_value=71.70 target_band=14.34-21.51
+2026-05-05 14:34:36,327 INFO EXCEPTION_EXIT date=2025-08-28 expiry=2025-08-28 atm=24550 reason=no_valid_rebalance_candidate exit=2025-08-28T09:55:00+05:30 orders=8 gross=-1605.50 brokerage=200.00 net=-1805.50
+2026-05-05 14:34:38,643 INFO ADJUSTMENT date=2025-08-29 timestamp=2025-08-29T14:40:00+05:30 group=FIRST_ADD side=CE strike=24650 higher_value=120.60 target_band=24.12-36.18
+2026-05-05 14:34:38,644 INFO EXCEPTION_EXIT date=2025-08-29 expiry=2025-09-02 atm=24550 reason=no_valid_rebalance_candidate exit=2025-08-29T15:12:00+05:30 orders=6 gross=1157.00 brokerage=150.00 net=1007.00
+2026-05-05 14:34:40,611 INFO EXCEPTION_EXIT date=2025-09-01 expiry=2025-09-02 atm=24550 reason=no_valid_first_add_candidate exit=2025-09-01T12:29:00+05:30 orders=4 gross=1059.50 brokerage=100.00 net=959.50
+2026-05-05 14:34:40,787 INFO ADJUSTMENT date=2025-09-02 timestamp=2025-09-02T09:35:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=52.75 target_band=10.55-15.82
+2026-05-05 14:34:40,787 INFO EXCEPTION_EXIT date=2025-09-02 expiry=2025-09-02 atm=24650 reason=no_valid_rebalance_candidate exit=2025-09-02T09:45:00+05:30 orders=6 gross=-1072.50 brokerage=150.00 net=-1222.50
+2026-05-05 14:34:42,692 INFO ADJUSTMENT date=2025-09-03 timestamp=2025-09-03T12:22:00+05:30 group=FIRST_ADD side=PE strike=24450 higher_value=161.80 target_band=32.36-48.54
+2026-05-05 14:34:42,693 INFO ADJUSTMENT date=2025-09-03 timestamp=2025-09-03T12:49:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24450 single_value=140.30 double_value=141.80
+2026-05-05 14:34:42,693 INFO ADJUSTMENT date=2025-09-03 timestamp=2025-09-03T14:08:00+05:30 group=FIRST_ADD side=PE strike=24450 higher_value=161.30 target_band=32.26-48.39
+2026-05-05 14:34:42,694 INFO EXCEPTION_EXIT date=2025-09-03 expiry=2025-09-09 atm=24600 reason=no_valid_rebalance_candidate exit=2025-09-03T15:10:00+05:30 orders=8 gross=-1709.50 brokerage=200.00 net=-1909.50
+2026-05-05 14:34:44,466 INFO ADJUSTMENT date=2025-09-04 timestamp=2025-09-04T12:12:00+05:30 group=FIRST_ADD side=CE strike=25000 higher_value=147.60 target_band=29.52-44.28
+2026-05-05 14:34:44,466 INFO ADJUSTMENT date=2025-09-04 timestamp=2025-09-04T12:47:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25000 single_value=125.15 double_value=133.45
+2026-05-05 14:34:44,467 INFO ADJUSTMENT date=2025-09-04 timestamp=2025-09-04T13:41:00+05:30 group=FIRST_ADD side=CE strike=25000 higher_value=140.00 target_band=28.00-42.00
+2026-05-05 14:34:44,467 INFO EXCEPTION_EXIT date=2025-09-04 expiry=2025-09-09 atm=24900 reason=no_valid_rebalance_candidate exit=2025-09-04T14:17:00+05:30 orders=8 gross=-3250.00 brokerage=200.00 net=-3450.00
+2026-05-05 14:34:44,615 INFO ADJUSTMENT date=2025-09-05 timestamp=2025-09-05T10:12:00+05:30 group=FIRST_ADD side=CE strike=24900 higher_value=130.90 target_band=26.18-39.27
+2026-05-05 14:34:44,615 INFO EXCEPTION_EXIT date=2025-09-05 expiry=2025-09-09 atm=24800 reason=no_valid_rebalance_candidate exit=2025-09-05T10:16:00+05:30 orders=6 gross=-8547.50 brokerage=150.00 net=-8697.50
+2026-05-05 14:34:44,824 INFO ADJUSTMENT date=2025-09-08 timestamp=2025-09-08T09:40:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=92.45 target_band=18.49-27.73
+2026-05-05 14:34:44,825 INFO ADJUSTMENT date=2025-09-08 timestamp=2025-09-08T09:56:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24700 single_value=77.95 double_value=79.70
+2026-05-05 14:34:44,825 INFO ADJUSTMENT date=2025-09-08 timestamp=2025-09-08T10:04:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=90.05 target_band=18.01-27.01
+2026-05-05 14:34:44,826 INFO ADJUSTMENT date=2025-09-08 timestamp=2025-09-08T10:15:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24700 single_value=74.25 double_value=80.40
+2026-05-05 14:34:44,826 INFO ADJUSTMENT date=2025-09-08 timestamp=2025-09-08T11:30:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=84.50 target_band=16.90-25.35
+2026-05-05 14:34:44,826 INFO EXCEPTION_EXIT date=2025-09-08 expiry=2025-09-09 atm=24800 reason=no_valid_rebalance_candidate exit=2025-09-08T12:36:00+05:30 orders=10 gross=-2086.50 brokerage=250.00 net=-2336.50
+2026-05-05 14:34:44,903 INFO ADJUSTMENT date=2025-09-09 timestamp=2025-09-09T10:22:00+05:30 group=FIRST_ADD side=CE strike=24900 higher_value=60.70 target_band=12.14-18.21
+2026-05-05 14:34:44,904 INFO ADJUSTMENT date=2025-09-09 timestamp=2025-09-09T10:28:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24900 single_value=52.15 double_value=53.25
+2026-05-05 14:34:44,905 INFO ADJUSTMENT date=2025-09-09 timestamp=2025-09-09T10:40:00+05:30 group=FIRST_ADD side=CE strike=24900 higher_value=59.80 target_band=11.96-17.94
+2026-05-05 14:34:44,905 INFO ADJUSTMENT date=2025-09-09 timestamp=2025-09-09T10:51:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24900 single_value=50.95 double_value=51.30
+2026-05-05 14:34:44,905 INFO ADJUSTMENT date=2025-09-09 timestamp=2025-09-09T13:35:00+05:30 group=FIRST_ADD side=PE strike=24800 higher_value=44.25 target_band=8.85-13.28
+2026-05-05 14:34:44,906 INFO ADJUSTMENT date=2025-09-09 timestamp=2025-09-09T13:41:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24800 single_value=35.45 double_value=35.60
+2026-05-05 14:34:44,906 INFO EXCEPTION_EXIT date=2025-09-09 expiry=2025-09-09 atm=24850 reason=no_valid_first_add_candidate exit=2025-09-09T14:06:00+05:30 orders=10 gross=1943.50 brokerage=250.00 net=1693.50
+2026-05-05 14:34:45,060 INFO TRADED date=2025-09-10 expiry=2025-09-16 atm=25000 adjustments=0 orders=4 gross=1410.50 brokerage=100.00 net=1310.50
+2026-05-05 14:34:45,062 INFO TRADED date=2025-09-11 expiry=2025-09-16 atm=25000 adjustments=0 orders=4 gross=1027.00 brokerage=100.00 net=927.00
+2026-05-05 14:34:47,447 INFO ADJUSTMENT date=2025-09-12 timestamp=2025-09-12T10:41:00+05:30 group=FIRST_ADD side=PE strike=24950 higher_value=112.10 target_band=22.42-33.63
+2026-05-05 14:34:47,448 INFO EXCEPTION_EXIT date=2025-09-12 expiry=2025-09-16 atm=25050 reason=no_valid_rebalance_candidate exit=2025-09-12T11:28:00+05:30 orders=6 gross=-1872.00 brokerage=150.00 net=-2022.00
+2026-05-05 14:34:47,552 INFO TRADED date=2025-09-15 expiry=2025-09-16 atm=25100 adjustments=0 orders=4 gross=3471.00 brokerage=100.00 net=3371.00
+2026-05-05 14:34:47,554 INFO ADJUSTMENT date=2025-09-16 timestamp=2025-09-16T09:34:00+05:30 group=FIRST_ADD side=PE strike=25050 higher_value=53.40 target_band=10.68-16.02
+2026-05-05 14:34:47,554 INFO EXCEPTION_EXIT date=2025-09-16 expiry=2025-09-16 atm=25100 reason=no_valid_rebalance_candidate exit=2025-09-16T09:45:00+05:30 orders=6 gross=-2736.50 brokerage=150.00 net=-2886.50
+2026-05-05 14:34:50,514 INFO ADJUSTMENT date=2025-09-17 timestamp=2025-09-17T09:38:00+05:30 group=FIRST_ADD side=PE strike=25150 higher_value=154.35 target_band=30.87-46.30
+2026-05-05 14:34:50,514 INFO TRADED date=2025-09-17 expiry=2025-09-23 atm=25300 adjustments=1 orders=6 gross=-1157.00 brokerage=150.00 net=-1307.00
+2026-05-05 14:34:50,640 INFO ADJUSTMENT date=2025-09-18 timestamp=2025-09-18T09:31:00+05:30 group=FIRST_ADD side=PE strike=25300 higher_value=128.30 target_band=25.66-38.49
+2026-05-05 14:34:50,641 INFO ADJUSTMENT date=2025-09-18 timestamp=2025-09-18T12:38:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25300 single_value=105.25 double_value=112.80
+2026-05-05 14:34:50,641 INFO ADJUSTMENT date=2025-09-18 timestamp=2025-09-18T15:05:00+05:30 group=FIRST_ADD side=PE strike=25300 higher_value=115.15 target_band=23.03-34.55
+2026-05-05 14:34:50,642 INFO TRADED date=2025-09-18 expiry=2025-09-23 atm=25400 adjustments=3 orders=8 gross=-214.50 brokerage=200.00 net=-414.50
+2026-05-05 14:34:50,678 INFO TRADED date=2025-09-19 expiry=2025-09-23 atm=25350 adjustments=0 orders=4 gross=1014.00 brokerage=100.00 net=914.00
+2026-05-05 14:34:52,180 INFO ADJUSTMENT date=2025-09-22 timestamp=2025-09-22T09:44:00+05:30 group=FIRST_ADD side=PE strike=25200 higher_value=83.20 target_band=16.64-24.96
+2026-05-05 14:34:52,181 INFO ADJUSTMENT date=2025-09-22 timestamp=2025-09-22T09:52:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25200 single_value=70.00 double_value=71.90
+2026-05-05 14:34:52,181 INFO ADJUSTMENT date=2025-09-22 timestamp=2025-09-22T10:01:00+05:30 group=FIRST_ADD side=PE strike=25200 higher_value=81.35 target_band=16.27-24.40
+2026-05-05 14:34:52,181 INFO ADJUSTMENT date=2025-09-22 timestamp=2025-09-22T11:18:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25200 single_value=66.30 double_value=68.10
+2026-05-05 14:34:52,182 INFO ADJUSTMENT date=2025-09-22 timestamp=2025-09-22T14:35:00+05:30 group=FIRST_ADD side=CE strike=25350 higher_value=70.25 target_band=14.05-21.07
+2026-05-05 14:34:52,182 INFO EXCEPTION_EXIT date=2025-09-22 expiry=2025-09-23 atm=25300 reason=no_valid_rebalance_candidate exit=2025-09-22T14:43:00+05:30 orders=10 gross=-2652.00 brokerage=250.00 net=-2902.00
+2026-05-05 14:34:52,285 INFO ADJUSTMENT date=2025-09-23 timestamp=2025-09-23T09:38:00+05:30 group=FIRST_ADD side=CE strike=25250 higher_value=61.20 target_band=12.24-18.36
+2026-05-05 14:34:52,286 INFO ADJUSTMENT date=2025-09-23 timestamp=2025-09-23T09:41:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25250 single_value=49.35 double_value=50.50
+2026-05-05 14:34:52,286 INFO ADJUSTMENT date=2025-09-23 timestamp=2025-09-23T09:42:00+05:30 group=FIRST_ADD side=CE strike=25250 higher_value=64.65 target_band=12.93-19.39
+2026-05-05 14:34:52,287 INFO EXCEPTION_EXIT date=2025-09-23 expiry=2025-09-23 atm=25200 reason=no_valid_rebalance_candidate exit=2025-09-23T09:43:00+05:30 orders=8 gross=-4894.50 brokerage=200.00 net=-5094.50
+2026-05-05 14:34:59,254 INFO ADJUSTMENT date=2025-09-24 timestamp=2025-09-24T09:33:00+05:30 group=FIRST_ADD side=PE strike=24900 higher_value=162.80 target_band=32.56-48.84
+2026-05-05 14:34:59,255 INFO ADJUSTMENT date=2025-09-24 timestamp=2025-09-24T11:05:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24900 single_value=137.75 double_value=138.70
+2026-05-05 14:34:59,255 INFO ADJUSTMENT date=2025-09-24 timestamp=2025-09-24T11:41:00+05:30 group=FIRST_ADD side=PE strike=24900 higher_value=154.15 target_band=30.83-46.24
+2026-05-05 14:34:59,256 INFO EXCEPTION_EXIT date=2025-09-24 expiry=2025-09-30 atm=25050 reason=no_valid_rebalance_candidate exit=2025-09-24T13:01:00+05:30 orders=8 gross=-1365.00 brokerage=200.00 net=-1565.00
+2026-05-05 14:35:05,344 INFO ADJUSTMENT date=2025-09-25 timestamp=2025-09-25T15:01:00+05:30 group=FIRST_ADD side=CE strike=25200 higher_value=132.80 target_band=26.56-39.84
+2026-05-05 14:35:05,344 INFO TRADED date=2025-09-25 expiry=2025-09-30 atm=25050 adjustments=1 orders=6 gross=-552.50 brokerage=150.00 net=-702.50
+2026-05-05 14:35:06,491 INFO ADJUSTMENT date=2025-09-26 timestamp=2025-09-26T09:49:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=126.85 target_band=25.37-38.05
+2026-05-05 14:35:06,491 INFO ADJUSTMENT date=2025-09-26 timestamp=2025-09-26T10:09:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24700 single_value=108.80 double_value=111.50
+2026-05-05 14:35:06,492 INFO ADJUSTMENT date=2025-09-26 timestamp=2025-09-26T13:51:00+05:30 group=FIRST_ADD side=CE strike=24900 higher_value=125.95 target_band=25.19-37.78
+2026-05-05 14:35:06,492 INFO EXCEPTION_EXIT date=2025-09-26 expiry=2025-09-30 atm=24800 reason=no_valid_rebalance_candidate exit=2025-09-26T13:59:00+05:30 orders=8 gross=-4504.50 brokerage=200.00 net=-4704.50
+2026-05-05 14:35:06,609 INFO ADJUSTMENT date=2025-09-29 timestamp=2025-09-29T09:31:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=105.40 target_band=21.08-31.62
+2026-05-05 14:35:06,610 INFO EXCEPTION_EXIT date=2025-09-29 expiry=2025-09-30 atm=24700 reason=no_valid_rebalance_candidate exit=2025-09-29T09:36:00+05:30 orders=6 gross=-227.50 brokerage=150.00 net=-377.50
+2026-05-05 14:35:06,827 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T09:34:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=81.25 target_band=16.25-24.38
+2026-05-05 14:35:06,827 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T09:36:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24600 single_value=67.90 double_value=68.35
+2026-05-05 14:35:06,828 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T10:37:00+05:30 group=FIRST_ADD side=CE strike=24700 higher_value=77.40 target_band=15.48-23.22
+2026-05-05 14:35:06,828 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T10:55:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=24700 single_value=60.60 double_value=67.60
+2026-05-05 14:35:06,829 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T11:21:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=66.30 target_band=13.26-19.89
+2026-05-05 14:35:06,829 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T11:23:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24600 single_value=48.40 double_value=63.75
+2026-05-05 14:35:06,829 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T11:37:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=59.15 target_band=11.83-17.74
+2026-05-05 14:35:06,830 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T11:40:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24600 single_value=50.00 double_value=54.50
+2026-05-05 14:35:06,830 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T12:23:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=57.55 target_band=11.51-17.26
+2026-05-05 14:35:06,830 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T12:44:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24600 single_value=46.60 double_value=46.65
+2026-05-05 14:35:06,831 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T13:10:00+05:30 group=FIRST_ADD side=PE strike=24600 higher_value=47.20 target_band=9.44-14.16
+2026-05-05 14:35:06,831 INFO ADJUSTMENT date=2025-09-30 timestamp=2025-09-30T13:24:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24600 single_value=32.70 double_value=45.40
+2026-05-05 14:35:06,831 INFO EXCEPTION_EXIT date=2025-09-30 expiry=2025-09-30 atm=24650 reason=no_valid_first_add_candidate exit=2025-09-30T13:55:00+05:30 orders=16 gross=338.00 brokerage=400.00 net=-62.00
+2026-05-05 14:35:08,115 INFO ADJUSTMENT date=2025-10-01 timestamp=2025-10-01T11:13:00+05:30 group=FIRST_ADD side=PE strike=24500 higher_value=157.50 target_band=31.50-47.25
+2026-05-05 14:35:08,116 INFO EXCEPTION_EXIT date=2025-10-01 expiry=2025-10-07 atm=24650 reason=no_valid_rebalance_candidate exit=2025-10-01T11:32:00+05:30 orders=6 gross=-539.50 brokerage=150.00 net=-689.50
+2026-05-05 14:35:08,294 INFO ADJUSTMENT date=2025-10-03 timestamp=2025-10-03T09:58:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=117.80 target_band=23.56-35.34
+2026-05-05 14:35:08,294 INFO ADJUSTMENT date=2025-10-03 timestamp=2025-10-03T10:06:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24700 single_value=102.00 double_value=105.15
+2026-05-05 14:35:08,295 INFO ADJUSTMENT date=2025-10-03 timestamp=2025-10-03T12:06:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=119.25 target_band=23.85-35.77
+2026-05-05 14:35:08,295 INFO ADJUSTMENT date=2025-10-03 timestamp=2025-10-03T12:22:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24700 single_value=97.10 double_value=97.40
+2026-05-05 14:35:08,295 INFO ADJUSTMENT date=2025-10-03 timestamp=2025-10-03T13:06:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=107.70 target_band=21.54-32.31
+2026-05-05 14:35:08,296 INFO ADJUSTMENT date=2025-10-03 timestamp=2025-10-03T14:15:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=24700 single_value=92.60 double_value=94.35
+2026-05-05 14:35:08,296 INFO ADJUSTMENT date=2025-10-03 timestamp=2025-10-03T14:31:00+05:30 group=FIRST_ADD side=PE strike=24700 higher_value=102.65 target_band=20.53-30.80
+2026-05-05 14:35:08,296 INFO EXCEPTION_EXIT date=2025-10-03 expiry=2025-10-07 atm=24800 reason=no_valid_rebalance_candidate exit=2025-10-03T14:38:00+05:30 orders=12 gross=-2177.50 brokerage=300.00 net=-2477.50
+2026-05-05 14:35:08,424 INFO ADJUSTMENT date=2025-10-06 timestamp=2025-10-06T09:42:00+05:30 group=FIRST_ADD side=PE strike=24800 higher_value=80.20 target_band=16.04-24.06
+2026-05-05 14:35:08,425 INFO EXCEPTION_EXIT date=2025-10-06 expiry=2025-10-07 atm=24900 reason=no_valid_rebalance_candidate exit=2025-10-06T09:50:00+05:30 orders=6 gross=-1241.50 brokerage=150.00 net=-1391.50
+2026-05-05 14:35:08,623 INFO ADJUSTMENT date=2025-10-07 timestamp=2025-10-07T09:38:00+05:30 group=FIRST_ADD side=PE strike=25050 higher_value=61.00 target_band=12.20-18.30
+2026-05-05 14:35:08,624 INFO EXCEPTION_EXIT date=2025-10-07 expiry=2025-10-07 atm=25100 reason=no_valid_rebalance_candidate exit=2025-10-07T09:41:00+05:30 orders=6 gross=-461.50 brokerage=150.00 net=-611.50
+2026-05-05 14:35:10,059 INFO ADJUSTMENT date=2025-10-08 timestamp=2025-10-08T10:58:00+05:30 group=FIRST_ADD side=CE strike=25300 higher_value=150.80 target_band=30.16-45.24
+2026-05-05 14:35:10,060 INFO EXCEPTION_EXIT date=2025-10-08 expiry=2025-10-14 atm=25200 reason=no_valid_rebalance_candidate exit=2025-10-08T11:10:00+05:30 orders=6 gross=-3347.50 brokerage=150.00 net=-3497.50
+2026-05-05 14:35:11,635 INFO ADJUSTMENT date=2025-10-09 timestamp=2025-10-09T11:08:00+05:30 group=FIRST_ADD side=PE strike=25000 higher_value=134.45 target_band=26.89-40.33
+2026-05-05 14:35:11,636 INFO EXCEPTION_EXIT date=2025-10-09 expiry=2025-10-14 atm=25100 reason=no_valid_rebalance_candidate exit=2025-10-09T11:36:00+05:30 orders=6 gross=-1651.00 brokerage=150.00 net=-1801.00
+2026-05-05 14:35:11,703 INFO ADJUSTMENT date=2025-10-10 timestamp=2025-10-10T09:45:00+05:30 group=FIRST_ADD side=PE strike=25150 higher_value=119.05 target_band=23.81-35.71
+2026-05-05 14:35:11,703 INFO EXCEPTION_EXIT date=2025-10-10 expiry=2025-10-14 atm=25250 reason=no_valid_rebalance_candidate exit=2025-10-10T10:57:00+05:30 orders=6 gross=-4225.00 brokerage=150.00 net=-4375.00
+2026-05-05 14:35:11,706 INFO ADJUSTMENT date=2025-10-13 timestamp=2025-10-13T14:24:00+05:30 group=FIRST_ADD side=PE strike=25100 higher_value=83.25 target_band=16.65-24.97
+2026-05-05 14:35:11,706 INFO EXCEPTION_EXIT date=2025-10-13 expiry=2025-10-14 atm=25200 reason=no_valid_rebalance_candidate exit=2025-10-13T14:29:00+05:30 orders=6 gross=2970.50 brokerage=150.00 net=2820.50
+2026-05-05 14:35:11,749 INFO ADJUSTMENT date=2025-10-14 timestamp=2025-10-14T09:40:00+05:30 group=FIRST_ADD side=CE strike=25350 higher_value=72.25 target_band=14.45-21.68
+2026-05-05 14:35:11,749 INFO EXCEPTION_EXIT date=2025-10-14 expiry=2025-10-14 atm=25300 reason=no_valid_rebalance_candidate exit=2025-10-14T09:56:00+05:30 orders=6 gross=-2912.00 brokerage=150.00 net=-3062.00
+2026-05-05 14:35:13,321 INFO ADJUSTMENT date=2025-10-15 timestamp=2025-10-15T09:32:00+05:30 group=FIRST_ADD side=PE strike=25100 higher_value=163.90 target_band=32.78-49.17
+2026-05-05 14:35:13,322 INFO ADJUSTMENT date=2025-10-15 timestamp=2025-10-15T09:39:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25100 single_value=136.45 double_value=141.60
+2026-05-05 14:35:13,322 INFO ADJUSTMENT date=2025-10-15 timestamp=2025-10-15T10:22:00+05:30 group=FIRST_ADD side=PE strike=25100 higher_value=159.40 target_band=31.88-47.82
+2026-05-05 14:35:13,322 INFO EXCEPTION_EXIT date=2025-10-15 expiry=2025-10-20 atm=25250 reason=no_valid_rebalance_candidate exit=2025-10-15T10:54:00+05:30 orders=8 gross=-3321.50 brokerage=200.00 net=-3521.50
+2026-05-05 14:35:13,467 INFO ADJUSTMENT date=2025-10-16 timestamp=2025-10-16T09:31:00+05:30 group=FIRST_ADD side=PE strike=25300 higher_value=141.65 target_band=28.33-42.49
+2026-05-05 14:35:13,467 INFO EXCEPTION_EXIT date=2025-10-16 expiry=2025-10-20 atm=25400 reason=no_valid_rebalance_candidate exit=2025-10-16T12:14:00+05:30 orders=6 gross=-26.00 brokerage=150.00 net=-176.00
+2026-05-05 14:35:13,618 INFO ADJUSTMENT date=2025-10-17 timestamp=2025-10-17T10:07:00+05:30 group=FIRST_ADD side=PE strike=25450 higher_value=126.75 target_band=25.35-38.02
+2026-05-05 14:35:13,618 INFO EXCEPTION_EXIT date=2025-10-17 expiry=2025-10-20 atm=25600 reason=no_valid_rebalance_candidate exit=2025-10-17T10:32:00+05:30 orders=6 gross=-4725.50 brokerage=150.00 net=-4875.50
+2026-05-05 14:35:14,579 INFO ADJUSTMENT date=2025-10-20 timestamp=2025-10-20T09:43:00+05:30 group=FIRST_ADD side=CE strike=25950 higher_value=92.85 target_band=18.57-27.85
+2026-05-05 14:35:14,580 INFO EXCEPTION_EXIT date=2025-10-20 expiry=2025-10-20 atm=25900 reason=no_valid_rebalance_candidate exit=2025-10-20T09:47:00+05:30 orders=6 gross=-4946.50 brokerage=150.00 net=-5096.50
+2026-05-05 14:35:23,234 INFO ADJUSTMENT date=2025-10-23 timestamp=2025-10-23T09:31:00+05:30 group=FIRST_ADD side=PE strike=25900 higher_value=184.15 target_band=36.83-55.24
+2026-05-05 14:35:23,235 INFO ADJUSTMENT date=2025-10-23 timestamp=2025-10-23T13:35:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25900 single_value=134.35 double_value=137.80
+2026-05-05 14:35:23,235 INFO ADJUSTMENT date=2025-10-23 timestamp=2025-10-23T15:11:00+05:30 group=FIRST_ADD side=CE strike=26150 higher_value=159.95 target_band=31.99-47.98
+2026-05-05 14:35:23,235 INFO TRADED date=2025-10-23 expiry=2025-10-28 atm=26050 adjustments=3 orders=8 gross=3432.00 brokerage=200.00 net=3232.00
+2026-05-05 14:35:23,512 INFO ADJUSTMENT date=2025-10-24 timestamp=2025-10-24T09:39:00+05:30 group=FIRST_ADD side=PE strike=25750 higher_value=156.70 target_band=31.34-47.01
+2026-05-05 14:35:23,513 INFO ADJUSTMENT date=2025-10-24 timestamp=2025-10-24T09:51:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25750 single_value=125.80 double_value=140.60
+2026-05-05 14:35:23,513 INFO ADJUSTMENT date=2025-10-24 timestamp=2025-10-24T13:24:00+05:30 group=FIRST_ADD side=CE strike=26000 higher_value=135.10 target_band=27.02-40.53
+2026-05-05 14:35:23,513 INFO EXCEPTION_EXIT date=2025-10-24 expiry=2025-10-28 atm=25900 reason=no_valid_rebalance_candidate exit=2025-10-24T13:33:00+05:30 orders=8 gross=247.00 brokerage=200.00 net=47.00
+2026-05-05 14:35:23,515 INFO ADJUSTMENT date=2025-10-27 timestamp=2025-10-27T09:33:00+05:30 group=FIRST_ADD side=PE strike=25800 higher_value=111.60 target_band=22.32-33.48
+2026-05-05 14:35:23,516 INFO EXCEPTION_EXIT date=2025-10-27 expiry=2025-10-28 atm=25900 reason=no_valid_rebalance_candidate exit=2025-10-27T09:42:00+05:30 orders=6 gross=-4758.00 brokerage=150.00 net=-4908.00
+2026-05-05 14:35:23,518 INFO ADJUSTMENT date=2025-10-28 timestamp=2025-10-28T09:34:00+05:30 group=FIRST_ADD side=PE strike=25900 higher_value=97.10 target_band=19.42-29.13
+2026-05-05 14:35:23,518 INFO ADJUSTMENT date=2025-10-28 timestamp=2025-10-28T09:53:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25900 single_value=67.75 double_value=89.10
+2026-05-05 14:35:23,519 INFO ADJUSTMENT date=2025-10-28 timestamp=2025-10-28T10:05:00+05:30 group=FIRST_ADD side=CE strike=26050 higher_value=94.40 target_band=18.88-28.32
+2026-05-05 14:35:23,519 INFO EXCEPTION_EXIT date=2025-10-28 expiry=2025-10-28 atm=26000 reason=no_valid_rebalance_candidate exit=2025-10-28T10:08:00+05:30 orders=8 gross=-4251.00 brokerage=200.00 net=-4451.00
+2026-05-05 14:35:25,845 INFO ADJUSTMENT date=2025-10-29 timestamp=2025-10-29T10:28:00+05:30 group=FIRST_ADD side=PE strike=25800 higher_value=214.00 target_band=42.80-64.20
+2026-05-05 14:35:25,845 INFO EXCEPTION_EXIT date=2025-10-29 expiry=2025-11-04 atm=26000 reason=no_valid_rebalance_candidate exit=2025-10-29T12:31:00+05:30 orders=6 gross=-162.50 brokerage=150.00 net=-312.50
+2026-05-05 14:35:26,855 INFO ADJUSTMENT date=2025-10-30 timestamp=2025-10-30T13:35:00+05:30 group=FIRST_ADD side=CE strike=26150 higher_value=176.10 target_band=35.22-52.83
+2026-05-05 14:35:26,856 INFO ADJUSTMENT date=2025-10-30 timestamp=2025-10-30T14:22:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=26150 single_value=145.20 double_value=150.80
+2026-05-05 14:35:26,856 INFO TRADED date=2025-10-30 expiry=2025-11-04 atm=26000 adjustments=2 orders=6 gross=468.00 brokerage=150.00 net=318.00
+2026-05-05 14:35:26,940 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T09:33:00+05:30 group=FIRST_ADD side=PE strike=25750 higher_value=160.50 target_band=32.10-48.15
+2026-05-05 14:35:26,941 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T10:06:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25750 single_value=130.00 double_value=132.45
+2026-05-05 14:35:26,941 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T11:01:00+05:30 group=FIRST_ADD side=CE strike=26000 higher_value=156.15 target_band=31.23-46.84
+2026-05-05 14:35:26,941 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T11:54:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=26000 single_value=130.00 double_value=134.90
+2026-05-05 14:35:26,942 INFO ADJUSTMENT date=2025-10-31 timestamp=2025-10-31T12:25:00+05:30 group=FIRST_ADD side=CE strike=26050 higher_value=145.05 target_band=29.01-43.52
+2026-05-05 14:35:26,942 INFO TRADED date=2025-10-31 expiry=2025-11-04 atm=25900 adjustments=5 orders=10 gross=-253.50 brokerage=250.00 net=-503.50
+2026-05-05 14:35:26,987 INFO ADJUSTMENT date=2025-11-03 timestamp=2025-11-03T09:42:00+05:30 group=FIRST_ADD side=PE strike=25600 higher_value=127.05 target_band=25.41-38.11
+2026-05-05 14:35:26,988 INFO ADJUSTMENT date=2025-11-03 timestamp=2025-11-03T10:16:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25600 single_value=107.30 double_value=107.75
+2026-05-05 14:35:26,988 INFO ADJUSTMENT date=2025-11-03 timestamp=2025-11-03T10:30:00+05:30 group=FIRST_ADD side=PE strike=25600 higher_value=122.80 target_band=24.56-36.84
+2026-05-05 14:35:26,988 INFO EXCEPTION_EXIT date=2025-11-03 expiry=2025-11-04 atm=25700 reason=no_valid_rebalance_candidate exit=2025-11-03T10:39:00+05:30 orders=8 gross=-2704.00 brokerage=200.00 net=-2904.00
+2026-05-05 14:35:27,096 INFO ADJUSTMENT date=2025-11-04 timestamp=2025-11-04T09:31:00+05:30 group=FIRST_ADD side=CE strike=25800 higher_value=84.20 target_band=16.84-25.26
+2026-05-05 14:35:27,096 INFO EXCEPTION_EXIT date=2025-11-04 expiry=2025-11-04 atm=25750 reason=no_valid_rebalance_candidate exit=2025-11-04T09:48:00+05:30 orders=6 gross=-1462.50 brokerage=150.00 net=-1612.50
+2026-05-05 14:35:28,598 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T10:34:00+05:30 group=FIRST_ADD side=CE strike=25800 higher_value=170.55 target_band=34.11-51.16
+2026-05-05 14:35:28,598 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T11:05:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25800 single_value=139.75 double_value=143.30
+2026-05-05 14:35:28,599 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T11:24:00+05:30 group=FIRST_ADD side=CE strike=25800 higher_value=164.95 target_band=32.99-49.48
+2026-05-05 14:35:28,599 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T12:49:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25800 single_value=135.90 double_value=137.45
+2026-05-05 14:35:28,599 INFO ADJUSTMENT date=2025-11-06 timestamp=2025-11-06T13:49:00+05:30 group=FIRST_ADD side=CE strike=25750 higher_value=154.50 target_band=30.90-46.35
+2026-05-05 14:35:28,600 INFO TRADED date=2025-11-06 expiry=2025-11-11 atm=25650 adjustments=5 orders=10 gross=1631.50 brokerage=250.00 net=1381.50
+2026-05-05 14:35:29,989 INFO ADJUSTMENT date=2025-11-07 timestamp=2025-11-07T11:13:00+05:30 group=FIRST_ADD side=PE strike=25250 higher_value=136.40 target_band=27.28-40.92
+2026-05-05 14:35:29,989 INFO EXCEPTION_EXIT date=2025-11-07 expiry=2025-11-11 atm=25350 reason=no_valid_rebalance_candidate exit=2025-11-07T11:29:00+05:30 orders=6 gross=-741.00 brokerage=150.00 net=-891.00
+2026-05-05 14:35:30,168 INFO ADJUSTMENT date=2025-11-10 timestamp=2025-11-10T09:49:00+05:30 group=FIRST_ADD side=PE strike=25450 higher_value=104.05 target_band=20.81-31.21
+2026-05-05 14:35:30,168 INFO ADJUSTMENT date=2025-11-10 timestamp=2025-11-10T10:03:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25450 single_value=84.00 double_value=95.30
+2026-05-05 14:35:30,169 INFO ADJUSTMENT date=2025-11-10 timestamp=2025-11-10T10:16:00+05:30 group=FIRST_ADD side=PE strike=25450 higher_value=102.45 target_band=20.49-30.73
+2026-05-05 14:35:30,169 INFO EXCEPTION_EXIT date=2025-11-10 expiry=2025-11-11 atm=25550 reason=no_valid_rebalance_candidate exit=2025-11-10T10:24:00+05:30 orders=8 gross=-1222.00 brokerage=200.00 net=-1422.00
+2026-05-05 14:35:30,211 INFO ADJUSTMENT date=2025-11-11 timestamp=2025-11-11T09:34:00+05:30 group=FIRST_ADD side=CE strike=25600 higher_value=74.65 target_band=14.93-22.39
+2026-05-05 14:35:30,212 INFO ADJUSTMENT date=2025-11-11 timestamp=2025-11-11T09:42:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25600 single_value=63.50 double_value=70.45
+2026-05-05 14:35:30,212 INFO ADJUSTMENT date=2025-11-11 timestamp=2025-11-11T09:50:00+05:30 group=FIRST_ADD side=CE strike=25600 higher_value=76.75 target_band=15.35-23.02
+2026-05-05 14:35:30,212 INFO ADJUSTMENT date=2025-11-11 timestamp=2025-11-11T10:04:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25600 single_value=57.70 double_value=65.65
+2026-05-05 14:35:30,213 INFO ADJUSTMENT date=2025-11-11 timestamp=2025-11-11T10:07:00+05:30 group=FIRST_ADD side=CE strike=25600 higher_value=68.75 target_band=13.75-20.62
+2026-05-05 14:35:30,213 INFO ADJUSTMENT date=2025-11-11 timestamp=2025-11-11T10:10:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=25600 single_value=49.60 double_value=71.35
+2026-05-05 14:35:30,213 INFO ADJUSTMENT date=2025-11-11 timestamp=2025-11-11T10:15:00+05:30 group=FIRST_ADD side=CE strike=25600 higher_value=71.70 target_band=14.34-21.51
+2026-05-05 14:35:30,214 INFO EXCEPTION_EXIT date=2025-11-11 expiry=2025-11-11 atm=25550 reason=no_valid_rebalance_candidate exit=2025-11-11T10:25:00+05:30 orders=12 gross=-2470.00 brokerage=300.00 net=-2770.00
+2026-05-05 14:35:32,064 INFO ADJUSTMENT date=2025-11-12 timestamp=2025-11-12T09:47:00+05:30 group=FIRST_ADD side=PE strike=25600 higher_value=196.25 target_band=39.25-58.88
+2026-05-05 14:35:32,065 INFO EXCEPTION_EXIT date=2025-11-12 expiry=2025-11-18 atm=25800 reason=no_valid_rebalance_candidate exit=2025-11-12T12:31:00+05:30 orders=6 gross=-175.50 brokerage=150.00 net=-325.50
+2026-05-05 14:35:32,185 INFO ADJUSTMENT date=2025-11-13 timestamp=2025-11-13T10:50:00+05:30 group=FIRST_ADD side=PE strike=25750 higher_value=173.40 target_band=34.68-52.02
+2026-05-05 14:35:32,186 INFO ADJUSTMENT date=2025-11-13 timestamp=2025-11-13T14:01:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25750 single_value=151.40 double_value=165.70
+2026-05-05 14:35:32,186 INFO TRADED date=2025-11-13 expiry=2025-11-18 atm=25900 adjustments=2 orders=6 gross=-5284.50 brokerage=150.00 net=-5434.50
+2026-05-05 14:35:32,190 INFO ADJUSTMENT date=2025-11-14 timestamp=2025-11-14T09:33:00+05:30 group=FIRST_ADD side=PE strike=25650 higher_value=188.40 target_band=37.68-56.52
+2026-05-05 14:35:32,190 INFO ADJUSTMENT date=2025-11-14 timestamp=2025-11-14T09:53:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25650 single_value=154.00 double_value=157.90
+2026-05-05 14:35:32,191 INFO ADJUSTMENT date=2025-11-14 timestamp=2025-11-14T10:55:00+05:30 group=FIRST_ADD side=PE strike=25650 higher_value=176.95 target_band=35.39-53.08
+2026-05-05 14:35:32,191 INFO ADJUSTMENT date=2025-11-14 timestamp=2025-11-14T11:34:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25650 single_value=135.55 double_value=151.70
+2026-05-05 14:35:32,192 INFO ADJUSTMENT date=2025-11-14 timestamp=2025-11-14T12:13:00+05:30 group=FIRST_ADD side=PE strike=25700 higher_value=165.70 target_band=33.14-49.71
+2026-05-05 14:35:32,192 INFO ADJUSTMENT date=2025-11-14 timestamp=2025-11-14T12:35:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25700 single_value=140.25 double_value=147.60
+2026-05-05 14:35:32,192 INFO ADJUSTMENT date=2025-11-14 timestamp=2025-11-14T15:03:00+05:30 group=FIRST_ADD side=PE strike=25700 higher_value=157.85 target_band=31.57-47.35
+2026-05-05 14:35:32,192 INFO EXCEPTION_EXIT date=2025-11-14 expiry=2025-11-18 atm=25800 reason=no_valid_rebalance_candidate exit=2025-11-14T15:08:00+05:30 orders=12 gross=-1209.00 brokerage=300.00 net=-1509.00
+2026-05-05 14:35:32,274 INFO ADJUSTMENT date=2025-11-17 timestamp=2025-11-17T09:57:00+05:30 group=FIRST_ADD side=PE strike=25850 higher_value=114.35 target_band=22.87-34.30
+2026-05-05 14:35:32,274 INFO ADJUSTMENT date=2025-11-17 timestamp=2025-11-17T10:04:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25850 single_value=94.75 double_value=103.70
+2026-05-05 14:35:32,275 INFO ADJUSTMENT date=2025-11-17 timestamp=2025-11-17T11:58:00+05:30 group=FIRST_ADD side=PE strike=25850 higher_value=105.90 target_band=21.18-31.77
+2026-05-05 14:35:32,275 INFO EXCEPTION_EXIT date=2025-11-17 expiry=2025-11-18 atm=25950 reason=no_valid_rebalance_candidate exit=2025-11-17T14:05:00+05:30 orders=8 gross=429.00 brokerage=200.00 net=229.00
+2026-05-05 14:35:33,628 INFO ADJUSTMENT date=2025-11-18 timestamp=2025-11-18T09:54:00+05:30 group=FIRST_ADD side=CE strike=26000 higher_value=72.50 target_band=14.50-21.75
+2026-05-05 14:35:33,628 INFO EXCEPTION_EXIT date=2025-11-18 expiry=2025-11-18 atm=25950 reason=no_valid_rebalance_candidate exit=2025-11-18T10:33:00+05:30 orders=6 gross=-806.00 brokerage=150.00 net=-956.00
+2026-05-05 14:35:39,519 INFO ADJUSTMENT date=2025-11-19 timestamp=2025-11-19T10:23:00+05:30 group=FIRST_ADD side=PE strike=25700 higher_value=199.20 target_band=39.84-59.76
+2026-05-05 14:35:39,520 INFO ADJUSTMENT date=2025-11-19 timestamp=2025-11-19T11:11:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25700 single_value=166.70 double_value=173.30
+2026-05-05 14:35:39,520 INFO ADJUSTMENT date=2025-11-19 timestamp=2025-11-19T11:44:00+05:30 group=FIRST_ADD side=PE strike=25750 higher_value=195.50 target_band=39.10-58.65
+2026-05-05 14:35:39,521 INFO EXCEPTION_EXIT date=2025-11-19 expiry=2025-11-25 atm=25900 reason=no_valid_rebalance_candidate exit=2025-11-19T14:14:00+05:30 orders=8 gross=-3542.50 brokerage=200.00 net=-3742.50
+2026-05-05 14:35:40,080 INFO ADJUSTMENT date=2025-11-20 timestamp=2025-11-20T12:34:00+05:30 group=FIRST_ADD side=PE strike=25950 higher_value=173.45 target_band=34.69-52.03
+2026-05-05 14:35:40,081 INFO EXCEPTION_EXIT date=2025-11-20 expiry=2025-11-25 atm=26100 reason=no_valid_rebalance_candidate exit=2025-11-20T13:51:00+05:30 orders=6 gross=-2834.00 brokerage=150.00 net=-2984.00
+2026-05-05 14:35:40,213 INFO TRADED date=2025-11-21 expiry=2025-11-25 atm=26150 adjustments=0 orders=4 gross=1852.50 brokerage=100.00 net=1752.50
+2026-05-05 14:35:42,445 INFO ADJUSTMENT date=2025-11-24 timestamp=2025-11-24T10:24:00+05:30 group=FIRST_ADD side=PE strike=26000 higher_value=106.50 target_band=21.30-31.95
+2026-05-05 14:35:42,445 INFO ADJUSTMENT date=2025-11-24 timestamp=2025-11-24T11:02:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=26000 single_value=85.35 double_value=96.30
+2026-05-05 14:35:42,445 INFO ADJUSTMENT date=2025-11-24 timestamp=2025-11-24T11:33:00+05:30 group=FIRST_ADD side=PE strike=26000 higher_value=100.30 target_band=20.06-30.09
+2026-05-05 14:35:42,445 INFO ADJUSTMENT date=2025-11-24 timestamp=2025-11-24T11:48:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=26000 single_value=86.70 double_value=87.35
+2026-05-05 14:35:42,446 INFO ADJUSTMENT date=2025-11-24 timestamp=2025-11-24T14:20:00+05:30 group=FIRST_ADD side=CE strike=26150 higher_value=101.10 target_band=20.22-30.33
+2026-05-05 14:35:42,446 INFO EXCEPTION_EXIT date=2025-11-24 expiry=2025-11-25 atm=26100 reason=no_valid_rebalance_candidate exit=2025-11-24T15:05:00+05:30 orders=10 gross=-2203.50 brokerage=250.00 net=-2453.50
+2026-05-05 14:35:42,507 INFO ADJUSTMENT date=2025-11-25 timestamp=2025-11-25T09:55:00+05:30 group=FIRST_ADD side=PE strike=25900 higher_value=73.50 target_band=14.70-22.05
+2026-05-05 14:35:42,507 INFO EXCEPTION_EXIT date=2025-11-25 expiry=2025-11-25 atm=25950 reason=no_valid_rebalance_candidate exit=2025-11-25T10:10:00+05:30 orders=6 gross=-1612.00 brokerage=150.00 net=-1762.00
+2026-05-05 14:35:44,835 INFO ADJUSTMENT date=2025-11-26 timestamp=2025-11-26T09:46:00+05:30 group=FIRST_ADD side=PE strike=25850 higher_value=197.40 target_band=39.48-59.22
+2026-05-05 14:35:44,836 INFO EXCEPTION_EXIT date=2025-11-26 expiry=2025-12-02 atm=26000 reason=no_valid_rebalance_candidate exit=2025-11-26T10:46:00+05:30 orders=6 gross=-5258.50 brokerage=150.00 net=-5408.50
+2026-05-05 14:35:46,645 INFO ADJUSTMENT date=2025-11-27 timestamp=2025-11-27T13:12:00+05:30 group=FIRST_ADD side=CE strike=26400 higher_value=159.80 target_band=31.96-47.94
+2026-05-05 14:35:46,645 INFO EXCEPTION_EXIT date=2025-11-27 expiry=2025-12-02 atm=26300 reason=no_valid_rebalance_candidate exit=2025-11-27T13:27:00+05:30 orders=6 gross=-981.50 brokerage=150.00 net=-1131.50
+2026-05-05 14:35:46,742 INFO TRADED date=2025-11-28 expiry=2025-12-02 atm=26250 adjustments=0 orders=4 gross=3614.00 brokerage=100.00 net=3514.00
+2026-05-05 14:35:46,743 INFO EXCEPTION_EXIT date=2025-12-01 expiry=2025-12-02 atm=26300 reason=no_valid_first_add_candidate exit=2025-12-01T11:10:00+05:30 orders=4 gross=169.00 brokerage=100.00 net=69.00
+2026-05-05 14:35:46,886 INFO ADJUSTMENT date=2025-12-02 timestamp=2025-12-02T09:41:00+05:30 group=FIRST_ADD side=CE strike=26200 higher_value=69.35 target_band=13.87-20.80
+2026-05-05 14:35:46,887 INFO EXCEPTION_EXIT date=2025-12-02 expiry=2025-12-02 atm=26150 reason=no_valid_rebalance_candidate exit=2025-12-02T09:45:00+05:30 orders=6 gross=-1800.50 brokerage=150.00 net=-1950.50
+2026-05-05 14:35:48,931 INFO ADJUSTMENT date=2025-12-03 timestamp=2025-12-03T15:12:00+05:30 group=FIRST_ADD side=PE strike=25800 higher_value=173.25 target_band=34.65-51.98
+2026-05-05 14:35:48,932 INFO TRADED date=2025-12-03 expiry=2025-12-09 atm=25950 adjustments=1 orders=6 gross=1547.00 brokerage=150.00 net=1397.00
+2026-05-05 14:35:49,080 INFO ADJUSTMENT date=2025-12-04 timestamp=2025-12-04T10:22:00+05:30 group=FIRST_ADD side=PE strike=25850 higher_value=159.90 target_band=31.98-47.97
+2026-05-05 14:35:49,081 INFO EXCEPTION_EXIT date=2025-12-04 expiry=2025-12-09 atm=26000 reason=no_valid_rebalance_candidate exit=2025-12-04T10:37:00+05:30 orders=6 gross=-2145.00 brokerage=150.00 net=-2295.00
+2026-05-05 14:35:49,158 INFO ADJUSTMENT date=2025-12-05 timestamp=2025-12-05T10:05:00+05:30 group=FIRST_ADD side=PE strike=25950 higher_value=139.20 target_band=27.84-41.76
+2026-05-05 14:35:49,158 INFO EXCEPTION_EXIT date=2025-12-05 expiry=2025-12-09 atm=26050 reason=no_valid_rebalance_candidate exit=2025-12-05T10:17:00+05:30 orders=6 gross=-143.00 brokerage=150.00 net=-293.00
+2026-05-05 14:35:50,512 INFO EXCEPTION_EXIT date=2025-12-08 expiry=2025-12-09 atm=26150 reason=no_valid_first_add_candidate exit=2025-12-08T10:34:00+05:30 orders=4 gross=-253.50 brokerage=100.00 net=-353.50
+2026-05-05 14:35:50,688 INFO EXCEPTION_EXIT date=2025-12-09 expiry=2025-12-09 atm=25800 reason=no_valid_first_add_candidate exit=2025-12-09T09:49:00+05:30 orders=4 gross=-1631.50 brokerage=100.00 net=-1731.50
+2026-05-05 14:35:52,483 INFO ADJUSTMENT date=2025-12-10 timestamp=2025-12-10T12:37:00+05:30 group=FIRST_ADD side=CE strike=26050 higher_value=186.60 target_band=37.32-55.98
+2026-05-05 14:35:52,484 INFO ADJUSTMENT date=2025-12-10 timestamp=2025-12-10T13:20:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=26050 single_value=147.45 double_value=155.80
+2026-05-05 14:35:52,484 INFO ADJUSTMENT date=2025-12-10 timestamp=2025-12-10T14:03:00+05:30 group=FIRST_ADD side=CE strike=26050 higher_value=176.75 target_band=35.35-53.02
+2026-05-05 14:35:52,484 INFO TRADED date=2025-12-10 expiry=2025-12-16 atm=25900 adjustments=3 orders=8 gross=-3237.00 brokerage=200.00 net=-3437.00
+2026-05-05 14:35:53,957 INFO ADJUSTMENT date=2025-12-11 timestamp=2025-12-11T10:33:00+05:30 group=FIRST_ADD side=PE strike=25650 higher_value=161.60 target_band=32.32-48.48
+2026-05-05 14:35:53,958 INFO ADJUSTMENT date=2025-12-11 timestamp=2025-12-11T10:59:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25650 single_value=135.30 double_value=144.05
+2026-05-05 14:35:53,958 INFO ADJUSTMENT date=2025-12-11 timestamp=2025-12-11T11:53:00+05:30 group=FIRST_ADD side=PE strike=25650 higher_value=156.90 target_band=31.38-47.07
+2026-05-05 14:35:53,958 INFO EXCEPTION_EXIT date=2025-12-11 expiry=2025-12-16 atm=25800 reason=no_valid_rebalance_candidate exit=2025-12-11T12:05:00+05:30 orders=8 gross=-2652.00 brokerage=200.00 net=-2852.00
+2026-05-05 14:35:54,109 INFO ADJUSTMENT date=2025-12-12 timestamp=2025-12-12T14:05:00+05:30 group=FIRST_ADD side=PE strike=25900 higher_value=119.60 target_band=23.92-35.88
+2026-05-05 14:35:54,110 INFO TRADED date=2025-12-12 expiry=2025-12-16 atm=26000 adjustments=1 orders=6 gross=3315.00 brokerage=150.00 net=3165.00
+2026-05-05 14:35:54,111 INFO ADJUSTMENT date=2025-12-15 timestamp=2025-12-15T09:59:00+05:30 group=FIRST_ADD side=PE strike=25800 higher_value=102.35 target_band=20.47-30.70
+2026-05-05 14:35:54,112 INFO EXCEPTION_EXIT date=2025-12-15 expiry=2025-12-16 atm=25900 reason=no_valid_rebalance_candidate exit=2025-12-15T10:30:00+05:30 orders=6 gross=513.50 brokerage=150.00 net=363.50
+2026-05-05 14:35:54,114 INFO ADJUSTMENT date=2025-12-16 timestamp=2025-12-16T09:42:00+05:30 group=FIRST_ADD side=PE strike=25850 higher_value=65.90 target_band=13.18-19.77
+2026-05-05 14:35:54,114 INFO ADJUSTMENT date=2025-12-16 timestamp=2025-12-16T09:59:00+05:30 group=REVERSAL_EXIT exited_side=PE exited_strike=25850 single_value=49.00 double_value=62.45
+2026-05-05 14:35:54,115 INFO EXCEPTION_EXIT date=2025-12-16 expiry=2025-12-16 atm=25900 reason=no_valid_first_add_candidate exit=2025-12-16T13:46:00+05:30 orders=6 gross=4407.00 brokerage=150.00 net=4257.00
+2026-05-05 14:35:54,251 INFO TRADED date=2025-12-17 expiry=2025-12-23 atm=25900 adjustments=0 orders=4 gross=1937.00 brokerage=100.00 net=1837.00
+2026-05-05 14:35:55,680 INFO ADJUSTMENT date=2025-12-18 timestamp=2025-12-18T10:24:00+05:30 group=FIRST_ADD side=PE strike=25700 higher_value=156.30 target_band=31.26-46.89
+2026-05-05 14:35:55,680 INFO EXCEPTION_EXIT date=2025-12-18 expiry=2025-12-23 atm=25800 reason=no_valid_rebalance_candidate exit=2025-12-18T12:12:00+05:30 orders=6 gross=-929.50 brokerage=150.00 net=-1079.50
+2026-05-05 14:35:55,768 INFO TRADED date=2025-12-19 expiry=2025-12-23 atm=25950 adjustments=0 orders=4 gross=3510.00 brokerage=100.00 net=3410.00
+2026-05-05 14:35:55,853 INFO TRADED date=2025-12-22 expiry=2025-12-23 atm=26150 adjustments=0 orders=4 gross=2899.00 brokerage=100.00 net=2799.00
+2026-05-05 14:35:57,522 INFO ADJUSTMENT date=2025-12-23 timestamp=2025-12-23T09:44:00+05:30 group=FIRST_ADD side=CE strike=26200 higher_value=59.55 target_band=11.91-17.86
+2026-05-05 14:35:57,522 INFO ADJUSTMENT date=2025-12-23 timestamp=2025-12-23T09:49:00+05:30 group=REVERSAL_EXIT exited_side=CE exited_strike=26200 single_value=46.85 double_value=49.10
+2026-05-05 14:35:57,522 INFO ADJUSTMENT date=2025-12-23 timestamp=2025-12-23T10:02:00+05:30 group=FIRST_ADD side=PE strike=26100 higher_value=56.40 target_band=11.28-16.92
+2026-05-05 14:35:57,523 INFO EXCEPTION_EXIT date=2025-12-23 expiry=2025-12-23 atm=26150 reason=no_valid_rebalance_candidate exit=2025-12-23T10:12:00+05:30 orders=8 gross=-695.50 brokerage=200.00 net=-895.50
+2026-05-05 14:35:57,855 INFO TRADED date=2025-12-24 expiry=2025-12-30 atm=26200 adjustments=0 orders=4 gross=4239.30 brokerage=100.00 net=4139.30
+2026-05-05 14:36:01,888 INFO EXCEPTION_EXIT date=2025-12-26 expiry=2025-12-30 atm=26150 reason=no_valid_first_add_candidate exit=2025-12-26T09:44:00+05:30 orders=4 gross=-1014.00 brokerage=100.00 net=-1114.00
+2026-05-05 14:36:13,536 INFO EXCEPTION_EXIT date=2025-12-29 expiry=2025-12-30 atm=26050 reason=no_valid_first_add_candidate exit=2025-12-29T09:34:00+05:30 orders=4 gross=-850.20 brokerage=100.00 net=-950.20
+2026-05-05 14:36:13,715 INFO ADJUSTMENT date=2025-12-30 timestamp=2025-12-30T09:40:00+05:30 group=FIRST_ADD side=PE strike=25850 higher_value=59.10 target_band=11.82-17.73
+2026-05-05 14:36:13,715 INFO EXCEPTION_EXIT date=2025-12-30 expiry=2025-12-30 atm=25900 reason=no_valid_rebalance_candidate exit=2025-12-30T09:44:00+05:30 orders=6 gross=-2853.50 brokerage=150.00 net=-3003.50
+2026-05-05 14:36:13,716 INFO SKIPPED date=2025-12-31 reason=no_same_or_next_weekly_expiry
+2026-05-05 14:36:13,716 INFO COMPLETED candidate_days=248 traded=79 skipped=1 exception_exits=168 total_adjustments=121
