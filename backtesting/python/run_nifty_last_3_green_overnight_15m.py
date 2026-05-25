@@ -39,6 +39,7 @@ class TradeResult:
     entry_date: str
     status: str
     skip_reason: str
+    direction: str
     next_trading_day: str
     candle_1_timestamp: str
     candle_1_open: str
@@ -67,6 +68,8 @@ class AggregateResult:
     days: str
     trades: str
     skipped: str
+    long_trades: str
+    short_trades: str
     winning_trades: str
     losing_trades: str
     break_even_trades: str
@@ -89,8 +92,8 @@ def parse_args() -> argparse.Namespace:
     repo_root = Path(__file__).resolve().parents[2]
     parser = argparse.ArgumentParser(
         description=(
-            "Backtest a NIFTY spot overnight long strategy when the final three "
-            "15-minute candles are green."
+            "Backtest a NIFTY spot overnight strategy that buys after three green "
+            "final 15-minute candles and sells after three red final candles."
         ),
     )
     parser.add_argument(
@@ -211,6 +214,7 @@ def empty_result(entry_date: str, status: str, skip_reason: str, remarks: str = 
         entry_date=entry_date,
         status=status,
         skip_reason=skip_reason,
+        direction="",
         next_trading_day="",
         candle_1_timestamp="",
         candle_1_open="",
@@ -300,8 +304,12 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
                 candle_rows,
             )
             colors = [candle_color(row) for row in candle_rows]
-            if colors != ["GREEN", "GREEN", "GREEN"]:
-                result.skip_reason = "last_3_candles_not_all_green"
+            if colors == ["GREEN", "GREEN", "GREEN"]:
+                result.direction = "LONG"
+            elif colors == ["RED", "RED", "RED"]:
+                result.direction = "SHORT"
+            else:
+                result.skip_reason = "last_3_candles_not_same_direction"
                 result.remarks = f"Signal candle colors were {', '.join(colors)}."
                 results.append(result)
                 logger.info("SKIPPED date=%s reason=%s colors=%s", entry_date, result.skip_reason, ",".join(colors))
@@ -329,7 +337,10 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
                 continue
 
             entry_row = candle_rows[-1]
-            points_pnl = exit_row.open_value - entry_row.close_value
+            if result.direction == "LONG":
+                points_pnl = exit_row.open_value - entry_row.close_value
+            else:
+                points_pnl = entry_row.close_value - exit_row.open_value
             rupees_pnl = points_pnl * args.rupees_per_point
             result.status = "TRADED"
             result.skip_reason = ""
@@ -339,8 +350,9 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
             result.remarks = ""
             results.append(result)
             logger.info(
-                "TRADED date=%s next=%s entry=%s exit=%s points=%s rupees=%s",
+                "TRADED date=%s direction=%s next=%s entry=%s exit=%s points=%s rupees=%s",
                 entry_date,
+                result.direction,
                 next_trading_day,
                 result.entry_price_points,
                 result.exit_open_points,
@@ -362,6 +374,7 @@ def write_daywise_csv(results: List[TradeResult], output_path: Path) -> None:
         "entry_date",
         "status",
         "skip_reason",
+        "direction",
         "next_trading_day",
         "candle_1_timestamp",
         "candle_1_open",
@@ -435,6 +448,8 @@ def aggregate_results(period: str, results: List[TradeResult], rupees_per_point:
     winning_trades = sum(1 for value in point_values if value > 0)
     losing_trades = sum(1 for value in point_values if value < 0)
     break_even_trades = sum(1 for value in point_values if value == 0)
+    long_trades = sum(1 for result in traded_results if result.direction == "LONG")
+    short_trades = sum(1 for result in traded_results if result.direction == "SHORT")
     max_profit = max(traded_results, key=lambda result: float(result.points_pnl), default=None)
     max_loss = min(traded_results, key=lambda result: float(result.points_pnl), default=None)
     max_consecutive_wins, max_consecutive_losses = compute_max_consecutive_streaks(point_values)
@@ -445,6 +460,8 @@ def aggregate_results(period: str, results: List[TradeResult], rupees_per_point:
         days=str(len(results)),
         trades=str(len(traded_results)),
         skipped=str(len(skipped_results)),
+        long_trades=str(long_trades),
+        short_trades=str(short_trades),
         winning_trades=str(winning_trades),
         losing_trades=str(losing_trades),
         break_even_trades=str(break_even_trades),
@@ -482,6 +499,8 @@ def write_aggregate_csv(results: List[AggregateResult], output_path: Path) -> No
         "days",
         "trades",
         "skipped",
+        "long_trades",
+        "short_trades",
         "winning_trades",
         "losing_trades",
         "break_even_trades",
@@ -508,8 +527,8 @@ def write_aggregate_csv(results: List[AggregateResult], output_path: Path) -> No
 
 def aggregate_table_lines(rows: List[AggregateResult]) -> List[str]:
     lines = [
-        "| Period | Days | Trades | Skipped | Wins | Losses | BE | Points | Rupees | Avg Points | Max Profit | Max Loss | Win Streak | Loss Streak | Max DD Points | Max DD Rupees |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Period | Days | Trades | Skipped | Long | Short | Wins | Losses | BE | Points | Rupees | Avg Points | Max Profit | Max Loss | Win Streak | Loss Streak | Max DD Points | Max DD Rupees |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for row in rows:
         lines.append(
@@ -518,6 +537,8 @@ def aggregate_table_lines(rows: List[AggregateResult]) -> List[str]:
             f"{row.days} | "
             f"{row.trades} | "
             f"{row.skipped} | "
+            f"{row.long_trades} | "
+            f"{row.short_trades} | "
             f"{row.winning_trades} | "
             f"{row.losing_trades} | "
             f"{row.break_even_trades} | "
@@ -545,7 +566,7 @@ def exception_lines(results: List[TradeResult]) -> List[str]:
     exceptions = [
         result
         for result in results
-        if result.status == "SKIPPED" and result.skip_reason != "last_3_candles_not_all_green"
+        if result.status == "SKIPPED" and result.skip_reason != "last_3_candles_not_same_direction"
     ]
     if not exceptions:
         return ["- None"]
@@ -565,16 +586,17 @@ def write_summary(
     entry_time = SIGNAL_CANDLE_TIMES[-1]
 
     lines: List[str] = [
-        "# NIFTY Last 3 Green Candles Overnight Backtest",
+        "# NIFTY Last 3 Same-Color Candles Overnight Backtest",
         "",
         "## Strategy Details",
         "",
         f"- Dataset: `{args.spot_file}`",
         f"- Tested date range: `{first_date}` through `{last_date}`",
         "- Signal source: NIFTY 15-minute candles",
-        "- Signal rule: the `14:45`, `15:00`, and `15:15` candles must all close above their opens",
-        f"- Entry rule: buy NIFTY at the `{entry_time}` candle close",
-        f"- Exit rule: sell NIFTY at the next trading day `{args.exit_time}` open",
+        "- Long signal: the `14:45`, `15:00`, and `15:15` candles must all close above their opens",
+        "- Short signal: the `14:45`, `15:00`, and `15:15` candles must all close below their opens",
+        f"- Entry rule: long or short NIFTY at the `{entry_time}` candle close",
+        f"- Exit rule: close the trade at the next trading day `{args.exit_time}` open",
         f"- Rupee conversion: 1 point = Rs {format_number(args.rupees_per_point)}",
         "- No brokerage, slippage, lots, or option data are used.",
         "",
