@@ -1,0 +1,254 @@
+# 2025 100-Point Gap ATM Option 09:16 Backtest
+
+## Strategy Details
+
+- Gap check time: `09:15`
+- Entry time: `09:16` option open
+- Exit time: `09:25` option open
+- Gap rule: compare NIFTY gap-time open with the previous trading day's last close
+- Gap-up rule: if gap is at least `100.00` points, buy ATM CE
+- Gap-down rule: if gap is at most `-100.00` points, buy ATM PE
+- Non-qualifying gap days are skipped
+- ATM rule: nearest 50 using NIFTY entry-time open
+- Expiry rule: first expiry folder on or after the trade date
+- Pricing rule: option open at exact entry and exit timestamps
+- Contract multiplier: 65 x 4 = 260 rupees per option point
+- Slippage: 1.00 point per order, 2.00 points per trade round trip
+- Brokerage: Rs 25.00 per order, Rs 50.00 per completed trade
+
+## Results Summary
+
+- Total traded days: `43`
+- Total skipped days: `206`
+- CE trades: `25`
+- PE trades: `18`
+- Winning trades: `21`
+- Losing trades: `22`
+- Raw Profit/Loss before costs: `18813.60`
+- Slippage loss: `22360.00`
+- Brokerage: `2150.00`
+- Net Profit/Loss: `-5696.40`
+- Max profit trade: `2025-05-12` `CE` with net P/L `10077.00`
+- Max loss trade: `2025-04-08` `CE` with net P/L `-12218.00`
+
+## Output Files
+
+- Daywise file: `gap_100_atm_option_0916_2025_daywise.csv`
+- Trades file: `gap_100_atm_option_0916_2025_trades.csv`
+- Log file: `gap_100_atm_option_0916_2025.log`
+
+## Exceptions
+
+- `2025-01-01`: `no_previous_close`. No previous trading day close exists in the dataset.
+- `2025-01-02`: `gap_below_threshold`. Absolute gap 24.30 is below 100.00 points.
+- `2025-01-03`: `gap_below_threshold`. Absolute gap 28.45 is below 100.00 points.
+- `2025-01-06`: `gap_below_threshold`. Absolute gap 55.65 is below 100.00 points.
+- `2025-01-07`: `gap_below_threshold`. Absolute gap 50.30 is below 100.00 points.
+- `2025-01-08`: `gap_below_threshold`. Absolute gap 52.05 is below 100.00 points.
+- `2025-01-09`: `gap_below_threshold`. Absolute gap 0.45 is below 100.00 points.
+- `2025-01-10`: `gap_below_threshold`. Absolute gap 5.30 is below 100.00 points.
+- `2025-01-14`: `gap_below_threshold`. Absolute gap 77.20 is below 100.00 points.
+- `2025-01-15`: `gap_below_threshold`. Absolute gap 43.60 is below 100.00 points.
+- `2025-01-17`: `gap_below_threshold`. Absolute gap 73.70 is below 100.00 points.
+- `2025-01-20`: `gap_below_threshold`. Absolute gap 87.30 is below 100.00 points.
+- `2025-01-21`: `gap_below_threshold`. Absolute gap 84.60 is below 100.00 points.
+- `2025-01-22`: `gap_below_threshold`. Absolute gap 46.10 is below 100.00 points.
+- `2025-01-23`: `gap_below_threshold`. Absolute gap 33.45 is below 100.00 points.
+- `2025-01-24`: `gap_below_threshold`. Absolute gap 32.40 is below 100.00 points.
+- `2025-01-29`: `gap_below_threshold`. Absolute gap 50.45 is below 100.00 points.
+- `2025-01-30`: `gap_below_threshold`. Absolute gap 6.70 is below 100.00 points.
+- `2025-01-31`: `gap_below_threshold`. Absolute gap 1.20 is below 100.00 points.
+- `2025-02-01`: `gap_below_threshold`. Absolute gap 5.25 is below 100.00 points.
+- `2025-02-05`: `gap_below_threshold`. Absolute gap 94.05 is below 100.00 points.
+- `2025-02-06`: `gap_below_threshold`. Absolute gap 75.20 is below 100.00 points.
+- `2025-02-07`: `gap_below_threshold`. Absolute gap 21.45 is below 100.00 points.
+- `2025-02-10`: `gap_below_threshold`. Absolute gap 19.35 is below 100.00 points.
+- `2025-02-11`: `gap_below_threshold`. Absolute gap 7.50 is below 100.00 points.
+- `2025-02-12`: `gap_below_threshold`. Absolute gap 19.70 is below 100.00 points.
+- `2025-02-13`: `gap_below_threshold`. Absolute gap 2.05 is below 100.00 points.
+- `2025-02-14`: `gap_below_threshold`. Absolute gap 77.05 is below 100.00 points.
+- `2025-02-17`: `gap_below_threshold`. Absolute gap 87.35 is below 100.00 points.
+- `2025-02-18`: `gap_below_threshold`. Absolute gap 0.15 is below 100.00 points.
+- `2025-02-19`: `gap_below_threshold`. Absolute gap 75.90 is below 100.00 points.
+- `2025-02-20`: `gap_below_threshold`. Absolute gap 93.30 is below 100.00 points.
+- `2025-02-21`: `gap_below_threshold`. Absolute gap 49.05 is below 100.00 points.
+- `2025-02-25`: `gap_below_threshold`. Absolute gap 32.40 is below 100.00 points.
+- `2025-02-27`: `gap_below_threshold`. Absolute gap 42.65 is below 100.00 points.
+- `2025-02-28`: `gap_below_threshold`. Absolute gap 77.45 is below 100.00 points.
+- `2025-03-03`: `gap_below_threshold`. Absolute gap 67.15 is below 100.00 points.
+- `2025-03-05`: `gap_below_threshold`. Absolute gap 7.25 is below 100.00 points.
+- `2025-03-07`: `gap_below_threshold`. Absolute gap 20.55 is below 100.00 points.
+- `2025-03-10`: `gap_below_threshold`. Absolute gap 15.10 is below 100.00 points.
+- `2025-03-11`: `gap_below_threshold`. Absolute gap 95.15 is below 100.00 points.
+- `2025-03-12`: `gap_below_threshold`. Absolute gap 15.85 is below 100.00 points.
+- `2025-03-13`: `gap_below_threshold`. Absolute gap 73.00 is below 100.00 points.
+- `2025-03-17`: `gap_below_threshold`. Absolute gap 30.15 is below 100.00 points.
+- `2025-03-19`: `gap_below_threshold`. Absolute gap 26.20 is below 100.00 points.
+- `2025-03-21`: `gap_below_threshold`. Absolute gap 2.55 is below 100.00 points.
+- `2025-03-25`: `gap_below_threshold`. Absolute gap 77.35 is below 100.00 points.
+- `2025-03-26`: `gap_below_threshold`. Absolute gap 95.00 is below 100.00 points.
+- `2025-03-27`: `gap_below_threshold`. Absolute gap 30.35 is below 100.00 points.
+- `2025-03-28`: `gap_below_threshold`. Absolute gap 0.65 is below 100.00 points.
+- `2025-04-02`: `gap_below_threshold`. Absolute gap 12.90 is below 100.00 points.
+- `2025-04-04`: `gap_below_threshold`. Absolute gap 51.20 is below 100.00 points.
+- `2025-04-09`: `gap_below_threshold`. Absolute gap 86.90 is below 100.00 points.
+- `2025-04-16`: `gap_below_threshold`. Absolute gap 0.00 is below 100.00 points.
+- `2025-04-17`: `gap_below_threshold`. Absolute gap 31.45 is below 100.00 points.
+- `2025-04-22`: `gap_below_threshold`. Absolute gap 64.20 is below 100.00 points.
+- `2025-04-24`: `gap_below_threshold`. Absolute gap 22.95 is below 100.00 points.
+- `2025-04-25`: `gap_below_threshold`. Absolute gap 43.95 is below 100.00 points.
+- `2025-04-28`: `gap_below_threshold`. Absolute gap 78.60 is below 100.00 points.
+- `2025-04-29`: `gap_below_threshold`. Absolute gap 57.80 is below 100.00 points.
+- `2025-04-30`: `gap_below_threshold`. Absolute gap 16.60 is below 100.00 points.
+- `2025-05-02`: `gap_below_threshold`. Absolute gap 65.65 is below 100.00 points.
+- `2025-05-06`: `gap_below_threshold`. Absolute gap 41.25 is below 100.00 points.
+- `2025-05-08`: `gap_below_threshold`. Absolute gap 22.20 is below 100.00 points.
+- `2025-05-13`: `gap_below_threshold`. Absolute gap 56.20 is below 100.00 points.
+- `2025-05-14`: `gap_below_threshold`. Absolute gap 20.15 is below 100.00 points.
+- `2025-05-15`: `gap_below_threshold`. Absolute gap 8.70 is below 100.00 points.
+- `2025-05-16`: `gap_below_threshold`. Absolute gap 29.35 is below 100.00 points.
+- `2025-05-19`: `gap_below_threshold`. Absolute gap 7.75 is below 100.00 points.
+- `2025-05-20`: `gap_below_threshold`. Absolute gap 60.85 is below 100.00 points.
+- `2025-05-21`: `gap_below_threshold`. Absolute gap 30.40 is below 100.00 points.
+- `2025-05-22`: `gap_below_threshold`. Absolute gap 67.00 is below 100.00 points.
+- `2025-05-23`: `gap_below_threshold`. Absolute gap 2.50 is below 100.00 points.
+- `2025-05-26`: `gap_below_threshold`. Absolute gap 74.20 is below 100.00 points.
+- `2025-05-27`: `gap_below_threshold`. Absolute gap 39.70 is below 100.00 points.
+- `2025-05-28`: `gap_below_threshold`. Absolute gap 5.20 is below 100.00 points.
+- `2025-05-29`: `gap_below_threshold`. Absolute gap 67.95 is below 100.00 points.
+- `2025-05-30`: `gap_below_threshold`. Absolute gap 68.25 is below 100.00 points.
+- `2025-06-02`: `gap_below_threshold`. Absolute gap 66.95 is below 100.00 points.
+- `2025-06-03`: `gap_below_threshold`. Absolute gap 95.95 is below 100.00 points.
+- `2025-06-04`: `gap_below_threshold`. Absolute gap 22.05 is below 100.00 points.
+- `2025-06-05`: `gap_below_threshold`. Absolute gap 79.20 is below 100.00 points.
+- `2025-06-06`: `gap_below_threshold`. Absolute gap 12.40 is below 100.00 points.
+- `2025-06-10`: `gap_below_threshold`. Absolute gap 92.95 is below 100.00 points.
+- `2025-06-11`: `gap_below_threshold`. Absolute gap 42.65 is below 100.00 points.
+- `2025-06-12`: `gap_below_threshold`. Absolute gap 37.65 is below 100.00 points.
+- `2025-06-16`: `gap_below_threshold`. Absolute gap 3.20 is below 100.00 points.
+- `2025-06-17`: `gap_below_threshold`. Absolute gap 36.90 is below 100.00 points.
+- `2025-06-18`: `gap_below_threshold`. Absolute gap 53.15 is below 100.00 points.
+- `2025-06-19`: `gap_below_threshold`. Absolute gap 4.50 is below 100.00 points.
+- `2025-06-20`: `gap_below_threshold`. Absolute gap 42.95 is below 100.00 points.
+- `2025-06-25`: `gap_below_threshold`. Absolute gap 78.80 is below 100.00 points.
+- `2025-06-26`: `gap_below_threshold`. Absolute gap 32.60 is below 100.00 points.
+- `2025-06-27`: `gap_below_threshold`. Absolute gap 46.25 is below 100.00 points.
+- `2025-06-30`: `gap_below_threshold`. Absolute gap 29.20 is below 100.00 points.
+- `2025-07-01`: `gap_below_threshold`. Absolute gap 43.90 is below 100.00 points.
+- `2025-07-02`: `gap_below_threshold`. Absolute gap 55.30 is below 100.00 points.
+- `2025-07-03`: `gap_below_threshold`. Absolute gap 62.25 is below 100.00 points.
+- `2025-07-04`: `gap_below_threshold`. Absolute gap 31.45 is below 100.00 points.
+- `2025-07-07`: `gap_below_threshold`. Absolute gap 17.35 is below 100.00 points.
+- `2025-07-08`: `gap_below_threshold`. Absolute gap 27.10 is below 100.00 points.
+- `2025-07-09`: `gap_below_threshold`. Absolute gap 8.50 is below 100.00 points.
+- `2025-07-10`: `gap_below_threshold`. Absolute gap 47.00 is below 100.00 points.
+- `2025-07-11`: `gap_below_threshold`. Absolute gap 92.65 is below 100.00 points.
+- `2025-07-14`: `gap_below_threshold`. Absolute gap 8.95 is below 100.00 points.
+- `2025-07-15`: `gap_below_threshold`. Absolute gap 2.40 is below 100.00 points.
+- `2025-07-16`: `gap_below_threshold`. Absolute gap 23.05 is below 100.00 points.
+- `2025-07-17`: `gap_below_threshold`. Absolute gap 32.20 is below 100.00 points.
+- `2025-07-18`: `gap_below_threshold`. Absolute gap 0.95 is below 100.00 points.
+- `2025-07-21`: `gap_below_threshold`. Absolute gap 31.55 is below 100.00 points.
+- `2025-07-22`: `gap_below_threshold`. Absolute gap 73.35 is below 100.00 points.
+- `2025-07-23`: `gap_below_threshold`. Absolute gap 74.45 is below 100.00 points.
+- `2025-07-24`: `gap_below_threshold`. Absolute gap 34.10 is below 100.00 points.
+- `2025-07-25`: `gap_below_threshold`. Absolute gap 57.05 is below 100.00 points.
+- `2025-07-28`: `gap_below_threshold`. Absolute gap 49.75 is below 100.00 points.
+- `2025-07-29`: `gap_below_threshold`. Absolute gap 59.75 is below 100.00 points.
+- `2025-07-30`: `gap_below_threshold`. Absolute gap 60.00 is below 100.00 points.
+- `2025-08-01`: `gap_below_threshold`. Absolute gap 30.70 is below 100.00 points.
+- `2025-08-04`: `gap_below_threshold`. Absolute gap 23.90 is below 100.00 points.
+- `2025-08-05`: `gap_below_threshold`. Absolute gap 6.65 is below 100.00 points.
+- `2025-08-06`: `gap_below_threshold`. Absolute gap 8.15 is below 100.00 points.
+- `2025-08-08`: `gap_below_threshold`. Absolute gap 82.40 is below 100.00 points.
+- `2025-08-11`: `gap_below_threshold`. Absolute gap 20.65 is below 100.00 points.
+- `2025-08-12`: `gap_below_threshold`. Absolute gap 1.20 is below 100.00 points.
+- `2025-08-14`: `gap_below_threshold`. Absolute gap 23.15 is below 100.00 points.
+- `2025-08-19`: `gap_below_threshold`. Absolute gap 7.30 is below 100.00 points.
+- `2025-08-20`: `gap_below_threshold`. Absolute gap 23.90 is below 100.00 points.
+- `2025-08-21`: `gap_below_threshold`. Absolute gap 94.85 is below 100.00 points.
+- `2025-08-22`: `gap_below_threshold`. Absolute gap 12.80 is below 100.00 points.
+- `2025-08-25`: `gap_below_threshold`. Absolute gap 79.70 is below 100.00 points.
+- `2025-08-26`: `gap_below_threshold`. Absolute gap 79.05 is below 100.00 points.
+- `2025-08-28`: `gap_below_threshold`. Absolute gap 14.90 is below 100.00 points.
+- `2025-08-29`: `gap_below_threshold`. Absolute gap 66.40 is below 100.00 points.
+- `2025-09-01`: `gap_below_threshold`. Absolute gap 0.95 is below 100.00 points.
+- `2025-09-02`: `gap_below_threshold`. Absolute gap 28.70 is below 100.00 points.
+- `2025-09-03`: `gap_below_threshold`. Absolute gap 41.50 is below 100.00 points.
+- `2025-09-05`: `gap_below_threshold`. Absolute gap 79.05 is below 100.00 points.
+- `2025-09-08`: `gap_below_threshold`. Absolute gap 58.65 is below 100.00 points.
+- `2025-09-09`: `gap_below_threshold`. Absolute gap 72.90 is below 100.00 points.
+- `2025-09-11`: `gap_below_threshold`. Absolute gap 32.05 is below 100.00 points.
+- `2025-09-12`: `gap_below_threshold`. Absolute gap 66.35 is below 100.00 points.
+- `2025-09-15`: `gap_below_threshold`. Absolute gap 11.20 is below 100.00 points.
+- `2025-09-16`: `gap_below_threshold`. Absolute gap 3.90 is below 100.00 points.
+- `2025-09-17`: `gap_below_threshold`. Absolute gap 22.15 is below 100.00 points.
+- `2025-09-19`: `gap_below_threshold`. Absolute gap 10.55 is below 100.00 points.
+- `2025-09-23`: `gap_below_threshold`. Absolute gap 8.80 is below 100.00 points.
+- `2025-09-24`: `gap_below_threshold`. Absolute gap 77.05 is below 100.00 points.
+- `2025-09-25`: `gap_below_threshold`. Absolute gap 26.40 is below 100.00 points.
+- `2025-09-26`: `gap_below_threshold`. Absolute gap 86.00 is below 100.00 points.
+- `2025-09-29`: `gap_below_threshold`. Absolute gap 55.45 is below 100.00 points.
+- `2025-09-30`: `gap_below_threshold`. Absolute gap 14.40 is below 100.00 points.
+- `2025-10-01`: `gap_below_threshold`. Absolute gap 13.05 is below 100.00 points.
+- `2025-10-03`: `gap_below_threshold`. Absolute gap 93.85 is below 100.00 points.
+- `2025-10-06`: `gap_below_threshold`. Absolute gap 21.55 is below 100.00 points.
+- `2025-10-07`: `gap_below_threshold`. Absolute gap 12.75 is below 100.00 points.
+- `2025-10-08`: `gap_below_threshold`. Absolute gap 33.05 is below 100.00 points.
+- `2025-10-09`: `gap_below_threshold`. Absolute gap 50.50 is below 100.00 points.
+- `2025-10-10`: `gap_below_threshold`. Absolute gap 2.65 is below 100.00 points.
+- `2025-10-14`: `gap_below_threshold`. Absolute gap 40.40 is below 100.00 points.
+- `2025-10-15`: `gap_below_threshold`. Absolute gap 58.60 is below 100.00 points.
+- `2025-10-16`: `gap_below_threshold`. Absolute gap 67.15 is below 100.00 points.
+- `2025-10-17`: `gap_below_threshold`. Absolute gap 19.45 is below 100.00 points.
+- `2025-10-21`: `missing_spot_timestamp`. Missing spot gap timestamp 2025-10-21T09:15:00+05:30; Missing spot entry timestamp 2025-10-21T09:16:00+05:30; Missing spot exit timestamp 2025-10-21T09:25:00+05:30
+- `2025-10-24`: `gap_below_threshold`. Absolute gap 64.80 is below 100.00 points.
+- `2025-10-27`: `gap_below_threshold`. Absolute gap 45.75 is below 100.00 points.
+- `2025-10-28`: `gap_below_threshold`. Absolute gap 34.05 is below 100.00 points.
+- `2025-10-29`: `gap_below_threshold`. Absolute gap 16.60 is below 100.00 points.
+- `2025-10-30`: `gap_below_threshold`. Absolute gap 83.90 is below 100.00 points.
+- `2025-10-31`: `gap_below_threshold`. Absolute gap 27.40 is below 100.00 points.
+- `2025-11-03`: `gap_below_threshold`. Absolute gap 35.70 is below 100.00 points.
+- `2025-11-04`: `gap_below_threshold`. Absolute gap 29.55 is below 100.00 points.
+- `2025-11-06`: `gap_below_threshold`. Absolute gap 7.10 is below 100.00 points.
+- `2025-11-07`: `gap_below_threshold`. Absolute gap 86.15 is below 100.00 points.
+- `2025-11-10`: `gap_below_threshold`. Absolute gap 6.55 is below 100.00 points.
+- `2025-11-11`: `gap_below_threshold`. Absolute gap 42.75 is below 100.00 points.
+- `2025-11-13`: `gap_below_threshold`. Absolute gap 32.10 is below 100.00 points.
+- `2025-11-17`: `gap_below_threshold`. Absolute gap 31.40 is below 100.00 points.
+- `2025-11-18`: `gap_below_threshold`. Absolute gap 7.50 is below 100.00 points.
+- `2025-11-19`: `gap_below_threshold`. Absolute gap 23.40 is below 100.00 points.
+- `2025-11-20`: `gap_below_threshold`. Absolute gap 79.40 is below 100.00 points.
+- `2025-11-21`: `gap_below_threshold`. Absolute gap 87.85 is below 100.00 points.
+- `2025-11-24`: `gap_below_threshold`. Absolute gap 58.85 is below 100.00 points.
+- `2025-11-25`: `gap_below_threshold`. Absolute gap 55.15 is below 100.00 points.
+- `2025-11-26`: `gap_below_threshold`. Absolute gap 17.35 is below 100.00 points.
+- `2025-11-27`: `gap_below_threshold`. Absolute gap 57.75 is below 100.00 points.
+- `2025-11-28`: `gap_below_threshold`. Absolute gap 17.60 is below 100.00 points.
+- `2025-12-02`: `gap_below_threshold`. Absolute gap 88.00 is below 100.00 points.
+- `2025-12-03`: `gap_below_threshold`. Absolute gap 52.10 is below 100.00 points.
+- `2025-12-04`: `gap_below_threshold`. Absolute gap 3.25 is below 100.00 points.
+- `2025-12-05`: `gap_below_threshold`. Absolute gap 17.30 is below 100.00 points.
+- `2025-12-08`: `gap_below_threshold`. Absolute gap 16.85 is below 100.00 points.
+- `2025-12-09`: `gap_below_threshold`. Absolute gap 65.70 is below 100.00 points.
+- `2025-12-10`: `gap_below_threshold`. Absolute gap 22.30 is below 100.00 points.
+- `2025-12-11`: `gap_below_threshold`. Absolute gap 28.75 is below 100.00 points.
+- `2025-12-12`: `gap_below_threshold`. Absolute gap 72.80 is below 100.00 points.
+- `2025-12-16`: `gap_below_threshold`. Absolute gap 62.50 is below 100.00 points.
+- `2025-12-17`: `gap_below_threshold`. Absolute gap 51.05 is below 100.00 points.
+- `2025-12-18`: `gap_below_threshold`. Absolute gap 57.10 is below 100.00 points.
+- `2025-12-19`: `gap_below_threshold`. Absolute gap 95.85 is below 100.00 points.
+- `2025-12-22`: `gap_below_threshold`. Absolute gap 94.45 is below 100.00 points.
+- `2025-12-23`: `gap_below_threshold`. Absolute gap 42.45 is below 100.00 points.
+- `2025-12-24`: `gap_below_threshold`. Absolute gap 4.70 is below 100.00 points.
+- `2025-12-26`: `gap_below_threshold`. Absolute gap 20.40 is below 100.00 points.
+- `2025-12-29`: `gap_below_threshold`. Absolute gap 15.70 is below 100.00 points.
+- `2025-12-30`: `gap_below_threshold`. Absolute gap 8.90 is below 100.00 points.
+- `2025-12-31`: `gap_below_threshold`. Absolute gap 0.50 is below 100.00 points.
+
+## Remarks
+
+- The NIFTY spot file is the source of truth for trading days and previous-close detection.
+- Raw 1-minute option candles from `Options_2025` are used directly.
+- Slippage and brokerage are reported separately and deducted from net P/L.
+- Expiry folder dates are used as truth, which naturally handles non-Thursday expiry weeks.

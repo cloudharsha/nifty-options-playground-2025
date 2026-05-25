@@ -1,0 +1,250 @@
+2026-05-12 22:03:54,755 INFO SKIPPED date=2025-01-01 reason=no_previous_close
+2026-05-12 22:03:54,755 INFO SKIPPED date=2025-01-02 reason=gap_below_threshold gap=24.30
+2026-05-12 22:03:54,755 INFO SKIPPED date=2025-01-03 reason=gap_below_threshold gap=28.45
+2026-05-12 22:03:54,755 INFO SKIPPED date=2025-01-06 reason=gap_below_threshold gap=55.65
+2026-05-12 22:03:54,755 INFO SKIPPED date=2025-01-07 reason=gap_below_threshold gap=50.30
+2026-05-12 22:03:54,755 INFO SKIPPED date=2025-01-08 reason=gap_below_threshold gap=52.05
+2026-05-12 22:03:54,755 INFO SKIPPED date=2025-01-09 reason=gap_below_threshold gap=-0.45
+2026-05-12 22:03:54,756 INFO SKIPPED date=2025-01-10 reason=gap_below_threshold gap=-5.30
+2026-05-12 22:03:54,788 INFO TRADED date=2025-01-13 side=PE expiry=2025-01-16 strike=23200 raw=574.60 slippage=520.00 brokerage=50.00 net=4.60
+2026-05-12 22:03:54,788 INFO SKIPPED date=2025-01-14 reason=gap_below_threshold gap=77.20
+2026-05-12 22:03:54,788 INFO SKIPPED date=2025-01-15 reason=gap_below_threshold gap=43.60
+2026-05-12 22:03:54,802 INFO TRADED date=2025-01-16 side=CE expiry=2025-01-16 strike=23350 raw=-2428.40 slippage=520.00 brokerage=50.00 net=-2998.40
+2026-05-12 22:03:54,803 INFO SKIPPED date=2025-01-17 reason=gap_below_threshold gap=-73.70
+2026-05-12 22:03:54,803 INFO SKIPPED date=2025-01-20 reason=gap_below_threshold gap=87.30
+2026-05-12 22:03:54,803 INFO SKIPPED date=2025-01-21 reason=gap_below_threshold gap=84.60
+2026-05-12 22:03:54,803 INFO SKIPPED date=2025-01-22 reason=gap_below_threshold gap=46.10
+2026-05-12 22:03:54,803 INFO SKIPPED date=2025-01-23 reason=gap_below_threshold gap=-33.45
+2026-05-12 22:03:54,803 INFO SKIPPED date=2025-01-24 reason=gap_below_threshold gap=-32.40
+2026-05-12 22:03:54,855 INFO TRADED date=2025-01-27 side=PE expiry=2025-01-30 strike=22950 raw=-650.00 slippage=520.00 brokerage=50.00 net=-1220.00
+2026-05-12 22:03:54,883 INFO TRADED date=2025-01-28 side=CE expiry=2025-01-30 strike=22950 raw=2675.40 slippage=520.00 brokerage=50.00 net=2105.40
+2026-05-12 22:03:54,883 INFO SKIPPED date=2025-01-29 reason=gap_below_threshold gap=50.45
+2026-05-12 22:03:54,883 INFO SKIPPED date=2025-01-30 reason=gap_below_threshold gap=-6.70
+2026-05-12 22:03:54,883 INFO SKIPPED date=2025-01-31 reason=gap_below_threshold gap=-1.20
+2026-05-12 22:03:54,883 INFO SKIPPED date=2025-02-01 reason=gap_below_threshold gap=-5.25
+2026-05-12 22:03:54,907 INFO TRADED date=2025-02-03 side=PE expiry=2025-02-06 strike=23250 raw=1235.00 slippage=520.00 brokerage=50.00 net=665.00
+2026-05-12 22:03:54,940 INFO TRADED date=2025-02-04 side=CE expiry=2025-02-06 strike=23500 raw=6318.00 slippage=520.00 brokerage=50.00 net=5748.00
+2026-05-12 22:03:54,940 INFO SKIPPED date=2025-02-05 reason=gap_below_threshold gap=94.05
+2026-05-12 22:03:54,940 INFO SKIPPED date=2025-02-06 reason=gap_below_threshold gap=75.20
+2026-05-12 22:03:54,940 INFO SKIPPED date=2025-02-07 reason=gap_below_threshold gap=21.45
+2026-05-12 22:03:54,940 INFO SKIPPED date=2025-02-10 reason=gap_below_threshold gap=-19.35
+2026-05-12 22:03:54,940 INFO SKIPPED date=2025-02-11 reason=gap_below_threshold gap=7.50
+2026-05-12 22:03:54,941 INFO SKIPPED date=2025-02-12 reason=gap_below_threshold gap=-19.70
+2026-05-12 22:03:54,941 INFO SKIPPED date=2025-02-13 reason=gap_below_threshold gap=-2.05
+2026-05-12 22:03:54,941 INFO SKIPPED date=2025-02-14 reason=gap_below_threshold gap=77.05
+2026-05-12 22:03:54,941 INFO SKIPPED date=2025-02-17 reason=gap_below_threshold gap=-87.35
+2026-05-12 22:03:54,941 INFO SKIPPED date=2025-02-18 reason=gap_below_threshold gap=0.15
+2026-05-12 22:03:54,941 INFO SKIPPED date=2025-02-19 reason=gap_below_threshold gap=-75.90
+2026-05-12 22:03:54,941 INFO SKIPPED date=2025-02-20 reason=gap_below_threshold gap=-93.30
+2026-05-12 22:03:54,941 INFO SKIPPED date=2025-02-21 reason=gap_below_threshold gap=-49.05
+2026-05-12 22:03:54,991 INFO TRADED date=2025-02-24 side=PE expiry=2025-02-27 strike=22650 raw=4420.00 slippage=520.00 brokerage=50.00 net=3850.00
+2026-05-12 22:03:54,991 INFO SKIPPED date=2025-02-25 reason=gap_below_threshold gap=-32.40
+2026-05-12 22:03:54,991 INFO SKIPPED date=2025-02-27 reason=gap_below_threshold gap=42.65
+2026-05-12 22:03:54,991 INFO SKIPPED date=2025-02-28 reason=gap_below_threshold gap=-77.45
+2026-05-12 22:03:54,991 INFO SKIPPED date=2025-03-03 reason=gap_below_threshold gap=67.15
+2026-05-12 22:03:55,069 INFO TRADED date=2025-03-04 side=PE expiry=2025-03-06 strike=22000 raw=-4017.00 slippage=520.00 brokerage=50.00 net=-4587.00
+2026-05-12 22:03:55,069 INFO SKIPPED date=2025-03-05 reason=gap_below_threshold gap=-7.25
+2026-05-12 22:03:55,084 INFO TRADED date=2025-03-06 side=CE expiry=2025-03-06 strike=22450 raw=-6474.00 slippage=520.00 brokerage=50.00 net=-7044.00
+2026-05-12 22:03:55,084 INFO SKIPPED date=2025-03-07 reason=gap_below_threshold gap=-20.55
+2026-05-12 22:03:55,084 INFO SKIPPED date=2025-03-10 reason=gap_below_threshold gap=-15.10
+2026-05-12 22:03:55,084 INFO SKIPPED date=2025-03-11 reason=gap_below_threshold gap=-95.15
+2026-05-12 22:03:55,084 INFO SKIPPED date=2025-03-12 reason=gap_below_threshold gap=15.85
+2026-05-12 22:03:55,084 INFO SKIPPED date=2025-03-13 reason=gap_below_threshold gap=73.00
+2026-05-12 22:03:55,084 INFO SKIPPED date=2025-03-17 reason=gap_below_threshold gap=-30.15
+2026-05-12 22:03:55,107 INFO TRADED date=2025-03-18 side=CE expiry=2025-03-20 strike=22600 raw=9815.00 slippage=520.00 brokerage=50.00 net=9245.00
+2026-05-12 22:03:55,107 INFO SKIPPED date=2025-03-19 reason=gap_below_threshold gap=26.20
+2026-05-12 22:03:55,139 INFO TRADED date=2025-03-20 side=CE expiry=2025-03-20 strike=23000 raw=8554.00 slippage=520.00 brokerage=50.00 net=7984.00
+2026-05-12 22:03:55,139 INFO SKIPPED date=2025-03-21 reason=gap_below_threshold gap=2.55
+2026-05-12 22:03:55,229 INFO TRADED date=2025-03-24 side=CE expiry=2025-03-27 strike=23500 raw=4563.00 slippage=520.00 brokerage=50.00 net=3993.00
+2026-05-12 22:03:55,229 INFO SKIPPED date=2025-03-25 reason=gap_below_threshold gap=77.35
+2026-05-12 22:03:55,229 INFO SKIPPED date=2025-03-26 reason=gap_below_threshold gap=95.00
+2026-05-12 22:03:55,229 INFO SKIPPED date=2025-03-27 reason=gap_below_threshold gap=-30.35
+2026-05-12 22:03:55,230 INFO SKIPPED date=2025-03-28 reason=gap_below_threshold gap=-0.65
+2026-05-12 22:03:55,250 INFO TRADED date=2025-04-01 side=PE expiry=2025-04-03 strike=23400 raw=-1599.00 slippage=520.00 brokerage=50.00 net=-2169.00
+2026-05-12 22:03:55,250 INFO SKIPPED date=2025-04-02 reason=gap_below_threshold gap=12.90
+2026-05-12 22:03:55,270 INFO TRADED date=2025-04-03 side=PE expiry=2025-04-03 strike=23200 raw=-8424.00 slippage=520.00 brokerage=50.00 net=-8994.00
+2026-05-12 22:03:55,270 INFO SKIPPED date=2025-04-04 reason=gap_below_threshold gap=-51.20
+2026-05-12 22:03:55,336 INFO TRADED date=2025-04-07 side=PE expiry=2025-04-09 strike=22050 raw=3744.00 slippage=520.00 brokerage=50.00 net=3174.00
+2026-05-12 22:03:55,351 INFO TRADED date=2025-04-08 side=CE expiry=2025-04-09 strike=22550 raw=-11648.00 slippage=520.00 brokerage=50.00 net=-12218.00
+2026-05-12 22:03:55,351 INFO SKIPPED date=2025-04-09 reason=gap_below_threshold gap=-86.90
+2026-05-12 22:03:55,372 INFO TRADED date=2025-04-11 side=CE expiry=2025-04-17 strike=22700 raw=9893.00 slippage=520.00 brokerage=50.00 net=9323.00
+2026-05-12 22:03:55,401 INFO TRADED date=2025-04-15 side=CE expiry=2025-04-17 strike=23250 raw=-2457.00 slippage=520.00 brokerage=50.00 net=-3027.00
+2026-05-12 22:03:55,401 INFO SKIPPED date=2025-04-16 reason=gap_below_threshold gap=0.00
+2026-05-12 22:03:55,401 INFO SKIPPED date=2025-04-17 reason=gap_below_threshold gap=-31.45
+2026-05-12 22:03:55,564 INFO TRADED date=2025-04-21 side=CE expiry=2025-04-24 strike=24000 raw=-130.00 slippage=520.00 brokerage=50.00 net=-700.00
+2026-05-12 22:03:55,564 INFO SKIPPED date=2025-04-22 reason=gap_below_threshold gap=64.20
+2026-05-12 22:03:55,633 INFO TRADED date=2025-04-23 side=CE expiry=2025-04-24 strike=24300 raw=9087.00 slippage=520.00 brokerage=50.00 net=8517.00
+2026-05-12 22:03:55,633 INFO SKIPPED date=2025-04-24 reason=gap_below_threshold gap=-22.95
+2026-05-12 22:03:55,634 INFO SKIPPED date=2025-04-25 reason=gap_below_threshold gap=43.95
+2026-05-12 22:03:55,634 INFO SKIPPED date=2025-04-28 reason=gap_below_threshold gap=78.60
+2026-05-12 22:03:55,634 INFO SKIPPED date=2025-04-29 reason=gap_below_threshold gap=57.80
+2026-05-12 22:03:55,634 INFO SKIPPED date=2025-04-30 reason=gap_below_threshold gap=16.60
+2026-05-12 22:03:55,634 INFO SKIPPED date=2025-05-02 reason=gap_below_threshold gap=65.65
+2026-05-12 22:03:55,655 INFO TRADED date=2025-05-05 side=CE expiry=2025-05-08 strike=24450 raw=-702.00 slippage=520.00 brokerage=50.00 net=-1272.00
+2026-05-12 22:03:55,655 INFO SKIPPED date=2025-05-06 reason=gap_below_threshold gap=41.25
+2026-05-12 22:03:55,673 INFO TRADED date=2025-05-07 side=PE expiry=2025-05-08 strike=24350 raw=-546.00 slippage=520.00 brokerage=50.00 net=-1116.00
+2026-05-12 22:03:55,673 INFO SKIPPED date=2025-05-08 reason=gap_below_threshold gap=22.20
+2026-05-12 22:03:55,713 INFO TRADED date=2025-05-09 side=PE expiry=2025-05-15 strike=24150 raw=-3510.00 slippage=520.00 brokerage=50.00 net=-4080.00
+2026-05-12 22:03:55,773 INFO TRADED date=2025-05-12 side=CE expiry=2025-05-15 strike=24500 raw=10647.00 slippage=520.00 brokerage=50.00 net=10077.00
+2026-05-12 22:03:55,773 INFO SKIPPED date=2025-05-13 reason=gap_below_threshold gap=-56.20
+2026-05-12 22:03:55,773 INFO SKIPPED date=2025-05-14 reason=gap_below_threshold gap=20.15
+2026-05-12 22:03:55,773 INFO SKIPPED date=2025-05-15 reason=gap_below_threshold gap=8.70
+2026-05-12 22:03:55,773 INFO SKIPPED date=2025-05-16 reason=gap_below_threshold gap=29.35
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-19 reason=gap_below_threshold gap=-7.75
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-20 reason=gap_below_threshold gap=60.85
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-21 reason=gap_below_threshold gap=30.40
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-22 reason=gap_below_threshold gap=-67.00
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-23 reason=gap_below_threshold gap=2.50
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-26 reason=gap_below_threshold gap=74.20
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-27 reason=gap_below_threshold gap=-39.70
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-28 reason=gap_below_threshold gap=-5.20
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-29 reason=gap_below_threshold gap=67.95
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-05-30 reason=gap_below_threshold gap=-68.25
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-06-02 reason=gap_below_threshold gap=-66.95
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-06-03 reason=gap_below_threshold gap=95.95
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-06-04 reason=gap_below_threshold gap=22.05
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-06-05 reason=gap_below_threshold gap=79.20
+2026-05-12 22:03:55,774 INFO SKIPPED date=2025-06-06 reason=gap_below_threshold gap=-12.40
+2026-05-12 22:03:55,804 INFO TRADED date=2025-06-09 side=CE expiry=2025-06-12 strike=25100 raw=-3237.00 slippage=520.00 brokerage=50.00 net=-3807.00
+2026-05-12 22:03:55,804 INFO SKIPPED date=2025-06-10 reason=gap_below_threshold gap=92.95
+2026-05-12 22:03:55,804 INFO SKIPPED date=2025-06-11 reason=gap_below_threshold gap=42.65
+2026-05-12 22:03:55,804 INFO SKIPPED date=2025-06-12 reason=gap_below_threshold gap=37.65
+2026-05-12 22:03:55,847 INFO TRADED date=2025-06-13 side=PE expiry=2025-06-19 strike=24550 raw=-10933.00 slippage=520.00 brokerage=50.00 net=-11503.00
+2026-05-12 22:03:55,847 INFO SKIPPED date=2025-06-16 reason=gap_below_threshold gap=-3.20
+2026-05-12 22:03:55,847 INFO SKIPPED date=2025-06-17 reason=gap_below_threshold gap=36.90
+2026-05-12 22:03:55,847 INFO SKIPPED date=2025-06-18 reason=gap_below_threshold gap=-53.15
+2026-05-12 22:03:55,847 INFO SKIPPED date=2025-06-19 reason=gap_below_threshold gap=4.50
+2026-05-12 22:03:55,847 INFO SKIPPED date=2025-06-20 reason=gap_below_threshold gap=42.95
+2026-05-12 22:03:55,899 INFO TRADED date=2025-06-23 side=PE expiry=2025-06-26 strike=24950 raw=5200.00 slippage=520.00 brokerage=50.00 net=4630.00
+2026-05-12 22:03:55,972 INFO TRADED date=2025-06-24 side=CE expiry=2025-06-26 strike=25200 raw=429.00 slippage=520.00 brokerage=50.00 net=-141.00
+2026-05-12 22:03:55,972 INFO SKIPPED date=2025-06-25 reason=gap_below_threshold gap=78.80
+2026-05-12 22:03:55,972 INFO SKIPPED date=2025-06-26 reason=gap_below_threshold gap=32.60
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-06-27 reason=gap_below_threshold gap=46.25
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-06-30 reason=gap_below_threshold gap=29.20
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-01 reason=gap_below_threshold gap=43.90
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-02 reason=gap_below_threshold gap=55.30
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-03 reason=gap_below_threshold gap=62.25
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-04 reason=gap_below_threshold gap=31.45
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-07 reason=gap_below_threshold gap=-17.35
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-08 reason=gap_below_threshold gap=-27.10
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-09 reason=gap_below_threshold gap=-8.50
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-10 reason=gap_below_threshold gap=47.00
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-11 reason=gap_below_threshold gap=-92.65
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-14 reason=gap_below_threshold gap=8.95
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-15 reason=gap_below_threshold gap=2.40
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-16 reason=gap_below_threshold gap=-23.05
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-17 reason=gap_below_threshold gap=32.20
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-18 reason=gap_below_threshold gap=-0.95
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-21 reason=gap_below_threshold gap=31.55
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-22 reason=gap_below_threshold gap=73.35
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-23 reason=gap_below_threshold gap=74.45
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-24 reason=gap_below_threshold gap=34.10
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-25 reason=gap_below_threshold gap=-57.05
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-28 reason=gap_below_threshold gap=-49.75
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-29 reason=gap_below_threshold gap=-59.75
+2026-05-12 22:03:55,973 INFO SKIPPED date=2025-07-30 reason=gap_below_threshold gap=60.00
+2026-05-12 22:03:56,061 INFO TRADED date=2025-07-31 side=PE expiry=2025-07-31 strike=24700 raw=-4654.00 slippage=520.00 brokerage=50.00 net=-5224.00
+2026-05-12 22:03:56,061 INFO SKIPPED date=2025-08-01 reason=gap_below_threshold gap=-30.70
+2026-05-12 22:03:56,061 INFO SKIPPED date=2025-08-04 reason=gap_below_threshold gap=23.90
+2026-05-12 22:03:56,061 INFO SKIPPED date=2025-08-05 reason=gap_below_threshold gap=-6.65
+2026-05-12 22:03:56,061 INFO SKIPPED date=2025-08-06 reason=gap_below_threshold gap=-8.15
+2026-05-12 22:03:56,095 INFO TRADED date=2025-08-07 side=PE expiry=2025-08-07 strike=24500 raw=-3185.00 slippage=520.00 brokerage=50.00 net=-3755.00
+2026-05-12 22:03:56,095 INFO SKIPPED date=2025-08-08 reason=gap_below_threshold gap=-82.40
+2026-05-12 22:03:56,095 INFO SKIPPED date=2025-08-11 reason=gap_below_threshold gap=20.65
+2026-05-12 22:03:56,095 INFO SKIPPED date=2025-08-12 reason=gap_below_threshold gap=1.20
+2026-05-12 22:03:56,122 INFO TRADED date=2025-08-13 side=CE expiry=2025-08-14 strike=24600 raw=-1339.00 slippage=520.00 brokerage=50.00 net=-1909.00
+2026-05-12 22:03:56,122 INFO SKIPPED date=2025-08-14 reason=gap_below_threshold gap=-23.15
+2026-05-12 22:03:56,151 INFO TRADED date=2025-08-18 side=CE expiry=2025-08-21 strike=24900 raw=2990.00 slippage=520.00 brokerage=50.00 net=2420.00
+2026-05-12 22:03:56,151 INFO SKIPPED date=2025-08-19 reason=gap_below_threshold gap=7.30
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-08-20 reason=gap_below_threshold gap=-23.90
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-08-21 reason=gap_below_threshold gap=94.85
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-08-22 reason=gap_below_threshold gap=-12.80
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-08-25 reason=gap_below_threshold gap=79.70
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-08-26 reason=gap_below_threshold gap=-79.05
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-08-28 reason=gap_below_threshold gap=-14.90
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-08-29 reason=gap_below_threshold gap=-66.40
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-09-01 reason=gap_below_threshold gap=-0.95
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-09-02 reason=gap_below_threshold gap=28.70
+2026-05-12 22:03:56,152 INFO SKIPPED date=2025-09-03 reason=gap_below_threshold gap=41.50
+2026-05-12 22:03:56,196 INFO TRADED date=2025-09-04 side=CE expiry=2025-09-09 strike=24900 raw=-234.00 slippage=520.00 brokerage=50.00 net=-804.00
+2026-05-12 22:03:56,196 INFO SKIPPED date=2025-09-05 reason=gap_below_threshold gap=79.05
+2026-05-12 22:03:56,196 INFO SKIPPED date=2025-09-08 reason=gap_below_threshold gap=58.65
+2026-05-12 22:03:56,196 INFO SKIPPED date=2025-09-09 reason=gap_below_threshold gap=72.90
+2026-05-12 22:03:56,223 INFO TRADED date=2025-09-10 side=CE expiry=2025-09-16 strike=24950 raw=910.00 slippage=520.00 brokerage=50.00 net=340.00
+2026-05-12 22:03:56,223 INFO SKIPPED date=2025-09-11 reason=gap_below_threshold gap=-32.05
+2026-05-12 22:03:56,223 INFO SKIPPED date=2025-09-12 reason=gap_below_threshold gap=66.35
+2026-05-12 22:03:56,223 INFO SKIPPED date=2025-09-15 reason=gap_below_threshold gap=11.20
+2026-05-12 22:03:56,223 INFO SKIPPED date=2025-09-16 reason=gap_below_threshold gap=3.90
+2026-05-12 22:03:56,223 INFO SKIPPED date=2025-09-17 reason=gap_below_threshold gap=22.15
+2026-05-12 22:03:56,248 INFO TRADED date=2025-09-18 side=CE expiry=2025-09-23 strike=25400 raw=1456.00 slippage=520.00 brokerage=50.00 net=886.00
+2026-05-12 22:03:56,248 INFO SKIPPED date=2025-09-19 reason=gap_below_threshold gap=-10.55
+2026-05-12 22:03:56,263 INFO TRADED date=2025-09-22 side=PE expiry=2025-09-23 strike=25250 raw=-2834.00 slippage=520.00 brokerage=50.00 net=-3404.00
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-09-23 reason=gap_below_threshold gap=8.80
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-09-24 reason=gap_below_threshold gap=-77.05
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-09-25 reason=gap_below_threshold gap=-26.40
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-09-26 reason=gap_below_threshold gap=-86.00
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-09-29 reason=gap_below_threshold gap=55.45
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-09-30 reason=gap_below_threshold gap=14.40
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-10-01 reason=gap_below_threshold gap=-13.05
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-10-03 reason=gap_below_threshold gap=-93.85
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-10-06 reason=gap_below_threshold gap=21.55
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-10-07 reason=gap_below_threshold gap=12.75
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-10-08 reason=gap_below_threshold gap=-33.05
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-10-09 reason=gap_below_threshold gap=50.50
+2026-05-12 22:03:56,263 INFO SKIPPED date=2025-10-10 reason=gap_below_threshold gap=-2.65
+2026-05-12 22:03:56,294 INFO TRADED date=2025-10-13 side=PE expiry=2025-10-14 strike=25200 raw=1625.00 slippage=520.00 brokerage=50.00 net=1055.00
+2026-05-12 22:03:56,294 INFO SKIPPED date=2025-10-14 reason=gap_below_threshold gap=40.40
+2026-05-12 22:03:56,294 INFO SKIPPED date=2025-10-15 reason=gap_below_threshold gap=58.60
+2026-05-12 22:03:56,294 INFO SKIPPED date=2025-10-16 reason=gap_below_threshold gap=67.15
+2026-05-12 22:03:56,294 INFO SKIPPED date=2025-10-17 reason=gap_below_threshold gap=-19.45
+2026-05-12 22:03:56,308 INFO TRADED date=2025-10-20 side=CE expiry=2025-10-20 strike=25900 raw=-8970.00 slippage=520.00 brokerage=50.00 net=-9540.00
+2026-05-12 22:03:56,308 INFO SKIPPED date=2025-10-21 reason=missing_spot_timestamp
+2026-05-12 22:03:56,393 INFO TRADED date=2025-10-23 side=CE expiry=2025-10-28 strike=26000 raw=2444.00 slippage=520.00 brokerage=50.00 net=1874.00
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-10-24 reason=gap_below_threshold gap=64.80
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-10-27 reason=gap_below_threshold gap=45.75
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-10-28 reason=gap_below_threshold gap=-34.05
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-10-29 reason=gap_below_threshold gap=16.60
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-10-30 reason=gap_below_threshold gap=-83.90
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-10-31 reason=gap_below_threshold gap=-27.40
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-11-03 reason=gap_below_threshold gap=-35.70
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-11-04 reason=gap_below_threshold gap=-29.55
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-11-06 reason=gap_below_threshold gap=7.10
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-11-07 reason=gap_below_threshold gap=-86.15
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-11-10 reason=gap_below_threshold gap=-6.55
+2026-05-12 22:03:56,393 INFO SKIPPED date=2025-11-11 reason=gap_below_threshold gap=42.75
+2026-05-12 22:03:56,426 INFO TRADED date=2025-11-12 side=CE expiry=2025-11-18 strike=25800 raw=3861.00 slippage=520.00 brokerage=50.00 net=3291.00
+2026-05-12 22:03:56,426 INFO SKIPPED date=2025-11-13 reason=gap_below_threshold gap=32.10
+2026-05-12 22:03:56,454 INFO TRADED date=2025-11-14 side=PE expiry=2025-11-18 strike=25800 raw=2405.00 slippage=520.00 brokerage=50.00 net=1835.00
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-17 reason=gap_below_threshold gap=31.40
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-18 reason=gap_below_threshold gap=7.50
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-19 reason=gap_below_threshold gap=23.40
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-20 reason=gap_below_threshold gap=79.40
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-21 reason=gap_below_threshold gap=-87.85
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-24 reason=gap_below_threshold gap=58.85
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-25 reason=gap_below_threshold gap=55.15
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-26 reason=gap_below_threshold gap=-17.35
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-27 reason=gap_below_threshold gap=57.75
+2026-05-12 22:03:56,454 INFO SKIPPED date=2025-11-28 reason=gap_below_threshold gap=17.60
+2026-05-12 22:03:56,490 INFO TRADED date=2025-12-01 side=CE expiry=2025-12-02 strike=26300 raw=-234.00 slippage=520.00 brokerage=50.00 net=-804.00
+2026-05-12 22:03:56,490 INFO SKIPPED date=2025-12-02 reason=gap_below_threshold gap=-88.00
+2026-05-12 22:03:56,490 INFO SKIPPED date=2025-12-03 reason=gap_below_threshold gap=-52.10
+2026-05-12 22:03:56,490 INFO SKIPPED date=2025-12-04 reason=gap_below_threshold gap=-3.25
+2026-05-12 22:03:56,490 INFO SKIPPED date=2025-12-05 reason=gap_below_threshold gap=-17.30
+2026-05-12 22:03:56,491 INFO SKIPPED date=2025-12-08 reason=gap_below_threshold gap=-16.85
+2026-05-12 22:03:56,491 INFO SKIPPED date=2025-12-09 reason=gap_below_threshold gap=-65.70
+2026-05-12 22:03:56,491 INFO SKIPPED date=2025-12-10 reason=gap_below_threshold gap=22.30
+2026-05-12 22:03:56,491 INFO SKIPPED date=2025-12-11 reason=gap_below_threshold gap=28.75
+2026-05-12 22:03:56,491 INFO SKIPPED date=2025-12-12 reason=gap_below_threshold gap=72.80
+2026-05-12 22:03:56,525 INFO TRADED date=2025-12-15 side=PE expiry=2025-12-16 strike=25950 raw=4173.00 slippage=520.00 brokerage=50.00 net=3603.00
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-16 reason=gap_below_threshold gap=-62.50
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-17 reason=gap_below_threshold gap=51.05
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-18 reason=gap_below_threshold gap=-57.10
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-19 reason=gap_below_threshold gap=95.85
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-22 reason=gap_below_threshold gap=94.45
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-23 reason=gap_below_threshold gap=42.45
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-24 reason=gap_below_threshold gap=4.70
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-26 reason=gap_below_threshold gap=-20.40
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-29 reason=gap_below_threshold gap=15.70
+2026-05-12 22:03:56,525 INFO SKIPPED date=2025-12-30 reason=gap_below_threshold gap=-8.90
+2026-05-12 22:03:56,526 INFO SKIPPED date=2025-12-31 reason=gap_below_threshold gap=0.50
+2026-05-12 22:03:56,526 INFO COMPLETED traded=43 skipped=206 total=249

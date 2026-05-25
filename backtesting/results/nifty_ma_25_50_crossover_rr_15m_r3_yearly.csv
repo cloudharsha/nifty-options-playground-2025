@@ -1,6 +1,0 @@
-period,days,skipped_days,trades,skipped_rows,crossover_entries,pullback_reentries,target_exits,stop_exits,gap_target_exits,gap_stop_exits,reversal_exits,winning_days,losing_days,break_even_days,total_points,total_rupees,average_points,max_profit_date,max_profit_points,max_profit_rupees,max_loss_date,max_loss_points,max_loss_rupees,max_consecutive_wins,max_consecutive_losses,max_drawdown_points,max_drawdown_rupees
-2022,166,4,85,4,71,14,14,61,5,4,1,19,51,0,77.90,5063.50,1.11,2022-07-20,296.50,19272.50,2022-10-04,-254.60,-16549.00,3,7,524.00,34060.00
-2023,246,4,161,4,125,36,35,112,5,4,5,39,98,0,215.50,14007.50,1.57,2023-01-05,151.80,9867.00,2023-10-13,-147.90,-9613.50,3,15,552.50,35912.50
-2024,249,4,160,4,129,31,31,108,8,6,7,38,91,0,-306.65,-19932.25,-2.38,2024-10-03,347.05,22558.25,2024-06-04,-359.55,-23370.75,8,12,1470.40,95576.00
-2025,249,3,158,3,119,39,33,100,13,7,5,44,80,0,1139.95,74096.75,9.19,2025-04-15,561.70,36510.50,2025-06-02,-233.55,-15180.75,3,8,599.40,38961.00
-2026,82,2,56,2,43,13,10,38,5,3,0,13,36,0,1588.90,103278.50,32.43,2026-04-08,963.70,62640.50,2026-03-24,-305.65,-19867.25,2,7,385.30,25044.50

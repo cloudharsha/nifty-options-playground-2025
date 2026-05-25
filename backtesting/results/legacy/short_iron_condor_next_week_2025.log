@@ -1,0 +1,51 @@
+2026-05-05 14:55:09,199 INFO TRADED date=2025-01-06 expiry=2025-01-16 exit=2025-01-13 atm=24050 sell_ce=24750 sell_pe=23250 buy_ce=25050 buy_pe=22850 gross=-22321.00 brokerage=200.00 net=-22521.00
+2026-05-05 14:55:12,198 INFO TRADED date=2025-01-13 expiry=2025-01-23 exit=2025-01-20 atm=23250 sell_ce=24050 sell_pe=22300 buy_ce=24500 buy_pe=21700 gross=6838.00 brokerage=200.00 net=6638.00
+2026-05-05 14:55:20,099 INFO TRADED date=2025-01-20 expiry=2025-01-30 exit=2025-01-27 atm=23200 sell_ce=24050 sell_pe=22250 buy_ce=24500 buy_pe=21750 gross=5031.00 brokerage=200.00 net=4831.00
+2026-05-05 14:55:23,145 INFO TRADED date=2025-01-27 expiry=2025-02-06 exit=2025-02-03 atm=22950 sell_ce=24200 sell_pe=21700 buy_ce=24750 buy_pe=21250 gross=7971.60 brokerage=200.00 net=7771.60
+2026-05-05 14:55:25,241 INFO TRADED date=2025-02-03 expiry=2025-02-13 exit=2025-02-10 atm=23350 sell_ce=24050 sell_pe=22450 buy_ce=24450 buy_pe=22000 gross=4877.60 brokerage=200.00 net=4677.60
+2026-05-05 14:55:28,094 INFO TRADED date=2025-02-10 expiry=2025-02-20 exit=2025-02-17 atm=23450 sell_ce=24150 sell_pe=22750 buy_ce=24450 buy_pe=22400 gross=-11518.00 brokerage=200.00 net=-11718.00
+2026-05-05 14:55:35,623 INFO TRADED date=2025-02-17 expiry=2025-02-27 exit=2025-02-24 atm=22850 sell_ce=23650 sell_pe=22050 buy_ce=24000 buy_pe=21600 gross=7189.00 brokerage=200.00 net=6989.00
+2026-05-05 14:55:38,876 INFO TRADED date=2025-02-24 expiry=2025-03-06 exit=2025-03-03 atm=22600 sell_ce=23300 sell_pe=21950 buy_ce=23600 buy_pe=21550 gross=-299.00 brokerage=200.00 net=-499.00
+2026-05-05 14:55:41,233 INFO TRADED date=2025-03-03 expiry=2025-03-13 exit=2025-03-10 atm=22150 sell_ce=22800 sell_pe=21550 buy_ce=23100 buy_pe=21150 gross=-2155.40 brokerage=200.00 net=-2355.40
+2026-05-05 14:55:43,293 INFO TRADED date=2025-03-10 expiry=2025-03-20 exit=2025-03-17 atm=22600 sell_ce=23150 sell_pe=21900 buy_ce=23450 buy_pe=21500 gross=7059.00 brokerage=200.00 net=6859.00
+2026-05-05 14:55:50,338 INFO TRADED date=2025-03-17 expiry=2025-03-27 exit=2025-03-24 atm=22550 sell_ce=23100 sell_pe=21950 buy_ce=23350 buy_pe=21500 gross=-44954.00 brokerage=200.00 net=-45154.00
+2026-05-05 14:55:50,339 INFO SKIPPED date=2025-03-24 reason=no_planned_exit_trading_day
+2026-05-05 14:55:50,339 INFO SKIPPED date=2025-04-07 reason=no_planned_exit_trading_day
+2026-05-05 14:55:54,237 INFO TRADED date=2025-04-21 expiry=2025-04-30 exit=2025-04-28 atm=23950 sell_ce=24850 sell_pe=22950 buy_ce=25450 buy_pe=21950 gross=5382.00 brokerage=200.00 net=5182.00
+2026-05-05 14:55:57,210 INFO TRADED date=2025-04-28 expiry=2025-05-08 exit=2025-05-05 atm=24100 sell_ce=25000 sell_pe=22700 buy_ce=25450 buy_pe=21650 gross=5184.40 brokerage=200.00 net=4984.40
+2026-05-05 14:56:00,176 INFO TRADED date=2025-05-05 expiry=2025-05-15 exit=2025-05-12 atm=24450 sell_ce=25250 sell_pe=23000 buy_ce=25600 buy_pe=22150 gross=5969.60 brokerage=200.00 net=5769.60
+2026-05-05 14:56:02,405 INFO SKIPPED date=2025-05-12 expiry=2025-05-22 atm=24600 reason=No OTM PE buy wing contract satisfied the premium band 7.31-10.24 at 2025-05-12T09:30:00+05:30 while also having exact exit timestamp 2025-05-19T09:25:00+05:30.
+2026-05-05 14:56:11,645 INFO TRADED date=2025-05-19 expiry=2025-05-29 exit=2025-05-26 atm=25000 sell_ce=25950 sell_pe=23850 buy_ce=26400 buy_pe=23050 gross=4836.00 brokerage=200.00 net=4636.00
+2026-05-05 14:56:14,954 INFO TRADED date=2025-05-26 expiry=2025-06-05 exit=2025-06-02 atm=25050 sell_ce=26050 sell_pe=23800 buy_ce=26450 buy_pe=23050 gross=4017.00 brokerage=200.00 net=3817.00
+2026-05-05 14:56:17,587 INFO TRADED date=2025-06-02 expiry=2025-06-12 exit=2025-06-09 atm=24550 sell_ce=25650 sell_pe=23500 buy_ce=26050 buy_pe=23050 gross=4693.00 brokerage=200.00 net=4493.00
+2026-05-05 14:56:19,813 INFO TRADED date=2025-06-09 expiry=2025-06-19 exit=2025-06-16 atm=25100 sell_ce=25900 sell_pe=24200 buy_ce=26200 buy_pe=23650 gross=4004.00 brokerage=200.00 net=3804.00
+2026-05-05 14:56:31,556 INFO TRADED date=2025-06-16 expiry=2025-06-26 exit=2025-06-23 atm=24800 sell_ce=25550 sell_pe=23800 buy_ce=25900 buy_pe=22850 gross=5369.00 brokerage=200.00 net=5169.00
+2026-05-05 14:56:34,575 INFO TRADED date=2025-06-23 expiry=2025-07-03 exit=2025-06-30 atm=24900 sell_ce=25600 sell_pe=23800 buy_ce=25900 buy_pe=23000 gross=-23751.00 brokerage=200.00 net=-23951.00
+2026-05-05 14:56:36,999 INFO TRADED date=2025-06-30 expiry=2025-07-10 exit=2025-07-07 atm=25650 sell_ce=26300 sell_pe=24850 buy_ce=26600 buy_pe=24300 gross=6461.00 brokerage=200.00 net=6261.00
+2026-05-05 14:56:39,669 INFO TRADED date=2025-07-07 expiry=2025-07-17 exit=2025-07-14 atm=25450 sell_ce=26050 sell_pe=24800 buy_ce=26350 buy_pe=24350 gross=1274.00 brokerage=200.00 net=1074.00
+2026-05-05 14:56:42,542 INFO TRADED date=2025-07-14 expiry=2025-07-24 exit=2025-07-21 atm=25050 sell_ce=25700 sell_pe=24500 buy_ce=26100 buy_pe=24050 gross=5408.00 brokerage=200.00 net=5208.00
+2026-05-05 14:56:51,206 INFO TRADED date=2025-07-21 expiry=2025-07-31 exit=2025-07-28 atm=24900 sell_ce=25450 sell_pe=24350 buy_ce=25800 buy_pe=23900 gross=4979.00 brokerage=200.00 net=4779.00
+2026-05-05 14:56:53,655 INFO TRADED date=2025-07-28 expiry=2025-08-07 exit=2025-08-04 atm=24800 sell_ce=25400 sell_pe=24200 buy_ce=25750 buy_pe=23750 gross=3068.00 brokerage=200.00 net=2868.00
+2026-05-05 14:56:55,731 INFO TRADED date=2025-08-04 expiry=2025-08-14 exit=2025-08-11 atm=24650 sell_ce=25300 sell_pe=23950 buy_ce=25650 buy_pe=23400 gross=5213.00 brokerage=200.00 net=5013.00
+2026-05-05 14:56:58,461 INFO TRADED date=2025-08-11 expiry=2025-08-21 exit=2025-08-18 atm=24400 sell_ce=25000 sell_pe=23850 buy_ce=25350 buy_pe=23400 gross=-17238.00 brokerage=200.00 net=-17438.00
+2026-05-05 14:57:04,982 INFO TRADED date=2025-08-18 expiry=2025-08-28 exit=2025-08-25 atm=24950 sell_ce=25600 sell_pe=24300 buy_ce=25950 buy_pe=23750 gross=6643.00 brokerage=200.00 net=6443.00
+2026-05-05 14:57:07,155 INFO TRADED date=2025-08-25 expiry=2025-09-02 exit=2025-09-01 atm=24950 sell_ce=25400 sell_pe=24550 buy_ce=25650 buy_pe=24200 gross=-8177.00 brokerage=200.00 net=-8377.00
+2026-05-05 14:57:08,922 INFO TRADED date=2025-09-01 expiry=2025-09-09 exit=2025-09-08 atm=24550 sell_ce=25000 sell_pe=24100 buy_ce=25250 buy_pe=23750 gross=5629.00 brokerage=200.00 net=5429.00
+2026-05-05 14:57:11,390 INFO TRADED date=2025-09-08 expiry=2025-09-16 exit=2025-09-15 atm=24800 sell_ce=25200 sell_pe=24400 buy_ce=25450 buy_pe=24050 gross=1742.00 brokerage=200.00 net=1542.00
+2026-05-05 14:57:13,375 INFO TRADED date=2025-09-15 expiry=2025-09-23 exit=2025-09-22 atm=25100 sell_ce=25500 sell_pe=24750 buy_ce=25700 buy_pe=24400 gross=6188.00 brokerage=200.00 net=5988.00
+2026-05-05 14:57:22,306 INFO TRADED date=2025-09-22 expiry=2025-09-30 exit=2025-09-29 atm=25300 sell_ce=25700 sell_pe=24950 buy_ce=25950 buy_pe=24550 gross=-41795.00 brokerage=200.00 net=-41995.00
+2026-05-05 14:57:25,131 INFO TRADED date=2025-09-29 expiry=2025-10-07 exit=2025-10-06 atm=24700 sell_ce=25200 sell_pe=24300 buy_ce=25550 buy_pe=23850 gross=8203.00 brokerage=200.00 net=8003.00
+2026-05-05 14:57:27,094 INFO TRADED date=2025-10-06 expiry=2025-10-14 exit=2025-10-13 atm=24900 sell_ce=25250 sell_pe=24550 buy_ce=25450 buy_pe=24250 gross=-5993.00 brokerage=200.00 net=-6193.00
+2026-05-05 14:57:33,701 INFO TRADED date=2025-10-13 expiry=2025-10-28 exit=2025-10-20 atm=25200 sell_ce=25850 sell_pe=24400 buy_ce=26200 buy_pe=23500 gross=-28847.00 brokerage=200.00 net=-29047.00
+2026-05-05 14:57:34,780 INFO TRADED date=2025-10-20 expiry=2025-10-28 exit=2025-10-27 atm=25900 sell_ce=26300 sell_pe=25400 buy_ce=26550 buy_pe=24800 gross=6903.00 brokerage=200.00 net=6703.00
+2026-05-05 14:57:37,086 INFO TRADED date=2025-10-27 expiry=2025-11-04 exit=2025-11-03 atm=25900 sell_ce=26500 sell_pe=25400 buy_ce=26800 buy_pe=24900 gross=6448.00 brokerage=200.00 net=6248.00
+2026-05-05 14:57:39,116 INFO TRADED date=2025-11-03 expiry=2025-11-11 exit=2025-11-10 atm=25700 sell_ce=26250 sell_pe=25200 buy_ce=26600 buy_pe=24850 gross=7904.00 brokerage=200.00 net=7704.00
+2026-05-05 14:57:41,287 INFO TRADED date=2025-11-10 expiry=2025-11-18 exit=2025-11-17 atm=25550 sell_ce=26100 sell_pe=25050 buy_ce=26400 buy_pe=24650 gross=65.00 brokerage=200.00 net=-135.00
+2026-05-05 14:57:47,614 INFO TRADED date=2025-11-17 expiry=2025-11-25 exit=2025-11-24 atm=25950 sell_ce=26550 sell_pe=25450 buy_ce=26850 buy_pe=25000 gross=8073.00 brokerage=200.00 net=7873.00
+2026-05-05 14:57:50,379 INFO TRADED date=2025-11-24 expiry=2025-12-02 exit=2025-12-01 atm=26100 sell_ce=26650 sell_pe=25600 buy_ce=26900 buy_pe=25200 gross=8138.00 brokerage=200.00 net=7938.00
+2026-05-05 14:57:52,659 INFO TRADED date=2025-12-01 expiry=2025-12-09 exit=2025-12-08 atm=26300 sell_ce=26750 sell_pe=25900 buy_ce=26950 buy_pe=25600 gross=6955.00 brokerage=200.00 net=6755.00
+2026-05-05 14:57:55,024 INFO TRADED date=2025-12-08 expiry=2025-12-16 exit=2025-12-15 atm=26150 sell_ce=26550 sell_pe=25800 buy_ce=26750 buy_pe=25500 gross=2496.00 brokerage=200.00 net=2296.00
+2026-05-05 14:57:57,285 INFO TRADED date=2025-12-15 expiry=2025-12-23 exit=2025-12-22 atm=25900 sell_ce=26350 sell_pe=25500 buy_ce=26600 buy_pe=25150 gross=6929.00 brokerage=200.00 net=6729.00
+2026-05-05 14:58:08,019 INFO TRADED date=2025-12-22 expiry=2025-12-30 exit=2025-12-29 atm=26150 sell_ce=26500 sell_pe=25800 buy_ce=26750 buy_pe=25450 gross=7787.00 brokerage=200.00 net=7587.00
+2026-05-05 14:58:08,019 INFO SKIPPED date=2025-12-29 reason=no_planned_exit_trading_day
+2026-05-05 14:58:08,019 INFO COMPLETED traded=46 skipped=4 total=50
