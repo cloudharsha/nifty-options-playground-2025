@@ -131,9 +131,17 @@ Utility scripts for FYERS-based data pull:
 
 Backtest runners and generated results:
 
-- [backtesting/python/run_short_atm_weekly_straddle_2025.py](/mnt/c/Users/harsh/Desktop/workspace/git/nifty-options-playground-2025/backtesting/python/run_short_atm_weekly_straddle_2025.py:1): overnight weekly short ATM straddle
-- [backtesting/python/run_short_iron_fly_2025.py](/mnt/c/Users/harsh/Desktop/workspace/git/nifty-options-playground-2025/backtesting/python/run_short_iron_fly_2025.py:1): overnight short iron fly
-- `backtesting/results/`: generated CSV, summary, and log files
+**Overnight strategies**
+- [backtesting/python/run_short_atm_weekly_straddle_2025.py](backtesting/python/run_short_atm_weekly_straddle_2025.py): overnight weekly short ATM straddle (sell 15:20, buy 09:16 next day)
+- [backtesting/python/run_short_iron_fly_2025.py](backtesting/python/run_short_iron_fly_2025.py): overnight short iron fly
+- [backtesting/python/run_overnight_strangle_by_day_2025.py](backtesting/python/run_overnight_strangle_by_day_2025.py): overnight OTM short strangle with day-of-week premium bands (sell 15:20, buy 09:20 next day); fallback band if primary not found
+
+**Intraday strategies**
+- [backtesting/python/run_intraday_joint_sl_strangle_2025.py](backtesting/python/run_intraday_joint_sl_strangle_2025.py): intraday OTM short strangle with day-of-week bands and joint 2× SL (if either leg hits SL, both exit together)
+- [backtesting/python/run_intraday_atm_straddle_joint_sl_2025.py](backtesting/python/run_intraday_atm_straddle_joint_sl_2025.py): intraday ATM short straddle with joint 2× SL (enter 09:20, exit 15:20)
+- [backtesting/python/run_intraday_atm_straddle_indep_sl_2025.py](backtesting/python/run_intraday_atm_straddle_indep_sl_2025.py): intraday ATM short straddle with independent 2× SL per leg (each leg manages itself; partner continues when one is stopped out)
+
+`backtesting/results/`: generated CSV, summary, and log files for each strategy
 
 ## How to use this repo for testing
 
@@ -164,13 +172,21 @@ Both backtest scripts:
 - support default runs and explicit parameter overrides
 - are intentionally unchanged by the 15-minute dataset build
 
-Current default execution assumptions:
+Default execution assumptions vary by script. Intraday scripts use:
 
-- `lot_size = 65`
-- `lots = 4`
-- contract multiplier = `260` rupees per option point
+- `lot_size = 75`, `lots = 1`, multiplier = `75` per point
+- `slippage_points_per_order = 0.5`
+- `brokerage_per_order = 25`
+
+Overnight scripts use:
+
+- `lot_size = 65`, `lots = 4`, multiplier = `260` per point
 - `slippage_points_per_order = 1`
 - `brokerage_per_order = 25`
+
+All scripts support `--lot-size`, `--lots`, `--slippage-points-per-order`, `--brokerage-per-order` overrides.
+
+Summary files include: total net P/L, gross P/L, brokerage, winning/losing days, max single-day profit/loss, **peak cumulative profit**, and **max drawdown**.
 
 ### 1. Weekly Short ATM Straddle
 
