@@ -13,6 +13,10 @@ Notes:
 
 | Source | Period | Test | Result | Capital Base | Net P/L | CAGR / Return | Max DD | Summary |
 |---|---|---|---:|---:|---:|---:|---:|---|
+| Current | 2025 | Intraday ATM Straddle — Independent SL per Leg (1 lot, 09:20–15:20, 2× SL each leg) | Profit | Rs 1L | Rs 40,756.25 | 40.76% | Rs 38,647.00 | [Summary](results/intraday_atm_straddle_indep_sl_2025_summary.md) |
+| Current | 2025 | Intraday ATM Straddle — Joint SL (1 lot, 09:20–15:20, 2× SL exits both legs) | Profit | Rs 1L | Rs 16,595.00 | 16.60% | Rs 53,756.50 | [Summary](results/intraday_atm_straddle_joint_sl_2025_summary.md) |
+| Current | 2025 | Overnight OTM Strangle by Day — with fallback band (1 lot, 15:20–09:20 next day) | Loss | Rs 1L | Rs -26,781.25 | -26.78% | Rs 43,118.50 | [Summary](results/overnight_strangle_by_day_2025_summary.md) |
+| Current | 2025 | Intraday OTM Strangle Joint SL by Day — with fallback band (1 lot, 09:20–15:20, 2× joint SL) | Loss | Rs 1L | Rs -27,204.25 | -27.20% | Rs 35,332.00 | [Summary](results/intraday_joint_sl_strangle_2025_summary.md) |
 | Legacy-2 | 2025 | Combined Expiry + Adjusting Short Strangle 2025 | Profit | Rs 10L | Rs 2,52,042.69 | 25.20% | Rs 69,261.93 | [Summary](results/legacy-2/combined_expiry_adjusting_strangle_2025_summary.md) |
 | Legacy-2 | 2025 | Weekly Adjusting Strangle Through Expiry 2025 | Profit | Rs 10L | Rs 1,48,016.27 | 14.80% | Rs 85,510.77 | [Summary](results/legacy-2/weekly_adjusting_strangle_through_expiry_2025_summary.md) |
 | Legacy-2 | 2025 | Weekly Short Strangle 09:20 2025 | Loss | Rs 10L | Rs -1,47,728.40 | -14.77% | N/A | [Summary](results/legacy-2/weekly_short_strangle_0920_2025_summary.md) |
