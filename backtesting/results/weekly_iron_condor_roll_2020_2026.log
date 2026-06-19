@@ -1,0 +1,351 @@
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-01-02 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-01-09 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-01-16 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-01-23 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-01-30 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-02-06 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-02-13 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-02-20 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-02-27 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-03-05 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-03-12 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-03-19 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-03-26 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-04-01 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-04-09 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-04-16 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-04-23 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,275 INFO SKIPPED entry_expiry=2020-04-30 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-05-07 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-05-14 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-05-21 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-05-28 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-06-04 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-06-11 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-06-18 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-06-25 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-07-02 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-07-09 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-07-16 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-07-23 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-07-30 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-08-06 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-08-13 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-08-20 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-08-27 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-09-03 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-09-10 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-09-17 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-09-24 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-10-01 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-10-08 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-10-15 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-10-22 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-10-29 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-11-05 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-11-12 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,276 INFO SKIPPED entry_expiry=2020-11-19 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2020-11-26 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2020-12-03 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2020-12-10 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2020-12-17 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2020-12-24 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2020-12-31 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-01-07 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-01-14 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-01-21 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-01-28 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-02-04 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-02-11 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-02-18 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-02-25 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-03-04 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-03-10 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-03-18 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-03-25 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-04-01 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-04-08 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-04-15 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-04-22 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-04-29 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-05-06 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-05-12 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-05-20 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-05-27 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-06-03 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-06-10 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-06-17 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-06-24 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-07-01 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,277 INFO SKIPPED entry_expiry=2021-07-08 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-07-15 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-07-22 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-07-29 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-08-05 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-08-12 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-08-18 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-08-26 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-09-02 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-09-09 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-09-16 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-09-23 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-09-30 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-10-07 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-10-14 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-10-21 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-10-28 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-11-03 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-11-11 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-11-18 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-11-25 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-12-02 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-12-09 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-12-16 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-12-23 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2021-12-30 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2022-01-06 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2022-01-13 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2022-01-20 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2022-01-27 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2022-02-03 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2022-02-10 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,278 INFO SKIPPED entry_expiry=2022-02-17 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-02-24 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-03-03 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-03-10 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-03-17 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-03-24 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-03-31 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-04-07 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-04-13 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-04-21 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,279 INFO SKIPPED entry_expiry=2022-04-28 reason=no_trading_day_between_expiries
+2026-06-19 14:44:59,307 INFO TRADED entry_expiry=2022-05-05 entry=2022-05-06 expiry=2022-05-12 atm=16400 lot_size=50 sell_ce=16650 sell_pe=16150 buy_ce=16850 buy_pe=15950 credit=147.20 gross=-3087.50 net=-3287.50
+2026-06-19 14:44:59,329 INFO TRADED entry_expiry=2022-05-12 entry=2022-05-13 expiry=2022-05-19 atm=16000 lot_size=50 sell_ce=16250 sell_pe=15750 buy_ce=16450 buy_pe=15550 credit=120.85 gross=5635.00 net=5435.00
+2026-06-19 14:44:59,351 INFO TRADED entry_expiry=2022-05-19 entry=2022-05-20 expiry=2022-05-26 atm=16050 lot_size=50 sell_ce=16300 sell_pe=15800 buy_ce=16500 buy_pe=15600 credit=100.55 gross=4625.00 net=4425.00
+2026-06-19 14:44:59,378 INFO TRADED entry_expiry=2022-05-26 entry=2022-05-27 expiry=2022-06-02 atm=16300 lot_size=50 sell_ce=16550 sell_pe=16050 buy_ce=16750 buy_pe=15850 credit=90.35 gross=220.00 net=20.00
+2026-06-19 14:44:59,400 INFO TRADED entry_expiry=2022-06-02 entry=2022-06-03 expiry=2022-06-09 atm=16750 lot_size=50 sell_ce=17000 sell_pe=16500 buy_ce=17200 buy_pe=16300 credit=85.60 gross=2455.00 net=2255.00
+2026-06-19 14:44:59,422 INFO SKIPPED entry_expiry=2022-06-09 entry=2022-06-10 expiry=2022-06-16 atm=16300 reason=NIFTY_16550_CE_16_JUN_22.csv exit@2022-06-16T15:15:00+05:30
+2026-06-19 14:44:59,443 INFO TRADED entry_expiry=2022-06-16 entry=2022-06-17 expiry=2022-06-23 atm=15250 lot_size=50 sell_ce=15500 sell_pe=15000 buy_ce=15700 buy_pe=14800 credit=97.35 gross=1492.50 net=1292.50
+2026-06-19 14:44:59,466 INFO TRADED entry_expiry=2022-06-23 entry=2022-06-24 expiry=2022-06-30 atm=15650 lot_size=50 sell_ce=15900 sell_pe=15400 buy_ce=16100 buy_pe=15200 credit=85.65 gross=3877.50 net=3677.50
+2026-06-19 14:44:59,488 INFO SKIPPED entry_expiry=2022-06-30 entry=2022-07-01 expiry=2022-07-07 atm=15700 reason=NIFTY_15450_PE_07_JUL_22.csv exit@2022-07-07T15:15:00+05:30
+2026-06-19 14:44:59,509 INFO TRADED entry_expiry=2022-07-07 entry=2022-07-08 expiry=2022-07-14 atm=16250 lot_size=50 sell_ce=16500 sell_pe=16000 buy_ce=16700 buy_pe=15800 credit=79.70 gross=442.50 net=242.50
+2026-06-19 14:44:59,532 INFO SKIPPED entry_expiry=2022-07-14 entry=2022-07-15 expiry=2022-07-21 atm=16000 reason=NIFTY_15750_PE_21_JUL_22.csv exit@2022-07-21T15:15:00+05:30; NIFTY_15550_PE_21_JUL_22.csv exit@2022-07-21T15:15:00+05:30
+2026-06-19 14:44:59,554 INFO TRADED entry_expiry=2022-07-21 entry=2022-07-22 expiry=2022-07-28 atm=16650 lot_size=50 sell_ce=16900 sell_pe=16400 buy_ce=17100 buy_pe=16200 credit=60.55 gross=1132.50 net=932.50
+2026-06-19 14:44:59,576 INFO TRADED entry_expiry=2022-07-28 entry=2022-07-29 expiry=2022-08-04 atm=17100 lot_size=50 sell_ce=17350 sell_pe=16850 buy_ce=17550 buy_pe=16650 credit=59.10 gross=825.00 net=625.00
+2026-06-19 14:44:59,595 INFO TRADED entry_expiry=2022-08-04 entry=2022-08-05 expiry=2022-08-11 atm=17400 lot_size=50 sell_ce=17650 sell_pe=17150 buy_ce=17850 buy_pe=16950 credit=90.00 gross=3627.50 net=3427.50
+2026-06-19 14:44:59,613 INFO TRADED entry_expiry=2022-08-11 entry=2022-08-12 expiry=2022-08-18 atm=17650 lot_size=50 sell_ce=17900 sell_pe=17400 buy_ce=18100 buy_pe=17200 credit=55.00 gross=-532.50 net=-732.50
+2026-06-19 14:44:59,636 INFO TRADED entry_expiry=2022-08-18 entry=2022-08-19 expiry=2022-08-25 atm=17950 lot_size=50 sell_ce=18200 sell_pe=17700 buy_ce=18400 buy_pe=17500 credit=48.15 gross=-7217.50 net=-7417.50
+2026-06-19 14:44:59,654 INFO TRADED entry_expiry=2022-08-25 entry=2022-08-26 expiry=2022-09-01 atm=17600 lot_size=50 sell_ce=17850 sell_pe=17350 buy_ce=18050 buy_pe=17150 credit=84.70 gross=3832.50 net=3632.50
+2026-06-19 14:44:59,677 INFO TRADED entry_expiry=2022-09-01 entry=2022-09-02 expiry=2022-09-08 atm=17600 lot_size=50 sell_ce=17850 sell_pe=17350 buy_ce=18050 buy_pe=17150 credit=95.70 gross=4382.50 net=4182.50
+2026-06-19 14:44:59,699 INFO TRADED entry_expiry=2022-09-08 entry=2022-09-09 expiry=2022-09-15 atm=17900 lot_size=50 sell_ce=18150 sell_pe=17650 buy_ce=18350 buy_pe=17450 credit=69.00 gross=3050.00 net=2850.00
+2026-06-19 14:44:59,721 INFO TRADED entry_expiry=2022-09-15 entry=2022-09-16 expiry=2022-09-22 atm=17800 lot_size=50 sell_ce=18050 sell_pe=17550 buy_ce=18250 buy_pe=17350 credit=67.85 gross=2975.00 net=2775.00
+2026-06-19 14:44:59,743 INFO SKIPPED entry_expiry=2022-09-22 entry=2022-09-23 expiry=2022-09-29 atm=17600 reason=NIFTY_18050_CE_29_SEP_22.csv exit@2022-09-29T15:15:00+05:30
+2026-06-19 14:44:59,762 INFO TRADED entry_expiry=2022-09-29 entry=2022-09-30 expiry=2022-10-06 atm=16800 lot_size=50 sell_ce=17050 sell_pe=16550 buy_ce=17250 buy_pe=16350 credit=95.00 gross=-5657.50 net=-5857.50
+2026-06-19 14:44:59,784 INFO SKIPPED entry_expiry=2022-10-06 entry=2022-10-07 expiry=2022-10-13 atm=17300 reason=NIFTY_17750_CE_13_OCT_22.csv exit@2022-10-13T15:15:00+05:30
+2026-06-19 14:44:59,805 INFO TRADED entry_expiry=2022-10-13 entry=2022-10-14 expiry=2022-10-20 atm=17300 lot_size=50 sell_ce=17550 sell_pe=17050 buy_ce=17750 buy_pe=16850 credit=100.10 gross=4197.50 net=3997.50
+2026-06-19 14:44:59,819 INFO TRADED entry_expiry=2022-10-20 entry=2022-10-21 expiry=2022-10-27 atm=17600 lot_size=50 sell_ce=17850 sell_pe=17350 buy_ce=18050 buy_pe=17150 credit=26.40 gross=920.00 net=720.00
+2026-06-19 14:44:59,840 INFO TRADED entry_expiry=2022-10-27 entry=2022-10-28 expiry=2022-11-03 atm=17750 lot_size=50 sell_ce=18000 sell_pe=17500 buy_ce=18200 buy_pe=17300 credit=65.50 gross=160.00 net=-40.00
+2026-06-19 14:44:59,857 INFO TRADED entry_expiry=2022-11-03 entry=2022-11-04 expiry=2022-11-10 atm=18050 lot_size=50 sell_ce=18300 sell_pe=17800 buy_ce=18500 buy_pe=17600 credit=55.50 gross=2375.00 net=2175.00
+2026-06-19 14:44:59,879 INFO TRADED entry_expiry=2022-11-10 entry=2022-11-11 expiry=2022-11-17 atm=18250 lot_size=50 sell_ce=18500 sell_pe=18000 buy_ce=18700 buy_pe=17800 credit=63.40 gross=2772.50 net=2572.50
+2026-06-19 14:44:59,900 INFO TRADED entry_expiry=2022-11-17 entry=2022-11-18 expiry=2022-11-24 atm=18400 lot_size=50 sell_ce=18650 sell_pe=18150 buy_ce=18850 buy_pe=17950 credit=36.15 gross=1400.00 net=1200.00
+2026-06-19 14:44:59,921 INFO TRADED entry_expiry=2022-11-24 entry=2022-11-25 expiry=2022-12-01 atm=18550 lot_size=50 sell_ce=18800 sell_pe=18300 buy_ce=19000 buy_pe=18100 credit=27.20 gross=317.50 net=117.50
+2026-06-19 14:44:59,942 INFO TRADED entry_expiry=2022-12-01 entry=2022-12-02 expiry=2022-12-08 atm=18750 lot_size=50 sell_ce=19000 sell_pe=18500 buy_ce=19200 buy_pe=18300 credit=53.05 gross=2245.00 net=2045.00
+2026-06-19 14:44:59,962 INFO TRADED entry_expiry=2022-12-08 entry=2022-12-09 expiry=2022-12-15 atm=18650 lot_size=50 sell_ce=18900 sell_pe=18400 buy_ce=19100 buy_pe=18200 credit=31.00 gross=1072.50 net=872.50
+2026-06-19 14:44:59,983 INFO TRADED entry_expiry=2022-12-15 entry=2022-12-16 expiry=2022-12-22 atm=18300 lot_size=50 sell_ce=18550 sell_pe=18050 buy_ce=18750 buy_pe=17850 credit=39.25 gross=1557.50 net=1357.50
+2026-06-19 14:45:00,004 INFO TRADED entry_expiry=2022-12-22 entry=2022-12-23 expiry=2022-12-29 atm=18000 lot_size=50 sell_ce=18250 sell_pe=17750 buy_ce=18450 buy_pe=17550 credit=56.40 gross=2417.50 net=2217.50
+2026-06-19 14:45:00,025 INFO TRADED entry_expiry=2022-12-29 entry=2022-12-30 expiry=2023-01-05 atm=18250 lot_size=50 sell_ce=18500 sell_pe=18000 buy_ce=18700 buy_pe=17800 credit=38.10 gross=820.00 net=620.00
+2026-06-19 14:45:00,046 INFO TRADED entry_expiry=2023-01-05 entry=2023-01-06 expiry=2023-01-12 atm=18000 lot_size=50 sell_ce=18250 sell_pe=17750 buy_ce=18450 buy_pe=17550 credit=49.95 gross=2095.00 net=1895.00
+2026-06-19 14:45:00,068 INFO TRADED entry_expiry=2023-01-12 entry=2023-01-13 expiry=2023-01-19 atm=17850 lot_size=50 sell_ce=18100 sell_pe=17600 buy_ce=18300 buy_pe=17400 credit=69.40 gross=2640.00 net=2440.00
+2026-06-19 14:45:00,086 INFO TRADED entry_expiry=2023-01-19 entry=2023-01-20 expiry=2023-01-25 atm=18100 lot_size=50 sell_ce=18350 sell_pe=17850 buy_ce=18550 buy_pe=17650 credit=37.45 gross=1467.50 net=1267.50
+2026-06-19 14:45:00,107 INFO TRADED entry_expiry=2023-01-25 entry=2023-01-27 expiry=2023-02-02 atm=17900 lot_size=50 sell_ce=18150 sell_pe=17650 buy_ce=18350 buy_pe=17450 credit=79.50 gross=1390.00 net=1190.00
+2026-06-19 14:45:00,128 INFO TRADED entry_expiry=2023-02-02 entry=2023-02-03 expiry=2023-02-09 atm=17700 lot_size=50 sell_ce=17950 sell_pe=17450 buy_ce=18150 buy_pe=17250 credit=60.25 gross=2610.00 net=2410.00
+2026-06-19 14:45:00,149 INFO TRADED entry_expiry=2023-02-09 entry=2023-02-10 expiry=2023-02-16 atm=17850 lot_size=50 sell_ce=18100 sell_pe=17600 buy_ce=18300 buy_pe=17400 credit=39.50 gross=1570.00 net=1370.00
+2026-06-19 14:45:00,170 INFO TRADED entry_expiry=2023-02-16 entry=2023-02-17 expiry=2023-02-23 atm=17950 lot_size=50 sell_ce=18200 sell_pe=17700 buy_ce=18400 buy_pe=17500 credit=36.50 gross=-8192.50 net=-8392.50
+2026-06-19 14:45:00,191 INFO TRADED entry_expiry=2023-02-23 entry=2023-02-24 expiry=2023-03-02 atm=17600 lot_size=50 sell_ce=17850 sell_pe=17350 buy_ce=18050 buy_pe=17150 credit=41.70 gross=495.00 net=295.00
+2026-06-19 14:45:00,209 INFO TRADED entry_expiry=2023-03-02 entry=2023-03-03 expiry=2023-03-09 atm=17450 lot_size=50 sell_ce=17700 sell_pe=17200 buy_ce=17900 buy_pe=17000 credit=28.00 gross=997.50 net=797.50
+2026-06-19 14:45:00,231 INFO TRADED entry_expiry=2023-03-09 entry=2023-03-10 expiry=2023-03-16 atm=17450 lot_size=50 sell_ce=17700 sell_pe=17200 buy_ce=17900 buy_pe=17000 credit=49.90 gross=-7915.00 net=-8115.00
+2026-06-19 14:45:00,252 INFO TRADED entry_expiry=2023-03-16 entry=2023-03-17 expiry=2023-03-23 atm=17100 lot_size=50 sell_ce=17350 sell_pe=16850 buy_ce=17550 buy_pe=16650 credit=64.90 gross=2842.50 net=2642.50
+2026-06-19 14:45:00,282 INFO TRADED entry_expiry=2023-03-23 entry=2023-03-24 expiry=2023-03-29 atm=17100 lot_size=50 sell_ce=17350 sell_pe=16850 buy_ce=17550 buy_pe=16650 credit=33.75 gross=1285.00 net=1085.00
+2026-06-19 14:45:00,299 INFO TRADED entry_expiry=2023-03-29 entry=2023-03-31 expiry=2023-04-06 atm=17200 lot_size=50 sell_ce=17450 sell_pe=16950 buy_ce=17650 buy_pe=16750 credit=25.75 gross=-6270.00 net=-6470.00
+2026-06-19 14:45:00,316 INFO TRADED entry_expiry=2023-04-06 entry=2023-04-10 expiry=2023-04-13 atm=17650 lot_size=50 sell_ce=17900 sell_pe=17400 buy_ce=18100 buy_pe=17200 credit=20.60 gross=632.50 net=432.50
+2026-06-19 14:45:00,333 INFO TRADED entry_expiry=2023-04-13 entry=2023-04-17 expiry=2023-04-20 atm=17850 lot_size=50 sell_ce=18100 sell_pe=17600 buy_ce=18300 buy_pe=17400 credit=21.35 gross=667.50 net=467.50
+2026-06-19 14:45:00,355 INFO TRADED entry_expiry=2023-04-20 entry=2023-04-21 expiry=2023-04-27 atm=17650 lot_size=50 sell_ce=17900 sell_pe=17400 buy_ce=18100 buy_pe=17200 credit=24.30 gross=62.50 net=-137.50
+2026-06-19 14:45:00,372 INFO TRADED entry_expiry=2023-04-27 entry=2023-04-28 expiry=2023-05-04 atm=17950 lot_size=50 sell_ce=18200 sell_pe=17700 buy_ce=18400 buy_pe=17500 credit=17.80 gross=-2495.00 net=-2695.00
+2026-06-19 14:45:00,394 INFO TRADED entry_expiry=2023-05-04 entry=2023-05-05 expiry=2023-05-11 atm=18100 lot_size=50 sell_ce=18350 sell_pe=17850 buy_ce=18550 buy_pe=17650 credit=25.80 gross=882.50 net=682.50
+2026-06-19 14:45:00,415 INFO TRADED entry_expiry=2023-05-11 entry=2023-05-12 expiry=2023-05-18 atm=18250 lot_size=50 sell_ce=18500 sell_pe=18000 buy_ce=18700 buy_pe=17800 credit=34.20 gross=1315.00 net=1115.00
+2026-06-19 14:45:00,436 INFO TRADED entry_expiry=2023-05-18 entry=2023-05-19 expiry=2023-05-25 atm=18200 lot_size=50 sell_ce=18450 sell_pe=17950 buy_ce=18650 buy_pe=17750 credit=29.10 gross=1055.00 net=855.00
+2026-06-19 14:45:00,457 INFO TRADED entry_expiry=2023-05-25 entry=2023-05-26 expiry=2023-06-01 atm=18350 lot_size=50 sell_ce=18600 sell_pe=18100 buy_ce=18800 buy_pe=17900 credit=30.60 gross=1125.00 net=925.00
+2026-06-19 14:45:00,478 INFO TRADED entry_expiry=2023-06-01 entry=2023-06-02 expiry=2023-06-08 atm=18550 lot_size=50 sell_ce=18800 sell_pe=18300 buy_ce=19000 buy_pe=18100 credit=33.65 gross=1280.00 net=1080.00
+2026-06-19 14:45:00,499 INFO TRADED entry_expiry=2023-06-08 entry=2023-06-09 expiry=2023-06-15 atm=18650 lot_size=50 sell_ce=18900 sell_pe=18400 buy_ce=19100 buy_pe=18200 credit=26.20 gross=907.50 net=707.50
+2026-06-19 14:45:00,520 INFO TRADED entry_expiry=2023-06-15 entry=2023-06-16 expiry=2023-06-22 atm=18700 lot_size=50 sell_ce=18950 sell_pe=18450 buy_ce=19150 buy_pe=18250 credit=21.70 gross=687.50 net=487.50
+2026-06-19 14:45:00,525 INFO SKIPPED entry_expiry=2023-06-22 entry=2023-06-23 expiry=2023-06-28 atm=18750 reason=NIFTY_19000_CE_28_JUN_23.csv entry@2023-06-23T09:15:00+05:30; NIFTY_18500_PE_28_JUN_23.csv entry@2023-06-23T09:15:00+05:30; NIFTY_19200_CE_28_JUN_23.csv entry@2023-06-23T09:15:00+05:30; NIFTY_18300_PE_28_JUN_23.csv entry@2023-06-23T09:15:00+05:30
+2026-06-19 14:45:00,525 INFO SKIPPED entry_expiry=2023-06-28 reason=no_trading_day_between_expiries
+2026-06-19 14:45:00,547 INFO TRADED entry_expiry=2023-06-29 entry=2023-06-30 expiry=2023-07-06 atm=19100 lot_size=50 sell_ce=19350 sell_pe=18850 buy_ce=19550 buy_pe=18650 credit=27.85 gross=-6692.50 net=-6892.50
+2026-06-19 14:45:00,567 INFO TRADED entry_expiry=2023-07-06 entry=2023-07-07 expiry=2023-07-13 atm=19400 lot_size=50 sell_ce=19650 sell_pe=19150 buy_ce=19850 buy_pe=18950 credit=37.00 gross=1450.00 net=1250.00
+2026-06-19 14:45:00,588 INFO TRADED entry_expiry=2023-07-13 entry=2023-07-14 expiry=2023-07-20 atm=19500 lot_size=50 sell_ce=19750 sell_pe=19250 buy_ce=19950 buy_pe=19050 credit=19.35 gross=-9447.50 net=-9647.50
+2026-06-19 14:45:00,609 INFO TRADED entry_expiry=2023-07-20 entry=2023-07-21 expiry=2023-07-27 atm=19800 lot_size=50 sell_ce=20050 sell_pe=19550 buy_ce=20250 buy_pe=19350 credit=38.60 gross=1535.00 net=1335.00
+2026-06-19 14:45:00,630 INFO TRADED entry_expiry=2023-07-27 entry=2023-07-28 expiry=2023-08-03 atm=19650 lot_size=50 sell_ce=19900 sell_pe=19400 buy_ce=20100 buy_pe=19200 credit=48.20 gross=865.00 net=665.00
+2026-06-19 14:45:00,651 INFO TRADED entry_expiry=2023-08-03 entry=2023-08-04 expiry=2023-08-10 atm=19450 lot_size=50 sell_ce=19700 sell_pe=19200 buy_ce=19900 buy_pe=19000 credit=36.20 gross=1412.50 net=1212.50
+2026-06-19 14:45:00,668 INFO TRADED entry_expiry=2023-08-10 entry=2023-08-11 expiry=2023-08-17 atm=19550 lot_size=50 sell_ce=19800 sell_pe=19300 buy_ce=20000 buy_pe=19100 credit=29.80 gross=1087.50 net=887.50
+2026-06-19 14:45:00,689 INFO TRADED entry_expiry=2023-08-17 entry=2023-08-18 expiry=2023-08-24 atm=19300 lot_size=50 sell_ce=19550 sell_pe=19050 buy_ce=19750 buy_pe=18850 credit=22.70 gross=735.00 net=535.00
+2026-06-19 14:45:00,710 INFO TRADED entry_expiry=2023-08-24 entry=2023-08-25 expiry=2023-08-31 atm=19300 lot_size=50 sell_ce=19550 sell_pe=19050 buy_ce=19750 buy_pe=18850 credit=29.55 gross=1077.50 net=877.50
+2026-06-19 14:45:00,731 INFO TRADED entry_expiry=2023-08-31 entry=2023-09-01 expiry=2023-09-07 atm=19250 lot_size=50 sell_ce=19500 sell_pe=19000 buy_ce=19700 buy_pe=18800 credit=39.30 gross=-8415.00 net=-8615.00
+2026-06-19 14:45:00,752 INFO TRADED entry_expiry=2023-09-07 entry=2023-09-08 expiry=2023-09-14 atm=19750 lot_size=50 sell_ce=20000 sell_pe=19500 buy_ce=20200 buy_pe=19300 credit=23.40 gross=-4182.50 net=-4382.50
+2026-06-19 14:45:00,769 INFO SKIPPED entry_expiry=2023-09-14 entry=2023-09-15 expiry=2023-09-21 atm=20150 reason=NIFTY_19700_PE_21_SEP_23.csv exit@2023-09-21T15:15:00+05:30
+2026-06-19 14:45:00,792 INFO TRADED entry_expiry=2023-09-21 entry=2023-09-22 expiry=2023-09-28 atm=19750 lot_size=50 sell_ce=20000 sell_pe=19500 buy_ce=20200 buy_pe=19300 credit=35.50 gross=1327.50 net=1127.50
+2026-06-19 14:45:00,809 INFO TRADED entry_expiry=2023-09-28 entry=2023-09-29 expiry=2023-10-05 atm=19600 lot_size=50 sell_ce=19850 sell_pe=19350 buy_ce=20050 buy_pe=19150 credit=35.80 gross=1390.00 net=1190.00
+2026-06-19 14:45:00,831 INFO TRADED entry_expiry=2023-10-05 entry=2023-10-06 expiry=2023-10-12 atm=19600 lot_size=50 sell_ce=19850 sell_pe=19350 buy_ce=20050 buy_pe=19150 credit=27.00 gross=950.00 net=750.00
+2026-06-19 14:45:00,852 INFO TRADED entry_expiry=2023-10-12 entry=2023-10-13 expiry=2023-10-19 atm=19650 lot_size=50 sell_ce=19900 sell_pe=19400 buy_ce=20100 buy_pe=19200 credit=42.05 gross=1702.50 net=1502.50
+2026-06-19 14:45:00,869 INFO TRADED entry_expiry=2023-10-19 entry=2023-10-20 expiry=2023-10-26 atm=19550 lot_size=50 sell_ce=19800 sell_pe=19300 buy_ce=20000 buy_pe=19100 credit=37.15 gross=-8572.50 net=-8772.50
+2026-06-19 14:45:00,891 INFO TRADED entry_expiry=2023-10-26 entry=2023-10-27 expiry=2023-11-02 atm=18950 lot_size=50 sell_ce=19200 sell_pe=18700 buy_ce=19400 buy_pe=18500 credit=51.60 gross=2180.00 net=1980.00
+2026-06-19 14:45:00,912 INFO TRADED entry_expiry=2023-11-02 entry=2023-11-03 expiry=2023-11-09 atm=19250 lot_size=50 sell_ce=19500 sell_pe=19000 buy_ce=19700 buy_pe=18800 credit=30.95 gross=1147.50 net=947.50
+2026-06-19 14:45:00,930 INFO TRADED entry_expiry=2023-11-09 entry=2023-11-10 expiry=2023-11-16 atm=19350 lot_size=50 sell_ce=19600 sell_pe=19100 buy_ce=19800 buy_pe=18900 credit=27.10 gross=-6320.00 net=-6520.00
+2026-06-19 14:45:00,951 INFO TRADED entry_expiry=2023-11-16 entry=2023-11-17 expiry=2023-11-23 atm=19650 lot_size=50 sell_ce=19900 sell_pe=19400 buy_ce=20100 buy_pe=19200 credit=39.45 gross=1572.50 net=1372.50
+2026-06-19 14:45:00,969 INFO TRADED entry_expiry=2023-11-23 entry=2023-11-24 expiry=2023-11-30 atm=19800 lot_size=50 sell_ce=20050 sell_pe=19550 buy_ce=20250 buy_pe=19350 credit=21.80 gross=-3575.00 net=-3775.00
+2026-06-19 14:45:00,990 INFO TRADED entry_expiry=2023-11-30 entry=2023-12-01 expiry=2023-12-07 atm=20200 lot_size=50 sell_ce=20450 sell_pe=19950 buy_ce=20650 buy_pe=19750 credit=47.75 gross=-7955.00 net=-8155.00
+2026-06-19 14:45:01,011 INFO TRADED entry_expiry=2023-12-07 entry=2023-12-08 expiry=2023-12-14 atm=20950 lot_size=50 sell_ce=21200 sell_pe=20700 buy_ce=21400 buy_pe=20500 credit=43.65 gross=1777.50 net=1577.50
+2026-06-19 14:45:01,032 INFO TRADED entry_expiry=2023-12-14 entry=2023-12-15 expiry=2023-12-21 atm=21300 lot_size=50 sell_ce=21550 sell_pe=21050 buy_ce=21750 buy_pe=20850 credit=45.10 gross=1857.50 net=1657.50
+2026-06-19 14:45:01,049 INFO TRADED entry_expiry=2023-12-21 entry=2023-12-22 expiry=2023-12-28 atm=21300 lot_size=50 sell_ce=21550 sell_pe=21050 buy_ce=21750 buy_pe=20850 credit=58.55 gross=-7500.00 net=-7700.00
+2026-06-19 14:45:01,071 INFO SKIPPED entry_expiry=2023-12-28 entry=2023-12-29 expiry=2024-01-04 atm=21750 reason=NIFTY_22200_CE_04_JAN_24.csv exit@2024-01-04T15:15:00+05:30
+2026-06-19 14:45:01,092 INFO TRADED entry_expiry=2024-01-04 entry=2024-01-05 expiry=2024-01-11 atm=21700 lot_size=50 sell_ce=21950 sell_pe=21450 buy_ce=22150 buy_pe=21250 credit=43.90 gross=1795.00 net=1595.00
+2026-06-19 14:45:01,113 INFO TRADED entry_expiry=2024-01-11 entry=2024-01-12 expiry=2024-01-18 atm=21750 lot_size=50 sell_ce=22000 sell_pe=21500 buy_ce=22200 buy_pe=21300 credit=57.75 gross=372.50 net=172.50
+2026-06-19 14:45:01,135 INFO TRADED entry_expiry=2024-01-18 entry=2024-01-19 expiry=2024-01-25 atm=21600 lot_size=50 sell_ce=21850 sell_pe=21350 buy_ce=22050 buy_pe=21150 credit=73.80 gross=2345.00 net=2145.00
+2026-06-19 14:45:01,152 INFO TRADED entry_expiry=2024-01-25 entry=2024-01-29 expiry=2024-02-01 atm=21450 lot_size=50 sell_ce=21700 sell_pe=21200 buy_ce=21900 buy_pe=21000 credit=79.90 gross=3547.50 net=3347.50
+2026-06-19 14:45:01,174 INFO TRADED entry_expiry=2024-02-01 entry=2024-02-02 expiry=2024-02-08 atm=21800 lot_size=50 sell_ce=22050 sell_pe=21550 buy_ce=22250 buy_pe=21350 credit=66.80 gross=2935.00 net=2735.00
+2026-06-19 14:45:01,195 INFO TRADED entry_expiry=2024-02-08 entry=2024-02-09 expiry=2024-02-15 atm=21750 lot_size=50 sell_ce=22000 sell_pe=21500 buy_ce=22200 buy_pe=21300 credit=90.50 gross=4125.00 net=3925.00
+2026-06-19 14:45:01,216 INFO TRADED entry_expiry=2024-02-15 entry=2024-02-16 expiry=2024-02-22 atm=22000 lot_size=50 sell_ce=22250 sell_pe=21750 buy_ce=22450 buy_pe=21550 credit=61.55 gross=2660.00 net=2460.00
+2026-06-19 14:45:01,237 INFO TRADED entry_expiry=2024-02-22 entry=2024-02-23 expiry=2024-02-29 atm=22300 lot_size=50 sell_ce=22550 sell_pe=22050 buy_ce=22750 buy_pe=21850 credit=65.00 gross=-922.50 net=-1122.50
+2026-06-19 14:45:01,261 INFO TRADED entry_expiry=2024-02-29 entry=2024-03-01 expiry=2024-03-07 atm=22050 lot_size=50 sell_ce=22300 sell_pe=21800 buy_ce=22500 buy_pe=21600 credit=79.25 gross=-6277.50 net=-6477.50
+2026-06-19 14:45:01,278 INFO TRADED entry_expiry=2024-03-07 entry=2024-03-11 expiry=2024-03-14 atm=22500 lot_size=50 sell_ce=22750 sell_pe=22250 buy_ce=22950 buy_pe=22050 credit=58.30 gross=-2697.50 net=-2897.50
+2026-06-19 14:45:01,300 INFO TRADED entry_expiry=2024-03-14 entry=2024-03-15 expiry=2024-03-21 atm=22050 lot_size=50 sell_ce=22300 sell_pe=21800 buy_ce=22500 buy_pe=21600 credit=68.10 gross=3002.50 net=2802.50
+2026-06-19 14:45:01,318 INFO TRADED entry_expiry=2024-03-21 entry=2024-03-22 expiry=2024-03-28 atm=21950 lot_size=50 sell_ce=22200 sell_pe=21700 buy_ce=22400 buy_pe=21500 credit=65.65 gross=-1502.50 net=-1702.50
+2026-06-19 14:45:01,335 INFO TRADED entry_expiry=2024-03-28 entry=2024-04-01 expiry=2024-04-04 atm=22450 lot_size=50 sell_ce=22700 sell_pe=22200 buy_ce=22900 buy_pe=22000 credit=47.75 gross=1987.50 net=1787.50
+2026-06-19 14:45:01,352 INFO TRADED entry_expiry=2024-04-04 entry=2024-04-05 expiry=2024-04-10 atm=22500 lot_size=50 sell_ce=22750 sell_pe=22250 buy_ce=22950 buy_pe=22050 credit=53.20 gross=2007.50 net=1807.50
+2026-06-19 14:45:01,370 INFO TRADED entry_expiry=2024-04-10 entry=2024-04-12 expiry=2024-04-18 atm=22700 lot_size=50 sell_ce=22950 sell_pe=22450 buy_ce=23150 buy_pe=22250 credit=50.95 gross=-7885.00 net=-8085.00
+2026-06-19 14:45:01,392 INFO TRADED entry_expiry=2024-04-18 entry=2024-04-19 expiry=2024-04-25 atm=21850 lot_size=50 sell_ce=22100 sell_pe=21600 buy_ce=22300 buy_pe=21400 credit=92.45 gross=-5757.50 net=-5957.50
+2026-06-19 14:45:01,409 INFO TRADED entry_expiry=2024-04-25 entry=2024-04-26 expiry=2024-05-02 atm=22600 lot_size=25 sell_ce=22850 sell_pe=22350 buy_ce=23050 buy_pe=22150 credit=55.10 gross=1176.25 net=976.25
+2026-06-19 14:45:01,431 INFO TRADED entry_expiry=2024-05-02 entry=2024-05-03 expiry=2024-05-09 atm=22750 lot_size=25 sell_ce=23000 sell_pe=22500 buy_ce=23200 buy_pe=22300 credit=61.95 gross=-3676.25 net=-3876.25
+2026-06-19 14:45:01,452 INFO TRADED entry_expiry=2024-05-09 entry=2024-05-10 expiry=2024-05-16 atm=22000 lot_size=25 sell_ce=22250 sell_pe=21750 buy_ce=22450 buy_pe=21550 credit=79.95 gross=-1907.50 net=-2107.50
+2026-06-19 14:45:01,471 INFO TRADED entry_expiry=2024-05-16 entry=2024-05-17 expiry=2024-05-23 atm=22400 lot_size=25 sell_ce=22650 sell_pe=22150 buy_ce=22850 buy_pe=21950 credit=68.45 gross=-3505.00 net=-3705.00
+2026-06-19 14:45:01,493 INFO TRADED entry_expiry=2024-05-23 entry=2024-05-24 expiry=2024-05-30 atm=22950 lot_size=25 sell_ce=23200 sell_pe=22700 buy_ce=23400 buy_pe=22500 credit=77.35 gross=-3240.00 net=-3440.00
+2026-06-19 14:45:01,515 INFO TRADED entry_expiry=2024-05-30 entry=2024-05-31 expiry=2024-06-06 atm=22550 lot_size=25 sell_ce=22800 sell_pe=22300 buy_ce=23000 buy_pe=22100 credit=99.15 gross=1842.50 net=1642.50
+2026-06-19 14:45:01,536 INFO TRADED entry_expiry=2024-06-06 entry=2024-06-07 expiry=2024-06-13 atm=22800 lot_size=25 sell_ce=23050 sell_pe=22550 buy_ce=23250 buy_pe=22350 credit=105.70 gross=-2565.00 net=-2765.00
+2026-06-19 14:45:01,554 INFO TRADED entry_expiry=2024-06-13 entry=2024-06-14 expiry=2024-06-20 atm=23450 lot_size=25 sell_ce=23700 sell_pe=23200 buy_ce=23900 buy_pe=23000 credit=52.95 gross=1122.50 net=922.50
+2026-06-19 14:45:01,575 INFO TRADED entry_expiry=2024-06-20 entry=2024-06-21 expiry=2024-06-27 atm=23650 lot_size=25 sell_ce=23900 sell_pe=23400 buy_ce=24100 buy_pe=23200 credit=58.05 gross=-2238.75 net=-2438.75
+2026-06-19 14:45:01,597 INFO TRADED entry_expiry=2024-06-27 entry=2024-06-28 expiry=2024-07-04 atm=24100 lot_size=25 sell_ce=24350 sell_pe=23850 buy_ce=24550 buy_pe=23650 credit=73.20 gross=1630.00 net=1430.00
+2026-06-19 14:45:01,618 INFO TRADED entry_expiry=2024-07-04 entry=2024-07-05 expiry=2024-07-11 atm=24200 lot_size=25 sell_ce=24450 sell_pe=23950 buy_ce=24650 buy_pe=23750 credit=65.00 gross=1425.00 net=1225.00
+2026-06-19 14:45:01,644 INFO TRADED entry_expiry=2024-07-11 entry=2024-07-12 expiry=2024-07-18 atm=24400 lot_size=25 sell_ce=24650 sell_pe=24150 buy_ce=24850 buy_pe=23950 credit=51.35 gross=-2866.25 net=-3066.25
+2026-06-19 14:45:01,667 INFO TRADED entry_expiry=2024-07-18 entry=2024-07-19 expiry=2024-07-25 atm=24850 lot_size=25 sell_ce=25100 sell_pe=24600 buy_ce=25300 buy_pe=24400 credit=102.00 gross=-2560.00 net=-2760.00
+2026-06-19 14:45:01,688 INFO TRADED entry_expiry=2024-07-25 entry=2024-07-26 expiry=2024-08-01 atm=24400 lot_size=25 sell_ce=24650 sell_pe=24150 buy_ce=24850 buy_pe=23950 credit=72.55 gross=-3405.00 net=-3605.00
+2026-06-19 14:45:01,710 INFO TRADED entry_expiry=2024-08-01 entry=2024-08-02 expiry=2024-08-08 atm=24800 lot_size=25 sell_ce=25050 sell_pe=24550 buy_ce=25250 buy_pe=24350 credit=79.30 gross=-3200.00 net=-3400.00
+2026-06-19 14:45:01,727 INFO TRADED entry_expiry=2024-08-08 entry=2024-08-09 expiry=2024-08-14 atm=24400 lot_size=25 sell_ce=24650 sell_pe=24150 buy_ce=24850 buy_pe=23950 credit=67.55 gross=1271.25 net=1071.25
+2026-06-19 14:45:01,750 INFO TRADED entry_expiry=2024-08-14 entry=2024-08-16 expiry=2024-08-22 atm=24350 lot_size=25 sell_ce=24600 sell_pe=24100 buy_ce=24800 buy_pe=23900 credit=65.70 gross=-3546.25 net=-3746.25
+2026-06-19 14:45:01,771 INFO TRADED entry_expiry=2024-08-22 entry=2024-08-23 expiry=2024-08-29 atm=24850 lot_size=25 sell_ce=25100 sell_pe=24600 buy_ce=25300 buy_pe=24400 credit=61.95 gross=76.25 net=-123.75
+2026-06-19 14:45:01,793 INFO TRADED entry_expiry=2024-08-29 entry=2024-08-30 expiry=2024-09-05 atm=25250 lot_size=25 sell_ce=25500 sell_pe=25000 buy_ce=25700 buy_pe=24800 credit=59.20 gross=1281.25 net=1081.25
+2026-06-19 14:45:01,814 INFO TRADED entry_expiry=2024-09-05 entry=2024-09-06 expiry=2024-09-12 atm=25100 lot_size=25 sell_ce=25350 sell_pe=24850 buy_ce=25550 buy_pe=24650 credit=70.90 gross=65.00 net=-135.00
+2026-06-19 14:45:01,836 INFO TRADED entry_expiry=2024-09-12 entry=2024-09-13 expiry=2024-09-19 atm=25450 lot_size=25 sell_ce=25700 sell_pe=25200 buy_ce=25900 buy_pe=25000 credit=56.35 gross=1207.50 net=1007.50
+2026-06-19 14:45:01,857 INFO TRADED entry_expiry=2024-09-19 entry=2024-09-20 expiry=2024-09-26 atm=25550 lot_size=25 sell_ce=25800 sell_pe=25300 buy_ce=26000 buy_pe=25100 credit=58.85 gross=-3737.50 net=-3937.50
+2026-06-19 14:45:01,875 INFO TRADED entry_expiry=2024-09-26 entry=2024-09-27 expiry=2024-10-03 atm=26250 lot_size=25 sell_ce=26500 sell_pe=26000 buy_ce=26700 buy_pe=25800 credit=63.65 gross=-3635.00 net=-3835.00
+2026-06-19 14:45:01,897 INFO TRADED entry_expiry=2024-10-03 entry=2024-10-04 expiry=2024-10-10 atm=25200 lot_size=25 sell_ce=25450 sell_pe=24950 buy_ce=25650 buy_pe=24750 credit=87.50 gross=1987.50 net=1787.50
+2026-06-19 14:45:01,918 INFO TRADED entry_expiry=2024-10-10 entry=2024-10-11 expiry=2024-10-17 atm=25000 lot_size=25 sell_ce=25250 sell_pe=24750 buy_ce=25450 buy_pe=24550 credit=76.20 gross=1693.75 net=1493.75
+2026-06-19 14:45:01,939 INFO TRADED entry_expiry=2024-10-17 entry=2024-10-18 expiry=2024-10-24 atm=24650 lot_size=25 sell_ce=24900 sell_pe=24400 buy_ce=25100 buy_pe=24200 credit=73.85 gross=1626.25 net=1426.25
+2026-06-19 14:45:01,961 INFO TRADED entry_expiry=2024-10-24 entry=2024-10-25 expiry=2024-10-31 atm=24400 lot_size=25 sell_ce=24650 sell_pe=24150 buy_ce=24850 buy_pe=23950 credit=71.00 gross=1573.75 net=1373.75
+2026-06-19 14:45:01,961 INFO SKIPPED entry_expiry=2024-10-31 reason=missing_spot_entry_timestamp
+2026-06-19 14:45:01,982 INFO TRADED entry_expiry=2024-11-07 entry=2024-11-08 expiry=2024-11-14 atm=24200 lot_size=25 sell_ce=24450 sell_pe=23950 buy_ce=24650 buy_pe=23750 credit=85.15 gross=-3077.50 net=-3277.50
+2026-06-19 14:45:01,996 INFO TRADED entry_expiry=2024-11-14 entry=2024-11-18 expiry=2024-11-21 atm=23600 lot_size=25 sell_ce=23850 sell_pe=23350 buy_ce=24050 buy_pe=23150 credit=63.15 gross=1318.75 net=1118.75
+2026-06-19 14:45:02,016 INFO TRADED entry_expiry=2024-11-21 entry=2024-11-22 expiry=2024-11-28 atm=23400 lot_size=25 sell_ce=23650 sell_pe=23150 buy_ce=23850 buy_pe=22950 credit=83.30 gross=-3117.50 net=-3317.50
+2026-06-19 14:45:02,038 INFO TRADED entry_expiry=2024-11-28 entry=2024-11-29 expiry=2024-12-05 atm=23950 lot_size=25 sell_ce=24200 sell_pe=23700 buy_ce=24400 buy_pe=23500 credit=91.40 gross=-2923.75 net=-3123.75
+2026-06-19 14:45:02,059 INFO TRADED entry_expiry=2024-12-05 entry=2024-12-06 expiry=2024-12-12 atm=24750 lot_size=25 sell_ce=25000 sell_pe=24500 buy_ce=25200 buy_pe=24300 credit=97.90 gross=2243.75 net=2043.75
+2026-06-19 14:45:02,081 INFO TRADED entry_expiry=2024-12-12 entry=2024-12-13 expiry=2024-12-19 atm=24500 lot_size=25 sell_ce=24750 sell_pe=24250 buy_ce=24950 buy_pe=24050 credit=82.60 gross=-3120.00 net=-3320.00
+2026-06-19 14:45:02,099 INFO TRADED entry_expiry=2024-12-19 entry=2024-12-20 expiry=2024-12-26 atm=23950 lot_size=25 sell_ce=24200 sell_pe=23700 buy_ce=24400 buy_pe=23500 credit=91.75 gross=2092.50 net=1892.50
+2026-06-19 14:45:02,164 INFO TRADED entry_expiry=2024-12-26 entry=2024-12-27 expiry=2025-01-02 atm=23800 lot_size=25 sell_ce=24050 sell_pe=23550 buy_ce=24250 buy_pe=23350 credit=98.25 gross=-1187.50 net=-1387.50
+2026-06-19 14:45:02,233 INFO TRADED entry_expiry=2025-01-02 entry=2025-01-03 expiry=2025-01-09 atm=24200 lot_size=25 sell_ce=24450 sell_pe=23950 buy_ce=24650 buy_pe=23750 credit=91.25 gross=-2940.00 net=-3140.00
+2026-06-19 14:45:02,309 INFO TRADED entry_expiry=2025-01-09 entry=2025-01-10 expiry=2025-01-16 atm=23550 lot_size=25 sell_ce=23800 sell_pe=23300 buy_ce=24000 buy_pe=23100 credit=83.30 gross=1877.50 net=1677.50
+2026-06-19 14:45:02,411 INFO TRADED entry_expiry=2025-01-16 entry=2025-01-17 expiry=2025-01-23 atm=23300 lot_size=25 sell_ce=23550 sell_pe=23050 buy_ce=23750 buy_pe=22850 credit=74.85 gross=1671.25 net=1471.25
+2026-06-19 14:45:02,563 INFO TRADED entry_expiry=2025-01-23 entry=2025-01-24 expiry=2025-01-30 atm=23200 lot_size=25 sell_ce=23450 sell_pe=22950 buy_ce=23650 buy_pe=22750 credit=95.15 gross=2177.50 net=1977.50
+2026-06-19 14:45:02,640 INFO TRADED entry_expiry=2025-01-30 entry=2025-01-31 expiry=2025-02-06 atm=23300 lot_size=25 sell_ce=23550 sell_pe=23050 buy_ce=23750 buy_pe=22850 credit=143.30 gross=2310.00 net=2110.00
+2026-06-19 14:45:02,719 INFO TRADED entry_expiry=2025-02-06 entry=2025-02-07 expiry=2025-02-13 atm=23650 lot_size=25 sell_ce=23900 sell_pe=23400 buy_ce=24100 buy_pe=23200 credit=85.15 gross=-3075.00 net=-3275.00
+2026-06-19 14:45:02,784 INFO TRADED entry_expiry=2025-02-13 entry=2025-02-14 expiry=2025-02-20 atm=23100 lot_size=25 sell_ce=23350 sell_pe=22850 buy_ce=23550 buy_pe=22650 credit=93.60 gross=2137.50 net=1937.50
+2026-06-19 14:45:02,975 INFO TRADED entry_expiry=2025-02-20 entry=2025-02-21 expiry=2025-02-27 atm=22850 lot_size=25 sell_ce=23100 sell_pe=22600 buy_ce=23300 buy_pe=22400 credit=72.30 gross=342.50 net=142.50
+2026-06-19 14:45:03,081 INFO TRADED entry_expiry=2025-02-27 entry=2025-02-28 expiry=2025-03-06 atm=22450 lot_size=25 sell_ce=22700 sell_pe=22200 buy_ce=22900 buy_pe=22000 credit=52.30 gross=1106.25 net=906.25
+2026-06-19 14:45:03,146 INFO TRADED entry_expiry=2025-03-06 entry=2025-03-07 expiry=2025-03-13 atm=22500 lot_size=25 sell_ce=22750 sell_pe=22250 buy_ce=22950 buy_pe=22050 credit=85.50 gross=1937.50 net=1737.50
+2026-06-19 14:45:03,230 INFO TRADED entry_expiry=2025-03-13 entry=2025-03-17 expiry=2025-03-20 atm=22350 lot_size=25 sell_ce=22600 sell_pe=22100 buy_ce=22800 buy_pe=21900 credit=50.79 gross=-3927.75 net=-4127.75
+2026-06-19 14:45:03,472 INFO TRADED entry_expiry=2025-03-20 entry=2025-03-21 expiry=2025-03-27 atm=23150 lot_size=25 sell_ce=23400 sell_pe=22900 buy_ce=23600 buy_pe=22700 credit=50.50 gross=-3726.25 net=-3926.25
+2026-06-19 14:45:03,539 INFO TRADED entry_expiry=2025-03-27 entry=2025-03-28 expiry=2025-04-03 atm=23600 lot_size=25 sell_ce=23850 sell_pe=23350 buy_ce=24050 buy_pe=23150 credit=70.00 gross=-876.25 net=-1076.25
+2026-06-19 14:45:03,602 INFO TRADED entry_expiry=2025-04-03 entry=2025-04-04 expiry=2025-04-09 atm=23200 lot_size=25 sell_ce=23450 sell_pe=22950 buy_ce=23650 buy_pe=22750 credit=71.96 gross=-3408.50 net=-3608.50
+2026-06-19 14:45:03,651 INFO TRADED entry_expiry=2025-04-09 entry=2025-04-11 expiry=2025-04-17 atm=22700 lot_size=25 sell_ce=22950 sell_pe=22450 buy_ce=23150 buy_pe=22250 credit=125.25 gross=-1863.75 net=-2063.75
+2026-06-19 14:45:03,845 INFO TRADED entry_expiry=2025-04-17 entry=2025-04-21 expiry=2025-04-24 atm=23950 lot_size=25 sell_ce=24200 sell_pe=23700 buy_ce=24400 buy_pe=23500 credit=85.05 gross=746.25 net=546.25
+2026-06-19 14:45:03,904 INFO TRADED entry_expiry=2025-04-24 entry=2025-04-25 expiry=2025-04-30 atm=24300 lot_size=25 sell_ce=24550 sell_pe=24050 buy_ce=24750 buy_pe=23850 credit=60.95 gross=1325.00 net=1125.00
+2026-06-19 14:45:03,964 INFO TRADED entry_expiry=2025-04-30 entry=2025-05-02 expiry=2025-05-08 atm=24300 lot_size=25 sell_ce=24550 sell_pe=24050 buy_ce=24750 buy_pe=23850 credit=111.10 gross=2573.75 net=2373.75
+2026-06-19 14:45:04,043 INFO TRADED entry_expiry=2025-05-08 entry=2025-05-09 expiry=2025-05-15 atm=23950 lot_size=25 sell_ce=24200 sell_pe=23700 buy_ce=24400 buy_pe=23500 credit=138.00 gross=-1682.50 net=-1882.50
+2026-06-19 14:45:04,130 INFO TRADED entry_expiry=2025-05-15 entry=2025-05-16 expiry=2025-05-22 atm=25050 lot_size=25 sell_ce=25300 sell_pe=24800 buy_ce=25500 buy_pe=24600 credit=74.75 gross=-3210.25 net=-3410.25
+2026-06-19 14:45:04,313 INFO TRADED entry_expiry=2025-05-22 entry=2025-05-23 expiry=2025-05-29 atm=24650 lot_size=25 sell_ce=24900 sell_pe=24400 buy_ce=25100 buy_pe=24200 credit=87.40 gross=1970.00 net=1770.00
+2026-06-19 14:45:04,392 INFO TRADED entry_expiry=2025-05-29 entry=2025-05-30 expiry=2025-06-05 atm=24800 lot_size=25 sell_ce=25050 sell_pe=24550 buy_ce=25250 buy_pe=24350 credit=82.90 gross=1868.75 net=1668.75
+2026-06-19 14:45:04,480 INFO TRADED entry_expiry=2025-06-05 entry=2025-06-06 expiry=2025-06-12 atm=24750 lot_size=25 sell_ce=25000 sell_pe=24500 buy_ce=25200 buy_pe=24300 credit=96.55 gross=2211.25 net=2011.25
+2026-06-19 14:45:04,572 INFO TRADED entry_expiry=2025-06-12 entry=2025-06-13 expiry=2025-06-19 atm=24450 lot_size=25 sell_ce=24700 sell_pe=24200 buy_ce=24900 buy_pe=24000 credit=95.25 gross=-301.25 net=-501.25
+2026-06-19 14:45:04,748 INFO TRADED entry_expiry=2025-06-19 entry=2025-06-20 expiry=2025-06-26 atm=24800 lot_size=25 sell_ce=25050 sell_pe=24550 buy_ce=25250 buy_pe=24350 credit=88.10 gross=-2991.25 net=-3191.25
+2026-06-19 14:45:04,821 INFO TRADED entry_expiry=2025-06-26 entry=2025-06-27 expiry=2025-07-03 atm=25600 lot_size=25 sell_ce=25850 sell_pe=25350 buy_ce=26050 buy_pe=25150 credit=84.20 gross=1902.50 net=1702.50
+2026-06-19 14:45:04,917 INFO TRADED entry_expiry=2025-07-03 entry=2025-07-04 expiry=2025-07-10 atm=25450 lot_size=25 sell_ce=25700 sell_pe=25200 buy_ce=25900 buy_pe=25000 credit=70.80 gross=1567.50 net=1367.50
+2026-06-19 14:45:05,007 INFO TRADED entry_expiry=2025-07-10 entry=2025-07-11 expiry=2025-07-17 atm=25250 lot_size=25 sell_ce=25500 sell_pe=25000 buy_ce=25700 buy_pe=24800 credit=57.90 gross=1247.50 net=1047.50
+2026-06-19 14:45:05,113 INFO TRADED entry_expiry=2025-07-17 entry=2025-07-18 expiry=2025-07-24 atm=25100 lot_size=25 sell_ce=25350 sell_pe=24850 buy_ce=25550 buy_pe=24650 credit=57.00 gross=1223.75 net=1023.75
+2026-06-19 14:45:05,320 INFO TRADED entry_expiry=2025-07-24 entry=2025-07-25 expiry=2025-07-31 atm=25000 lot_size=25 sell_ce=25250 sell_pe=24750 buy_ce=25450 buy_pe=24550 credit=38.35 gross=743.75 net=543.75
+2026-06-19 14:45:05,406 INFO TRADED entry_expiry=2025-07-31 entry=2025-08-01 expiry=2025-08-07 atm=24750 lot_size=25 sell_ce=25000 sell_pe=24500 buy_ce=25200 buy_pe=24300 credit=81.80 gross=1846.25 net=1646.25
+2026-06-19 14:45:05,485 INFO TRADED entry_expiry=2025-08-07 entry=2025-08-08 expiry=2025-08-14 atm=24550 lot_size=25 sell_ce=24800 sell_pe=24300 buy_ce=25000 buy_pe=24100 credit=56.60 gross=1216.25 net=1016.25
+2026-06-19 14:45:05,565 INFO TRADED entry_expiry=2025-08-14 entry=2025-08-18 expiry=2025-08-21 atm=24950 lot_size=25 sell_ce=25200 sell_pe=24700 buy_ce=25400 buy_pe=24500 credit=63.55 gross=1386.25 net=1186.25
+2026-06-19 14:45:05,839 INFO TRADED entry_expiry=2025-08-21 entry=2025-08-22 expiry=2025-08-28 atm=25050 lot_size=25 sell_ce=25300 sell_pe=24800 buy_ce=25500 buy_pe=24600 credit=55.05 gross=-3830.00 net=-4030.00
+2026-06-19 14:45:05,927 INFO TRADED entry_expiry=2025-08-28 entry=2025-08-29 expiry=2025-09-02 atm=24450 lot_size=25 sell_ce=24700 sell_pe=24200 buy_ce=24900 buy_pe=24000 credit=33.25 gross=632.50 net=432.50
+2026-06-19 14:45:05,981 INFO TRADED entry_expiry=2025-09-02 entry=2025-09-03 expiry=2025-09-09 atm=24600 lot_size=25 sell_ce=24850 sell_pe=24350 buy_ce=25050 buy_pe=24150 credit=63.80 gross=978.75 net=778.75
+2026-06-19 14:45:06,041 INFO TRADED entry_expiry=2025-09-09 entry=2025-09-10 expiry=2025-09-16 atm=25000 lot_size=25 sell_ce=25250 sell_pe=24750 buy_ce=25450 buy_pe=24550 credit=47.50 gross=980.00 net=780.00
+2026-06-19 14:45:06,095 INFO TRADED entry_expiry=2025-09-16 entry=2025-09-17 expiry=2025-09-23 atm=25300 lot_size=25 sell_ce=25550 sell_pe=25050 buy_ce=25750 buy_pe=24850 credit=46.85 gross=970.00 net=770.00
+2026-06-19 14:45:06,333 INFO TRADED entry_expiry=2025-09-23 entry=2025-09-24 expiry=2025-09-30 atm=25100 lot_size=25 sell_ce=25350 sell_pe=24850 buy_ce=25550 buy_pe=24650 credit=56.25 gross=-3803.75 net=-4003.75
+2026-06-19 14:45:06,400 INFO TRADED entry_expiry=2025-09-30 entry=2025-10-01 expiry=2025-10-07 atm=24600 lot_size=25 sell_ce=24850 sell_pe=24350 buy_ce=25050 buy_pe=24150 credit=58.85 gross=-3720.00 net=-3920.00
+2026-06-19 14:45:06,472 INFO TRADED entry_expiry=2025-10-07 entry=2025-10-08 expiry=2025-10-14 atm=25100 lot_size=25 sell_ce=25350 sell_pe=24850 buy_ce=25550 buy_pe=24650 credit=44.95 gross=922.50 net=722.50
+2026-06-19 14:45:06,539 INFO TRADED entry_expiry=2025-10-14 entry=2025-10-15 expiry=2025-10-20 atm=25200 lot_size=25 sell_ce=25450 sell_pe=24950 buy_ce=25650 buy_pe=24750 credit=51.40 gross=-3885.00 net=-4085.00
+2026-06-19 14:45:06,539 INFO SKIPPED entry_expiry=2025-10-20 reason=missing_spot_entry_timestamp
+2026-06-19 14:45:06,597 INFO TRADED entry_expiry=2025-10-28 entry=2025-10-29 expiry=2025-11-04 atm=26000 lot_size=25 sell_ce=26250 sell_pe=25750 buy_ce=26450 buy_pe=25550 credit=80.70 gross=-1911.25 net=-2111.25
+2026-06-19 14:45:06,678 INFO TRADED entry_expiry=2025-11-04 entry=2025-11-06 expiry=2025-11-11 atm=25600 lot_size=25 sell_ce=25850 sell_pe=25350 buy_ce=26050 buy_pe=25150 credit=53.65 gross=1140.00 net=940.00
+2026-06-19 14:45:06,757 INFO TRADED entry_expiry=2025-11-11 entry=2025-11-12 expiry=2025-11-18 atm=25850 lot_size=25 sell_ce=26100 sell_pe=25600 buy_ce=26300 buy_pe=25400 credit=74.05 gross=1648.75 net=1448.75
+2026-06-19 14:45:06,903 INFO TRADED entry_expiry=2025-11-18 entry=2025-11-19 expiry=2025-11-25 atm=25900 lot_size=25 sell_ce=26150 sell_pe=25650 buy_ce=26350 buy_pe=25450 credit=76.10 gross=1703.75 net=1503.75
+2026-06-19 14:45:07,014 INFO TRADED entry_expiry=2025-11-25 entry=2025-11-26 expiry=2025-12-02 atm=25850 lot_size=25 sell_ce=26100 sell_pe=25600 buy_ce=26300 buy_pe=25400 credit=56.10 gross=1202.50 net=1002.50
+2026-06-19 14:45:07,095 INFO TRADED entry_expiry=2025-12-02 entry=2025-12-03 expiry=2025-12-09 atm=26000 lot_size=25 sell_ce=26250 sell_pe=25750 buy_ce=26450 buy_pe=25550 credit=69.80 gross=1542.50 net=1342.50
+2026-06-19 14:45:07,198 INFO TRADED entry_expiry=2025-12-09 entry=2025-12-10 expiry=2025-12-16 atm=25850 lot_size=25 sell_ce=26100 sell_pe=25600 buy_ce=26300 buy_pe=25400 credit=57.95 gross=1248.75 net=1048.75
+2026-06-19 14:45:07,293 INFO TRADED entry_expiry=2025-12-16 entry=2025-12-17 expiry=2025-12-23 atm=25900 lot_size=25 sell_ce=26150 sell_pe=25650 buy_ce=26350 buy_pe=25450 credit=48.10 gross=306.25 net=106.25
+2026-06-19 14:45:07,623 INFO TRADED entry_expiry=2025-12-23 entry=2025-12-24 expiry=2025-12-30 atm=26150 lot_size=25 sell_ce=26400 sell_pe=25900 buy_ce=26600 buy_pe=25700 credit=42.70 gross=866.25 net=666.25
+2026-06-19 14:45:07,721 INFO TRADED entry_expiry=2025-12-30 entry=2025-12-31 expiry=2026-01-06 atm=25950 lot_size=25 sell_ce=26200 sell_pe=25700 buy_ce=26400 buy_pe=25500 credit=45.80 gross=943.75 net=743.75
+2026-06-19 14:45:07,809 INFO TRADED entry_expiry=2026-01-06 entry=2026-01-07 expiry=2026-01-13 atm=26150 lot_size=25 sell_ce=26400 sell_pe=25900 buy_ce=26600 buy_pe=25700 credit=41.65 gross=-3172.50 net=-3372.50
+2026-06-19 14:45:07,884 INFO TRADED entry_expiry=2026-01-13 entry=2026-01-14 expiry=2026-01-20 atm=25650 lot_size=25 sell_ce=25900 sell_pe=25400 buy_ce=26100 buy_pe=25200 credit=40.10 gross=-3327.50 net=-3527.50
+2026-06-19 14:45:08,124 INFO TRADED entry_expiry=2026-01-20 entry=2026-01-21 expiry=2026-01-27 atm=25150 lot_size=25 sell_ce=25400 sell_pe=24900 buy_ce=25600 buy_pe=24700 credit=56.20 gross=1197.50 net=997.50
+2026-06-19 14:45:08,225 INFO TRADED entry_expiry=2026-01-27 entry=2026-01-28 expiry=2026-02-03 atm=25250 lot_size=25 sell_ce=25500 sell_pe=25000 buy_ce=25700 buy_pe=24800 credit=118.75 gross=-2212.50 net=-2412.50
+2026-06-19 14:45:08,314 INFO TRADED entry_expiry=2026-02-03 entry=2026-02-04 expiry=2026-02-10 atm=25700 lot_size=25 sell_ce=25950 sell_pe=25450 buy_ce=26150 buy_pe=25250 credit=96.00 gross=2191.25 net=1991.25
+2026-06-19 14:45:08,414 INFO TRADED entry_expiry=2026-02-10 entry=2026-02-11 expiry=2026-02-17 atm=26000 lot_size=25 sell_ce=26250 sell_pe=25750 buy_ce=26450 buy_pe=25550 credit=64.05 gross=813.75 net=613.75
+2026-06-19 14:45:08,685 INFO TRADED entry_expiry=2026-02-17 entry=2026-02-18 expiry=2026-02-24 atm=25750 lot_size=25 sell_ce=26000 sell_pe=25500 buy_ce=26200 buy_pe=25300 credit=62.40 gross=-601.25 net=-801.25
+2026-06-19 14:45:08,790 INFO TRADED entry_expiry=2026-02-24 entry=2026-02-25 expiry=2026-03-02 atm=25500 lot_size=25 sell_ce=25750 sell_pe=25250 buy_ce=25950 buy_pe=25050 credit=78.25 gross=-3287.50 net=-3487.50
+2026-06-19 14:45:08,836 INFO TRADED entry_expiry=2026-03-02 entry=2026-03-04 expiry=2026-03-10 atm=24400 lot_size=25 sell_ce=24650 sell_pe=24150 buy_ce=24850 buy_pe=23950 credit=106.50 gross=2460.00 net=2260.00
+2026-06-19 14:45:08,904 INFO TRADED entry_expiry=2026-03-10 entry=2026-03-11 expiry=2026-03-17 atm=24250 lot_size=25 sell_ce=24500 sell_pe=24000 buy_ce=24700 buy_pe=23800 credit=118.10 gross=-2213.75 net=-2413.75
+2026-06-19 14:45:08,937 INFO SKIPPED entry_expiry=2026-03-17 entry=2026-03-18 expiry=2026-03-24 atm=23650 reason=Missing: NIFTY_23900_CE_24_MAR_26.csv, NIFTY_24100_CE_24_MAR_26.csv
+2026-06-19 14:45:09,068 INFO SKIPPED entry_expiry=2026-03-24 entry=2026-03-25 expiry=2026-04-28 atm=23050 reason=NIFTY_22600_PE_28_APR_26.csv entry@2026-03-25T09:15:00+05:30; NIFTY_22600_PE_28_APR_26.csv exit@2026-04-28T15:15:00+05:30
+2026-06-19 14:45:09,138 INFO SKIPPED entry_expiry=2026-04-28 entry=2026-04-29 expiry=2026-05-05 atm=24100 reason=NIFTY_24350_CE_05_MAY_26.csv exit@2026-05-05T15:15:00+05:30; NIFTY_23850_PE_05_MAY_26.csv exit@2026-05-05T15:15:00+05:30; NIFTY_24550_CE_05_MAY_26.csv exit@2026-05-05T15:15:00+05:30; NIFTY_23650_PE_05_MAY_26.csv exit@2026-05-05T15:15:00+05:30
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-05-05 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-05-12 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-05-19 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-05-26 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-06-02 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-06-09 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-06-16 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-06-23 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-06-30 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-07-07 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-07-14 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-07-28 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-08-25 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,139 INFO SKIPPED entry_expiry=2026-09-29 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO SKIPPED entry_expiry=2026-12-29 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO SKIPPED entry_expiry=2027-03-30 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO SKIPPED entry_expiry=2027-06-29 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO SKIPPED entry_expiry=2027-12-28 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO SKIPPED entry_expiry=2028-06-27 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO SKIPPED entry_expiry=2028-12-26 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO SKIPPED entry_expiry=2029-06-26 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO SKIPPED entry_expiry=2029-12-24 reason=no_trading_day_between_expiries
+2026-06-19 14:45:09,140 INFO COMPLETED traded=192 skipped=158 total=350

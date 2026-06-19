@@ -1,0 +1,993 @@
+2026-06-20 00:00:30,936 INFO SKIPPED date=2022-05-05 expiry=2022-05-12 buy=PE sell=CE strike=16650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:30,950 INFO TRADED date=2022-05-06 expiry=2022-05-12 lot_size=50 lots=12 buy=CE sell=PE strike=16450 bought_gross=-53910.00 sold_gross=-58470.00 net=-112480.00
+2026-06-20 00:00:30,964 INFO TRADED date=2022-05-09 expiry=2022-05-12 lot_size=50 lots=12 buy=CE sell=PE strike=16300 bought_gross=780.00 sold_gross=6330.00 net=7010.00
+2026-06-20 00:00:30,979 INFO TRADED date=2022-05-10 expiry=2022-05-12 lot_size=50 lots=12 buy=PE sell=CE strike=16200 bought_gross=-27930.00 sold_gross=-16860.00 net=-44890.00
+2026-06-20 00:00:30,979 INFO TRADED date=2022-05-11 expiry=2022-05-12 lot_size=50 lots=12 buy=CE sell=PE strike=16200 bought_gross=-47250.00 sold_gross=-78390.00 net=-125740.00
+2026-06-20 00:00:30,992 INFO SKIPPED date=2022-05-12 expiry=2022-05-19 buy=PE sell=CE strike=15850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,004 INFO TRADED date=2022-05-13 expiry=2022-05-19 lot_size=50 lots=12 buy=PE sell=CE strike=15750 bought_gross=-15360.00 sold_gross=-13770.00 net=-29230.00
+2026-06-20 00:00:31,004 INFO TRADED date=2022-05-16 expiry=2022-05-19 lot_size=50 lots=12 buy=PE sell=CE strike=15850 bought_gross=-25500.00 sold_gross=-19980.00 net=-45580.00
+2026-06-20 00:00:31,017 INFO TRADED date=2022-05-17 expiry=2022-05-19 lot_size=50 lots=12 buy=CE sell=PE strike=16300 bought_gross=4740.00 sold_gross=12390.00 net=17030.00
+2026-06-20 00:00:31,032 INFO TRADED date=2022-05-18 expiry=2022-05-19 lot_size=50 lots=12 buy=PE sell=CE strike=16250 bought_gross=120870.00 sold_gross=40680.00 net=161450.00
+2026-06-20 00:00:31,046 INFO SKIPPED date=2022-05-19 expiry=2022-05-26 buy=PE sell=CE strike=15850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,060 INFO TRADED date=2022-05-20 expiry=2022-05-26 lot_size=50 lots=12 buy=CE sell=PE strike=16300 bought_gross=13920.00 sold_gross=15780.00 net=29600.00
+2026-06-20 00:00:31,074 INFO TRADED date=2022-05-23 expiry=2022-05-26 lot_size=50 lots=12 buy=PE sell=CE strike=16200 bought_gross=-16380.00 sold_gross=-10440.00 net=-26920.00
+2026-06-20 00:00:31,096 INFO TRADED date=2022-05-24 expiry=2022-05-26 lot_size=50 lots=12 buy=PE sell=CE strike=16150 bought_gross=-32790.00 sold_gross=-17520.00 net=-50410.00
+2026-06-20 00:00:31,124 INFO TRADED date=2022-05-25 expiry=2022-05-26 lot_size=50 lots=12 buy=PE sell=CE strike=16050 bought_gross=-43140.00 sold_gross=-10470.00 net=-53710.00
+2026-06-20 00:00:31,150 INFO SKIPPED date=2022-05-26 expiry=2022-06-02 buy=CE sell=PE strike=16200 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,166 INFO TRADED date=2022-05-27 expiry=2022-06-02 lot_size=50 lots=12 buy=CE sell=PE strike=16350 bought_gross=44760.00 sold_gross=47850.00 net=92510.00
+2026-06-20 00:00:31,181 INFO TRADED date=2022-05-30 expiry=2022-06-02 lot_size=50 lots=11 buy=CE sell=PE strike=16650 bought_gross=-25602.50 sold_gross=-21780.00 net=-47482.50
+2026-06-20 00:00:31,196 INFO TRADED date=2022-05-31 expiry=2022-06-02 lot_size=50 lots=12 buy=PE sell=CE strike=16600 bought_gross=-20400.00 sold_gross=-6600.00 net=-27100.00
+2026-06-20 00:00:31,212 INFO TRADED date=2022-06-01 expiry=2022-06-02 lot_size=50 lots=12 buy=PE sell=CE strike=16550 bought_gross=27180.00 sold_gross=29550.00 net=56630.00
+2026-06-20 00:00:31,227 INFO SKIPPED date=2022-06-02 expiry=2022-06-09 buy=CE sell=PE strike=16650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,243 INFO TRADED date=2022-06-03 expiry=2022-06-09 lot_size=50 lots=12 buy=PE sell=CE strike=16600 bought_gross=2970.00 sold_gross=12960.00 net=15830.00
+2026-06-20 00:00:31,257 INFO TRADED date=2022-06-06 expiry=2022-06-09 lot_size=50 lots=12 buy=CE sell=PE strike=16550 bought_gross=-41370.00 sold_gross=-34020.00 net=-75490.00
+2026-06-20 00:00:31,271 INFO TRADED date=2022-06-07 expiry=2022-06-09 lot_size=50 lots=12 buy=CE sell=PE strike=16400 bought_gross=7200.00 sold_gross=10350.00 net=17450.00
+2026-06-20 00:00:31,285 INFO TRADED date=2022-06-08 expiry=2022-06-09 lot_size=50 lots=12 buy=PE sell=CE strike=16350 bought_gross=17100.00 sold_gross=22380.00 net=39380.00
+2026-06-20 00:00:31,298 INFO SKIPPED date=2022-06-09 expiry=2022-06-16 buy=CE sell=PE strike=16500 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,312 INFO TRADED date=2022-06-10 expiry=2022-06-16 lot_size=50 lots=12 buy=PE sell=CE strike=16200 bought_gross=142050.00 sold_gross=70200.00 net=212150.00
+2026-06-20 00:00:31,326 INFO TRADED date=2022-06-13 expiry=2022-06-16 lot_size=50 lots=12 buy=CE sell=PE strike=15800 bought_gross=-19440.00 sold_gross=-12360.00 net=-31900.00
+2026-06-20 00:00:31,341 INFO TRADED date=2022-06-14 expiry=2022-06-16 lot_size=50 lots=12 buy=PE sell=CE strike=15750 bought_gross=-16830.00 sold_gross=-3960.00 net=-20890.00
+2026-06-20 00:00:31,355 INFO TRADED date=2022-06-15 expiry=2022-06-16 lot_size=50 lots=12 buy=PE sell=CE strike=15700 bought_gross=-60960.00 sold_gross=-25020.00 net=-86080.00
+2026-06-20 00:00:31,368 INFO SKIPPED date=2022-06-16 expiry=2022-06-23 buy=PE sell=CE strike=15350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,369 INFO TRADED date=2022-06-17 expiry=2022-06-23 lot_size=50 lots=13 buy=CE sell=PE strike=15350 bought_gross=-9750.00 sold_gross=520.00 net=-9330.00
+2026-06-20 00:00:31,369 INFO TRADED date=2022-06-20 expiry=2022-06-23 lot_size=50 lots=13 buy=CE sell=PE strike=15350 bought_gross=29152.50 sold_gross=34547.50 net=63600.00
+2026-06-20 00:00:31,382 INFO TRADED date=2022-06-21 expiry=2022-06-23 lot_size=50 lots=12 buy=CE sell=PE strike=15650 bought_gross=-28590.00 sold_gross=-35340.00 net=-64030.00
+2026-06-20 00:00:31,396 INFO TRADED date=2022-06-22 expiry=2022-06-23 lot_size=50 lots=12 buy=PE sell=CE strike=15400 bought_gross=-16950.00 sold_gross=5250.00 net=-11800.00
+2026-06-20 00:00:31,410 INFO SKIPPED date=2022-06-23 expiry=2022-06-30 buy=CE sell=PE strike=15600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,426 INFO TRADED date=2022-06-24 expiry=2022-06-30 lot_size=50 lots=12 buy=CE sell=PE strike=15700 bought_gross=55800.00 sold_gross=41970.00 net=97670.00
+2026-06-20 00:00:31,440 INFO TRADED date=2022-06-27 expiry=2022-06-30 lot_size=50 lots=12 buy=PE sell=CE strike=15850 bought_gross=20700.00 sold_gross=21540.00 net=42140.00
+2026-06-20 00:00:31,440 INFO TRADED date=2022-06-28 expiry=2022-06-30 lot_size=50 lots=12 buy=CE sell=PE strike=15850 bought_gross=-43530.00 sold_gross=-52680.00 net=-96310.00
+2026-06-20 00:00:31,454 INFO TRADED date=2022-06-29 expiry=2022-06-30 lot_size=50 lots=12 buy=PE sell=CE strike=15800 bought_gross=-27450.00 sold_gross=-14670.00 net=-42220.00
+2026-06-20 00:00:31,468 INFO SKIPPED date=2022-06-30 expiry=2022-07-07 buy=PE sell=CE strike=15750 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,469 INFO TRADED date=2022-07-01 expiry=2022-07-07 lot_size=50 lots=12 buy=CE sell=PE strike=15750 bought_gross=-6450.00 sold_gross=4320.00 net=-2230.00
+2026-06-20 00:00:31,483 INFO TRADED date=2022-07-04 expiry=2022-07-07 lot_size=50 lots=12 buy=CE sell=PE strike=15850 bought_gross=13890.00 sold_gross=22080.00 net=35870.00
+2026-06-20 00:00:31,497 INFO TRADED date=2022-07-05 expiry=2022-07-07 lot_size=50 lots=12 buy=PE sell=CE strike=15800 bought_gross=-22740.00 sold_gross=-20190.00 net=-43030.00
+2026-06-20 00:00:31,511 INFO TRADED date=2022-07-06 expiry=2022-07-07 lot_size=50 lots=12 buy=CE sell=PE strike=16000 bought_gross=34500.00 sold_gross=29670.00 net=64070.00
+2026-06-20 00:00:31,528 INFO SKIPPED date=2022-07-07 expiry=2022-07-14 buy=CE sell=PE strike=16150 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,542 INFO TRADED date=2022-07-08 expiry=2022-07-14 lot_size=50 lots=12 buy=CE sell=PE strike=16200 bought_gross=-32160.00 sold_gross=-23280.00 net=-55540.00
+2026-06-20 00:00:31,542 INFO TRADED date=2022-07-11 expiry=2022-07-14 lot_size=50 lots=12 buy=CE sell=PE strike=16200 bought_gross=-24660.00 sold_gross=-24120.00 net=-48880.00
+2026-06-20 00:00:31,556 INFO TRADED date=2022-07-12 expiry=2022-07-14 lot_size=50 lots=12 buy=PE sell=CE strike=16050 bought_gross=-31350.00 sold_gross=-23790.00 net=-55240.00
+2026-06-20 00:00:31,570 INFO TRADED date=2022-07-13 expiry=2022-07-14 lot_size=50 lots=12 buy=PE sell=CE strike=16000 bought_gross=-21210.00 sold_gross=2970.00 net=-18340.00
+2026-06-20 00:00:31,583 INFO SKIPPED date=2022-07-14 expiry=2022-07-21 buy=PE sell=CE strike=15950 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,596 INFO TRADED date=2022-07-15 expiry=2022-07-21 lot_size=50 lots=12 buy=CE sell=PE strike=16050 bought_gross=37350.00 sold_gross=33150.00 net=70400.00
+2026-06-20 00:00:31,611 INFO TRADED date=2022-07-18 expiry=2022-07-21 lot_size=50 lots=12 buy=CE sell=PE strike=16300 bought_gross=-23340.00 sold_gross=-21900.00 net=-45340.00
+2026-06-20 00:00:31,624 INFO TRADED date=2022-07-19 expiry=2022-07-21 lot_size=50 lots=12 buy=CE sell=PE strike=16350 bought_gross=58890.00 sold_gross=39330.00 net=98120.00
+2026-06-20 00:00:31,638 INFO TRADED date=2022-07-20 expiry=2022-07-21 lot_size=50 lots=12 buy=PE sell=CE strike=16500 bought_gross=-6780.00 sold_gross=4200.00 net=-2680.00
+2026-06-20 00:00:31,651 INFO SKIPPED date=2022-07-21 expiry=2022-07-28 buy=CE sell=PE strike=16600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,666 INFO TRADED date=2022-07-22 expiry=2022-07-28 lot_size=50 lots=11 buy=CE sell=PE strike=16700 bought_gross=-14465.00 sold_gross=-5582.50 net=-20147.50
+2026-06-20 00:00:31,670 INFO TRADED date=2022-07-25 expiry=2022-07-28 lot_size=50 lots=12 buy=PE sell=CE strike=16600 bought_gross=660.00 sold_gross=9090.00 net=9650.00
+2026-06-20 00:00:31,683 INFO TRADED date=2022-07-26 expiry=2022-07-28 lot_size=50 lots=12 buy=PE sell=CE strike=16450 bought_gross=-3720.00 sold_gross=3570.00 net=-250.00
+2026-06-20 00:00:31,698 INFO TRADED date=2022-07-27 expiry=2022-07-28 lot_size=50 lots=12 buy=CE sell=PE strike=16650 bought_gross=32160.00 sold_gross=36780.00 net=68840.00
+2026-06-20 00:00:31,714 INFO SKIPPED date=2022-07-28 expiry=2022-08-04 buy=CE sell=PE strike=16900 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,728 INFO TRADED date=2022-07-29 expiry=2022-08-04 lot_size=50 lots=11 buy=CE sell=PE strike=17150 bought_gross=7947.50 sold_gross=14850.00 net=22697.50
+2026-06-20 00:00:31,741 INFO TRADED date=2022-08-01 expiry=2022-08-04 lot_size=50 lots=11 buy=CE sell=PE strike=17350 bought_gross=-17077.50 sold_gross=-13970.00 net=-31147.50
+2026-06-20 00:00:31,754 INFO TRADED date=2022-08-02 expiry=2022-08-04 lot_size=50 lots=11 buy=CE sell=PE strike=17300 bought_gross=14960.00 sold_gross=14382.50 net=29242.50
+2026-06-20 00:00:31,766 INFO TRADED date=2022-08-03 expiry=2022-08-04 lot_size=50 lots=11 buy=CE sell=PE strike=17400 bought_gross=15757.50 sold_gross=20625.00 net=36282.50
+2026-06-20 00:00:31,776 INFO SKIPPED date=2022-08-04 expiry=2022-08-11 buy=CE sell=PE strike=17350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,788 INFO TRADED date=2022-08-05 expiry=2022-08-11 lot_size=50 lots=11 buy=PE sell=CE strike=17400 bought_gross=-13392.50 sold_gross=-2172.50 net=-15665.00
+2026-06-20 00:00:31,828 INFO TRADED date=2022-08-08 expiry=2022-08-11 lot_size=50 lots=11 buy=CE sell=PE strike=17550 bought_gross=-6022.50 sold_gross=5280.00 net=-842.50
+2026-06-20 00:00:31,838 INFO TRADED date=2022-08-10 expiry=2022-08-11 lot_size=50 lots=11 buy=CE sell=PE strike=17500 bought_gross=55742.50 sold_gross=29755.00 net=85397.50
+2026-06-20 00:00:31,848 INFO SKIPPED date=2022-08-11 expiry=2022-08-18 buy=PE sell=CE strike=17650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,858 INFO TRADED date=2022-08-12 expiry=2022-08-18 lot_size=50 lots=11 buy=CE sell=PE strike=17700 bought_gross=19387.50 sold_gross=24585.00 net=43872.50
+2026-06-20 00:00:31,868 INFO TRADED date=2022-08-16 expiry=2022-08-18 lot_size=50 lots=11 buy=CE sell=PE strike=17850 bought_gross=1787.50 sold_gross=8470.00 net=10157.50
+2026-06-20 00:00:31,878 INFO TRADED date=2022-08-17 expiry=2022-08-18 lot_size=50 lots=11 buy=CE sell=PE strike=17950 bought_gross=-18865.00 sold_gross=-5280.00 net=-24245.00
+2026-06-20 00:00:31,890 INFO SKIPPED date=2022-08-18 expiry=2022-08-25 buy=CE sell=PE strike=17950 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,903 INFO TRADED date=2022-08-19 expiry=2022-08-25 lot_size=50 lots=11 buy=PE sell=CE strike=17750 bought_gross=10395.00 sold_gross=24447.50 net=34742.50
+2026-06-20 00:00:31,915 INFO TRADED date=2022-08-22 expiry=2022-08-25 lot_size=50 lots=11 buy=PE sell=CE strike=17500 bought_gross=23210.00 sold_gross=29727.50 net=52837.50
+2026-06-20 00:00:31,928 INFO TRADED date=2022-08-23 expiry=2022-08-25 lot_size=50 lots=11 buy=CE sell=PE strike=17600 bought_gross=-18150.00 sold_gross=-17160.00 net=-35410.00
+2026-06-20 00:00:31,928 INFO TRADED date=2022-08-24 expiry=2022-08-25 lot_size=50 lots=11 buy=CE sell=PE strike=17600 bought_gross=17462.50 sold_gross=20680.00 net=38042.50
+2026-06-20 00:00:31,939 INFO SKIPPED date=2022-08-25 expiry=2022-09-01 buy=PE sell=CE strike=17500 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,948 INFO TRADED date=2022-08-26 expiry=2022-09-01 lot_size=50 lots=11 buy=PE sell=CE strike=17600 bought_gross=135245.00 sold_gross=63937.50 net=199082.50
+2026-06-20 00:00:31,958 INFO TRADED date=2022-08-29 expiry=2022-09-01 lot_size=50 lots=11 buy=CE sell=PE strike=17350 bought_gross=20267.50 sold_gross=36025.00 net=56192.50
+2026-06-20 00:00:31,968 INFO TRADED date=2022-08-30 expiry=2022-09-01 lot_size=50 lots=11 buy=CE sell=PE strike=17750 bought_gross=-41607.50 sold_gross=-71967.50 net=-113675.00
+2026-06-20 00:00:31,980 INFO SKIPPED date=2022-09-01 expiry=2022-09-08 buy=PE sell=CE strike=17550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:31,980 INFO TRADED date=2022-09-02 expiry=2022-09-08 lot_size=50 lots=11 buy=PE sell=CE strike=17550 bought_gross=-26977.50 sold_gross=-8195.00 net=-35272.50
+2026-06-20 00:00:31,994 INFO TRADED date=2022-09-05 expiry=2022-09-08 lot_size=50 lots=11 buy=CE sell=PE strike=17650 bought_gross=16637.50 sold_gross=24530.00 net=41067.50
+2026-06-20 00:00:31,994 INFO TRADED date=2022-09-06 expiry=2022-09-08 lot_size=50 lots=11 buy=PE sell=CE strike=17650 bought_gross=31845.00 sold_gross=28105.00 net=59850.00
+2026-06-20 00:00:31,994 INFO TRADED date=2022-09-07 expiry=2022-09-08 lot_size=50 lots=11 buy=CE sell=PE strike=17650 bought_gross=22495.00 sold_gross=33275.00 net=55670.00
+2026-06-20 00:00:32,006 INFO SKIPPED date=2022-09-08 expiry=2022-09-15 buy=CE sell=PE strike=17800 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,018 INFO TRADED date=2022-09-09 expiry=2022-09-15 lot_size=50 lots=11 buy=PE sell=CE strike=17850 bought_gross=-28160.00 sold_gross=-15345.00 net=-43605.00
+2026-06-20 00:00:32,030 INFO TRADED date=2022-09-12 expiry=2022-09-15 lot_size=50 lots=11 buy=PE sell=CE strike=17950 bought_gross=-30057.50 sold_gross=-19085.00 net=-49242.50
+2026-06-20 00:00:32,043 INFO TRADED date=2022-09-13 expiry=2022-09-15 lot_size=50 lots=11 buy=CE sell=PE strike=18050 bought_gross=-49225.00 sold_gross=-61957.50 net=-111282.50
+2026-06-20 00:00:32,056 INFO TRADED date=2022-09-14 expiry=2022-09-15 lot_size=50 lots=11 buy=CE sell=PE strike=18000 bought_gross=14877.50 sold_gross=29562.50 net=44340.00
+2026-06-20 00:00:32,069 INFO SKIPPED date=2022-09-15 expiry=2022-09-22 buy=PE sell=CE strike=17850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,081 INFO TRADED date=2022-09-16 expiry=2022-09-22 lot_size=50 lots=11 buy=PE sell=CE strike=17550 bought_gross=3960.00 sold_gross=14712.50 net=18572.50
+2026-06-20 00:00:32,093 INFO TRADED date=2022-09-19 expiry=2022-09-22 lot_size=50 lots=11 buy=CE sell=PE strike=17650 bought_gross=30387.50 sold_gross=42432.50 net=72720.00
+2026-06-20 00:00:32,105 INFO TRADED date=2022-09-20 expiry=2022-09-22 lot_size=50 lots=11 buy=PE sell=CE strike=17800 bought_gross=-7590.00 sold_gross=-9790.00 net=-17480.00
+2026-06-20 00:00:32,118 INFO TRADED date=2022-09-21 expiry=2022-09-22 lot_size=50 lots=11 buy=PE sell=CE strike=17700 bought_gross=2612.50 sold_gross=47492.50 net=50005.00
+2026-06-20 00:00:32,128 INFO SKIPPED date=2022-09-22 expiry=2022-09-29 buy=CE sell=PE strike=17650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,142 INFO TRADED date=2022-09-23 expiry=2022-09-29 lot_size=50 lots=11 buy=PE sell=CE strike=17350 bought_gross=42680.00 sold_gross=41222.50 net=83802.50
+2026-06-20 00:00:32,153 INFO TRADED date=2022-09-26 expiry=2022-09-29 lot_size=50 lots=11 buy=PE sell=CE strike=17050 bought_gross=-20542.50 sold_gross=-13832.50 net=-34475.00
+2026-06-20 00:00:32,153 INFO TRADED date=2022-09-27 expiry=2022-09-29 lot_size=50 lots=11 buy=CE sell=PE strike=17050 bought_gross=-40067.50 sold_gross=-53900.00 net=-94067.50
+2026-06-20 00:00:32,164 INFO TRADED date=2022-09-28 expiry=2022-09-29 lot_size=50 lots=11 buy=PE sell=CE strike=16850 bought_gross=-41607.50 sold_gross=-54065.00 net=-95772.50
+2026-06-20 00:00:32,174 INFO SKIPPED date=2022-09-29 expiry=2022-10-06 buy=PE sell=CE strike=16850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,183 INFO TRADED date=2022-09-30 expiry=2022-10-06 lot_size=50 lots=11 buy=CE sell=PE strike=17100 bought_gross=-8690.00 sold_gross=-11385.00 net=-20175.00
+2026-06-20 00:00:32,193 INFO TRADED date=2022-10-03 expiry=2022-10-06 lot_size=50 lots=11 buy=PE sell=CE strike=16900 bought_gross=-64542.50 sold_gross=-73260.00 net=-137902.50
+2026-06-20 00:00:32,203 INFO TRADED date=2022-10-04 expiry=2022-10-06 lot_size=50 lots=11 buy=CE sell=PE strike=17300 bought_gross=29507.50 sold_gross=38445.00 net=67852.50
+2026-06-20 00:00:32,216 INFO SKIPPED date=2022-10-06 expiry=2022-10-13 buy=PE sell=CE strike=17300 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,216 INFO TRADED date=2022-10-07 expiry=2022-10-13 lot_size=50 lots=11 buy=CE sell=PE strike=17300 bought_gross=-51397.50 sold_gross=-61737.50 net=-113235.00
+2026-06-20 00:00:32,229 INFO TRADED date=2022-10-10 expiry=2022-10-13 lot_size=50 lots=11 buy=CE sell=PE strike=17250 bought_gross=-10972.50 sold_gross=-8332.50 net=-19405.00
+2026-06-20 00:00:32,241 INFO TRADED date=2022-10-11 expiry=2022-10-13 lot_size=50 lots=11 buy=PE sell=CE strike=16950 bought_gross=-16307.50 sold_gross=-9432.50 net=-25840.00
+2026-06-20 00:00:32,253 INFO TRADED date=2022-10-12 expiry=2022-10-13 lot_size=50 lots=11 buy=CE sell=PE strike=17150 bought_gross=-24145.00 sold_gross=-4537.50 net=-28782.50
+2026-06-20 00:00:32,264 INFO SKIPPED date=2022-10-13 expiry=2022-10-20 buy=PE sell=CE strike=17000 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,277 INFO TRADED date=2022-10-14 expiry=2022-10-20 lot_size=50 lots=11 buy=PE sell=CE strike=17200 bought_gross=797.50 sold_gross=10395.00 net=11092.50
+2026-06-20 00:00:32,291 INFO TRADED date=2022-10-17 expiry=2022-10-20 lot_size=50 lots=11 buy=CE sell=PE strike=17300 bought_gross=37317.50 sold_gross=37317.50 net=74535.00
+2026-06-20 00:00:32,307 INFO TRADED date=2022-10-18 expiry=2022-10-20 lot_size=50 lots=11 buy=CE sell=PE strike=17500 bought_gross=4510.00 sold_gross=13695.00 net=18105.00
+2026-06-20 00:00:32,308 INFO TRADED date=2022-10-19 expiry=2022-10-20 lot_size=50 lots=11 buy=PE sell=CE strike=17500 bought_gross=19690.00 sold_gross=29342.50 net=48932.50
+2026-06-20 00:00:32,317 INFO SKIPPED date=2022-10-20 expiry=2022-10-27 buy=CE sell=PE strike=17550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,327 INFO SKIPPED date=2022-10-21 expiry=2022-10-27 buy=PE sell=CE strike=17600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,328 INFO SKIPPED date=2022-10-24 reason=missing_spot_signal_timestamp
+2026-06-20 00:00:32,336 INFO TRADED date=2022-10-25 expiry=2022-10-27 lot_size=50 lots=11 buy=PE sell=CE strike=17650 bought_gross=-31157.50 sold_gross=-29342.50 net=-60600.00
+2026-06-20 00:00:32,349 INFO SKIPPED date=2022-10-27 expiry=2022-11-03 buy=CE sell=PE strike=17750 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,362 INFO TRADED date=2022-10-28 expiry=2022-11-03 lot_size=50 lots=11 buy=CE sell=PE strike=17800 bought_gross=32752.50 sold_gross=40562.50 net=73215.00
+2026-06-20 00:00:32,376 INFO TRADED date=2022-10-31 expiry=2022-11-03 lot_size=50 lots=11 buy=CE sell=PE strike=18000 bought_gross=23072.50 sold_gross=26042.50 net=49015.00
+2026-06-20 00:00:32,389 INFO TRADED date=2022-11-01 expiry=2022-11-03 lot_size=50 lots=11 buy=CE sell=PE strike=18150 bought_gross=-7892.50 sold_gross=-3327.50 net=-11320.00
+2026-06-20 00:00:32,407 INFO TRADED date=2022-11-02 expiry=2022-11-03 lot_size=50 lots=11 buy=PE sell=CE strike=18050 bought_gross=5857.50 sold_gross=41882.50 net=47640.00
+2026-06-20 00:00:32,419 INFO SKIPPED date=2022-11-03 expiry=2022-11-10 buy=PE sell=CE strike=18050 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,432 INFO TRADED date=2022-11-04 expiry=2022-11-10 lot_size=50 lots=11 buy=CE sell=PE strike=18150 bought_gross=17270.00 sold_gross=29287.50 net=46457.50
+2026-06-20 00:00:32,444 INFO TRADED date=2022-11-07 expiry=2022-11-10 lot_size=50 lots=10 buy=CE sell=PE strike=18200 bought_gross=5400.00 sold_gross=14200.00 net=19500.00
+2026-06-20 00:00:32,455 INFO TRADED date=2022-11-09 expiry=2022-11-10 lot_size=50 lots=11 buy=PE sell=CE strike=18100 bought_gross=6627.50 sold_gross=24915.00 net=31442.50
+2026-06-20 00:00:32,468 INFO SKIPPED date=2022-11-10 expiry=2022-11-17 buy=CE sell=PE strike=18050 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,481 INFO TRADED date=2022-11-11 expiry=2022-11-17 lot_size=50 lots=10 buy=CE sell=PE strike=18350 bought_gross=-11850.00 sold_gross=275.00 net=-11675.00
+2026-06-20 00:00:32,497 INFO TRADED date=2022-11-14 expiry=2022-11-17 lot_size=50 lots=10 buy=PE sell=CE strike=18300 bought_gross=-16400.00 sold_gross=-10525.00 net=-27025.00
+2026-06-20 00:00:32,511 INFO TRADED date=2022-11-15 expiry=2022-11-17 lot_size=50 lots=10 buy=CE sell=PE strike=18400 bought_gross=-15000.00 sold_gross=-8125.00 net=-23225.00
+2026-06-20 00:00:32,511 INFO TRADED date=2022-11-16 expiry=2022-11-17 lot_size=50 lots=10 buy=CE sell=PE strike=18400 bought_gross=-15425.00 sold_gross=-3250.00 net=-18775.00
+2026-06-20 00:00:32,526 INFO SKIPPED date=2022-11-17 expiry=2022-11-24 buy=PE sell=CE strike=18350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,542 INFO TRADED date=2022-11-18 expiry=2022-11-24 lot_size=50 lots=10 buy=CE sell=PE strike=18300 bought_gross=-29575.00 sold_gross=-18175.00 net=-47850.00
+2026-06-20 00:00:32,556 INFO TRADED date=2022-11-21 expiry=2022-11-24 lot_size=50 lots=11 buy=PE sell=CE strike=18150 bought_gross=-7672.50 sold_gross=-550.00 net=-8322.50
+2026-06-20 00:00:32,569 INFO TRADED date=2022-11-22 expiry=2022-11-24 lot_size=50 lots=10 buy=CE sell=PE strike=18250 bought_gross=6875.00 sold_gross=8675.00 net=15450.00
+2026-06-20 00:00:32,569 INFO TRADED date=2022-11-23 expiry=2022-11-24 lot_size=50 lots=10 buy=PE sell=CE strike=18250 bought_gross=-12325.00 sold_gross=-8350.00 net=-20775.00
+2026-06-20 00:00:32,586 INFO SKIPPED date=2022-11-24 expiry=2022-12-01 buy=CE sell=PE strike=18500 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,586 INFO TRADED date=2022-11-25 expiry=2022-12-01 lot_size=50 lots=10 buy=CE sell=PE strike=18500 bought_gross=-13575.00 sold_gross=-9200.00 net=-22875.00
+2026-06-20 00:00:32,600 INFO TRADED date=2022-11-28 expiry=2022-12-01 lot_size=50 lots=10 buy=PE sell=CE strike=18550 bought_gross=-6525.00 sold_gross=-5700.00 net=-12325.00
+2026-06-20 00:00:32,614 INFO TRADED date=2022-11-29 expiry=2022-12-01 lot_size=50 lots=10 buy=PE sell=CE strike=18600 bought_gross=-9100.00 sold_gross=-13100.00 net=-22300.00
+2026-06-20 00:00:32,628 INFO TRADED date=2022-11-30 expiry=2022-12-01 lot_size=50 lots=10 buy=CE sell=PE strike=18800 bought_gross=16350.00 sold_gross=16375.00 net=32625.00
+2026-06-20 00:00:32,643 INFO SKIPPED date=2022-12-01 expiry=2022-12-08 buy=PE sell=CE strike=18800 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,658 INFO TRADED date=2022-12-02 expiry=2022-12-08 lot_size=50 lots=10 buy=CE sell=PE strike=18700 bought_gross=-3200.00 sold_gross=400.00 net=-2900.00
+2026-06-20 00:00:32,658 INFO TRADED date=2022-12-05 expiry=2022-12-08 lot_size=50 lots=10 buy=CE sell=PE strike=18700 bought_gross=-17700.00 sold_gross=-13250.00 net=-31050.00
+2026-06-20 00:00:32,671 INFO TRADED date=2022-12-06 expiry=2022-12-08 lot_size=50 lots=10 buy=CE sell=PE strike=18650 bought_gross=-6825.00 sold_gross=-5125.00 net=-12050.00
+2026-06-20 00:00:32,687 INFO TRADED date=2022-12-07 expiry=2022-12-08 lot_size=50 lots=10 buy=PE sell=CE strike=18550 bought_gross=-2750.00 sold_gross=8825.00 net=5975.00
+2026-06-20 00:00:32,701 INFO SKIPPED date=2022-12-08 expiry=2022-12-15 buy=CE sell=PE strike=18600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,715 INFO TRADED date=2022-12-09 expiry=2022-12-15 lot_size=50 lots=10 buy=PE sell=CE strike=18500 bought_gross=17375.00 sold_gross=18825.00 net=36100.00
+2026-06-20 00:00:32,715 INFO TRADED date=2022-12-12 expiry=2022-12-15 lot_size=50 lots=10 buy=CE sell=PE strike=18500 bought_gross=825.00 sold_gross=2125.00 net=2850.00
+2026-06-20 00:00:32,715 INFO TRADED date=2022-12-13 expiry=2022-12-15 lot_size=50 lots=10 buy=CE sell=PE strike=18600 bought_gross=6525.00 sold_gross=12775.00 net=19200.00
+2026-06-20 00:00:32,729 INFO TRADED date=2022-12-14 expiry=2022-12-15 lot_size=50 lots=10 buy=PE sell=CE strike=18650 bought_gross=-4750.00 sold_gross=15025.00 net=10175.00
+2026-06-20 00:00:32,744 INFO SKIPPED date=2022-12-15 expiry=2022-12-22 buy=PE sell=CE strike=18400 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,757 INFO TRADED date=2022-12-16 expiry=2022-12-22 lot_size=50 lots=10 buy=PE sell=CE strike=18250 bought_gross=-2600.00 sold_gross=50.00 net=-2650.00
+2026-06-20 00:00:32,835 INFO TRADED date=2022-12-19 expiry=2022-12-22 lot_size=50 lots=10 buy=CE sell=PE strike=18450 bought_gross=-22650.00 sold_gross=-29300.00 net=-52050.00
+2026-06-20 00:00:32,835 INFO TRADED date=2022-12-20 expiry=2022-12-22 lot_size=50 lots=10 buy=CE sell=PE strike=18400 bought_gross=14250.00 sold_gross=12550.00 net=26700.00
+2026-06-20 00:00:32,849 INFO TRADED date=2022-12-21 expiry=2022-12-22 lot_size=50 lots=10 buy=PE sell=CE strike=18200 bought_gross=-12075.00 sold_gross=-21400.00 net=-33575.00
+2026-06-20 00:00:32,863 INFO SKIPPED date=2022-12-22 expiry=2022-12-29 buy=PE sell=CE strike=18100 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,876 INFO TRADED date=2022-12-23 expiry=2022-12-29 lot_size=50 lots=11 buy=PE sell=CE strike=17800 bought_gross=-2832.50 sold_gross=-687.50 net=-3620.00
+2026-06-20 00:00:32,890 INFO TRADED date=2022-12-26 expiry=2022-12-29 lot_size=50 lots=11 buy=CE sell=PE strike=18000 bought_gross=16115.00 sold_gross=13585.00 net=29600.00
+2026-06-20 00:00:32,904 INFO TRADED date=2022-12-27 expiry=2022-12-29 lot_size=50 lots=11 buy=CE sell=PE strike=18150 bought_gross=-13145.00 sold_gross=-18397.50 net=-31642.50
+2026-06-20 00:00:32,905 INFO TRADED date=2022-12-28 expiry=2022-12-29 lot_size=50 lots=11 buy=PE sell=CE strike=18100 bought_gross=16885.00 sold_gross=17627.50 net=34412.50
+2026-06-20 00:00:32,919 INFO SKIPPED date=2022-12-29 expiry=2023-01-05 buy=CE sell=PE strike=18200 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,935 INFO TRADED date=2022-12-30 expiry=2023-01-05 lot_size=50 lots=11 buy=PE sell=CE strike=18100 bought_gross=-137.50 sold_gross=-990.00 net=-1227.50
+2026-06-20 00:00:32,935 INFO TRADED date=2023-01-02 expiry=2023-01-05 lot_size=50 lots=10 buy=CE sell=PE strike=18200 bought_gross=-9600.00 sold_gross=-9200.00 net=-18900.00
+2026-06-20 00:00:32,948 INFO TRADED date=2023-01-03 expiry=2023-01-05 lot_size=50 lots=10 buy=CE sell=PE strike=18250 bought_gross=-10825.00 sold_gross=-8275.00 net=-19200.00
+2026-06-20 00:00:32,962 INFO TRADED date=2023-01-04 expiry=2023-01-05 lot_size=50 lots=11 buy=PE sell=CE strike=18050 bought_gross=-8662.50 sold_gross=-3960.00 net=-12722.50
+2026-06-20 00:00:32,975 INFO SKIPPED date=2023-01-05 expiry=2023-01-12 buy=CE sell=PE strike=18000 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:32,989 INFO TRADED date=2023-01-06 expiry=2023-01-12 lot_size=50 lots=11 buy=PE sell=CE strike=17850 bought_gross=-20212.50 sold_gross=-24530.00 net=-44842.50
+2026-06-20 00:00:33,003 INFO TRADED date=2023-01-09 expiry=2023-01-12 lot_size=50 lots=11 buy=CE sell=PE strike=18100 bought_gross=-5967.50 sold_gross=-10587.50 net=-16655.00
+2026-06-20 00:00:33,020 INFO TRADED date=2023-01-10 expiry=2023-01-12 lot_size=50 lots=11 buy=PE sell=CE strike=17950 bought_gross=9955.00 sold_gross=4125.00 net=13980.00
+2026-06-20 00:00:33,047 INFO TRADED date=2023-01-11 expiry=2023-01-12 lot_size=50 lots=11 buy=PE sell=CE strike=17900 bought_gross=-2970.00 sold_gross=-3767.50 net=-6837.50
+2026-06-20 00:00:33,061 INFO SKIPPED date=2023-01-12 expiry=2023-01-19 buy=CE sell=PE strike=17850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,074 INFO TRADED date=2023-01-13 expiry=2023-01-19 lot_size=50 lots=11 buy=CE sell=PE strike=17950 bought_gross=19442.50 sold_gross=16527.50 net=35870.00
+2026-06-20 00:00:33,088 INFO TRADED date=2023-01-16 expiry=2023-01-19 lot_size=50 lots=11 buy=PE sell=CE strike=17900 bought_gross=2750.00 sold_gross=2805.00 net=5455.00
+2026-06-20 00:00:33,103 INFO TRADED date=2023-01-17 expiry=2023-01-19 lot_size=50 lots=11 buy=CE sell=PE strike=18050 bought_gross=-3630.00 sold_gross=-2392.50 net=-6122.50
+2026-06-20 00:00:33,116 INFO TRADED date=2023-01-18 expiry=2023-01-19 lot_size=50 lots=11 buy=CE sell=PE strike=18150 bought_gross=-17600.00 sold_gross=-14657.50 net=-32357.50
+2026-06-20 00:00:33,130 INFO SKIPPED date=2023-01-19 expiry=2023-01-25 buy=PE sell=CE strike=18100 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,141 INFO TRADED date=2023-01-20 expiry=2023-01-25 lot_size=50 lots=11 buy=PE sell=CE strike=18050 bought_gross=-21202.50 sold_gross=-16720.00 net=-38022.50
+2026-06-20 00:00:33,141 INFO TRADED date=2023-01-23 expiry=2023-01-25 lot_size=50 lots=11 buy=PE sell=CE strike=18100 bought_gross=-10725.00 sold_gross=-14217.50 net=-25042.50
+2026-06-20 00:00:33,141 INFO TRADED date=2023-01-24 expiry=2023-01-25 lot_size=50 lots=11 buy=PE sell=CE strike=18100 bought_gross=5912.50 sold_gross=12127.50 net=17940.00
+2026-06-20 00:00:33,155 INFO SKIPPED date=2023-01-25 expiry=2023-02-02 buy=PE sell=CE strike=17900 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,168 INFO TRADED date=2023-01-27 expiry=2023-02-02 lot_size=50 lots=11 buy=PE sell=CE strike=17600 bought_gross=49252.50 sold_gross=33632.50 net=82785.00
+2026-06-20 00:00:33,182 INFO TRADED date=2023-01-30 expiry=2023-02-02 lot_size=50 lots=11 buy=CE sell=PE strike=17650 bought_gross=9102.50 sold_gross=1457.50 net=10460.00
+2026-06-20 00:00:33,196 INFO TRADED date=2023-01-31 expiry=2023-02-02 lot_size=50 lots=11 buy=CE sell=PE strike=17700 bought_gross=18810.00 sold_gross=17627.50 net=36337.50
+2026-06-20 00:00:33,196 INFO TRADED date=2023-02-01 expiry=2023-02-02 lot_size=50 lots=11 buy=PE sell=CE strike=17600 bought_gross=25190.00 sold_gross=23375.00 net=48465.00
+2026-06-20 00:00:33,212 INFO SKIPPED date=2023-02-02 expiry=2023-02-09 buy=CE sell=PE strike=17600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,226 INFO TRADED date=2023-02-03 expiry=2023-02-09 lot_size=50 lots=11 buy=CE sell=PE strike=17850 bought_gross=-5665.00 sold_gross=-330.00 net=-6095.00
+2026-06-20 00:00:33,240 INFO TRADED date=2023-02-06 expiry=2023-02-09 lot_size=50 lots=11 buy=CE sell=PE strike=17750 bought_gross=5142.50 sold_gross=7507.50 net=12550.00
+2026-06-20 00:00:33,255 INFO TRADED date=2023-02-07 expiry=2023-02-09 lot_size=50 lots=11 buy=PE sell=CE strike=17700 bought_gross=-7480.00 sold_gross=-7205.00 net=-14785.00
+2026-06-20 00:00:33,256 INFO TRADED date=2023-02-08 expiry=2023-02-09 lot_size=50 lots=11 buy=CE sell=PE strike=17850 bought_gross=-12265.00 sold_gross=-4867.50 net=-17232.50
+2026-06-20 00:00:33,269 INFO SKIPPED date=2023-02-09 expiry=2023-02-16 buy=CE sell=PE strike=17900 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,283 INFO TRADED date=2023-02-10 expiry=2023-02-16 lot_size=50 lots=11 buy=CE sell=PE strike=17850 bought_gross=-1815.00 sold_gross=1485.00 net=-430.00
+2026-06-20 00:00:33,297 INFO TRADED date=2023-02-13 expiry=2023-02-16 lot_size=50 lots=11 buy=PE sell=CE strike=17750 bought_gross=-13090.00 sold_gross=-12677.50 net=-25867.50
+2026-06-20 00:00:33,297 INFO TRADED date=2023-02-14 expiry=2023-02-16 lot_size=50 lots=11 buy=CE sell=PE strike=17900 bought_gross=-14327.50 sold_gross=-6930.00 net=-21357.50
+2026-06-20 00:00:33,313 INFO TRADED date=2023-02-15 expiry=2023-02-16 lot_size=50 lots=11 buy=CE sell=PE strike=18000 bought_gross=21257.50 sold_gross=11192.50 net=32350.00
+2026-06-20 00:00:33,327 INFO SKIPPED date=2023-02-16 expiry=2023-02-23 buy=PE sell=CE strike=18000 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,342 INFO TRADED date=2023-02-17 expiry=2023-02-23 lot_size=50 lots=11 buy=PE sell=CE strike=17950 bought_gross=-5197.50 sold_gross=-1952.50 net=-7250.00
+2026-06-20 00:00:33,356 INFO TRADED date=2023-02-20 expiry=2023-02-23 lot_size=50 lots=11 buy=PE sell=CE strike=17850 bought_gross=-6820.00 sold_gross=-4977.50 net=-11897.50
+2026-06-20 00:00:33,356 INFO TRADED date=2023-02-21 expiry=2023-02-23 lot_size=50 lots=11 buy=PE sell=CE strike=17850 bought_gross=31432.50 sold_gross=21395.00 net=52727.50
+2026-06-20 00:00:33,368 INFO TRADED date=2023-02-22 expiry=2023-02-23 lot_size=50 lots=11 buy=PE sell=CE strike=17550 bought_gross=-2722.50 sold_gross=2887.50 net=65.00
+2026-06-20 00:00:33,383 INFO SKIPPED date=2023-02-23 expiry=2023-03-02 buy=PE sell=CE strike=17500 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,400 INFO TRADED date=2023-02-24 expiry=2023-03-02 lot_size=50 lots=11 buy=PE sell=CE strike=17450 bought_gross=14932.50 sold_gross=18727.50 net=33560.00
+2026-06-20 00:00:33,414 INFO TRADED date=2023-02-27 expiry=2023-03-02 lot_size=50 lots=11 buy=CE sell=PE strike=17400 bought_gross=-4565.00 sold_gross=-5692.50 net=-10357.50
+2026-06-20 00:00:33,429 INFO TRADED date=2023-02-28 expiry=2023-03-02 lot_size=50 lots=11 buy=PE sell=CE strike=17300 bought_gross=-11715.00 sold_gross=-14492.50 net=-26307.50
+2026-06-20 00:00:33,429 INFO TRADED date=2023-03-01 expiry=2023-03-02 lot_size=50 lots=11 buy=CE sell=PE strike=17450 bought_gross=-8965.00 sold_gross=-3987.50 net=-13052.50
+2026-06-20 00:00:33,441 INFO SKIPPED date=2023-03-02 expiry=2023-03-09 buy=PE sell=CE strike=17300 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,452 INFO TRADED date=2023-03-03 expiry=2023-03-09 lot_size=50 lots=11 buy=CE sell=PE strike=17600 bought_gross=31130.00 sold_gross=25547.50 net=56577.50
+2026-06-20 00:00:33,463 INFO TRADED date=2023-03-06 expiry=2023-03-09 lot_size=50 lots=11 buy=PE sell=CE strike=17700 bought_gross=32257.50 sold_gross=21725.00 net=53882.50
+2026-06-20 00:00:33,474 INFO TRADED date=2023-03-08 expiry=2023-03-09 lot_size=50 lots=11 buy=CE sell=PE strike=17750 bought_gross=-2887.50 sold_gross=1650.00 net=-1337.50
+2026-06-20 00:00:33,493 INFO SKIPPED date=2023-03-09 expiry=2023-03-16 buy=PE sell=CE strike=17600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,507 INFO TRADED date=2023-03-10 expiry=2023-03-16 lot_size=50 lots=11 buy=CE sell=PE strike=17400 bought_gross=4427.50 sold_gross=5610.00 net=9937.50
+2026-06-20 00:00:33,520 INFO TRADED date=2023-03-13 expiry=2023-03-16 lot_size=50 lots=11 buy=PE sell=CE strike=17200 bought_gross=10065.00 sold_gross=10972.50 net=20937.50
+2026-06-20 00:00:33,534 INFO TRADED date=2023-03-14 expiry=2023-03-16 lot_size=50 lots=11 buy=PE sell=CE strike=17050 bought_gross=-28160.00 sold_gross=-39187.50 net=-67447.50
+2026-06-20 00:00:33,547 INFO TRADED date=2023-03-15 expiry=2023-03-16 lot_size=50 lots=11 buy=PE sell=CE strike=16950 bought_gross=797.50 sold_gross=10835.00 net=11532.50
+2026-06-20 00:00:33,561 INFO SKIPPED date=2023-03-16 expiry=2023-03-23 buy=CE sell=PE strike=17000 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,574 INFO TRADED date=2023-03-17 expiry=2023-03-23 lot_size=50 lots=11 buy=CE sell=PE strike=17100 bought_gross=-38885.00 sold_gross=-43257.50 net=-82242.50
+2026-06-20 00:00:33,575 INFO TRADED date=2023-03-20 expiry=2023-03-23 lot_size=50 lots=11 buy=CE sell=PE strike=17000 bought_gross=14052.50 sold_gross=18177.50 net=32130.00
+2026-06-20 00:00:33,575 INFO TRADED date=2023-03-21 expiry=2023-03-23 lot_size=50 lots=11 buy=CE sell=PE strike=17100 bought_gross=12870.00 sold_gross=15537.50 net=28307.50
+2026-06-20 00:00:33,591 INFO TRADED date=2023-03-22 expiry=2023-03-23 lot_size=50 lots=11 buy=CE sell=PE strike=17150 bought_gross=-27665.00 sold_gross=-14822.50 net=-42587.50
+2026-06-20 00:00:33,604 INFO SKIPPED date=2023-03-23 expiry=2023-03-29 buy=PE sell=CE strike=17050 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,616 INFO TRADED date=2023-03-24 expiry=2023-03-29 lot_size=50 lots=11 buy=PE sell=CE strike=16950 bought_gross=-20955.00 sold_gross=-16307.50 net=-37362.50
+2026-06-20 00:00:33,616 INFO TRADED date=2023-03-27 expiry=2023-03-29 lot_size=50 lots=11 buy=PE sell=CE strike=16950 bought_gross=-10560.00 sold_gross=-11330.00 net=-21990.00
+2026-06-20 00:00:33,616 INFO TRADED date=2023-03-28 expiry=2023-03-29 lot_size=50 lots=11 buy=PE sell=CE strike=16950 bought_gross=-8167.50 sold_gross=-3960.00 net=-12227.50
+2026-06-20 00:00:33,627 INFO SKIPPED date=2023-03-29 expiry=2023-04-06 buy=CE sell=PE strike=17100 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,639 INFO TRADED date=2023-03-31 expiry=2023-04-06 lot_size=50 lots=11 buy=CE sell=PE strike=17350 bought_gross=3025.00 sold_gross=6627.50 net=9552.50
+2026-06-20 00:00:33,650 INFO TRADED date=2023-04-03 expiry=2023-04-06 lot_size=50 lots=11 buy=CE sell=PE strike=17400 bought_gross=1567.50 sold_gross=3877.50 net=5345.00
+2026-06-20 00:00:33,661 INFO TRADED date=2023-04-05 expiry=2023-04-06 lot_size=50 lots=11 buy=CE sell=PE strike=17550 bought_gross=-10752.50 sold_gross=-8167.50 net=-19020.00
+2026-06-20 00:00:33,673 INFO SKIPPED date=2023-04-06 expiry=2023-04-13 buy=CE sell=PE strike=17600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,673 INFO TRADED date=2023-04-10 expiry=2023-04-13 lot_size=50 lots=11 buy=PE sell=CE strike=17600 bought_gross=-16555.00 sold_gross=-20845.00 net=-37500.00
+2026-06-20 00:00:33,687 INFO TRADED date=2023-04-11 expiry=2023-04-13 lot_size=50 lots=11 buy=CE sell=PE strike=17700 bought_gross=1182.50 sold_gross=770.00 net=1852.50
+2026-06-20 00:00:33,698 INFO TRADED date=2023-04-12 expiry=2023-04-13 lot_size=50 lots=11 buy=CE sell=PE strike=17800 bought_gross=-9212.50 sold_gross=-770.00 net=-10082.50
+2026-06-20 00:00:33,710 INFO SKIPPED date=2023-04-13 expiry=2023-04-20 buy=CE sell=PE strike=17850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,722 INFO TRADED date=2023-04-17 expiry=2023-04-20 lot_size=50 lots=11 buy=CE sell=PE strike=17700 bought_gross=1072.50 sold_gross=3300.00 net=4272.50
+2026-06-20 00:00:33,735 INFO TRADED date=2023-04-18 expiry=2023-04-20 lot_size=50 lots=11 buy=PE sell=CE strike=17650 bought_gross=5747.50 sold_gross=8827.50 net=14475.00
+2026-06-20 00:00:33,746 INFO TRADED date=2023-04-19 expiry=2023-04-20 lot_size=50 lots=11 buy=PE sell=CE strike=17600 bought_gross=-7782.50 sold_gross=-2420.00 net=-10302.50
+2026-06-20 00:00:33,760 INFO SKIPPED date=2023-04-20 expiry=2023-04-27 buy=CE sell=PE strike=17600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,760 INFO TRADED date=2023-04-21 expiry=2023-04-27 lot_size=50 lots=11 buy=CE sell=PE strike=17600 bought_gross=14740.00 sold_gross=10862.50 net=25502.50
+2026-06-20 00:00:33,776 INFO TRADED date=2023-04-24 expiry=2023-04-27 lot_size=50 lots=11 buy=CE sell=PE strike=17750 bought_gross=-5335.00 sold_gross=-3712.50 net=-9147.50
+2026-06-20 00:00:33,776 INFO TRADED date=2023-04-25 expiry=2023-04-27 lot_size=50 lots=11 buy=PE sell=CE strike=17750 bought_gross=2337.50 sold_gross=2667.50 net=4905.00
+2026-06-20 00:00:33,791 INFO TRADED date=2023-04-26 expiry=2023-04-27 lot_size=50 lots=11 buy=CE sell=PE strike=17800 bought_gross=-9020.00 sold_gross=-5005.00 net=-14125.00
+2026-06-20 00:00:33,803 INFO SKIPPED date=2023-04-27 expiry=2023-05-04 buy=CE sell=PE strike=17900 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,814 INFO TRADED date=2023-04-28 expiry=2023-05-04 lot_size=50 lots=11 buy=CE sell=PE strike=18050 bought_gross=28627.50 sold_gross=16527.50 net=45055.00
+2026-06-20 00:00:33,825 INFO TRADED date=2023-05-02 expiry=2023-05-04 lot_size=50 lots=11 buy=PE sell=CE strike=18150 bought_gross=19992.50 sold_gross=16142.50 net=36035.00
+2026-06-20 00:00:33,836 INFO TRADED date=2023-05-03 expiry=2023-05-04 lot_size=50 lots=11 buy=CE sell=PE strike=18100 bought_gross=-9075.00 sold_gross=2640.00 net=-6535.00
+2026-06-20 00:00:33,854 INFO SKIPPED date=2023-05-04 expiry=2023-05-11 buy=CE sell=PE strike=18250 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,875 INFO TRADED date=2023-05-05 expiry=2023-05-11 lot_size=50 lots=11 buy=PE sell=CE strike=18050 bought_gross=-15262.50 sold_gross=-18315.00 net=-33677.50
+2026-06-20 00:00:33,875 INFO TRADED date=2023-05-08 expiry=2023-05-11 lot_size=50 lots=10 buy=CE sell=PE strike=18250 bought_gross=7850.00 sold_gross=6775.00 net=14525.00
+2026-06-20 00:00:33,875 INFO TRADED date=2023-05-09 expiry=2023-05-11 lot_size=50 lots=10 buy=PE sell=CE strike=18250 bought_gross=-7525.00 sold_gross=-9050.00 net=-16675.00
+2026-06-20 00:00:33,982 INFO TRADED date=2023-05-10 expiry=2023-05-11 lot_size=50 lots=10 buy=CE sell=PE strike=18300 bought_gross=5150.00 sold_gross=10925.00 net=15975.00
+2026-06-20 00:00:33,998 INFO SKIPPED date=2023-05-11 expiry=2023-05-18 buy=PE sell=CE strike=18300 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:33,999 INFO TRADED date=2023-05-12 expiry=2023-05-18 lot_size=50 lots=10 buy=CE sell=PE strike=18300 bought_gross=-1900.00 sold_gross=-1125.00 net=-3125.00
+2026-06-20 00:00:34,012 INFO TRADED date=2023-05-15 expiry=2023-05-18 lot_size=50 lots=10 buy=PE sell=CE strike=18400 bought_gross=-3450.00 sold_gross=-3800.00 net=-7350.00
+2026-06-20 00:00:34,012 INFO TRADED date=2023-05-16 expiry=2023-05-18 lot_size=50 lots=10 buy=PE sell=CE strike=18300 bought_gross=3625.00 sold_gross=5150.00 net=8675.00
+2026-06-20 00:00:34,024 INFO TRADED date=2023-05-17 expiry=2023-05-18 lot_size=50 lots=10 buy=CE sell=PE strike=18200 bought_gross=19200.00 sold_gross=13825.00 net=32925.00
+2026-06-20 00:00:34,037 INFO SKIPPED date=2023-05-18 expiry=2023-05-25 buy=PE sell=CE strike=18150 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,049 INFO TRADED date=2023-05-19 expiry=2023-05-25 lot_size=50 lots=10 buy=CE sell=PE strike=18200 bought_gross=-8150.00 sold_gross=-7125.00 net=-15375.00
+2026-06-20 00:00:34,063 INFO TRADED date=2023-05-22 expiry=2023-05-25 lot_size=50 lots=10 buy=CE sell=PE strike=18300 bought_gross=14900.00 sold_gross=11425.00 net=26225.00
+2026-06-20 00:00:34,076 INFO TRADED date=2023-05-23 expiry=2023-05-25 lot_size=50 lots=10 buy=PE sell=CE strike=18350 bought_gross=14325.00 sold_gross=12625.00 net=26850.00
+2026-06-20 00:00:34,076 INFO TRADED date=2023-05-24 expiry=2023-05-25 lot_size=50 lots=10 buy=PE sell=CE strike=18300 bought_gross=7175.00 sold_gross=8500.00 net=15575.00
+2026-06-20 00:00:34,088 INFO SKIPPED date=2023-05-25 expiry=2023-06-01 buy=CE sell=PE strike=18350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,103 INFO TRADED date=2023-05-26 expiry=2023-06-01 lot_size=50 lots=10 buy=CE sell=PE strike=18500 bought_gross=37825.00 sold_gross=24100.00 net=61825.00
+2026-06-20 00:00:34,115 INFO TRADED date=2023-05-29 expiry=2023-06-01 lot_size=50 lots=10 buy=PE sell=CE strike=18600 bought_gross=1025.00 sold_gross=3125.00 net=4050.00
+2026-06-20 00:00:34,127 INFO TRADED date=2023-05-30 expiry=2023-06-01 lot_size=50 lots=10 buy=CE sell=PE strike=18650 bought_gross=-12300.00 sold_gross=-13925.00 net=-26325.00
+2026-06-20 00:00:34,127 INFO TRADED date=2023-05-31 expiry=2023-06-01 lot_size=50 lots=10 buy=PE sell=CE strike=18500 bought_gross=-650.00 sold_gross=7425.00 net=6675.00
+2026-06-20 00:00:34,139 INFO SKIPPED date=2023-06-01 expiry=2023-06-08 buy=PE sell=CE strike=18500 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,154 INFO TRADED date=2023-06-02 expiry=2023-06-08 lot_size=50 lots=10 buy=PE sell=CE strike=18550 bought_gross=-19375.00 sold_gross=-20275.00 net=-39750.00
+2026-06-20 00:00:34,168 INFO TRADED date=2023-06-05 expiry=2023-06-08 lot_size=50 lots=10 buy=PE sell=CE strike=18600 bought_gross=3275.00 sold_gross=6400.00 net=9575.00
+2026-06-20 00:00:34,168 INFO TRADED date=2023-06-06 expiry=2023-06-08 lot_size=50 lots=10 buy=CE sell=PE strike=18600 bought_gross=12375.00 sold_gross=8600.00 net=20875.00
+2026-06-20 00:00:34,180 INFO TRADED date=2023-06-07 expiry=2023-06-08 lot_size=50 lots=10 buy=CE sell=PE strike=18750 bought_gross=525.00 sold_gross=5450.00 net=5875.00
+2026-06-20 00:00:34,192 INFO SKIPPED date=2023-06-08 expiry=2023-06-15 buy=PE sell=CE strike=18650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,205 INFO TRADED date=2023-06-09 expiry=2023-06-15 lot_size=50 lots=10 buy=PE sell=CE strike=18550 bought_gross=-8075.00 sold_gross=-7550.00 net=-15725.00
+2026-06-20 00:00:34,219 INFO TRADED date=2023-06-12 expiry=2023-06-15 lot_size=50 lots=10 buy=CE sell=PE strike=18600 bought_gross=13600.00 sold_gross=9425.00 net=22925.00
+2026-06-20 00:00:34,233 INFO TRADED date=2023-06-13 expiry=2023-06-15 lot_size=50 lots=10 buy=CE sell=PE strike=18700 bought_gross=4025.00 sold_gross=6350.00 net=10275.00
+2026-06-20 00:00:34,246 INFO TRADED date=2023-06-14 expiry=2023-06-15 lot_size=50 lots=10 buy=CE sell=PE strike=18750 bought_gross=-9425.00 sold_gross=-1400.00 net=-10925.00
+2026-06-20 00:00:34,259 INFO SKIPPED date=2023-06-15 expiry=2023-06-22 buy=PE sell=CE strike=18700 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,272 INFO TRADED date=2023-06-16 expiry=2023-06-22 lot_size=50 lots=10 buy=CE sell=PE strike=18800 bought_gross=5900.00 sold_gross=4300.00 net=10100.00
+2026-06-20 00:00:34,285 INFO TRADED date=2023-06-19 expiry=2023-06-22 lot_size=50 lots=10 buy=PE sell=CE strike=18750 bought_gross=7100.00 sold_gross=12525.00 net=19525.00
+2026-06-20 00:00:34,297 INFO TRADED date=2023-06-20 expiry=2023-06-22 lot_size=50 lots=10 buy=CE sell=PE strike=18850 bought_gross=-2900.00 sold_gross=-3975.00 net=-6975.00
+2026-06-20 00:00:34,297 INFO TRADED date=2023-06-21 expiry=2023-06-22 lot_size=50 lots=10 buy=CE sell=PE strike=18850 bought_gross=-7175.00 sold_gross=-4950.00 net=-12225.00
+2026-06-20 00:00:34,300 INFO SKIPPED date=2023-06-22 expiry=2023-06-28 buy=PE sell=CE strike=18800 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,304 INFO SKIPPED date=2023-06-23 expiry=2023-06-28 buy=PE sell=CE strike=18650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,307 INFO SKIPPED date=2023-06-26 expiry=2023-06-28 buy=CE sell=PE strike=18700 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,307 INFO SKIPPED date=2023-06-27 expiry=2023-06-28 buy=CE sell=PE strike=18800 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,316 INFO SKIPPED date=2023-06-28 expiry=2023-06-29 buy=CE sell=PE strike=19000 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,328 INFO TRADED date=2023-06-30 expiry=2023-07-06 lot_size=50 lots=10 buy=CE sell=PE strike=19200 bought_gross=17400.00 sold_gross=15225.00 net=32525.00
+2026-06-20 00:00:34,343 INFO TRADED date=2023-07-03 expiry=2023-07-06 lot_size=50 lots=10 buy=CE sell=PE strike=19350 bought_gross=11600.00 sold_gross=10425.00 net=21925.00
+2026-06-20 00:00:34,356 INFO TRADED date=2023-07-04 expiry=2023-07-06 lot_size=50 lots=10 buy=CE sell=PE strike=19400 bought_gross=-5575.00 sold_gross=-11050.00 net=-16725.00
+2026-06-20 00:00:34,356 INFO TRADED date=2023-07-05 expiry=2023-07-06 lot_size=50 lots=10 buy=CE sell=PE strike=19400 bought_gross=-9150.00 sold_gross=-7625.00 net=-16875.00
+2026-06-20 00:00:34,369 INFO SKIPPED date=2023-07-06 expiry=2023-07-13 buy=CE sell=PE strike=19500 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,383 INFO TRADED date=2023-07-07 expiry=2023-07-13 lot_size=50 lots=10 buy=PE sell=CE strike=19300 bought_gross=-11300.00 sold_gross=-13475.00 net=-24875.00
+2026-06-20 00:00:34,405 INFO TRADED date=2023-07-10 expiry=2023-07-13 lot_size=50 lots=10 buy=PE sell=CE strike=19350 bought_gross=-9850.00 sold_gross=-12075.00 net=-22025.00
+2026-06-20 00:00:34,420 INFO TRADED date=2023-07-11 expiry=2023-07-13 lot_size=50 lots=10 buy=PE sell=CE strike=19450 bought_gross=-7125.00 sold_gross=-10625.00 net=-17850.00
+2026-06-20 00:00:34,433 INFO TRADED date=2023-07-12 expiry=2023-07-13 lot_size=50 lots=10 buy=PE sell=CE strike=19400 bought_gross=-15350.00 sold_gross=-19375.00 net=-34825.00
+2026-06-20 00:00:34,447 INFO SKIPPED date=2023-07-13 expiry=2023-07-20 buy=PE sell=CE strike=19450 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,461 INFO TRADED date=2023-07-14 expiry=2023-07-20 lot_size=50 lots=10 buy=CE sell=PE strike=19600 bought_gross=-1600.00 sold_gross=-1650.00 net=-3350.00
+2026-06-20 00:00:34,474 INFO TRADED date=2023-07-17 expiry=2023-07-20 lot_size=50 lots=10 buy=CE sell=PE strike=19700 bought_gross=17800.00 sold_gross=10625.00 net=28325.00
+2026-06-20 00:00:34,487 INFO TRADED date=2023-07-18 expiry=2023-07-20 lot_size=50 lots=10 buy=CE sell=PE strike=19750 bought_gross=9475.00 sold_gross=6900.00 net=16275.00
+2026-06-20 00:00:34,502 INFO TRADED date=2023-07-19 expiry=2023-07-20 lot_size=50 lots=10 buy=CE sell=PE strike=19850 bought_gross=-6850.00 sold_gross=-7325.00 net=-14275.00
+2026-06-20 00:00:34,516 INFO SKIPPED date=2023-07-20 expiry=2023-07-27 buy=CE sell=PE strike=19950 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,528 INFO TRADED date=2023-07-21 expiry=2023-07-27 lot_size=50 lots=10 buy=PE sell=CE strike=19800 bought_gross=11125.00 sold_gross=13350.00 net=24375.00
+2026-06-20 00:00:34,542 INFO TRADED date=2023-07-24 expiry=2023-07-27 lot_size=50 lots=10 buy=PE sell=CE strike=19650 bought_gross=-9975.00 sold_gross=-10675.00 net=-20750.00
+2026-06-20 00:00:34,556 INFO TRADED date=2023-07-25 expiry=2023-07-27 lot_size=50 lots=10 buy=CE sell=PE strike=19700 bought_gross=4475.00 sold_gross=6975.00 net=11350.00
+2026-06-20 00:00:34,573 INFO TRADED date=2023-07-26 expiry=2023-07-27 lot_size=50 lots=10 buy=PE sell=CE strike=19750 bought_gross=-17850.00 sold_gross=-24625.00 net=-42575.00
+2026-06-20 00:00:34,592 INFO SKIPPED date=2023-07-27 expiry=2023-08-03 buy=PE sell=CE strike=19700 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,606 INFO TRADED date=2023-07-28 expiry=2023-08-03 lot_size=50 lots=10 buy=CE sell=PE strike=19650 bought_gross=-575.00 sold_gross=950.00 net=275.00
+2026-06-20 00:00:34,622 INFO TRADED date=2023-07-31 expiry=2023-08-03 lot_size=50 lots=10 buy=CE sell=PE strike=19750 bought_gross=2375.00 sold_gross=4450.00 net=6725.00
+2026-06-20 00:00:34,622 INFO TRADED date=2023-08-01 expiry=2023-08-03 lot_size=50 lots=10 buy=PE sell=CE strike=19750 bought_gross=23150.00 sold_gross=14950.00 net=38000.00
+2026-06-20 00:00:34,638 INFO TRADED date=2023-08-02 expiry=2023-08-03 lot_size=50 lots=10 buy=PE sell=CE strike=19500 bought_gross=17225.00 sold_gross=17775.00 net=34900.00
+2026-06-20 00:00:34,653 INFO SKIPPED date=2023-08-03 expiry=2023-08-10 buy=PE sell=CE strike=19400 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,670 INFO TRADED date=2023-08-04 expiry=2023-08-10 lot_size=50 lots=10 buy=CE sell=PE strike=19500 bought_gross=8400.00 sold_gross=7800.00 net=16100.00
+2026-06-20 00:00:34,685 INFO TRADED date=2023-08-07 expiry=2023-08-10 lot_size=50 lots=10 buy=CE sell=PE strike=19600 bought_gross=-1550.00 sold_gross=1450.00 net=-200.00
+2026-06-20 00:00:34,705 INFO TRADED date=2023-08-08 expiry=2023-08-10 lot_size=50 lots=10 buy=PE sell=CE strike=19550 bought_gross=2050.00 sold_gross=5000.00 net=6950.00
+2026-06-20 00:00:34,720 INFO TRADED date=2023-08-09 expiry=2023-08-10 lot_size=50 lots=10 buy=CE sell=PE strike=19650 bought_gross=-7900.00 sold_gross=-15600.00 net=-23600.00
+2026-06-20 00:00:34,732 INFO SKIPPED date=2023-08-10 expiry=2023-08-17 buy=PE sell=CE strike=19550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,745 INFO TRADED date=2023-08-11 expiry=2023-08-17 lot_size=50 lots=10 buy=PE sell=CE strike=19400 bought_gross=24225.00 sold_gross=34475.00 net=58600.00
+2026-06-20 00:00:34,745 INFO TRADED date=2023-08-14 expiry=2023-08-17 lot_size=50 lots=10 buy=CE sell=PE strike=19400 bought_gross=-29050.00 sold_gross=-31200.00 net=-60350.00
+2026-06-20 00:00:34,758 INFO TRADED date=2023-08-16 expiry=2023-08-17 lot_size=50 lots=10 buy=CE sell=PE strike=19450 bought_gross=-3650.00 sold_gross=-2600.00 net=-6350.00
+2026-06-20 00:00:34,774 INFO SKIPPED date=2023-08-17 expiry=2023-08-24 buy=PE sell=CE strike=19350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,793 INFO TRADED date=2023-08-18 expiry=2023-08-24 lot_size=50 lots=10 buy=PE sell=CE strike=19300 bought_gross=-11550.00 sold_gross=-7450.00 net=-19100.00
+2026-06-20 00:00:34,808 INFO TRADED date=2023-08-21 expiry=2023-08-24 lot_size=50 lots=10 buy=CE sell=PE strike=19400 bought_gross=-1150.00 sold_gross=600.00 net=-650.00
+2026-06-20 00:00:34,809 INFO TRADED date=2023-08-22 expiry=2023-08-24 lot_size=50 lots=10 buy=PE sell=CE strike=19400 bought_gross=-3425.00 sold_gross=-375.00 net=-3900.00
+2026-06-20 00:00:34,826 INFO TRADED date=2023-08-23 expiry=2023-08-24 lot_size=50 lots=10 buy=CE sell=PE strike=19450 bought_gross=17450.00 sold_gross=17875.00 net=35225.00
+2026-06-20 00:00:34,843 INFO SKIPPED date=2023-08-24 expiry=2023-08-31 buy=PE sell=CE strike=19400 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,858 INFO TRADED date=2023-08-25 expiry=2023-08-31 lot_size=50 lots=10 buy=PE sell=CE strike=19250 bought_gross=-25275.00 sold_gross=-15875.00 net=-41250.00
+2026-06-20 00:00:34,874 INFO TRADED date=2023-08-28 expiry=2023-08-31 lot_size=50 lots=10 buy=PE sell=CE strike=19300 bought_gross=-12150.00 sold_gross=-9675.00 net=-21925.00
+2026-06-20 00:00:34,890 INFO TRADED date=2023-08-29 expiry=2023-08-31 lot_size=50 lots=10 buy=CE sell=PE strike=19350 bought_gross=13450.00 sold_gross=12875.00 net=26225.00
+2026-06-20 00:00:34,890 INFO TRADED date=2023-08-30 expiry=2023-08-31 lot_size=50 lots=10 buy=PE sell=CE strike=19350 bought_gross=-3075.00 sold_gross=1075.00 net=-2100.00
+2026-06-20 00:00:34,909 INFO SKIPPED date=2023-08-31 expiry=2023-09-07 buy=PE sell=CE strike=19300 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,925 INFO TRADED date=2023-09-01 expiry=2023-09-07 lot_size=50 lots=10 buy=CE sell=PE strike=19400 bought_gross=12000.00 sold_gross=10125.00 net=22025.00
+2026-06-20 00:00:34,942 INFO TRADED date=2023-09-04 expiry=2023-09-07 lot_size=50 lots=10 buy=CE sell=PE strike=19550 bought_gross=-2750.00 sold_gross=-800.00 net=-3650.00
+2026-06-20 00:00:34,959 INFO TRADED date=2023-09-05 expiry=2023-09-07 lot_size=50 lots=10 buy=CE sell=PE strike=19600 bought_gross=-4900.00 sold_gross=-3950.00 net=-8950.00
+2026-06-20 00:00:34,959 INFO TRADED date=2023-09-06 expiry=2023-09-07 lot_size=50 lots=10 buy=CE sell=PE strike=19600 bought_gross=-10750.00 sold_gross=-9100.00 net=-19950.00
+2026-06-20 00:00:34,974 INFO SKIPPED date=2023-09-07 expiry=2023-09-14 buy=CE sell=PE strike=19700 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:34,990 INFO TRADED date=2023-09-08 expiry=2023-09-14 lot_size=50 lots=10 buy=CE sell=PE strike=19800 bought_gross=14300.00 sold_gross=9700.00 net=23900.00
+2026-06-20 00:00:35,009 INFO TRADED date=2023-09-11 expiry=2023-09-14 lot_size=50 lots=10 buy=CE sell=PE strike=20000 bought_gross=18125.00 sold_gross=12525.00 net=30550.00
+2026-06-20 00:00:35,010 INFO TRADED date=2023-09-12 expiry=2023-09-14 lot_size=50 lots=10 buy=PE sell=CE strike=20000 bought_gross=7575.00 sold_gross=7375.00 net=14850.00
+2026-06-20 00:00:35,151 INFO TRADED date=2023-09-13 expiry=2023-09-14 lot_size=50 lots=9 buy=CE sell=PE strike=20050 bought_gross=9247.50 sold_gross=10282.50 net=19430.00
+2026-06-20 00:00:35,164 INFO SKIPPED date=2023-09-14 expiry=2023-09-21 buy=CE sell=PE strike=20100 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,178 INFO TRADED date=2023-09-15 expiry=2023-09-21 lot_size=50 lots=9 buy=PE sell=CE strike=20150 bought_gross=5265.00 sold_gross=14940.00 net=20105.00
+2026-06-20 00:00:35,178 INFO TRADED date=2023-09-18 expiry=2023-09-21 lot_size=50 lots=9 buy=PE sell=CE strike=20100 bought_gross=20430.00 sold_gross=22387.50 net=42717.50
+2026-06-20 00:00:35,191 INFO TRADED date=2023-09-20 expiry=2023-09-21 lot_size=50 lots=10 buy=PE sell=CE strike=19900 bought_gross=19225.00 sold_gross=24175.00 net=43300.00
+2026-06-20 00:00:35,206 INFO SKIPPED date=2023-09-21 expiry=2023-09-28 buy=PE sell=CE strike=19750 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,223 INFO TRADED date=2023-09-22 expiry=2023-09-28 lot_size=50 lots=10 buy=PE sell=CE strike=19700 bought_gross=3875.00 sold_gross=8075.00 net=11850.00
+2026-06-20 00:00:35,238 INFO TRADED date=2023-09-25 expiry=2023-09-28 lot_size=50 lots=10 buy=CE sell=PE strike=19650 bought_gross=-6000.00 sold_gross=-4750.00 net=-10850.00
+2026-06-20 00:00:35,238 INFO TRADED date=2023-09-26 expiry=2023-09-28 lot_size=50 lots=10 buy=PE sell=CE strike=19650 bought_gross=11275.00 sold_gross=14150.00 net=25325.00
+2026-06-20 00:00:35,238 INFO TRADED date=2023-09-27 expiry=2023-09-28 lot_size=50 lots=10 buy=CE sell=PE strike=19750 bought_gross=-1350.00 sold_gross=2175.00 net=725.00
+2026-06-20 00:00:35,253 INFO SKIPPED date=2023-09-28 expiry=2023-10-05 buy=PE sell=CE strike=19550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,266 INFO TRADED date=2023-09-29 expiry=2023-10-05 lot_size=50 lots=10 buy=PE sell=CE strike=19650 bought_gross=28800.00 sold_gross=23650.00 net=52350.00
+2026-06-20 00:00:35,279 INFO TRADED date=2023-10-03 expiry=2023-10-05 lot_size=50 lots=10 buy=PE sell=CE strike=19500 bought_gross=29000.00 sold_gross=25525.00 net=54425.00
+2026-06-20 00:00:35,293 INFO TRADED date=2023-10-04 expiry=2023-10-05 lot_size=50 lots=10 buy=CE sell=PE strike=19450 bought_gross=14475.00 sold_gross=17400.00 net=31775.00
+2026-06-20 00:00:35,308 INFO SKIPPED date=2023-10-05 expiry=2023-10-12 buy=CE sell=PE strike=19550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,323 INFO TRADED date=2023-10-06 expiry=2023-10-12 lot_size=50 lots=10 buy=CE sell=PE strike=19650 bought_gross=-29725.00 sold_gross=-38600.00 net=-68425.00
+2026-06-20 00:00:35,339 INFO TRADED date=2023-10-09 expiry=2023-10-12 lot_size=50 lots=10 buy=PE sell=CE strike=19500 bought_gross=-26500.00 sold_gross=-27150.00 net=-53750.00
+2026-06-20 00:00:35,356 INFO TRADED date=2023-10-10 expiry=2023-10-12 lot_size=50 lots=10 buy=CE sell=PE strike=19700 bought_gross=21225.00 sold_gross=17725.00 net=38850.00
+2026-06-20 00:00:35,370 INFO TRADED date=2023-10-11 expiry=2023-10-12 lot_size=50 lots=10 buy=PE sell=CE strike=19800 bought_gross=-13150.00 sold_gross=725.00 net=-12525.00
+2026-06-20 00:00:35,385 INFO SKIPPED date=2023-10-12 expiry=2023-10-19 buy=PE sell=CE strike=19800 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,401 INFO TRADED date=2023-10-13 expiry=2023-10-19 lot_size=50 lots=10 buy=CE sell=PE strike=19750 bought_gross=-9675.00 sold_gross=-1775.00 net=-11550.00
+2026-06-20 00:00:35,401 INFO TRADED date=2023-10-16 expiry=2023-10-19 lot_size=50 lots=10 buy=PE sell=CE strike=19750 bought_gross=-24675.00 sold_gross=-17850.00 net=-42625.00
+2026-06-20 00:00:35,401 INFO TRADED date=2023-10-17 expiry=2023-10-19 lot_size=50 lots=10 buy=PE sell=CE strike=19800 bought_gross=1800.00 sold_gross=8675.00 net=10375.00
+2026-06-20 00:00:35,418 INFO TRADED date=2023-10-18 expiry=2023-10-19 lot_size=50 lots=10 buy=PE sell=CE strike=19650 bought_gross=24225.00 sold_gross=25850.00 net=49975.00
+2026-06-20 00:00:35,429 INFO SKIPPED date=2023-10-19 expiry=2023-10-26 buy=PE sell=CE strike=19600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,441 INFO TRADED date=2023-10-20 expiry=2023-10-26 lot_size=50 lots=10 buy=PE sell=CE strike=19550 bought_gross=-4700.00 sold_gross=3325.00 net=-1475.00
+2026-06-20 00:00:35,454 INFO TRADED date=2023-10-23 expiry=2023-10-26 lot_size=50 lots=10 buy=PE sell=CE strike=19300 bought_gross=-27350.00 sold_gross=-13800.00 net=-41250.00
+2026-06-20 00:00:35,465 INFO TRADED date=2023-10-25 expiry=2023-10-26 lot_size=50 lots=10 buy=PE sell=CE strike=19150 bought_gross=30150.00 sold_gross=15275.00 net=45325.00
+2026-06-20 00:00:35,479 INFO SKIPPED date=2023-10-26 expiry=2023-11-02 buy=PE sell=CE strike=18850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,494 INFO TRADED date=2023-10-27 expiry=2023-11-02 lot_size=50 lots=10 buy=CE sell=PE strike=19050 bought_gross=-17100.00 sold_gross=-14550.00 net=-31750.00
+2026-06-20 00:00:35,508 INFO TRADED date=2023-10-30 expiry=2023-11-02 lot_size=50 lots=10 buy=CE sell=PE strike=19150 bought_gross=6400.00 sold_gross=6075.00 net=12375.00
+2026-06-20 00:00:35,522 INFO TRADED date=2023-10-31 expiry=2023-11-02 lot_size=50 lots=10 buy=PE sell=CE strike=19100 bought_gross=12500.00 sold_gross=11675.00 net=24075.00
+2026-06-20 00:00:35,541 INFO TRADED date=2023-11-01 expiry=2023-11-02 lot_size=50 lots=10 buy=PE sell=CE strike=19000 bought_gross=-32000.00 sold_gross=-45375.00 net=-77475.00
+2026-06-20 00:00:35,555 INFO SKIPPED date=2023-11-02 expiry=2023-11-09 buy=CE sell=PE strike=19150 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,570 INFO TRADED date=2023-11-03 expiry=2023-11-09 lot_size=50 lots=10 buy=PE sell=CE strike=19250 bought_gross=-26150.00 sold_gross=-24525.00 net=-50775.00
+2026-06-20 00:00:35,584 INFO TRADED date=2023-11-06 expiry=2023-11-09 lot_size=50 lots=10 buy=CE sell=PE strike=19400 bought_gross=-13725.00 sold_gross=-9175.00 net=-23000.00
+2026-06-20 00:00:35,585 INFO TRADED date=2023-11-07 expiry=2023-11-09 lot_size=50 lots=10 buy=CE sell=PE strike=19400 bought_gross=2700.00 sold_gross=4825.00 net=7425.00
+2026-06-20 00:00:35,599 INFO TRADED date=2023-11-08 expiry=2023-11-09 lot_size=50 lots=10 buy=CE sell=PE strike=19450 bought_gross=-5950.00 sold_gross=425.00 net=-5625.00
+2026-06-20 00:00:35,611 INFO SKIPPED date=2023-11-09 expiry=2023-11-16 buy=PE sell=CE strike=19400 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,623 INFO SKIPPED date=2023-11-10 expiry=2023-11-16 buy=CE sell=PE strike=19450 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,623 INFO SKIPPED date=2023-11-12 reason=missing_spot_signal_timestamp
+2026-06-20 00:00:35,623 INFO TRADED date=2023-11-13 expiry=2023-11-16 lot_size=50 lots=10 buy=PE sell=CE strike=19450 bought_gross=-27125.00 sold_gross=-51675.00 net=-78900.00
+2026-06-20 00:00:35,637 INFO TRADED date=2023-11-15 expiry=2023-11-16 lot_size=50 lots=10 buy=CE sell=PE strike=19700 bought_gross=-13275.00 sold_gross=-8675.00 net=-22050.00
+2026-06-20 00:00:35,654 INFO SKIPPED date=2023-11-16 expiry=2023-11-23 buy=PE sell=CE strike=19750 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,669 INFO TRADED date=2023-11-17 expiry=2023-11-23 lot_size=50 lots=10 buy=PE sell=CE strike=19700 bought_gross=-2500.00 sold_gross=-100.00 net=-2700.00
+2026-06-20 00:00:35,669 INFO TRADED date=2023-11-20 expiry=2023-11-23 lot_size=50 lots=10 buy=PE sell=CE strike=19700 bought_gross=-14650.00 sold_gross=-12600.00 net=-27350.00
+2026-06-20 00:00:35,684 INFO TRADED date=2023-11-21 expiry=2023-11-23 lot_size=50 lots=10 buy=PE sell=CE strike=19800 bought_gross=-5325.00 sold_gross=-1025.00 net=-6450.00
+2026-06-20 00:00:35,684 INFO TRADED date=2023-11-22 expiry=2023-11-23 lot_size=50 lots=10 buy=CE sell=PE strike=19800 bought_gross=550.00 sold_gross=3600.00 net=4050.00
+2026-06-20 00:00:35,695 INFO SKIPPED date=2023-11-23 expiry=2023-11-30 buy=PE sell=CE strike=19800 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,696 INFO TRADED date=2023-11-24 expiry=2023-11-30 lot_size=50 lots=10 buy=PE sell=CE strike=19800 bought_gross=-9225.00 sold_gross=-6575.00 net=-15900.00
+2026-06-20 00:00:35,707 INFO TRADED date=2023-11-28 expiry=2023-11-30 lot_size=50 lots=10 buy=CE sell=PE strike=19900 bought_gross=11350.00 sold_gross=7175.00 net=18425.00
+2026-06-20 00:00:35,718 INFO TRADED date=2023-11-29 expiry=2023-11-30 lot_size=50 lots=9 buy=CE sell=PE strike=20100 bought_gross=-3195.00 sold_gross=427.50 net=-2867.50
+2026-06-20 00:00:35,733 INFO SKIPPED date=2023-11-30 expiry=2023-12-07 buy=CE sell=PE strike=20150 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,748 INFO TRADED date=2023-12-01 expiry=2023-12-07 lot_size=50 lots=9 buy=PE sell=CE strike=20250 bought_gross=-39082.50 sold_gross=-81607.50 net=-120790.00
+2026-06-20 00:00:35,767 INFO TRADED date=2023-12-04 expiry=2023-12-07 lot_size=50 lots=9 buy=CE sell=PE strike=20700 bought_gross=6930.00 sold_gross=6052.50 net=12882.50
+2026-06-20 00:00:35,780 INFO TRADED date=2023-12-05 expiry=2023-12-07 lot_size=50 lots=9 buy=CE sell=PE strike=20850 bought_gross=21172.50 sold_gross=12982.50 net=34055.00
+2026-06-20 00:00:35,793 INFO TRADED date=2023-12-06 expiry=2023-12-07 lot_size=50 lots=9 buy=CE sell=PE strike=20950 bought_gross=-19192.50 sold_gross=-18292.50 net=-37585.00
+2026-06-20 00:00:35,808 INFO SKIPPED date=2023-12-07 expiry=2023-12-14 buy=CE sell=PE strike=20900 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,822 INFO TRADED date=2023-12-08 expiry=2023-12-14 lot_size=50 lots=9 buy=CE sell=PE strike=20950 bought_gross=-7762.50 sold_gross=-2362.50 net=-10225.00
+2026-06-20 00:00:35,839 INFO TRADED date=2023-12-11 expiry=2023-12-14 lot_size=50 lots=9 buy=CE sell=PE strike=21000 bought_gross=7447.50 sold_gross=8212.50 net=15560.00
+2026-06-20 00:00:35,839 INFO TRADED date=2023-12-12 expiry=2023-12-14 lot_size=50 lots=9 buy=PE sell=CE strike=20900 bought_gross=-4320.00 sold_gross=-270.00 net=-4690.00
+2026-06-20 00:00:35,839 INFO TRADED date=2023-12-13 expiry=2023-12-14 lot_size=50 lots=9 buy=CE sell=PE strike=20950 bought_gross=40500.00 sold_gross=23602.50 net=64002.50
+2026-06-20 00:00:35,853 INFO SKIPPED date=2023-12-14 expiry=2023-12-21 buy=CE sell=PE strike=21200 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,867 INFO TRADED date=2023-12-15 expiry=2023-12-21 lot_size=50 lots=9 buy=CE sell=PE strike=21450 bought_gross=-28575.00 sold_gross=-15547.50 net=-44222.50
+2026-06-20 00:00:35,881 INFO TRADED date=2023-12-18 expiry=2023-12-21 lot_size=50 lots=9 buy=PE sell=CE strike=21400 bought_gross=-9787.50 sold_gross=-7515.00 net=-17402.50
+2026-06-20 00:00:35,881 INFO TRADED date=2023-12-19 expiry=2023-12-21 lot_size=50 lots=9 buy=CE sell=PE strike=21450 bought_gross=21465.00 sold_gross=16380.00 net=37745.00
+2026-06-20 00:00:35,898 INFO TRADED date=2023-12-20 expiry=2023-12-21 lot_size=50 lots=9 buy=PE sell=CE strike=21100 bought_gross=19372.50 sold_gross=16425.00 net=35697.50
+2026-06-20 00:00:35,910 INFO SKIPPED date=2023-12-21 expiry=2023-12-28 buy=CE sell=PE strike=21300 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,921 INFO TRADED date=2023-12-22 expiry=2023-12-28 lot_size=50 lots=9 buy=PE sell=CE strike=21350 bought_gross=-225.00 sold_gross=4882.50 net=4557.50
+2026-06-20 00:00:35,936 INFO TRADED date=2023-12-26 expiry=2023-12-28 lot_size=50 lots=9 buy=CE sell=PE strike=21450 bought_gross=5535.00 sold_gross=7470.00 net=12905.00
+2026-06-20 00:00:35,947 INFO TRADED date=2023-12-27 expiry=2023-12-28 lot_size=50 lots=9 buy=CE sell=PE strike=21650 bought_gross=7920.00 sold_gross=7537.50 net=15357.50
+2026-06-20 00:00:35,961 INFO SKIPPED date=2023-12-28 expiry=2024-01-04 buy=CE sell=PE strike=21750 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:35,961 INFO TRADED date=2023-12-29 expiry=2024-01-04 lot_size=50 lots=9 buy=CE sell=PE strike=21750 bought_gross=-16132.50 sold_gross=-7200.00 net=-23432.50
+2026-06-20 00:00:35,975 INFO TRADED date=2024-01-01 expiry=2024-01-04 lot_size=50 lots=9 buy=PE sell=CE strike=21700 bought_gross=-6525.00 sold_gross=-6660.00 net=-13285.00
+2026-06-20 00:00:35,990 INFO TRADED date=2024-01-02 expiry=2024-01-04 lot_size=50 lots=9 buy=CE sell=PE strike=21650 bought_gross=-9585.00 sold_gross=-10192.50 net=-19877.50
+2026-06-20 00:00:36,004 INFO TRADED date=2024-01-03 expiry=2024-01-04 lot_size=50 lots=9 buy=PE sell=CE strike=21500 bought_gross=-16222.50 sold_gross=-13612.50 net=-29935.00
+2026-06-20 00:00:36,020 INFO SKIPPED date=2024-01-04 expiry=2024-01-11 buy=CE sell=PE strike=21650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,036 INFO TRADED date=2024-01-05 expiry=2024-01-11 lot_size=50 lots=9 buy=CE sell=PE strike=21700 bought_gross=-3307.50 sold_gross=-45.00 net=-3452.50
+2026-06-20 00:00:36,050 INFO TRADED date=2024-01-08 expiry=2024-01-11 lot_size=50 lots=9 buy=PE sell=CE strike=21500 bought_gross=-28372.50 sold_gross=-34807.50 net=-63280.00
+2026-06-20 00:00:36,064 INFO TRADED date=2024-01-09 expiry=2024-01-11 lot_size=50 lots=9 buy=PE sell=CE strike=21550 bought_gross=4185.00 sold_gross=4545.00 net=8630.00
+2026-06-20 00:00:36,064 INFO TRADED date=2024-01-10 expiry=2024-01-11 lot_size=50 lots=9 buy=CE sell=PE strike=21650 bought_gross=6750.00 sold_gross=10417.50 net=17067.50
+2026-06-20 00:00:36,079 INFO SKIPPED date=2024-01-11 expiry=2024-01-18 buy=CE sell=PE strike=21650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,093 INFO TRADED date=2024-01-12 expiry=2024-01-18 lot_size=50 lots=9 buy=CE sell=PE strike=21900 bought_gross=19530.00 sold_gross=13207.50 net=32637.50
+2026-06-20 00:00:36,107 INFO TRADED date=2024-01-15 expiry=2024-01-18 lot_size=50 lots=9 buy=CE sell=PE strike=22100 bought_gross=-18450.00 sold_gross=-13837.50 net=-32387.50
+2026-06-20 00:00:36,122 INFO TRADED date=2024-01-16 expiry=2024-01-18 lot_size=50 lots=9 buy=PE sell=CE strike=22050 bought_gross=49860.00 sold_gross=20092.50 net=69852.50
+2026-06-20 00:00:36,138 INFO TRADED date=2024-01-17 expiry=2024-01-18 lot_size=50 lots=9 buy=PE sell=CE strike=21600 bought_gross=31320.00 sold_gross=23872.50 net=55092.50
+2026-06-20 00:00:36,152 INFO SKIPPED date=2024-01-18 expiry=2024-01-25 buy=CE sell=PE strike=21500 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,166 INFO TRADED date=2024-01-19 expiry=2024-01-25 lot_size=50 lots=9 buy=CE sell=PE strike=21650 bought_gross=9270.00 sold_gross=20407.50 net=29577.50
+2026-06-20 00:00:36,181 INFO TRADED date=2024-01-20 expiry=2024-01-25 lot_size=50 lots=9 buy=PE sell=CE strike=21600 bought_gross=-36337.50 sold_gross=-34920.00 net=-71357.50
+2026-06-20 00:00:36,194 INFO TRADED date=2024-01-23 expiry=2024-01-25 lot_size=50 lots=9 buy=PE sell=CE strike=21250 bought_gross=630.00 sold_gross=-517.50 net=12.50
+2026-06-20 00:00:36,209 INFO TRADED date=2024-01-24 expiry=2024-01-25 lot_size=50 lots=9 buy=CE sell=PE strike=21450 bought_gross=-13725.00 sold_gross=-8032.50 net=-21857.50
+2026-06-20 00:00:36,359 INFO SKIPPED date=2024-01-25 expiry=2024-02-01 buy=CE sell=PE strike=21350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,370 INFO TRADED date=2024-01-29 expiry=2024-02-01 lot_size=50 lots=9 buy=CE sell=PE strike=21750 bought_gross=11002.50 sold_gross=6592.50 net=17495.00
+2026-06-20 00:00:36,381 INFO TRADED date=2024-01-30 expiry=2024-02-01 lot_size=50 lots=9 buy=PE sell=CE strike=21550 bought_gross=9360.00 sold_gross=4995.00 net=14255.00
+2026-06-20 00:00:36,391 INFO TRADED date=2024-01-31 expiry=2024-02-01 lot_size=50 lots=9 buy=CE sell=PE strike=21700 bought_gross=3960.00 sold_gross=1710.00 net=5570.00
+2026-06-20 00:00:36,403 INFO SKIPPED date=2024-02-01 expiry=2024-02-08 buy=PE sell=CE strike=21700 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,416 INFO TRADED date=2024-02-02 expiry=2024-02-08 lot_size=50 lots=9 buy=PE sell=CE strike=21850 bought_gross=4252.50 sold_gross=4680.00 net=8832.50
+2026-06-20 00:00:36,430 INFO TRADED date=2024-02-05 expiry=2024-02-08 lot_size=50 lots=9 buy=PE sell=CE strike=21750 bought_gross=-14175.00 sold_gross=-11272.50 net=-25547.50
+2026-06-20 00:00:36,447 INFO TRADED date=2024-02-06 expiry=2024-02-08 lot_size=50 lots=9 buy=CE sell=PE strike=21950 bought_gross=18720.00 sold_gross=20565.00 net=39185.00
+2026-06-20 00:00:36,448 INFO TRADED date=2024-02-07 expiry=2024-02-08 lot_size=50 lots=9 buy=CE sell=PE strike=21950 bought_gross=-3262.50 sold_gross=7830.00 net=4467.50
+2026-06-20 00:00:36,460 INFO SKIPPED date=2024-02-08 expiry=2024-02-15 buy=PE sell=CE strike=21750 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,472 INFO TRADED date=2024-02-09 expiry=2024-02-15 lot_size=50 lots=9 buy=CE sell=PE strike=21800 bought_gross=-382.50 sold_gross=720.00 net=237.50
+2026-06-20 00:00:36,484 INFO TRADED date=2024-02-12 expiry=2024-02-15 lot_size=50 lots=9 buy=PE sell=CE strike=21600 bought_gross=-8145.00 sold_gross=-5242.50 net=-13487.50
+2026-06-20 00:00:36,485 INFO TRADED date=2024-02-13 expiry=2024-02-15 lot_size=50 lots=9 buy=CE sell=PE strike=21750 bought_gross=-31837.50 sold_gross=-43380.00 net=-75317.50
+2026-06-20 00:00:36,496 INFO TRADED date=2024-02-14 expiry=2024-02-15 lot_size=50 lots=9 buy=CE sell=PE strike=21850 bought_gross=1260.00 sold_gross=7065.00 net=8225.00
+2026-06-20 00:00:36,508 INFO SKIPPED date=2024-02-15 expiry=2024-02-22 buy=CE sell=PE strike=21950 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,521 INFO TRADED date=2024-02-16 expiry=2024-02-22 lot_size=50 lots=9 buy=PE sell=CE strike=22050 bought_gross=-8595.00 sold_gross=-3285.00 net=-11980.00
+2026-06-20 00:00:36,535 INFO TRADED date=2024-02-19 expiry=2024-02-22 lot_size=50 lots=9 buy=PE sell=CE strike=22100 bought_gross=6525.00 sold_gross=10620.00 net=17045.00
+2026-06-20 00:00:36,548 INFO TRADED date=2024-02-20 expiry=2024-02-22 lot_size=50 lots=9 buy=CE sell=PE strike=22200 bought_gross=-2812.50 sold_gross=-112.50 net=-3025.00
+2026-06-20 00:00:36,548 INFO TRADED date=2024-02-21 expiry=2024-02-22 lot_size=50 lots=9 buy=PE sell=CE strike=22050 bought_gross=-22500.00 sold_gross=-4455.00 net=-27055.00
+2026-06-20 00:00:36,560 INFO SKIPPED date=2024-02-22 expiry=2024-02-29 buy=CE sell=PE strike=22200 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,560 INFO TRADED date=2024-02-23 expiry=2024-02-29 lot_size=50 lots=9 buy=PE sell=CE strike=22200 bought_gross=6255.00 sold_gross=7762.50 net=13917.50
+2026-06-20 00:00:36,573 INFO TRADED date=2024-02-26 expiry=2024-02-29 lot_size=50 lots=9 buy=PE sell=CE strike=22100 bought_gross=3307.50 sold_gross=7537.50 net=10745.00
+2026-06-20 00:00:36,573 INFO TRADED date=2024-02-27 expiry=2024-02-29 lot_size=50 lots=9 buy=CE sell=PE strike=22200 bought_gross=1080.00 sold_gross=5175.00 net=6155.00
+2026-06-20 00:00:36,585 INFO TRADED date=2024-02-28 expiry=2024-02-29 lot_size=50 lots=9 buy=PE sell=CE strike=21950 bought_gross=-9000.00 sold_gross=1192.50 net=-7907.50
+2026-06-20 00:00:36,597 INFO SKIPPED date=2024-02-29 expiry=2024-03-07 buy=CE sell=PE strike=22050 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,615 INFO TRADED date=2024-03-01 expiry=2024-03-07 lot_size=50 lots=8 buy=CE sell=PE strike=22350 bought_gross=1980.00 sold_gross=2880.00 net=4760.00
+2026-06-20 00:00:36,615 INFO SKIPPED date=2024-03-02 reason=missing_spot_signal_timestamp
+2026-06-20 00:00:36,628 INFO TRADED date=2024-03-04 expiry=2024-03-07 lot_size=50 lots=8 buy=PE sell=CE strike=22400 bought_gross=6820.00 sold_gross=9940.00 net=16660.00
+2026-06-20 00:00:36,628 INFO TRADED date=2024-03-05 expiry=2024-03-07 lot_size=50 lots=8 buy=CE sell=PE strike=22350 bought_gross=-8960.00 sold_gross=-9840.00 net=-18900.00
+2026-06-20 00:00:36,641 INFO TRADED date=2024-03-06 expiry=2024-03-07 lot_size=50 lots=8 buy=CE sell=PE strike=22500 bought_gross=-6320.00 sold_gross=-1780.00 net=-8200.00
+2026-06-20 00:00:36,651 INFO SKIPPED date=2024-03-07 expiry=2024-03-14 buy=PE sell=CE strike=22500 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,661 INFO TRADED date=2024-03-11 expiry=2024-03-14 lot_size=50 lots=8 buy=PE sell=CE strike=22300 bought_gross=-7320.00 sold_gross=-5800.00 net=-13220.00
+2026-06-20 00:00:36,671 INFO TRADED date=2024-03-12 expiry=2024-03-14 lot_size=50 lots=8 buy=PE sell=CE strike=22350 bought_gross=-9480.00 sold_gross=-7120.00 net=-16700.00
+2026-06-20 00:00:36,680 INFO TRADED date=2024-03-13 expiry=2024-03-14 lot_size=50 lots=9 buy=PE sell=CE strike=22000 bought_gross=787.50 sold_gross=2970.00 net=3657.50
+2026-06-20 00:00:36,694 INFO SKIPPED date=2024-03-14 expiry=2024-03-21 buy=CE sell=PE strike=22150 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,707 INFO TRADED date=2024-03-15 expiry=2024-03-21 lot_size=50 lots=9 buy=CE sell=PE strike=22000 bought_gross=-16267.50 sold_gross=-14962.50 net=-31330.00
+2026-06-20 00:00:36,720 INFO TRADED date=2024-03-18 expiry=2024-03-21 lot_size=50 lots=9 buy=CE sell=PE strike=22050 bought_gross=-15975.00 sold_gross=-18450.00 net=-34525.00
+2026-06-20 00:00:36,735 INFO TRADED date=2024-03-19 expiry=2024-03-21 lot_size=50 lots=9 buy=PE sell=CE strike=21800 bought_gross=-11610.00 sold_gross=-11812.50 net=-23522.50
+2026-06-20 00:00:36,748 INFO TRADED date=2024-03-20 expiry=2024-03-21 lot_size=50 lots=9 buy=CE sell=PE strike=21850 bought_gross=35167.50 sold_gross=25200.00 net=60267.50
+2026-06-20 00:00:36,758 INFO SKIPPED date=2024-03-21 expiry=2024-03-28 buy=PE sell=CE strike=22000 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,768 INFO TRADED date=2024-03-22 expiry=2024-03-28 lot_size=50 lots=9 buy=CE sell=PE strike=22100 bought_gross=-12802.50 sold_gross=-12150.00 net=-25052.50
+2026-06-20 00:00:36,768 INFO TRADED date=2024-03-26 expiry=2024-03-28 lot_size=50 lots=9 buy=PE sell=CE strike=22000 bought_gross=-2385.00 sold_gross=630.00 net=-1855.00
+2026-06-20 00:00:36,779 INFO TRADED date=2024-03-27 expiry=2024-03-28 lot_size=50 lots=9 buy=PE sell=CE strike=22150 bought_gross=-3690.00 sold_gross=2025.00 net=-1765.00
+2026-06-20 00:00:36,789 INFO SKIPPED date=2024-03-28 expiry=2024-04-04 buy=PE sell=CE strike=22350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,800 INFO TRADED date=2024-04-01 expiry=2024-04-04 lot_size=50 lots=8 buy=PE sell=CE strike=22450 bought_gross=9840.00 sold_gross=14100.00 net=23840.00
+2026-06-20 00:00:36,800 INFO TRADED date=2024-04-02 expiry=2024-04-04 lot_size=50 lots=8 buy=CE sell=PE strike=22450 bought_gross=-19040.00 sold_gross=-21480.00 net=-40620.00
+2026-06-20 00:00:36,800 INFO TRADED date=2024-04-03 expiry=2024-04-04 lot_size=50 lots=8 buy=PE sell=CE strike=22450 bought_gross=-21080.00 sold_gross=-26540.00 net=-47720.00
+2026-06-20 00:00:36,811 INFO SKIPPED date=2024-04-04 expiry=2024-04-10 buy=CE sell=PE strike=22550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,822 INFO TRADED date=2024-04-05 expiry=2024-04-10 lot_size=50 lots=8 buy=CE sell=PE strike=22500 bought_gross=3740.00 sold_gross=7360.00 net=11000.00
+2026-06-20 00:00:36,833 INFO TRADED date=2024-04-08 expiry=2024-04-10 lot_size=50 lots=8 buy=CE sell=PE strike=22650 bought_gross=5560.00 sold_gross=8560.00 net=14020.00
+2026-06-20 00:00:36,834 INFO TRADED date=2024-04-09 expiry=2024-04-10 lot_size=50 lots=8 buy=PE sell=CE strike=22650 bought_gross=-7660.00 sold_gross=-5480.00 net=-13240.00
+2026-06-20 00:00:36,846 INFO SKIPPED date=2024-04-10 expiry=2024-04-18 buy=CE sell=PE strike=22750 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,859 INFO TRADED date=2024-04-12 expiry=2024-04-18 lot_size=50 lots=8 buy=PE sell=CE strike=22500 bought_gross=29760.00 sold_gross=27700.00 net=57360.00
+2026-06-20 00:00:36,873 INFO TRADED date=2024-04-15 expiry=2024-04-18 lot_size=50 lots=8 buy=PE sell=CE strike=22300 bought_gross=30120.00 sold_gross=27240.00 net=57260.00
+2026-06-20 00:00:36,885 INFO TRADED date=2024-04-16 expiry=2024-04-18 lot_size=50 lots=9 buy=CE sell=PE strike=22200 bought_gross=3757.50 sold_gross=22252.50 net=25910.00
+2026-06-20 00:00:36,899 INFO SKIPPED date=2024-04-18 expiry=2024-04-25 buy=PE sell=CE strike=22050 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,912 INFO TRADED date=2024-04-19 expiry=2024-04-25 lot_size=50 lots=9 buy=CE sell=PE strike=22150 bought_gross=24435.00 sold_gross=32602.50 net=56937.50
+2026-06-20 00:00:36,927 INFO TRADED date=2024-04-22 expiry=2024-04-25 lot_size=50 lots=8 buy=CE sell=PE strike=22350 bought_gross=-7220.00 sold_gross=-820.00 net=-8140.00
+2026-06-20 00:00:36,927 INFO TRADED date=2024-04-23 expiry=2024-04-25 lot_size=50 lots=8 buy=PE sell=CE strike=22350 bought_gross=-15480.00 sold_gross=-11100.00 net=-26680.00
+2026-06-20 00:00:36,942 INFO TRADED date=2024-04-24 expiry=2024-04-25 lot_size=50 lots=8 buy=PE sell=CE strike=22400 bought_gross=11840.00 sold_gross=15060.00 net=26800.00
+2026-06-20 00:00:36,953 INFO SKIPPED date=2024-04-25 expiry=2024-05-02 buy=CE sell=PE strike=22550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:36,970 INFO TRADED date=2024-04-26 expiry=2024-05-02 lot_size=25 lots=17 buy=PE sell=CE strike=22450 bought_gross=-10625.00 sold_gross=-4802.50 net=-15527.50
+2026-06-20 00:00:36,982 INFO TRADED date=2024-04-29 expiry=2024-05-02 lot_size=25 lots=17 buy=CE sell=PE strike=22650 bought_gross=1105.00 sold_gross=7543.75 net=8548.75
+2026-06-20 00:00:36,994 INFO TRADED date=2024-04-30 expiry=2024-05-02 lot_size=25 lots=17 buy=PE sell=CE strike=22600 bought_gross=-10178.75 sold_gross=-5291.25 net=-15570.00
+2026-06-20 00:00:37,008 INFO SKIPPED date=2024-05-02 expiry=2024-05-09 buy=PE sell=CE strike=22650 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,022 INFO TRADED date=2024-05-03 expiry=2024-05-09 lot_size=25 lots=17 buy=PE sell=CE strike=22450 bought_gross=-17382.50 sold_gross=-18445.00 net=-35927.50
+2026-06-20 00:00:37,022 INFO TRADED date=2024-05-06 expiry=2024-05-09 lot_size=25 lots=17 buy=PE sell=CE strike=22450 bought_gross=-5992.50 sold_gross=-3973.75 net=-10066.25
+2026-06-20 00:00:37,036 INFO TRADED date=2024-05-07 expiry=2024-05-09 lot_size=25 lots=17 buy=PE sell=CE strike=22300 bought_gross=17021.25 sold_gross=15703.75 net=32625.00
+2026-06-20 00:00:37,036 INFO TRADED date=2024-05-08 expiry=2024-05-09 lot_size=25 lots=17 buy=CE sell=PE strike=22300 bought_gross=-3187.50 sold_gross=-1933.75 net=-5221.25
+2026-06-20 00:00:37,050 INFO SKIPPED date=2024-05-09 expiry=2024-05-16 buy=PE sell=CE strike=21950 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,066 INFO TRADED date=2024-05-10 expiry=2024-05-16 lot_size=25 lots=18 buy=CE sell=PE strike=22050 bought_gross=-10755.00 sold_gross=-11182.50 net=-22037.50
+2026-06-20 00:00:37,081 INFO TRADED date=2024-05-13 expiry=2024-05-16 lot_size=25 lots=18 buy=CE sell=PE strike=22100 bought_gross=5895.00 sold_gross=5355.00 net=11150.00
+2026-06-20 00:00:37,096 INFO TRADED date=2024-05-14 expiry=2024-05-16 lot_size=25 lots=17 buy=CE sell=PE strike=22200 bought_gross=1806.25 sold_gross=2380.00 net=4086.25
+2026-06-20 00:00:37,097 INFO TRADED date=2024-05-15 expiry=2024-05-16 lot_size=25 lots=18 buy=CE sell=PE strike=22200 bought_gross=17167.50 sold_gross=16132.50 net=33200.00
+2026-06-20 00:00:37,110 INFO SKIPPED date=2024-05-16 expiry=2024-05-23 buy=CE sell=PE strike=22400 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,132 INFO TRADED date=2024-05-17 expiry=2024-05-23 lot_size=25 lots=17 buy=CE sell=PE strike=22450 bought_gross=1105.00 sold_gross=-276.25 net=728.75
+2026-06-20 00:00:37,132 INFO SKIPPED date=2024-05-18 reason=missing_spot_signal_timestamp
+2026-06-20 00:00:37,144 INFO TRADED date=2024-05-21 expiry=2024-05-23 lot_size=25 lots=17 buy=PE sell=CE strike=22500 bought_gross=-8117.50 sold_gross=-5928.75 net=-14146.25
+2026-06-20 00:00:37,156 INFO TRADED date=2024-05-22 expiry=2024-05-23 lot_size=25 lots=17 buy=CE sell=PE strike=22600 bought_gross=-6481.25 sold_gross=-2273.75 net=-8855.00
+2026-06-20 00:00:37,171 INFO SKIPPED date=2024-05-23 expiry=2024-05-30 buy=CE sell=PE strike=22950 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,172 INFO TRADED date=2024-05-24 expiry=2024-05-30 lot_size=25 lots=17 buy=PE sell=CE strike=22950 bought_gross=-6311.25 sold_gross=-9477.50 net=-15888.75
+2026-06-20 00:00:37,172 INFO TRADED date=2024-05-27 expiry=2024-05-30 lot_size=25 lots=17 buy=PE sell=CE strike=22950 bought_gross=-1445.00 sold_gross=-3421.25 net=-4966.25
+2026-06-20 00:00:37,186 INFO TRADED date=2024-05-28 expiry=2024-05-30 lot_size=25 lots=17 buy=PE sell=CE strike=22850 bought_gross=11687.50 sold_gross=17191.25 net=28778.75
+2026-06-20 00:00:37,201 INFO TRADED date=2024-05-29 expiry=2024-05-30 lot_size=25 lots=17 buy=PE sell=CE strike=22700 bought_gross=11602.50 sold_gross=20697.50 net=32200.00
+2026-06-20 00:00:37,215 INFO SKIPPED date=2024-05-30 expiry=2024-06-06 buy=CE sell=PE strike=22550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,215 INFO TRADED date=2024-05-31 expiry=2024-06-06 lot_size=25 lots=17 buy=CE sell=PE strike=22550 bought_gross=102318.75 sold_gross=123122.50 net=225341.25
+2026-06-20 00:00:37,228 INFO TRADED date=2024-06-03 expiry=2024-06-06 lot_size=25 lots=17 buy=CE sell=PE strike=23300 bought_gross=-104528.75 sold_gross=-134321.25 net=-238950.00
+2026-06-20 00:00:37,241 INFO TRADED date=2024-06-04 expiry=2024-06-06 lot_size=25 lots=18 buy=PE sell=CE strike=22000 bought_gross=-43762.50 sold_gross=-16042.50 net=-59905.00
+2026-06-20 00:00:37,241 INFO TRADED date=2024-06-05 expiry=2024-06-06 lot_size=25 lots=17 buy=CE sell=PE strike=22550 bought_gross=25500.00 sold_gross=45283.75 net=70683.75
+2026-06-20 00:00:37,257 INFO SKIPPED date=2024-06-06 expiry=2024-06-13 buy=CE sell=PE strike=22850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,272 INFO TRADED date=2024-06-07 expiry=2024-06-13 lot_size=25 lots=17 buy=CE sell=PE strike=23250 bought_gross=20038.75 sold_gross=12091.25 net=32030.00
+2026-06-20 00:00:37,272 INFO TRADED date=2024-06-10 expiry=2024-06-13 lot_size=25 lots=17 buy=PE sell=CE strike=23250 bought_gross=-9180.00 sold_gross=85.00 net=-9195.00
+2026-06-20 00:00:37,273 INFO TRADED date=2024-06-11 expiry=2024-06-13 lot_size=25 lots=17 buy=PE sell=CE strike=23250 bought_gross=-13833.75 sold_gross=-9902.50 net=-23836.25
+2026-06-20 00:00:37,287 INFO TRADED date=2024-06-12 expiry=2024-06-13 lot_size=25 lots=17 buy=PE sell=CE strike=23300 bought_gross=-23077.50 sold_gross=-19932.50 net=-43110.00
+2026-06-20 00:00:37,299 INFO SKIPPED date=2024-06-13 expiry=2024-06-20 buy=CE sell=PE strike=23400 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,311 INFO TRADED date=2024-06-14 expiry=2024-06-20 lot_size=25 lots=17 buy=CE sell=PE strike=23450 bought_gross=14131.25 sold_gross=18402.50 net=32433.75
+2026-06-20 00:00:37,324 INFO TRADED date=2024-06-18 expiry=2024-06-20 lot_size=25 lots=16 buy=CE sell=PE strike=23550 bought_gross=3100.00 sold_gross=7220.00 net=10220.00
+2026-06-20 00:00:37,337 INFO TRADED date=2024-06-19 expiry=2024-06-20 lot_size=25 lots=17 buy=PE sell=CE strike=23500 bought_gross=-4058.75 sold_gross=-3017.50 net=-7176.25
+2026-06-20 00:00:37,357 INFO SKIPPED date=2024-06-20 expiry=2024-06-27 buy=CE sell=PE strike=23600 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,372 INFO TRADED date=2024-06-21 expiry=2024-06-27 lot_size=25 lots=17 buy=PE sell=CE strike=23450 bought_gross=14938.75 sold_gross=15215.00 net=30053.75
+2026-06-20 00:00:37,386 INFO TRADED date=2024-06-24 expiry=2024-06-27 lot_size=25 lots=16 buy=CE sell=PE strike=23550 bought_gross=-1000.00 sold_gross=4120.00 net=3020.00
+2026-06-20 00:00:37,400 INFO TRADED date=2024-06-25 expiry=2024-06-27 lot_size=25 lots=16 buy=CE sell=PE strike=23700 bought_gross=-4860.00 sold_gross=-4260.00 net=-9220.00
+2026-06-20 00:00:37,414 INFO TRADED date=2024-06-26 expiry=2024-06-27 lot_size=25 lots=16 buy=CE sell=PE strike=23850 bought_gross=-10020.00 sold_gross=-8380.00 net=-18500.00
+2026-06-20 00:00:37,428 INFO SKIPPED date=2024-06-27 expiry=2024-07-04 buy=CE sell=PE strike=24050 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,442 INFO TRADED date=2024-06-28 expiry=2024-07-04 lot_size=25 lots=16 buy=PE sell=CE strike=24000 bought_gross=-900.00 sold_gross=4020.00 net=3020.00
+2026-06-20 00:00:37,461 INFO TRADED date=2024-07-01 expiry=2024-07-04 lot_size=25 lots=16 buy=CE sell=PE strike=24100 bought_gross=4220.00 sold_gross=7460.00 net=11580.00
+2026-06-20 00:00:37,462 INFO TRADED date=2024-07-02 expiry=2024-07-04 lot_size=25 lots=16 buy=PE sell=CE strike=24100 bought_gross=-16540.00 sold_gross=-17260.00 net=-33900.00
+2026-06-20 00:00:37,476 INFO TRADED date=2024-07-03 expiry=2024-07-04 lot_size=25 lots=16 buy=CE sell=PE strike=24300 bought_gross=4500.00 sold_gross=11500.00 net=15900.00
+2026-06-20 00:00:37,492 INFO SKIPPED date=2024-07-04 expiry=2024-07-11 buy=PE sell=CE strike=24300 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,493 INFO TRADED date=2024-07-05 expiry=2024-07-11 lot_size=25 lots=16 buy=CE sell=PE strike=24300 bought_gross=-12020.00 sold_gross=-7600.00 net=-19720.00
+2026-06-20 00:00:37,507 INFO TRADED date=2024-07-08 expiry=2024-07-11 lot_size=25 lots=16 buy=CE sell=PE strike=24350 bought_gross=1840.00 sold_gross=6240.00 net=7980.00
+2026-06-20 00:00:37,521 INFO TRADED date=2024-07-09 expiry=2024-07-11 lot_size=25 lots=16 buy=CE sell=PE strike=24400 bought_gross=-3260.00 sold_gross=-40.00 net=-3400.00
+2026-06-20 00:00:37,521 INFO TRADED date=2024-07-10 expiry=2024-07-11 lot_size=25 lots=16 buy=CE sell=PE strike=24300 bought_gross=9160.00 sold_gross=12540.00 net=21600.00
+2026-06-20 00:00:37,533 INFO SKIPPED date=2024-07-11 expiry=2024-07-18 buy=CE sell=PE strike=24350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,546 INFO TRADED date=2024-07-12 expiry=2024-07-18 lot_size=25 lots=16 buy=CE sell=PE strike=24500 bought_gross=8900.00 sold_gross=10000.00 net=18800.00
+2026-06-20 00:00:37,558 INFO TRADED date=2024-07-15 expiry=2024-07-18 lot_size=25 lots=16 buy=CE sell=PE strike=24600 bought_gross=-860.00 sold_gross=4300.00 net=3340.00
+2026-06-20 00:00:37,558 INFO TRADED date=2024-07-16 expiry=2024-07-18 lot_size=25 lots=16 buy=PE sell=CE strike=24600 bought_gross=7180.00 sold_gross=14440.00 net=21520.00
+2026-06-20 00:00:37,576 INFO SKIPPED date=2024-07-18 expiry=2024-07-25 buy=CE sell=PE strike=24800 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,591 INFO TRADED date=2024-07-19 expiry=2024-07-25 lot_size=25 lots=16 buy=PE sell=CE strike=24550 bought_gross=26580.00 sold_gross=25240.00 net=51720.00
+2026-06-20 00:00:37,605 INFO TRADED date=2024-07-22 expiry=2024-07-25 lot_size=25 lots=16 buy=PE sell=CE strike=24500 bought_gross=-10680.00 sold_gross=-4600.00 net=-15380.00
+2026-06-20 00:00:37,605 INFO TRADED date=2024-07-23 expiry=2024-07-25 lot_size=25 lots=16 buy=CE sell=PE strike=24500 bought_gross=-11440.00 sold_gross=-5580.00 net=-17120.00
+2026-06-20 00:00:37,619 INFO TRADED date=2024-07-24 expiry=2024-07-25 lot_size=25 lots=16 buy=CE sell=PE strike=24450 bought_gross=-19740.00 sold_gross=-58980.00 net=-78820.00
+2026-06-20 00:00:37,633 INFO SKIPPED date=2024-07-25 expiry=2024-08-01 buy=CE sell=PE strike=24400 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,837 INFO TRADED date=2024-07-26 expiry=2024-08-01 lot_size=25 lots=16 buy=CE sell=PE strike=24850 bought_gross=20040.00 sold_gross=20100.00 net=40040.00
+2026-06-20 00:00:37,837 INFO TRADED date=2024-07-29 expiry=2024-08-01 lot_size=25 lots=16 buy=PE sell=CE strike=24850 bought_gross=6780.00 sold_gross=11600.00 net=18280.00
+2026-06-20 00:00:37,837 INFO TRADED date=2024-07-30 expiry=2024-08-01 lot_size=25 lots=16 buy=PE sell=CE strike=24850 bought_gross=-7880.00 sold_gross=-6700.00 net=-14680.00
+2026-06-20 00:00:37,851 INFO TRADED date=2024-07-31 expiry=2024-08-01 lot_size=25 lots=16 buy=CE sell=PE strike=25000 bought_gross=2020.00 sold_gross=14400.00 net=16320.00
+2026-06-20 00:00:37,866 INFO SKIPPED date=2024-08-01 expiry=2024-08-08 buy=CE sell=PE strike=25000 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,880 INFO TRADED date=2024-08-02 expiry=2024-08-08 lot_size=25 lots=16 buy=PE sell=CE strike=24700 bought_gross=92960.00 sold_gross=38260.00 net=131120.00
+2026-06-20 00:00:37,894 INFO TRADED date=2024-08-05 expiry=2024-08-08 lot_size=25 lots=16 buy=PE sell=CE strike=24050 bought_gross=-58960.00 sold_gross=-44700.00 net=-103760.00
+2026-06-20 00:00:37,894 INFO TRADED date=2024-08-06 expiry=2024-08-08 lot_size=25 lots=16 buy=PE sell=CE strike=24050 bought_gross=-44000.00 sold_gross=-49400.00 net=-93500.00
+2026-06-20 00:00:37,908 INFO TRADED date=2024-08-07 expiry=2024-08-08 lot_size=25 lots=16 buy=CE sell=PE strike=24300 bought_gross=-22660.00 sold_gross=-15080.00 net=-37840.00
+2026-06-20 00:00:37,919 INFO SKIPPED date=2024-08-08 expiry=2024-08-14 buy=PE sell=CE strike=24100 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,932 INFO TRADED date=2024-08-09 expiry=2024-08-14 lot_size=25 lots=16 buy=CE sell=PE strike=24350 bought_gross=-13560.00 sold_gross=-12800.00 net=-26460.00
+2026-06-20 00:00:37,933 INFO TRADED date=2024-08-12 expiry=2024-08-14 lot_size=25 lots=16 buy=PE sell=CE strike=24350 bought_gross=-6340.00 sold_gross=-120.00 net=-6560.00
+2026-06-20 00:00:37,944 INFO TRADED date=2024-08-13 expiry=2024-08-14 lot_size=25 lots=16 buy=PE sell=CE strike=24150 bought_gross=-8540.00 sold_gross=6260.00 net=-2380.00
+2026-06-20 00:00:37,956 INFO SKIPPED date=2024-08-14 expiry=2024-08-22 buy=PE sell=CE strike=24150 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:37,970 INFO TRADED date=2024-08-16 expiry=2024-08-22 lot_size=25 lots=16 buy=CE sell=PE strike=24550 bought_gross=9820.00 sold_gross=12080.00 net=21800.00
+2026-06-20 00:00:37,984 INFO TRADED date=2024-08-19 expiry=2024-08-22 lot_size=25 lots=16 buy=CE sell=PE strike=24600 bought_gross=5160.00 sold_gross=12600.00 net=17660.00
+2026-06-20 00:00:37,999 INFO TRADED date=2024-08-20 expiry=2024-08-22 lot_size=25 lots=16 buy=PE sell=CE strike=24650 bought_gross=-3900.00 sold_gross=-540.00 net=-4540.00
+2026-06-20 00:00:38,013 INFO TRADED date=2024-08-21 expiry=2024-08-22 lot_size=25 lots=16 buy=CE sell=PE strike=24800 bought_gross=4380.00 sold_gross=11700.00 net=15980.00
+2026-06-20 00:00:38,029 INFO SKIPPED date=2024-08-22 expiry=2024-08-29 buy=PE sell=CE strike=24800 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,043 INFO TRADED date=2024-08-23 expiry=2024-08-29 lot_size=25 lots=16 buy=CE sell=PE strike=24850 bought_gross=4980.00 sold_gross=13620.00 net=18500.00
+2026-06-20 00:00:38,059 INFO TRADED date=2024-08-26 expiry=2024-08-29 lot_size=25 lots=15 buy=CE sell=PE strike=25000 bought_gross=-5418.75 sold_gross=-1575.00 net=-7093.75
+2026-06-20 00:00:38,059 INFO TRADED date=2024-08-27 expiry=2024-08-29 lot_size=25 lots=16 buy=PE sell=CE strike=25000 bought_gross=-3820.00 sold_gross=-600.00 net=-4520.00
+2026-06-20 00:00:38,074 INFO TRADED date=2024-08-28 expiry=2024-08-29 lot_size=25 lots=15 buy=PE sell=CE strike=25050 bought_gross=1012.50 sold_gross=5793.75 net=6706.25
+2026-06-20 00:00:38,094 INFO SKIPPED date=2024-08-29 expiry=2024-09-05 buy=CE sell=PE strike=25150 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,108 INFO TRADED date=2024-08-30 expiry=2024-09-05 lot_size=25 lots=15 buy=CE sell=PE strike=25250 bought_gross=-1181.25 sold_gross=-93.75 net=-1375.00
+2026-06-20 00:00:38,108 INFO TRADED date=2024-09-02 expiry=2024-09-05 lot_size=25 lots=15 buy=PE sell=CE strike=25250 bought_gross=-712.50 sold_gross=3468.75 net=2656.25
+2026-06-20 00:00:38,108 INFO TRADED date=2024-09-03 expiry=2024-09-05 lot_size=25 lots=15 buy=CE sell=PE strike=25250 bought_gross=-22500.00 sold_gross=-31481.25 net=-54081.25
+2026-06-20 00:00:38,125 INFO TRADED date=2024-09-04 expiry=2024-09-05 lot_size=25 lots=15 buy=CE sell=PE strike=25200 bought_gross=4237.50 sold_gross=13743.75 net=17881.25
+2026-06-20 00:00:38,140 INFO SKIPPED date=2024-09-05 expiry=2024-09-12 buy=PE sell=CE strike=25150 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,158 INFO TRADED date=2024-09-06 expiry=2024-09-12 lot_size=25 lots=16 buy=PE sell=CE strike=24850 bought_gross=6700.00 sold_gross=16520.00 net=23120.00
+2026-06-20 00:00:38,174 INFO TRADED date=2024-09-09 expiry=2024-09-12 lot_size=25 lots=16 buy=CE sell=PE strike=24950 bought_gross=1620.00 sold_gross=13540.00 net=15060.00
+2026-06-20 00:00:38,188 INFO TRADED date=2024-09-10 expiry=2024-09-12 lot_size=25 lots=15 buy=CE sell=PE strike=25050 bought_gross=-10912.50 sold_gross=-9862.50 net=-20875.00
+2026-06-20 00:00:38,188 INFO TRADED date=2024-09-11 expiry=2024-09-12 lot_size=25 lots=16 buy=PE sell=CE strike=24950 bought_gross=-28900.00 sold_gross=-20280.00 net=-49280.00
+2026-06-20 00:00:38,202 INFO SKIPPED date=2024-09-12 expiry=2024-09-19 buy=CE sell=PE strike=25300 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,216 INFO TRADED date=2024-09-13 expiry=2024-09-19 lot_size=25 lots=15 buy=PE sell=CE strike=25350 bought_gross=-12881.25 sold_gross=-7668.75 net=-20650.00
+2026-06-20 00:00:38,233 INFO TRADED date=2024-09-16 expiry=2024-09-19 lot_size=25 lots=15 buy=PE sell=CE strike=25400 bought_gross=150.00 sold_gross=2775.00 net=2825.00
+2026-06-20 00:00:38,233 INFO TRADED date=2024-09-17 expiry=2024-09-19 lot_size=25 lots=15 buy=PE sell=CE strike=25400 bought_gross=75.00 sold_gross=2793.75 net=2768.75
+2026-06-20 00:00:38,233 INFO TRADED date=2024-09-18 expiry=2024-09-19 lot_size=25 lots=15 buy=PE sell=CE strike=25350 bought_gross=-36825.00 sold_gross=-28706.25 net=-65631.25
+2026-06-20 00:00:38,246 INFO SKIPPED date=2024-09-19 expiry=2024-09-26 buy=PE sell=CE strike=25450 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,261 INFO TRADED date=2024-09-20 expiry=2024-09-26 lot_size=25 lots=15 buy=CE sell=PE strike=25800 bought_gross=24168.75 sold_gross=13912.50 net=37981.25
+2026-06-20 00:00:38,277 INFO TRADED date=2024-09-23 expiry=2024-09-26 lot_size=25 lots=15 buy=CE sell=PE strike=25950 bought_gross=1331.25 sold_gross=2287.50 net=3518.75
+2026-06-20 00:00:38,277 INFO TRADED date=2024-09-24 expiry=2024-09-26 lot_size=25 lots=15 buy=CE sell=PE strike=25950 bought_gross=-8831.25 sold_gross=-6300.00 net=-15231.25
+2026-06-20 00:00:38,293 INFO TRADED date=2024-09-25 expiry=2024-09-26 lot_size=25 lots=15 buy=CE sell=PE strike=26000 bought_gross=2343.75 sold_gross=2006.25 net=4250.00
+2026-06-20 00:00:38,308 INFO SKIPPED date=2024-09-26 expiry=2024-10-03 buy=CE sell=PE strike=26200 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,308 INFO TRADED date=2024-09-27 expiry=2024-10-03 lot_size=25 lots=15 buy=PE sell=CE strike=26200 bought_gross=13987.50 sold_gross=16387.50 net=30275.00
+2026-06-20 00:00:38,322 INFO TRADED date=2024-09-30 expiry=2024-10-03 lot_size=25 lots=15 buy=PE sell=CE strike=25800 bought_gross=-13068.75 sold_gross=-8737.50 net=-21906.25
+2026-06-20 00:00:38,323 INFO TRADED date=2024-10-01 expiry=2024-10-03 lot_size=25 lots=15 buy=CE sell=PE strike=25800 bought_gross=-27150.00 sold_gross=-75393.75 net=-102643.75
+2026-06-20 00:00:38,337 INFO SKIPPED date=2024-10-03 expiry=2024-10-10 buy=PE sell=CE strike=25250 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,353 INFO TRADED date=2024-10-04 expiry=2024-10-10 lot_size=25 lots=15 buy=PE sell=CE strike=25050 bought_gross=-21093.75 sold_gross=-12562.50 net=-33756.25
+2026-06-20 00:00:38,367 INFO TRADED date=2024-10-07 expiry=2024-10-10 lot_size=25 lots=16 buy=PE sell=CE strike=24800 bought_gross=13320.00 sold_gross=-60.00 net=13160.00
+2026-06-20 00:00:38,368 INFO TRADED date=2024-10-08 expiry=2024-10-10 lot_size=25 lots=15 buy=CE sell=PE strike=25050 bought_gross=1106.25 sold_gross=10800.00 net=11806.25
+2026-06-20 00:00:38,382 INFO TRADED date=2024-10-09 expiry=2024-10-10 lot_size=25 lots=15 buy=PE sell=CE strike=25000 bought_gross=-13143.75 sold_gross=-9993.75 net=-23237.50
+2026-06-20 00:00:38,396 INFO SKIPPED date=2024-10-10 expiry=2024-10-17 buy=PE sell=CE strike=25000 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,396 INFO TRADED date=2024-10-11 expiry=2024-10-17 lot_size=25 lots=16 buy=CE sell=PE strike=25000 bought_gross=9480.00 sold_gross=18740.00 net=28120.00
+2026-06-20 00:00:38,412 INFO TRADED date=2024-10-14 expiry=2024-10-17 lot_size=25 lots=15 buy=CE sell=PE strike=25150 bought_gross=6900.00 sold_gross=12712.50 net=19512.50
+2026-06-20 00:00:38,429 INFO TRADED date=2024-10-15 expiry=2024-10-17 lot_size=25 lots=15 buy=PE sell=CE strike=25050 bought_gross=8343.75 sold_gross=11662.50 net=19906.25
+2026-06-20 00:00:38,446 INFO TRADED date=2024-10-16 expiry=2024-10-17 lot_size=25 lots=16 buy=PE sell=CE strike=24950 bought_gross=-7460.00 sold_gross=-6940.00 net=-14500.00
+2026-06-20 00:00:38,464 INFO SKIPPED date=2024-10-17 expiry=2024-10-24 buy=PE sell=CE strike=24750 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,480 INFO TRADED date=2024-10-18 expiry=2024-10-24 lot_size=25 lots=16 buy=CE sell=PE strike=24850 bought_gross=8420.00 sold_gross=12000.00 net=20320.00
+2026-06-20 00:00:38,482 INFO TRADED date=2024-10-21 expiry=2024-10-24 lot_size=25 lots=16 buy=PE sell=CE strike=24750 bought_gross=-12040.00 sold_gross=-8480.00 net=-20620.00
+2026-06-20 00:00:38,499 INFO TRADED date=2024-10-22 expiry=2024-10-24 lot_size=25 lots=16 buy=PE sell=CE strike=24500 bought_gross=3180.00 sold_gross=2820.00 net=5900.00
+2026-06-20 00:00:38,512 INFO TRADED date=2024-10-23 expiry=2024-10-24 lot_size=25 lots=16 buy=PE sell=CE strike=24450 bought_gross=-8640.00 sold_gross=-9700.00 net=-18440.00
+2026-06-20 00:00:38,529 INFO SKIPPED date=2024-10-24 expiry=2024-10-31 buy=CE sell=PE strike=24400 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,543 INFO TRADED date=2024-10-25 expiry=2024-10-31 lot_size=25 lots=16 buy=CE sell=PE strike=24200 bought_gross=4280.00 sold_gross=12840.00 net=17020.00
+2026-06-20 00:00:38,556 INFO TRADED date=2024-10-28 expiry=2024-10-31 lot_size=25 lots=16 buy=PE sell=CE strike=24350 bought_gross=4700.00 sold_gross=1180.00 net=5780.00
+2026-06-20 00:00:38,568 INFO TRADED date=2024-10-29 expiry=2024-10-31 lot_size=25 lots=16 buy=CE sell=PE strike=24450 bought_gross=-11540.00 sold_gross=-14340.00 net=-25980.00
+2026-06-20 00:00:38,568 INFO TRADED date=2024-10-30 expiry=2024-10-31 lot_size=25 lots=16 buy=PE sell=CE strike=24350 bought_gross=14100.00 sold_gross=14040.00 net=28040.00
+2026-06-20 00:00:38,579 INFO SKIPPED date=2024-10-31 expiry=2024-11-07 buy=CE sell=PE strike=24250 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,579 INFO SKIPPED date=2024-11-01 reason=missing_spot_signal_timestamp
+2026-06-20 00:00:38,590 INFO TRADED date=2024-11-04 expiry=2024-11-07 lot_size=25 lots=16 buy=CE sell=PE strike=24000 bought_gross=-6120.00 sold_gross=-11380.00 net=-17600.00
+2026-06-20 00:00:38,601 INFO TRADED date=2024-11-05 expiry=2024-11-07 lot_size=25 lots=16 buy=CE sell=PE strike=24200 bought_gross=10960.00 sold_gross=19260.00 net=30120.00
+2026-06-20 00:00:38,613 INFO TRADED date=2024-11-06 expiry=2024-11-07 lot_size=25 lots=16 buy=CE sell=PE strike=24500 bought_gross=-12360.00 sold_gross=-6260.00 net=-18720.00
+2026-06-20 00:00:38,626 INFO SKIPPED date=2024-11-07 expiry=2024-11-14 buy=PE sell=CE strike=24200 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,638 INFO TRADED date=2024-11-08 expiry=2024-11-14 lot_size=25 lots=16 buy=PE sell=CE strike=24100 bought_gross=20960.00 sold_gross=20020.00 net=40880.00
+2026-06-20 00:00:38,638 INFO TRADED date=2024-11-11 expiry=2024-11-14 lot_size=25 lots=16 buy=PE sell=CE strike=24100 bought_gross=-14200.00 sold_gross=-17340.00 net=-31640.00
+2026-06-20 00:00:38,651 INFO TRADED date=2024-11-12 expiry=2024-11-14 lot_size=25 lots=16 buy=PE sell=CE strike=23850 bought_gross=3780.00 sold_gross=2240.00 net=5920.00
+2026-06-20 00:00:38,662 INFO TRADED date=2024-11-13 expiry=2024-11-14 lot_size=25 lots=16 buy=PE sell=CE strike=23600 bought_gross=5480.00 sold_gross=740.00 net=6120.00
+2026-06-20 00:00:38,670 INFO SKIPPED date=2024-11-14 expiry=2024-11-21 buy=CE sell=PE strike=23550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,678 INFO TRADED date=2024-11-18 expiry=2024-11-21 lot_size=25 lots=17 buy=CE sell=PE strike=23450 bought_gross=15873.75 sold_gross=18976.25 net=34750.00
+2026-06-20 00:00:38,678 INFO TRADED date=2024-11-19 expiry=2024-11-21 lot_size=25 lots=17 buy=PE sell=CE strike=23450 bought_gross=25096.25 sold_gross=20038.75 net=45035.00
+2026-06-20 00:00:38,689 INFO SKIPPED date=2024-11-21 expiry=2024-11-28 buy=CE sell=PE strike=23350 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,703 INFO TRADED date=2024-11-22 expiry=2024-11-28 lot_size=75 lots=5 buy=CE sell=PE strike=23850 bought_gross=105450.00 sold_gross=51525.00 net=156875.00
+2026-06-20 00:00:38,715 INFO TRADED date=2024-11-25 expiry=2024-11-28 lot_size=75 lots=5 buy=PE sell=CE strike=24250 bought_gross=1725.00 sold_gross=2081.25 net=3706.25
+2026-06-20 00:00:38,727 INFO TRADED date=2024-11-26 expiry=2024-11-28 lot_size=75 lots=5 buy=PE sell=CE strike=24200 bought_gross=-862.50 sold_gross=2325.00 net=1362.50
+2026-06-20 00:00:38,740 INFO TRADED date=2024-11-27 expiry=2024-11-28 lot_size=75 lots=5 buy=CE sell=PE strike=24300 bought_gross=-1218.75 sold_gross=-881.25 net=-2200.00
+2026-06-20 00:00:38,752 INFO SKIPPED date=2024-11-28 expiry=2024-12-05 buy=PE sell=CE strike=23950 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,764 INFO TRADED date=2024-11-29 expiry=2024-12-05 lot_size=75 lots=5 buy=CE sell=PE strike=24100 bought_gross=-20362.50 sold_gross=-17700.00 net=-38162.50
+2026-06-20 00:00:38,780 INFO TRADED date=2024-12-02 expiry=2024-12-05 lot_size=75 lots=5 buy=CE sell=PE strike=24300 bought_gross=5981.25 sold_gross=6356.25 net=12237.50
+2026-06-20 00:00:38,793 INFO TRADED date=2024-12-03 expiry=2024-12-05 lot_size=75 lots=5 buy=CE sell=PE strike=24450 bought_gross=2081.25 sold_gross=4425.00 net=6406.25
+2026-06-20 00:00:38,793 INFO TRADED date=2024-12-04 expiry=2024-12-05 lot_size=75 lots=5 buy=PE sell=CE strike=24450 bought_gross=-9075.00 sold_gross=-4668.75 net=-13843.75
+2026-06-20 00:00:38,806 INFO SKIPPED date=2024-12-05 expiry=2024-12-12 buy=CE sell=PE strike=24700 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,818 INFO TRADED date=2024-12-06 expiry=2024-12-12 lot_size=75 lots=5 buy=PE sell=CE strike=24650 bought_gross=4425.00 sold_gross=7406.25 net=11731.25
+2026-06-20 00:00:38,819 INFO TRADED date=2024-12-09 expiry=2024-12-12 lot_size=75 lots=5 buy=PE sell=CE strike=24650 bought_gross=-6881.25 sold_gross=-900.00 net=-7881.25
+2026-06-20 00:00:38,831 INFO TRADED date=2024-12-10 expiry=2024-12-12 lot_size=75 lots=5 buy=CE sell=PE strike=24600 bought_gross=-3900.00 sold_gross=4350.00 net=350.00
+2026-06-20 00:00:38,832 INFO TRADED date=2024-12-11 expiry=2024-12-12 lot_size=75 lots=5 buy=PE sell=CE strike=24650 bought_gross=-3000.00 sold_gross=7481.25 net=4381.25
+2026-06-20 00:00:38,844 INFO SKIPPED date=2024-12-12 expiry=2024-12-19 buy=PE sell=CE strike=24550 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,856 INFO TRADED date=2024-12-13 expiry=2024-12-19 lot_size=75 lots=5 buy=CE sell=PE strike=24800 bought_gross=-11325.00 sold_gross=-13893.75 net=-25318.75
+2026-06-20 00:00:38,870 INFO TRADED date=2024-12-16 expiry=2024-12-19 lot_size=75 lots=5 buy=PE sell=CE strike=24650 bought_gross=13200.00 sold_gross=12075.00 net=25175.00
+2026-06-20 00:00:38,883 INFO TRADED date=2024-12-17 expiry=2024-12-19 lot_size=75 lots=5 buy=PE sell=CE strike=24300 bought_gross=5437.50 sold_gross=7106.25 net=12443.75
+2026-06-20 00:00:38,898 INFO TRADED date=2024-12-18 expiry=2024-12-19 lot_size=75 lots=5 buy=PE sell=CE strike=24200 bought_gross=66693.75 sold_gross=24262.50 net=90856.25
+2026-06-20 00:00:38,909 INFO SKIPPED date=2024-12-19 expiry=2024-12-26 buy=CE sell=PE strike=23950 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:38,920 INFO TRADED date=2024-12-20 expiry=2024-12-26 lot_size=75 lots=5 buy=PE sell=CE strike=23650 bought_gross=-31987.50 sold_gross=-23381.25 net=-55468.75
+2026-06-20 00:00:38,932 INFO TRADED date=2024-12-23 expiry=2024-12-26 lot_size=75 lots=5 buy=PE sell=CE strike=23750 bought_gross=-5475.00 sold_gross=7368.75 net=1793.75
+2026-06-20 00:00:38,932 INFO TRADED date=2024-12-24 expiry=2024-12-26 lot_size=75 lots=5 buy=PE sell=CE strike=23750 bought_gross=-7612.50 sold_gross=-7987.50 net=-15700.00
+2026-06-20 00:00:38,986 INFO TRADED date=2024-12-26 expiry=2025-01-02 lot_size=75 lots=5 buy=CE sell=PE strike=23750 bought_gross=10368.75 sold_gross=6375.00 net=16643.75
+2026-06-20 00:00:39,019 INFO TRADED date=2024-12-27 expiry=2025-01-02 lot_size=75 lots=5 buy=PE sell=CE strike=23850 bought_gross=9056.25 sold_gross=14550.00 net=23506.25
+2026-06-20 00:00:39,097 INFO TRADED date=2024-12-30 expiry=2025-01-02 lot_size=75 lots=5 buy=PE sell=CE strike=23650 bought_gross=26493.75 sold_gross=26643.75 net=53037.50
+2026-06-20 00:00:39,097 INFO TRADED date=2024-12-31 expiry=2025-01-02 lot_size=75 lots=5 buy=CE sell=PE strike=23650 bought_gross=-13387.50 sold_gross=-4987.50 net=-18475.00
+2026-06-20 00:00:39,098 INFO TRADED date=2025-01-01 expiry=2025-01-02 lot_size=75 lots=5 buy=CE sell=PE strike=23750 bought_gross=-4406.25 sold_gross=3168.75 net=-1337.50
+2026-06-20 00:00:39,142 INFO TRADED date=2025-01-02 expiry=2025-01-09 lot_size=75 lots=5 buy=CE sell=PE strike=24150 bought_gross=-7275.00 sold_gross=-8325.00 net=-15700.00
+2026-06-20 00:00:39,194 INFO TRADED date=2025-01-03 expiry=2025-01-09 lot_size=75 lots=5 buy=PE sell=CE strike=24000 bought_gross=-10518.75 sold_gross=-7485.00 net=-18103.75
+2026-06-20 00:00:39,230 INFO TRADED date=2025-01-06 expiry=2025-01-09 lot_size=75 lots=5 buy=PE sell=CE strike=23650 bought_gross=-27206.25 sold_gross=-15206.25 net=-42512.50
+2026-06-20 00:00:39,272 INFO TRADED date=2025-01-07 expiry=2025-01-09 lot_size=75 lots=5 buy=PE sell=CE strike=23700 bought_gross=-225.00 sold_gross=4481.25 net=4156.25
+2026-06-20 00:00:39,272 INFO TRADED date=2025-01-08 expiry=2025-01-09 lot_size=75 lots=5 buy=CE sell=PE strike=23700 bought_gross=-12506.25 sold_gross=-10537.50 net=-23143.75
+2026-06-20 00:00:39,311 INFO TRADED date=2025-01-09 expiry=2025-01-16 lot_size=75 lots=5 buy=PE sell=CE strike=23550 bought_gross=3956.25 sold_gross=6806.25 net=10662.50
+2026-06-20 00:00:39,346 INFO TRADED date=2025-01-10 expiry=2025-01-16 lot_size=75 lots=5 buy=PE sell=CE strike=23450 bought_gross=44208.75 sold_gross=30825.00 net=74933.75
+2026-06-20 00:00:39,389 INFO TRADED date=2025-01-13 expiry=2025-01-16 lot_size=75 lots=5 buy=PE sell=CE strike=23100 bought_gross=-18543.75 sold_gross=-16166.25 net=-34810.00
+2026-06-20 00:00:39,431 INFO TRADED date=2025-01-14 expiry=2025-01-16 lot_size=75 lots=5 buy=CE sell=PE strike=23200 bought_gross=-993.75 sold_gross=1425.00 net=331.25
+2026-06-20 00:00:39,464 INFO TRADED date=2025-01-15 expiry=2025-01-16 lot_size=75 lots=5 buy=CE sell=PE strike=23250 bought_gross=17231.25 sold_gross=19218.75 net=36350.00
+2026-06-20 00:00:39,757 INFO TRADED date=2025-01-16 expiry=2025-01-23 lot_size=75 lots=5 buy=CE sell=PE strike=23350 bought_gross=-26681.25 sold_gross=-23231.25 net=-50012.50
+2026-06-20 00:00:39,803 INFO TRADED date=2025-01-17 expiry=2025-01-23 lot_size=75 lots=5 buy=CE sell=PE strike=23200 bought_gross=5793.75 sold_gross=9821.25 net=15515.00
+2026-06-20 00:00:39,804 INFO TRADED date=2025-01-20 expiry=2025-01-23 lot_size=75 lots=5 buy=CE sell=PE strike=23350 bought_gross=3022.50 sold_gross=7575.00 net=10497.50
+2026-06-20 00:00:39,837 INFO TRADED date=2025-01-21 expiry=2025-01-23 lot_size=75 lots=5 buy=PE sell=CE strike=23050 bought_gross=-6487.50 sold_gross=1143.75 net=-5443.75
+2026-06-20 00:00:39,881 INFO TRADED date=2025-01-22 expiry=2025-01-23 lot_size=75 lots=5 buy=CE sell=PE strike=23150 bought_gross=-15487.50 sold_gross=-4931.25 net=-20518.75
+2026-06-20 00:00:40,017 INFO TRADED date=2025-01-23 expiry=2025-01-30 lot_size=75 lots=5 buy=PE sell=CE strike=23200 bought_gross=-1856.25 sold_gross=-3356.25 net=-5312.50
+2026-06-20 00:00:40,136 INFO TRADED date=2025-01-24 expiry=2025-01-30 lot_size=75 lots=5 buy=PE sell=CE strike=23100 bought_gross=33712.50 sold_gross=23137.50 net=56750.00
+2026-06-20 00:00:40,255 INFO TRADED date=2025-01-27 expiry=2025-01-30 lot_size=75 lots=5 buy=PE sell=CE strike=22800 bought_gross=-22350.00 sold_gross=-20850.00 net=-43300.00
+2026-06-20 00:00:40,423 INFO TRADED date=2025-01-28 expiry=2025-01-30 lot_size=75 lots=5 buy=PE sell=CE strike=23000 bought_gross=-9450.00 sold_gross=-6881.25 net=-16431.25
+2026-06-20 00:00:40,423 INFO TRADED date=2025-01-29 expiry=2025-01-30 lot_size=75 lots=5 buy=CE sell=PE strike=23200 bought_gross=-8887.50 sold_gross=-4350.00 net=-13337.50
+2026-06-20 00:00:40,488 INFO TRADED date=2025-01-30 expiry=2025-02-06 lot_size=75 lots=5 buy=CE sell=PE strike=23300 bought_gross=-1725.00 sold_gross=-8302.50 net=-10127.50
+2026-06-20 00:00:40,539 INFO TRADED date=2025-01-31 expiry=2025-02-06 lot_size=75 lots=5 buy=CE sell=PE strike=23550 bought_gross=-5043.75 sold_gross=-4106.25 net=-9250.00
+2026-06-20 00:00:40,608 INFO TRADED date=2025-02-01 expiry=2025-02-06 lot_size=75 lots=5 buy=PE sell=CE strike=23500 bought_gross=37912.50 sold_gross=27558.75 net=65371.25
+2026-06-20 00:00:40,655 INFO TRADED date=2025-02-03 expiry=2025-02-06 lot_size=75 lots=5 buy=CE sell=PE strike=23350 bought_gross=21018.75 sold_gross=17456.25 net=38375.00
+2026-06-20 00:00:40,716 INFO TRADED date=2025-02-04 expiry=2025-02-06 lot_size=75 lots=5 buy=CE sell=PE strike=23700 bought_gross=8118.75 sold_gross=5718.75 net=13737.50
+2026-06-20 00:00:40,716 INFO TRADED date=2025-02-05 expiry=2025-02-06 lot_size=75 lots=5 buy=PE sell=CE strike=23700 bought_gross=-12000.00 sold_gross=-3825.00 net=-15925.00
+2026-06-20 00:00:40,747 INFO TRADED date=2025-02-06 expiry=2025-02-13 lot_size=75 lots=5 buy=CE sell=PE strike=23650 bought_gross=75.00 sold_gross=-2550.00 net=-2575.00
+2026-06-20 00:00:40,772 INFO TRADED date=2025-02-07 expiry=2025-02-13 lot_size=75 lots=5 buy=PE sell=CE strike=23550 bought_gross=12750.00 sold_gross=9993.75 net=22643.75
+2026-06-20 00:00:40,819 INFO TRADED date=2025-02-10 expiry=2025-02-13 lot_size=75 lots=5 buy=PE sell=CE strike=23400 bought_gross=7143.75 sold_gross=6843.75 net=13887.50
+2026-06-20 00:00:40,862 INFO TRADED date=2025-02-11 expiry=2025-02-13 lot_size=75 lots=5 buy=PE sell=CE strike=23050 bought_gross=-37.50 sold_gross=2283.75 net=2146.25
+2026-06-20 00:00:40,862 INFO TRADED date=2025-02-12 expiry=2025-02-13 lot_size=75 lots=5 buy=CE sell=PE strike=23050 bought_gross=6806.25 sold_gross=8883.75 net=15590.00
+2026-06-20 00:00:40,920 INFO TRADED date=2025-02-13 expiry=2025-02-20 lot_size=75 lots=5 buy=PE sell=CE strike=23000 bought_gross=-18071.25 sold_gross=-20362.50 net=-38533.75
+2026-06-20 00:00:40,971 INFO TRADED date=2025-02-14 expiry=2025-02-20 lot_size=75 lots=5 buy=PE sell=CE strike=22900 bought_gross=28128.75 sold_gross=21075.00 net=49103.75
+2026-06-20 00:00:40,997 INFO TRADED date=2025-02-17 expiry=2025-02-20 lot_size=75 lots=5 buy=CE sell=PE strike=22950 bought_gross=-5362.50 sold_gross=-5306.25 net=-10768.75
+2026-06-20 00:00:40,998 INFO TRADED date=2025-02-18 expiry=2025-02-20 lot_size=75 lots=5 buy=CE sell=PE strike=22900 bought_gross=-13668.75 sold_gross=-12506.25 net=-26275.00
+2026-06-20 00:00:40,998 INFO TRADED date=2025-02-19 expiry=2025-02-20 lot_size=75 lots=5 buy=PE sell=CE strike=22900 bought_gross=6731.25 sold_gross=10987.50 net=17618.75
+2026-06-20 00:00:41,100 INFO TRADED date=2025-02-20 expiry=2025-02-27 lot_size=75 lots=5 buy=CE sell=PE strike=22900 bought_gross=-7237.50 sold_gross=-4050.00 net=-11387.50
+2026-06-20 00:00:41,175 INFO TRADED date=2025-02-21 expiry=2025-02-27 lot_size=75 lots=5 buy=PE sell=CE strike=22750 bought_gross=15352.50 sold_gross=21581.25 net=36833.75
+2026-06-20 00:00:41,230 INFO TRADED date=2025-02-24 expiry=2025-02-27 lot_size=75 lots=5 buy=PE sell=CE strike=22550 bought_gross=-806.25 sold_gross=3900.00 net=2993.75
+2026-06-20 00:00:41,231 INFO TRADED date=2025-02-25 expiry=2025-02-27 lot_size=75 lots=5 buy=PE sell=CE strike=22550 bought_gross=-9712.50 sold_gross=1650.00 net=-8162.50
+2026-06-20 00:00:41,279 INFO TRADED date=2025-02-27 expiry=2025-03-06 lot_size=75 lots=5 buy=PE sell=CE strike=22500 bought_gross=33431.25 sold_gross=30750.00 net=64081.25
+2026-06-20 00:00:41,307 INFO TRADED date=2025-02-28 expiry=2025-03-06 lot_size=75 lots=6 buy=PE sell=CE strike=22150 bought_gross=-18787.50 sold_gross=-11002.50 net=-29890.00
+2026-06-20 00:00:41,307 INFO TRADED date=2025-03-03 expiry=2025-03-06 lot_size=75 lots=6 buy=CE sell=PE strike=22150 bought_gross=-33210.00 sold_gross=-38520.00 net=-71830.00
+2026-06-20 00:00:41,342 INFO TRADED date=2025-03-04 expiry=2025-03-06 lot_size=75 lots=6 buy=CE sell=PE strike=22100 bought_gross=315.00 sold_gross=12240.00 net=12455.00
+2026-06-20 00:00:41,373 INFO TRADED date=2025-03-05 expiry=2025-03-06 lot_size=75 lots=5 buy=CE sell=PE strike=22350 bought_gross=13593.75 sold_gross=22293.75 net=35787.50
+2026-06-20 00:00:41,413 INFO TRADED date=2025-03-06 expiry=2025-03-13 lot_size=75 lots=5 buy=CE sell=PE strike=22550 bought_gross=-9000.00 sold_gross=-6675.00 net=-15775.00
+2026-06-20 00:00:41,414 INFO TRADED date=2025-03-07 expiry=2025-03-13 lot_size=75 lots=5 buy=PE sell=CE strike=22550 bought_gross=412.50 sold_gross=4443.75 net=4756.25
+2026-06-20 00:00:41,453 INFO TRADED date=2025-03-10 expiry=2025-03-13 lot_size=75 lots=5 buy=PE sell=CE strike=22450 bought_gross=20700.00 sold_gross=17231.25 net=37831.25
+2026-06-20 00:00:41,499 INFO TRADED date=2025-03-11 expiry=2025-03-13 lot_size=75 lots=5 buy=CE sell=PE strike=22500 bought_gross=243.75 sold_gross=7818.75 net=7962.50
+2026-06-20 00:00:41,499 INFO TRADED date=2025-03-12 expiry=2025-03-13 lot_size=75 lots=5 buy=CE sell=PE strike=22450 bought_gross=-3506.25 sold_gross=6506.25 net=2900.00
+2026-06-20 00:00:41,540 INFO TRADED date=2025-03-13 expiry=2025-03-20 lot_size=75 lots=5 buy=PE sell=CE strike=22400 bought_gross=-21487.50 sold_gross=-24206.25 net=-45793.75
+2026-06-20 00:00:41,587 INFO TRADED date=2025-03-17 expiry=2025-03-20 lot_size=75 lots=5 buy=CE sell=PE strike=22500 bought_gross=19147.50 sold_gross=11550.00 net=30597.50
+2026-06-20 00:00:41,932 INFO TRADED date=2025-03-18 expiry=2025-03-20 lot_size=75 lots=5 buy=CE sell=PE strike=22850 bought_gross=-1912.50 sold_gross=1406.25 net=-606.25
+2026-06-20 00:00:41,983 INFO TRADED date=2025-03-19 expiry=2025-03-20 lot_size=75 lots=5 buy=CE sell=PE strike=22900 bought_gross=10050.00 sold_gross=10875.00 net=20825.00
+2026-06-20 00:00:42,100 INFO TRADED date=2025-03-20 expiry=2025-03-27 lot_size=75 lots=5 buy=CE sell=PE strike=23150 bought_gross=0.00 sold_gross=-487.50 net=-587.50
+2026-06-20 00:00:42,211 INFO TRADED date=2025-03-21 expiry=2025-03-27 lot_size=75 lots=5 buy=CE sell=PE strike=23350 bought_gross=23456.25 sold_gross=14253.75 net=37610.00
+2026-06-20 00:00:42,313 INFO TRADED date=2025-03-24 expiry=2025-03-27 lot_size=75 lots=5 buy=CE sell=PE strike=23650 bought_gross=15056.25 sold_gross=6000.00 net=20956.25
+2026-06-20 00:00:42,473 INFO TRADED date=2025-03-25 expiry=2025-03-27 lot_size=75 lots=5 buy=PE sell=CE strike=23600 bought_gross=-5850.00 sold_gross=-3993.75 net=-9943.75
+2026-06-20 00:00:42,590 INFO TRADED date=2025-03-26 expiry=2025-03-27 lot_size=75 lots=5 buy=PE sell=CE strike=23450 bought_gross=2287.50 sold_gross=15112.50 net=17300.00
+2026-06-20 00:00:42,638 INFO TRADED date=2025-03-27 expiry=2025-04-03 lot_size=75 lots=5 buy=CE sell=PE strike=23600 bought_gross=-8175.00 sold_gross=-6243.75 net=-14518.75
+2026-06-20 00:00:42,688 INFO TRADED date=2025-03-28 expiry=2025-04-03 lot_size=75 lots=5 buy=PE sell=CE strike=23500 bought_gross=15281.25 sold_gross=18506.25 net=33687.50
+2026-06-20 00:00:42,736 INFO TRADED date=2025-04-01 expiry=2025-04-03 lot_size=75 lots=5 buy=PE sell=CE strike=23200 bought_gross=-6356.25 sold_gross=-1575.00 net=-8031.25
+2026-06-20 00:00:42,775 INFO TRADED date=2025-04-02 expiry=2025-04-03 lot_size=75 lots=5 buy=CE sell=PE strike=23350 bought_gross=-19368.75 sold_gross=-33581.25 net=-53050.00
+2026-06-20 00:00:42,816 INFO TRADED date=2025-04-03 expiry=2025-04-09 lot_size=75 lots=5 buy=PE sell=CE strike=23250 bought_gross=30037.50 sold_gross=20250.00 net=50187.50
+2026-06-20 00:00:42,858 INFO TRADED date=2025-04-04 expiry=2025-04-09 lot_size=75 lots=5 buy=PE sell=CE strike=22900 bought_gross=211050.00 sold_gross=34893.75 net=245843.75
+2026-06-20 00:00:42,885 INFO TRADED date=2025-04-07 expiry=2025-04-09 lot_size=75 lots=5 buy=CE sell=PE strike=22250 bought_gross=39993.75 sold_gross=69881.25 net=109775.00
+2026-06-20 00:00:42,916 INFO TRADED date=2025-04-08 expiry=2025-04-09 lot_size=75 lots=5 buy=CE sell=PE strike=22550 bought_gross=-41868.75 sold_gross=-26400.00 net=-68368.75
+2026-06-20 00:00:42,964 INFO TRADED date=2025-04-09 expiry=2025-04-17 lot_size=75 lots=5 buy=CE sell=PE strike=22400 bought_gross=62193.75 sold_gross=60956.25 net=123050.00
+2026-06-20 00:00:42,997 INFO TRADED date=2025-04-11 expiry=2025-04-17 lot_size=75 lots=5 buy=CE sell=PE strike=22850 bought_gross=83325.00 sold_gross=71268.75 net=154493.75
+2026-06-20 00:00:43,031 INFO TRADED date=2025-04-15 expiry=2025-04-17 lot_size=75 lots=5 buy=CE sell=PE strike=23350 bought_gross=-19893.75 sold_gross=-6618.75 net=-26612.50
+2026-06-20 00:00:43,068 INFO TRADED date=2025-04-16 expiry=2025-04-17 lot_size=75 lots=5 buy=CE sell=PE strike=23450 bought_gross=-14306.25 sold_gross=450.00 net=-13956.25
+2026-06-20 00:00:43,134 INFO TRADED date=2025-04-17 expiry=2025-04-24 lot_size=75 lots=5 buy=CE sell=PE strike=23850 bought_gross=12468.75 sold_gross=28893.75 net=41262.50
+2026-06-20 00:00:43,227 INFO TRADED date=2025-04-21 expiry=2025-04-24 lot_size=75 lots=5 buy=CE sell=PE strike=24100 bought_gross=-3375.00 sold_gross=2437.50 net=-1037.50
+2026-06-20 00:00:43,280 INFO TRADED date=2025-04-22 expiry=2025-04-24 lot_size=75 lots=5 buy=PE sell=CE strike=24150 bought_gross=-19297.50 sold_gross=-26268.75 net=-45666.25
+2026-06-20 00:00:43,367 INFO TRADED date=2025-04-23 expiry=2025-04-24 lot_size=75 lots=5 buy=CE sell=PE strike=24300 bought_gross=-13346.25 sold_gross=-1125.00 net=-14571.25
+2026-06-20 00:00:43,403 INFO TRADED date=2025-04-24 expiry=2025-04-30 lot_size=75 lots=5 buy=PE sell=CE strike=24250 bought_gross=-20437.50 sold_gross=-17550.00 net=-38087.50
+2026-06-20 00:00:43,466 INFO TRADED date=2025-04-25 expiry=2025-04-30 lot_size=75 lots=5 buy=PE sell=CE strike=24000 bought_gross=-27675.00 sold_gross=-18150.00 net=-45925.00
+2026-06-20 00:00:43,508 INFO TRADED date=2025-04-28 expiry=2025-04-30 lot_size=75 lots=5 buy=CE sell=PE strike=24300 bought_gross=12487.50 sold_gross=14152.50 net=26540.00
+2026-06-20 00:00:43,543 INFO TRADED date=2025-04-29 expiry=2025-04-30 lot_size=75 lots=5 buy=PE sell=CE strike=24350 bought_gross=8475.00 sold_gross=7743.75 net=16118.75
+2026-06-20 00:00:43,583 INFO TRADED date=2025-04-30 expiry=2025-05-08 lot_size=75 lots=5 buy=PE sell=CE strike=24250 bought_gross=-32418.75 sold_gross=-24225.00 net=-56743.75
+2026-06-20 00:00:43,625 INFO TRADED date=2025-05-02 expiry=2025-05-08 lot_size=75 lots=5 buy=PE sell=CE strike=24300 bought_gross=-28181.25 sold_gross=-21881.25 net=-50162.50
+2026-06-20 00:00:43,659 INFO TRADED date=2025-05-05 expiry=2025-05-08 lot_size=75 lots=5 buy=PE sell=CE strike=24450 bought_gross=-1143.75 sold_gross=2100.00 net=856.25
+2026-06-20 00:00:43,701 INFO TRADED date=2025-05-06 expiry=2025-05-08 lot_size=75 lots=5 buy=PE sell=CE strike=24350 bought_gross=2381.25 sold_gross=-6393.75 net=-4112.50
+2026-06-20 00:00:43,741 INFO TRADED date=2025-05-07 expiry=2025-05-08 lot_size=75 lots=5 buy=CE sell=PE strike=24400 bought_gross=-1481.25 sold_gross=13158.75 net=11577.50
+2026-06-20 00:00:43,786 INFO TRADED date=2025-05-08 expiry=2025-05-15 lot_size=75 lots=5 buy=PE sell=CE strike=24150 bought_gross=5703.75 sold_gross=8287.50 net=13891.25
+2026-06-20 00:00:43,835 INFO TRADED date=2025-05-09 expiry=2025-05-15 lot_size=75 lots=5 buy=CE sell=PE strike=24050 bought_gross=107025.00 sold_gross=82950.00 net=189875.00
+2026-06-20 00:00:43,872 INFO TRADED date=2025-05-12 expiry=2025-05-15 lot_size=75 lots=5 buy=CE sell=PE strike=24900 bought_gross=-7143.75 sold_gross=4800.00 net=-2443.75
+2026-06-20 00:00:43,915 INFO TRADED date=2025-05-13 expiry=2025-05-15 lot_size=75 lots=5 buy=PE sell=CE strike=24600 bought_gross=-10593.75 sold_gross=4477.50 net=-6216.25
+2026-06-20 00:00:43,962 INFO TRADED date=2025-05-14 expiry=2025-05-15 lot_size=75 lots=5 buy=CE sell=PE strike=24700 bought_gross=-11340.00 sold_gross=2025.00 net=-9415.00
+2026-06-20 00:00:43,998 INFO TRADED date=2025-05-15 expiry=2025-05-22 lot_size=75 lots=5 buy=CE sell=PE strike=25050 bought_gross=-1087.50 sold_gross=-3243.75 net=-4431.25
+2026-06-20 00:00:44,051 INFO TRADED date=2025-05-16 expiry=2025-05-22 lot_size=75 lots=5 buy=CE sell=PE strike=25000 bought_gross=-12618.75 sold_gross=-6525.00 net=-19243.75
+2026-06-20 00:00:44,091 INFO TRADED date=2025-05-19 expiry=2025-05-22 lot_size=75 lots=5 buy=PE sell=CE strike=24950 bought_gross=-19218.75 sold_gross=-8175.00 net=-27493.75
+2026-06-20 00:00:44,139 INFO TRADED date=2025-05-20 expiry=2025-05-22 lot_size=75 lots=5 buy=PE sell=CE strike=24700 bought_gross=-4781.25 sold_gross=952.50 net=-3928.75
+2026-06-20 00:00:44,191 INFO TRADED date=2025-05-21 expiry=2025-05-22 lot_size=75 lots=5 buy=PE sell=CE strike=24800 bought_gross=18075.00 sold_gross=14550.00 net=32525.00
+2026-06-20 00:00:44,835 INFO TRADED date=2025-05-22 expiry=2025-05-29 lot_size=75 lots=5 buy=CE sell=PE strike=24650 bought_gross=-3450.00 sold_gross=375.00 net=-3175.00
+2026-06-20 00:00:45,024 INFO TRADED date=2025-05-23 expiry=2025-05-29 lot_size=75 lots=5 buy=CE sell=PE strike=24850 bought_gross=28440.00 sold_gross=22181.25 net=50521.25
+2026-06-20 00:00:45,263 INFO TRADED date=2025-05-26 expiry=2025-05-29 lot_size=75 lots=5 buy=CE sell=PE strike=25000 bought_gross=-13181.25 sold_gross=-17850.00 net=-31131.25
+2026-06-20 00:00:45,263 INFO TRADED date=2025-05-27 expiry=2025-05-29 lot_size=75 lots=5 buy=CE sell=PE strike=24850 bought_gross=-450.00 sold_gross=-11756.25 net=-12306.25
+2026-06-20 00:00:45,375 INFO TRADED date=2025-05-28 expiry=2025-05-29 lot_size=75 lots=5 buy=PE sell=CE strike=24750 bought_gross=-28725.00 sold_gross=-26175.00 net=-55000.00
+2026-06-20 00:00:45,481 INFO TRADED date=2025-05-29 expiry=2025-06-05 lot_size=75 lots=5 buy=CE sell=PE strike=24900 bought_gross=-9468.75 sold_gross=-8625.00 net=-18193.75
+2026-06-20 00:00:45,570 INFO TRADED date=2025-05-30 expiry=2025-06-05 lot_size=75 lots=5 buy=PE sell=CE strike=24750 bought_gross=40106.25 sold_gross=26043.75 net=66050.00
+2026-06-20 00:00:45,639 INFO TRADED date=2025-06-02 expiry=2025-06-05 lot_size=75 lots=5 buy=CE sell=PE strike=24700 bought_gross=16218.75 sold_gross=23606.25 net=39725.00
+2026-06-20 00:00:45,705 INFO TRADED date=2025-06-03 expiry=2025-06-05 lot_size=75 lots=5 buy=PE sell=CE strike=24550 bought_gross=-9412.50 sold_gross=-6881.25 net=-16393.75
+2026-06-20 00:00:45,770 INFO TRADED date=2025-06-04 expiry=2025-06-05 lot_size=75 lots=5 buy=CE sell=PE strike=24600 bought_gross=-2700.00 sold_gross=14381.25 net=11581.25
+2026-06-20 00:00:45,811 INFO TRADED date=2025-06-05 expiry=2025-06-12 lot_size=75 lots=5 buy=CE sell=PE strike=24750 bought_gross=-10087.50 sold_gross=-8362.50 net=-18550.00
+2026-06-20 00:00:45,866 INFO TRADED date=2025-06-06 expiry=2025-06-12 lot_size=75 lots=5 buy=CE sell=PE strike=25000 bought_gross=16406.25 sold_gross=16687.50 net=32993.75
+2026-06-20 00:00:45,916 INFO TRADED date=2025-06-09 expiry=2025-06-12 lot_size=75 lots=5 buy=PE sell=CE strike=25100 bought_gross=-11343.75 sold_gross=-4912.50 net=-16356.25
+2026-06-20 00:00:45,916 INFO TRADED date=2025-06-10 expiry=2025-06-12 lot_size=75 lots=5 buy=PE sell=CE strike=25100 bought_gross=-6112.50 sold_gross=1781.25 net=-4431.25
+2026-06-20 00:00:45,957 INFO TRADED date=2025-06-11 expiry=2025-06-12 lot_size=75 lots=5 buy=PE sell=CE strike=25150 bought_gross=-4912.50 sold_gross=4331.25 net=-681.25
+2026-06-20 00:00:46,012 INFO TRADED date=2025-06-12 expiry=2025-06-19 lot_size=75 lots=5 buy=PE sell=CE strike=24850 bought_gross=77906.25 sold_gross=36281.25 net=114087.50
+2026-06-20 00:00:46,059 INFO TRADED date=2025-06-13 expiry=2025-06-19 lot_size=75 lots=5 buy=CE sell=PE strike=24750 bought_gross=1143.75 sold_gross=21581.25 net=22625.00
+2026-06-20 00:00:46,112 INFO TRADED date=2025-06-16 expiry=2025-06-19 lot_size=75 lots=5 buy=CE sell=PE strike=24950 bought_gross=-11006.25 sold_gross=-3468.75 net=-14575.00
+2026-06-20 00:00:46,112 INFO TRADED date=2025-06-17 expiry=2025-06-19 lot_size=75 lots=5 buy=PE sell=CE strike=24850 bought_gross=375.00 sold_gross=9468.75 net=9743.75
+2026-06-20 00:00:46,168 INFO TRADED date=2025-06-18 expiry=2025-06-19 lot_size=75 lots=5 buy=PE sell=CE strike=24800 bought_gross=-5887.50 sold_gross=11400.00 net=5412.50
+2026-06-20 00:00:46,288 INFO TRADED date=2025-06-19 expiry=2025-06-26 lot_size=75 lots=5 buy=PE sell=CE strike=24750 bought_gross=-24337.50 sold_gross=-17962.50 net=-42400.00
+2026-06-20 00:00:46,416 INFO TRADED date=2025-06-20 expiry=2025-06-26 lot_size=75 lots=5 buy=CE sell=PE strike=25100 bought_gross=-23887.50 sold_gross=-19218.75 net=-43206.25
+2026-06-20 00:00:46,531 INFO TRADED date=2025-06-23 expiry=2025-06-26 lot_size=75 lots=5 buy=CE sell=PE strike=24950 bought_gross=64556.25 sold_gross=30843.75 net=95300.00
+2026-06-20 00:00:46,663 INFO TRADED date=2025-06-24 expiry=2025-06-26 lot_size=75 lots=5 buy=PE sell=CE strike=25050 bought_gross=-13668.75 sold_gross=-9731.25 net=-23500.00
+2026-06-20 00:00:46,781 INFO TRADED date=2025-06-25 expiry=2025-06-26 lot_size=75 lots=5 buy=CE sell=PE strike=25250 bought_gross=4331.25 sold_gross=10237.50 net=14468.75
+2026-06-20 00:00:46,822 INFO TRADED date=2025-06-26 expiry=2025-07-03 lot_size=75 lots=5 buy=CE sell=PE strike=25550 bought_gross=20343.75 sold_gross=18543.75 net=38787.50
+2026-06-20 00:00:46,864 INFO TRADED date=2025-06-27 expiry=2025-07-03 lot_size=75 lots=5 buy=CE sell=PE strike=25650 bought_gross=-2887.50 sold_gross=2343.75 net=-643.75
+2026-06-20 00:00:46,920 INFO TRADED date=2025-06-30 expiry=2025-07-03 lot_size=75 lots=5 buy=PE sell=CE strike=25500 bought_gross=1387.50 sold_gross=3693.75 net=4981.25
+2026-06-20 00:00:46,921 INFO TRADED date=2025-07-01 expiry=2025-07-03 lot_size=75 lots=5 buy=PE sell=CE strike=25550 bought_gross=-8231.25 sold_gross=-3431.25 net=-11762.50
+2026-06-20 00:00:46,965 INFO TRADED date=2025-07-02 expiry=2025-07-03 lot_size=75 lots=5 buy=PE sell=CE strike=25450 bought_gross=-7893.75 sold_gross=-1987.50 net=-9981.25
+2026-06-20 00:00:47,018 INFO TRADED date=2025-07-03 expiry=2025-07-10 lot_size=75 lots=5 buy=PE sell=CE strike=25400 bought_gross=-1650.00 sold_gross=-2418.75 net=-4168.75
+2026-06-20 00:00:47,062 INFO TRADED date=2025-07-04 expiry=2025-07-10 lot_size=75 lots=5 buy=CE sell=PE strike=25450 bought_gross=-14550.00 sold_gross=-6900.00 net=-21550.00
+2026-06-20 00:00:47,062 INFO TRADED date=2025-07-07 expiry=2025-07-10 lot_size=75 lots=5 buy=CE sell=PE strike=25450 bought_gross=-6075.00 sold_gross=-637.50 net=-6812.50
+2026-06-20 00:00:47,114 INFO TRADED date=2025-07-08 expiry=2025-07-10 lot_size=75 lots=5 buy=CE sell=PE strike=25500 bought_gross=-10837.50 sold_gross=-1218.75 net=-12156.25
+2026-06-20 00:00:47,115 INFO TRADED date=2025-07-09 expiry=2025-07-10 lot_size=75 lots=5 buy=PE sell=CE strike=25450 bought_gross=-4350.00 sold_gross=4012.50 net=-437.50
+2026-06-20 00:00:47,166 INFO TRADED date=2025-07-10 expiry=2025-07-17 lot_size=75 lots=5 buy=PE sell=CE strike=25350 bought_gross=15543.75 sold_gross=18993.75 net=34437.50
+2026-06-20 00:00:47,221 INFO TRADED date=2025-07-11 expiry=2025-07-17 lot_size=75 lots=5 buy=PE sell=CE strike=25150 bought_gross=4725.00 sold_gross=10875.00 net=15500.00
+2026-06-20 00:00:47,276 INFO TRADED date=2025-07-14 expiry=2025-07-17 lot_size=75 lots=5 buy=CE sell=PE strike=25100 bought_gross=5006.25 sold_gross=7443.75 net=12350.00
+2026-06-20 00:00:47,332 INFO TRADED date=2025-07-15 expiry=2025-07-17 lot_size=75 lots=5 buy=CE sell=PE strike=25200 bought_gross=-15300.00 sold_gross=-8793.75 net=-24193.75
+2026-06-20 00:00:47,332 INFO TRADED date=2025-07-16 expiry=2025-07-17 lot_size=75 lots=5 buy=CE sell=PE strike=25200 bought_gross=-2081.25 sold_gross=4106.25 net=1925.00
+2026-06-20 00:00:47,398 INFO TRADED date=2025-07-17 expiry=2025-07-24 lot_size=75 lots=5 buy=PE sell=CE strike=25100 bought_gross=-1856.25 sold_gross=3000.00 net=1043.75
+2026-06-20 00:00:47,457 INFO TRADED date=2025-07-18 expiry=2025-07-24 lot_size=75 lots=5 buy=PE sell=CE strike=24950 bought_gross=393.75 sold_gross=13425.00 net=13718.75
+2026-06-20 00:00:47,458 INFO TRADED date=2025-07-21 expiry=2025-07-24 lot_size=75 lots=5 buy=CE sell=PE strike=25100 bought_gross=8606.25 sold_gross=9656.25 net=18162.50
+2026-06-20 00:00:47,509 INFO TRADED date=2025-07-22 expiry=2025-07-24 lot_size=75 lots=5 buy=PE sell=CE strike=25050 bought_gross=-10575.00 sold_gross=-11400.00 net=-22075.00
+2026-06-20 00:00:47,568 INFO TRADED date=2025-07-23 expiry=2025-07-24 lot_size=75 lots=5 buy=CE sell=PE strike=25200 bought_gross=-4462.50 sold_gross=1837.50 net=-2725.00
+2026-06-20 00:00:47,685 INFO TRADED date=2025-07-24 expiry=2025-07-31 lot_size=75 lots=5 buy=PE sell=CE strike=25050 bought_gross=21018.75 sold_gross=20137.50 net=41056.25
+2026-06-20 00:00:47,807 INFO TRADED date=2025-07-25 expiry=2025-07-31 lot_size=75 lots=5 buy=PE sell=CE strike=24850 bought_gross=15637.50 sold_gross=14756.25 net=30293.75
+2026-06-20 00:00:47,907 INFO TRADED date=2025-07-28 expiry=2025-07-31 lot_size=75 lots=5 buy=PE sell=CE strike=24650 bought_gross=6131.25 sold_gross=9993.75 net=16025.00
+2026-06-20 00:00:47,907 INFO TRADED date=2025-07-29 expiry=2025-07-31 lot_size=75 lots=5 buy=CE sell=PE strike=24850 bought_gross=-6375.00 sold_gross=-4687.50 net=-11162.50
+2026-06-20 00:00:47,907 INFO TRADED date=2025-07-30 expiry=2025-07-31 lot_size=75 lots=5 buy=PE sell=CE strike=24850 bought_gross=47081.25 sold_gross=18731.25 net=65712.50
+2026-06-20 00:00:47,949 INFO TRADED date=2025-07-31 expiry=2025-08-07 lot_size=75 lots=5 buy=PE sell=CE strike=24750 bought_gross=11137.50 sold_gross=16068.75 net=27106.25
+2026-06-20 00:00:47,983 INFO TRADED date=2025-08-01 expiry=2025-08-07 lot_size=75 lots=5 buy=PE sell=CE strike=24550 bought_gross=-16537.50 sold_gross=-8400.00 net=-25037.50
+2026-06-20 00:00:47,983 INFO TRADED date=2025-08-04 expiry=2025-08-07 lot_size=75 lots=5 buy=CE sell=PE strike=24750 bought_gross=-7650.00 sold_gross=-4293.75 net=-12043.75
+2026-06-20 00:00:48,016 INFO TRADED date=2025-08-05 expiry=2025-08-07 lot_size=75 lots=5 buy=CE sell=PE strike=24650 bought_gross=-5006.25 sold_gross=-2325.00 net=-7431.25
+2026-06-20 00:00:48,027 INFO TRADED date=2025-08-06 expiry=2025-08-07 lot_size=75 lots=5 buy=PE sell=CE strike=24550 bought_gross=6393.75 sold_gross=18187.50 net=24481.25
+2026-06-20 00:00:48,072 INFO TRADED date=2025-08-07 expiry=2025-08-14 lot_size=75 lots=5 buy=CE sell=PE strike=24650 bought_gross=-15581.25 sold_gross=-11362.50 net=-27043.75
+2026-06-20 00:00:48,103 INFO TRADED date=2025-08-08 expiry=2025-08-14 lot_size=75 lots=5 buy=PE sell=CE strike=24350 bought_gross=-1931.25 sold_gross=5756.25 net=3725.00
+2026-06-20 00:00:48,632 INFO TRADED date=2025-08-11 expiry=2025-08-14 lot_size=75 lots=5 buy=CE sell=PE strike=24550 bought_gross=-3075.00 sold_gross=468.75 net=-2706.25
+2026-06-20 00:00:48,681 INFO TRADED date=2025-08-12 expiry=2025-08-14 lot_size=75 lots=5 buy=PE sell=CE strike=24500 bought_gross=-15956.25 sold_gross=-20400.00 net=-36456.25
+2026-06-20 00:00:48,681 INFO TRADED date=2025-08-13 expiry=2025-08-14 lot_size=75 lots=5 buy=CE sell=PE strike=24650 bought_gross=-2137.50 sold_gross=18.75 net=-2218.75
+2026-06-20 00:00:48,734 INFO TRADED date=2025-08-14 expiry=2025-08-21 lot_size=75 lots=5 buy=PE sell=CE strike=24600 bought_gross=-34612.50 sold_gross=-80437.50 net=-115150.00
+2026-06-20 00:00:48,790 INFO TRADED date=2025-08-18 expiry=2025-08-21 lot_size=75 lots=5 buy=PE sell=CE strike=24900 bought_gross=1612.50 sold_gross=8868.75 net=10381.25
+2026-06-20 00:00:48,853 INFO TRADED date=2025-08-19 expiry=2025-08-21 lot_size=75 lots=5 buy=CE sell=PE strike=25000 bought_gross=-10406.25 sold_gross=-9993.75 net=-20500.00
+2026-06-20 00:00:48,902 INFO TRADED date=2025-08-20 expiry=2025-08-21 lot_size=75 lots=5 buy=CE sell=PE strike=25050 bought_gross=4837.50 sold_gross=8306.25 net=13043.75
+2026-06-20 00:00:49,047 INFO TRADED date=2025-08-21 expiry=2025-08-28 lot_size=75 lots=5 buy=PE sell=CE strike=25100 bought_gross=7912.50 sold_gross=11718.75 net=19531.25
+2026-06-20 00:00:49,166 INFO TRADED date=2025-08-22 expiry=2025-08-28 lot_size=75 lots=5 buy=PE sell=CE strike=24850 bought_gross=-13443.75 sold_gross=-5231.25 net=-18775.00
+2026-06-20 00:00:49,340 INFO TRADED date=2025-08-25 expiry=2025-08-28 lot_size=75 lots=5 buy=CE sell=PE strike=25000 bought_gross=-16537.50 sold_gross=-16781.25 net=-33418.75
+2026-06-20 00:00:49,501 INFO TRADED date=2025-08-26 expiry=2025-08-28 lot_size=75 lots=5 buy=PE sell=CE strike=24700 bought_gross=24712.50 sold_gross=22293.75 net=46906.25
+2026-06-20 00:00:49,548 INFO TRADED date=2025-08-28 expiry=2025-09-02 lot_size=75 lots=5 buy=PE sell=CE strike=24550 bought_gross=-5850.00 sold_gross=-6506.25 net=-12456.25
+2026-06-20 00:00:49,584 INFO TRADED date=2025-08-29 expiry=2025-09-02 lot_size=75 lots=5 buy=PE sell=CE strike=24450 bought_gross=-14081.25 sold_gross=-15262.50 net=-29443.75
+2026-06-20 00:00:49,653 INFO TRADED date=2025-09-01 expiry=2025-09-02 lot_size=75 lots=5 buy=CE sell=PE strike=24600 bought_gross=8512.50 sold_gross=5100.00 net=13512.50
+2026-06-20 00:00:49,709 INFO TRADED date=2025-09-02 expiry=2025-09-09 lot_size=75 lots=5 buy=PE sell=CE strike=24600 bought_gross=-1668.75 sold_gross=-18.75 net=-1787.50
+2026-06-20 00:00:49,770 INFO TRADED date=2025-09-03 expiry=2025-09-09 lot_size=75 lots=5 buy=CE sell=PE strike=24700 bought_gross=39168.75 sold_gross=18150.00 net=57218.75
+2026-06-20 00:00:49,808 INFO TRADED date=2025-09-04 expiry=2025-09-09 lot_size=75 lots=5 buy=PE sell=CE strike=24750 bought_gross=-15881.25 sold_gross=-10087.50 net=-26068.75
+2026-06-20 00:00:49,809 INFO TRADED date=2025-09-05 expiry=2025-09-09 lot_size=75 lots=5 buy=CE sell=PE strike=24750 bought_gross=5231.25 sold_gross=9900.00 net=15031.25
+2026-06-20 00:00:49,851 INFO TRADED date=2025-09-08 expiry=2025-09-09 lot_size=75 lots=5 buy=PE sell=CE strike=24800 bought_gross=-8231.25 sold_gross=-11625.00 net=-19956.25
+2026-06-20 00:00:49,900 INFO TRADED date=2025-09-09 expiry=2025-09-16 lot_size=75 lots=5 buy=CE sell=PE strike=24900 bought_gross=13837.50 sold_gross=12543.75 net=26281.25
+2026-06-20 00:00:49,952 INFO TRADED date=2025-09-10 expiry=2025-09-16 lot_size=75 lots=5 buy=PE sell=CE strike=25000 bought_gross=1481.25 sold_gross=5550.00 net=6931.25
+2026-06-20 00:00:49,952 INFO TRADED date=2025-09-11 expiry=2025-09-16 lot_size=75 lots=5 buy=CE sell=PE strike=25000 bought_gross=7125.00 sold_gross=8793.75 net=15818.75
+2026-06-20 00:00:49,998 INFO TRADED date=2025-09-12 expiry=2025-09-16 lot_size=75 lots=5 buy=CE sell=PE strike=25100 bought_gross=-8981.25 sold_gross=75.00 net=-9006.25
+2026-06-20 00:00:50,043 INFO TRADED date=2025-09-15 expiry=2025-09-16 lot_size=75 lots=5 buy=PE sell=CE strike=25050 bought_gross=-2606.25 sold_gross=3018.75 net=312.50
+2026-06-20 00:00:50,070 INFO TRADED date=2025-09-16 expiry=2025-09-23 lot_size=75 lots=5 buy=CE sell=PE strike=25250 bought_gross=6637.50 sold_gross=8418.75 net=14956.25
+2026-06-20 00:00:50,095 INFO TRADED date=2025-09-17 expiry=2025-09-23 lot_size=75 lots=5 buy=CE sell=PE strike=25350 bought_gross=9600.00 sold_gross=14493.75 net=23993.75
+2026-06-20 00:00:50,128 INFO TRADED date=2025-09-18 expiry=2025-09-23 lot_size=75 lots=5 buy=CE sell=PE strike=25400 bought_gross=-16706.25 sold_gross=-6525.00 net=-23331.25
+2026-06-20 00:00:50,128 INFO TRADED date=2025-09-19 expiry=2025-09-23 lot_size=75 lots=5 buy=CE sell=PE strike=25350 bought_gross=-20137.50 sold_gross=-20437.50 net=-40675.00
+2026-06-20 00:00:50,171 INFO TRADED date=2025-09-22 expiry=2025-09-23 lot_size=75 lots=5 buy=PE sell=CE strike=25200 bought_gross=-4893.75 sold_gross=-1781.25 net=-6775.00
+2026-06-20 00:00:50,330 INFO TRADED date=2025-09-23 expiry=2025-09-30 lot_size=75 lots=5 buy=CE sell=PE strike=25200 bought_gross=-22781.25 sold_gross=-16387.50 net=-39268.75
+2026-06-20 00:00:50,482 INFO TRADED date=2025-09-24 expiry=2025-09-30 lot_size=75 lots=5 buy=PE sell=CE strike=25050 bought_gross=7631.25 sold_gross=15206.25 net=22737.50
+2026-06-20 00:00:50,639 INFO TRADED date=2025-09-25 expiry=2025-09-30 lot_size=75 lots=5 buy=PE sell=CE strike=24900 bought_gross=15206.25 sold_gross=18150.00 net=33256.25
+2026-06-20 00:00:50,780 INFO TRADED date=2025-09-26 expiry=2025-09-30 lot_size=75 lots=5 buy=PE sell=CE strike=24650 bought_gross=-12975.00 sold_gross=-12862.50 net=-25937.50
+2026-06-20 00:00:50,931 INFO TRADED date=2025-09-29 expiry=2025-09-30 lot_size=75 lots=5 buy=PE sell=CE strike=24700 bought_gross=-6562.50 sold_gross=-5643.75 net=-12306.25
+2026-06-20 00:00:50,976 INFO TRADED date=2025-09-30 expiry=2025-10-07 lot_size=75 lots=5 buy=PE sell=CE strike=24650 bought_gross=4687.50 sold_gross=6000.00 net=10587.50
+2026-06-20 00:00:51,028 INFO TRADED date=2025-10-01 expiry=2025-10-07 lot_size=75 lots=5 buy=CE sell=PE strike=24850 bought_gross=-12806.25 sold_gross=-6637.50 net=-19543.75
+2026-06-20 00:00:51,083 INFO TRADED date=2025-10-03 expiry=2025-10-07 lot_size=75 lots=5 buy=CE sell=PE strike=24900 bought_gross=-993.75 sold_gross=1387.50 net=293.75
+2026-06-20 00:00:51,132 INFO TRADED date=2025-10-06 expiry=2025-10-07 lot_size=75 lots=5 buy=CE sell=PE strike=25050 bought_gross=3243.75 sold_gross=3300.00 net=6443.75
+2026-06-20 00:00:51,186 INFO TRADED date=2025-10-07 expiry=2025-10-14 lot_size=75 lots=5 buy=PE sell=CE strike=25100 bought_gross=4050.00 sold_gross=7031.25 net=10981.25
+2026-06-20 00:00:51,275 INFO TRADED date=2025-10-08 expiry=2025-10-14 lot_size=75 lots=5 buy=PE sell=CE strike=25000 bought_gross=-6318.75 sold_gross=-8700.00 net=-15118.75
+2026-06-20 00:00:51,344 INFO TRADED date=2025-10-09 expiry=2025-10-14 lot_size=75 lots=5 buy=CE sell=PE strike=25150 bought_gross=2100.00 sold_gross=825.00 net=2825.00
+2026-06-20 00:00:51,405 INFO TRADED date=2025-10-10 expiry=2025-10-14 lot_size=75 lots=5 buy=PE sell=CE strike=25300 bought_gross=18993.75 sold_gross=17943.75 net=36837.50
+2026-06-20 00:00:51,452 INFO TRADED date=2025-10-13 expiry=2025-10-14 lot_size=75 lots=5 buy=CE sell=PE strike=25250 bought_gross=7725.00 sold_gross=7556.25 net=15181.25
+2026-06-20 00:00:51,502 INFO TRADED date=2025-10-14 expiry=2025-10-20 lot_size=75 lots=5 buy=PE sell=CE strike=25100 bought_gross=-24150.00 sold_gross=-29006.25 net=-53256.25
+2026-06-20 00:00:51,541 INFO TRADED date=2025-10-15 expiry=2025-10-20 lot_size=75 lots=5 buy=CE sell=PE strike=25350 bought_gross=16293.75 sold_gross=11062.50 net=27256.25
+2026-06-20 00:00:51,580 INFO TRADED date=2025-10-16 expiry=2025-10-20 lot_size=75 lots=5 buy=CE sell=PE strike=25550 bought_gross=-11250.00 sold_gross=-5587.50 net=-16937.50
+2026-06-20 00:00:51,611 INFO TRADED date=2025-10-17 expiry=2025-10-20 lot_size=75 lots=5 buy=CE sell=PE strike=25700 bought_gross=54337.50 sold_gross=23025.00 net=77262.50
+2026-06-20 00:00:51,679 INFO SKIPPED date=2025-10-20 expiry=2025-10-28 buy=PE sell=CE strike=25850 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:00:51,679 INFO SKIPPED date=2025-10-21 reason=missing_spot_signal_timestamp
+2026-06-20 00:00:51,679 INFO TRADED date=2025-10-23 expiry=2025-10-28 lot_size=75 lots=5 buy=PE sell=CE strike=25850 bought_gross=-2325.00 sold_gross=2587.50 net=162.50
+2026-06-20 00:00:51,784 INFO TRADED date=2025-10-24 expiry=2025-10-28 lot_size=75 lots=5 buy=PE sell=CE strike=25800 bought_gross=-19837.50 sold_gross=-20081.25 net=-40018.75
+2026-06-20 00:00:51,870 INFO TRADED date=2025-10-27 expiry=2025-10-28 lot_size=75 lots=5 buy=CE sell=PE strike=25950 bought_gross=-787.50 sold_gross=-1893.75 net=-2781.25
+2026-06-20 00:00:51,900 INFO TRADED date=2025-10-28 expiry=2025-11-04 lot_size=75 lots=5 buy=CE sell=PE strike=25950 bought_gross=16068.75 sold_gross=14343.75 net=30312.50
+2026-06-20 00:00:51,926 INFO TRADED date=2025-10-29 expiry=2025-11-04 lot_size=75 lots=5 buy=CE sell=PE strike=26050 bought_gross=-27450.00 sold_gross=-12768.75 net=-40318.75
+2026-06-20 00:00:51,979 INFO TRADED date=2025-10-30 expiry=2025-11-04 lot_size=75 lots=5 buy=PE sell=CE strike=25900 bought_gross=9375.00 sold_gross=15637.50 net=24912.50
+2026-06-20 00:00:52,014 INFO TRADED date=2025-10-31 expiry=2025-11-04 lot_size=75 lots=5 buy=PE sell=CE strike=25750 bought_gross=10518.75 sold_gross=17475.00 net=27893.75
+2026-06-20 00:00:52,015 INFO TRADED date=2025-11-03 expiry=2025-11-04 lot_size=75 lots=5 buy=CE sell=PE strike=25750 bought_gross=-3768.75 sold_gross=-900.00 net=-4768.75
+2026-06-20 00:00:52,058 INFO TRADED date=2025-11-04 expiry=2025-11-11 lot_size=75 lots=5 buy=PE sell=CE strike=25600 bought_gross=-18337.50 sold_gross=-11887.50 net=-30325.00
+2026-06-20 00:00:52,107 INFO TRADED date=2025-11-06 expiry=2025-11-11 lot_size=75 lots=5 buy=PE sell=CE strike=25500 bought_gross=28668.75 sold_gross=25556.25 net=54125.00
+2026-06-20 00:00:52,107 INFO TRADED date=2025-11-07 expiry=2025-11-11 lot_size=75 lots=5 buy=CE sell=PE strike=25500 bought_gross=14568.75 sold_gross=13800.00 net=28268.75
+2026-06-20 00:00:52,144 INFO TRADED date=2025-11-10 expiry=2025-11-11 lot_size=75 lots=5 buy=PE sell=CE strike=25550 bought_gross=-3112.50 sold_gross=-2756.25 net=-5968.75
+2026-06-20 00:00:52,190 INFO TRADED date=2025-11-11 expiry=2025-11-18 lot_size=75 lots=5 buy=CE sell=PE strike=25700 bought_gross=24693.75 sold_gross=17737.50 net=42331.25
+2026-06-20 00:00:52,240 INFO TRADED date=2025-11-12 expiry=2025-11-18 lot_size=75 lots=5 buy=PE sell=CE strike=25850 bought_gross=4725.00 sold_gross=14850.00 net=19475.00
+2026-06-20 00:00:52,286 INFO TRADED date=2025-11-13 expiry=2025-11-18 lot_size=75 lots=5 buy=PE sell=CE strike=25900 bought_gross=6693.75 sold_gross=10106.25 net=16700.00
+2026-06-20 00:00:52,287 INFO TRADED date=2025-11-14 expiry=2025-11-18 lot_size=75 lots=5 buy=CE sell=PE strike=25900 bought_gross=-281.25 sold_gross=8850.00 net=8468.75
+2026-06-20 00:00:52,330 INFO TRADED date=2025-11-17 expiry=2025-11-18 lot_size=75 lots=5 buy=CE sell=PE strike=26000 bought_gross=-16087.50 sold_gross=-16050.00 net=-32237.50
+2026-06-20 00:00:52,431 INFO TRADED date=2025-11-18 expiry=2025-11-25 lot_size=75 lots=5 buy=PE sell=CE strike=25900 bought_gross=168.75 sold_gross=5231.25 net=5300.00
+2026-06-20 00:00:53,092 INFO TRADED date=2025-11-19 expiry=2025-11-25 lot_size=75 lots=5 buy=CE sell=PE strike=26050 bought_gross=7537.50 sold_gross=15356.25 net=22793.75
+2026-06-20 00:00:53,222 INFO TRADED date=2025-11-20 expiry=2025-11-25 lot_size=75 lots=5 buy=CE sell=PE strike=26200 bought_gross=-20212.50 sold_gross=-17568.75 net=-37881.25
+2026-06-20 00:00:53,222 INFO TRADED date=2025-11-21 expiry=2025-11-25 lot_size=75 lots=5 buy=PE sell=CE strike=26050 bought_gross=-15768.75 sold_gross=-8287.50 net=-24156.25
+2026-06-20 00:00:53,298 INFO TRADED date=2025-11-24 expiry=2025-11-25 lot_size=75 lots=5 buy=PE sell=CE strike=25950 bought_gross=112.50 sold_gross=5756.25 net=5768.75
+2026-06-20 00:00:53,359 INFO TRADED date=2025-11-25 expiry=2025-12-02 lot_size=75 lots=5 buy=PE sell=CE strike=25850 bought_gross=-17343.75 sold_gross=-25443.75 net=-42887.50
+2026-06-20 00:00:53,434 INFO TRADED date=2025-11-26 expiry=2025-12-02 lot_size=75 lots=5 buy=CE sell=PE strike=26200 bought_gross=6318.75 sold_gross=10331.25 net=16550.00
+2026-06-20 00:00:53,434 INFO TRADED date=2025-11-27 expiry=2025-12-02 lot_size=75 lots=5 buy=PE sell=CE strike=26200 bought_gross=1256.25 sold_gross=3431.25 net=4587.50
+2026-06-20 00:00:53,434 INFO TRADED date=2025-11-28 expiry=2025-12-02 lot_size=75 lots=5 buy=PE sell=CE strike=26200 bought_gross=-12431.25 sold_gross=-15300.00 net=-27831.25
+2026-06-20 00:00:53,434 INFO TRADED date=2025-12-01 expiry=2025-12-02 lot_size=75 lots=5 buy=PE sell=CE strike=26200 bought_gross=11831.25 sold_gross=11625.00 net=23356.25
+2026-06-20 00:00:53,490 INFO TRADED date=2025-12-02 expiry=2025-12-09 lot_size=75 lots=5 buy=PE sell=CE strike=26050 bought_gross=10012.50 sold_gross=15281.25 net=25193.75
+2026-06-20 00:00:53,551 INFO TRADED date=2025-12-03 expiry=2025-12-09 lot_size=75 lots=5 buy=CE sell=PE strike=26000 bought_gross=-15375.00 sold_gross=-11306.25 net=-26781.25
+2026-06-20 00:00:53,552 INFO TRADED date=2025-12-04 expiry=2025-12-09 lot_size=75 lots=5 buy=PE sell=CE strike=26000 bought_gross=1687.50 sold_gross=2662.50 net=4250.00
+2026-06-20 00:00:53,608 INFO TRADED date=2025-12-05 expiry=2025-12-09 lot_size=75 lots=5 buy=CE sell=PE strike=26200 bought_gross=-7800.00 sold_gross=-4312.50 net=-12212.50
+2026-06-20 00:00:53,660 INFO TRADED date=2025-12-08 expiry=2025-12-09 lot_size=75 lots=5 buy=PE sell=CE strike=25950 bought_gross=15975.00 sold_gross=11062.50 net=26937.50
+2026-06-20 00:00:53,719 INFO TRADED date=2025-12-09 expiry=2025-12-16 lot_size=75 lots=5 buy=PE sell=CE strike=25850 bought_gross=2081.25 sold_gross=3918.75 net=5900.00
+2026-06-20 00:00:53,767 INFO TRADED date=2025-12-10 expiry=2025-12-16 lot_size=75 lots=5 buy=PE sell=CE strike=25750 bought_gross=-4818.75 sold_gross=-881.25 net=-5800.00
+2026-06-20 00:00:53,830 INFO TRADED date=2025-12-11 expiry=2025-12-16 lot_size=75 lots=5 buy=CE sell=PE strike=25900 bought_gross=17193.75 sold_gross=13031.25 net=30125.00
+2026-06-20 00:00:53,888 INFO TRADED date=2025-12-12 expiry=2025-12-16 lot_size=75 lots=5 buy=CE sell=PE strike=26050 bought_gross=-17812.50 sold_gross=-21656.25 net=-39568.75
+2026-06-20 00:00:53,956 INFO TRADED date=2025-12-15 expiry=2025-12-16 lot_size=75 lots=5 buy=CE sell=PE strike=26000 bought_gross=-16837.50 sold_gross=-17400.00 net=-34337.50
+2026-06-20 00:00:54,014 INFO TRADED date=2025-12-16 expiry=2025-12-23 lot_size=75 lots=5 buy=PE sell=CE strike=25850 bought_gross=-2531.25 sold_gross=1312.50 net=-1318.75
+2026-06-20 00:00:54,074 INFO TRADED date=2025-12-17 expiry=2025-12-23 lot_size=75 lots=5 buy=CE sell=PE strike=25800 bought_gross=-17268.75 sold_gross=-10068.75 net=-27437.50
+2026-06-20 00:00:54,074 INFO TRADED date=2025-12-18 expiry=2025-12-23 lot_size=75 lots=5 buy=PE sell=CE strike=25800 bought_gross=-17137.50 sold_gross=-20100.00 net=-37337.50
+2026-06-20 00:00:54,127 INFO TRADED date=2025-12-19 expiry=2025-12-23 lot_size=75 lots=5 buy=CE sell=PE strike=25950 bought_gross=30187.50 sold_gross=15600.00 net=45687.50
+2026-06-20 00:00:54,186 INFO TRADED date=2025-12-22 expiry=2025-12-23 lot_size=75 lots=5 buy=CE sell=PE strike=26150 bought_gross=1387.50 sold_gross=6243.75 net=7531.25
+2026-06-20 00:00:54,362 INFO TRADED date=2025-12-23 expiry=2025-12-30 lot_size=75 lots=5 buy=PE sell=CE strike=26150 bought_gross=1612.50 sold_gross=8433.75 net=9946.25
+2026-06-20 00:00:54,363 INFO TRADED date=2025-12-24 expiry=2025-12-30 lot_size=75 lots=5 buy=PE sell=CE strike=26150 bought_gross=7837.50 sold_gross=12712.50 net=20450.00
+2026-06-20 00:00:54,555 INFO TRADED date=2025-12-26 expiry=2025-12-30 lot_size=75 lots=5 buy=PE sell=CE strike=26050 bought_gross=-5437.50 sold_gross=-450.00 net=-5987.50
+2026-06-20 00:00:54,813 INFO TRADED date=2025-12-29 expiry=2025-12-30 lot_size=75 lots=5 buy=PE sell=CE strike=25950 bought_gross=7612.50 sold_gross=10087.50 net=17600.00
+2026-06-20 00:00:54,878 INFO TRADED date=2025-12-30 expiry=2026-01-06 lot_size=65 lots=5 buy=CE sell=PE strike=25950 bought_gross=5703.75 sold_gross=4358.25 net=9962.00
+2026-06-20 00:00:54,934 INFO TRADED date=2025-12-31 expiry=2026-01-06 lot_size=65 lots=5 buy=CE sell=PE strike=26150 bought_gross=2323.75 sold_gross=5476.25 net=7700.00
+2026-06-20 00:00:54,934 INFO TRADED date=2026-01-01 expiry=2026-01-06 lot_size=65 lots=5 buy=PE sell=CE strike=26150 bought_gross=-7036.25 sold_gross=-5525.00 net=-12661.25
+2026-06-20 00:00:54,982 INFO TRADED date=2026-01-02 expiry=2026-01-06 lot_size=65 lots=5 buy=CE sell=PE strike=26350 bought_gross=-3607.50 sold_gross=0.00 net=-3707.50
+2026-06-20 00:00:55,035 INFO TRADED date=2026-01-05 expiry=2026-01-06 lot_size=65 lots=5 buy=PE sell=CE strike=26250 bought_gross=-8482.50 sold_gross=-3883.75 net=-12466.25
+2026-06-20 00:00:55,084 INFO TRADED date=2026-01-06 expiry=2026-01-13 lot_size=65 lots=5 buy=PE sell=CE strike=26150 bought_gross=8921.25 sold_gross=14040.00 net=22861.25
+2026-06-20 00:00:55,084 INFO TRADED date=2026-01-07 expiry=2026-01-13 lot_size=65 lots=5 buy=CE sell=PE strike=26150 bought_gross=-11098.75 sold_gross=-7670.00 net=-18868.75
+2026-06-20 00:00:55,146 INFO TRADED date=2026-01-08 expiry=2026-01-13 lot_size=65 lots=5 buy=PE sell=CE strike=25850 bought_gross=-4143.75 sold_gross=-4046.25 net=-8290.00
+2026-06-20 00:00:55,203 INFO TRADED date=2026-01-09 expiry=2026-01-13 lot_size=65 lots=5 buy=PE sell=CE strike=25700 bought_gross=4420.00 sold_gross=16022.50 net=20342.50
+2026-06-20 00:00:55,264 INFO TRADED date=2026-01-12 expiry=2026-01-13 lot_size=65 lots=5 buy=CE sell=PE strike=25800 bought_gross=3217.50 sold_gross=5590.00 net=8707.50
+2026-06-20 00:00:55,307 INFO TRADED date=2026-01-13 expiry=2026-01-20 lot_size=65 lots=5 buy=PE sell=CE strike=25700 bought_gross=5102.50 sold_gross=7393.75 net=12396.25
+2026-06-20 00:00:55,333 INFO TRADED date=2026-01-14 expiry=2026-01-20 lot_size=65 lots=5 buy=PE sell=CE strike=25650 bought_gross=-11930.75 sold_gross=-9915.75 net=-21946.50
+2026-06-20 00:00:55,333 INFO TRADED date=2026-01-16 expiry=2026-01-20 lot_size=65 lots=5 buy=PE sell=CE strike=25700 bought_gross=30452.50 sold_gross=23708.75 net=54061.25
+2026-06-20 00:00:55,362 INFO TRADED date=2026-01-19 expiry=2026-01-20 lot_size=65 lots=6 buy=CE sell=PE strike=25550 bought_gross=-2028.00 sold_gross=3003.00 net=875.00
+2026-06-20 00:00:55,466 INFO TRADED date=2026-01-20 expiry=2026-01-27 lot_size=65 lots=6 buy=PE sell=CE strike=25250 bought_gross=2145.00 sold_gross=8755.50 net=10800.50
+2026-06-20 00:00:55,553 INFO TRADED date=2026-01-21 expiry=2026-01-27 lot_size=65 lots=6 buy=CE sell=PE strike=25150 bought_gross=34788.00 sold_gross=27592.50 net=62280.50
+2026-06-20 00:00:55,783 INFO TRADED date=2026-01-22 expiry=2026-01-27 lot_size=65 lots=6 buy=CE sell=PE strike=25300 bought_gross=-9847.50 sold_gross=-10120.50 net=-20068.00
+2026-06-20 00:00:55,871 INFO TRADED date=2026-01-23 expiry=2026-01-27 lot_size=65 lots=6 buy=PE sell=CE strike=25050 bought_gross=-14527.50 sold_gross=-8326.50 net=-22954.00
+2026-06-20 00:00:55,916 INFO TRADED date=2026-01-27 expiry=2026-02-03 lot_size=65 lots=6 buy=CE sell=PE strike=25250 bought_gross=7761.00 sold_gross=6961.50 net=14622.50
+2026-06-20 00:00:55,962 INFO TRADED date=2026-01-28 expiry=2026-02-03 lot_size=65 lots=6 buy=CE sell=PE strike=25350 bought_gross=-17062.50 sold_gross=-16770.00 net=-33932.50
+2026-06-20 00:00:56,011 INFO TRADED date=2026-01-29 expiry=2026-02-03 lot_size=65 lots=6 buy=CE sell=PE strike=25400 bought_gross=-30654.00 sold_gross=-36231.00 net=-66985.00
+2026-06-20 00:00:56,064 INFO TRADED date=2026-01-30 expiry=2026-02-03 lot_size=65 lots=6 buy=CE sell=PE strike=25300 bought_gross=-5694.00 sold_gross=-11251.50 net=-17045.50
+2026-06-20 00:00:56,106 INFO TRADED date=2026-02-01 expiry=2026-02-03 lot_size=65 lots=6 buy=PE sell=CE strike=24750 bought_gross=-1306.50 sold_gross=-3178.50 net=-4585.00
+2026-06-20 00:00:56,153 INFO TRADED date=2026-02-02 expiry=2026-02-03 lot_size=65 lots=6 buy=CE sell=PE strike=25100 bought_gross=207187.50 sold_gross=31200.00 net=238287.50
+2026-06-20 00:00:56,213 INFO TRADED date=2026-02-03 expiry=2026-02-10 lot_size=65 lots=5 buy=PE sell=CE strike=25700 bought_gross=6305.00 sold_gross=12658.75 net=18863.75
+2026-06-20 00:00:56,268 INFO TRADED date=2026-02-04 expiry=2026-02-10 lot_size=65 lots=5 buy=PE sell=CE strike=25750 bought_gross=2047.50 sold_gross=8726.25 net=10673.75
+2026-06-20 00:00:56,323 INFO TRADED date=2026-02-05 expiry=2026-02-10 lot_size=65 lots=5 buy=CE sell=PE strike=25650 bought_gross=-10952.50 sold_gross=-8726.25 net=-19778.75
+2026-06-20 00:00:56,323 INFO TRADED date=2026-02-06 expiry=2026-02-10 lot_size=65 lots=5 buy=CE sell=PE strike=25650 bought_gross=34092.50 sold_gross=21320.00 net=55312.50
+2026-06-20 00:00:56,374 INFO TRADED date=2026-02-09 expiry=2026-02-10 lot_size=65 lots=5 buy=CE sell=PE strike=25850 bought_gross=3818.75 sold_gross=11862.50 net=15581.25
+2026-06-20 00:00:56,434 INFO TRADED date=2026-02-10 expiry=2026-02-17 lot_size=65 lots=5 buy=PE sell=CE strike=25900 bought_gross=-12853.75 sold_gross=-12236.25 net=-25190.00
+2026-06-20 00:00:56,477 INFO TRADED date=2026-02-11 expiry=2026-02-17 lot_size=65 lots=5 buy=PE sell=CE strike=25950 bought_gross=4550.00 sold_gross=9993.75 net=14443.75
+2026-06-20 00:00:56,537 INFO TRADED date=2026-02-12 expiry=2026-02-17 lot_size=65 lots=5 buy=PE sell=CE strike=25800 bought_gross=38187.50 sold_gross=24813.75 net=62901.25
+2026-06-20 00:00:56,583 INFO TRADED date=2026-02-13 expiry=2026-02-17 lot_size=65 lots=6 buy=PE sell=CE strike=25450 bought_gross=-3100.50 sold_gross=16789.50 net=13589.00
+2026-06-20 00:00:56,638 INFO TRADED date=2026-02-16 expiry=2026-02-17 lot_size=65 lots=5 buy=CE sell=PE strike=25700 bought_gross=-17842.50 sold_gross=-11553.75 net=-29496.25
+2026-06-20 00:00:56,771 INFO TRADED date=2026-02-17 expiry=2026-02-24 lot_size=65 lots=5 buy=CE sell=PE strike=25700 bought_gross=-5248.75 sold_gross=1413.75 net=-3935.00
+2026-06-20 00:00:56,917 INFO TRADED date=2026-02-18 expiry=2026-02-24 lot_size=65 lots=5 buy=CE sell=PE strike=25800 bought_gross=-910.00 sold_gross=6370.00 net=5360.00
+2026-06-20 00:00:57,041 INFO TRADED date=2026-02-19 expiry=2026-02-24 lot_size=65 lots=6 buy=PE sell=CE strike=25400 bought_gross=-21118.50 sold_gross=-9555.00 net=-30773.50
+2026-06-20 00:00:57,146 INFO TRADED date=2026-02-20 expiry=2026-02-24 lot_size=65 lots=6 buy=PE sell=CE strike=25550 bought_gross=-13494.00 sold_gross=-7683.00 net=-21277.00
+2026-06-20 00:00:57,146 INFO TRADED date=2026-02-23 expiry=2026-02-24 lot_size=65 lots=5 buy=CE sell=PE strike=25700 bought_gross=-19857.50 sold_gross=-18021.25 net=-37978.75
+2026-06-20 00:00:57,206 INFO TRADED date=2026-02-24 expiry=2026-03-02 lot_size=65 lots=6 buy=CE sell=PE strike=25450 bought_gross=15658.50 sold_gross=22795.50 net=38354.00
+2026-06-20 00:00:57,273 INFO TRADED date=2026-02-25 expiry=2026-03-02 lot_size=65 lots=6 buy=PE sell=CE strike=25500 bought_gross=-21699.60 sold_gross=-13435.50 net=-35235.10
+2026-06-20 00:00:57,273 INFO TRADED date=2026-02-26 expiry=2026-03-02 lot_size=65 lots=6 buy=CE sell=PE strike=25500 bought_gross=-23829.00 sold_gross=-19851.00 net=-43780.00
+2026-06-20 00:00:57,343 INFO TRADED date=2026-02-27 expiry=2026-03-02 lot_size=65 lots=6 buy=PE sell=CE strike=25200 bought_gross=98221.50 sold_gross=38044.50 net=136166.00
+2026-06-20 00:00:57,378 INFO TRADED date=2026-03-02 expiry=2026-03-10 lot_size=65 lots=6 buy=CE sell=PE strike=24850 bought_gross=-73768.50 sold_gross=-117000.00 net=-190868.50
+2026-06-20 00:00:57,406 INFO TRADED date=2026-03-04 expiry=2026-03-10 lot_size=65 lots=6 buy=CE sell=PE strike=24450 bought_gross=3042.00 sold_gross=27358.50 net=30300.50
+2026-06-20 00:00:57,439 INFO TRADED date=2026-03-05 expiry=2026-03-10 lot_size=65 lots=6 buy=CE sell=PE strike=24750 bought_gross=-29113.50 sold_gross=-32623.50 net=-61837.00
+2026-06-20 00:00:57,440 INFO TRADED date=2026-03-06 expiry=2026-03-10 lot_size=65 lots=6 buy=PE sell=CE strike=24450 bought_gross=147420.00 sold_gross=72852.00 net=220172.00
+2026-06-20 00:00:57,480 INFO TRADED date=2026-03-09 expiry=2026-03-10 lot_size=65 lots=6 buy=CE sell=PE strike=24000 bought_gross=18096.00 sold_gross=53878.50 net=71874.50
+2026-06-20 00:00:57,517 INFO TRADED date=2026-03-10 expiry=2026-03-17 lot_size=65 lots=6 buy=CE sell=PE strike=24300 bought_gross=-26754.00 sold_gross=-11719.50 net=-38573.50
+2026-06-20 00:00:57,552 INFO TRADED date=2026-03-11 expiry=2026-03-17 lot_size=65 lots=6 buy=PE sell=CE strike=23850 bought_gross=50856.00 sold_gross=50875.50 net=101631.50
+2026-06-20 00:00:57,579 INFO TRADED date=2026-03-12 expiry=2026-03-17 lot_size=65 lots=6 buy=PE sell=CE strike=23650 bought_gross=38805.00 sold_gross=39858.00 net=78563.00
+2026-06-20 00:00:57,601 INFO TRADED date=2026-03-13 expiry=2026-03-17 lot_size=65 lots=6 buy=PE sell=CE strike=23150 bought_gross=-27982.50 sold_gross=14488.50 net=-13594.00
+2026-06-20 00:00:57,623 INFO TRADED date=2026-03-16 expiry=2026-03-17 lot_size=65 lots=6 buy=CE sell=PE strike=23350 bought_gross=-12870.00 sold_gross=30361.50 net=17391.50
+2026-06-20 00:00:57,658 INFO TRADED date=2026-03-17 expiry=2026-03-24 lot_size=65 lots=6 buy=CE sell=PE strike=23550 bought_gross=5440.50 sold_gross=25564.50 net=30905.00
+2026-06-20 00:00:57,658 INFO SKIPPED date=2026-03-18 expiry=2026-03-24 buy=PE sell=CE strike=23750 reason=missing_option_file
+2026-06-20 00:00:57,692 INFO TRADED date=2026-03-19 expiry=2026-03-24 lot_size=65 lots=6 buy=PE sell=CE strike=23100 bought_gross=-34027.50 sold_gross=-18427.50 net=-52555.00
+2026-06-20 00:00:57,725 INFO TRADED date=2026-03-20 expiry=2026-03-24 lot_size=65 lots=6 buy=PE sell=CE strike=23150 bought_gross=118696.50 sold_gross=67119.00 net=185715.50
+2026-06-20 00:00:57,747 INFO TRADED date=2026-03-23 expiry=2026-03-24 lot_size=65 lots=6 buy=PE sell=CE strike=22500 bought_gross=-71916.00 sold_gross=-72657.00 net=-144673.00
+2026-06-20 00:00:57,811 INFO TRADED date=2026-03-24 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=22950 bought_gross=19071.00 sold_gross=31531.50 net=50502.50
+2026-06-20 00:00:58,662 INFO TRADED date=2026-03-25 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=23300 bought_gross=40930.50 sold_gross=44811.00 net=85641.50
+2026-06-20 00:00:58,727 INFO TRADED date=2026-03-27 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=22850 bought_gross=60411.00 sold_gross=57954.00 net=118265.00
+2026-06-20 00:00:58,787 INFO TRADED date=2026-03-30 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=22400 bought_gross=-105300.00 sold_gross=-70765.50 net=-176165.50
+2026-06-20 00:00:58,854 INFO TRADED date=2026-04-01 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=22700 bought_gross=98611.50 sold_gross=78058.50 net=176570.00
+2026-06-20 00:00:58,854 INFO TRADED date=2026-04-02 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=22700 bought_gross=-6006.00 sold_gross=2067.00 net=-4039.00
+2026-06-20 00:00:58,854 INFO TRADED date=2026-04-06 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=22950 bought_gross=-42373.50 sold_gross=-35548.50 net=-78022.00
+2026-06-20 00:00:58,946 INFO TRADED date=2026-04-07 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=23150 bought_gross=136324.50 sold_gross=130845.00 net=267069.50
+2026-06-20 00:00:59,094 INFO TRADED date=2026-04-08 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=24000 bought_gross=-38317.50 sold_gross=-29757.00 net=-68174.50
+2026-06-20 00:00:59,195 INFO TRADED date=2026-04-09 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=23750 bought_gross=-22600.50 sold_gross=-10510.50 net=-33211.00
+2026-06-20 00:00:59,294 INFO TRADED date=2026-04-10 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=24050 bought_gross=-62926.50 sold_gross=-93717.00 net=-156743.50
+2026-06-20 00:00:59,424 INFO TRADED date=2026-04-13 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=23800 bought_gross=79657.50 sold_gross=79521.00 net=159078.50
+2026-06-20 00:00:59,573 INFO TRADED date=2026-04-15 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=24200 bought_gross=-26890.50 sold_gross=-17296.50 net=-44287.00
+2026-06-20 00:00:59,573 INFO TRADED date=2026-04-16 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=24200 bought_gross=-858.00 sold_gross=7702.50 net=6744.50
+2026-06-20 00:00:59,700 INFO TRADED date=2026-04-17 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=24350 bought_gross=-18837.00 sold_gross=-13533.00 net=-32470.00
+2026-06-20 00:00:59,700 INFO TRADED date=2026-04-20 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=24350 bought_gross=-30693.00 sold_gross=-13845.00 net=-44638.00
+2026-06-20 00:00:59,849 INFO TRADED date=2026-04-21 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=24600 bought_gross=-25896.00 sold_gross=-25467.00 net=-51463.00
+2026-06-20 00:00:59,849 INFO TRADED date=2026-04-22 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=24350 bought_gross=50076.00 sold_gross=43387.50 net=93363.50
+2026-06-20 00:00:59,974 INFO TRADED date=2026-04-23 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=24150 bought_gross=-7117.50 sold_gross=2418.00 net=-4799.50
+2026-06-20 00:01:00,118 INFO TRADED date=2026-04-24 expiry=2026-04-28 lot_size=65 lots=6 buy=PE sell=CE strike=23900 bought_gross=-36991.50 sold_gross=-15385.50 net=-52477.00
+2026-06-20 00:01:00,250 INFO TRADED date=2026-04-27 expiry=2026-04-28 lot_size=65 lots=6 buy=CE sell=PE strike=24100 bought_gross=-31687.50 sold_gross=-9886.50 net=-41674.00
+2026-06-20 00:01:00,304 INFO TRADED date=2026-04-28 expiry=2026-05-05 lot_size=65 lots=6 buy=PE sell=CE strike=24000 bought_gross=-24453.00 sold_gross=-14527.50 net=-39080.50
+2026-06-20 00:01:00,345 INFO TRADED date=2026-04-29 expiry=2026-05-05 lot_size=65 lots=6 buy=PE sell=CE strike=24150 bought_gross=36367.50 sold_gross=36270.00 net=72537.50
+2026-06-20 00:01:00,393 INFO SKIPPED date=2026-04-30 expiry=2026-05-05 buy=CE sell=PE strike=24050 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:01:00,440 INFO SKIPPED date=2026-05-04 expiry=2026-05-05 buy=PE sell=CE strike=24100 reason=missing_entry_or_exit_timestamp
+2026-06-20 00:01:00,440 INFO SKIPPED date=2026-05-05 reason=no_next_trading_day
+2026-06-20 00:01:00,440 INFO COMPLETED traded=838 skipped=154 total=992

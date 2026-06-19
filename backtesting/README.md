@@ -13,6 +13,9 @@ Notes:
 
 | Source | Period | Test | Result | Capital Base | Net P/L | CAGR / Return | Max DD | Summary |
 |---|---|---|---:|---:|---:|---:|---:|---|
+| Current | ~4Y | Long/Short ATM NIFTY MA Weekly Overnight 2022-2026 (capital-based lots, margin ≈10%) | Profit | Rs 10L | Rs 20,77,457.90 | 32.63% CAGR | Rs 6,80,802.50 | [Summary](results/long_short_atm_nifty_ma_weekly_overnight_2020_2026_summary.md) |
+| Current | ~4Y | Weekly Short Iron Condor Roll 2022-2026 (1 lot, sell ±250, hedge ±450, 09:15 entry, 15:15 exit on expiry) | Loss | Rs 10L | Rs -68,495.25 | N/A | N/A | [Summary](results/weekly_iron_condor_roll_2020_2026_summary.md) |
+| Current | 2025 | Intraday ATM Straddle — 25-period 15m MA Filter (1 lot, 09:40–15:20, MA entry + dynamic MA SL) | Profit | Rs 3L | Rs 35,710.36 | 11.90% | Rs 24,078.33 | [Summary](results/intraday_atm_straddle_ma25_2025_summary.md) |
 | Current | 2025 | Intraday ATM Straddle — Independent SL per Leg (1 lot, 09:20–15:20, 2× SL each leg) | Profit | Rs 3L | Rs 40,756.25 | 13.59% | Rs 38,647.00 | [Summary](results/intraday_atm_straddle_indep_sl_2025_summary.md) |
 | Current | 2025 | Intraday ATM Straddle — Joint SL (1 lot, 09:20–15:20, 2× SL exits both legs) | Profit | Rs 3L | Rs 16,595.00 | 5.53% | Rs 53,756.50 | [Summary](results/intraday_atm_straddle_joint_sl_2025_summary.md) |
 | Current | 2025 | Overnight OTM Strangle by Day — with fallback band (1 lot, 15:20–09:20 next day) | Loss | Rs 3L | Rs -26,781.25 | -8.93% | Rs 43,118.50 | [Summary](results/overnight_strangle_by_day_2025_summary.md) |

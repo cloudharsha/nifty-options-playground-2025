@@ -1,0 +1,195 @@
+# Weekly Nifty Short Iron Condor Roll (2020-2026) — Backtest
+
+## Strategy Details
+
+- **Structure**: Short iron condor — sell CE and PE at `ATM + sell_offset` / `ATM - sell_offset`, buy CE and PE at `ATM + buy_offset` / `ATM - buy_offset` as hedge
+- **Sell offset**: 250 points from ATM
+- **Buy offset (hedge)**: 450 points from ATM
+- **Roll trigger**: each weekly expiry day in the options dataset
+- **Entry**: 09:15 on the first spot-data trading day strictly after each expiry
+- **Exit**: 15:15 on the target expiry day (15 min before market close)
+- **Expiry targeted**: the next available expiry folder after the entry expiry
+- **ATM rule**: nearest 50 using spot open at entry timestamp
+- **Data source**: `Options` options + `NIFTY50_INDEX_15m_last_4y.csv` spot
+- **Lot size**: dynamic per expiry date — 75 (pre-Oct 2021), 50 (Oct 2021–Apr 2024), 25 (May 2024+); multiplied by 1 lot(s)
+- **Slippage**: 1.00 pt per order (entry + exit = 2.00 pts per leg)
+- **Brokerage**: Rs 25 per order, Rs 200 per completed condor (4 legs x 2 sides)
+- **No stop-loss, no adjustments**
+
+## Results Summary
+
+- Expiry pairs processed : `350`
+- Trades executed        : `192`
+- Trades skipped         : `158`
+- Gross P&L              : `-30095.25`
+- Total Brokerage        : `38400.00`
+- Net P&L                : `-68495.25`
+
+## Skipped Trades
+
+- `2020-01-02` (entry `2022-05-05`) -> `2020-01-09`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-01-02 and 2020-01-09.
+- `2020-01-09` (entry `2022-05-05`) -> `2020-01-16`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-01-09 and 2020-01-16.
+- `2020-01-16` (entry `2022-05-05`) -> `2020-01-23`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-01-16 and 2020-01-23.
+- `2020-01-23` (entry `2022-05-05`) -> `2020-01-30`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-01-23 and 2020-01-30.
+- `2020-01-30` (entry `2022-05-05`) -> `2020-02-06`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-01-30 and 2020-02-06.
+- `2020-02-06` (entry `2022-05-05`) -> `2020-02-13`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-02-06 and 2020-02-13.
+- `2020-02-13` (entry `2022-05-05`) -> `2020-02-20`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-02-13 and 2020-02-20.
+- `2020-02-20` (entry `2022-05-05`) -> `2020-02-27`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-02-20 and 2020-02-27.
+- `2020-02-27` (entry `2022-05-05`) -> `2020-03-05`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-02-27 and 2020-03-05.
+- `2020-03-05` (entry `2022-05-05`) -> `2020-03-12`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-03-05 and 2020-03-12.
+- `2020-03-12` (entry `2022-05-05`) -> `2020-03-19`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-03-12 and 2020-03-19.
+- `2020-03-19` (entry `2022-05-05`) -> `2020-03-26`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-03-19 and 2020-03-26.
+- `2020-03-26` (entry `2022-05-05`) -> `2020-04-01`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-03-26 and 2020-04-01.
+- `2020-04-01` (entry `2022-05-05`) -> `2020-04-09`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-04-01 and 2020-04-09.
+- `2020-04-09` (entry `2022-05-05`) -> `2020-04-16`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-04-09 and 2020-04-16.
+- `2020-04-16` (entry `2022-05-05`) -> `2020-04-23`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-04-16 and 2020-04-23.
+- `2020-04-23` (entry `2022-05-05`) -> `2020-04-30`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-04-23 and 2020-04-30.
+- `2020-04-30` (entry `2022-05-05`) -> `2020-05-07`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-04-30 and 2020-05-07.
+- `2020-05-07` (entry `2022-05-05`) -> `2020-05-14`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-05-07 and 2020-05-14.
+- `2020-05-14` (entry `2022-05-05`) -> `2020-05-21`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-05-14 and 2020-05-21.
+- `2020-05-21` (entry `2022-05-05`) -> `2020-05-28`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-05-21 and 2020-05-28.
+- `2020-05-28` (entry `2022-05-05`) -> `2020-06-04`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-05-28 and 2020-06-04.
+- `2020-06-04` (entry `2022-05-05`) -> `2020-06-11`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-06-04 and 2020-06-11.
+- `2020-06-11` (entry `2022-05-05`) -> `2020-06-18`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-06-11 and 2020-06-18.
+- `2020-06-18` (entry `2022-05-05`) -> `2020-06-25`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-06-18 and 2020-06-25.
+- `2020-06-25` (entry `2022-05-05`) -> `2020-07-02`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-06-25 and 2020-07-02.
+- `2020-07-02` (entry `2022-05-05`) -> `2020-07-09`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-07-02 and 2020-07-09.
+- `2020-07-09` (entry `2022-05-05`) -> `2020-07-16`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-07-09 and 2020-07-16.
+- `2020-07-16` (entry `2022-05-05`) -> `2020-07-23`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-07-16 and 2020-07-23.
+- `2020-07-23` (entry `2022-05-05`) -> `2020-07-30`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-07-23 and 2020-07-30.
+- `2020-07-30` (entry `2022-05-05`) -> `2020-08-06`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-07-30 and 2020-08-06.
+- `2020-08-06` (entry `2022-05-05`) -> `2020-08-13`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-08-06 and 2020-08-13.
+- `2020-08-13` (entry `2022-05-05`) -> `2020-08-20`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-08-13 and 2020-08-20.
+- `2020-08-20` (entry `2022-05-05`) -> `2020-08-27`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-08-20 and 2020-08-27.
+- `2020-08-27` (entry `2022-05-05`) -> `2020-09-03`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-08-27 and 2020-09-03.
+- `2020-09-03` (entry `2022-05-05`) -> `2020-09-10`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-09-03 and 2020-09-10.
+- `2020-09-10` (entry `2022-05-05`) -> `2020-09-17`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-09-10 and 2020-09-17.
+- `2020-09-17` (entry `2022-05-05`) -> `2020-09-24`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-09-17 and 2020-09-24.
+- `2020-09-24` (entry `2022-05-05`) -> `2020-10-01`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-09-24 and 2020-10-01.
+- `2020-10-01` (entry `2022-05-05`) -> `2020-10-08`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-10-01 and 2020-10-08.
+- `2020-10-08` (entry `2022-05-05`) -> `2020-10-15`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-10-08 and 2020-10-15.
+- `2020-10-15` (entry `2022-05-05`) -> `2020-10-22`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-10-15 and 2020-10-22.
+- `2020-10-22` (entry `2022-05-05`) -> `2020-10-29`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-10-22 and 2020-10-29.
+- `2020-10-29` (entry `2022-05-05`) -> `2020-11-05`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-10-29 and 2020-11-05.
+- `2020-11-05` (entry `2022-05-05`) -> `2020-11-12`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-11-05 and 2020-11-12.
+- `2020-11-12` (entry `2022-05-05`) -> `2020-11-19`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-11-12 and 2020-11-19.
+- `2020-11-19` (entry `2022-05-05`) -> `2020-11-26`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-11-19 and 2020-11-26.
+- `2020-11-26` (entry `2022-05-05`) -> `2020-12-03`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-11-26 and 2020-12-03.
+- `2020-12-03` (entry `2022-05-05`) -> `2020-12-10`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-12-03 and 2020-12-10.
+- `2020-12-10` (entry `2022-05-05`) -> `2020-12-17`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-12-10 and 2020-12-17.
+- `2020-12-17` (entry `2022-05-05`) -> `2020-12-24`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-12-17 and 2020-12-24.
+- `2020-12-24` (entry `2022-05-05`) -> `2020-12-31`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-12-24 and 2020-12-31.
+- `2020-12-31` (entry `2022-05-05`) -> `2021-01-07`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2020-12-31 and 2021-01-07.
+- `2021-01-07` (entry `2022-05-05`) -> `2021-01-14`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-01-07 and 2021-01-14.
+- `2021-01-14` (entry `2022-05-05`) -> `2021-01-21`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-01-14 and 2021-01-21.
+- `2021-01-21` (entry `2022-05-05`) -> `2021-01-28`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-01-21 and 2021-01-28.
+- `2021-01-28` (entry `2022-05-05`) -> `2021-02-04`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-01-28 and 2021-02-04.
+- `2021-02-04` (entry `2022-05-05`) -> `2021-02-11`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-02-04 and 2021-02-11.
+- `2021-02-11` (entry `2022-05-05`) -> `2021-02-18`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-02-11 and 2021-02-18.
+- `2021-02-18` (entry `2022-05-05`) -> `2021-02-25`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-02-18 and 2021-02-25.
+- `2021-02-25` (entry `2022-05-05`) -> `2021-03-04`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-02-25 and 2021-03-04.
+- `2021-03-04` (entry `2022-05-05`) -> `2021-03-10`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-03-04 and 2021-03-10.
+- `2021-03-10` (entry `2022-05-05`) -> `2021-03-18`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-03-10 and 2021-03-18.
+- `2021-03-18` (entry `2022-05-05`) -> `2021-03-25`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-03-18 and 2021-03-25.
+- `2021-03-25` (entry `2022-05-05`) -> `2021-04-01`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-03-25 and 2021-04-01.
+- `2021-04-01` (entry `2022-05-05`) -> `2021-04-08`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-04-01 and 2021-04-08.
+- `2021-04-08` (entry `2022-05-05`) -> `2021-04-15`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-04-08 and 2021-04-15.
+- `2021-04-15` (entry `2022-05-05`) -> `2021-04-22`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-04-15 and 2021-04-22.
+- `2021-04-22` (entry `2022-05-05`) -> `2021-04-29`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-04-22 and 2021-04-29.
+- `2021-04-29` (entry `2022-05-05`) -> `2021-05-06`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-04-29 and 2021-05-06.
+- `2021-05-06` (entry `2022-05-05`) -> `2021-05-12`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-05-06 and 2021-05-12.
+- `2021-05-12` (entry `2022-05-05`) -> `2021-05-20`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-05-12 and 2021-05-20.
+- `2021-05-20` (entry `2022-05-05`) -> `2021-05-27`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-05-20 and 2021-05-27.
+- `2021-05-27` (entry `2022-05-05`) -> `2021-06-03`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-05-27 and 2021-06-03.
+- `2021-06-03` (entry `2022-05-05`) -> `2021-06-10`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-06-03 and 2021-06-10.
+- `2021-06-10` (entry `2022-05-05`) -> `2021-06-17`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-06-10 and 2021-06-17.
+- `2021-06-17` (entry `2022-05-05`) -> `2021-06-24`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-06-17 and 2021-06-24.
+- `2021-06-24` (entry `2022-05-05`) -> `2021-07-01`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-06-24 and 2021-07-01.
+- `2021-07-01` (entry `2022-05-05`) -> `2021-07-08`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-07-01 and 2021-07-08.
+- `2021-07-08` (entry `2022-05-05`) -> `2021-07-15`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-07-08 and 2021-07-15.
+- `2021-07-15` (entry `2022-05-05`) -> `2021-07-22`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-07-15 and 2021-07-22.
+- `2021-07-22` (entry `2022-05-05`) -> `2021-07-29`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-07-22 and 2021-07-29.
+- `2021-07-29` (entry `2022-05-05`) -> `2021-08-05`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-07-29 and 2021-08-05.
+- `2021-08-05` (entry `2022-05-05`) -> `2021-08-12`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-08-05 and 2021-08-12.
+- `2021-08-12` (entry `2022-05-05`) -> `2021-08-18`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-08-12 and 2021-08-18.
+- `2021-08-18` (entry `2022-05-05`) -> `2021-08-26`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-08-18 and 2021-08-26.
+- `2021-08-26` (entry `2022-05-05`) -> `2021-09-02`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-08-26 and 2021-09-02.
+- `2021-09-02` (entry `2022-05-05`) -> `2021-09-09`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-09-02 and 2021-09-09.
+- `2021-09-09` (entry `2022-05-05`) -> `2021-09-16`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-09-09 and 2021-09-16.
+- `2021-09-16` (entry `2022-05-05`) -> `2021-09-23`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-09-16 and 2021-09-23.
+- `2021-09-23` (entry `2022-05-05`) -> `2021-09-30`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-09-23 and 2021-09-30.
+- `2021-09-30` (entry `2022-05-05`) -> `2021-10-07`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-09-30 and 2021-10-07.
+- `2021-10-07` (entry `2022-05-05`) -> `2021-10-14`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-10-07 and 2021-10-14.
+- `2021-10-14` (entry `2022-05-05`) -> `2021-10-21`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-10-14 and 2021-10-21.
+- `2021-10-21` (entry `2022-05-05`) -> `2021-10-28`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-10-21 and 2021-10-28.
+- `2021-10-28` (entry `2022-05-05`) -> `2021-11-03`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-10-28 and 2021-11-03.
+- `2021-11-03` (entry `2022-05-05`) -> `2021-11-11`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-11-03 and 2021-11-11.
+- `2021-11-11` (entry `2022-05-05`) -> `2021-11-18`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-11-11 and 2021-11-18.
+- `2021-11-18` (entry `2022-05-05`) -> `2021-11-25`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-11-18 and 2021-11-25.
+- `2021-11-25` (entry `2022-05-05`) -> `2021-12-02`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-11-25 and 2021-12-02.
+- `2021-12-02` (entry `2022-05-05`) -> `2021-12-09`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-12-02 and 2021-12-09.
+- `2021-12-09` (entry `2022-05-05`) -> `2021-12-16`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-12-09 and 2021-12-16.
+- `2021-12-16` (entry `2022-05-05`) -> `2021-12-23`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-12-16 and 2021-12-23.
+- `2021-12-23` (entry `2022-05-05`) -> `2021-12-30`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-12-23 and 2021-12-30.
+- `2021-12-30` (entry `2022-05-05`) -> `2022-01-06`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2021-12-30 and 2022-01-06.
+- `2022-01-06` (entry `2022-05-05`) -> `2022-01-13`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-01-06 and 2022-01-13.
+- `2022-01-13` (entry `2022-05-05`) -> `2022-01-20`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-01-13 and 2022-01-20.
+- `2022-01-20` (entry `2022-05-05`) -> `2022-01-27`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-01-20 and 2022-01-27.
+- `2022-01-27` (entry `2022-05-05`) -> `2022-02-03`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-01-27 and 2022-02-03.
+- `2022-02-03` (entry `2022-05-05`) -> `2022-02-10`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-02-03 and 2022-02-10.
+- `2022-02-10` (entry `2022-05-05`) -> `2022-02-17`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-02-10 and 2022-02-17.
+- `2022-02-17` (entry `2022-05-05`) -> `2022-02-24`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-02-17 and 2022-02-24.
+- `2022-02-24` (entry `2022-05-05`) -> `2022-03-03`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-02-24 and 2022-03-03.
+- `2022-03-03` (entry `2022-05-05`) -> `2022-03-10`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-03-03 and 2022-03-10.
+- `2022-03-10` (entry `2022-05-05`) -> `2022-03-17`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-03-10 and 2022-03-17.
+- `2022-03-17` (entry `2022-05-05`) -> `2022-03-24`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-03-17 and 2022-03-24.
+- `2022-03-24` (entry `2022-05-05`) -> `2022-03-31`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-03-24 and 2022-03-31.
+- `2022-03-31` (entry `2022-05-05`) -> `2022-04-07`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-03-31 and 2022-04-07.
+- `2022-04-07` (entry `2022-05-05`) -> `2022-04-13`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-04-07 and 2022-04-13.
+- `2022-04-13` (entry `2022-05-05`) -> `2022-04-21`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-04-13 and 2022-04-21.
+- `2022-04-21` (entry `2022-05-05`) -> `2022-04-28`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-04-21 and 2022-04-28.
+- `2022-04-28` (entry `2022-05-05`) -> `2022-05-05`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2022-04-28 and 2022-05-05.
+- `2022-06-09` (entry `2022-06-10`) -> `2022-06-16`: `missing_candle_at_timestamp`. NIFTY_16550_CE_16_JUN_22.csv exit@2022-06-16T15:15:00+05:30
+- `2022-06-30` (entry `2022-07-01`) -> `2022-07-07`: `missing_candle_at_timestamp`. NIFTY_15450_PE_07_JUL_22.csv exit@2022-07-07T15:15:00+05:30
+- `2022-07-14` (entry `2022-07-15`) -> `2022-07-21`: `missing_candle_at_timestamp`. NIFTY_15750_PE_21_JUL_22.csv exit@2022-07-21T15:15:00+05:30; NIFTY_15550_PE_21_JUL_22.csv exit@2022-07-21T15:15:00+05:30
+- `2022-09-22` (entry `2022-09-23`) -> `2022-09-29`: `missing_candle_at_timestamp`. NIFTY_18050_CE_29_SEP_22.csv exit@2022-09-29T15:15:00+05:30
+- `2022-10-06` (entry `2022-10-07`) -> `2022-10-13`: `missing_candle_at_timestamp`. NIFTY_17750_CE_13_OCT_22.csv exit@2022-10-13T15:15:00+05:30
+- `2023-06-22` (entry `2023-06-23`) -> `2023-06-28`: `missing_candle_at_timestamp`. NIFTY_19000_CE_28_JUN_23.csv entry@2023-06-23T09:15:00+05:30; NIFTY_18500_PE_28_JUN_23.csv entry@2023-06-23T09:15:00+05:30; NIFTY_19200_CE_28_JUN_23.csv entry@2023-06-23T09:15:00+05:30; NIFTY_18300_PE_28_JUN_23.csv entry@2023-06-23T09:15:00+05:30
+- `2023-06-28` (entry `2023-06-30`) -> `2023-06-29`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2023-06-28 and 2023-06-29.
+- `2023-09-14` (entry `2023-09-15`) -> `2023-09-21`: `missing_candle_at_timestamp`. NIFTY_19700_PE_21_SEP_23.csv exit@2023-09-21T15:15:00+05:30
+- `2023-12-28` (entry `2023-12-29`) -> `2024-01-04`: `missing_candle_at_timestamp`. NIFTY_22200_CE_04_JAN_24.csv exit@2024-01-04T15:15:00+05:30
+- `2024-10-31` (entry `2024-11-01`) -> `2024-11-07`: `missing_spot_entry_timestamp`. Spot file has no candle at 2024-11-01T09:15:00+05:30.
+- `2025-10-20` (entry `2025-10-21`) -> `2025-10-28`: `missing_spot_entry_timestamp`. Spot file has no candle at 2025-10-21T09:15:00+05:30.
+- `2026-03-17` (entry `2026-03-18`) -> `2026-03-24`: `missing_contract_file`. Missing: NIFTY_23900_CE_24_MAR_26.csv, NIFTY_24100_CE_24_MAR_26.csv
+- `2026-03-24` (entry `2026-03-25`) -> `2026-04-28`: `missing_candle_at_timestamp`. NIFTY_22600_PE_28_APR_26.csv entry@2026-03-25T09:15:00+05:30; NIFTY_22600_PE_28_APR_26.csv exit@2026-04-28T15:15:00+05:30
+- `2026-04-28` (entry `2026-04-29`) -> `2026-05-05`: `missing_candle_at_timestamp`. NIFTY_24350_CE_05_MAY_26.csv exit@2026-05-05T15:15:00+05:30; NIFTY_23850_PE_05_MAY_26.csv exit@2026-05-05T15:15:00+05:30; NIFTY_24550_CE_05_MAY_26.csv exit@2026-05-05T15:15:00+05:30; NIFTY_23650_PE_05_MAY_26.csv exit@2026-05-05T15:15:00+05:30
+- `2026-05-05` (entry ``) -> `2026-05-12`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-05-05 and 2026-05-12.
+- `2026-05-12` (entry ``) -> `2026-05-19`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-05-12 and 2026-05-19.
+- `2026-05-19` (entry ``) -> `2026-05-26`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-05-19 and 2026-05-26.
+- `2026-05-26` (entry ``) -> `2026-06-02`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-05-26 and 2026-06-02.
+- `2026-06-02` (entry ``) -> `2026-06-09`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-06-02 and 2026-06-09.
+- `2026-06-09` (entry ``) -> `2026-06-16`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-06-09 and 2026-06-16.
+- `2026-06-16` (entry ``) -> `2026-06-23`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-06-16 and 2026-06-23.
+- `2026-06-23` (entry ``) -> `2026-06-30`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-06-23 and 2026-06-30.
+- `2026-06-30` (entry ``) -> `2026-07-07`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-06-30 and 2026-07-07.
+- `2026-07-07` (entry ``) -> `2026-07-14`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-07-07 and 2026-07-14.
+- `2026-07-14` (entry ``) -> `2026-07-28`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-07-14 and 2026-07-28.
+- `2026-07-28` (entry ``) -> `2026-08-25`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-07-28 and 2026-08-25.
+- `2026-08-25` (entry ``) -> `2026-09-29`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-08-25 and 2026-09-29.
+- `2026-09-29` (entry ``) -> `2026-12-29`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-09-29 and 2026-12-29.
+- `2026-12-29` (entry ``) -> `2027-03-30`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2026-12-29 and 2027-03-30.
+- `2027-03-30` (entry ``) -> `2027-06-29`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2027-03-30 and 2027-06-29.
+- `2027-06-29` (entry ``) -> `2027-12-28`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2027-06-29 and 2027-12-28.
+- `2027-12-28` (entry ``) -> `2028-06-27`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2027-12-28 and 2028-06-27.
+- `2028-06-27` (entry ``) -> `2028-12-26`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2028-06-27 and 2028-12-26.
+- `2028-12-26` (entry ``) -> `2029-06-26`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2028-12-26 and 2029-06-26.
+- `2029-06-26` (entry ``) -> `2029-12-24`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2029-06-26 and 2029-12-24.
+- `2029-12-24` (entry ``) -> `2030-12-31`: `no_trading_day_between_expiries`. No spot trading day found strictly between 2029-12-24 and 2030-12-31.
+
+## Notes
+
+- Each expiry folder in `NiftyOptions_2020_2026/Options` contains option data starting from the day after the previous expiry through the expiry day itself. Entry is therefore placed on the first available spot trading day after each expiry, not on the expiry day itself.
+- Exit is at 15:15 on the target expiry day. Deeply OTM contracts that see no trading volume at 15:15 will cause a skip.
+- Lot size is applied dynamically per trade based on the target expiry date (75 pre-Oct 2021, 50 Oct 2021-Apr 2024, 25 May 2024+). The `lot_size` column in the daywise CSV shows the value used for each trade.
+- The spot file covers roughly May 2022 to May 2026; expiry dates before that window are skipped due to missing spot data.
+- Gross P&L includes slippage but excludes brokerage.
