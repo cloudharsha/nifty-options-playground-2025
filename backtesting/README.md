@@ -1,6 +1,6 @@
 # Backtesting Results Index
 
-This table summarizes the result files currently present under `backtesting/results`, including archived folders such as `backtesting/results/legacy` and `backtesting/results/legacy-2`.
+This table summarizes the result files currently present under `backtesting/results`, including archived folders such as `backtesting/results/legacy`, `backtesting/results/legacy-2`, and `backtesting/results/legacy-3`.
 
 Notes:
 
@@ -55,3 +55,17 @@ Notes:
 | Legacy | 2025 | Short ATM Weekly Straddle 2025 | Loss | Rs 10L | Rs -10,824.00 | -1.08% | N/A | [Summary](results/legacy/short_atm_weekly_straddle_2025_summary.md) |
 | Legacy | 2025 | Short Iron Condor Next Week 2025 | Loss | Rs 10L | Rs -21,321.20 | -2.13% | N/A | [Summary](results/legacy/short_iron_condor_next_week_2025_summary.md) |
 | Legacy | 2025 | Short Iron Fly 2025 | Loss | Rs 10L | Rs -4,33,828.60 | -43.38% | N/A | [Summary](results/legacy/short_iron_fly_2025_summary.md) |
+| Legacy-3 | ~6Y | NIFTY Intraday ATM Straddle — Expiry-Inclusive (~300 qty, 09:20–15:20, 20% Ind. SL per leg, balance filter) | Profit | Rs 10L | Rs 10,48,326 | N/A | Rs 2,93,983 | [Summary](results/legacy-3/intraday_atm_straddle_expiry_incl_nifty_summary.md) |
+| Legacy-3 | 2024–2026 | SENSEX Intraday ATM Straddle — Expiry-Inclusive (100 qty, 09:20–15:20, 20% Ind. SL per leg, balance filter) | Profit | Rs 5L | Rs 3,29,040 | N/A | Rs 1,70,381 | [Summary](results/legacy-3/intraday_atm_straddle_expiry_incl_sensex_summary.md) |
+| Legacy-3 | ~6Y | NIFTY Intraday ATM Straddle — 20% Ind. SL, Weekly Expiry (~300 qty, 09:20–15:20, balance filter) | Profit | Rs 10L | Rs 2,16,384 | N/A | Rs 2,60,277 | [Summary](results/legacy-3/intraday_atm_straddle_20pct_sl_nifty_2020_2026_summary.md) |
+| Legacy-3 | ~6Y | NIFTY Intraday ATM Straddle — 20% Ind. SL, Monthly Expiry (~300 qty, 09:20–15:20, balance filter) | Loss | Rs 10L | Rs -1,54,701 | N/A | Rs 3,49,483 | [Summary](results/legacy-3/intraday_atm_straddle_20pct_sl_nifty_monthly_2020_2026_summary.md) |
+| Legacy-3 | 2024–2026 | SENSEX Intraday ATM Straddle — 20% Ind. SL, Weekly Expiry (100 qty, 09:20–15:20, balance filter) | Profit | Rs 5L | Rs 1,44,762 | N/A | Rs 1,72,031 | [Summary](results/legacy-3/intraday_atm_straddle_20pct_sl_sensex_2024_2026_summary.md) |
+| Legacy-3 | 2024–2026 | SENSEX Intraday ATM Straddle — 20% Ind. SL, Monthly Expiry (100 qty, 09:20–15:20, balance filter) | Profit | Rs 5L | Rs 2,52,845 | N/A | Rs 1,12,754 | [Summary](results/legacy-3/intraday_atm_straddle_20pct_sl_sensex_monthly_2024_2026_summary.md) |
+| Legacy-3 | ~4Y | NIFTY Intraday Iron Condor — Weekly (~300 qty, May 2022–2026, sell ±250, hedge ±450, 09:20–15:20, no SL) | Loss | Rs 10L | Rs -22,87,219 | N/A | N/A | [Summary](results/legacy-3/intraday_iron_condor_weekly_2020_2026_summary.md) |
+| Legacy-3 | 2024–2026 | Weekly Short Strangle — NIFTY+SENSEX Alternating (OTM, 1 lot each, 09:30–15:20, 2× SL) | Loss | Rs 5L | Rs -48,953 | N/A | Rs 66,567 | [Summary](results/legacy-3/weekly_strangle_nifty_sensex_2024_2026_summary.md) |
+| Legacy-3 | Sep 25+ | Combined NIFTY+SENSEX ATM Straddle — Expiry-Incl., no balance filter (Mon/Tue/Fri=NIFTY ~300 qty, Wed/Thu=SENSEX 100 qty) | Profit | Rs 5L | Rs 27,012 | 6.90% CAGR | Rs 1,32,821 | [Summary](results/legacy-3/combined_nifty_sensex_expiry_incl_2025_summary.md) |
+| Legacy-3 | Sep 25+ | Combined Short OTM Strangle — NIFTY+SENSEX (153 days, 9 SL levels tested; best SL=90%) | Loss | Rs 5L | Rs -21,010 | -5.3% CAGR | Rs 49,425 | [Summary](results/legacy-3/combined_strangle_2025_summary.md) |
+| Legacy-3 | Sep 25+ | Combined Balanced-Strike ATM Straddle — NIFTY+SENSEX (161 days, 9 SL levels tested; best SL=50%) | Profit | Rs 5L | Rs 10,361 | 2.6% CAGR | Rs 1,57,613 | [Summary](results/legacy-3/combined_nifty_sensex_balanced_strike_2025_summary.md) |
+| Legacy-3 | ~6Y | Heads & Tails — Random Short ATM NIFTY Weekly (5 runs avg; SL=20%, T=50%, 09:30–15:20, noon re-entry) | Profit | Rs 5L | Rs 4,38,958 avg | ~9.84% avg CAGR | Rs 3,25,433 avg | [Summary](results/legacy-3/heads_tails_nifty_summary.md) |
+| Legacy-3 | ~6Y | Heads & Tails Grid — Short ATM NIFTY Weekly (20 combos × 5 runs; best: SL=40%, T=open) | Profit | Rs 5L | Rs 9,73,379 avg | 17.38% avg CAGR | Rs 4,81,637 avg | [Summary](results/legacy-3/heads_tails_nifty_grid_summary.md) |
+| Legacy-3 | ~6Y | Heads & Tails Grid — LONG ATM NIFTY Weekly (28 combos × 5 runs; best: SL=20%, T=90%) | Loss | Rs 5L | Rs -7,56,517 avg | -86.29% avg CAGR | N/A | [Summary](results/legacy-3/heads_tails_nifty_grid_long_summary.md) |
