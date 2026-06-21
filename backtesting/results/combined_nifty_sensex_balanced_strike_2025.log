@@ -1,197 +1,197 @@
-2026-06-21 19:04:26,724 INFO TRADED NIFTY date=2025-09-01 day=Monday expiry=2025-09-02 atm=24500 chosen=24550 offset=+1 qty=300 ce=72.00 pe=67.60 ratio=0.94 sl=[CE_SL,PE_SL] net=-9076.00
-2026-06-21 19:04:27,259 INFO SKIPPED NIFTY date=2025-09-02 no_balanced_strike atm=24650
-2026-06-21 19:04:27,347 INFO TRADED SENSEX date=2025-09-03 day=Wednesday expiry=2025-09-04 atm=80000 chosen=80100 offset=+1 qty=100 ce=240.60 pe=246.20 ratio=0.98 sl=[CE_SL] net=14848.00
-2026-06-21 19:04:27,376 INFO TRADED SENSEX date=2025-09-04 day=Thursday expiry=2025-09-04 atm=81100 chosen=81100 offset=0 qty=100 ce=190.45 pe=150.60 ratio=0.79 sl=[CE_SL,PE_SL] net=-7121.00
-2026-06-21 19:04:27,409 INFO TRADED NIFTY date=2025-09-05 day=Friday expiry=2025-09-09 atm=24850 chosen=24850 offset=0 qty=300 ce=82.50 pe=90.30 ratio=0.91 sl=[PE_SL] net=2657.00
-2026-06-21 19:04:27,449 INFO TRADED NIFTY date=2025-09-08 day=Monday expiry=2025-09-09 atm=24800 chosen=24800 offset=0 qty=300 ce=69.60 pe=69.25 ratio=0.99 sl=[CE_SL] net=599.00
-2026-06-21 19:04:27,450 INFO TRADED NIFTY date=2025-09-09 day=Tuesday expiry=2025-09-09 atm=24850 chosen=24850 offset=0 qty=300 ce=48.80 pe=44.30 ratio=0.91 sl=[CE_SL,PE_SL] net=-6286.00
-2026-06-21 19:04:27,474 INFO TRADED SENSEX date=2025-09-10 day=Wednesday expiry=2025-09-11 atm=81400 chosen=81400 offset=0 qty=100 ce=225.85 pe=215.65 ratio=0.95 sl=[CE_SL] net=4028.00
-2026-06-21 19:04:27,510 INFO TRADED SENSEX date=2025-09-11 day=Thursday expiry=2025-09-11 atm=81500 chosen=81500 offset=0 qty=100 ce=171.75 pe=133.30 ratio=0.78 sl=[PE_SL] net=9079.00
-2026-06-21 19:04:27,623 INFO TRADED NIFTY date=2025-09-12 day=Friday expiry=2025-09-16 atm=25050 chosen=25100 offset=+1 qty=300 ce=75.05 pe=88.90 ratio=0.84 sl=[CE_SL] net=4022.00
-2026-06-21 19:04:27,624 INFO TRADED NIFTY date=2025-09-15 day=Monday expiry=2025-09-16 atm=25100 chosen=25100 offset=0 qty=300 ce=67.50 pe=57.20 ratio=0.85 sl=[none] net=9215.00
-2026-06-21 19:04:27,625 INFO TRADED NIFTY date=2025-09-16 day=Tuesday expiry=2025-09-16 atm=25100 chosen=25100 offset=0 qty=300 ce=41.25 pe=35.45 ratio=0.86 sl=[CE_SL] net=7430.00
-2026-06-21 19:04:27,644 INFO TRADED SENSEX date=2025-09-17 day=Wednesday expiry=2025-09-18 atm=82600 chosen=82600 offset=0 qty=100 ce=218.55 pe=217.30 ratio=0.99 sl=[CE_SL] net=4614.00
-2026-06-21 19:04:27,669 INFO TRADED SENSEX date=2025-09-18 day=Thursday expiry=2025-09-18 atm=83000 chosen=83000 offset=0 qty=100 ce=144.90 pe=113.05 ratio=0.78 sl=[CE_SL,PE_SL] net=-5459.00
-2026-06-21 19:04:27,703 INFO TRADED NIFTY date=2025-09-19 day=Friday expiry=2025-09-23 atm=25400 chosen=25400 offset=0 qty=300 ce=68.75 pe=77.05 ratio=0.89 sl=[PE_SL] net=-1888.00
-2026-06-21 19:04:27,793 INFO TRADED NIFTY date=2025-09-22 day=Monday expiry=2025-09-23 atm=25250 chosen=25300 offset=+1 qty=300 ce=49.45 pe=68.40 ratio=0.72 sl=[CE_SL,PE_SL] net=-7771.00
-2026-06-21 19:04:27,841 INFO TRADED NIFTY date=2025-09-23 day=Tuesday expiry=2025-09-23 atm=25200 chosen=25250 offset=+1 qty=300 ce=33.95 pe=48.10 ratio=0.71 sl=[CE_SL,PE_SL] net=-5623.00
-2026-06-21 19:04:27,893 INFO TRADED SENSEX date=2025-09-24 day=Wednesday expiry=2025-09-25 atm=81900 chosen=81900 offset=0 qty=100 ce=225.00 pe=206.20 ratio=0.92 sl=[PE_SL] net=6546.00
-2026-06-21 19:04:27,948 INFO TRADED SENSEX date=2025-09-25 day=Thursday expiry=2025-09-25 atm=81700 chosen=81700 offset=0 qty=100 ce=165.80 pe=136.30 ratio=0.82 sl=[CE_SL,PE_SL] net=-6342.00
-2026-06-21 19:04:28,215 INFO TRADED NIFTY date=2025-09-26 day=Friday expiry=2025-09-30 atm=24800 chosen=24850 offset=+1 qty=300 ce=100.45 pe=81.15 ratio=0.81 sl=[PE_SL] net=14471.00
-2026-06-21 19:04:28,800 INFO TRADED NIFTY date=2025-09-29 day=Monday expiry=2025-09-30 atm=24650 chosen=24750 offset=+2 qty=300 ce=67.65 pe=84.15 ratio=0.80 sl=[CE_SL,PE_SL] net=-9808.00
-2026-06-21 19:04:29,604 INFO SKIPPED NIFTY date=2025-09-30 no_balanced_strike atm=24700
-2026-06-21 19:04:29,614 INFO TRADED SENSEX date=2025-10-01 day=Wednesday expiry=2025-10-01 atm=80300 chosen=80300 offset=0 qty=100 ce=202.85 pe=195.95 ratio=0.97 sl=[CE_SL] net=15228.00
-2026-06-21 19:04:29,664 INFO TRADED NIFTY date=2025-10-03 day=Friday expiry=2025-10-07 atm=24800 chosen=24800 offset=0 qty=300 ce=95.30 pe=78.70 ratio=0.83 sl=[CE_SL,PE_SL] net=-11140.00
-2026-06-21 19:04:29,703 INFO TRADED NIFTY date=2025-10-06 day=Monday expiry=2025-10-07 atm=24950 chosen=24950 offset=0 qty=300 ce=50.80 pe=72.50 ratio=0.70 sl=[CE_SL,PE_SL] net=-8098.00
-2026-06-21 19:04:29,745 INFO TRADED NIFTY date=2025-10-07 day=Tuesday expiry=2025-10-07 atm=25100 chosen=25100 offset=0 qty=300 ce=45.35 pe=55.40 ratio=0.82 sl=[CE_SL] net=13109.00
-2026-06-21 19:04:29,767 INFO TRADED SENSEX date=2025-10-08 day=Wednesday expiry=2025-10-09 atm=82100 chosen=82100 offset=0 qty=100 ce=214.10 pe=220.30 ratio=0.97 sl=[CE_SL,PE_SL] net=-8988.00
-2026-06-21 19:04:29,793 INFO TRADED SENSEX date=2025-10-09 day=Thursday expiry=2025-10-09 atm=81800 chosen=81800 offset=0 qty=100 ce=183.00 pe=149.50 ratio=0.82 sl=[CE_SL,PE_SL] net=-6950.00
-2026-06-21 19:04:29,951 INFO TRADED NIFTY date=2025-10-10 day=Friday expiry=2025-10-14 atm=25200 chosen=25250 offset=+1 qty=300 ce=87.80 pe=83.90 ratio=0.96 sl=[CE_SL] net=7397.00
-2026-06-21 19:04:29,952 INFO TRADED NIFTY date=2025-10-13 day=Monday expiry=2025-10-14 atm=25200 chosen=25250 offset=+1 qty=300 ce=67.40 pe=85.50 ratio=0.79 sl=[PE_SL] net=-2440.00
-2026-06-21 19:04:29,996 INFO TRADED NIFTY date=2025-10-14 day=Tuesday expiry=2025-10-14 atm=25300 chosen=25300 offset=0 qty=300 ce=52.30 pe=46.65 ratio=0.89 sl=[PE_SL] net=12161.00
-2026-06-21 19:04:30,066 INFO TRADED SENSEX date=2025-10-15 day=Wednesday expiry=2025-10-16 atm=82300 chosen=82400 offset=+1 qty=100 ce=267.70 pe=215.60 ratio=0.81 sl=[CE_SL,PE_SL] net=-9966.00
-2026-06-21 19:04:30,084 INFO TRADED SENSEX date=2025-10-16 day=Thursday expiry=2025-10-16 atm=82900 chosen=82900 offset=0 qty=100 ce=183.20 pe=129.25 ratio=0.71 sl=[CE_SL] net=8911.00
-2026-06-21 19:04:30,119 INFO TRADED NIFTY date=2025-10-17 day=Friday expiry=2025-10-20 atm=25550 chosen=25550 offset=0 qty=300 ce=97.90 pe=80.50 ratio=0.82 sl=[CE_SL] net=8786.00
-2026-06-21 19:04:30,657 INFO SKIPPED NIFTY date=2025-10-20 no_balanced_strike atm=25900
-2026-06-21 19:04:30,709 INFO TRADED SENSEX date=2025-10-23 day=Thursday expiry=2025-10-23 atm=84900 chosen=85000 offset=+1 qty=100 ce=191.95 pe=190.25 ratio=0.99 sl=[CE_SL,PE_SL] net=-7944.00
-2026-06-21 19:04:30,970 INFO TRADED NIFTY date=2025-10-24 day=Friday expiry=2025-10-28 atm=25850 chosen=25900 offset=+1 qty=300 ce=112.85 pe=98.70 ratio=0.87 sl=[CE_SL,PE_SL] net=-13393.00
-2026-06-21 19:04:30,971 INFO TRADED NIFTY date=2025-10-27 day=Monday expiry=2025-10-28 atm=25850 chosen=25900 offset=+1 qty=300 ce=89.45 pe=71.10 ratio=0.79 sl=[CE_SL] net=5438.00
-2026-06-21 19:04:31,191 INFO TRADED NIFTY date=2025-10-28 day=Tuesday expiry=2025-10-28 atm=25950 chosen=26000 offset=+1 qty=300 ce=62.15 pe=75.00 ratio=0.83 sl=[CE_SL,PE_SL] net=-8929.00
-2026-06-21 19:04:31,377 INFO TRADED SENSEX date=2025-10-29 day=Wednesday expiry=2025-10-30 atm=84700 chosen=84900 offset=+2 qty=100 ce=302.90 pe=295.20 ratio=0.97 sl=[CE_SL] net=6277.00
-2026-06-21 19:04:31,378 INFO TRADED SENSEX date=2025-10-30 day=Thursday expiry=2025-10-30 atm=84800 chosen=84800 offset=0 qty=100 ce=177.35 pe=194.15 ratio=0.91 sl=[PE_SL] net=13532.00
-2026-06-21 19:04:31,475 INFO TRADED NIFTY date=2025-10-31 day=Friday expiry=2025-11-04 atm=25850 chosen=25900 offset=+1 qty=300 ce=113.30 pe=111.20 ratio=0.98 sl=[CE_SL,PE_SL] net=-14170.00
-2026-06-21 19:04:31,514 INFO TRADED NIFTY date=2025-11-03 day=Monday expiry=2025-11-04 atm=25700 chosen=25700 offset=0 qty=300 ce=106.05 pe=85.15 ratio=0.80 sl=[CE_SL] net=6812.00
-2026-06-21 19:04:31,548 INFO TRADED NIFTY date=2025-11-04 day=Tuesday expiry=2025-11-04 atm=25750 chosen=25750 offset=0 qty=300 ce=64.25 pe=56.00 ratio=0.87 sl=[PE_SL] net=15170.00
-2026-06-21 19:04:31,571 INFO TRADED SENSEX date=2025-11-06 day=Thursday expiry=2025-11-06 atm=83800 chosen=83800 offset=0 qty=100 ce=161.55 pe=159.50 ratio=0.99 sl=[PE_SL] net=12650.00
-2026-06-21 19:04:31,706 INFO TRADED NIFTY date=2025-11-07 day=Friday expiry=2025-11-11 atm=25350 chosen=25400 offset=+1 qty=300 ce=103.65 pe=96.55 ratio=0.93 sl=[CE_SL,PE_SL] net=-12712.00
-2026-06-21 19:04:31,804 INFO TRADED NIFTY date=2025-11-10 day=Monday expiry=2025-11-11 atm=25550 chosen=25600 offset=+1 qty=300 ce=67.70 pe=87.45 ratio=0.77 sl=[CE_SL,PE_SL] net=-10009.00
-2026-06-21 19:04:31,805 INFO TRADED NIFTY date=2025-11-11 day=Tuesday expiry=2025-11-11 atm=25550 chosen=25550 offset=0 qty=300 ce=61.05 pe=55.00 ratio=0.90 sl=[CE_SL,PE_SL] net=-7663.00
-2026-06-21 19:04:31,826 INFO TRADED SENSEX date=2025-11-12 day=Wednesday expiry=2025-11-13 atm=84300 chosen=84300 offset=0 qty=100 ce=250.85 pe=240.30 ratio=0.96 sl=[CE_SL] net=7613.00
-2026-06-21 19:04:31,850 INFO TRADED SENSEX date=2025-11-13 day=Thursday expiry=2025-11-13 atm=84400 chosen=84400 offset=0 qty=100 ce=131.00 pe=176.25 ratio=0.74 sl=[CE_SL,PE_SL] net=-6445.00
-2026-06-21 19:04:32,115 INFO TRADED NIFTY date=2025-11-14 day=Friday expiry=2025-11-18 atm=25800 chosen=25850 offset=+1 qty=300 ce=131.50 pe=131.60 ratio=1.00 sl=[CE_SL,PE_SL] net=-16486.00
-2026-06-21 19:04:32,161 INFO TRADED NIFTY date=2025-11-17 day=Monday expiry=2025-11-18 atm=25950 chosen=25950 offset=0 qty=300 ce=97.40 pe=74.50 ratio=0.76 sl=[CE_SL] net=3671.00
-2026-06-21 19:04:32,162 INFO TRADED NIFTY date=2025-11-18 day=Tuesday expiry=2025-11-18 atm=25950 chosen=25950 offset=0 qty=300 ce=54.85 pe=62.30 ratio=0.88 sl=[CE_SL,PE_SL] net=-7729.00
-2026-06-21 19:04:32,238 INFO TRADED SENSEX date=2025-11-19 day=Wednesday expiry=2025-11-20 atm=84500 chosen=84600 offset=+1 qty=100 ce=256.15 pe=257.00 ratio=1.00 sl=[CE_SL] net=13727.00
-2026-06-21 19:04:32,262 INFO TRADED SENSEX date=2025-11-20 day=Thursday expiry=2025-11-20 atm=85400 chosen=85400 offset=0 qty=100 ce=136.75 pe=183.05 ratio=0.75 sl=[CE_SL,PE_SL] net=-6696.00
-2026-06-21 19:04:32,338 INFO TRADED NIFTY date=2025-11-21 day=Friday expiry=2025-11-25 atm=26150 chosen=26150 offset=0 qty=300 ce=118.35 pe=110.75 ratio=0.94 sl=[PE_SL] net=6260.00
-2026-06-21 19:04:32,443 INFO TRADED NIFTY date=2025-11-24 day=Monday expiry=2025-11-25 atm=26100 chosen=26100 offset=0 qty=300 ce=98.30 pe=72.50 ratio=0.74 sl=[PE_SL] net=15200.00
-2026-06-21 19:04:32,505 INFO TRADED NIFTY date=2025-11-25 day=Tuesday expiry=2025-11-25 atm=25950 chosen=25950 offset=0 qty=300 ce=63.00 pe=46.95 ratio=0.75 sl=[CE_SL,PE_SL] net=-7297.00
-2026-06-21 19:04:32,641 INFO TRADED SENSEX date=2025-11-26 day=Wednesday expiry=2025-11-27 atm=84900 chosen=85000 offset=+1 qty=100 ce=223.00 pe=237.35 ratio=0.94 sl=[CE_SL] net=13785.00
-2026-06-21 19:04:32,688 INFO TRADED SENSEX date=2025-11-27 day=Thursday expiry=2025-11-27 atm=85800 chosen=85800 offset=0 qty=100 ce=160.00 pe=144.90 ratio=0.91 sl=[CE_SL,PE_SL] net=-6398.00
-2026-06-21 19:04:32,739 INFO TRADED NIFTY date=2025-11-28 day=Friday expiry=2025-12-02 atm=26250 chosen=26250 offset=0 qty=300 ce=114.25 pe=93.95 ratio=0.82 sl=[none] net=10025.00
-2026-06-21 19:04:32,798 INFO TRADED NIFTY date=2025-12-01 day=Monday expiry=2025-12-02 atm=26300 chosen=26300 offset=0 qty=300 ce=81.40 pe=73.55 ratio=0.90 sl=[PE_SL] net=12362.00
-2026-06-21 19:04:32,850 INFO TRADED NIFTY date=2025-12-02 day=Tuesday expiry=2025-12-02 atm=26150 chosen=26150 offset=0 qty=300 ce=50.95 pe=51.10 ratio=1.00 sl=[PE_SL] net=11504.00
-2026-06-21 19:04:32,877 INFO TRADED SENSEX date=2025-12-03 day=Wednesday expiry=2025-12-04 atm=85200 chosen=85200 offset=0 qty=100 ce=244.50 pe=234.90 ratio=0.96 sl=[PE_SL] net=3697.00
-2026-06-21 19:04:32,912 INFO TRADED SENSEX date=2025-12-04 day=Thursday expiry=2025-12-04 atm=85000 chosen=85000 offset=0 qty=100 ce=129.20 pe=164.75 ratio=0.78 sl=[CE_SL] net=13410.00
-2026-06-21 19:04:32,956 INFO TRADED NIFTY date=2025-12-05 day=Friday expiry=2025-12-09 atm=26050 chosen=26050 offset=0 qty=300 ce=118.75 pe=88.40 ratio=0.74 sl=[CE_SL,PE_SL] net=-13129.00
-2026-06-21 19:04:33,065 INFO TRADED NIFTY date=2025-12-08 day=Monday expiry=2025-12-09 atm=26150 chosen=26200 offset=+1 qty=300 ce=61.15 pe=80.85 ratio=0.76 sl=[PE_SL] net=10499.00
-2026-06-21 19:04:33,371 INFO TRADED NIFTY date=2025-12-09 day=Tuesday expiry=2025-12-09 atm=25800 chosen=25850 offset=+1 qty=300 ce=47.10 pe=64.90 ratio=0.73 sl=[CE_SL,PE_SL] net=-7420.00
-2026-06-21 19:04:33,395 INFO TRADED SENSEX date=2025-12-10 day=Wednesday expiry=2025-12-11 atm=84800 chosen=84800 offset=0 qty=100 ce=289.10 pe=232.75 ratio=0.81 sl=[CE_SL,PE_SL] net=-10737.00
-2026-06-21 19:04:33,420 INFO TRADED SENSEX date=2025-12-11 day=Thursday expiry=2025-12-11 atm=84400 chosen=84400 offset=0 qty=100 ce=194.10 pe=169.20 ratio=0.87 sl=[CE_SL,PE_SL] net=-7566.00
-2026-06-21 19:04:33,475 INFO TRADED NIFTY date=2025-12-12 day=Friday expiry=2025-12-16 atm=26000 chosen=26000 offset=0 qty=300 ce=108.95 pe=83.00 ratio=0.76 sl=[CE_SL,PE_SL] net=-12217.00
-2026-06-21 19:04:33,524 INFO TRADED NIFTY date=2025-12-15 day=Monday expiry=2025-12-16 atm=25950 chosen=25950 offset=0 qty=300 ce=78.55 pe=71.35 ratio=0.91 sl=[CE_SL,PE_SL] net=-9694.00
-2026-06-21 19:04:33,526 INFO TRADED NIFTY date=2025-12-16 day=Tuesday expiry=2025-12-16 atm=25950 chosen=25950 offset=0 qty=300 ce=45.60 pe=56.50 ratio=0.81 sl=[PE_SL] net=9575.00
-2026-06-21 19:04:33,549 INFO TRADED SENSEX date=2025-12-17 day=Wednesday expiry=2025-12-18 atm=84700 chosen=84700 offset=0 qty=100 ce=274.80 pe=201.50 ratio=0.73 sl=[CE_SL,PE_SL] net=-9826.00
-2026-06-21 19:04:33,568 INFO TRADED SENSEX date=2025-12-18 day=Thursday expiry=2025-12-18 atm=84400 chosen=84400 offset=0 qty=100 ce=160.25 pe=141.90 ratio=0.89 sl=[CE_SL,PE_SL] net=-6343.00
-2026-06-21 19:04:33,698 INFO TRADED NIFTY date=2025-12-19 day=Friday expiry=2025-12-23 atm=25900 chosen=25950 offset=+1 qty=300 ce=89.20 pe=96.55 ratio=0.92 sl=[CE_SL] net=3878.00
-2026-06-21 19:04:33,756 INFO TRADED NIFTY date=2025-12-22 day=Monday expiry=2025-12-23 atm=26100 chosen=26100 offset=0 qty=300 ce=76.00 pe=60.00 ratio=0.79 sl=[CE_SL] net=2765.00
-2026-06-21 19:04:33,816 INFO TRADED NIFTY date=2025-12-23 day=Tuesday expiry=2025-12-23 atm=26150 chosen=26150 offset=0 qty=300 ce=54.35 pe=40.00 ratio=0.74 sl=[CE_SL,PE_SL] net=-6361.00
-2026-06-21 19:04:33,872 INFO TRADED SENSEX date=2025-12-24 day=Wednesday expiry=2025-12-24 atm=85600 chosen=85600 offset=0 qty=100 ce=127.35 pe=154.40 ratio=0.82 sl=[CE_SL,PE_SL] net=-5935.00
-2026-06-21 19:04:33,993 INFO TRADED NIFTY date=2025-12-26 day=Friday expiry=2025-12-30 atm=26150 chosen=26150 offset=0 qty=300 ce=67.95 pe=89.45 ratio=0.76 sl=[PE_SL] net=4175.00
-2026-06-21 19:04:34,151 INFO TRADED NIFTY date=2025-12-29 day=Monday expiry=2025-12-30 atm=26050 chosen=26050 offset=0 qty=300 ce=63.00 pe=51.30 ratio=0.81 sl=[CE_SL,PE_SL] net=-7558.00
-2026-06-21 19:04:34,355 INFO TRADED NIFTY date=2025-12-30 day=Tuesday expiry=2025-12-30 atm=25900 chosen=25900 offset=0 qty=300 ce=42.20 pe=36.10 ratio=0.86 sl=[CE_SL,PE_SL] net=-5398.00
-2026-06-21 19:04:34,384 INFO TRADED SENSEX date=2025-12-31 day=Wednesday expiry=2026-01-01 atm=84900 chosen=84900 offset=0 qty=100 ce=218.55 pe=153.35 ratio=0.70 sl=[CE_SL,PE_SL] net=-7738.00
-2026-06-21 19:04:34,406 INFO TRADED SENSEX date=2026-01-01 day=Thursday expiry=2026-01-01 atm=85300 chosen=85300 offset=0 qty=100 ce=139.94 pe=112.00 ratio=0.80 sl=[CE_SL,PE_SL] net=-5338.80
-2026-06-21 19:04:34,461 INFO TRADED NIFTY date=2026-01-02 day=Friday expiry=2026-01-06 atm=26200 chosen=26200 offset=0 qty=325 ce=72.80 pe=71.40 ratio=0.98 sl=[CE_SL] net=8801.75
-2026-06-21 19:04:34,497 INFO TRADED NIFTY date=2026-01-05 day=Monday expiry=2026-01-06 atm=26350 chosen=26350 offset=0 qty=325 ce=58.55 pe=67.55 ratio=0.87 sl=[CE_SL,PE_SL] net=-8946.50
-2026-06-21 19:04:34,498 INFO TRADED NIFTY date=2026-01-06 day=Tuesday expiry=2026-01-06 atm=26200 chosen=26200 offset=0 qty=325 ce=47.45 pe=40.54 ratio=0.85 sl=[CE_SL,PE_SL] net=-6469.35
-2026-06-21 19:04:34,521 INFO TRADED SENSEX date=2026-01-07 day=Wednesday expiry=2026-01-08 atm=84900 chosen=84900 offset=0 qty=100 ce=212.40 pe=171.55 ratio=0.81 sl=[CE_SL,PE_SL] net=-7979.00
-2026-06-21 19:04:34,522 INFO TRADED SENSEX date=2026-01-08 day=Thursday expiry=2026-01-08 atm=84900 chosen=84900 offset=0 qty=100 ce=123.35 pe=138.00 ratio=0.89 sl=[PE_SL] net=9240.00
-2026-06-21 19:04:34,567 INFO TRADED NIFTY date=2026-01-09 day=Friday expiry=2026-01-13 atm=25950 chosen=25950 offset=0 qty=325 ce=92.45 pe=88.95 ratio=0.96 sl=[PE_SL] net=15194.50
-2026-06-21 19:04:34,686 INFO TRADED NIFTY date=2026-01-12 day=Monday expiry=2026-01-13 atm=25600 chosen=25650 offset=+1 qty=325 ce=77.00 pe=84.75 ratio=0.91 sl=[CE_SL,PE_SL] net=-11263.75
-2026-06-21 19:04:34,740 INFO TRADED NIFTY date=2026-01-13 day=Tuesday expiry=2026-01-13 atm=25850 chosen=25850 offset=0 qty=325 ce=51.60 pe=69.84 ratio=0.74 sl=[PE_SL] net=11431.65
-2026-06-21 19:04:34,755 INFO TRADED SENSEX date=2026-01-14 day=Wednesday expiry=2026-01-14 atm=83500 chosen=83500 offset=0 qty=100 ce=166.35 pe=197.75 ratio=0.84 sl=[CE_SL,PE_SL] net=-7582.00
-2026-06-21 19:04:35,017 INFO TRADED NIFTY date=2026-01-16 day=Friday expiry=2026-01-20 atm=25750 chosen=25750 offset=0 qty=325 ce=121.45 pe=105.70 ratio=0.87 sl=[CE_SL,PE_SL] net=-15514.75
-2026-06-21 19:04:35,059 INFO TRADED NIFTY date=2026-01-19 day=Monday expiry=2026-01-20 atm=25600 chosen=25600 offset=0 qty=325 ce=77.25 pe=103.90 ratio=0.74 sl=[CE_SL,PE_SL] net=-12524.75
-2026-06-21 19:04:35,081 INFO TRADED NIFTY date=2026-01-20 day=Tuesday expiry=2026-01-20 atm=25550 chosen=25550 offset=0 qty=325 ce=58.20 pe=53.05 ratio=0.91 sl=[PE_SL] net=14651.75
-2026-06-21 19:04:35,098 INFO TRADED SENSEX date=2026-01-21 day=Wednesday expiry=2026-01-22 atm=82200 chosen=82200 offset=0 qty=100 ce=332.00 pe=294.00 ratio=0.89 sl=[CE_SL,PE_SL] net=-12820.00
-2026-06-21 19:04:35,117 INFO TRADED SENSEX date=2026-01-22 day=Thursday expiry=2026-01-22 atm=82400 chosen=82400 offset=0 qty=100 ce=240.25 pe=209.30 ratio=0.87 sl=[CE_SL,PE_SL] net=-9291.00
-2026-06-21 19:04:35,341 INFO TRADED NIFTY date=2026-01-23 day=Friday expiry=2026-01-27 atm=25250 chosen=25300 offset=+1 qty=325 ce=132.20 pe=120.55 ratio=0.91 sl=[CE_SL,PE_SL] net=-17178.75
-2026-06-21 19:04:35,481 INFO TRADED NIFTY date=2026-01-27 day=Tuesday expiry=2026-01-27 atm=25000 chosen=25000 offset=0 qty=325 ce=118.45 pe=89.00 ratio=0.75 sl=[CE_SL,PE_SL] net=-14234.25
-2026-06-21 19:04:35,505 INFO TRADED SENSEX date=2026-01-28 day=Wednesday expiry=2026-01-29 atm=82400 chosen=82400 offset=0 qty=100 ce=393.35 pe=357.80 ratio=0.91 sl=[PE_SL] net=5039.00
-2026-06-21 19:04:35,527 INFO TRADED SENSEX date=2026-01-29 day=Thursday expiry=2026-01-29 atm=82100 chosen=82100 offset=0 qty=100 ce=230.95 pe=218.60 ratio=0.95 sl=[CE_SL,PE_SL] net=-9291.00
-2026-06-21 19:04:35,567 INFO TRADED NIFTY date=2026-01-30 day=Friday expiry=2026-02-03 atm=25250 chosen=25250 offset=0 qty=325 ce=210.75 pe=183.20 ratio=0.87 sl=[CE_SL,PE_SL] net=-26356.75
-2026-06-21 19:04:35,607 INFO TRADED NIFTY date=2026-02-02 day=Monday expiry=2026-02-03 atm=24800 chosen=24800 offset=0 qty=325 ce=169.95 pe=174.15 ratio=0.98 sl=[CE_SL] net=38350.75
-2026-06-21 19:04:35,657 INFO TRADED NIFTY date=2026-02-03 day=Tuesday expiry=2026-02-03 atm=25800 chosen=25800 offset=0 qty=325 ce=152.30 pe=153.70 ratio=0.99 sl=[PE_SL] net=38708.25
-2026-06-21 19:04:35,691 INFO TRADED SENSEX date=2026-02-04 day=Wednesday expiry=2026-02-05 atm=83600 chosen=83600 offset=0 qty=100 ce=351.35 pe=374.70 ratio=0.94 sl=[CE_SL] net=13238.00
-2026-06-21 19:04:35,724 INFO TRADED SENSEX date=2026-02-05 day=Thursday expiry=2026-02-05 atm=83700 chosen=83700 offset=0 qty=100 ce=176.40 pe=214.20 ratio=0.82 sl=[PE_SL] net=13046.00
-2026-06-21 19:04:35,774 INFO TRADED NIFTY date=2026-02-06 day=Friday expiry=2026-02-10 atm=25600 chosen=25600 offset=0 qty=325 ce=127.55 pe=123.65 ratio=0.97 sl=[PE_SL] net=-12898.50
-2026-06-21 19:04:35,825 INFO TRADED NIFTY date=2026-02-09 day=Monday expiry=2026-02-10 atm=25800 chosen=25800 offset=0 qty=325 ce=103.30 pe=72.95 ratio=0.71 sl=[CE_SL] net=1018.00
-2026-06-21 19:04:36,513 INFO SKIPPED NIFTY date=2026-02-10 no_balanced_strike atm=25900
-2026-06-21 19:04:36,534 INFO TRADED SENSEX date=2026-02-11 day=Wednesday expiry=2026-02-12 atm=84400 chosen=84400 offset=0 qty=100 ce=257.55 pe=194.55 ratio=0.76 sl=[PE_SL] net=8449.00
-2026-06-21 19:04:36,558 INFO TRADED SENSEX date=2026-02-12 day=Thursday expiry=2026-02-12 atm=83900 chosen=83900 offset=0 qty=100 ce=167.45 pe=131.75 ratio=0.79 sl=[PE_SL] net=13780.00
-2026-06-21 19:04:36,609 INFO TRADED NIFTY date=2026-02-13 day=Friday expiry=2026-02-17 atm=25600 chosen=25600 offset=0 qty=325 ce=122.95 pe=93.20 ratio=0.76 sl=[PE_SL] net=9523.25
-2026-06-21 19:04:36,653 INFO TRADED NIFTY date=2026-02-16 day=Monday expiry=2026-02-17 atm=25450 chosen=25450 offset=0 qty=325 ce=108.85 pe=80.05 ratio=0.74 sl=[CE_SL] net=10374.75
-2026-06-21 19:04:36,654 INFO TRADED NIFTY date=2026-02-17 day=Tuesday expiry=2026-02-17 atm=25600 chosen=25600 offset=0 qty=325 ce=49.20 pe=51.45 ratio=0.96 sl=[CE_SL,PE_SL] net=-7292.25
-2026-06-21 19:04:36,687 INFO TRADED SENSEX date=2026-02-18 day=Wednesday expiry=2026-02-19 atm=83500 chosen=83500 offset=0 qty=100 ce=246.85 pe=237.55 ratio=0.96 sl=[CE_SL,PE_SL] net=-9988.00
-2026-06-21 19:04:36,712 INFO TRADED SENSEX date=2026-02-19 day=Thursday expiry=2026-02-19 atm=83800 chosen=83800 offset=0 qty=100 ce=150.15 pe=126.80 ratio=0.84 sl=[CE_SL,PE_SL] net=-5839.00
-2026-06-21 19:04:36,809 INFO TRADED NIFTY date=2026-02-20 day=Friday expiry=2026-02-24 atm=25450 chosen=25450 offset=0 qty=325 ce=139.00 pe=116.15 ratio=0.84 sl=[CE_SL,PE_SL] net=-17334.75
-2026-06-21 19:04:37,220 INFO TRADED NIFTY date=2026-02-23 day=Monday expiry=2026-02-24 atm=25700 chosen=25700 offset=0 qty=325 ce=106.25 pe=102.35 ratio=0.96 sl=[CE_SL,PE_SL] net=-14309.00
-2026-06-21 19:04:37,312 INFO TRADED NIFTY date=2026-02-24 day=Tuesday expiry=2026-02-24 atm=25550 chosen=25550 offset=0 qty=325 ce=77.25 pe=56.30 ratio=0.73 sl=[PE_SL] net=20648.00
-2026-06-21 19:04:37,372 INFO TRADED SENSEX date=2026-02-25 day=Wednesday expiry=2026-02-26 atm=82700 chosen=82700 offset=0 qty=100 ce=335.20 pe=269.55 ratio=0.80 sl=[CE_SL,PE_SL] net=-12395.00
-2026-06-21 19:04:37,431 INFO TRADED SENSEX date=2026-02-26 day=Thursday expiry=2026-02-26 atm=82400 chosen=82400 offset=0 qty=100 ce=229.25 pe=163.90 ratio=0.71 sl=[CE_SL,PE_SL] net=-8163.00
-2026-06-21 19:04:37,491 INFO TRADED NIFTY date=2026-02-27 day=Friday expiry=2026-03-02 atm=25400 chosen=25400 offset=0 qty=325 ce=109.60 pe=111.40 ratio=0.98 sl=[PE_SL] net=14872.75
-2026-06-21 19:04:37,543 INFO TRADED NIFTY date=2026-03-02 day=Monday expiry=2026-03-02 atm=24900 chosen=24900 offset=0 qty=325 ce=105.45 pe=113.05 ratio=0.93 sl=[CE_SL,PE_SL] net=-14952.50
-2026-06-21 19:04:37,551 INFO TRADED SENSEX date=2026-03-04 day=Wednesday expiry=2026-03-05 atm=78700 chosen=78700 offset=0 qty=100 ce=605.35 pe=604.80 ratio=1.00 sl=[CE_SL] net=4163.00
-2026-06-21 19:04:37,562 INFO TRADED SENSEX date=2026-03-05 day=Thursday expiry=2026-03-05 atm=79400 chosen=79400 offset=0 qty=100 ce=314.55 pe=252.20 ratio=0.80 sl=[CE_SL,PE_SL] net=-11635.00
-2026-06-21 19:04:37,594 INFO TRADED NIFTY date=2026-03-06 day=Friday expiry=2026-03-10 atm=24600 chosen=24600 offset=0 qty=325 ce=210.85 pe=216.70 ratio=0.97 sl=[CE_SL,PE_SL] net=-28901.50
-2026-06-21 19:04:37,619 INFO TRADED NIFTY date=2026-03-09 day=Monday expiry=2026-03-10 atm=23800 chosen=23800 offset=0 qty=325 ce=238.05 pe=245.30 ratio=0.97 sl=[CE_SL] net=29878.00
-2026-06-21 19:04:37,641 INFO TRADED NIFTY date=2026-03-10 day=Tuesday expiry=2026-03-10 atm=24150 chosen=24150 offset=0 qty=325 ce=95.70 pe=92.75 ratio=0.97 sl=[CE_SL,PE_SL] net=-12999.25
-2026-06-21 19:04:37,656 INFO TRADED SENSEX date=2026-03-11 day=Wednesday expiry=2026-03-12 atm=78300 chosen=78300 offset=0 qty=100 ce=420.85 pe=420.80 ratio=1.00 sl=[PE_SL] net=28024.00
-2026-06-21 19:04:37,668 INFO TRADED SENSEX date=2026-03-12 day=Thursday expiry=2026-03-12 atm=75900 chosen=75900 offset=0 qty=100 ce=280.95 pe=241.70 ratio=0.86 sl=[CE_SL] net=18231.00
-2026-06-21 19:04:37,691 INFO TRADED NIFTY date=2026-03-13 day=Friday expiry=2026-03-17 atm=23450 chosen=23450 offset=0 qty=325 ce=238.30 pe=230.10 ratio=0.97 sl=[PE_SL] net=23618.50
-2026-06-21 19:04:37,711 INFO TRADED NIFTY date=2026-03-16 day=Monday expiry=2026-03-17 atm=23150 chosen=23150 offset=0 qty=325 ce=199.45 pe=149.15 ratio=0.75 sl=[CE_SL,PE_SL] net=-23409.00
-2026-06-21 19:04:37,728 INFO TRADED NIFTY date=2026-03-17 day=Tuesday expiry=2026-03-17 atm=23400 chosen=23400 offset=0 qty=325 ce=73.20 pe=90.05 ratio=0.81 sl=[CE_SL,PE_SL] net=-11361.25
-2026-06-21 19:04:38,081 INFO SKIPPED SENSEX date=2026-03-18 no_balanced_strike atm=76500
-2026-06-21 19:04:38,378 INFO SKIPPED SENSEX date=2026-03-19 no_balanced_strike atm=75100
-2026-06-21 19:04:38,406 INFO TRADED NIFTY date=2026-03-20 day=Friday expiry=2026-03-24 atm=23300 chosen=23300 offset=0 qty=325 ce=234.70 pe=243.15 ratio=0.97 sl=[PE_SL] net=10144.00
-2026-06-21 19:04:38,425 INFO TRADED NIFTY date=2026-03-23 day=Monday expiry=2026-03-24 atm=22700 chosen=22700 offset=0 qty=325 ce=203.95 pe=225.85 ratio=0.90 sl=[PE_SL] net=16176.00
-2026-06-21 19:04:38,447 INFO TRADED NIFTY date=2026-03-24 day=Tuesday expiry=2026-03-24 atm=22800 chosen=22800 offset=0 qty=325 ce=110.10 pe=120.90 ratio=0.91 sl=[CE_SL,PE_SL] net=-15765.00
-2026-06-21 19:04:38,540 INFO SKIPPED SENSEX date=2026-03-25 no_balanced_strike atm=74800
-2026-06-21 19:04:38,601 INFO TRADED NIFTY date=2026-03-27 day=Friday expiry=2026-04-28 atm=23050 chosen=23050 offset=0 qty=325 ce=771.15 pe=635.50 ratio=0.82 sl=[PE_SL] net=-8891.25
-2026-06-21 19:04:38,665 INFO TRADED NIFTY date=2026-03-30 day=Monday expiry=2026-04-28 atm=22500 chosen=22500 offset=0 qty=325 ce=841.80 pe=700.60 ratio=0.83 sl=[none] net=21967.50
-2026-06-21 19:04:38,907 INFO SKIPPED SENSEX date=2026-04-01 no_balanced_strike atm=73800
-2026-06-21 19:04:39,129 INFO SKIPPED SENSEX date=2026-04-02 no_balanced_strike atm=71700
-2026-06-21 19:04:39,180 INFO TRADED NIFTY date=2026-04-06 day=Monday expiry=2026-04-28 atm=22650 chosen=22650 offset=0 qty=325 ce=668.00 pe=582.70 ratio=0.87 sl=[CE_SL] net=3052.50
-2026-06-21 19:04:39,249 INFO TRADED NIFTY date=2026-04-07 day=Tuesday expiry=2026-04-28 atm=22750 chosen=22750 offset=0 qty=325 ce=657.95 pe=546.70 ratio=0.83 sl=[CE_SL] net=1820.75
-2026-06-21 19:04:39,250 INFO SKIPPED SENSEX date=2026-04-08 no_balanced_strike atm=77300
-2026-06-21 19:04:39,251 INFO SKIPPED SENSEX date=2026-04-09 no_balanced_strike atm=77300
-2026-06-21 19:04:39,345 INFO TRADED NIFTY date=2026-04-10 day=Friday expiry=2026-04-28 atm=23950 chosen=23950 offset=0 qty=325 ce=418.80 pe=355.90 ratio=0.85 sl=[none] net=-685.00
-2026-06-21 19:04:39,445 INFO TRADED NIFTY date=2026-04-13 day=Monday expiry=2026-04-28 atm=23600 chosen=23600 offset=0 qty=325 ce=453.10 pe=396.75 ratio=0.88 sl=[CE_SL] net=3842.25
-2026-06-21 19:04:39,446 INFO SKIPPED SENSEX date=2026-04-15 no_balanced_strike atm=78100
-2026-06-21 19:04:39,447 INFO SKIPPED SENSEX date=2026-04-16 no_balanced_strike atm=78700
-2026-06-21 19:04:39,556 INFO TRADED NIFTY date=2026-04-17 day=Friday expiry=2026-04-28 atm=24200 chosen=24200 offset=0 qty=325 ce=304.95 pe=297.70 ratio=0.98 sl=[CE_SL] net=7930.75
-2026-06-21 19:04:39,653 INFO TRADED NIFTY date=2026-04-20 day=Monday expiry=2026-04-28 atm=24350 chosen=24350 offset=0 qty=325 ce=273.25 pe=278.00 ratio=0.98 sl=[CE_SL] net=-29951.25
-2026-06-21 19:04:39,751 INFO TRADED NIFTY date=2026-04-21 day=Tuesday expiry=2026-04-28 atm=24450 chosen=24450 offset=0 qty=325 ce=265.20 pe=255.90 ratio=0.96 sl=[CE_SL] net=5217.00
-2026-06-21 19:04:39,752 INFO SKIPPED SENSEX date=2026-04-22 no_balanced_strike atm=78900
-2026-06-21 19:04:39,752 INFO SKIPPED SENSEX date=2026-04-23 no_balanced_strike atm=77900
-2026-06-21 19:04:39,860 INFO TRADED NIFTY date=2026-04-24 day=Friday expiry=2026-04-28 atm=24100 chosen=24100 offset=0 qty=325 ce=191.90 pe=151.15 ratio=0.79 sl=[PE_SL] net=17261.50
-2026-06-21 19:04:40,456 INFO TRADED NIFTY date=2026-04-27 day=Monday expiry=2026-04-28 atm=24000 chosen=24050 offset=+1 qty=325 ce=120.00 pe=120.95 ratio=0.99 sl=[CE_SL,PE_SL] net=-16411.75
-2026-06-21 19:04:40,458 INFO TRADED NIFTY date=2026-04-28 day=Tuesday expiry=2026-04-28 atm=24100 chosen=24100 offset=0 qty=325 ce=51.70 pe=67.05 ratio=0.77 sl=[CE_SL,PE_SL] net=-8468.75
-2026-06-21 19:04:40,493 INFO TRADED SENSEX date=2026-04-29 day=Wednesday expiry=2026-04-30 atm=77200 chosen=77200 offset=0 qty=100 ce=333.55 pe=314.70 ratio=0.94 sl=[CE_SL] net=6834.00
-2026-06-21 19:04:40,530 INFO TRADED SENSEX date=2026-04-30 day=Thursday expiry=2026-04-30 atm=76800 chosen=76800 offset=0 qty=100 ce=170.50 pe=213.35 ratio=0.80 sl=[CE_SL,PE_SL] net=-7977.00
-2026-06-21 19:04:41,148 INFO SKIPPED NIFTY date=2026-05-04 no_balanced_strike atm=24200
-2026-06-21 19:04:41,342 INFO SKIPPED NIFTY date=2026-05-05 no_balanced_strike atm=24050
-2026-06-21 19:04:41,780 INFO SKIPPED SENSEX date=2026-05-06 no_balanced_strike atm=77400
-2026-06-21 19:04:41,999 INFO SKIPPED SENSEX date=2026-05-07 no_balanced_strike atm=77900
-2026-06-21 19:04:42,483 INFO SKIPPED NIFTY date=2026-05-08 no_balanced_strike atm=24200
-2026-06-21 19:04:42,692 INFO SKIPPED NIFTY date=2026-05-11 no_balanced_strike atm=23900
-2026-06-21 19:04:42,819 INFO SKIPPED NIFTY date=2026-05-12 no_balanced_strike atm=23750
-2026-06-21 19:04:42,835 INFO SKIPPED SENSEX date=2026-05-13 no_balanced_strike atm=74600
-2026-06-21 19:04:42,860 INFO SKIPPED SENSEX date=2026-05-14 no_balanced_strike atm=75000
-2026-06-21 19:04:42,903 INFO TRADED NIFTY date=2026-05-15 day=Friday expiry=2026-05-19 atm=23700 chosen=23700 offset=0 qty=325 ce=189.80 pe=158.00 ratio=0.83 sl=[CE_SL,PE_SL] net=-23357.00
-2026-06-21 19:04:42,940 INFO TRADED NIFTY date=2026-05-18 day=Monday expiry=2026-05-19 atm=23400 chosen=23400 offset=0 qty=325 ce=139.50 pe=132.45 ratio=0.95 sl=[CE_SL,PE_SL] net=-18426.75
-2026-06-21 19:04:42,978 INFO TRADED NIFTY date=2026-05-19 day=Tuesday expiry=2026-05-19 atm=23750 chosen=23750 offset=0 qty=325 ce=59.85 pe=81.85 ratio=0.73 sl=[CE_SL,PE_SL] net=-9960.50
-2026-06-21 19:04:42,994 INFO TRADED SENSEX date=2026-05-20 day=Wednesday expiry=2026-05-21 atm=74700 chosen=74700 offset=0 qty=100 ce=402.55 pe=428.40 ratio=0.94 sl=[CE_SL] net=23599.00
-2026-06-21 19:04:43,433 INFO SKIPPED SENSEX date=2026-05-21 no_balanced_strike atm=75600
-2026-06-21 19:04:43,554 INFO TRADED NIFTY date=2026-05-22 day=Friday expiry=2026-05-26 atm=23700 chosen=23700 offset=0 qty=325 ce=164.70 pe=155.30 ratio=0.94 sl=[CE_SL] net=1447.00
-2026-06-21 19:04:43,652 INFO TRADED NIFTY date=2026-05-25 day=Monday expiry=2026-05-26 atm=23950 chosen=23950 offset=0 qty=325 ce=124.10 pe=95.45 ratio=0.77 sl=[CE_SL] net=7271.00
-2026-06-21 19:04:43,784 INFO TRADED NIFTY date=2026-05-26 day=Tuesday expiry=2026-05-26 atm=24000 chosen=24000 offset=0 qty=325 ce=66.55 pe=49.70 ratio=0.75 sl=[CE_SL,PE_SL] net=-8306.25
-2026-06-21 19:04:44,371 INFO SKIPPED SENSEX date=2026-05-27 no_balanced_strike atm=76000
-2026-06-21 19:04:44,928 INFO TRADED NIFTY date=2026-05-29 day=Friday expiry=2026-06-02 atm=23950 chosen=24000 offset=+1 qty=325 ce=139.30 pe=132.70 ratio=0.95 sl=[PE_SL] net=17680.75
-2026-06-21 19:04:44,974 INFO TRADED NIFTY date=2026-06-01 day=Monday expiry=2026-06-02 atm=23650 chosen=23650 offset=0 qty=325 ce=116.90 pe=101.90 ratio=0.87 sl=[PE_SL] net=22835.25
-2026-06-21 19:04:45,018 INFO TRADED NIFTY date=2026-06-02 day=Tuesday expiry=2026-06-02 atm=23300 chosen=23300 offset=0 qty=325 ce=56.70 pe=66.80 ratio=0.85 sl=[CE_SL] net=17258.25
-2026-06-21 19:04:45,047 INFO TRADED SENSEX date=2026-06-03 day=Wednesday expiry=2026-06-04 atm=74000 chosen=74000 offset=0 qty=100 ce=406.70 pe=334.35 ratio=0.82 sl=[CE_SL,PE_SL] net=-15121.00
-2026-06-21 19:04:45,422 INFO SKIPPED SENSEX date=2026-06-04 no_balanced_strike atm=74100
-2026-06-21 19:04:46,010 INFO SKIPPED NIFTY date=2026-06-05 no_balanced_strike atm=23450
-2026-06-21 19:04:46,298 INFO SKIPPED NIFTY date=2026-06-08 no_balanced_strike atm=23150
-2026-06-21 19:04:46,299 INFO SKIPPED NIFTY date=2026-06-09 no_balanced_strike atm=23250
-2026-06-21 19:04:46,606 INFO SKIPPED SENSEX date=2026-06-10 no_balanced_strike atm=74300
-2026-06-21 19:04:46,780 INFO SKIPPED SENSEX date=2026-06-11 no_balanced_strike atm=73600
-2026-06-21 19:04:46,819 INFO TRADED NIFTY date=2026-06-12 day=Friday expiry=2026-06-16 atm=23450 chosen=23450 offset=0 qty=325 ce=134.10 pe=139.95 ratio=0.96 sl=[CE_SL,PE_SL] net=-18563.25
-2026-06-21 19:04:46,862 INFO TRADED NIFTY date=2026-06-15 day=Monday expiry=2026-06-16 atm=23950 chosen=23950 offset=0 qty=325 ce=94.05 pe=109.25 ratio=0.86 sl=[CE_SL,PE_SL] net=-13964.50
-2026-06-21 19:04:46,863 INFO TRADED NIFTY date=2026-06-16 day=Tuesday expiry=2026-06-16 atm=23950 chosen=23950 offset=0 qty=325 ce=45.05 pe=63.90 ratio=0.71 sl=[CE_SL,PE_SL] net=-7831.75
-2026-06-21 19:04:47,186 INFO SKIPPED SENSEX date=2026-06-17 no_balanced_strike atm=76800
-2026-06-21 19:04:47,276 INFO SKIPPED SENSEX date=2026-06-18 no_balanced_strike atm=77100
-2026-06-21 19:04:47,931 INFO SKIPPED NIFTY date=2026-06-19 no_balanced_strike atm=24000
-2026-06-21 19:04:47,931 INFO COMPLETED traded=161 skipped=36 total=197
+2026-06-21 19:27:08,508 INFO ENTRY NIFTY 2025-09-01 day=Monday expiry=2025-09-02 atm=24500 chosen=24550 offset=+1 ce=72.00 pe=67.60 ratio=0.94 qty=300
+2026-06-21 19:27:08,859 INFO SKIPPED NIFTY 2025-09-02 no_balanced_strike atm=24650
+2026-06-21 19:27:08,914 INFO ENTRY SENSEX 2025-09-03 day=Wednesday expiry=2025-09-04 atm=80000 chosen=80100 offset=+1 ce=240.60 pe=246.20 ratio=0.98 qty=100
+2026-06-21 19:27:08,942 INFO ENTRY SENSEX 2025-09-04 day=Thursday expiry=2025-09-04 atm=81100 chosen=81100 offset=0 ce=190.45 pe=150.60 ratio=0.79 qty=100
+2026-06-21 19:27:08,973 INFO ENTRY NIFTY 2025-09-05 day=Friday expiry=2025-09-09 atm=24850 chosen=24850 offset=0 ce=82.50 pe=90.30 ratio=0.91 qty=300
+2026-06-21 19:27:09,017 INFO ENTRY NIFTY 2025-09-08 day=Monday expiry=2025-09-09 atm=24800 chosen=24800 offset=0 ce=69.60 pe=69.25 ratio=0.99 qty=300
+2026-06-21 19:27:09,017 INFO ENTRY NIFTY 2025-09-09 day=Tuesday expiry=2025-09-09 atm=24850 chosen=24850 offset=0 ce=48.80 pe=44.30 ratio=0.91 qty=300
+2026-06-21 19:27:09,042 INFO ENTRY SENSEX 2025-09-10 day=Wednesday expiry=2025-09-11 atm=81400 chosen=81400 offset=0 ce=225.85 pe=215.65 ratio=0.95 qty=100
+2026-06-21 19:27:09,080 INFO ENTRY SENSEX 2025-09-11 day=Thursday expiry=2025-09-11 atm=81500 chosen=81500 offset=0 ce=171.75 pe=133.30 ratio=0.78 qty=100
+2026-06-21 19:27:09,190 INFO ENTRY NIFTY 2025-09-12 day=Friday expiry=2025-09-16 atm=25050 chosen=25100 offset=+1 ce=75.05 pe=88.90 ratio=0.84 qty=300
+2026-06-21 19:27:09,191 INFO ENTRY NIFTY 2025-09-15 day=Monday expiry=2025-09-16 atm=25100 chosen=25100 offset=0 ce=67.50 pe=57.20 ratio=0.85 qty=300
+2026-06-21 19:27:09,191 INFO ENTRY NIFTY 2025-09-16 day=Tuesday expiry=2025-09-16 atm=25100 chosen=25100 offset=0 ce=41.25 pe=35.45 ratio=0.86 qty=300
+2026-06-21 19:27:09,208 INFO ENTRY SENSEX 2025-09-17 day=Wednesday expiry=2025-09-18 atm=82600 chosen=82600 offset=0 ce=218.55 pe=217.30 ratio=0.99 qty=100
+2026-06-21 19:27:09,230 INFO ENTRY SENSEX 2025-09-18 day=Thursday expiry=2025-09-18 atm=83000 chosen=83000 offset=0 ce=144.90 pe=113.05 ratio=0.78 qty=100
+2026-06-21 19:27:09,261 INFO ENTRY NIFTY 2025-09-19 day=Friday expiry=2025-09-23 atm=25400 chosen=25400 offset=0 ce=68.75 pe=77.05 ratio=0.89 qty=300
+2026-06-21 19:27:09,308 INFO ENTRY NIFTY 2025-09-22 day=Monday expiry=2025-09-23 atm=25250 chosen=25300 offset=+1 ce=49.45 pe=68.40 ratio=0.72 qty=300
+2026-06-21 19:27:09,349 INFO ENTRY NIFTY 2025-09-23 day=Tuesday expiry=2025-09-23 atm=25200 chosen=25250 offset=+1 ce=33.95 pe=48.10 ratio=0.71 qty=300
+2026-06-21 19:27:09,398 INFO ENTRY SENSEX 2025-09-24 day=Wednesday expiry=2025-09-25 atm=81900 chosen=81900 offset=0 ce=225.00 pe=206.20 ratio=0.92 qty=100
+2026-06-21 19:27:09,456 INFO ENTRY SENSEX 2025-09-25 day=Thursday expiry=2025-09-25 atm=81700 chosen=81700 offset=0 ce=165.80 pe=136.30 ratio=0.82 qty=100
+2026-06-21 19:27:09,703 INFO ENTRY NIFTY 2025-09-26 day=Friday expiry=2025-09-30 atm=24800 chosen=24850 offset=+1 ce=100.45 pe=81.15 ratio=0.81 qty=300
+2026-06-21 19:27:10,235 INFO ENTRY NIFTY 2025-09-29 day=Monday expiry=2025-09-30 atm=24650 chosen=24750 offset=+2 ce=67.65 pe=84.15 ratio=0.80 qty=300
+2026-06-21 19:27:10,939 INFO SKIPPED NIFTY 2025-09-30 no_balanced_strike atm=24700
+2026-06-21 19:27:10,949 INFO ENTRY SENSEX 2025-10-01 day=Wednesday expiry=2025-10-01 atm=80300 chosen=80300 offset=0 ce=202.85 pe=195.95 ratio=0.97 qty=100
+2026-06-21 19:27:10,996 INFO ENTRY NIFTY 2025-10-03 day=Friday expiry=2025-10-07 atm=24800 chosen=24800 offset=0 ce=95.30 pe=78.70 ratio=0.83 qty=300
+2026-06-21 19:27:11,033 INFO ENTRY NIFTY 2025-10-06 day=Monday expiry=2025-10-07 atm=24950 chosen=24950 offset=0 ce=50.80 pe=72.50 ratio=0.70 qty=300
+2026-06-21 19:27:11,073 INFO ENTRY NIFTY 2025-10-07 day=Tuesday expiry=2025-10-07 atm=25100 chosen=25100 offset=0 ce=45.35 pe=55.40 ratio=0.82 qty=300
+2026-06-21 19:27:11,094 INFO ENTRY SENSEX 2025-10-08 day=Wednesday expiry=2025-10-09 atm=82100 chosen=82100 offset=0 ce=214.10 pe=220.30 ratio=0.97 qty=100
+2026-06-21 19:27:11,121 INFO ENTRY SENSEX 2025-10-09 day=Thursday expiry=2025-10-09 atm=81800 chosen=81800 offset=0 ce=183.00 pe=149.50 ratio=0.82 qty=100
+2026-06-21 19:27:11,207 INFO ENTRY NIFTY 2025-10-10 day=Friday expiry=2025-10-14 atm=25200 chosen=25250 offset=+1 ce=87.80 pe=83.90 ratio=0.96 qty=300
+2026-06-21 19:27:11,207 INFO ENTRY NIFTY 2025-10-13 day=Monday expiry=2025-10-14 atm=25200 chosen=25250 offset=+1 ce=67.40 pe=85.50 ratio=0.79 qty=300
+2026-06-21 19:27:11,251 INFO ENTRY NIFTY 2025-10-14 day=Tuesday expiry=2025-10-14 atm=25300 chosen=25300 offset=0 ce=52.30 pe=46.65 ratio=0.89 qty=300
+2026-06-21 19:27:11,296 INFO ENTRY SENSEX 2025-10-15 day=Wednesday expiry=2025-10-16 atm=82300 chosen=82400 offset=+1 ce=267.70 pe=215.60 ratio=0.81 qty=100
+2026-06-21 19:27:11,314 INFO ENTRY SENSEX 2025-10-16 day=Thursday expiry=2025-10-16 atm=82900 chosen=82900 offset=0 ce=183.20 pe=129.25 ratio=0.71 qty=100
+2026-06-21 19:27:11,348 INFO ENTRY NIFTY 2025-10-17 day=Friday expiry=2025-10-20 atm=25550 chosen=25550 offset=0 ce=97.90 pe=80.50 ratio=0.82 qty=300
+2026-06-21 19:27:11,604 INFO SKIPPED NIFTY 2025-10-20 no_balanced_strike atm=25900
+2026-06-21 19:27:11,628 INFO ENTRY SENSEX 2025-10-23 day=Thursday expiry=2025-10-23 atm=84900 chosen=85000 offset=+1 ce=191.95 pe=190.25 ratio=0.99 qty=100
+2026-06-21 19:27:11,865 INFO ENTRY NIFTY 2025-10-24 day=Friday expiry=2025-10-28 atm=25850 chosen=25900 offset=+1 ce=112.85 pe=98.70 ratio=0.87 qty=300
+2026-06-21 19:27:11,865 INFO ENTRY NIFTY 2025-10-27 day=Monday expiry=2025-10-28 atm=25850 chosen=25900 offset=+1 ce=89.45 pe=71.10 ratio=0.79 qty=300
+2026-06-21 19:27:12,059 INFO ENTRY NIFTY 2025-10-28 day=Tuesday expiry=2025-10-28 atm=25950 chosen=26000 offset=+1 ce=62.15 pe=75.00 ratio=0.83 qty=300
+2026-06-21 19:27:12,200 INFO ENTRY SENSEX 2025-10-29 day=Wednesday expiry=2025-10-30 atm=84700 chosen=84900 offset=+2 ce=302.90 pe=295.20 ratio=0.97 qty=100
+2026-06-21 19:27:12,200 INFO ENTRY SENSEX 2025-10-30 day=Thursday expiry=2025-10-30 atm=84800 chosen=84800 offset=0 ce=177.35 pe=194.15 ratio=0.91 qty=100
+2026-06-21 19:27:12,274 INFO ENTRY NIFTY 2025-10-31 day=Friday expiry=2025-11-04 atm=25850 chosen=25900 offset=+1 ce=113.30 pe=111.20 ratio=0.98 qty=300
+2026-06-21 19:27:12,312 INFO ENTRY NIFTY 2025-11-03 day=Monday expiry=2025-11-04 atm=25700 chosen=25700 offset=0 ce=106.05 pe=85.15 ratio=0.80 qty=300
+2026-06-21 19:27:12,344 INFO ENTRY NIFTY 2025-11-04 day=Tuesday expiry=2025-11-04 atm=25750 chosen=25750 offset=0 ce=64.25 pe=56.00 ratio=0.87 qty=300
+2026-06-21 19:27:12,365 INFO ENTRY SENSEX 2025-11-06 day=Thursday expiry=2025-11-06 atm=83800 chosen=83800 offset=0 ce=161.55 pe=159.50 ratio=0.99 qty=100
+2026-06-21 19:27:12,441 INFO ENTRY NIFTY 2025-11-07 day=Friday expiry=2025-11-11 atm=25350 chosen=25400 offset=+1 ce=103.65 pe=96.55 ratio=0.93 qty=300
+2026-06-21 19:27:12,517 INFO ENTRY NIFTY 2025-11-10 day=Monday expiry=2025-11-11 atm=25550 chosen=25600 offset=+1 ce=67.70 pe=87.45 ratio=0.77 qty=300
+2026-06-21 19:27:12,517 INFO ENTRY NIFTY 2025-11-11 day=Tuesday expiry=2025-11-11 atm=25550 chosen=25550 offset=0 ce=61.05 pe=55.00 ratio=0.90 qty=300
+2026-06-21 19:27:12,537 INFO ENTRY SENSEX 2025-11-12 day=Wednesday expiry=2025-11-13 atm=84300 chosen=84300 offset=0 ce=250.85 pe=240.30 ratio=0.96 qty=100
+2026-06-21 19:27:12,562 INFO ENTRY SENSEX 2025-11-13 day=Thursday expiry=2025-11-13 atm=84400 chosen=84400 offset=0 ce=131.00 pe=176.25 ratio=0.74 qty=100
+2026-06-21 19:27:12,793 INFO ENTRY NIFTY 2025-11-14 day=Friday expiry=2025-11-18 atm=25800 chosen=25850 offset=+1 ce=131.50 pe=131.60 ratio=1.00 qty=300
+2026-06-21 19:27:12,836 INFO ENTRY NIFTY 2025-11-17 day=Monday expiry=2025-11-18 atm=25950 chosen=25950 offset=0 ce=97.40 pe=74.50 ratio=0.76 qty=300
+2026-06-21 19:27:12,837 INFO ENTRY NIFTY 2025-11-18 day=Tuesday expiry=2025-11-18 atm=25950 chosen=25950 offset=0 ce=54.85 pe=62.30 ratio=0.88 qty=300
+2026-06-21 19:27:12,889 INFO ENTRY SENSEX 2025-11-19 day=Wednesday expiry=2025-11-20 atm=84500 chosen=84600 offset=+1 ce=256.15 pe=257.00 ratio=1.00 qty=100
+2026-06-21 19:27:12,912 INFO ENTRY SENSEX 2025-11-20 day=Thursday expiry=2025-11-20 atm=85400 chosen=85400 offset=0 ce=136.75 pe=183.05 ratio=0.75 qty=100
+2026-06-21 19:27:12,985 INFO ENTRY NIFTY 2025-11-21 day=Friday expiry=2025-11-25 atm=26150 chosen=26150 offset=0 ce=118.35 pe=110.75 ratio=0.94 qty=300
+2026-06-21 19:27:13,085 INFO ENTRY NIFTY 2025-11-24 day=Monday expiry=2025-11-25 atm=26100 chosen=26100 offset=0 ce=98.30 pe=72.50 ratio=0.74 qty=300
+2026-06-21 19:27:13,146 INFO ENTRY NIFTY 2025-11-25 day=Tuesday expiry=2025-11-25 atm=25950 chosen=25950 offset=0 ce=63.00 pe=46.95 ratio=0.75 qty=300
+2026-06-21 19:27:13,258 INFO ENTRY SENSEX 2025-11-26 day=Wednesday expiry=2025-11-27 atm=84900 chosen=85000 offset=+1 ce=223.00 pe=237.35 ratio=0.94 qty=100
+2026-06-21 19:27:13,301 INFO ENTRY SENSEX 2025-11-27 day=Thursday expiry=2025-11-27 atm=85800 chosen=85800 offset=0 ce=160.00 pe=144.90 ratio=0.91 qty=100
+2026-06-21 19:27:13,350 INFO ENTRY NIFTY 2025-11-28 day=Friday expiry=2025-12-02 atm=26250 chosen=26250 offset=0 ce=114.25 pe=93.95 ratio=0.82 qty=300
+2026-06-21 19:27:13,407 INFO ENTRY NIFTY 2025-12-01 day=Monday expiry=2025-12-02 atm=26300 chosen=26300 offset=0 ce=81.40 pe=73.55 ratio=0.90 qty=300
+2026-06-21 19:27:13,458 INFO ENTRY NIFTY 2025-12-02 day=Tuesday expiry=2025-12-02 atm=26150 chosen=26150 offset=0 ce=50.95 pe=51.10 ratio=1.00 qty=300
+2026-06-21 19:27:13,487 INFO ENTRY SENSEX 2025-12-03 day=Wednesday expiry=2025-12-04 atm=85200 chosen=85200 offset=0 ce=244.50 pe=234.90 ratio=0.96 qty=100
+2026-06-21 19:27:13,520 INFO ENTRY SENSEX 2025-12-04 day=Thursday expiry=2025-12-04 atm=85000 chosen=85000 offset=0 ce=129.20 pe=164.75 ratio=0.78 qty=100
+2026-06-21 19:27:13,564 INFO ENTRY NIFTY 2025-12-05 day=Friday expiry=2025-12-09 atm=26050 chosen=26050 offset=0 ce=118.75 pe=88.40 ratio=0.74 qty=300
+2026-06-21 19:27:13,652 INFO ENTRY NIFTY 2025-12-08 day=Monday expiry=2025-12-09 atm=26150 chosen=26200 offset=+1 ce=61.15 pe=80.85 ratio=0.76 qty=300
+2026-06-21 19:27:13,925 INFO ENTRY NIFTY 2025-12-09 day=Tuesday expiry=2025-12-09 atm=25800 chosen=25850 offset=+1 ce=47.10 pe=64.90 ratio=0.73 qty=300
+2026-06-21 19:27:13,948 INFO ENTRY SENSEX 2025-12-10 day=Wednesday expiry=2025-12-11 atm=84800 chosen=84800 offset=0 ce=289.10 pe=232.75 ratio=0.81 qty=100
+2026-06-21 19:27:13,972 INFO ENTRY SENSEX 2025-12-11 day=Thursday expiry=2025-12-11 atm=84400 chosen=84400 offset=0 ce=194.10 pe=169.20 ratio=0.87 qty=100
+2026-06-21 19:27:14,026 INFO ENTRY NIFTY 2025-12-12 day=Friday expiry=2025-12-16 atm=26000 chosen=26000 offset=0 ce=108.95 pe=83.00 ratio=0.76 qty=300
+2026-06-21 19:27:14,074 INFO ENTRY NIFTY 2025-12-15 day=Monday expiry=2025-12-16 atm=25950 chosen=25950 offset=0 ce=78.55 pe=71.35 ratio=0.91 qty=300
+2026-06-21 19:27:14,074 INFO ENTRY NIFTY 2025-12-16 day=Tuesday expiry=2025-12-16 atm=25950 chosen=25950 offset=0 ce=45.60 pe=56.50 ratio=0.81 qty=300
+2026-06-21 19:27:14,096 INFO ENTRY SENSEX 2025-12-17 day=Wednesday expiry=2025-12-18 atm=84700 chosen=84700 offset=0 ce=274.80 pe=201.50 ratio=0.73 qty=100
+2026-06-21 19:27:14,115 INFO ENTRY SENSEX 2025-12-18 day=Thursday expiry=2025-12-18 atm=84400 chosen=84400 offset=0 ce=160.25 pe=141.90 ratio=0.89 qty=100
+2026-06-21 19:27:14,213 INFO ENTRY NIFTY 2025-12-19 day=Friday expiry=2025-12-23 atm=25900 chosen=25950 offset=+1 ce=89.20 pe=96.55 ratio=0.92 qty=300
+2026-06-21 19:27:14,264 INFO ENTRY NIFTY 2025-12-22 day=Monday expiry=2025-12-23 atm=26100 chosen=26100 offset=0 ce=76.00 pe=60.00 ratio=0.79 qty=300
+2026-06-21 19:27:14,311 INFO ENTRY NIFTY 2025-12-23 day=Tuesday expiry=2025-12-23 atm=26150 chosen=26150 offset=0 ce=54.35 pe=40.00 ratio=0.74 qty=300
+2026-06-21 19:27:14,365 INFO ENTRY SENSEX 2025-12-24 day=Wednesday expiry=2025-12-24 atm=85600 chosen=85600 offset=0 ce=127.35 pe=154.40 ratio=0.82 qty=100
+2026-06-21 19:27:14,493 INFO ENTRY NIFTY 2025-12-26 day=Friday expiry=2025-12-30 atm=26150 chosen=26150 offset=0 ce=67.95 pe=89.45 ratio=0.76 qty=300
+2026-06-21 19:27:14,644 INFO ENTRY NIFTY 2025-12-29 day=Monday expiry=2025-12-30 atm=26050 chosen=26050 offset=0 ce=63.00 pe=51.30 ratio=0.81 qty=300
+2026-06-21 19:27:14,840 INFO ENTRY NIFTY 2025-12-30 day=Tuesday expiry=2025-12-30 atm=25900 chosen=25900 offset=0 ce=42.20 pe=36.10 ratio=0.86 qty=300
+2026-06-21 19:27:14,868 INFO ENTRY SENSEX 2025-12-31 day=Wednesday expiry=2026-01-01 atm=84900 chosen=84900 offset=0 ce=218.55 pe=153.35 ratio=0.70 qty=100
+2026-06-21 19:27:14,890 INFO ENTRY SENSEX 2026-01-01 day=Thursday expiry=2026-01-01 atm=85300 chosen=85300 offset=0 ce=139.94 pe=112.00 ratio=0.80 qty=100
+2026-06-21 19:27:14,943 INFO ENTRY NIFTY 2026-01-02 day=Friday expiry=2026-01-06 atm=26200 chosen=26200 offset=0 ce=72.80 pe=71.40 ratio=0.98 qty=325
+2026-06-21 19:27:14,978 INFO ENTRY NIFTY 2026-01-05 day=Monday expiry=2026-01-06 atm=26350 chosen=26350 offset=0 ce=58.55 pe=67.55 ratio=0.87 qty=325
+2026-06-21 19:27:14,978 INFO ENTRY NIFTY 2026-01-06 day=Tuesday expiry=2026-01-06 atm=26200 chosen=26200 offset=0 ce=47.45 pe=40.54 ratio=0.85 qty=325
+2026-06-21 19:27:15,000 INFO ENTRY SENSEX 2026-01-07 day=Wednesday expiry=2026-01-08 atm=84900 chosen=84900 offset=0 ce=212.40 pe=171.55 ratio=0.81 qty=100
+2026-06-21 19:27:15,000 INFO ENTRY SENSEX 2026-01-08 day=Thursday expiry=2026-01-08 atm=84900 chosen=84900 offset=0 ce=123.35 pe=138.00 ratio=0.89 qty=100
+2026-06-21 19:27:15,044 INFO ENTRY NIFTY 2026-01-09 day=Friday expiry=2026-01-13 atm=25950 chosen=25950 offset=0 ce=92.45 pe=88.95 ratio=0.96 qty=325
+2026-06-21 19:27:15,117 INFO ENTRY NIFTY 2026-01-12 day=Monday expiry=2026-01-13 atm=25600 chosen=25650 offset=+1 ce=77.00 pe=84.75 ratio=0.91 qty=325
+2026-06-21 19:27:15,165 INFO ENTRY NIFTY 2026-01-13 day=Tuesday expiry=2026-01-13 atm=25850 chosen=25850 offset=0 ce=51.60 pe=69.84 ratio=0.74 qty=325
+2026-06-21 19:27:15,179 INFO ENTRY SENSEX 2026-01-14 day=Wednesday expiry=2026-01-14 atm=83500 chosen=83500 offset=0 ce=166.35 pe=197.75 ratio=0.84 qty=100
+2026-06-21 19:27:15,471 INFO ENTRY NIFTY 2026-01-16 day=Friday expiry=2026-01-20 atm=25750 chosen=25750 offset=0 ce=121.45 pe=105.70 ratio=0.87 qty=325
+2026-06-21 19:27:15,512 INFO ENTRY NIFTY 2026-01-19 day=Monday expiry=2026-01-20 atm=25600 chosen=25600 offset=0 ce=77.25 pe=103.90 ratio=0.74 qty=325
+2026-06-21 19:27:15,534 INFO ENTRY NIFTY 2026-01-20 day=Tuesday expiry=2026-01-20 atm=25550 chosen=25550 offset=0 ce=58.20 pe=53.05 ratio=0.91 qty=325
+2026-06-21 19:27:15,551 INFO ENTRY SENSEX 2026-01-21 day=Wednesday expiry=2026-01-22 atm=82200 chosen=82200 offset=0 ce=332.00 pe=294.00 ratio=0.89 qty=100
+2026-06-21 19:27:15,570 INFO ENTRY SENSEX 2026-01-22 day=Thursday expiry=2026-01-22 atm=82400 chosen=82400 offset=0 ce=240.25 pe=209.30 ratio=0.87 qty=100
+2026-06-21 19:27:15,762 INFO ENTRY NIFTY 2026-01-23 day=Friday expiry=2026-01-27 atm=25250 chosen=25300 offset=+1 ce=132.20 pe=120.55 ratio=0.91 qty=325
+2026-06-21 19:27:15,897 INFO ENTRY NIFTY 2026-01-27 day=Tuesday expiry=2026-01-27 atm=25000 chosen=25000 offset=0 ce=118.45 pe=89.00 ratio=0.75 qty=325
+2026-06-21 19:27:15,921 INFO ENTRY SENSEX 2026-01-28 day=Wednesday expiry=2026-01-29 atm=82400 chosen=82400 offset=0 ce=393.35 pe=357.80 ratio=0.91 qty=100
+2026-06-21 19:27:15,943 INFO ENTRY SENSEX 2026-01-29 day=Thursday expiry=2026-01-29 atm=82100 chosen=82100 offset=0 ce=230.95 pe=218.60 ratio=0.95 qty=100
+2026-06-21 19:27:15,982 INFO ENTRY NIFTY 2026-01-30 day=Friday expiry=2026-02-03 atm=25250 chosen=25250 offset=0 ce=210.75 pe=183.20 ratio=0.87 qty=325
+2026-06-21 19:27:16,019 INFO ENTRY NIFTY 2026-02-02 day=Monday expiry=2026-02-03 atm=24800 chosen=24800 offset=0 ce=169.95 pe=174.15 ratio=0.98 qty=325
+2026-06-21 19:27:16,068 INFO ENTRY NIFTY 2026-02-03 day=Tuesday expiry=2026-02-03 atm=25800 chosen=25800 offset=0 ce=152.30 pe=153.70 ratio=0.99 qty=325
+2026-06-21 19:27:16,100 INFO ENTRY SENSEX 2026-02-04 day=Wednesday expiry=2026-02-05 atm=83600 chosen=83600 offset=0 ce=351.35 pe=374.70 ratio=0.94 qty=100
+2026-06-21 19:27:16,132 INFO ENTRY SENSEX 2026-02-05 day=Thursday expiry=2026-02-05 atm=83700 chosen=83700 offset=0 ce=176.40 pe=214.20 ratio=0.82 qty=100
+2026-06-21 19:27:16,181 INFO ENTRY NIFTY 2026-02-06 day=Friday expiry=2026-02-10 atm=25600 chosen=25600 offset=0 ce=127.55 pe=123.65 ratio=0.97 qty=325
+2026-06-21 19:27:16,230 INFO ENTRY NIFTY 2026-02-09 day=Monday expiry=2026-02-10 atm=25800 chosen=25800 offset=0 ce=103.30 pe=72.95 ratio=0.71 qty=325
+2026-06-21 19:27:16,688 INFO SKIPPED NIFTY 2026-02-10 no_balanced_strike atm=25900
+2026-06-21 19:27:16,710 INFO ENTRY SENSEX 2026-02-11 day=Wednesday expiry=2026-02-12 atm=84400 chosen=84400 offset=0 ce=257.55 pe=194.55 ratio=0.76 qty=100
+2026-06-21 19:27:16,733 INFO ENTRY SENSEX 2026-02-12 day=Thursday expiry=2026-02-12 atm=83900 chosen=83900 offset=0 ce=167.45 pe=131.75 ratio=0.79 qty=100
+2026-06-21 19:27:16,782 INFO ENTRY NIFTY 2026-02-13 day=Friday expiry=2026-02-17 atm=25600 chosen=25600 offset=0 ce=122.95 pe=93.20 ratio=0.76 qty=325
+2026-06-21 19:27:16,826 INFO ENTRY NIFTY 2026-02-16 day=Monday expiry=2026-02-17 atm=25450 chosen=25450 offset=0 ce=108.85 pe=80.05 ratio=0.74 qty=325
+2026-06-21 19:27:16,826 INFO ENTRY NIFTY 2026-02-17 day=Tuesday expiry=2026-02-17 atm=25600 chosen=25600 offset=0 ce=49.20 pe=51.45 ratio=0.96 qty=325
+2026-06-21 19:27:16,859 INFO ENTRY SENSEX 2026-02-18 day=Wednesday expiry=2026-02-19 atm=83500 chosen=83500 offset=0 ce=246.85 pe=237.55 ratio=0.96 qty=100
+2026-06-21 19:27:16,882 INFO ENTRY SENSEX 2026-02-19 day=Thursday expiry=2026-02-19 atm=83800 chosen=83800 offset=0 ce=150.15 pe=126.80 ratio=0.84 qty=100
+2026-06-21 19:27:16,975 INFO ENTRY NIFTY 2026-02-20 day=Friday expiry=2026-02-24 atm=25450 chosen=25450 offset=0 ce=139.00 pe=116.15 ratio=0.84 qty=325
+2026-06-21 19:27:17,381 INFO ENTRY NIFTY 2026-02-23 day=Monday expiry=2026-02-24 atm=25700 chosen=25700 offset=0 ce=106.25 pe=102.35 ratio=0.96 qty=325
+2026-06-21 19:27:17,472 INFO ENTRY NIFTY 2026-02-24 day=Tuesday expiry=2026-02-24 atm=25550 chosen=25550 offset=0 ce=77.25 pe=56.30 ratio=0.73 qty=325
+2026-06-21 19:27:17,532 INFO ENTRY SENSEX 2026-02-25 day=Wednesday expiry=2026-02-26 atm=82700 chosen=82700 offset=0 ce=335.20 pe=269.55 ratio=0.80 qty=100
+2026-06-21 19:27:17,588 INFO ENTRY SENSEX 2026-02-26 day=Thursday expiry=2026-02-26 atm=82400 chosen=82400 offset=0 ce=229.25 pe=163.90 ratio=0.71 qty=100
+2026-06-21 19:27:17,646 INFO ENTRY NIFTY 2026-02-27 day=Friday expiry=2026-03-02 atm=25400 chosen=25400 offset=0 ce=109.60 pe=111.40 ratio=0.98 qty=325
+2026-06-21 19:27:17,696 INFO ENTRY NIFTY 2026-03-02 day=Monday expiry=2026-03-02 atm=24900 chosen=24900 offset=0 ce=105.45 pe=113.05 ratio=0.93 qty=325
+2026-06-21 19:27:17,704 INFO ENTRY SENSEX 2026-03-04 day=Wednesday expiry=2026-03-05 atm=78700 chosen=78700 offset=0 ce=605.35 pe=604.80 ratio=1.00 qty=100
+2026-06-21 19:27:17,715 INFO ENTRY SENSEX 2026-03-05 day=Thursday expiry=2026-03-05 atm=79400 chosen=79400 offset=0 ce=314.55 pe=252.20 ratio=0.80 qty=100
+2026-06-21 19:27:17,746 INFO ENTRY NIFTY 2026-03-06 day=Friday expiry=2026-03-10 atm=24600 chosen=24600 offset=0 ce=210.85 pe=216.70 ratio=0.97 qty=325
+2026-06-21 19:27:17,770 INFO ENTRY NIFTY 2026-03-09 day=Monday expiry=2026-03-10 atm=23800 chosen=23800 offset=0 ce=238.05 pe=245.30 ratio=0.97 qty=325
+2026-06-21 19:27:17,791 INFO ENTRY NIFTY 2026-03-10 day=Tuesday expiry=2026-03-10 atm=24150 chosen=24150 offset=0 ce=95.70 pe=92.75 ratio=0.97 qty=325
+2026-06-21 19:27:17,806 INFO ENTRY SENSEX 2026-03-11 day=Wednesday expiry=2026-03-12 atm=78300 chosen=78300 offset=0 ce=420.85 pe=420.80 ratio=1.00 qty=100
+2026-06-21 19:27:17,818 INFO ENTRY SENSEX 2026-03-12 day=Thursday expiry=2026-03-12 atm=75900 chosen=75900 offset=0 ce=280.95 pe=241.70 ratio=0.86 qty=100
+2026-06-21 19:27:17,840 INFO ENTRY NIFTY 2026-03-13 day=Friday expiry=2026-03-17 atm=23450 chosen=23450 offset=0 ce=238.30 pe=230.10 ratio=0.97 qty=325
+2026-06-21 19:27:17,859 INFO ENTRY NIFTY 2026-03-16 day=Monday expiry=2026-03-17 atm=23150 chosen=23150 offset=0 ce=199.45 pe=149.15 ratio=0.75 qty=325
+2026-06-21 19:27:17,875 INFO ENTRY NIFTY 2026-03-17 day=Tuesday expiry=2026-03-17 atm=23400 chosen=23400 offset=0 ce=73.20 pe=90.05 ratio=0.81 qty=325
+2026-06-21 19:27:18,028 INFO SKIPPED SENSEX 2026-03-18 no_balanced_strike atm=76500
+2026-06-21 19:27:18,146 INFO SKIPPED SENSEX 2026-03-19 no_balanced_strike atm=75100
+2026-06-21 19:27:18,173 INFO ENTRY NIFTY 2026-03-20 day=Friday expiry=2026-03-24 atm=23300 chosen=23300 offset=0 ce=234.70 pe=243.15 ratio=0.97 qty=325
+2026-06-21 19:27:18,191 INFO ENTRY NIFTY 2026-03-23 day=Monday expiry=2026-03-24 atm=22700 chosen=22700 offset=0 ce=203.95 pe=225.85 ratio=0.90 qty=325
+2026-06-21 19:27:18,213 INFO ENTRY NIFTY 2026-03-24 day=Tuesday expiry=2026-03-24 atm=22800 chosen=22800 offset=0 ce=110.10 pe=120.90 ratio=0.91 qty=325
+2026-06-21 19:27:18,237 INFO SKIPPED SENSEX 2026-03-25 no_balanced_strike atm=74800
+2026-06-21 19:27:18,298 INFO ENTRY NIFTY 2026-03-27 day=Friday expiry=2026-04-28 atm=23050 chosen=23050 offset=0 ce=771.15 pe=635.50 ratio=0.82 qty=325
+2026-06-21 19:27:18,360 INFO ENTRY NIFTY 2026-03-30 day=Monday expiry=2026-04-28 atm=22500 chosen=22500 offset=0 ce=841.80 pe=700.60 ratio=0.83 qty=325
+2026-06-21 19:27:18,443 INFO SKIPPED SENSEX 2026-04-01 no_balanced_strike atm=73800
+2026-06-21 19:27:18,521 INFO SKIPPED SENSEX 2026-04-02 no_balanced_strike atm=71700
+2026-06-21 19:27:18,570 INFO ENTRY NIFTY 2026-04-06 day=Monday expiry=2026-04-28 atm=22650 chosen=22650 offset=0 ce=668.00 pe=582.70 ratio=0.87 qty=325
+2026-06-21 19:27:18,638 INFO ENTRY NIFTY 2026-04-07 day=Tuesday expiry=2026-04-28 atm=22750 chosen=22750 offset=0 ce=657.95 pe=546.70 ratio=0.83 qty=325
+2026-06-21 19:27:18,639 INFO SKIPPED SENSEX 2026-04-08 no_balanced_strike atm=77300
+2026-06-21 19:27:18,640 INFO SKIPPED SENSEX 2026-04-09 no_balanced_strike atm=77300
+2026-06-21 19:27:18,730 INFO ENTRY NIFTY 2026-04-10 day=Friday expiry=2026-04-28 atm=23950 chosen=23950 offset=0 ce=418.80 pe=355.90 ratio=0.85 qty=325
+2026-06-21 19:27:18,828 INFO ENTRY NIFTY 2026-04-13 day=Monday expiry=2026-04-28 atm=23600 chosen=23600 offset=0 ce=453.10 pe=396.75 ratio=0.88 qty=325
+2026-06-21 19:27:18,829 INFO SKIPPED SENSEX 2026-04-15 no_balanced_strike atm=78100
+2026-06-21 19:27:18,830 INFO SKIPPED SENSEX 2026-04-16 no_balanced_strike atm=78700
+2026-06-21 19:27:18,937 INFO ENTRY NIFTY 2026-04-17 day=Friday expiry=2026-04-28 atm=24200 chosen=24200 offset=0 ce=304.95 pe=297.70 ratio=0.98 qty=325
+2026-06-21 19:27:19,031 INFO ENTRY NIFTY 2026-04-20 day=Monday expiry=2026-04-28 atm=24350 chosen=24350 offset=0 ce=273.25 pe=278.00 ratio=0.98 qty=325
+2026-06-21 19:27:19,126 INFO ENTRY NIFTY 2026-04-21 day=Tuesday expiry=2026-04-28 atm=24450 chosen=24450 offset=0 ce=265.20 pe=255.90 ratio=0.96 qty=325
+2026-06-21 19:27:19,127 INFO SKIPPED SENSEX 2026-04-22 no_balanced_strike atm=78900
+2026-06-21 19:27:19,127 INFO SKIPPED SENSEX 2026-04-23 no_balanced_strike atm=77900
+2026-06-21 19:27:19,228 INFO ENTRY NIFTY 2026-04-24 day=Friday expiry=2026-04-28 atm=24100 chosen=24100 offset=0 ce=191.90 pe=151.15 ratio=0.79 qty=325
+2026-06-21 19:27:19,810 INFO ENTRY NIFTY 2026-04-27 day=Monday expiry=2026-04-28 atm=24000 chosen=24050 offset=+1 ce=120.00 pe=120.95 ratio=0.99 qty=325
+2026-06-21 19:27:19,810 INFO ENTRY NIFTY 2026-04-28 day=Tuesday expiry=2026-04-28 atm=24100 chosen=24100 offset=0 ce=51.70 pe=67.05 ratio=0.77 qty=325
+2026-06-21 19:27:19,844 INFO ENTRY SENSEX 2026-04-29 day=Wednesday expiry=2026-04-30 atm=77200 chosen=77200 offset=0 ce=333.55 pe=314.70 ratio=0.94 qty=100
+2026-06-21 19:27:19,881 INFO ENTRY SENSEX 2026-04-30 day=Thursday expiry=2026-04-30 atm=76800 chosen=76800 offset=0 ce=170.50 pe=213.35 ratio=0.80 qty=100
+2026-06-21 19:27:20,250 INFO SKIPPED NIFTY 2026-05-04 no_balanced_strike atm=24200
+2026-06-21 19:27:20,362 INFO SKIPPED NIFTY 2026-05-05 no_balanced_strike atm=24050
+2026-06-21 19:27:20,520 INFO SKIPPED SENSEX 2026-05-06 no_balanced_strike atm=77400
+2026-06-21 19:27:20,621 INFO SKIPPED SENSEX 2026-05-07 no_balanced_strike atm=77900
+2026-06-21 19:27:20,890 INFO SKIPPED NIFTY 2026-05-08 no_balanced_strike atm=24200
+2026-06-21 19:27:21,016 INFO SKIPPED NIFTY 2026-05-11 no_balanced_strike atm=23900
+2026-06-21 19:27:21,081 INFO SKIPPED NIFTY 2026-05-12 no_balanced_strike atm=23750
+2026-06-21 19:27:21,088 INFO SKIPPED SENSEX 2026-05-13 no_balanced_strike atm=74600
+2026-06-21 19:27:21,091 INFO SKIPPED SENSEX 2026-05-14 no_balanced_strike atm=75000
+2026-06-21 19:27:21,132 INFO ENTRY NIFTY 2026-05-15 day=Friday expiry=2026-05-19 atm=23700 chosen=23700 offset=0 ce=189.80 pe=158.00 ratio=0.83 qty=325
+2026-06-21 19:27:21,168 INFO ENTRY NIFTY 2026-05-18 day=Monday expiry=2026-05-19 atm=23400 chosen=23400 offset=0 ce=139.50 pe=132.45 ratio=0.95 qty=325
+2026-06-21 19:27:21,205 INFO ENTRY NIFTY 2026-05-19 day=Tuesday expiry=2026-05-19 atm=23750 chosen=23750 offset=0 ce=59.85 pe=81.85 ratio=0.73 qty=325
+2026-06-21 19:27:21,221 INFO ENTRY SENSEX 2026-05-20 day=Wednesday expiry=2026-05-21 atm=74700 chosen=74700 offset=0 ce=402.55 pe=428.40 ratio=0.94 qty=100
+2026-06-21 19:27:21,417 INFO SKIPPED SENSEX 2026-05-21 no_balanced_strike atm=75600
+2026-06-21 19:27:21,537 INFO ENTRY NIFTY 2026-05-22 day=Friday expiry=2026-05-26 atm=23700 chosen=23700 offset=0 ce=164.70 pe=155.30 ratio=0.94 qty=325
+2026-06-21 19:27:21,635 INFO ENTRY NIFTY 2026-05-25 day=Monday expiry=2026-05-26 atm=23950 chosen=23950 offset=0 ce=124.10 pe=95.45 ratio=0.77 qty=325
+2026-06-21 19:27:21,765 INFO ENTRY NIFTY 2026-05-26 day=Tuesday expiry=2026-05-26 atm=24000 chosen=24000 offset=0 ce=66.55 pe=49.70 ratio=0.75 qty=325
+2026-06-21 19:27:22,130 INFO SKIPPED SENSEX 2026-05-27 no_balanced_strike atm=76000
+2026-06-21 19:27:22,691 INFO ENTRY NIFTY 2026-05-29 day=Friday expiry=2026-06-02 atm=23950 chosen=24000 offset=+1 ce=139.30 pe=132.70 ratio=0.95 qty=325
+2026-06-21 19:27:22,734 INFO ENTRY NIFTY 2026-06-01 day=Monday expiry=2026-06-02 atm=23650 chosen=23650 offset=0 ce=116.90 pe=101.90 ratio=0.87 qty=325
+2026-06-21 19:27:22,779 INFO ENTRY NIFTY 2026-06-02 day=Tuesday expiry=2026-06-02 atm=23300 chosen=23300 offset=0 ce=56.70 pe=66.80 ratio=0.85 qty=325
+2026-06-21 19:27:22,811 INFO ENTRY SENSEX 2026-06-03 day=Wednesday expiry=2026-06-04 atm=74000 chosen=74000 offset=0 ce=406.70 pe=334.35 ratio=0.82 qty=100
+2026-06-21 19:27:22,989 INFO SKIPPED SENSEX 2026-06-04 no_balanced_strike atm=74100
+2026-06-21 19:27:23,384 INFO SKIPPED NIFTY 2026-06-05 no_balanced_strike atm=23450
+2026-06-21 19:27:23,558 INFO SKIPPED NIFTY 2026-06-08 no_balanced_strike atm=23150
+2026-06-21 19:27:23,558 INFO SKIPPED NIFTY 2026-06-09 no_balanced_strike atm=23250
+2026-06-21 19:27:23,660 INFO SKIPPED SENSEX 2026-06-10 no_balanced_strike atm=74300
+2026-06-21 19:27:23,707 INFO SKIPPED SENSEX 2026-06-11 no_balanced_strike atm=73600
+2026-06-21 19:27:23,744 INFO ENTRY NIFTY 2026-06-12 day=Friday expiry=2026-06-16 atm=23450 chosen=23450 offset=0 ce=134.10 pe=139.95 ratio=0.96 qty=325
+2026-06-21 19:27:23,787 INFO ENTRY NIFTY 2026-06-15 day=Monday expiry=2026-06-16 atm=23950 chosen=23950 offset=0 ce=94.05 pe=109.25 ratio=0.86 qty=325
+2026-06-21 19:27:23,787 INFO ENTRY NIFTY 2026-06-16 day=Tuesday expiry=2026-06-16 atm=23950 chosen=23950 offset=0 ce=45.05 pe=63.90 ratio=0.71 qty=325
+2026-06-21 19:27:23,914 INFO SKIPPED SENSEX 2026-06-17 no_balanced_strike atm=76800
+2026-06-21 19:27:23,946 INFO SKIPPED SENSEX 2026-06-18 no_balanced_strike atm=77100
+2026-06-21 19:27:24,308 INFO SKIPPED NIFTY 2026-06-19 no_balanced_strike atm=24000
+2026-06-21 19:27:24,308 INFO ENTRIES found=161 skipped=36
