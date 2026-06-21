@@ -1,0 +1,1723 @@
+2026-06-21 17:42:37,299 INFO SKIPPED date=2019-06-21 missing_entry_candle atm=11800 expiry=2020-01-30
+2026-06-21 17:42:37,308 INFO SKIPPED date=2019-06-24 missing_entry_candle atm=11750 expiry=2020-01-30
+2026-06-21 17:42:37,323 INFO SKIPPED date=2019-06-25 missing_entry_candle atm=11650 expiry=2020-01-30
+2026-06-21 17:42:37,324 INFO SKIPPED date=2019-06-26 missing_entry_candle atm=11800 expiry=2020-01-30
+2026-06-21 17:42:37,358 INFO SKIPPED date=2019-06-27 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,379 INFO SKIPPED date=2019-06-28 missing_entry_candle atm=11850 expiry=2020-01-30
+2026-06-21 17:42:37,380 INFO SKIPPED date=2019-07-01 missing_entry_candle atm=11850 expiry=2020-01-30
+2026-06-21 17:42:37,380 INFO SKIPPED date=2019-07-02 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,381 INFO SKIPPED date=2019-07-03 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,413 INFO SKIPPED date=2019-07-04 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,413 INFO SKIPPED date=2019-07-05 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,435 INFO SKIPPED date=2019-07-08 missing_entry_candle atm=11700 expiry=2020-01-30
+2026-06-21 17:42:37,454 INFO SKIPPED date=2019-07-09 missing_entry_candle atm=11500 expiry=2020-01-30
+2026-06-21 17:42:37,460 INFO SKIPPED date=2019-07-10 missing_entry_candle atm=11550 expiry=2020-01-30
+2026-06-21 17:42:37,461 INFO SKIPPED date=2019-07-11 missing_entry_candle atm=11550 expiry=2020-01-30
+2026-06-21 17:42:37,481 INFO SKIPPED date=2019-07-12 missing_entry_candle atm=11600 expiry=2020-01-30
+2026-06-21 17:42:37,482 INFO SKIPPED date=2019-07-15 missing_entry_candle atm=11600 expiry=2020-01-30
+2026-06-21 17:42:37,482 INFO SKIPPED date=2019-07-16 missing_entry_candle atm=11600 expiry=2020-01-30
+2026-06-21 17:42:37,482 INFO SKIPPED date=2019-07-17 missing_entry_candle atm=11700 expiry=2020-01-30
+2026-06-21 17:42:37,482 INFO SKIPPED date=2019-07-18 missing_entry_candle atm=11650 expiry=2020-01-30
+2026-06-21 17:42:37,483 INFO SKIPPED date=2019-07-19 missing_entry_candle atm=11650 expiry=2020-01-30
+2026-06-21 17:42:37,484 INFO SKIPPED date=2019-07-22 missing_entry_candle atm=11350 expiry=2020-01-30
+2026-06-21 17:42:37,485 INFO SKIPPED date=2019-07-23 missing_entry_candle atm=11350 expiry=2020-01-30
+2026-06-21 17:42:37,485 INFO SKIPPED date=2019-07-24 missing_entry_candle atm=11350 expiry=2020-01-30
+2026-06-21 17:42:37,491 INFO SKIPPED date=2019-07-25 missing_entry_candle atm=11300 expiry=2020-01-30
+2026-06-21 17:42:37,497 INFO SKIPPED date=2019-07-26 missing_entry_candle atm=11200 expiry=2020-01-30
+2026-06-21 17:42:37,499 INFO SKIPPED date=2019-07-29 missing_entry_candle atm=11250 expiry=2020-01-30
+2026-06-21 17:42:37,500 INFO SKIPPED date=2019-07-30 missing_entry_candle atm=11250 expiry=2020-01-30
+2026-06-21 17:42:37,501 INFO SKIPPED date=2019-07-31 missing_entry_candle atm=11050 expiry=2020-01-30
+2026-06-21 17:42:37,501 INFO SKIPPED date=2019-08-01 missing_entry_candle atm=11050 expiry=2020-01-30
+2026-06-21 17:42:37,504 INFO SKIPPED date=2019-08-02 missing_entry_candle atm=10900 expiry=2020-01-30
+2026-06-21 17:42:37,505 INFO SKIPPED date=2019-08-05 missing_contract atm=10850 expiry=2020-01-30
+2026-06-21 17:42:37,506 INFO SKIPPED date=2019-08-06 missing_entry_candle atm=10900 expiry=2020-01-30
+2026-06-21 17:42:37,507 INFO SKIPPED date=2019-08-07 missing_entry_candle atm=10950 expiry=2020-01-30
+2026-06-21 17:42:37,507 INFO SKIPPED date=2019-08-08 missing_entry_candle atm=10900 expiry=2020-01-30
+2026-06-21 17:42:37,512 INFO SKIPPED date=2019-08-09 missing_entry_candle atm=11100 expiry=2020-01-30
+2026-06-21 17:42:37,512 INFO SKIPPED date=2019-08-13 missing_entry_candle atm=11100 expiry=2020-01-30
+2026-06-21 17:42:37,513 INFO SKIPPED date=2019-08-14 missing_entry_candle atm=10950 expiry=2020-01-30
+2026-06-21 17:42:37,513 INFO SKIPPED date=2019-08-16 missing_entry_candle atm=10950 expiry=2020-01-30
+2026-06-21 17:42:37,513 INFO SKIPPED date=2019-08-19 missing_entry_candle atm=11100 expiry=2020-01-30
+2026-06-21 17:42:37,513 INFO SKIPPED date=2019-08-20 missing_entry_candle atm=11050 expiry=2020-01-30
+2026-06-21 17:42:37,525 INFO SKIPPED date=2019-08-21 missing_entry_candle atm=11000 expiry=2020-01-30
+2026-06-21 17:42:37,525 INFO SKIPPED date=2019-08-22 missing_entry_candle atm=10900 expiry=2020-01-30
+2026-06-21 17:42:37,526 INFO SKIPPED date=2019-08-23 missing_contract atm=10650 expiry=2020-01-30
+2026-06-21 17:42:37,526 INFO SKIPPED date=2019-08-26 missing_entry_candle atm=10900 expiry=2020-01-30
+2026-06-21 17:42:37,527 INFO SKIPPED date=2019-08-27 missing_entry_candle atm=11100 expiry=2020-01-30
+2026-06-21 17:42:37,527 INFO SKIPPED date=2019-08-28 missing_entry_candle atm=11100 expiry=2020-01-30
+2026-06-21 17:42:37,527 INFO SKIPPED date=2019-08-29 missing_entry_candle atm=11000 expiry=2020-01-30
+2026-06-21 17:42:37,527 INFO SKIPPED date=2019-08-30 missing_entry_candle atm=10950 expiry=2020-01-30
+2026-06-21 17:42:37,527 INFO SKIPPED date=2019-09-03 missing_entry_candle atm=10950 expiry=2020-01-30
+2026-06-21 17:42:37,529 INFO SKIPPED date=2019-09-04 missing_entry_candle atm=10800 expiry=2020-01-30
+2026-06-21 17:42:37,530 INFO SKIPPED date=2019-09-05 missing_entry_candle atm=10900 expiry=2020-01-30
+2026-06-21 17:42:37,530 INFO SKIPPED date=2019-09-06 missing_entry_candle atm=10900 expiry=2020-01-30
+2026-06-21 17:42:37,530 INFO SKIPPED date=2019-09-09 missing_entry_candle atm=10900 expiry=2020-01-30
+2026-06-21 17:42:37,530 INFO SKIPPED date=2019-09-11 missing_entry_candle atm=11000 expiry=2020-01-30
+2026-06-21 17:42:37,531 INFO SKIPPED date=2019-09-12 missing_entry_candle atm=11050 expiry=2020-01-30
+2026-06-21 17:42:37,531 INFO SKIPPED date=2019-09-13 missing_entry_candle atm=11000 expiry=2020-01-30
+2026-06-21 17:42:37,531 INFO SKIPPED date=2019-09-16 missing_entry_candle atm=11000 expiry=2020-01-30
+2026-06-21 17:42:37,531 INFO SKIPPED date=2019-09-17 missing_entry_candle atm=11000 expiry=2020-01-30
+2026-06-21 17:42:37,531 INFO SKIPPED date=2019-09-18 missing_contract atm=10850 expiry=2020-01-30
+2026-06-21 17:42:37,532 INFO SKIPPED date=2019-09-19 missing_entry_candle atm=10800 expiry=2020-01-30
+2026-06-21 17:42:37,533 INFO SKIPPED date=2019-09-20 missing_entry_candle atm=10700 expiry=2020-01-30
+2026-06-21 17:42:37,534 INFO SKIPPED date=2019-09-23 missing_entry_candle atm=11600 expiry=2020-01-30
+2026-06-21 17:42:37,534 INFO SKIPPED date=2019-09-24 missing_entry_candle atm=11600 expiry=2020-01-30
+2026-06-21 17:42:37,534 INFO SKIPPED date=2019-09-25 missing_entry_candle atm=11500 expiry=2020-01-30
+2026-06-21 17:42:37,534 INFO SKIPPED date=2019-09-26 missing_entry_candle atm=11500 expiry=2020-01-30
+2026-06-21 17:42:37,534 INFO SKIPPED date=2019-09-27 missing_entry_candle atm=11550 expiry=2020-01-30
+2026-06-21 17:42:37,535 INFO SKIPPED date=2019-09-30 missing_entry_candle atm=11500 expiry=2020-01-30
+2026-06-21 17:42:37,535 INFO SKIPPED date=2019-10-01 missing_entry_candle atm=11550 expiry=2020-01-30
+2026-06-21 17:42:37,535 INFO SKIPPED date=2019-10-03 missing_entry_candle atm=11250 expiry=2020-01-30
+2026-06-21 17:42:37,541 INFO SKIPPED date=2019-10-04 missing_entry_candle atm=11400 expiry=2020-01-30
+2026-06-21 17:42:37,542 INFO SKIPPED date=2019-10-07 missing_entry_candle atm=11150 expiry=2020-01-30
+2026-06-21 17:42:37,543 INFO SKIPPED date=2019-10-09 missing_entry_candle atm=11100 expiry=2020-01-30
+2026-06-21 17:42:37,543 INFO SKIPPED date=2019-10-10 missing_entry_candle atm=11300 expiry=2020-01-30
+2026-06-21 17:42:37,543 INFO SKIPPED date=2019-10-11 missing_entry_candle atm=11300 expiry=2020-01-30
+2026-06-21 17:42:37,543 INFO SKIPPED date=2019-10-14 missing_entry_candle atm=11350 expiry=2020-01-30
+2026-06-21 17:42:37,543 INFO SKIPPED date=2019-10-15 missing_entry_candle atm=11350 expiry=2020-01-30
+2026-06-21 17:42:37,545 INFO SKIPPED date=2019-10-16 missing_entry_candle atm=11450 expiry=2020-01-30
+2026-06-21 17:42:37,545 INFO SKIPPED date=2019-10-17 missing_entry_candle atm=11450 expiry=2020-01-30
+2026-06-21 17:42:37,546 INFO SKIPPED date=2019-10-18 missing_entry_candle atm=11550 expiry=2020-01-30
+2026-06-21 17:42:37,546 INFO SKIPPED date=2019-10-22 missing_entry_candle atm=11700 expiry=2020-01-30
+2026-06-21 17:42:37,546 INFO SKIPPED date=2019-10-23 missing_entry_candle atm=11600 expiry=2020-01-30
+2026-06-21 17:42:37,546 INFO SKIPPED date=2019-10-24 missing_entry_candle atm=11650 expiry=2020-01-30
+2026-06-21 17:42:37,546 INFO SKIPPED date=2019-10-25 missing_entry_candle atm=11600 expiry=2020-01-30
+2026-06-21 17:42:37,546 INFO SKIPPED date=2019-10-29 missing_entry_candle atm=11650 expiry=2020-01-30
+2026-06-21 17:42:37,547 INFO SKIPPED date=2019-10-30 missing_entry_candle atm=11850 expiry=2020-01-30
+2026-06-21 17:42:37,547 INFO SKIPPED date=2019-10-31 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,547 INFO SKIPPED date=2019-11-01 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,547 INFO SKIPPED date=2019-11-04 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,547 INFO SKIPPED date=2019-11-05 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,547 INFO SKIPPED date=2019-11-06 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,564 INFO SKIPPED date=2019-11-07 missing_entry_candle atm=12000 expiry=2020-01-30
+2026-06-21 17:42:37,565 INFO SKIPPED date=2019-11-08 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,565 INFO SKIPPED date=2019-11-11 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,565 INFO SKIPPED date=2019-11-13 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,565 INFO SKIPPED date=2019-11-14 missing_entry_candle atm=11850 expiry=2020-01-30
+2026-06-21 17:42:37,565 INFO SKIPPED date=2019-11-15 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,565 INFO SKIPPED date=2019-11-18 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,566 INFO SKIPPED date=2019-11-19 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,566 INFO SKIPPED date=2019-11-20 missing_entry_candle atm=12000 expiry=2020-01-30
+2026-06-21 17:42:37,566 INFO SKIPPED date=2019-11-21 missing_entry_candle atm=12000 expiry=2020-01-30
+2026-06-21 17:42:37,566 INFO SKIPPED date=2019-11-22 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,566 INFO SKIPPED date=2019-11-25 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,584 INFO SKIPPED date=2019-11-26 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,584 INFO SKIPPED date=2019-11-27 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,585 INFO SKIPPED date=2019-11-28 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,585 INFO SKIPPED date=2019-11-29 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,585 INFO SKIPPED date=2019-12-02 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,602 INFO SKIPPED date=2019-12-03 missing_entry_candle atm=12050 expiry=2020-01-30
+2026-06-21 17:42:37,602 INFO SKIPPED date=2019-12-04 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,602 INFO SKIPPED date=2019-12-05 missing_entry_candle atm=12050 expiry=2020-01-30
+2026-06-21 17:42:37,603 INFO SKIPPED date=2019-12-06 missing_entry_candle atm=12050 expiry=2020-01-30
+2026-06-21 17:42:37,603 INFO SKIPPED date=2019-12-09 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,603 INFO SKIPPED date=2019-12-10 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,603 INFO SKIPPED date=2019-12-11 missing_entry_candle atm=11900 expiry=2020-01-30
+2026-06-21 17:42:37,603 INFO SKIPPED date=2019-12-12 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,603 INFO SKIPPED date=2019-12-13 missing_entry_candle atm=12050 expiry=2020-01-30
+2026-06-21 17:42:37,603 INFO SKIPPED date=2019-12-16 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,604 INFO SKIPPED date=2019-12-17 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,622 INFO SKIPPED date=2019-12-18 missing_entry_candle atm=12200 expiry=2020-01-30
+2026-06-21 17:42:37,622 INFO SKIPPED date=2019-12-19 missing_entry_candle atm=12200 expiry=2020-01-30
+2026-06-21 17:42:37,639 INFO SKIPPED date=2019-12-20 missing_entry_candle atm=12300 expiry=2020-01-30
+2026-06-21 17:42:37,657 INFO SKIPPED date=2019-12-23 missing_entry_candle atm=12250 expiry=2020-01-30
+2026-06-21 17:42:37,658 INFO SKIPPED date=2019-12-24 missing_entry_candle atm=12250 expiry=2020-01-30
+2026-06-21 17:42:37,658 INFO SKIPPED date=2019-12-26 missing_entry_candle atm=12200 expiry=2020-01-30
+2026-06-21 17:42:37,675 INFO SKIPPED date=2019-12-27 missing_entry_candle atm=12150 expiry=2020-01-30
+2026-06-21 17:42:37,676 INFO SKIPPED date=2019-12-30 missing_entry_candle atm=12250 expiry=2020-01-30
+2026-06-21 17:42:37,676 INFO SKIPPED date=2019-12-31 missing_entry_candle atm=12250 expiry=2020-01-30
+2026-06-21 17:42:37,676 INFO SKIPPED date=2020-01-01 missing_entry_candle atm=12200 expiry=2020-01-30
+2026-06-21 17:42:37,676 INFO SKIPPED date=2020-01-02 missing_entry_candle atm=12200 expiry=2020-01-30
+2026-06-21 17:42:37,676 INFO SKIPPED date=2020-01-03 missing_entry_candle atm=12250 expiry=2020-01-30
+2026-06-21 17:42:37,676 INFO SKIPPED date=2020-01-06 missing_entry_candle atm=12150 expiry=2020-01-30
+2026-06-21 17:42:37,677 INFO SKIPPED date=2020-01-07 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,677 INFO SKIPPED date=2020-01-08 missing_entry_candle atm=11950 expiry=2020-01-30
+2026-06-21 17:42:37,677 INFO SKIPPED date=2020-01-09 missing_entry_candle atm=12150 expiry=2020-01-30
+2026-06-21 17:42:37,677 INFO SKIPPED date=2020-01-10 missing_entry_candle atm=12250 expiry=2020-01-30
+2026-06-21 17:42:37,691 INFO SKIPPED date=2020-01-13 missing_entry_candle atm=12350 expiry=2020-01-30
+2026-06-21 17:42:37,691 INFO SKIPPED date=2020-01-14 missing_entry_candle atm=12300 expiry=2020-01-30
+2026-06-21 17:42:37,691 INFO SKIPPED date=2020-01-15 missing_entry_candle atm=12300 expiry=2020-01-30
+2026-06-21 17:42:37,692 INFO SKIPPED date=2020-01-16 missing_entry_candle atm=12350 expiry=2020-01-30
+2026-06-21 17:42:37,692 INFO SKIPPED date=2020-01-17 missing_entry_candle atm=12350 expiry=2020-01-30
+2026-06-21 17:42:37,708 INFO SKIPPED date=2020-01-20 missing_entry_candle atm=12400 expiry=2020-01-30
+2026-06-21 17:42:37,708 INFO SKIPPED date=2020-01-21 missing_entry_candle atm=12200 expiry=2020-01-30
+2026-06-21 17:42:37,708 INFO SKIPPED date=2020-01-22 missing_entry_candle atm=12200 expiry=2020-01-30
+2026-06-21 17:42:37,709 INFO SKIPPED date=2020-01-23 missing_entry_candle atm=12100 expiry=2020-01-30
+2026-06-21 17:42:37,709 INFO SKIPPED date=2020-01-24 balance_failed ce=85.45 pe=63.90
+2026-06-21 17:42:37,709 INFO SKIPPED date=2020-01-27 balance_failed ce=53.15 pe=80.75
+2026-06-21 17:42:37,710 INFO TRADED date=2020-01-28 day=Tuesday expiry=2020-01-30 atm=12100 qty=300 ce=65.40 pe=57.45 sl=[CE_SL,PE_SL] net=-8071.00
+2026-06-21 17:42:37,710 INFO SKIPPED date=2020-01-29 balance_failed ce=52.60 pe=37.00
+2026-06-21 17:42:37,723 INFO SKIPPED date=2020-01-30 missing_entry_candle atm=12100 expiry=2020-02-27
+2026-06-21 17:42:37,736 INFO SKIPPED date=2020-01-31 missing_entry_candle atm=12050 expiry=2020-02-27
+2026-06-21 17:42:37,750 INFO SKIPPED date=2020-02-03 missing_entry_candle atm=11700 expiry=2020-02-27
+2026-06-21 17:42:37,764 INFO SKIPPED date=2020-02-04 missing_entry_candle atm=11800 expiry=2020-02-27
+2026-06-21 17:42:37,783 INFO SKIPPED date=2020-02-05 missing_entry_candle atm=12000 expiry=2020-02-27
+2026-06-21 17:42:37,794 INFO SKIPPED date=2020-02-06 missing_entry_candle atm=12150 expiry=2020-02-27
+2026-06-21 17:42:37,795 INFO SKIPPED date=2020-02-07 missing_entry_candle atm=12150 expiry=2020-02-27
+2026-06-21 17:42:37,795 INFO SKIPPED date=2020-02-10 missing_entry_candle atm=12050 expiry=2020-02-27
+2026-06-21 17:42:37,795 INFO SKIPPED date=2020-02-11 missing_entry_candle atm=12150 expiry=2020-02-27
+2026-06-21 17:42:37,809 INFO SKIPPED date=2020-02-12 missing_entry_candle atm=12200 expiry=2020-02-27
+2026-06-21 17:42:37,809 INFO SKIPPED date=2020-02-13 missing_entry_candle atm=12200 expiry=2020-02-27
+2026-06-21 17:42:37,817 INFO SKIPPED date=2020-02-14 missing_entry_candle atm=12250 expiry=2020-02-27
+2026-06-21 17:42:37,817 INFO SKIPPED date=2020-02-17 missing_entry_candle atm=12150 expiry=2020-02-27
+2026-06-21 17:42:37,817 INFO SKIPPED date=2020-02-18 missing_entry_candle atm=12000 expiry=2020-02-27
+2026-06-21 17:42:37,817 INFO SKIPPED date=2020-02-19 missing_entry_candle atm=12100 expiry=2020-02-27
+2026-06-21 17:42:37,818 INFO SKIPPED date=2020-02-20 missing_entry_candle atm=12100 expiry=2020-02-27
+2026-06-21 17:42:37,832 INFO SKIPPED date=2020-02-24 balance_failed ce=58.15 pe=86.20
+2026-06-21 17:42:37,846 INFO TRADED date=2020-02-25 day=Tuesday expiry=2020-02-27 atm=11850 qty=300 ce=74.85 pe=86.40 sl=[none] net=8195.00
+2026-06-21 17:42:37,860 INFO TRADED date=2020-02-26 day=Wednesday expiry=2020-02-27 atm=11750 qty=300 ce=53.85 pe=61.50 sl=[CE_SL,PE_SL] net=-7621.00
+2026-06-21 17:42:37,862 INFO SKIPPED date=2020-02-27 missing_entry_candle atm=11650 expiry=2020-03-26
+2026-06-21 17:42:37,864 INFO SKIPPED date=2020-02-28 missing_entry_candle atm=11350 expiry=2020-03-26
+2026-06-21 17:42:37,864 INFO SKIPPED date=2020-03-02 missing_entry_candle atm=11350 expiry=2020-03-26
+2026-06-21 17:42:37,872 INFO SKIPPED date=2020-03-03 missing_entry_candle atm=11300 expiry=2020-03-26
+2026-06-21 17:42:37,872 INFO SKIPPED date=2020-03-04 missing_entry_candle atm=11300 expiry=2020-03-26
+2026-06-21 17:42:37,873 INFO SKIPPED date=2020-03-05 missing_entry_candle atm=11300 expiry=2020-03-26
+2026-06-21 17:42:37,879 INFO SKIPPED date=2020-03-06 missing_entry_candle atm=10900 expiry=2020-03-26
+2026-06-21 17:42:37,881 INFO SKIPPED date=2020-03-09 missing_entry_candle atm=10650 expiry=2020-03-26
+2026-06-21 17:42:37,884 INFO SKIPPED date=2020-03-11 missing_entry_candle atm=10450 expiry=2020-03-26
+2026-06-21 17:42:37,900 INFO SKIPPED date=2020-03-12 missing_entry_candle atm=10000 expiry=2020-03-26
+2026-06-21 17:42:37,910 INFO SKIPPED date=2020-03-13 missing_entry_candle atm=8750 expiry=2020-03-26
+2026-06-21 17:42:37,924 INFO SKIPPED date=2020-03-16 missing_entry_candle atm=9500 expiry=2020-03-26
+2026-06-21 17:42:37,936 INFO SKIPPED date=2020-03-17 missing_entry_candle atm=9100 expiry=2020-03-26
+2026-06-21 17:42:37,945 INFO SKIPPED date=2020-03-18 missing_entry_candle atm=9050 expiry=2020-03-26
+2026-06-21 17:42:37,960 INFO SKIPPED date=2020-03-19 missing_entry_candle atm=7950 expiry=2020-03-26
+2026-06-21 17:42:37,973 INFO TRADED date=2020-03-20 day=Friday expiry=2020-03-26 atm=8350 qty=300 ce=413.40 pe=440.80 sl=[CE_SL,PE_SL] net=-51952.00
+2026-06-21 17:42:37,986 INFO TRADED date=2020-03-23 day=Monday expiry=2020-03-26 atm=8150 qty=300 ce=374.00 pe=379.95 sl=[PE_SL] net=50213.00
+2026-06-21 17:42:38,004 INFO TRADED date=2020-03-24 day=Tuesday expiry=2020-03-26 atm=8000 qty=300 ce=291.85 pe=330.60 sl=[PE_SL] net=-2416.00
+2026-06-21 17:42:38,005 INFO TRADED date=2020-03-25 day=Wednesday expiry=2020-03-26 atm=7950 qty=300 ce=298.30 pe=323.20 sl=[CE_SL,PE_SL] net=-37990.00
+2026-06-21 17:42:38,008 INFO SKIPPED date=2020-03-26 missing_entry_candle atm=8350 expiry=2020-04-30
+2026-06-21 17:42:38,018 INFO SKIPPED date=2020-03-27 missing_entry_candle atm=8950 expiry=2020-04-30
+2026-06-21 17:42:38,024 INFO SKIPPED date=2020-03-30 missing_entry_candle atm=8450 expiry=2020-04-30
+2026-06-21 17:42:38,024 INFO SKIPPED date=2020-03-31 missing_entry_candle atm=8450 expiry=2020-04-30
+2026-06-21 17:42:38,037 INFO SKIPPED date=2020-04-01 missing_entry_candle atm=8500 expiry=2020-04-30
+2026-06-21 17:42:38,039 INFO SKIPPED date=2020-04-03 missing_entry_candle atm=8150 expiry=2020-04-30
+2026-06-21 17:42:38,047 INFO SKIPPED date=2020-04-07 missing_entry_candle atm=8400 expiry=2020-04-30
+2026-06-21 17:42:38,060 INFO SKIPPED date=2020-04-08 missing_entry_candle atm=8700 expiry=2020-04-30
+2026-06-21 17:42:38,060 INFO SKIPPED date=2020-04-09 missing_entry_candle atm=8950 expiry=2020-04-30
+2026-06-21 17:42:38,083 INFO SKIPPED date=2020-04-13 missing_entry_candle atm=9100 expiry=2020-04-30
+2026-06-21 17:42:38,099 INFO SKIPPED date=2020-04-15 missing_entry_candle atm=9150 expiry=2020-04-30
+2026-06-21 17:42:38,107 INFO SKIPPED date=2020-04-16 missing_entry_candle atm=8850 expiry=2020-04-30
+2026-06-21 17:42:38,122 INFO SKIPPED date=2020-04-17 missing_entry_candle atm=9250 expiry=2020-04-30
+2026-06-21 17:42:38,141 INFO SKIPPED date=2020-04-20 missing_entry_candle atm=9300 expiry=2020-04-30
+2026-06-21 17:42:38,158 INFO SKIPPED date=2020-04-21 missing_entry_candle atm=9050 expiry=2020-04-30
+2026-06-21 17:42:38,159 INFO SKIPPED date=2020-04-22 missing_entry_candle atm=9050 expiry=2020-04-30
+2026-06-21 17:42:38,176 INFO SKIPPED date=2020-04-23 missing_entry_candle atm=9200 expiry=2020-04-30
+2026-06-21 17:42:38,177 INFO TRADED date=2020-04-24 day=Friday expiry=2020-04-30 atm=9200 qty=300 ce=145.00 pe=174.50 sl=[CE_SL] net=-12400.00
+2026-06-21 17:42:38,178 INFO TRADED date=2020-04-27 day=Monday expiry=2020-04-30 atm=9300 qty=300 ce=126.00 pe=144.85 sl=[CE_SL] net=-3355.00
+2026-06-21 17:42:38,196 INFO SKIPPED date=2020-04-28 balance_failed ce=93.60 pe=123.20
+2026-06-21 17:42:38,197 INFO TRADED date=2020-04-29 day=Wednesday expiry=2020-04-30 atm=9400 qty=300 ce=78.90 pe=70.05 sl=[CE_SL] net=10496.00
+2026-06-21 17:42:38,201 INFO SKIPPED date=2020-04-30 missing_entry_candle atm=9750 expiry=2020-05-28
+2026-06-21 17:42:38,213 INFO SKIPPED date=2020-05-04 missing_entry_candle atm=9450 expiry=2020-05-28
+2026-06-21 17:42:38,214 INFO SKIPPED date=2020-05-05 missing_entry_candle atm=9450 expiry=2020-05-28
+2026-06-21 17:42:38,227 INFO SKIPPED date=2020-05-06 missing_entry_candle atm=9150 expiry=2020-05-28
+2026-06-21 17:42:38,241 INFO SKIPPED date=2020-05-07 missing_entry_candle atm=9200 expiry=2020-05-28
+2026-06-21 17:42:38,252 INFO SKIPPED date=2020-05-08 missing_entry_candle atm=9350 expiry=2020-05-28
+2026-06-21 17:42:38,266 INFO SKIPPED date=2020-05-11 missing_entry_candle atm=9400 expiry=2020-05-28
+2026-06-21 17:42:38,266 INFO SKIPPED date=2020-05-12 missing_entry_candle atm=9150 expiry=2020-05-28
+2026-06-21 17:42:38,267 INFO SKIPPED date=2020-05-13 missing_entry_candle atm=9450 expiry=2020-05-28
+2026-06-21 17:42:38,286 INFO SKIPPED date=2020-05-14 missing_entry_candle atm=9250 expiry=2020-05-28
+2026-06-21 17:42:38,303 INFO SKIPPED date=2020-05-15 missing_entry_candle atm=9100 expiry=2020-05-28
+2026-06-21 17:42:38,303 INFO SKIPPED date=2020-05-18 missing_entry_candle atm=9100 expiry=2020-05-28
+2026-06-21 17:42:38,316 INFO SKIPPED date=2020-05-19 missing_entry_candle atm=8950 expiry=2020-05-28
+2026-06-21 17:42:38,316 INFO SKIPPED date=2020-05-20 missing_entry_candle atm=8950 expiry=2020-05-28
+2026-06-21 17:42:38,317 INFO SKIPPED date=2020-05-21 missing_entry_candle atm=9100 expiry=2020-05-28
+2026-06-21 17:42:38,332 INFO TRADED date=2020-05-22 day=Friday expiry=2020-05-28 atm=9050 qty=300 ce=135.10 pe=135.40 sl=[CE_SL,PE_SL] net=-16930.00
+2026-06-21 17:42:38,333 INFO TRADED date=2020-05-26 day=Tuesday expiry=2020-05-28 atm=9150 qty=300 ce=81.10 pe=90.20 sl=[PE_SL] net=6623.00
+2026-06-21 17:42:38,333 INFO SKIPPED date=2020-05-27 balance_failed ce=59.00 pe=76.80
+2026-06-21 17:42:38,345 INFO SKIPPED date=2020-05-28 missing_entry_candle atm=9400 expiry=2020-06-25
+2026-06-21 17:42:38,351 INFO SKIPPED date=2020-05-29 missing_entry_candle atm=9450 expiry=2020-06-25
+2026-06-21 17:42:38,367 INFO SKIPPED date=2020-06-01 missing_entry_candle atm=9800 expiry=2020-06-25
+2026-06-21 17:42:38,376 INFO SKIPPED date=2020-06-02 missing_entry_candle atm=9850 expiry=2020-06-25
+2026-06-21 17:42:38,394 INFO SKIPPED date=2020-06-03 missing_entry_candle atm=10150 expiry=2020-06-25
+2026-06-21 17:42:38,415 INFO SKIPPED date=2020-06-04 missing_entry_candle atm=10100 expiry=2020-06-25
+2026-06-21 17:42:38,416 INFO SKIPPED date=2020-06-05 missing_entry_candle atm=10100 expiry=2020-06-25
+2026-06-21 17:42:38,433 INFO SKIPPED date=2020-06-08 missing_entry_candle atm=10300 expiry=2020-06-25
+2026-06-21 17:42:38,455 INFO SKIPPED date=2020-06-09 missing_entry_candle atm=10200 expiry=2020-06-25
+2026-06-21 17:42:38,455 INFO SKIPPED date=2020-06-10 missing_entry_candle atm=10100 expiry=2020-06-25
+2026-06-21 17:42:38,470 INFO SKIPPED date=2020-06-11 missing_entry_candle atm=10050 expiry=2020-06-25
+2026-06-21 17:42:38,479 INFO SKIPPED date=2020-06-12 missing_entry_candle atm=9650 expiry=2020-06-25
+2026-06-21 17:42:38,496 INFO SKIPPED date=2020-06-15 missing_entry_candle atm=9900 expiry=2020-06-25
+2026-06-21 17:42:38,496 INFO SKIPPED date=2020-06-16 missing_entry_candle atm=10050 expiry=2020-06-25
+2026-06-21 17:42:38,496 INFO SKIPPED date=2020-06-17 missing_entry_candle atm=9850 expiry=2020-06-25
+2026-06-21 17:42:38,497 INFO SKIPPED date=2020-06-18 missing_entry_candle atm=9850 expiry=2020-06-25
+2026-06-21 17:42:38,497 INFO TRADED date=2020-06-19 day=Friday expiry=2020-06-25 atm=10150 qty=300 ce=147.35 pe=172.05 sl=[CE_SL,PE_SL] net=-19864.00
+2026-06-21 17:42:38,498 INFO TRADED date=2020-06-22 day=Monday expiry=2020-06-25 atm=10300 qty=300 ce=120.25 pe=136.70 sl=[CE_SL] net=35.00
+2026-06-21 17:42:38,515 INFO SKIPPED date=2020-06-23 balance_failed ce=72.30 pe=132.65
+2026-06-21 17:42:38,534 INFO TRADED date=2020-06-24 day=Wednesday expiry=2020-06-25 atm=10500 qty=300 ce=72.20 pe=78.00 sl=[CE_SL,PE_SL] net=-9712.00
+2026-06-21 17:42:38,545 INFO SKIPPED date=2020-06-25 missing_entry_candle atm=10200 expiry=2020-07-30
+2026-06-21 17:42:38,551 INFO SKIPPED date=2020-06-26 missing_entry_candle atm=10350 expiry=2020-07-30
+2026-06-21 17:42:38,561 INFO SKIPPED date=2020-06-29 missing_entry_candle atm=10300 expiry=2020-07-30
+2026-06-21 17:42:38,572 INFO SKIPPED date=2020-06-30 missing_entry_candle atm=10400 expiry=2020-07-30
+2026-06-21 17:42:38,572 INFO SKIPPED date=2020-07-01 missing_entry_candle atm=10350 expiry=2020-07-30
+2026-06-21 17:42:38,586 INFO SKIPPED date=2020-07-02 missing_entry_candle atm=10500 expiry=2020-07-30
+2026-06-21 17:42:38,598 INFO SKIPPED date=2020-07-03 missing_entry_candle atm=10600 expiry=2020-07-30
+2026-06-21 17:42:38,613 INFO SKIPPED date=2020-07-06 missing_entry_candle atm=10700 expiry=2020-07-30
+2026-06-21 17:42:38,622 INFO SKIPPED date=2020-07-07 missing_entry_candle atm=10750 expiry=2020-07-30
+2026-06-21 17:42:38,632 INFO SKIPPED date=2020-07-08 missing_entry_candle atm=10850 expiry=2020-07-30
+2026-06-21 17:42:38,633 INFO SKIPPED date=2020-07-09 missing_entry_candle atm=10750 expiry=2020-07-30
+2026-06-21 17:42:38,692 INFO SKIPPED date=2020-07-10 missing_entry_candle atm=10800 expiry=2020-07-30
+2026-06-21 17:42:38,692 INFO SKIPPED date=2020-07-13 missing_entry_candle atm=10850 expiry=2020-07-30
+2026-06-21 17:42:38,692 INFO SKIPPED date=2020-07-14 missing_entry_candle atm=10750 expiry=2020-07-30
+2026-06-21 17:42:38,692 INFO SKIPPED date=2020-07-15 missing_entry_candle atm=10700 expiry=2020-07-30
+2026-06-21 17:42:38,693 INFO SKIPPED date=2020-07-16 missing_entry_candle atm=10600 expiry=2020-07-30
+2026-06-21 17:42:38,693 INFO SKIPPED date=2020-07-17 missing_entry_candle atm=10800 expiry=2020-07-30
+2026-06-21 17:42:38,710 INFO SKIPPED date=2020-07-20 missing_entry_candle atm=11000 expiry=2020-07-30
+2026-06-21 17:42:38,726 INFO SKIPPED date=2020-07-21 missing_entry_candle atm=11150 expiry=2020-07-30
+2026-06-21 17:42:38,727 INFO SKIPPED date=2020-07-22 missing_entry_candle atm=11150 expiry=2020-07-30
+2026-06-21 17:42:38,727 INFO SKIPPED date=2020-07-23 missing_entry_candle atm=11150 expiry=2020-07-30
+2026-06-21 17:42:38,727 INFO SKIPPED date=2020-07-24 balance_failed ce=102.80 pe=133.75
+2026-06-21 17:42:38,744 INFO TRADED date=2020-07-27 day=Monday expiry=2020-07-30 atm=11200 qty=300 ce=94.00 pe=114.15 sl=[PE_SL] net=4046.00
+2026-06-21 17:42:38,744 INFO SKIPPED date=2020-07-28 balance_failed ce=72.40 pe=99.45
+2026-06-21 17:42:38,762 INFO SKIPPED date=2020-07-29 balance_failed ce=81.70 pe=51.15
+2026-06-21 17:42:38,777 INFO SKIPPED date=2020-07-30 missing_entry_candle atm=11250 expiry=2020-08-27
+2026-06-21 17:42:38,787 INFO SKIPPED date=2020-07-31 missing_entry_candle atm=11050 expiry=2020-08-27
+2026-06-21 17:42:38,807 INFO SKIPPED date=2020-08-03 missing_entry_candle atm=11000 expiry=2020-08-27
+2026-06-21 17:42:38,816 INFO SKIPPED date=2020-08-04 missing_entry_candle atm=10950 expiry=2020-08-27
+2026-06-21 17:42:38,832 INFO SKIPPED date=2020-08-05 missing_entry_candle atm=11200 expiry=2020-08-27
+2026-06-21 17:42:38,844 INFO SKIPPED date=2020-08-06 missing_entry_candle atm=11150 expiry=2020-08-27
+2026-06-21 17:42:38,845 INFO SKIPPED date=2020-08-07 missing_entry_candle atm=11200 expiry=2020-08-27
+2026-06-21 17:42:38,861 INFO SKIPPED date=2020-08-10 missing_entry_candle atm=11300 expiry=2020-08-27
+2026-06-21 17:42:38,879 INFO SKIPPED date=2020-08-11 missing_entry_candle atm=11350 expiry=2020-08-27
+2026-06-21 17:42:38,879 INFO SKIPPED date=2020-08-12 missing_entry_candle atm=11250 expiry=2020-08-27
+2026-06-21 17:42:38,879 INFO SKIPPED date=2020-08-13 missing_entry_candle atm=11350 expiry=2020-08-27
+2026-06-21 17:42:38,879 INFO SKIPPED date=2020-08-14 missing_entry_candle atm=11350 expiry=2020-08-27
+2026-06-21 17:42:38,880 INFO SKIPPED date=2020-08-17 missing_entry_candle atm=11200 expiry=2020-08-27
+2026-06-21 17:42:38,880 INFO SKIPPED date=2020-08-18 missing_entry_candle atm=11300 expiry=2020-08-27
+2026-06-21 17:42:38,897 INFO SKIPPED date=2020-08-19 missing_entry_candle atm=11450 expiry=2020-08-27
+2026-06-21 17:42:38,897 INFO SKIPPED date=2020-08-20 missing_entry_candle atm=11300 expiry=2020-08-27
+2026-06-21 17:42:38,914 INFO TRADED date=2020-08-21 day=Friday expiry=2020-08-27 atm=11400 qty=300 ce=89.30 pe=99.45 sl=[none] net=5165.00
+2026-06-21 17:42:38,915 INFO SKIPPED date=2020-08-24 balance_failed ce=63.60 pe=85.20
+2026-06-21 17:42:38,935 INFO TRADED date=2020-08-25 day=Tuesday expiry=2020-08-27 atm=11500 qty=300 ce=66.55 pe=60.00 sl=[PE_SL] net=2555.00
+2026-06-21 17:42:38,936 INFO TRADED date=2020-08-26 day=Wednesday expiry=2020-08-27 atm=11500 qty=300 ce=45.75 pe=57.15 sl=[CE_SL,PE_SL] net=-6874.00
+2026-06-21 17:42:38,954 INFO SKIPPED date=2020-08-27 missing_entry_candle atm=11600 expiry=2020-09-24
+2026-06-21 17:42:38,955 INFO SKIPPED date=2020-08-28 missing_entry_candle atm=11600 expiry=2020-09-24
+2026-06-21 17:42:38,972 INFO SKIPPED date=2020-08-31 missing_entry_candle atm=11800 expiry=2020-09-24
+2026-06-21 17:42:38,991 INFO SKIPPED date=2020-09-01 missing_entry_candle atm=11400 expiry=2020-09-24
+2026-06-21 17:42:39,008 INFO SKIPPED date=2020-09-02 missing_entry_candle atm=11450 expiry=2020-09-24
+2026-06-21 17:42:39,024 INFO SKIPPED date=2020-09-03 missing_entry_candle atm=11550 expiry=2020-09-24
+2026-06-21 17:42:39,040 INFO SKIPPED date=2020-09-04 missing_entry_candle atm=11350 expiry=2020-09-24
+2026-06-21 17:42:39,040 INFO SKIPPED date=2020-09-07 missing_entry_candle atm=11350 expiry=2020-09-24
+2026-06-21 17:42:39,040 INFO SKIPPED date=2020-09-08 missing_entry_candle atm=11350 expiry=2020-09-24
+2026-06-21 17:42:39,062 INFO SKIPPED date=2020-09-09 missing_entry_candle atm=11250 expiry=2020-09-24
+2026-06-21 17:42:39,062 INFO SKIPPED date=2020-09-10 missing_entry_candle atm=11350 expiry=2020-09-24
+2026-06-21 17:42:39,062 INFO SKIPPED date=2020-09-11 missing_entry_candle atm=11450 expiry=2020-09-24
+2026-06-21 17:42:39,062 INFO SKIPPED date=2020-09-14 missing_entry_candle atm=11550 expiry=2020-09-24
+2026-06-21 17:42:39,079 INFO SKIPPED date=2020-09-15 missing_entry_candle atm=11500 expiry=2020-09-24
+2026-06-21 17:42:39,079 INFO SKIPPED date=2020-09-16 missing_entry_candle atm=11550 expiry=2020-09-24
+2026-06-21 17:42:39,079 INFO SKIPPED date=2020-09-17 missing_entry_candle atm=11550 expiry=2020-09-24
+2026-06-21 17:42:39,080 INFO TRADED date=2020-09-18 day=Friday expiry=2020-09-24 atm=11550 qty=300 ce=108.40 pe=96.50 sl=[PE_SL] net=1985.00
+2026-06-21 17:42:39,081 INFO TRADED date=2020-09-21 day=Monday expiry=2020-09-24 atm=11500 qty=300 ce=83.90 pe=88.55 sl=[PE_SL] net=13037.00
+2026-06-21 17:42:39,081 INFO SKIPPED date=2020-09-22 balance_failed ce=99.75 pe=75.25
+2026-06-21 17:42:39,082 INFO TRADED date=2020-09-23 day=Wednesday expiry=2020-09-24 atm=11250 qty=300 ce=50.50 pe=62.60 sl=[PE_SL] net=7214.00
+2026-06-21 17:42:39,098 INFO SKIPPED date=2020-09-24 missing_entry_candle atm=11000 expiry=2020-10-29
+2026-06-21 17:42:39,108 INFO SKIPPED date=2020-09-25 missing_entry_candle atm=10900 expiry=2020-10-29
+2026-06-21 17:42:39,118 INFO SKIPPED date=2020-09-28 missing_entry_candle atm=11100 expiry=2020-10-29
+2026-06-21 17:42:39,131 INFO SKIPPED date=2020-09-29 missing_entry_candle atm=11300 expiry=2020-10-29
+2026-06-21 17:42:39,140 INFO SKIPPED date=2020-09-30 missing_entry_candle atm=11250 expiry=2020-10-29
+2026-06-21 17:42:39,149 INFO SKIPPED date=2020-10-01 missing_entry_candle atm=11350 expiry=2020-10-29
+2026-06-21 17:42:39,162 INFO SKIPPED date=2020-10-05 missing_entry_candle atm=11550 expiry=2020-10-29
+2026-06-21 17:42:39,183 INFO SKIPPED date=2020-10-06 missing_entry_candle atm=11600 expiry=2020-10-29
+2026-06-21 17:42:39,201 INFO SKIPPED date=2020-10-07 missing_entry_candle atm=11650 expiry=2020-10-29
+2026-06-21 17:42:39,219 INFO SKIPPED date=2020-10-08 missing_entry_candle atm=11850 expiry=2020-10-29
+2026-06-21 17:42:39,220 INFO SKIPPED date=2020-10-09 missing_entry_candle atm=11850 expiry=2020-10-29
+2026-06-21 17:42:39,240 INFO SKIPPED date=2020-10-12 missing_entry_candle atm=12000 expiry=2020-10-29
+2026-06-21 17:42:39,260 INFO SKIPPED date=2020-10-13 missing_entry_candle atm=11900 expiry=2020-10-29
+2026-06-21 17:42:39,260 INFO SKIPPED date=2020-10-14 missing_entry_candle atm=11900 expiry=2020-10-29
+2026-06-21 17:42:39,279 INFO SKIPPED date=2020-10-15 missing_entry_candle atm=11950 expiry=2020-10-29
+2026-06-21 17:42:39,300 INFO SKIPPED date=2020-10-16 missing_entry_candle atm=11750 expiry=2020-10-29
+2026-06-21 17:42:39,300 INFO SKIPPED date=2020-10-19 missing_entry_candle atm=11850 expiry=2020-10-29
+2026-06-21 17:42:39,300 INFO SKIPPED date=2020-10-20 missing_entry_candle atm=11900 expiry=2020-10-29
+2026-06-21 17:42:39,300 INFO SKIPPED date=2020-10-21 missing_entry_candle atm=12000 expiry=2020-10-29
+2026-06-21 17:42:39,300 INFO SKIPPED date=2020-10-22 missing_entry_candle atm=11950 expiry=2020-10-29
+2026-06-21 17:42:39,301 INFO TRADED date=2020-10-23 day=Friday expiry=2020-10-29 atm=11950 qty=300 ce=120.25 pe=105.85 sl=[PE_SL] net=1289.00
+2026-06-21 17:42:39,302 INFO TRADED date=2020-10-26 day=Monday expiry=2020-10-29 atm=11900 qty=300 ce=91.00 pe=107.00 sl=[PE_SL] net=5360.00
+2026-06-21 17:42:39,319 INFO SKIPPED date=2020-10-27 balance_failed ce=80.70 pe=103.20
+2026-06-21 17:42:39,319 INFO SKIPPED date=2020-10-28 balance_failed ce=56.70 pe=92.75
+2026-06-21 17:42:39,330 INFO SKIPPED date=2020-10-29 missing_entry_candle atm=11600 expiry=2020-11-26
+2026-06-21 17:42:39,341 INFO SKIPPED date=2020-10-30 missing_entry_candle atm=11700 expiry=2020-11-26
+2026-06-21 17:42:39,344 INFO SKIPPED date=2020-11-02 missing_entry_candle atm=11650 expiry=2020-11-26
+2026-06-21 17:42:39,347 INFO SKIPPED date=2020-11-03 missing_entry_candle atm=11750 expiry=2020-11-26
+2026-06-21 17:42:39,350 INFO SKIPPED date=2020-11-04 missing_entry_candle atm=11850 expiry=2020-11-26
+2026-06-21 17:42:39,358 INFO SKIPPED date=2020-11-05 missing_entry_candle atm=12050 expiry=2020-11-26
+2026-06-21 17:42:39,365 INFO SKIPPED date=2020-11-06 missing_entry_candle atm=12150 expiry=2020-11-26
+2026-06-21 17:42:39,383 INFO SKIPPED date=2020-11-09 missing_entry_candle atm=12400 expiry=2020-11-26
+2026-06-21 17:42:39,403 INFO SKIPPED date=2020-11-10 missing_entry_candle atm=12500 expiry=2020-11-26
+2026-06-21 17:42:39,431 INFO SKIPPED date=2020-11-11 missing_entry_candle atm=12700 expiry=2020-11-26
+2026-06-21 17:42:39,431 INFO SKIPPED date=2020-11-12 missing_entry_candle atm=12700 expiry=2020-11-26
+2026-06-21 17:42:39,464 INFO SKIPPED date=2020-11-13 missing_entry_candle atm=12650 expiry=2020-11-26
+2026-06-21 17:42:39,497 INFO SKIPPED date=2020-11-17 missing_entry_candle atm=12850 expiry=2020-11-26
+2026-06-21 17:42:39,534 INFO SKIPPED date=2020-11-18 missing_entry_candle atm=12900 expiry=2020-11-26
+2026-06-21 17:42:39,535 INFO SKIPPED date=2020-11-19 missing_entry_candle atm=12900 expiry=2020-11-26
+2026-06-21 17:42:39,536 INFO TRADED date=2020-11-20 day=Friday expiry=2020-11-26 atm=12850 qty=300 ce=102.70 pe=115.05 sl=[CE_SL,PE_SL] net=-13765.00
+2026-06-21 17:42:39,581 INFO TRADED date=2020-11-23 day=Monday expiry=2020-11-26 atm=12950 qty=300 ce=82.50 pe=96.55 sl=[CE_SL,PE_SL] net=-11443.00
+2026-06-21 17:42:39,609 INFO TRADED date=2020-11-24 day=Tuesday expiry=2020-11-26 atm=13000 qty=300 ce=81.65 pe=84.50 sl=[CE_SL] net=5066.00
+2026-06-21 17:42:39,630 INFO SKIPPED date=2020-11-25 balance_failed ce=83.05 pe=55.25
+2026-06-21 17:42:39,639 INFO SKIPPED date=2020-11-26 missing_entry_candle atm=12900 expiry=2020-12-31
+2026-06-21 17:42:39,654 INFO SKIPPED date=2020-11-27 missing_entry_candle atm=13000 expiry=2020-12-31
+2026-06-21 17:42:39,654 INFO SKIPPED date=2020-12-01 missing_entry_candle atm=13000 expiry=2020-12-31
+2026-06-21 17:42:39,663 INFO SKIPPED date=2020-12-02 missing_entry_candle atm=13100 expiry=2020-12-31
+2026-06-21 17:42:39,669 INFO SKIPPED date=2020-12-03 missing_entry_candle atm=13150 expiry=2020-12-31
+2026-06-21 17:42:39,680 INFO SKIPPED date=2020-12-04 missing_entry_candle atm=13200 expiry=2020-12-31
+2026-06-21 17:42:39,691 INFO SKIPPED date=2020-12-07 missing_entry_candle atm=13300 expiry=2020-12-31
+2026-06-21 17:42:39,702 INFO SKIPPED date=2020-12-08 missing_entry_candle atm=13400 expiry=2020-12-31
+2026-06-21 17:42:39,714 INFO SKIPPED date=2020-12-09 missing_entry_candle atm=13450 expiry=2020-12-31
+2026-06-21 17:42:39,729 INFO SKIPPED date=2020-12-10 missing_entry_candle atm=13500 expiry=2020-12-31
+2026-06-21 17:42:39,740 INFO SKIPPED date=2020-12-11 missing_entry_candle atm=13550 expiry=2020-12-31
+2026-06-21 17:42:39,756 INFO SKIPPED date=2020-12-14 missing_entry_candle atm=13600 expiry=2020-12-31
+2026-06-21 17:42:39,756 INFO SKIPPED date=2020-12-15 missing_entry_candle atm=13500 expiry=2020-12-31
+2026-06-21 17:42:39,768 INFO SKIPPED date=2020-12-16 missing_entry_candle atm=13650 expiry=2020-12-31
+2026-06-21 17:42:39,785 INFO SKIPPED date=2020-12-17 missing_entry_candle atm=13700 expiry=2020-12-31
+2026-06-21 17:42:39,805 INFO SKIPPED date=2020-12-18 missing_entry_candle atm=13750 expiry=2020-12-31
+2026-06-21 17:42:39,806 INFO SKIPPED date=2020-12-21 missing_entry_candle atm=13700 expiry=2020-12-31
+2026-06-21 17:42:39,806 INFO SKIPPED date=2020-12-22 missing_entry_candle atm=13400 expiry=2020-12-31
+2026-06-21 17:42:39,807 INFO SKIPPED date=2020-12-23 missing_entry_candle atm=13500 expiry=2020-12-31
+2026-06-21 17:42:39,807 INFO SKIPPED date=2020-12-24 missing_entry_candle atm=13700 expiry=2020-12-31
+2026-06-21 17:42:39,825 INFO TRADED date=2020-12-28 day=Monday expiry=2020-12-31 atm=13850 qty=300 ce=100.20 pe=99.50 sl=[none] net=4520.00
+2026-06-21 17:42:39,841 INFO TRADED date=2020-12-29 day=Tuesday expiry=2020-12-31 atm=13950 qty=300 ce=80.15 pe=79.50 sl=[PE_SL] net=-1690.00
+2026-06-21 17:42:39,855 INFO SKIPPED date=2020-12-30 balance_failed ce=92.15 pe=70.30
+2026-06-21 17:42:39,867 INFO SKIPPED date=2020-12-31 missing_entry_candle atm=13950 expiry=2021-01-28
+2026-06-21 17:42:39,883 INFO SKIPPED date=2021-01-01 missing_entry_candle atm=14000 expiry=2021-01-28
+2026-06-21 17:42:39,897 INFO SKIPPED date=2021-01-04 missing_entry_candle atm=14100 expiry=2021-01-28
+2026-06-21 17:42:39,897 INFO SKIPPED date=2021-01-05 missing_entry_candle atm=14100 expiry=2021-01-28
+2026-06-21 17:42:39,912 INFO SKIPPED date=2021-01-06 missing_entry_candle atm=14250 expiry=2021-01-28
+2026-06-21 17:42:39,912 INFO SKIPPED date=2021-01-07 missing_entry_candle atm=14250 expiry=2021-01-28
+2026-06-21 17:42:39,913 INFO SKIPPED date=2021-01-08 missing_entry_candle atm=14250 expiry=2021-01-28
+2026-06-21 17:42:39,927 INFO SKIPPED date=2021-01-11 missing_entry_candle atm=14400 expiry=2021-01-28
+2026-06-21 17:42:39,942 INFO SKIPPED date=2021-01-12 missing_entry_candle atm=14450 expiry=2021-01-28
+2026-06-21 17:42:39,955 INFO SKIPPED date=2021-01-13 missing_entry_candle atm=14650 expiry=2021-01-28
+2026-06-21 17:42:39,969 INFO SKIPPED date=2021-01-14 missing_entry_candle atm=14550 expiry=2021-01-28
+2026-06-21 17:42:39,986 INFO SKIPPED date=2021-01-15 missing_entry_candle atm=14600 expiry=2021-01-28
+2026-06-21 17:42:39,986 INFO SKIPPED date=2021-01-18 missing_entry_candle atm=14400 expiry=2021-01-28
+2026-06-21 17:42:39,986 INFO SKIPPED date=2021-01-19 missing_entry_candle atm=14400 expiry=2021-01-28
+2026-06-21 17:42:39,986 INFO SKIPPED date=2021-01-20 missing_entry_candle atm=14550 expiry=2021-01-28
+2026-06-21 17:42:40,000 INFO SKIPPED date=2021-01-21 missing_entry_candle atm=14750 expiry=2021-01-28
+2026-06-21 17:42:40,001 INFO TRADED date=2021-01-22 day=Friday expiry=2021-01-28 atm=14600 qty=300 ce=130.30 pe=148.85 sl=[PE_SL] net=13724.00
+2026-06-21 17:42:40,002 INFO TRADED date=2021-01-25 day=Monday expiry=2021-01-28 atm=14450 qty=300 ce=124.00 pe=121.75 sl=[PE_SL] net=21455.00
+2026-06-21 17:42:40,017 INFO SKIPPED date=2021-01-27 balance_failed ce=108.40 pe=83.10
+2026-06-21 17:42:40,023 INFO SKIPPED date=2021-01-28 missing_entry_candle atm=13850 expiry=2021-02-25
+2026-06-21 17:42:40,031 INFO SKIPPED date=2021-01-29 missing_entry_candle atm=13950 expiry=2021-02-25
+2026-06-21 17:42:40,039 INFO SKIPPED date=2021-02-01 missing_entry_candle atm=13750 expiry=2021-02-25
+2026-06-21 17:42:40,051 INFO SKIPPED date=2021-02-02 missing_entry_candle atm=14550 expiry=2021-02-25
+2026-06-21 17:42:40,066 INFO SKIPPED date=2021-02-03 missing_entry_candle atm=14600 expiry=2021-02-25
+2026-06-21 17:42:40,081 INFO SKIPPED date=2021-02-04 missing_entry_candle atm=14750 expiry=2021-02-25
+2026-06-21 17:42:40,097 INFO SKIPPED date=2021-02-05 missing_entry_candle atm=15000 expiry=2021-02-25
+2026-06-21 17:42:40,113 INFO SKIPPED date=2021-02-08 missing_entry_candle atm=15100 expiry=2021-02-25
+2026-06-21 17:42:40,130 INFO SKIPPED date=2021-02-09 missing_entry_candle atm=15150 expiry=2021-02-25
+2026-06-21 17:42:40,130 INFO SKIPPED date=2021-02-10 missing_entry_candle atm=15150 expiry=2021-02-25
+2026-06-21 17:42:40,130 INFO SKIPPED date=2021-02-11 missing_entry_candle atm=15100 expiry=2021-02-25
+2026-06-21 17:42:40,146 INFO SKIPPED date=2021-02-12 missing_entry_candle atm=15200 expiry=2021-02-25
+2026-06-21 17:42:40,164 INFO SKIPPED date=2021-02-15 missing_entry_candle atm=15300 expiry=2021-02-25
+2026-06-21 17:42:40,255 INFO SKIPPED date=2021-02-16 missing_entry_candle atm=15400 expiry=2021-02-25
+2026-06-21 17:42:40,268 INFO SKIPPED date=2021-02-17 missing_entry_candle atm=15250 expiry=2021-02-25
+2026-06-21 17:42:40,268 INFO SKIPPED date=2021-02-18 missing_entry_candle atm=15250 expiry=2021-02-25
+2026-06-21 17:42:40,283 INFO TRADED date=2021-02-19 day=Friday expiry=2021-02-25 atm=15050 qty=300 ce=139.00 pe=144.85 sl=[CE_SL,PE_SL] net=-17731.00
+2026-06-21 17:42:40,299 INFO TRADED date=2021-02-22 day=Monday expiry=2021-02-25 atm=14950 qty=300 ce=128.60 pe=122.80 sl=[CE_SL,PE_SL] net=-15784.00
+2026-06-21 17:42:40,314 INFO TRADED date=2021-02-23 day=Tuesday expiry=2021-02-25 atm=14700 qty=300 ce=122.75 pe=107.90 sl=[CE_SL,PE_SL] net=-14539.00
+2026-06-21 17:42:40,316 INFO TRADED date=2021-02-24 day=Wednesday expiry=2021-02-25 atm=14750 qty=300 ce=93.30 pe=80.50 sl=[CE_SL] net=-5698.00
+2026-06-21 17:42:40,326 INFO SKIPPED date=2021-02-25 missing_entry_candle atm=15150 expiry=2021-03-25
+2026-06-21 17:42:40,343 INFO SKIPPED date=2021-02-26 missing_entry_candle atm=14850 expiry=2021-03-25
+2026-06-21 17:42:40,364 INFO SKIPPED date=2021-03-01 missing_entry_candle atm=14700 expiry=2021-03-25
+2026-06-21 17:42:40,365 INFO SKIPPED date=2021-03-02 missing_entry_candle atm=14850 expiry=2021-03-25
+2026-06-21 17:42:40,377 INFO SKIPPED date=2021-03-03 missing_entry_candle atm=15050 expiry=2021-03-25
+2026-06-21 17:42:40,377 INFO SKIPPED date=2021-03-04 missing_entry_candle atm=15050 expiry=2021-03-25
+2026-06-21 17:42:40,394 INFO SKIPPED date=2021-03-05 missing_entry_candle atm=15000 expiry=2021-03-25
+2026-06-21 17:42:40,394 INFO SKIPPED date=2021-03-08 missing_entry_candle atm=15050 expiry=2021-03-25
+2026-06-21 17:42:40,409 INFO SKIPPED date=2021-03-09 missing_entry_candle atm=15100 expiry=2021-03-25
+2026-06-21 17:42:40,424 INFO SKIPPED date=2021-03-10 missing_entry_candle atm=15200 expiry=2021-03-25
+2026-06-21 17:42:40,439 INFO SKIPPED date=2021-03-12 missing_entry_candle atm=15300 expiry=2021-03-25
+2026-06-21 17:42:40,453 INFO SKIPPED date=2021-03-15 missing_entry_candle atm=14950 expiry=2021-03-25
+2026-06-21 17:42:40,454 INFO SKIPPED date=2021-03-16 missing_entry_candle atm=15000 expiry=2021-03-25
+2026-06-21 17:42:40,474 INFO SKIPPED date=2021-03-17 missing_entry_candle atm=14900 expiry=2021-03-25
+2026-06-21 17:42:40,474 INFO SKIPPED date=2021-03-18 missing_entry_candle atm=14850 expiry=2021-03-25
+2026-06-21 17:42:40,494 INFO TRADED date=2021-03-19 day=Friday expiry=2021-03-25 atm=14400 qty=300 ce=231.40 pe=188.75 sl=[CE_SL,PE_SL] net=-25909.00
+2026-06-21 17:42:40,512 INFO SKIPPED date=2021-03-22 balance_failed ce=185.05 pe=143.15
+2026-06-21 17:42:40,529 INFO TRADED date=2021-03-23 day=Tuesday expiry=2021-03-25 atm=14800 qty=300 ce=119.40 pe=130.20 sl=[CE_SL,PE_SL] net=-15676.00
+2026-06-21 17:42:40,529 INFO SKIPPED date=2021-03-24 balance_failed ce=115.60 pe=81.90
+2026-06-21 17:42:40,547 INFO SKIPPED date=2021-03-25 missing_entry_candle atm=14500 expiry=2021-04-29
+2026-06-21 17:42:40,568 INFO SKIPPED date=2021-03-26 missing_entry_candle atm=14450 expiry=2021-04-29
+2026-06-21 17:42:40,585 INFO SKIPPED date=2021-03-30 missing_entry_candle atm=14650 expiry=2021-04-29
+2026-06-21 17:42:40,605 INFO SKIPPED date=2021-03-31 missing_entry_candle atm=14750 expiry=2021-04-29
+2026-06-21 17:42:40,624 INFO SKIPPED date=2021-04-01 missing_entry_candle atm=14800 expiry=2021-04-29
+2026-06-21 17:42:40,624 INFO SKIPPED date=2021-04-05 missing_entry_candle atm=14750 expiry=2021-04-29
+2026-06-21 17:42:40,642 INFO SKIPPED date=2021-04-06 missing_entry_candle atm=14600 expiry=2021-04-29
+2026-06-21 17:42:40,642 INFO SKIPPED date=2021-04-07 missing_entry_candle atm=14750 expiry=2021-04-29
+2026-06-21 17:42:40,655 INFO SKIPPED date=2021-04-08 missing_entry_candle atm=14950 expiry=2021-04-29
+2026-06-21 17:42:40,671 INFO SKIPPED date=2021-04-09 missing_entry_candle atm=14850 expiry=2021-04-29
+2026-06-21 17:42:40,689 INFO SKIPPED date=2021-04-12 missing_entry_candle atm=14550 expiry=2021-04-29
+2026-06-21 17:42:40,706 INFO SKIPPED date=2021-04-13 missing_entry_candle atm=14300 expiry=2021-04-29
+2026-06-21 17:42:40,706 INFO SKIPPED date=2021-04-15 missing_entry_candle atm=14550 expiry=2021-04-29
+2026-06-21 17:42:40,707 INFO SKIPPED date=2021-04-16 missing_entry_candle atm=14600 expiry=2021-04-29
+2026-06-21 17:42:40,722 INFO SKIPPED date=2021-04-19 missing_entry_candle atm=14250 expiry=2021-04-29
+2026-06-21 17:42:40,723 INFO SKIPPED date=2021-04-20 missing_entry_candle atm=14500 expiry=2021-04-29
+2026-06-21 17:42:40,735 INFO SKIPPED date=2021-04-22 missing_entry_candle atm=14150 expiry=2021-04-29
+2026-06-21 17:42:40,752 INFO TRADED date=2021-04-23 day=Friday expiry=2021-04-29 atm=14400 qty=300 ce=165.15 pe=187.00 sl=[CE_SL,PE_SL] net=-21829.00
+2026-06-21 17:42:40,753 INFO TRADED date=2021-04-26 day=Monday expiry=2021-04-29 atm=14450 qty=300 ce=150.60 pe=140.40 sl=[CE_SL] net=-3106.00
+2026-06-21 17:42:40,754 INFO TRADED date=2021-04-27 day=Tuesday expiry=2021-04-29 atm=14550 qty=300 ce=103.35 pe=125.10 sl=[CE_SL] net=11594.00
+2026-06-21 17:42:40,754 INFO SKIPPED date=2021-04-28 balance_failed ce=68.70 pe=91.50
+2026-06-21 17:42:40,770 INFO SKIPPED date=2021-04-29 missing_entry_candle atm=15050 expiry=2021-05-27
+2026-06-21 17:42:40,787 INFO SKIPPED date=2021-04-30 missing_entry_candle atm=14800 expiry=2021-05-27
+2026-06-21 17:42:40,804 INFO SKIPPED date=2021-05-03 missing_entry_candle atm=14500 expiry=2021-05-27
+2026-06-21 17:42:40,819 INFO SKIPPED date=2021-05-04 missing_entry_candle atm=14700 expiry=2021-05-27
+2026-06-21 17:42:40,835 INFO SKIPPED date=2021-05-05 missing_entry_candle atm=14600 expiry=2021-05-27
+2026-06-21 17:42:40,844 INFO SKIPPED date=2021-05-06 missing_entry_candle atm=14650 expiry=2021-05-27
+2026-06-21 17:42:40,857 INFO SKIPPED date=2021-05-07 missing_entry_candle atm=14850 expiry=2021-05-27
+2026-06-21 17:42:40,871 INFO SKIPPED date=2021-05-10 missing_entry_candle atm=14950 expiry=2021-05-27
+2026-06-21 17:42:40,871 INFO SKIPPED date=2021-05-11 missing_entry_candle atm=14800 expiry=2021-05-27
+2026-06-21 17:42:40,871 INFO SKIPPED date=2021-05-12 missing_entry_candle atm=14800 expiry=2021-05-27
+2026-06-21 17:42:40,872 INFO SKIPPED date=2021-05-14 missing_entry_candle atm=14700 expiry=2021-05-27
+2026-06-21 17:42:40,882 INFO SKIPPED date=2021-05-17 missing_entry_candle atm=14750 expiry=2021-05-27
+2026-06-21 17:42:40,902 INFO SKIPPED date=2021-05-18 missing_entry_candle atm=15100 expiry=2021-05-27
+2026-06-21 17:42:40,902 INFO SKIPPED date=2021-05-19 missing_entry_candle atm=15100 expiry=2021-05-27
+2026-06-21 17:42:40,903 INFO SKIPPED date=2021-05-20 missing_entry_candle atm=15050 expiry=2021-05-27
+2026-06-21 17:42:40,922 INFO TRADED date=2021-05-21 day=Friday expiry=2021-05-27 atm=15000 qty=300 ce=138.45 pe=113.85 sl=[CE_SL] net=10793.00
+2026-06-21 17:42:40,940 INFO TRADED date=2021-05-24 day=Monday expiry=2021-05-27 atm=15250 qty=300 ce=103.75 pe=116.40 sl=[PE_SL] net=1991.00
+2026-06-21 17:42:40,940 INFO SKIPPED date=2021-05-25 balance_failed ce=91.60 pe=67.20
+2026-06-21 17:42:40,961 INFO TRADED date=2021-05-26 day=Wednesday expiry=2021-05-27 atm=15200 qty=300 ce=72.00 pe=59.75 sl=[CE_SL] net=7205.00
+2026-06-21 17:42:40,977 INFO SKIPPED date=2021-05-27 missing_entry_candle atm=15300 expiry=2021-06-24
+2026-06-21 17:42:40,994 INFO SKIPPED date=2021-05-28 missing_entry_candle atm=15450 expiry=2021-06-24
+2026-06-21 17:42:40,995 INFO SKIPPED date=2021-05-31 missing_entry_candle atm=15450 expiry=2021-06-24
+2026-06-21 17:42:41,012 INFO SKIPPED date=2021-06-01 missing_entry_candle atm=15600 expiry=2021-06-24
+2026-06-21 17:42:41,034 INFO SKIPPED date=2021-06-02 missing_entry_candle atm=15550 expiry=2021-06-24
+2026-06-21 17:42:41,053 INFO SKIPPED date=2021-06-03 missing_entry_candle atm=15650 expiry=2021-06-24
+2026-06-21 17:42:41,074 INFO SKIPPED date=2021-06-04 missing_entry_candle atm=15700 expiry=2021-06-24
+2026-06-21 17:42:41,074 INFO SKIPPED date=2021-06-07 missing_entry_candle atm=15700 expiry=2021-06-24
+2026-06-21 17:42:41,096 INFO SKIPPED date=2021-06-08 missing_entry_candle atm=15750 expiry=2021-06-24
+2026-06-21 17:42:41,096 INFO SKIPPED date=2021-06-09 missing_entry_candle atm=15750 expiry=2021-06-24
+2026-06-21 17:42:41,097 INFO SKIPPED date=2021-06-10 missing_entry_candle atm=15700 expiry=2021-06-24
+2026-06-21 17:42:41,115 INFO SKIPPED date=2021-06-11 missing_entry_candle atm=15800 expiry=2021-06-24
+2026-06-21 17:42:41,116 INFO SKIPPED date=2021-06-14 missing_entry_candle atm=15750 expiry=2021-06-24
+2026-06-21 17:42:41,136 INFO SKIPPED date=2021-06-15 missing_entry_candle atm=15850 expiry=2021-06-24
+2026-06-21 17:42:41,136 INFO SKIPPED date=2021-06-16 missing_entry_candle atm=15850 expiry=2021-06-24
+2026-06-21 17:42:41,137 INFO SKIPPED date=2021-06-17 missing_entry_candle atm=15700 expiry=2021-06-24
+2026-06-21 17:42:41,137 INFO TRADED date=2021-06-18 day=Friday expiry=2021-06-24 atm=15750 qty=300 ce=96.55 pe=117.50 sl=[PE_SL] net=-2920.00
+2026-06-21 17:42:41,138 INFO TRADED date=2021-06-21 day=Monday expiry=2021-06-24 atm=15550 qty=300 ce=106.00 pe=118.45 sl=[CE_SL] net=19775.00
+2026-06-21 17:42:41,138 INFO SKIPPED date=2021-06-22 balance_failed ce=60.90 pe=84.90
+2026-06-21 17:42:41,139 INFO SKIPPED date=2021-06-23 balance_failed ce=70.30 pe=51.20
+2026-06-21 17:42:41,156 INFO SKIPPED date=2021-06-24 missing_entry_candle atm=15750 expiry=2021-07-29
+2026-06-21 17:42:41,175 INFO SKIPPED date=2021-06-25 missing_entry_candle atm=15800 expiry=2021-07-29
+2026-06-21 17:42:41,192 INFO SKIPPED date=2021-06-28 missing_entry_candle atm=15900 expiry=2021-07-29
+2026-06-21 17:42:41,192 INFO SKIPPED date=2021-06-29 missing_entry_candle atm=15800 expiry=2021-07-29
+2026-06-21 17:42:41,192 INFO SKIPPED date=2021-06-30 missing_entry_candle atm=15800 expiry=2021-07-29
+2026-06-21 17:42:41,212 INFO SKIPPED date=2021-07-01 missing_entry_candle atm=15700 expiry=2021-07-29
+2026-06-21 17:42:41,212 INFO SKIPPED date=2021-07-02 missing_entry_candle atm=15700 expiry=2021-07-29
+2026-06-21 17:42:41,212 INFO SKIPPED date=2021-07-05 missing_entry_candle atm=15800 expiry=2021-07-29
+2026-06-21 17:42:41,229 INFO SKIPPED date=2021-07-06 missing_entry_candle atm=15850 expiry=2021-07-29
+2026-06-21 17:42:41,229 INFO SKIPPED date=2021-07-07 missing_entry_candle atm=15800 expiry=2021-07-29
+2026-06-21 17:42:41,229 INFO SKIPPED date=2021-07-08 missing_entry_candle atm=15850 expiry=2021-07-29
+2026-06-21 17:42:41,230 INFO SKIPPED date=2021-07-09 missing_entry_candle atm=15700 expiry=2021-07-29
+2026-06-21 17:42:41,230 INFO SKIPPED date=2021-07-12 missing_entry_candle atm=15750 expiry=2021-07-29
+2026-06-21 17:42:41,230 INFO SKIPPED date=2021-07-13 missing_entry_candle atm=15750 expiry=2021-07-29
+2026-06-21 17:42:41,230 INFO SKIPPED date=2021-07-14 missing_entry_candle atm=15800 expiry=2021-07-29
+2026-06-21 17:42:41,230 INFO SKIPPED date=2021-07-15 missing_entry_candle atm=15900 expiry=2021-07-29
+2026-06-21 17:42:41,253 INFO SKIPPED date=2021-07-16 missing_entry_candle atm=15950 expiry=2021-07-29
+2026-06-21 17:42:41,253 INFO SKIPPED date=2021-07-19 missing_entry_candle atm=15800 expiry=2021-07-29
+2026-06-21 17:42:41,253 INFO SKIPPED date=2021-07-20 missing_entry_candle atm=15700 expiry=2021-07-29
+2026-06-21 17:42:41,253 INFO SKIPPED date=2021-07-22 missing_entry_candle atm=15750 expiry=2021-07-29
+2026-06-21 17:42:41,254 INFO TRADED date=2021-07-23 day=Friday expiry=2021-07-29 atm=15850 qty=300 ce=88.00 pe=78.00 sl=[CE_SL,PE_SL] net=-10660.00
+2026-06-21 17:42:41,254 INFO SKIPPED date=2021-07-26 balance_failed ce=61.25 pe=95.65
+2026-06-21 17:42:41,255 INFO TRADED date=2021-07-27 day=Tuesday expiry=2021-07-29 atm=15850 qty=300 ce=69.45 pe=56.20 sl=[PE_SL] net=10658.00
+2026-06-21 17:42:41,271 INFO SKIPPED date=2021-07-28 balance_failed ce=81.00 pe=45.90
+2026-06-21 17:42:41,279 INFO SKIPPED date=2021-07-29 missing_entry_candle atm=15750 expiry=2021-08-26
+2026-06-21 17:42:41,294 INFO SKIPPED date=2021-07-30 missing_entry_candle atm=15800 expiry=2021-08-26
+2026-06-21 17:42:41,303 INFO SKIPPED date=2021-08-02 missing_entry_candle atm=15850 expiry=2021-08-26
+2026-06-21 17:42:41,313 INFO SKIPPED date=2021-08-03 missing_entry_candle atm=15950 expiry=2021-08-26
+2026-06-21 17:42:41,329 INFO SKIPPED date=2021-08-04 missing_entry_candle atm=16250 expiry=2021-08-26
+2026-06-21 17:42:41,330 INFO SKIPPED date=2021-08-05 missing_entry_candle atm=16250 expiry=2021-08-26
+2026-06-21 17:42:41,347 INFO SKIPPED date=2021-08-06 missing_entry_candle atm=16300 expiry=2021-08-26
+2026-06-21 17:42:41,348 INFO SKIPPED date=2021-08-09 missing_entry_candle atm=16300 expiry=2021-08-26
+2026-06-21 17:42:41,348 INFO SKIPPED date=2021-08-10 missing_entry_candle atm=16300 expiry=2021-08-26
+2026-06-21 17:42:41,349 INFO SKIPPED date=2021-08-11 missing_entry_candle atm=16300 expiry=2021-08-26
+2026-06-21 17:42:41,349 INFO SKIPPED date=2021-08-12 missing_entry_candle atm=16300 expiry=2021-08-26
+2026-06-21 17:42:41,369 INFO SKIPPED date=2021-08-13 missing_entry_candle atm=16400 expiry=2021-08-26
+2026-06-21 17:42:41,388 INFO SKIPPED date=2021-08-16 missing_entry_candle atm=16550 expiry=2021-08-26
+2026-06-21 17:42:41,389 INFO SKIPPED date=2021-08-17 missing_entry_candle atm=16550 expiry=2021-08-26
+2026-06-21 17:42:41,408 INFO SKIPPED date=2021-08-18 missing_entry_candle atm=16700 expiry=2021-08-26
+2026-06-21 17:42:41,429 INFO TRADED date=2021-08-20 day=Friday expiry=2021-08-26 atm=16450 qty=300 ce=106.20 pe=111.65 sl=[CE_SL,PE_SL] net=-13771.00
+2026-06-21 17:42:41,430 INFO TRADED date=2021-08-23 day=Monday expiry=2021-08-26 atm=16550 qty=300 ce=83.65 pe=82.60 sl=[PE_SL] net=4214.00
+2026-06-21 17:42:41,430 INFO SKIPPED date=2021-08-24 balance_failed ce=61.10 pe=83.40
+2026-06-21 17:42:41,455 INFO TRADED date=2021-08-25 day=Wednesday expiry=2021-08-26 atm=16650 qty=300 ce=53.30 pe=48.45 sl=[CE_SL,PE_SL] net=-6805.00
+2026-06-21 17:42:41,469 INFO SKIPPED date=2021-08-26 missing_entry_candle atm=16600 expiry=2021-09-30
+2026-06-21 17:42:41,478 INFO SKIPPED date=2021-08-27 missing_entry_candle atm=16650 expiry=2021-09-30
+2026-06-21 17:42:41,494 INFO SKIPPED date=2021-08-30 missing_entry_candle atm=16800 expiry=2021-09-30
+2026-06-21 17:42:41,503 INFO SKIPPED date=2021-08-31 missing_entry_candle atm=16950 expiry=2021-09-30
+2026-06-21 17:42:41,515 INFO SKIPPED date=2021-09-01 missing_entry_candle atm=17150 expiry=2021-09-30
+2026-06-21 17:42:41,535 INFO SKIPPED date=2021-09-02 missing_entry_candle atm=17100 expiry=2021-09-30
+2026-06-21 17:42:41,560 INFO SKIPPED date=2021-09-03 missing_entry_candle atm=17300 expiry=2021-09-30
+2026-06-21 17:42:41,578 INFO SKIPPED date=2021-09-06 missing_entry_candle atm=17400 expiry=2021-09-30
+2026-06-21 17:42:41,578 INFO SKIPPED date=2021-09-07 missing_entry_candle atm=17400 expiry=2021-09-30
+2026-06-21 17:42:41,578 INFO SKIPPED date=2021-09-08 missing_entry_candle atm=17400 expiry=2021-09-30
+2026-06-21 17:42:41,590 INFO SKIPPED date=2021-09-09 missing_entry_candle atm=17350 expiry=2021-09-30
+2026-06-21 17:42:41,591 INFO SKIPPED date=2021-09-13 missing_entry_candle atm=17350 expiry=2021-09-30
+2026-06-21 17:42:41,591 INFO SKIPPED date=2021-09-14 missing_entry_candle atm=17400 expiry=2021-09-30
+2026-06-21 17:42:41,591 INFO SKIPPED date=2021-09-15 missing_entry_candle atm=17400 expiry=2021-09-30
+2026-06-21 17:42:41,719 INFO SKIPPED date=2021-09-16 missing_entry_candle atm=17550 expiry=2021-09-30
+2026-06-21 17:42:41,740 INFO SKIPPED date=2021-09-17 missing_entry_candle atm=17700 expiry=2021-09-30
+2026-06-21 17:42:41,755 INFO SKIPPED date=2021-09-20 missing_entry_candle atm=17450 expiry=2021-09-30
+2026-06-21 17:42:41,755 INFO SKIPPED date=2021-09-21 missing_entry_candle atm=17450 expiry=2021-09-30
+2026-06-21 17:42:41,776 INFO SKIPPED date=2021-09-22 missing_entry_candle atm=17600 expiry=2021-09-30
+2026-06-21 17:42:41,793 INFO SKIPPED date=2021-09-23 missing_entry_candle atm=17650 expiry=2021-09-30
+2026-06-21 17:42:41,810 INFO TRADED date=2021-09-24 day=Friday expiry=2021-09-30 atm=17950 qty=300 ce=123.70 pe=147.60 sl=[PE_SL] net=3194.00
+2026-06-21 17:42:41,827 INFO TRADED date=2021-09-27 day=Monday expiry=2021-09-30 atm=17900 qty=300 ce=124.80 pe=101.40 sl=[PE_SL] net=7511.00
+2026-06-21 17:42:41,848 INFO TRADED date=2021-09-28 day=Tuesday expiry=2021-09-30 atm=17850 qty=300 ce=100.80 pe=96.35 sl=[PE_SL] net=8489.00
+2026-06-21 17:42:41,849 INFO TRADED date=2021-09-29 day=Wednesday expiry=2021-09-30 atm=17650 qty=300 ce=86.30 pe=91.25 sl=[CE_SL] net=7697.00
+2026-06-21 17:42:41,864 INFO SKIPPED date=2021-09-30 missing_entry_candle atm=17700 expiry=2021-10-28
+2026-06-21 17:42:41,881 INFO SKIPPED date=2021-10-01 missing_entry_candle atm=17500 expiry=2021-10-28
+2026-06-21 17:42:41,891 INFO SKIPPED date=2021-10-04 missing_entry_candle atm=17650 expiry=2021-10-28
+2026-06-21 17:42:41,891 INFO SKIPPED date=2021-10-05 missing_entry_candle atm=17700 expiry=2021-10-28
+2026-06-21 17:42:41,904 INFO SKIPPED date=2021-10-06 missing_entry_candle atm=17850 expiry=2021-10-28
+2026-06-21 17:42:41,921 INFO SKIPPED date=2021-10-07 missing_entry_candle atm=17800 expiry=2021-10-28
+2026-06-21 17:42:41,921 INFO SKIPPED date=2021-10-08 missing_entry_candle atm=17850 expiry=2021-10-28
+2026-06-21 17:42:41,937 INFO SKIPPED date=2021-10-11 missing_entry_candle atm=17900 expiry=2021-10-28
+2026-06-21 17:42:41,956 INFO SKIPPED date=2021-10-12 missing_entry_candle atm=17950 expiry=2021-10-28
+2026-06-21 17:42:41,972 INFO SKIPPED date=2021-10-13 missing_entry_candle atm=18050 expiry=2021-10-28
+2026-06-21 17:42:41,988 INFO SKIPPED date=2021-10-14 missing_entry_candle atm=18300 expiry=2021-10-28
+2026-06-21 17:42:42,004 INFO SKIPPED date=2021-10-18 missing_entry_candle atm=18450 expiry=2021-10-28
+2026-06-21 17:42:42,017 INFO SKIPPED date=2021-10-19 missing_entry_candle atm=18550 expiry=2021-10-28
+2026-06-21 17:42:42,034 INFO SKIPPED date=2021-10-20 missing_entry_candle atm=18400 expiry=2021-10-28
+2026-06-21 17:42:42,054 INFO SKIPPED date=2021-10-21 missing_entry_candle atm=18350 expiry=2021-10-28
+2026-06-21 17:42:42,071 INFO TRADED date=2021-10-22 day=Friday expiry=2021-10-28 atm=18250 qty=300 ce=154.80 pe=132.60 sl=[PE_SL] net=11684.00
+2026-06-21 17:42:42,088 INFO SKIPPED date=2021-10-25 balance_failed ce=159.70 pe=124.75
+2026-06-21 17:42:42,106 INFO TRADED date=2021-10-26 day=Tuesday expiry=2021-10-28 atm=18200 qty=300 ce=122.60 pe=107.20 sl=[CE_SL,PE_SL] net=-14488.00
+2026-06-21 17:42:42,107 INFO TRADED date=2021-10-27 day=Wednesday expiry=2021-10-28 atm=18300 qty=300 ce=83.60 pe=87.40 sl=[CE_SL,PE_SL] net=-10960.00
+2026-06-21 17:42:42,117 INFO SKIPPED date=2021-10-28 missing_entry_candle atm=18150 expiry=2021-11-25
+2026-06-21 17:42:42,132 INFO SKIPPED date=2021-10-29 missing_entry_candle atm=17700 expiry=2021-11-25
+2026-06-21 17:42:42,148 INFO SKIPPED date=2021-11-01 missing_entry_candle atm=17800 expiry=2021-11-25
+2026-06-21 17:42:42,163 INFO SKIPPED date=2021-11-02 missing_entry_candle atm=18000 expiry=2021-11-25
+2026-06-21 17:42:42,180 INFO SKIPPED date=2021-11-03 missing_entry_candle atm=17950 expiry=2021-11-25
+2026-06-21 17:42:42,180 INFO SKIPPED date=2021-11-08 missing_entry_candle atm=17950 expiry=2021-11-25
+2026-06-21 17:42:42,191 INFO SKIPPED date=2021-11-09 missing_entry_candle atm=18050 expiry=2021-11-25
+2026-06-21 17:42:42,191 INFO SKIPPED date=2021-11-10 missing_entry_candle atm=17950 expiry=2021-11-25
+2026-06-21 17:42:42,191 INFO SKIPPED date=2021-11-11 missing_entry_candle atm=17950 expiry=2021-11-25
+2026-06-21 17:42:42,192 INFO SKIPPED date=2021-11-12 missing_entry_candle atm=18000 expiry=2021-11-25
+2026-06-21 17:42:42,205 INFO SKIPPED date=2021-11-15 missing_entry_candle atm=18200 expiry=2021-11-25
+2026-06-21 17:42:42,218 INFO SKIPPED date=2021-11-16 missing_entry_candle atm=18100 expiry=2021-11-25
+2026-06-21 17:42:42,218 INFO SKIPPED date=2021-11-17 missing_entry_candle atm=17950 expiry=2021-11-25
+2026-06-21 17:42:42,219 INFO SKIPPED date=2021-11-18 missing_entry_candle atm=17950 expiry=2021-11-25
+2026-06-21 17:42:42,219 INFO TRADED date=2021-11-22 day=Monday expiry=2021-11-25 atm=17700 qty=300 ce=133.90 pe=128.75 sl=[PE_SL] net=23165.00
+2026-06-21 17:42:42,233 INFO SKIPPED date=2021-11-23 balance_failed ce=147.40 pe=102.60
+2026-06-21 17:42:42,249 INFO TRADED date=2021-11-24 day=Wednesday expiry=2021-11-25 atm=17500 qty=300 ce=91.20 pe=80.60 sl=[CE_SL,PE_SL] net=-11008.00
+2026-06-21 17:42:42,264 INFO SKIPPED date=2021-11-25 missing_entry_candle atm=17450 expiry=2021-12-30
+2026-06-21 17:42:42,282 INFO SKIPPED date=2021-11-26 missing_entry_candle atm=17300 expiry=2021-12-30
+2026-06-21 17:42:42,300 INFO SKIPPED date=2021-11-29 missing_entry_candle atm=16850 expiry=2021-12-30
+2026-06-21 17:42:42,317 INFO SKIPPED date=2021-11-30 missing_entry_candle atm=17150 expiry=2021-12-30
+2026-06-21 17:42:42,334 INFO SKIPPED date=2021-12-01 missing_entry_candle atm=17200 expiry=2021-12-30
+2026-06-21 17:42:42,353 INFO SKIPPED date=2021-12-02 missing_entry_candle atm=17250 expiry=2021-12-30
+2026-06-21 17:42:42,371 INFO SKIPPED date=2021-12-03 missing_entry_candle atm=17500 expiry=2021-12-30
+2026-06-21 17:42:42,371 INFO SKIPPED date=2021-12-06 missing_entry_candle atm=17150 expiry=2021-12-30
+2026-06-21 17:42:42,389 INFO SKIPPED date=2021-12-07 missing_entry_candle atm=17050 expiry=2021-12-30
+2026-06-21 17:42:42,405 INFO SKIPPED date=2021-12-08 missing_entry_candle atm=17350 expiry=2021-12-30
+2026-06-21 17:42:42,405 INFO SKIPPED date=2021-12-09 missing_entry_candle atm=17500 expiry=2021-12-30
+2026-06-21 17:42:42,405 INFO SKIPPED date=2021-12-10 missing_entry_candle atm=17500 expiry=2021-12-30
+2026-06-21 17:42:42,418 INFO SKIPPED date=2021-12-13 missing_entry_candle atm=17650 expiry=2021-12-30
+2026-06-21 17:42:42,418 INFO SKIPPED date=2021-12-14 missing_entry_candle atm=17250 expiry=2021-12-30
+2026-06-21 17:42:42,418 INFO SKIPPED date=2021-12-15 missing_entry_candle atm=17300 expiry=2021-12-30
+2026-06-21 17:42:42,418 INFO SKIPPED date=2021-12-16 missing_entry_candle atm=17350 expiry=2021-12-30
+2026-06-21 17:42:42,418 INFO SKIPPED date=2021-12-17 missing_entry_candle atm=17200 expiry=2021-12-30
+2026-06-21 17:42:42,431 INFO SKIPPED date=2021-12-20 missing_entry_candle atm=16750 expiry=2021-12-30
+2026-06-21 17:42:42,448 INFO SKIPPED date=2021-12-21 missing_entry_candle atm=16800 expiry=2021-12-30
+2026-06-21 17:42:42,465 INFO SKIPPED date=2021-12-22 missing_entry_candle atm=16900 expiry=2021-12-30
+2026-06-21 17:42:42,465 INFO SKIPPED date=2021-12-23 missing_entry_candle atm=17050 expiry=2021-12-30
+2026-06-21 17:42:42,466 INFO TRADED date=2021-12-24 day=Friday expiry=2021-12-30 atm=17050 qty=300 ce=157.95 pe=133.35 sl=[PE_SL] net=5264.00
+2026-06-21 17:42:42,466 INFO TRADED date=2021-12-27 day=Monday expiry=2021-12-30 atm=16850 qty=300 ce=146.95 pe=118.45 sl=[CE_SL] net=13928.00
+2026-06-21 17:42:42,467 INFO TRADED date=2021-12-28 day=Tuesday expiry=2021-12-30 atm=17200 qty=300 ce=99.55 pe=98.90 sl=[none] net=7490.00
+2026-06-21 17:42:42,468 INFO TRADED date=2021-12-29 day=Wednesday expiry=2021-12-30 atm=17250 qty=300 ce=80.00 pe=76.10 sl=[PE_SL] net=6734.00
+2026-06-21 17:42:42,481 INFO SKIPPED date=2021-12-30 missing_entry_candle atm=17200 expiry=2022-01-27
+2026-06-21 17:42:42,495 INFO SKIPPED date=2021-12-31 missing_entry_candle atm=17300 expiry=2022-01-27
+2026-06-21 17:42:42,508 INFO SKIPPED date=2022-01-03 missing_entry_candle atm=17450 expiry=2022-01-27
+2026-06-21 17:42:42,522 INFO SKIPPED date=2022-01-04 missing_entry_candle atm=17700 expiry=2022-01-27
+2026-06-21 17:42:42,541 INFO SKIPPED date=2022-01-05 missing_entry_candle atm=17800 expiry=2022-01-27
+2026-06-21 17:42:42,553 INFO SKIPPED date=2022-01-06 missing_entry_candle atm=17750 expiry=2022-01-27
+2026-06-21 17:42:42,564 INFO SKIPPED date=2022-01-07 missing_entry_candle atm=17850 expiry=2022-01-27
+2026-06-21 17:42:42,575 INFO SKIPPED date=2022-01-10 missing_entry_candle atm=17950 expiry=2022-01-27
+2026-06-21 17:42:42,589 INFO SKIPPED date=2022-01-11 missing_entry_candle atm=18000 expiry=2022-01-27
+2026-06-21 17:42:42,598 INFO SKIPPED date=2022-01-12 missing_entry_candle atm=18150 expiry=2022-01-27
+2026-06-21 17:42:42,607 INFO SKIPPED date=2022-01-13 missing_entry_candle atm=18250 expiry=2022-01-27
+2026-06-21 17:42:42,607 INFO SKIPPED date=2022-01-14 missing_entry_candle atm=18150 expiry=2022-01-27
+2026-06-21 17:42:42,619 INFO SKIPPED date=2022-01-17 missing_entry_candle atm=18300 expiry=2022-01-27
+2026-06-21 17:42:42,627 INFO SKIPPED date=2022-01-18 missing_entry_candle atm=18350 expiry=2022-01-27
+2026-06-21 17:42:42,637 INFO SKIPPED date=2022-01-19 missing_entry_candle atm=18050 expiry=2022-01-27
+2026-06-21 17:42:42,653 INFO SKIPPED date=2022-01-20 missing_entry_candle atm=17900 expiry=2022-01-27
+2026-06-21 17:42:42,667 INFO TRADED date=2022-01-21 day=Friday expiry=2022-01-27 atm=17550 qty=300 ce=187.95 pe=162.10 sl=[CE_SL] net=4373.00
+2026-06-21 17:42:42,681 INFO TRADED date=2022-01-24 day=Monday expiry=2022-01-27 atm=17600 qty=300 ce=134.15 pe=144.70 sl=[PE_SL] net=24233.00
+2026-06-21 17:42:42,692 INFO TRADED date=2022-01-25 day=Tuesday expiry=2022-01-27 atm=16850 qty=300 ce=193.05 pe=175.20 sl=[CE_SL] net=36227.00
+2026-06-21 17:42:42,709 INFO SKIPPED date=2022-01-27 missing_entry_candle atm=17000 expiry=2022-02-24
+2026-06-21 17:42:42,726 INFO SKIPPED date=2022-01-28 missing_entry_candle atm=17300 expiry=2022-02-24
+2026-06-21 17:42:42,726 INFO SKIPPED date=2022-01-31 missing_entry_candle atm=17300 expiry=2022-02-24
+2026-06-21 17:42:42,745 INFO SKIPPED date=2022-02-01 missing_entry_candle atm=17500 expiry=2022-02-24
+2026-06-21 17:42:42,764 INFO SKIPPED date=2022-02-02 missing_entry_candle atm=17700 expiry=2022-02-24
+2026-06-21 17:42:42,774 INFO SKIPPED date=2022-02-03 missing_entry_candle atm=17750 expiry=2022-02-24
+2026-06-21 17:42:42,774 INFO SKIPPED date=2022-02-04 missing_entry_candle atm=17500 expiry=2022-02-24
+2026-06-21 17:42:42,788 INFO SKIPPED date=2022-02-07 missing_entry_candle atm=17550 expiry=2022-02-24
+2026-06-21 17:42:42,788 INFO SKIPPED date=2022-02-08 missing_entry_candle atm=17300 expiry=2022-02-24
+2026-06-21 17:42:42,805 INFO SKIPPED date=2022-02-09 missing_entry_candle atm=17400 expiry=2022-02-24
+2026-06-21 17:42:42,805 INFO SKIPPED date=2022-02-10 missing_entry_candle atm=17500 expiry=2022-02-24
+2026-06-21 17:42:42,820 INFO SKIPPED date=2022-02-11 missing_entry_candle atm=17450 expiry=2022-02-24
+2026-06-21 17:42:42,836 INFO SKIPPED date=2022-02-14 missing_entry_candle atm=16950 expiry=2022-02-24
+2026-06-21 17:42:42,836 INFO SKIPPED date=2022-02-15 missing_entry_candle atm=17000 expiry=2022-02-24
+2026-06-21 17:42:42,836 INFO SKIPPED date=2022-02-16 missing_entry_candle atm=17400 expiry=2022-02-24
+2026-06-21 17:42:42,836 INFO SKIPPED date=2022-02-17 missing_entry_candle atm=17400 expiry=2022-02-24
+2026-06-21 17:42:42,853 INFO TRADED date=2022-02-18 day=Friday expiry=2022-02-24 atm=17250 qty=300 ce=238.00 pe=210.50 sl=[none] net=15995.00
+2026-06-21 17:42:42,873 INFO TRADED date=2022-02-21 day=Monday expiry=2022-02-24 atm=17150 qty=300 ce=194.00 pe=175.25 sl=[CE_SL,PE_SL] net=-23350.00
+2026-06-21 17:42:42,890 INFO TRADED date=2022-02-22 day=Tuesday expiry=2022-02-24 atm=16900 qty=300 ce=186.50 pe=162.65 sl=[CE_SL] net=14030.00
+2026-06-21 17:42:42,908 INFO TRADED date=2022-02-23 day=Wednesday expiry=2022-02-24 atm=17200 qty=300 ce=101.40 pe=114.55 sl=[PE_SL] net=14462.00
+2026-06-21 17:42:42,917 INFO SKIPPED date=2022-02-24 missing_entry_candle atm=16650 expiry=2022-03-31
+2026-06-21 17:42:42,927 INFO SKIPPED date=2022-02-25 missing_entry_candle atm=16550 expiry=2022-03-31
+2026-06-21 17:42:42,936 INFO SKIPPED date=2022-02-28 missing_entry_candle atm=16450 expiry=2022-03-31
+2026-06-21 17:42:42,951 INFO SKIPPED date=2022-03-02 missing_entry_candle atm=16600 expiry=2022-03-31
+2026-06-21 17:42:42,967 INFO SKIPPED date=2022-03-03 missing_entry_candle atm=16700 expiry=2022-03-31
+2026-06-21 17:42:42,975 INFO SKIPPED date=2022-03-04 missing_entry_candle atm=16250 expiry=2022-03-31
+2026-06-21 17:42:42,983 INFO SKIPPED date=2022-03-07 missing_entry_candle atm=15850 expiry=2022-03-31
+2026-06-21 17:42:42,996 INFO SKIPPED date=2022-03-08 missing_entry_candle atm=15800 expiry=2022-03-31
+2026-06-21 17:42:43,174 INFO SKIPPED date=2022-03-09 missing_entry_candle atm=16050 expiry=2022-03-31
+2026-06-21 17:42:43,174 INFO SKIPPED date=2022-03-10 missing_entry_candle atm=16700 expiry=2022-03-31
+2026-06-21 17:42:43,174 INFO SKIPPED date=2022-03-11 missing_entry_candle atm=16550 expiry=2022-03-31
+2026-06-21 17:42:43,174 INFO SKIPPED date=2022-03-14 missing_entry_candle atm=16650 expiry=2022-03-31
+2026-06-21 17:42:43,190 INFO SKIPPED date=2022-03-15 missing_entry_candle atm=16900 expiry=2022-03-31
+2026-06-21 17:42:43,191 INFO SKIPPED date=2022-03-16 missing_entry_candle atm=16900 expiry=2022-03-31
+2026-06-21 17:42:43,208 INFO SKIPPED date=2022-03-17 missing_entry_candle atm=17200 expiry=2022-03-31
+2026-06-21 17:42:43,226 INFO SKIPPED date=2022-03-21 missing_entry_candle atm=17300 expiry=2022-03-31
+2026-06-21 17:42:43,244 INFO SKIPPED date=2022-03-22 missing_entry_candle atm=17100 expiry=2022-03-31
+2026-06-21 17:42:43,261 INFO SKIPPED date=2022-03-23 missing_entry_candle atm=17400 expiry=2022-03-31
+2026-06-21 17:42:43,277 INFO SKIPPED date=2022-03-24 missing_entry_candle atm=17150 expiry=2022-03-31
+2026-06-21 17:42:43,278 INFO SKIPPED date=2022-03-25 balance_failed ce=223.70 pe=171.00
+2026-06-21 17:42:43,278 INFO TRADED date=2022-03-28 day=Monday expiry=2022-03-31 atm=17150 qty=300 ce=177.15 pe=147.00 sl=[PE_SL] net=-16765.00
+2026-06-21 17:42:43,279 INFO TRADED date=2022-03-29 day=Tuesday expiry=2022-03-31 atm=17300 qty=300 ce=123.90 pe=99.80 sl=[PE_SL] net=-6988.00
+2026-06-21 17:42:43,279 INFO SKIPPED date=2022-03-30 balance_failed ce=103.20 pe=54.65
+2026-06-21 17:42:43,294 INFO SKIPPED date=2022-03-31 missing_entry_candle atm=17550 expiry=2022-04-28
+2026-06-21 17:42:43,311 INFO SKIPPED date=2022-04-01 missing_entry_candle atm=17500 expiry=2022-04-28
+2026-06-21 17:42:43,320 INFO SKIPPED date=2022-04-04 missing_entry_candle atm=17850 expiry=2022-04-28
+2026-06-21 17:42:43,328 INFO SKIPPED date=2022-04-05 missing_entry_candle atm=18050 expiry=2022-04-28
+2026-06-21 17:42:43,328 INFO SKIPPED date=2022-04-06 missing_entry_candle atm=17850 expiry=2022-04-28
+2026-06-21 17:42:43,338 INFO SKIPPED date=2022-04-07 missing_entry_candle atm=17750 expiry=2022-04-28
+2026-06-21 17:42:43,353 INFO SKIPPED date=2022-04-08 missing_entry_candle atm=17700 expiry=2022-04-28
+2026-06-21 17:42:43,353 INFO SKIPPED date=2022-04-11 missing_entry_candle atm=17700 expiry=2022-04-28
+2026-06-21 17:42:43,353 INFO SKIPPED date=2022-04-12 missing_entry_candle atm=17550 expiry=2022-04-28
+2026-06-21 17:42:43,369 INFO SKIPPED date=2022-04-13 missing_entry_candle atm=17600 expiry=2022-04-28
+2026-06-21 17:42:43,386 INFO SKIPPED date=2022-04-18 missing_entry_candle atm=17200 expiry=2022-04-28
+2026-06-21 17:42:43,386 INFO SKIPPED date=2022-04-19 missing_entry_candle atm=17200 expiry=2022-04-28
+2026-06-21 17:42:43,405 INFO SKIPPED date=2022-04-20 missing_entry_candle atm=17050 expiry=2022-04-28
+2026-06-21 17:42:43,423 INFO SKIPPED date=2022-04-21 missing_entry_candle atm=17250 expiry=2022-04-28
+2026-06-21 17:42:43,424 INFO TRADED date=2022-04-22 day=Friday expiry=2022-04-28 atm=17200 qty=300 ce=161.75 pe=149.70 sl=[CE_SL] net=-12880.00
+2026-06-21 17:42:43,440 INFO TRADED date=2022-04-25 day=Monday expiry=2022-04-28 atm=16950 qty=300 ce=148.70 pe=143.00 sl=[CE_SL,PE_SL] net=-18202.00
+2026-06-21 17:42:43,459 INFO TRADED date=2022-04-26 day=Tuesday expiry=2022-04-28 atm=17150 qty=300 ce=110.05 pe=112.55 sl=[CE_SL,PE_SL] net=-14056.00
+2026-06-21 17:42:43,476 INFO TRADED date=2022-04-27 day=Wednesday expiry=2022-04-28 atm=17100 qty=300 ce=84.70 pe=96.90 sl=[PE_SL] net=2516.00
+2026-06-21 17:42:43,488 INFO SKIPPED date=2022-04-28 missing_entry_candle atm=17100 expiry=2022-05-26
+2026-06-21 17:42:43,499 INFO SKIPPED date=2022-04-29 missing_entry_candle atm=17300 expiry=2022-05-26
+2026-06-21 17:42:43,518 INFO SKIPPED date=2022-05-02 missing_entry_candle atm=17000 expiry=2022-05-26
+2026-06-21 17:42:43,527 INFO SKIPPED date=2022-05-04 missing_entry_candle atm=17050 expiry=2022-05-26
+2026-06-21 17:42:43,543 INFO SKIPPED date=2022-05-05 missing_entry_candle atm=16800 expiry=2022-05-26
+2026-06-21 17:42:43,560 INFO SKIPPED date=2022-05-06 missing_entry_candle atm=16400 expiry=2022-05-26
+2026-06-21 17:42:43,577 INFO SKIPPED date=2022-05-09 missing_entry_candle atm=16200 expiry=2022-05-26
+2026-06-21 17:42:43,594 INFO SKIPPED date=2022-05-10 missing_entry_candle atm=16350 expiry=2022-05-26
+2026-06-21 17:42:43,612 INFO SKIPPED date=2022-05-11 missing_entry_candle atm=16300 expiry=2022-05-26
+2026-06-21 17:42:43,633 INFO SKIPPED date=2022-05-12 missing_entry_candle atm=15950 expiry=2022-05-26
+2026-06-21 17:42:43,633 INFO SKIPPED date=2022-05-13 missing_entry_candle atm=15950 expiry=2022-05-26
+2026-06-21 17:42:43,651 INFO SKIPPED date=2022-05-16 missing_entry_candle atm=15800 expiry=2022-05-26
+2026-06-21 17:42:43,651 INFO SKIPPED date=2022-05-17 missing_entry_candle atm=15950 expiry=2022-05-26
+2026-06-21 17:42:43,651 INFO SKIPPED date=2022-05-18 missing_entry_candle atm=16350 expiry=2022-05-26
+2026-06-21 17:42:43,652 INFO SKIPPED date=2022-05-19 missing_entry_candle atm=15950 expiry=2022-05-26
+2026-06-21 17:42:43,671 INFO TRADED date=2022-05-20 day=Friday expiry=2022-05-26 atm=16050 qty=300 ce=186.95 pe=181.15 sl=[CE_SL] net=11528.00
+2026-06-21 17:42:43,692 INFO TRADED date=2022-05-23 day=Monday expiry=2022-05-26 atm=16250 qty=300 ce=173.40 pe=192.35 sl=[CE_SL] net=-8539.00
+2026-06-21 17:42:43,692 INFO SKIPPED date=2022-05-24 balance_failed ce=127.55 pe=172.05
+2026-06-21 17:42:43,693 INFO TRADED date=2022-05-25 day=Wednesday expiry=2022-05-26 atm=16200 qty=300 ce=107.60 pe=104.20 sl=[PE_SL] net=18023.00
+2026-06-21 17:42:43,712 INFO SKIPPED date=2022-05-26 missing_entry_candle atm=16100 expiry=2022-06-30
+2026-06-21 17:42:43,730 INFO SKIPPED date=2022-05-27 missing_entry_candle atm=16300 expiry=2022-06-30
+2026-06-21 17:42:43,740 INFO SKIPPED date=2022-05-30 missing_entry_candle atm=16550 expiry=2022-06-30
+2026-06-21 17:42:43,755 INFO SKIPPED date=2022-05-31 missing_entry_candle atm=16600 expiry=2022-06-30
+2026-06-21 17:42:43,764 INFO SKIPPED date=2022-06-01 missing_entry_candle atm=16650 expiry=2022-06-30
+2026-06-21 17:42:43,775 INFO SKIPPED date=2022-06-02 missing_entry_candle atm=16450 expiry=2022-06-30
+2026-06-21 17:42:43,787 INFO SKIPPED date=2022-06-03 missing_entry_candle atm=16800 expiry=2022-06-30
+2026-06-21 17:42:43,787 INFO SKIPPED date=2022-06-06 missing_entry_candle atm=16550 expiry=2022-06-30
+2026-06-21 17:42:43,802 INFO SKIPPED date=2022-06-07 missing_entry_candle atm=16400 expiry=2022-06-30
+2026-06-21 17:42:43,803 INFO SKIPPED date=2022-06-08 missing_entry_candle atm=16400 expiry=2022-06-30
+2026-06-21 17:42:43,803 INFO SKIPPED date=2022-06-09 missing_entry_candle atm=16300 expiry=2022-06-30
+2026-06-21 17:42:43,803 INFO SKIPPED date=2022-06-10 missing_entry_candle atm=16300 expiry=2022-06-30
+2026-06-21 17:42:43,823 INFO SKIPPED date=2022-06-13 missing_entry_candle atm=15800 expiry=2022-06-30
+2026-06-21 17:42:43,840 INFO SKIPPED date=2022-06-14 missing_entry_candle atm=15750 expiry=2022-06-30
+2026-06-21 17:42:43,857 INFO SKIPPED date=2022-06-15 missing_entry_candle atm=15700 expiry=2022-06-30
+2026-06-21 17:42:43,877 INFO SKIPPED date=2022-06-16 missing_entry_candle atm=15850 expiry=2022-06-30
+2026-06-21 17:42:43,895 INFO SKIPPED date=2022-06-17 missing_entry_candle atm=15300 expiry=2022-06-30
+2026-06-21 17:42:43,909 INFO SKIPPED date=2022-06-20 missing_entry_candle atm=15350 expiry=2022-06-30
+2026-06-21 17:42:43,926 INFO SKIPPED date=2022-06-21 missing_entry_candle atm=15500 expiry=2022-06-30
+2026-06-21 17:42:43,942 INFO SKIPPED date=2022-06-22 missing_entry_candle atm=15550 expiry=2022-06-30
+2026-06-21 17:42:43,959 INFO SKIPPED date=2022-06-23 missing_entry_candle atm=15450 expiry=2022-06-30
+2026-06-21 17:42:43,959 INFO TRADED date=2022-06-24 day=Friday expiry=2022-06-30 atm=15700 qty=300 ce=173.50 pe=170.00 sl=[PE_SL] net=-6550.00
+2026-06-21 17:42:43,960 INFO TRADED date=2022-06-27 day=Monday expiry=2022-06-30 atm=15850 qty=300 ce=149.35 pe=130.60 sl=[CE_SL] net=-8491.00
+2026-06-21 17:42:43,961 INFO TRADED date=2022-06-28 day=Tuesday expiry=2022-06-30 atm=15750 qty=300 ce=126.40 pe=109.70 sl=[CE_SL,PE_SL] net=-14866.00
+2026-06-21 17:42:43,962 INFO TRADED date=2022-06-29 day=Wednesday expiry=2022-06-30 atm=15700 qty=300 ce=85.20 pe=98.70 sl=[CE_SL] net=8393.00
+2026-06-21 17:42:43,975 INFO SKIPPED date=2022-06-30 missing_entry_candle atm=15850 expiry=2022-07-28
+2026-06-21 17:42:43,991 INFO SKIPPED date=2022-07-01 missing_entry_candle atm=15700 expiry=2022-07-28
+2026-06-21 17:42:43,991 INFO SKIPPED date=2022-07-04 missing_entry_candle atm=15700 expiry=2022-07-28
+2026-06-21 17:42:44,001 INFO SKIPPED date=2022-07-05 missing_entry_candle atm=15950 expiry=2022-07-28
+2026-06-21 17:42:44,001 INFO SKIPPED date=2022-07-06 missing_entry_candle atm=15850 expiry=2022-07-28
+2026-06-21 17:42:44,017 INFO SKIPPED date=2022-07-07 missing_entry_candle atm=16100 expiry=2022-07-28
+2026-06-21 17:42:44,035 INFO SKIPPED date=2022-07-08 missing_entry_candle atm=16200 expiry=2022-07-28
+2026-06-21 17:42:44,047 INFO SKIPPED date=2022-07-11 missing_entry_candle atm=16150 expiry=2022-07-28
+2026-06-21 17:42:44,048 INFO SKIPPED date=2022-07-12 missing_entry_candle atm=16150 expiry=2022-07-28
+2026-06-21 17:42:44,048 INFO SKIPPED date=2022-07-13 missing_entry_candle atm=16100 expiry=2022-07-28
+2026-06-21 17:42:44,059 INFO SKIPPED date=2022-07-14 missing_entry_candle atm=16050 expiry=2022-07-28
+2026-06-21 17:42:44,075 INFO SKIPPED date=2022-07-15 missing_entry_candle atm=16000 expiry=2022-07-28
+2026-06-21 17:42:44,076 INFO SKIPPED date=2022-07-18 missing_entry_candle atm=16200 expiry=2022-07-28
+2026-06-21 17:42:44,091 INFO SKIPPED date=2022-07-19 missing_entry_candle atm=16250 expiry=2022-07-28
+2026-06-21 17:42:44,112 INFO SKIPPED date=2022-07-20 missing_entry_candle atm=16500 expiry=2022-07-28
+2026-06-21 17:42:44,112 INFO SKIPPED date=2022-07-21 missing_entry_candle atm=16500 expiry=2022-07-28
+2026-06-21 17:42:44,129 INFO SKIPPED date=2022-07-22 balance_failed ce=112.20 pe=142.50
+2026-06-21 17:42:44,130 INFO TRADED date=2022-07-25 day=Monday expiry=2022-07-28 atm=16700 qty=300 ce=109.70 pe=123.40 sl=[PE_SL] net=2771.00
+2026-06-21 17:42:44,148 INFO TRADED date=2022-07-26 day=Tuesday expiry=2022-07-28 atm=16550 qty=300 ce=106.80 pe=92.45 sl=[PE_SL] net=7853.00
+2026-06-21 17:42:44,148 INFO TRADED date=2022-07-27 day=Wednesday expiry=2022-07-28 atm=16500 qty=300 ce=79.85 pe=80.55 sl=[CE_SL,PE_SL] net=-10324.00
+2026-06-21 17:42:44,161 INFO SKIPPED date=2022-07-28 missing_entry_candle atm=16800 expiry=2022-08-25
+2026-06-21 17:42:44,176 INFO SKIPPED date=2022-07-29 missing_entry_candle atm=17100 expiry=2022-08-25
+2026-06-21 17:42:44,193 INFO SKIPPED date=2022-08-01 missing_entry_candle atm=17200 expiry=2022-08-25
+2026-06-21 17:42:44,212 INFO SKIPPED date=2022-08-02 missing_entry_candle atm=17300 expiry=2022-08-25
+2026-06-21 17:42:44,227 INFO SKIPPED date=2022-08-03 missing_entry_candle atm=17350 expiry=2022-08-25
+2026-06-21 17:42:44,244 INFO SKIPPED date=2022-08-04 missing_entry_candle atm=17450 expiry=2022-08-25
+2026-06-21 17:42:44,261 INFO SKIPPED date=2022-08-05 missing_entry_candle atm=17400 expiry=2022-08-25
+2026-06-21 17:42:44,262 INFO SKIPPED date=2022-08-08 missing_entry_candle atm=17350 expiry=2022-08-25
+2026-06-21 17:42:44,278 INFO SKIPPED date=2022-08-10 missing_entry_candle atm=17500 expiry=2022-08-25
+2026-06-21 17:42:44,295 INFO SKIPPED date=2022-08-11 missing_entry_candle atm=17700 expiry=2022-08-25
+2026-06-21 17:42:44,311 INFO SKIPPED date=2022-08-12 missing_entry_candle atm=17650 expiry=2022-08-25
+2026-06-21 17:42:44,330 INFO SKIPPED date=2022-08-16 missing_entry_candle atm=17800 expiry=2022-08-25
+2026-06-21 17:42:44,346 INFO SKIPPED date=2022-08-17 missing_entry_candle atm=17850 expiry=2022-08-25
+2026-06-21 17:42:44,362 INFO SKIPPED date=2022-08-18 missing_entry_candle atm=17900 expiry=2022-08-25
+2026-06-21 17:42:44,378 INFO TRADED date=2022-08-19 day=Friday expiry=2022-08-25 atm=17950 qty=300 ce=132.30 pe=111.00 sl=[PE_SL] net=14720.00
+2026-06-21 17:42:44,379 INFO TRADED date=2022-08-22 day=Monday expiry=2022-08-25 atm=17650 qty=300 ce=124.80 pe=104.45 sl=[PE_SL] net=15548.00
+2026-06-21 17:42:44,380 INFO TRADED date=2022-08-23 day=Tuesday expiry=2022-08-25 atm=17400 qty=300 ce=100.55 pe=93.05 sl=[CE_SL] net=15122.00
+2026-06-21 17:42:44,396 INFO SKIPPED date=2022-08-24 balance_failed ce=100.45 pe=68.35
+2026-06-21 17:42:44,411 INFO SKIPPED date=2022-08-25 missing_entry_candle atm=17650 expiry=2022-09-29
+2026-06-21 17:42:44,411 INFO SKIPPED date=2022-08-26 missing_entry_candle atm=17650 expiry=2022-09-29
+2026-06-21 17:42:44,430 INFO SKIPPED date=2022-08-29 missing_entry_candle atm=17200 expiry=2022-09-29
+2026-06-21 17:42:44,619 INFO SKIPPED date=2022-08-30 missing_entry_candle atm=17450 expiry=2022-09-29
+2026-06-21 17:42:44,634 INFO SKIPPED date=2022-09-01 missing_entry_candle atm=17550 expiry=2022-09-29
+2026-06-21 17:42:44,650 INFO SKIPPED date=2022-09-02 missing_entry_candle atm=17600 expiry=2022-09-29
+2026-06-21 17:42:44,651 INFO SKIPPED date=2022-09-05 missing_entry_candle atm=17600 expiry=2022-09-29
+2026-06-21 17:42:44,663 INFO SKIPPED date=2022-09-06 missing_entry_candle atm=17750 expiry=2022-09-29
+2026-06-21 17:42:44,663 INFO SKIPPED date=2022-09-07 missing_entry_candle atm=17550 expiry=2022-09-29
+2026-06-21 17:42:44,663 INFO SKIPPED date=2022-09-08 missing_entry_candle atm=17750 expiry=2022-09-29
+2026-06-21 17:42:44,679 INFO SKIPPED date=2022-09-09 missing_entry_candle atm=17900 expiry=2022-09-29
+2026-06-21 17:42:44,680 INFO SKIPPED date=2022-09-12 missing_entry_candle atm=17900 expiry=2022-09-29
+2026-06-21 17:42:44,690 INFO SKIPPED date=2022-09-13 missing_entry_candle atm=18050 expiry=2022-09-29
+2026-06-21 17:42:44,702 INFO SKIPPED date=2022-09-14 missing_entry_candle atm=17850 expiry=2022-09-29
+2026-06-21 17:42:44,715 INFO SKIPPED date=2022-09-15 missing_entry_candle atm=18100 expiry=2022-09-29
+2026-06-21 17:42:44,734 INFO SKIPPED date=2022-09-16 missing_entry_candle atm=17800 expiry=2022-09-29
+2026-06-21 17:42:44,751 INFO SKIPPED date=2022-09-19 missing_entry_candle atm=17500 expiry=2022-09-29
+2026-06-21 17:42:44,752 INFO SKIPPED date=2022-09-20 missing_entry_candle atm=17800 expiry=2022-09-29
+2026-06-21 17:42:44,752 INFO SKIPPED date=2022-09-21 missing_entry_candle atm=17800 expiry=2022-09-29
+2026-06-21 17:42:44,752 INFO SKIPPED date=2022-09-22 missing_entry_candle atm=17650 expiry=2022-09-29
+2026-06-21 17:42:44,753 INFO TRADED date=2022-09-23 day=Friday expiry=2022-09-29 atm=17550 qty=300 ce=177.25 pe=162.85 sl=[PE_SL] net=14084.00
+2026-06-21 17:42:44,770 INFO TRADED date=2022-09-26 day=Monday expiry=2022-09-29 atm=17100 qty=300 ce=169.00 pe=172.55 sl=[CE_SL,PE_SL] net=-21193.00
+2026-06-21 17:42:44,788 INFO TRADED date=2022-09-27 day=Tuesday expiry=2022-09-29 atm=17150 qty=300 ce=122.05 pe=138.10 sl=[PE_SL] net=7589.00
+2026-06-21 17:42:44,805 INFO TRADED date=2022-09-28 day=Wednesday expiry=2022-09-29 atm=16850 qty=300 ce=98.85 pe=112.85 sl=[CE_SL] net=3164.00
+2026-06-21 17:42:44,816 INFO SKIPPED date=2022-09-29 missing_entry_candle atm=17000 expiry=2022-10-27
+2026-06-21 17:42:44,821 INFO SKIPPED date=2022-09-30 missing_entry_candle atm=16750 expiry=2022-10-27
+2026-06-21 17:42:44,828 INFO SKIPPED date=2022-10-03 missing_entry_candle atm=17050 expiry=2022-10-27
+2026-06-21 17:42:44,838 INFO SKIPPED date=2022-10-04 missing_entry_candle atm=17150 expiry=2022-10-27
+2026-06-21 17:42:44,849 INFO SKIPPED date=2022-10-06 missing_entry_candle atm=17350 expiry=2022-10-27
+2026-06-21 17:42:44,859 INFO SKIPPED date=2022-10-07 missing_entry_candle atm=17300 expiry=2022-10-27
+2026-06-21 17:42:44,869 INFO SKIPPED date=2022-10-10 missing_entry_candle atm=17100 expiry=2022-10-27
+2026-06-21 17:42:44,880 INFO SKIPPED date=2022-10-11 missing_entry_candle atm=17200 expiry=2022-10-27
+2026-06-21 17:42:44,880 INFO SKIPPED date=2022-10-12 missing_entry_candle atm=17000 expiry=2022-10-27
+2026-06-21 17:42:44,880 INFO SKIPPED date=2022-10-13 missing_entry_candle atm=17100 expiry=2022-10-27
+2026-06-21 17:42:44,880 INFO SKIPPED date=2022-10-14 missing_entry_candle atm=17300 expiry=2022-10-27
+2026-06-21 17:42:44,881 INFO SKIPPED date=2022-10-17 missing_entry_candle atm=17150 expiry=2022-10-27
+2026-06-21 17:42:44,891 INFO SKIPPED date=2022-10-18 missing_entry_candle atm=17450 expiry=2022-10-27
+2026-06-21 17:42:44,902 INFO SKIPPED date=2022-10-19 missing_entry_candle atm=17550 expiry=2022-10-27
+2026-06-21 17:42:44,902 INFO SKIPPED date=2022-10-20 missing_entry_candle atm=17450 expiry=2022-10-27
+2026-06-21 17:42:44,913 INFO SKIPPED date=2022-10-21 balance_failed ce=102.05 pe=139.55
+2026-06-21 17:42:44,924 INFO TRADED date=2022-10-25 day=Tuesday expiry=2022-10-27 atm=17750 qty=300 ce=71.75 pe=81.00 sl=[PE_SL] net=6890.00
+2026-06-21 17:42:44,934 INFO SKIPPED date=2022-10-27 missing_entry_candle atm=17750 expiry=2022-11-24
+2026-06-21 17:42:44,953 INFO SKIPPED date=2022-10-28 missing_entry_candle atm=17800 expiry=2022-11-24
+2026-06-21 17:42:44,969 INFO SKIPPED date=2022-10-31 missing_entry_candle atm=17950 expiry=2022-11-24
+2026-06-21 17:42:44,986 INFO SKIPPED date=2022-11-01 missing_entry_candle atm=18100 expiry=2022-11-24
+2026-06-21 17:42:45,005 INFO SKIPPED date=2022-11-02 missing_entry_candle atm=18150 expiry=2022-11-24
+2026-06-21 17:42:45,023 INFO SKIPPED date=2022-11-03 missing_entry_candle atm=18000 expiry=2022-11-24
+2026-06-21 17:42:45,023 INFO SKIPPED date=2022-11-04 missing_entry_candle atm=18100 expiry=2022-11-24
+2026-06-21 17:42:45,042 INFO SKIPPED date=2022-11-07 missing_entry_candle atm=18200 expiry=2022-11-24
+2026-06-21 17:42:45,059 INFO SKIPPED date=2022-11-09 missing_entry_candle atm=18250 expiry=2022-11-24
+2026-06-21 17:42:45,077 INFO SKIPPED date=2022-11-10 missing_entry_candle atm=18050 expiry=2022-11-24
+2026-06-21 17:42:45,078 INFO SKIPPED date=2022-11-11 missing_entry_candle atm=18250 expiry=2022-11-24
+2026-06-21 17:42:45,094 INFO SKIPPED date=2022-11-14 missing_entry_candle atm=18400 expiry=2022-11-24
+2026-06-21 17:42:45,111 INFO SKIPPED date=2022-11-15 missing_entry_candle atm=18350 expiry=2022-11-24
+2026-06-21 17:42:45,112 INFO SKIPPED date=2022-11-16 missing_entry_candle atm=18400 expiry=2022-11-24
+2026-06-21 17:42:45,112 INFO SKIPPED date=2022-11-17 missing_entry_candle atm=18400 expiry=2022-11-24
+2026-06-21 17:42:45,112 INFO SKIPPED date=2022-11-18 balance_failed ce=124.80 pe=96.75
+2026-06-21 17:42:45,112 INFO SKIPPED date=2022-11-21 balance_failed ce=112.85 pe=70.50
+2026-06-21 17:42:45,112 INFO SKIPPED date=2022-11-22 balance_failed ce=99.05 pe=55.20
+2026-06-21 17:42:45,128 INFO SKIPPED date=2022-11-23 balance_failed ce=67.05 pe=36.35
+2026-06-21 17:42:45,144 INFO SKIPPED date=2022-11-24 missing_entry_candle atm=18300 expiry=2022-12-29
+2026-06-21 17:42:45,158 INFO SKIPPED date=2022-11-25 missing_entry_candle atm=18450 expiry=2022-12-29
+2026-06-21 17:42:45,177 INFO SKIPPED date=2022-11-28 missing_entry_candle atm=18500 expiry=2022-12-29
+2026-06-21 17:42:45,193 INFO SKIPPED date=2022-11-29 missing_entry_candle atm=18600 expiry=2022-12-29
+2026-06-21 17:42:45,207 INFO SKIPPED date=2022-11-30 missing_entry_candle atm=18700 expiry=2022-12-29
+2026-06-21 17:42:45,216 INFO SKIPPED date=2022-12-01 missing_entry_candle atm=18850 expiry=2022-12-29
+2026-06-21 17:42:45,226 INFO SKIPPED date=2022-12-02 missing_entry_candle atm=18750 expiry=2022-12-29
+2026-06-21 17:42:45,237 INFO SKIPPED date=2022-12-05 missing_entry_candle atm=18650 expiry=2022-12-29
+2026-06-21 17:42:45,238 INFO SKIPPED date=2022-12-06 missing_entry_candle atm=18600 expiry=2022-12-29
+2026-06-21 17:42:45,238 INFO SKIPPED date=2022-12-07 missing_entry_candle atm=18650 expiry=2022-12-29
+2026-06-21 17:42:45,251 INFO SKIPPED date=2022-12-08 missing_entry_candle atm=18550 expiry=2022-12-29
+2026-06-21 17:42:45,251 INFO SKIPPED date=2022-12-09 missing_entry_candle atm=18650 expiry=2022-12-29
+2026-06-21 17:42:45,270 INFO SKIPPED date=2022-12-12 missing_entry_candle atm=18400 expiry=2022-12-29
+2026-06-21 17:42:45,270 INFO SKIPPED date=2022-12-13 missing_entry_candle atm=18550 expiry=2022-12-29
+2026-06-21 17:42:45,270 INFO SKIPPED date=2022-12-14 missing_entry_candle atm=18650 expiry=2022-12-29
+2026-06-21 17:42:45,270 INFO SKIPPED date=2022-12-15 missing_entry_candle atm=18650 expiry=2022-12-29
+2026-06-21 17:42:45,289 INFO SKIPPED date=2022-12-16 missing_entry_candle atm=18350 expiry=2022-12-29
+2026-06-21 17:42:45,305 INFO SKIPPED date=2022-12-19 missing_entry_candle atm=18250 expiry=2022-12-29
+2026-06-21 17:42:45,305 INFO SKIPPED date=2022-12-20 missing_entry_candle atm=18300 expiry=2022-12-29
+2026-06-21 17:42:45,306 INFO SKIPPED date=2022-12-21 missing_entry_candle atm=18450 expiry=2022-12-29
+2026-06-21 17:42:45,306 INFO SKIPPED date=2022-12-22 missing_entry_candle atm=18250 expiry=2022-12-29
+2026-06-21 17:42:45,323 INFO SKIPPED date=2022-12-23 balance_failed ce=183.80 pe=110.00
+2026-06-21 17:42:45,340 INFO SKIPPED date=2022-12-26 balance_failed ce=145.00 pe=101.75
+2026-06-21 17:42:45,358 INFO TRADED date=2022-12-27 day=Tuesday expiry=2022-12-29 atm=18100 qty=300 ce=104.55 pe=84.60 sl=[PE_SL] net=-3946.00
+2026-06-21 17:42:45,359 INFO TRADED date=2022-12-28 day=Wednesday expiry=2022-12-29 atm=18100 qty=300 ce=71.55 pe=77.40 sl=[CE_SL] net=4877.00
+2026-06-21 17:42:45,374 INFO SKIPPED date=2022-12-29 missing_entry_candle atm=18050 expiry=2023-01-25
+2026-06-21 17:42:45,387 INFO SKIPPED date=2022-12-30 missing_entry_candle atm=18200 expiry=2023-01-25
+2026-06-21 17:42:45,403 INFO SKIPPED date=2023-01-02 missing_entry_candle atm=18100 expiry=2023-01-25
+2026-06-21 17:42:45,417 INFO SKIPPED date=2023-01-03 missing_entry_candle atm=18150 expiry=2023-01-25
+2026-06-21 17:42:45,418 INFO SKIPPED date=2023-01-04 missing_entry_candle atm=18200 expiry=2023-01-25
+2026-06-21 17:42:45,418 INFO SKIPPED date=2023-01-05 missing_entry_candle atm=18050 expiry=2023-01-25
+2026-06-21 17:42:45,432 INFO SKIPPED date=2023-01-06 missing_entry_candle atm=18000 expiry=2023-01-25
+2026-06-21 17:42:45,446 INFO SKIPPED date=2023-01-09 missing_entry_candle atm=17950 expiry=2023-01-25
+2026-06-21 17:42:45,446 INFO SKIPPED date=2023-01-10 missing_entry_candle atm=18050 expiry=2023-01-25
+2026-06-21 17:42:45,460 INFO SKIPPED date=2023-01-11 missing_entry_candle atm=17900 expiry=2023-01-25
+2026-06-21 17:42:45,460 INFO SKIPPED date=2023-01-12 missing_entry_candle atm=17900 expiry=2023-01-25
+2026-06-21 17:42:45,474 INFO SKIPPED date=2023-01-13 missing_entry_candle atm=17800 expiry=2023-01-25
+2026-06-21 17:42:45,474 INFO SKIPPED date=2023-01-16 missing_entry_candle atm=18050 expiry=2023-01-25
+2026-06-21 17:42:45,474 INFO SKIPPED date=2023-01-17 missing_entry_candle atm=17900 expiry=2023-01-25
+2026-06-21 17:42:45,475 INFO SKIPPED date=2023-01-18 missing_entry_candle atm=18050 expiry=2023-01-25
+2026-06-21 17:42:45,475 INFO SKIPPED date=2023-01-19 missing_entry_candle atm=18100 expiry=2023-01-25
+2026-06-21 17:42:45,475 INFO TRADED date=2023-01-20 day=Friday expiry=2023-01-25 atm=18100 qty=300 ce=106.45 pe=96.35 sl=[CE_SL,PE_SL] net=-12868.00
+2026-06-21 17:42:45,476 INFO SKIPPED date=2023-01-23 balance_failed ce=92.80 pe=66.95
+2026-06-21 17:42:45,476 INFO SKIPPED date=2023-01-24 balance_failed ce=82.35 pe=35.05
+2026-06-21 17:42:45,493 INFO SKIPPED date=2023-01-25 missing_entry_candle atm=18050 expiry=2023-02-23
+2026-06-21 17:42:45,511 INFO SKIPPED date=2023-01-27 missing_entry_candle atm=17800 expiry=2023-02-23
+2026-06-21 17:42:45,531 INFO SKIPPED date=2023-01-30 missing_entry_candle atm=17450 expiry=2023-02-23
+2026-06-21 17:42:45,550 INFO SKIPPED date=2023-01-31 missing_entry_candle atm=17600 expiry=2023-02-23
+2026-06-21 17:42:45,570 INFO SKIPPED date=2023-02-01 missing_entry_candle atm=17750 expiry=2023-02-23
+2026-06-21 17:42:45,570 INFO SKIPPED date=2023-02-02 missing_entry_candle atm=17450 expiry=2023-02-23
+2026-06-21 17:42:45,589 INFO SKIPPED date=2023-02-03 missing_entry_candle atm=17700 expiry=2023-02-23
+2026-06-21 17:42:45,589 INFO SKIPPED date=2023-02-06 missing_entry_candle atm=17800 expiry=2023-02-23
+2026-06-21 17:42:45,590 INFO SKIPPED date=2023-02-07 missing_entry_candle atm=17800 expiry=2023-02-23
+2026-06-21 17:42:45,590 INFO SKIPPED date=2023-02-08 missing_entry_candle atm=17800 expiry=2023-02-23
+2026-06-21 17:42:45,610 INFO SKIPPED date=2023-02-09 missing_entry_candle atm=17850 expiry=2023-02-23
+2026-06-21 17:42:45,610 INFO SKIPPED date=2023-02-10 missing_entry_candle atm=17850 expiry=2023-02-23
+2026-06-21 17:42:45,610 INFO SKIPPED date=2023-02-13 missing_entry_candle atm=17850 expiry=2023-02-23
+2026-06-21 17:42:45,611 INFO SKIPPED date=2023-02-14 missing_entry_candle atm=17800 expiry=2023-02-23
+2026-06-21 17:42:45,629 INFO SKIPPED date=2023-02-15 missing_entry_candle atm=17900 expiry=2023-02-23
+2026-06-21 17:42:45,652 INFO SKIPPED date=2023-02-16 missing_entry_candle atm=18100 expiry=2023-02-23
+2026-06-21 17:42:45,669 INFO SKIPPED date=2023-02-17 balance_failed ce=119.20 pe=83.10
+2026-06-21 17:42:45,669 INFO TRADED date=2023-02-20 day=Monday expiry=2023-02-23 atm=17950 qty=300 ce=95.60 pe=81.75 sl=[CE_SL,PE_SL] net=-11791.00
+2026-06-21 17:42:45,670 INFO SKIPPED date=2023-02-21 balance_failed ce=94.05 pe=69.15
+2026-06-21 17:42:45,670 INFO TRADED date=2023-02-22 day=Wednesday expiry=2023-02-23 atm=17750 qty=300 ce=64.50 pe=61.50 sl=[PE_SL] net=12530.00
+2026-06-21 17:42:45,681 INFO SKIPPED date=2023-02-23 missing_entry_candle atm=17550 expiry=2023-03-29
+2026-06-21 17:42:45,694 INFO SKIPPED date=2023-02-24 missing_entry_candle atm=17600 expiry=2023-03-29
+2026-06-21 17:42:45,708 INFO SKIPPED date=2023-02-27 missing_entry_candle atm=17350 expiry=2023-03-29
+2026-06-21 17:42:45,721 INFO SKIPPED date=2023-02-28 missing_entry_candle atm=17400 expiry=2023-03-29
+2026-06-21 17:42:45,721 INFO SKIPPED date=2023-03-01 missing_entry_candle atm=17400 expiry=2023-03-29
+2026-06-21 17:42:45,733 INFO SKIPPED date=2023-03-02 missing_entry_candle atm=17450 expiry=2023-03-29
+2026-06-21 17:42:45,734 INFO SKIPPED date=2023-03-03 missing_entry_candle atm=17450 expiry=2023-03-29
+2026-06-21 17:42:45,743 INFO SKIPPED date=2023-03-06 missing_entry_candle atm=17750 expiry=2023-03-29
+2026-06-21 17:42:45,743 INFO SKIPPED date=2023-03-08 missing_entry_candle atm=17600 expiry=2023-03-29
+2026-06-21 17:42:45,743 INFO SKIPPED date=2023-03-09 missing_entry_candle atm=17750 expiry=2023-03-29
+2026-06-21 17:42:45,743 INFO SKIPPED date=2023-03-10 missing_entry_candle atm=17400 expiry=2023-03-29
+2026-06-21 17:42:45,757 INFO SKIPPED date=2023-03-13 missing_entry_candle atm=17500 expiry=2023-03-29
+2026-06-21 17:42:45,776 INFO SKIPPED date=2023-03-14 missing_entry_candle atm=17150 expiry=2023-03-29
+2026-06-21 17:42:45,793 INFO SKIPPED date=2023-03-15 missing_entry_candle atm=17200 expiry=2023-03-29
+2026-06-21 17:42:45,809 INFO SKIPPED date=2023-03-16 missing_entry_candle atm=16950 expiry=2023-03-29
+2026-06-21 17:42:45,825 INFO SKIPPED date=2023-03-17 missing_entry_candle atm=17100 expiry=2023-03-29
+2026-06-21 17:42:45,842 INFO SKIPPED date=2023-03-20 missing_entry_candle atm=17000 expiry=2023-03-29
+2026-06-21 17:42:45,858 INFO SKIPPED date=2023-03-21 missing_entry_candle atm=17050 expiry=2023-03-29
+2026-06-21 17:42:45,859 INFO SKIPPED date=2023-03-22 missing_entry_candle atm=17200 expiry=2023-03-29
+2026-06-21 17:42:45,859 INFO SKIPPED date=2023-03-23 missing_entry_candle atm=17100 expiry=2023-03-29
+2026-06-21 17:42:45,860 INFO TRADED date=2023-03-24 day=Friday expiry=2023-03-29 atm=17100 qty=300 ce=106.10 pe=114.45 sl=[PE_SL] net=9743.00
+2026-06-21 17:42:45,860 INFO SKIPPED date=2023-03-27 balance_failed ce=120.30 pe=86.05
+2026-06-21 17:42:45,860 INFO SKIPPED date=2023-03-28 balance_failed ce=78.90 pe=63.10
+2026-06-21 17:42:45,880 INFO SKIPPED date=2023-03-29 missing_entry_candle atm=17000 expiry=2023-04-27
+2026-06-21 17:42:45,894 INFO SKIPPED date=2023-03-31 missing_entry_candle atm=17250 expiry=2023-04-27
+2026-06-21 17:42:45,915 INFO SKIPPED date=2023-04-03 missing_entry_candle atm=17400 expiry=2023-04-27
+2026-06-21 17:42:45,932 INFO SKIPPED date=2023-04-05 missing_entry_candle atm=17450 expiry=2023-04-27
+2026-06-21 17:42:45,949 INFO SKIPPED date=2023-04-06 missing_entry_candle atm=17500 expiry=2023-04-27
+2026-06-21 17:42:45,967 INFO SKIPPED date=2023-04-10 missing_entry_candle atm=17650 expiry=2023-04-27
+2026-06-21 17:42:45,985 INFO SKIPPED date=2023-04-11 missing_entry_candle atm=17700 expiry=2023-04-27
+2026-06-21 17:42:46,003 INFO SKIPPED date=2023-04-12 missing_entry_candle atm=17750 expiry=2023-04-27
+2026-06-21 17:42:46,023 INFO SKIPPED date=2023-04-13 missing_entry_candle atm=17800 expiry=2023-04-27
+2026-06-21 17:42:46,023 INFO SKIPPED date=2023-04-17 missing_entry_candle atm=17650 expiry=2023-04-27
+2026-06-21 17:42:46,024 INFO SKIPPED date=2023-04-18 missing_entry_candle atm=17750 expiry=2023-04-27
+2026-06-21 17:42:46,024 INFO SKIPPED date=2023-04-19 missing_entry_candle atm=17650 expiry=2023-04-27
+2026-06-21 17:42:46,024 INFO SKIPPED date=2023-04-20 missing_entry_candle atm=17650 expiry=2023-04-27
+2026-06-21 17:42:46,025 INFO TRADED date=2023-04-21 day=Friday expiry=2023-04-27 atm=17650 qty=300 ce=98.85 pe=79.80 sl=[PE_SL] net=677.00
+2026-06-21 17:42:46,025 INFO SKIPPED date=2023-04-24 balance_failed ce=97.70 pe=51.90
+2026-06-21 17:42:46,026 INFO TRADED date=2023-04-25 day=Tuesday expiry=2023-04-27 atm=17750 qty=300 ce=54.35 pe=64.85 sl=[CE_SL] net=3689.00
+2026-06-21 17:42:46,026 INFO TRADED date=2023-04-26 day=Wednesday expiry=2023-04-27 atm=17750 qty=300 ce=48.05 pe=48.60 sl=[CE_SL,PE_SL] net=-6499.00
+2026-06-21 17:42:46,042 INFO SKIPPED date=2023-04-27 missing_entry_candle atm=17800 expiry=2023-05-25
+2026-06-21 17:42:46,057 INFO SKIPPED date=2023-04-28 missing_entry_candle atm=17950 expiry=2023-05-25
+2026-06-21 17:42:46,075 INFO SKIPPED date=2023-05-02 missing_entry_candle atm=18150 expiry=2023-05-25
+2026-06-21 17:42:46,093 INFO SKIPPED date=2023-05-03 missing_entry_candle atm=18050 expiry=2023-05-25
+2026-06-21 17:42:46,111 INFO SKIPPED date=2023-05-04 missing_entry_candle atm=18100 expiry=2023-05-25
+2026-06-21 17:42:46,111 INFO SKIPPED date=2023-05-05 missing_entry_candle atm=18150 expiry=2023-05-25
+2026-06-21 17:42:46,111 INFO SKIPPED date=2023-05-08 missing_entry_candle atm=18150 expiry=2023-05-25
+2026-06-21 17:42:46,128 INFO SKIPPED date=2023-05-09 missing_entry_candle atm=18300 expiry=2023-05-25
+2026-06-21 17:42:46,129 INFO SKIPPED date=2023-05-10 missing_entry_candle atm=18300 expiry=2023-05-25
+2026-06-21 17:42:46,129 INFO SKIPPED date=2023-05-11 missing_entry_candle atm=18300 expiry=2023-05-25
+2026-06-21 17:42:46,149 INFO SKIPPED date=2023-05-12 missing_entry_candle atm=18250 expiry=2023-05-25
+2026-06-21 17:42:46,166 INFO SKIPPED date=2023-05-15 missing_entry_candle atm=18350 expiry=2023-05-25
+2026-06-21 17:42:46,183 INFO SKIPPED date=2023-05-16 missing_entry_candle atm=18400 expiry=2023-05-25
+2026-06-21 17:42:46,184 INFO SKIPPED date=2023-05-17 missing_entry_candle atm=18300 expiry=2023-05-25
+2026-06-21 17:42:46,184 INFO SKIPPED date=2023-05-18 missing_entry_candle atm=18250 expiry=2023-05-25
+2026-06-21 17:42:46,184 INFO SKIPPED date=2023-05-19 balance_failed ce=110.40 pe=79.60
+2026-06-21 17:42:46,201 INFO SKIPPED date=2023-05-22 balance_failed ce=91.90 pe=72.15
+2026-06-21 17:42:46,201 INFO SKIPPED date=2023-05-23 balance_failed ce=55.35 pe=72.15
+2026-06-21 17:42:46,202 INFO TRADED date=2023-05-24 day=Wednesday expiry=2023-05-25 atm=18300 qty=300 ce=59.65 pe=49.45 sl=[CE_SL,PE_SL] net=-7246.00
+2026-06-21 17:42:46,212 INFO SKIPPED date=2023-05-25 missing_entry_candle atm=18300 expiry=2023-06-29
+2026-06-21 17:42:46,221 INFO SKIPPED date=2023-05-26 missing_entry_candle atm=18350 expiry=2023-06-29
+2026-06-21 17:42:46,231 INFO SKIPPED date=2023-05-29 missing_entry_candle atm=18600 expiry=2023-06-29
+2026-06-21 17:42:46,231 INFO SKIPPED date=2023-05-30 missing_entry_candle atm=18600 expiry=2023-06-29
+2026-06-21 17:42:46,242 INFO SKIPPED date=2023-05-31 missing_entry_candle atm=18550 expiry=2023-06-29
+2026-06-21 17:42:46,242 INFO SKIPPED date=2023-06-01 missing_entry_candle atm=18550 expiry=2023-06-29
+2026-06-21 17:42:46,242 INFO SKIPPED date=2023-06-02 missing_entry_candle atm=18550 expiry=2023-06-29
+2026-06-21 17:42:46,242 INFO SKIPPED date=2023-06-05 missing_entry_candle atm=18600 expiry=2023-06-29
+2026-06-21 17:42:46,243 INFO SKIPPED date=2023-06-06 missing_entry_candle atm=18600 expiry=2023-06-29
+2026-06-21 17:42:46,255 INFO SKIPPED date=2023-06-07 missing_entry_candle atm=18650 expiry=2023-06-29
+2026-06-21 17:42:46,487 INFO SKIPPED date=2023-06-08 missing_entry_candle atm=18750 expiry=2023-06-29
+2026-06-21 17:42:46,487 INFO SKIPPED date=2023-06-09 missing_entry_candle atm=18650 expiry=2023-06-29
+2026-06-21 17:42:46,488 INFO SKIPPED date=2023-06-12 missing_entry_candle atm=18600 expiry=2023-06-29
+2026-06-21 17:42:46,488 INFO SKIPPED date=2023-06-13 missing_entry_candle atm=18650 expiry=2023-06-29
+2026-06-21 17:42:46,488 INFO SKIPPED date=2023-06-14 missing_entry_candle atm=18750 expiry=2023-06-29
+2026-06-21 17:42:46,488 INFO SKIPPED date=2023-06-15 missing_entry_candle atm=18750 expiry=2023-06-29
+2026-06-21 17:42:46,488 INFO SKIPPED date=2023-06-16 missing_entry_candle atm=18750 expiry=2023-06-29
+2026-06-21 17:42:46,501 INFO SKIPPED date=2023-06-19 missing_entry_candle atm=18850 expiry=2023-06-29
+2026-06-21 17:42:46,519 INFO SKIPPED date=2023-06-20 missing_entry_candle atm=18700 expiry=2023-06-29
+2026-06-21 17:42:46,530 INFO SKIPPED date=2023-06-21 missing_entry_candle atm=18800 expiry=2023-06-29
+2026-06-21 17:42:46,530 INFO SKIPPED date=2023-06-22 missing_entry_candle atm=18850 expiry=2023-06-29
+2026-06-21 17:42:46,531 INFO SKIPPED date=2023-06-23 balance_failed ce=111.65 pe=71.10
+2026-06-21 17:42:46,531 INFO SKIPPED date=2023-06-26 balance_failed ce=103.65 pe=56.65
+2026-06-21 17:42:46,531 INFO TRADED date=2023-06-27 day=Tuesday expiry=2023-06-29 atm=18750 qty=300 ce=60.40 pe=53.70 sl=[CE_SL,PE_SL] net=-7546.00
+2026-06-21 17:42:46,532 INFO SKIPPED date=2023-06-28 missing_entry_candle atm=18850 expiry=2023-06-29
+2026-06-21 17:42:46,542 INFO SKIPPED date=2023-06-30 missing_entry_candle atm=19050 expiry=2023-07-27
+2026-06-21 17:42:46,559 INFO SKIPPED date=2023-07-03 missing_entry_candle atm=19300 expiry=2023-07-27
+2026-06-21 17:42:46,576 INFO SKIPPED date=2023-07-04 missing_entry_candle atm=19400 expiry=2023-07-27
+2026-06-21 17:42:46,577 INFO SKIPPED date=2023-07-05 missing_entry_candle atm=19400 expiry=2023-07-27
+2026-06-21 17:42:46,577 INFO SKIPPED date=2023-07-06 missing_entry_candle atm=19400 expiry=2023-07-27
+2026-06-21 17:42:46,594 INFO SKIPPED date=2023-07-07 missing_entry_candle atm=19450 expiry=2023-07-27
+2026-06-21 17:42:46,594 INFO SKIPPED date=2023-07-10 missing_entry_candle atm=19400 expiry=2023-07-27
+2026-06-21 17:42:46,594 INFO SKIPPED date=2023-07-11 missing_entry_candle atm=19450 expiry=2023-07-27
+2026-06-21 17:42:46,618 INFO SKIPPED date=2023-07-12 missing_entry_candle atm=19500 expiry=2023-07-27
+2026-06-21 17:42:46,619 INFO SKIPPED date=2023-07-13 missing_entry_candle atm=19500 expiry=2023-07-27
+2026-06-21 17:42:46,619 INFO SKIPPED date=2023-07-14 missing_entry_candle atm=19500 expiry=2023-07-27
+2026-06-21 17:42:46,636 INFO SKIPPED date=2023-07-17 missing_entry_candle atm=19600 expiry=2023-07-27
+2026-06-21 17:42:46,654 INFO SKIPPED date=2023-07-18 missing_entry_candle atm=19800 expiry=2023-07-27
+2026-06-21 17:42:46,654 INFO SKIPPED date=2023-07-19 missing_entry_candle atm=19800 expiry=2023-07-27
+2026-06-21 17:42:46,654 INFO SKIPPED date=2023-07-20 missing_entry_candle atm=19800 expiry=2023-07-27
+2026-06-21 17:42:46,654 INFO SKIPPED date=2023-07-21 balance_failed ce=162.95 pe=81.20
+2026-06-21 17:42:46,672 INFO SKIPPED date=2023-07-24 balance_failed ce=123.95 pe=82.80
+2026-06-21 17:42:46,673 INFO TRADED date=2023-07-25 day=Tuesday expiry=2023-07-27 atm=19700 qty=300 ce=85.80 pe=78.30 sl=[PE_SL] net=1352.00
+2026-06-21 17:42:46,673 INFO SKIPPED date=2023-07-26 balance_failed ce=74.50 pe=52.90
+2026-06-21 17:42:46,685 INFO SKIPPED date=2023-07-27 missing_entry_candle atm=19850 expiry=2023-08-31
+2026-06-21 17:42:46,703 INFO SKIPPED date=2023-07-28 missing_entry_candle atm=19650 expiry=2023-08-31
+2026-06-21 17:42:46,722 INFO SKIPPED date=2023-07-31 missing_entry_candle atm=19600 expiry=2023-08-31
+2026-06-21 17:42:46,741 INFO SKIPPED date=2023-08-01 missing_entry_candle atm=19750 expiry=2023-08-31
+2026-06-21 17:42:46,742 INFO SKIPPED date=2023-08-02 missing_entry_candle atm=19650 expiry=2023-08-31
+2026-06-21 17:42:46,761 INFO SKIPPED date=2023-08-03 missing_entry_candle atm=19500 expiry=2023-08-31
+2026-06-21 17:42:46,762 INFO SKIPPED date=2023-08-04 missing_entry_candle atm=19500 expiry=2023-08-31
+2026-06-21 17:42:46,781 INFO SKIPPED date=2023-08-07 missing_entry_candle atm=19550 expiry=2023-08-31
+2026-06-21 17:42:46,781 INFO SKIPPED date=2023-08-08 missing_entry_candle atm=19600 expiry=2023-08-31
+2026-06-21 17:42:46,782 INFO SKIPPED date=2023-08-09 missing_entry_candle atm=19550 expiry=2023-08-31
+2026-06-21 17:42:46,782 INFO SKIPPED date=2023-08-10 missing_entry_candle atm=19600 expiry=2023-08-31
+2026-06-21 17:42:46,782 INFO SKIPPED date=2023-08-11 missing_entry_candle atm=19500 expiry=2023-08-31
+2026-06-21 17:42:46,801 INFO SKIPPED date=2023-08-14 missing_entry_candle atm=19300 expiry=2023-08-31
+2026-06-21 17:42:46,820 INFO SKIPPED date=2023-08-16 missing_entry_candle atm=19350 expiry=2023-08-31
+2026-06-21 17:42:46,839 INFO SKIPPED date=2023-08-17 missing_entry_candle atm=19450 expiry=2023-08-31
+2026-06-21 17:42:46,839 INFO SKIPPED date=2023-08-18 missing_entry_candle atm=19300 expiry=2023-08-31
+2026-06-21 17:42:46,839 INFO SKIPPED date=2023-08-21 missing_entry_candle atm=19350 expiry=2023-08-31
+2026-06-21 17:42:46,857 INFO SKIPPED date=2023-08-22 missing_entry_candle atm=19400 expiry=2023-08-31
+2026-06-21 17:42:46,857 INFO SKIPPED date=2023-08-23 missing_entry_candle atm=19400 expiry=2023-08-31
+2026-06-21 17:42:46,858 INFO SKIPPED date=2023-08-24 missing_entry_candle atm=19550 expiry=2023-08-31
+2026-06-21 17:42:46,878 INFO SKIPPED date=2023-08-25 balance_failed ce=114.70 pe=85.70
+2026-06-21 17:42:46,879 INFO SKIPPED date=2023-08-28 balance_failed ce=73.50 pe=98.95
+2026-06-21 17:42:46,880 INFO TRADED date=2023-08-29 day=Tuesday expiry=2023-08-31 atm=19350 qty=300 ce=60.85 pe=70.65 sl=[none] net=5855.00
+2026-06-21 17:42:46,880 INFO TRADED date=2023-08-30 day=Wednesday expiry=2023-08-31 atm=19400 qty=300 ce=50.80 pe=43.25 sl=[CE_SL,PE_SL] net=-6343.00
+2026-06-21 17:42:46,897 INFO SKIPPED date=2023-08-31 missing_entry_candle atm=19400 expiry=2023-09-28
+2026-06-21 17:42:46,914 INFO SKIPPED date=2023-09-01 missing_entry_candle atm=19300 expiry=2023-09-28
+2026-06-21 17:42:46,931 INFO SKIPPED date=2023-09-04 missing_entry_candle atm=19500 expiry=2023-09-28
+2026-06-21 17:42:46,949 INFO SKIPPED date=2023-09-05 missing_entry_candle atm=19550 expiry=2023-09-28
+2026-06-21 17:42:46,967 INFO SKIPPED date=2023-09-06 missing_entry_candle atm=19600 expiry=2023-09-28
+2026-06-21 17:42:46,968 INFO SKIPPED date=2023-09-07 missing_entry_candle atm=19600 expiry=2023-09-28
+2026-06-21 17:42:46,988 INFO SKIPPED date=2023-09-08 missing_entry_candle atm=19750 expiry=2023-09-28
+2026-06-21 17:42:47,005 INFO SKIPPED date=2023-09-11 missing_entry_candle atm=19900 expiry=2023-09-28
+2026-06-21 17:42:47,021 INFO SKIPPED date=2023-09-12 missing_entry_candle atm=20050 expiry=2023-09-28
+2026-06-21 17:42:47,038 INFO SKIPPED date=2023-09-13 missing_entry_candle atm=20000 expiry=2023-09-28
+2026-06-21 17:42:47,051 INFO SKIPPED date=2023-09-14 missing_entry_candle atm=20150 expiry=2023-09-28
+2026-06-21 17:42:47,051 INFO SKIPPED date=2023-09-15 missing_entry_candle atm=20150 expiry=2023-09-28
+2026-06-21 17:42:47,052 INFO SKIPPED date=2023-09-18 missing_entry_candle atm=20150 expiry=2023-09-28
+2026-06-21 17:42:47,052 INFO SKIPPED date=2023-09-20 missing_entry_candle atm=20000 expiry=2023-09-28
+2026-06-21 17:42:47,069 INFO SKIPPED date=2023-09-21 missing_entry_candle atm=19800 expiry=2023-09-28
+2026-06-21 17:42:47,069 INFO TRADED date=2023-09-22 day=Friday expiry=2023-09-28 atm=19800 qty=300 ce=101.25 pe=98.80 sl=[PE_SL] net=8312.00
+2026-06-21 17:42:47,086 INFO SKIPPED date=2023-09-25 balance_failed ce=104.00 pe=77.65
+2026-06-21 17:42:47,106 INFO TRADED date=2023-09-26 day=Tuesday expiry=2023-09-28 atm=19700 qty=300 ce=66.05 pe=80.75 sl=[CE_SL,PE_SL] net=-9508.00
+2026-06-21 17:42:47,106 INFO SKIPPED date=2023-09-27 balance_failed ce=44.75 pe=75.05
+2026-06-21 17:42:47,119 INFO SKIPPED date=2023-09-28 missing_entry_candle atm=19750 expiry=2023-10-26
+2026-06-21 17:42:47,132 INFO SKIPPED date=2023-09-29 missing_entry_candle atm=19600 expiry=2023-10-26
+2026-06-21 17:42:47,146 INFO SKIPPED date=2023-10-03 missing_entry_candle atm=19550 expiry=2023-10-26
+2026-06-21 17:42:47,160 INFO SKIPPED date=2023-10-04 missing_entry_candle atm=19400 expiry=2023-10-26
+2026-06-21 17:42:47,161 INFO SKIPPED date=2023-10-05 missing_entry_candle atm=19550 expiry=2023-10-26
+2026-06-21 17:42:47,161 INFO SKIPPED date=2023-10-06 missing_entry_candle atm=19600 expiry=2023-10-26
+2026-06-21 17:42:47,174 INFO SKIPPED date=2023-10-09 missing_entry_candle atm=19500 expiry=2023-10-26
+2026-06-21 17:42:47,174 INFO SKIPPED date=2023-10-10 missing_entry_candle atm=19600 expiry=2023-10-26
+2026-06-21 17:42:47,188 INFO SKIPPED date=2023-10-11 missing_entry_candle atm=19800 expiry=2023-10-26
+2026-06-21 17:42:47,199 INFO SKIPPED date=2023-10-12 missing_entry_candle atm=19850 expiry=2023-10-26
+2026-06-21 17:42:47,215 INFO SKIPPED date=2023-10-13 missing_entry_candle atm=19700 expiry=2023-10-26
+2026-06-21 17:42:47,216 INFO SKIPPED date=2023-10-16 missing_entry_candle atm=19700 expiry=2023-10-26
+2026-06-21 17:42:47,216 INFO SKIPPED date=2023-10-17 missing_entry_candle atm=19800 expiry=2023-10-26
+2026-06-21 17:42:47,216 INFO SKIPPED date=2023-10-18 missing_entry_candle atm=19800 expiry=2023-10-26
+2026-06-21 17:42:47,216 INFO SKIPPED date=2023-10-19 missing_entry_candle atm=19550 expiry=2023-10-26
+2026-06-21 17:42:47,217 INFO TRADED date=2023-10-20 day=Friday expiry=2023-10-26 atm=19550 qty=300 ce=107.85 pe=93.00 sl=[PE_SL] net=875.00
+2026-06-21 17:42:47,217 INFO TRADED date=2023-10-23 day=Monday expiry=2023-10-26 atm=19550 qty=300 ce=76.10 pe=90.30 sl=[PE_SL] net=12707.00
+2026-06-21 17:42:47,231 INFO SKIPPED date=2023-10-25 balance_failed ce=85.95 pe=53.60
+2026-06-21 17:42:47,243 INFO SKIPPED date=2023-10-26 missing_entry_candle atm=19000 expiry=2023-11-30
+2026-06-21 17:42:47,250 INFO SKIPPED date=2023-10-27 missing_entry_candle atm=18950 expiry=2023-11-30
+2026-06-21 17:42:47,258 INFO SKIPPED date=2023-10-30 missing_entry_candle atm=19050 expiry=2023-11-30
+2026-06-21 17:42:47,266 INFO SKIPPED date=2023-10-31 missing_entry_candle atm=19150 expiry=2023-11-30
+2026-06-21 17:42:47,276 INFO SKIPPED date=2023-11-01 missing_entry_candle atm=19100 expiry=2023-11-30
+2026-06-21 17:42:47,277 INFO SKIPPED date=2023-11-02 missing_entry_candle atm=19150 expiry=2023-11-30
+2026-06-21 17:42:47,285 INFO SKIPPED date=2023-11-03 missing_entry_candle atm=19250 expiry=2023-11-30
+2026-06-21 17:42:47,294 INFO SKIPPED date=2023-11-06 missing_entry_candle atm=19350 expiry=2023-11-30
+2026-06-21 17:42:47,295 INFO SKIPPED date=2023-11-07 missing_entry_candle atm=19350 expiry=2023-11-30
+2026-06-21 17:42:47,307 INFO SKIPPED date=2023-11-08 missing_entry_candle atm=19400 expiry=2023-11-30
+2026-06-21 17:42:47,307 INFO SKIPPED date=2023-11-09 missing_entry_candle atm=19400 expiry=2023-11-30
+2026-06-21 17:42:47,307 INFO SKIPPED date=2023-11-10 missing_entry_candle atm=19350 expiry=2023-11-30
+2026-06-21 17:42:47,320 INFO SKIPPED date=2023-11-13 missing_entry_candle atm=19450 expiry=2023-11-30
+2026-06-21 17:42:47,333 INFO SKIPPED date=2023-11-15 missing_entry_candle atm=19600 expiry=2023-11-30
+2026-06-21 17:42:47,346 INFO SKIPPED date=2023-11-16 missing_entry_candle atm=19650 expiry=2023-11-30
+2026-06-21 17:42:47,360 INFO SKIPPED date=2023-11-17 missing_entry_candle atm=19750 expiry=2023-11-30
+2026-06-21 17:42:47,360 INFO SKIPPED date=2023-11-20 missing_entry_candle atm=19750 expiry=2023-11-30
+2026-06-21 17:42:47,360 INFO SKIPPED date=2023-11-21 missing_entry_candle atm=19750 expiry=2023-11-30
+2026-06-21 17:42:47,374 INFO SKIPPED date=2023-11-22 missing_entry_candle atm=19800 expiry=2023-11-30
+2026-06-21 17:42:47,387 INFO SKIPPED date=2023-11-23 missing_entry_candle atm=19850 expiry=2023-11-30
+2026-06-21 17:42:47,387 INFO SKIPPED date=2023-11-24 balance_failed ce=121.25 pe=59.00
+2026-06-21 17:42:47,388 INFO TRADED date=2023-11-28 day=Tuesday expiry=2023-11-30 atm=19850 qty=300 ce=74.25 pe=62.65 sl=[CE_SL,PE_SL] net=-8914.00
+2026-06-21 17:42:47,402 INFO TRADED date=2023-11-29 day=Wednesday expiry=2023-11-30 atm=20000 qty=300 ce=52.05 pe=51.75 sl=[CE_SL] net=7772.00
+2026-06-21 17:42:47,412 INFO SKIPPED date=2023-11-30 missing_entry_candle atm=20100 expiry=2023-12-28
+2026-06-21 17:42:47,421 INFO SKIPPED date=2023-12-01 missing_entry_candle atm=20200 expiry=2023-12-28
+2026-06-21 17:42:47,432 INFO SKIPPED date=2023-12-04 missing_entry_candle atm=20550 expiry=2023-12-28
+2026-06-21 17:42:47,444 INFO SKIPPED date=2023-12-05 missing_entry_candle atm=20700 expiry=2023-12-28
+2026-06-21 17:42:47,454 INFO SKIPPED date=2023-12-06 missing_entry_candle atm=20950 expiry=2023-12-28
+2026-06-21 17:42:47,463 INFO SKIPPED date=2023-12-07 missing_entry_candle atm=20850 expiry=2023-12-28
+2026-06-21 17:42:47,463 INFO SKIPPED date=2023-12-08 missing_entry_candle atm=20950 expiry=2023-12-28
+2026-06-21 17:42:47,477 INFO SKIPPED date=2023-12-11 missing_entry_candle atm=21000 expiry=2023-12-28
+2026-06-21 17:42:47,489 INFO SKIPPED date=2023-12-12 missing_entry_candle atm=21050 expiry=2023-12-28
+2026-06-21 17:42:47,502 INFO SKIPPED date=2023-12-13 missing_entry_candle atm=20900 expiry=2023-12-28
+2026-06-21 17:42:47,515 INFO SKIPPED date=2023-12-14 missing_entry_candle atm=21100 expiry=2023-12-28
+2026-06-21 17:42:47,528 INFO SKIPPED date=2023-12-15 missing_entry_candle atm=21250 expiry=2023-12-28
+2026-06-21 17:42:47,545 INFO SKIPPED date=2023-12-18 missing_entry_candle atm=21400 expiry=2023-12-28
+2026-06-21 17:42:47,559 INFO SKIPPED date=2023-12-19 missing_entry_candle atm=21450 expiry=2023-12-28
+2026-06-21 17:42:47,574 INFO SKIPPED date=2023-12-20 missing_entry_candle atm=21550 expiry=2023-12-28
+2026-06-21 17:42:47,574 INFO SKIPPED date=2023-12-21 missing_entry_candle atm=21050 expiry=2023-12-28
+2026-06-21 17:42:47,589 INFO SKIPPED date=2023-12-22 balance_failed ce=150.60 pe=116.80
+2026-06-21 17:42:47,604 INFO SKIPPED date=2023-12-26 balance_failed ce=128.15 pe=92.70
+2026-06-21 17:42:47,618 INFO SKIPPED date=2023-12-27 balance_failed ce=99.35 pe=61.75
+2026-06-21 17:42:47,637 INFO SKIPPED date=2023-12-28 missing_entry_candle atm=21700 expiry=2024-01-25
+2026-06-21 17:42:47,637 INFO SKIPPED date=2023-12-29 missing_entry_candle atm=21700 expiry=2024-01-25
+2026-06-21 17:42:47,637 INFO SKIPPED date=2024-01-01 missing_entry_candle atm=21700 expiry=2024-01-25
+2026-06-21 17:42:47,637 INFO SKIPPED date=2024-01-02 missing_entry_candle atm=21700 expiry=2024-01-25
+2026-06-21 17:42:47,656 INFO SKIPPED date=2024-01-03 missing_entry_candle atm=21600 expiry=2024-01-25
+2026-06-21 17:42:47,656 INFO SKIPPED date=2024-01-04 missing_entry_candle atm=21600 expiry=2024-01-25
+2026-06-21 17:42:47,676 INFO SKIPPED date=2024-01-05 missing_entry_candle atm=21750 expiry=2024-01-25
+2026-06-21 17:42:47,676 INFO SKIPPED date=2024-01-08 missing_entry_candle atm=21750 expiry=2024-01-25
+2026-06-21 17:42:47,693 INFO SKIPPED date=2024-01-09 missing_entry_candle atm=21650 expiry=2024-01-25
+2026-06-21 17:42:47,710 INFO SKIPPED date=2024-01-10 missing_entry_candle atm=21550 expiry=2024-01-25
+2026-06-21 17:42:47,710 INFO SKIPPED date=2024-01-11 missing_entry_candle atm=21700 expiry=2024-01-25
+2026-06-21 17:42:47,711 INFO SKIPPED date=2024-01-12 missing_entry_candle atm=21750 expiry=2024-01-25
+2026-06-21 17:42:47,723 INFO SKIPPED date=2024-01-15 missing_entry_candle atm=22050 expiry=2024-01-25
+2026-06-21 17:42:47,723 INFO SKIPPED date=2024-01-16 missing_entry_candle atm=22050 expiry=2024-01-25
+2026-06-21 17:42:47,739 INFO SKIPPED date=2024-01-17 missing_entry_candle atm=21850 expiry=2024-01-25
+2026-06-21 17:42:47,756 INFO SKIPPED date=2024-01-18 missing_entry_candle atm=21450 expiry=2024-01-25
+2026-06-21 17:42:47,757 INFO TRADED date=2024-01-19 day=Friday expiry=2024-01-25 atm=21650 qty=300 ce=164.25 pe=148.35 sl=[PE_SL] net=-8416.00
+2026-06-21 17:42:47,758 INFO TRADED date=2024-01-23 day=Tuesday expiry=2024-01-25 atm=21750 qty=300 ce=114.90 pe=94.60 sl=[PE_SL] net=24794.00
+2026-06-21 17:42:47,773 INFO TRADED date=2024-01-24 day=Wednesday expiry=2024-01-25 atm=21150 qty=300 ce=125.25 pe=114.40 sl=[CE_SL] net=23645.00
+2026-06-21 17:42:47,788 INFO SKIPPED date=2024-01-25 missing_entry_candle atm=21400 expiry=2024-02-29
+2026-06-21 17:42:47,804 INFO SKIPPED date=2024-01-29 missing_entry_candle atm=21500 expiry=2024-02-29
+2026-06-21 17:42:47,821 INFO SKIPPED date=2024-01-30 missing_entry_candle atm=21800 expiry=2024-02-29
+2026-06-21 17:42:47,821 INFO SKIPPED date=2024-01-31 missing_entry_candle atm=21500 expiry=2024-02-29
+2026-06-21 17:42:47,838 INFO SKIPPED date=2024-02-01 missing_entry_candle atm=21700 expiry=2024-02-29
+2026-06-21 17:42:47,854 INFO SKIPPED date=2024-02-02 missing_entry_candle atm=21900 expiry=2024-02-29
+2026-06-21 17:42:47,870 INFO SKIPPED date=2024-02-05 missing_entry_candle atm=21850 expiry=2024-02-29
+2026-06-21 17:42:47,888 INFO SKIPPED date=2024-02-06 missing_entry_candle atm=21750 expiry=2024-02-29
+2026-06-21 17:42:47,905 INFO SKIPPED date=2024-02-07 missing_entry_candle atm=22050 expiry=2024-02-29
+2026-06-21 17:42:47,922 INFO SKIPPED date=2024-02-08 missing_entry_candle atm=22000 expiry=2024-02-29
+2026-06-21 17:42:47,923 INFO SKIPPED date=2024-02-09 missing_entry_candle atm=21700 expiry=2024-02-29
+2026-06-21 17:42:47,923 INFO SKIPPED date=2024-02-12 missing_entry_candle atm=21800 expiry=2024-02-29
+2026-06-21 17:42:47,937 INFO SKIPPED date=2024-02-13 missing_entry_candle atm=21650 expiry=2024-02-29
+2026-06-21 17:42:47,954 INFO SKIPPED date=2024-02-14 missing_entry_candle atm=21600 expiry=2024-02-29
+2026-06-21 17:42:47,955 INFO SKIPPED date=2024-02-15 missing_entry_candle atm=21900 expiry=2024-02-29
+2026-06-21 17:42:47,955 INFO SKIPPED date=2024-02-16 missing_entry_candle atm=22000 expiry=2024-02-29
+2026-06-21 17:42:47,973 INFO SKIPPED date=2024-02-19 missing_entry_candle atm=22100 expiry=2024-02-29
+2026-06-21 17:42:47,973 INFO SKIPPED date=2024-02-20 missing_entry_candle atm=22050 expiry=2024-02-29
+2026-06-21 17:42:47,993 INFO SKIPPED date=2024-02-21 missing_entry_candle atm=22200 expiry=2024-02-29
+2026-06-21 17:42:47,994 INFO SKIPPED date=2024-02-22 missing_entry_candle atm=22050 expiry=2024-02-29
+2026-06-21 17:42:48,016 INFO TRADED date=2024-02-23 day=Friday expiry=2024-02-29 atm=22250 qty=300 ce=176.75 pe=148.50 sl=[none] net=8600.00
+2026-06-21 17:42:48,035 INFO SKIPPED date=2024-02-26 balance_failed ce=171.70 pe=120.95
+2026-06-21 17:42:48,036 INFO TRADED date=2024-02-27 day=Tuesday expiry=2024-02-29 atm=22100 qty=300 ce=132.00 pe=126.15 sl=[CE_SL] net=7715.00
+2026-06-21 17:42:48,037 INFO TRADED date=2024-02-28 day=Wednesday expiry=2024-02-29 atm=22200 qty=300 ce=100.30 pe=98.40 sl=[PE_SL] net=19196.00
+2026-06-21 17:42:48,051 INFO SKIPPED date=2024-02-29 missing_entry_candle atm=21950 expiry=2024-03-28
+2026-06-21 17:42:48,066 INFO SKIPPED date=2024-03-01 missing_entry_candle atm=22100 expiry=2024-03-28
+2026-06-21 17:42:48,081 INFO SKIPPED date=2024-03-04 missing_entry_candle atm=22400 expiry=2024-03-28
+2026-06-21 17:42:48,096 INFO SKIPPED date=2024-03-05 missing_entry_candle atm=22350 expiry=2024-03-28
+2026-06-21 17:42:48,110 INFO SKIPPED date=2024-03-06 missing_entry_candle atm=22300 expiry=2024-03-28
+2026-06-21 17:42:48,123 INFO SKIPPED date=2024-03-07 missing_entry_candle atm=22500 expiry=2024-03-28
+2026-06-21 17:42:48,123 INFO SKIPPED date=2024-03-11 missing_entry_candle atm=22500 expiry=2024-03-28
+2026-06-21 17:42:48,124 INFO SKIPPED date=2024-03-12 missing_entry_candle atm=22350 expiry=2024-03-28
+2026-06-21 17:42:48,124 INFO SKIPPED date=2024-03-13 missing_entry_candle atm=22400 expiry=2024-03-28
+2026-06-21 17:42:48,124 INFO SKIPPED date=2024-03-14 missing_entry_candle atm=21950 expiry=2024-03-28
+2026-06-21 17:42:48,124 INFO SKIPPED date=2024-03-15 missing_entry_candle atm=22100 expiry=2024-03-28
+2026-06-21 17:42:48,140 INFO SKIPPED date=2024-03-18 missing_entry_candle atm=22000 expiry=2024-03-28
+2026-06-21 17:42:48,141 INFO SKIPPED date=2024-03-19 missing_entry_candle atm=21950 expiry=2024-03-28
+2026-06-21 17:42:48,154 INFO SKIPPED date=2024-03-20 missing_entry_candle atm=21900 expiry=2024-03-28
+2026-06-21 17:42:48,154 INFO SKIPPED date=2024-03-21 missing_entry_candle atm=22000 expiry=2024-03-28
+2026-06-21 17:42:48,154 INFO SKIPPED date=2024-03-22 balance_failed ce=180.20 pe=96.30
+2026-06-21 17:42:48,167 INFO SKIPPED date=2024-03-26 balance_failed ce=146.35 pe=92.50
+2026-06-21 17:42:48,168 INFO SKIPPED date=2024-03-27 balance_failed ce=110.20 pe=66.75
+2026-06-21 17:42:48,184 INFO SKIPPED date=2024-03-28 missing_entry_candle atm=22200 expiry=2024-04-25
+2026-06-21 17:42:48,201 INFO SKIPPED date=2024-04-01 missing_entry_candle atm=22500 expiry=2024-04-25
+2026-06-21 17:42:48,217 INFO SKIPPED date=2024-04-02 missing_entry_candle atm=22450 expiry=2024-04-25
+2026-06-21 17:42:48,233 INFO SKIPPED date=2024-04-03 missing_entry_candle atm=22350 expiry=2024-04-25
+2026-06-21 17:42:48,253 INFO SKIPPED date=2024-04-04 missing_entry_candle atm=22600 expiry=2024-04-25
+2026-06-21 17:42:48,253 INFO SKIPPED date=2024-04-05 missing_entry_candle atm=22450 expiry=2024-04-25
+2026-06-21 17:42:48,269 INFO SKIPPED date=2024-04-08 missing_entry_candle atm=22550 expiry=2024-04-25
+2026-06-21 17:42:48,286 INFO SKIPPED date=2024-04-09 missing_entry_candle atm=22700 expiry=2024-04-25
+2026-06-21 17:42:48,286 INFO SKIPPED date=2024-04-10 missing_entry_candle atm=22700 expiry=2024-04-25
+2026-06-21 17:42:48,286 INFO SKIPPED date=2024-04-12 missing_entry_candle atm=22700 expiry=2024-04-25
+2026-06-21 17:42:48,303 INFO SKIPPED date=2024-04-15 missing_entry_candle atm=22300 expiry=2024-04-25
+2026-06-21 17:42:48,319 INFO SKIPPED date=2024-04-16 missing_entry_candle atm=22150 expiry=2024-04-25
+2026-06-21 17:42:48,335 INFO SKIPPED date=2024-04-18 missing_entry_candle atm=22250 expiry=2024-04-25
+2026-06-21 17:42:48,353 INFO SKIPPED date=2024-04-19 balance_failed ce=203.90 pe=161.30
+2026-06-21 17:42:48,354 INFO TRADED date=2024-04-22 day=Monday expiry=2024-04-25 atm=22250 qty=300 ce=119.60 pe=135.65 sl=[CE_SL,PE_SL] net=-16015.00
+2026-06-21 17:42:48,371 INFO TRADED date=2024-04-23 day=Tuesday expiry=2024-04-25 atm=22400 qty=300 ce=95.00 pe=111.35 sl=[none] net=8135.00
+2026-06-21 17:42:48,372 INFO TRADED date=2024-04-24 day=Wednesday expiry=2024-04-25 atm=22400 qty=300 ce=82.70 pe=72.90 sl=[CE_SL] net=2903.00
+2026-06-21 17:42:48,385 INFO SKIPPED date=2024-04-25 missing_entry_candle atm=22350 expiry=2024-05-30
+2026-06-21 17:42:48,401 INFO SKIPPED date=2024-04-26 missing_entry_candle atm=22600 expiry=2024-05-30
+2026-06-21 17:42:48,418 INFO SKIPPED date=2024-04-29 missing_entry_candle atm=22500 expiry=2024-05-30
+2026-06-21 17:42:48,435 INFO SKIPPED date=2024-04-30 missing_entry_candle atm=22700 expiry=2024-05-30
+2026-06-21 17:42:48,452 INFO SKIPPED date=2024-05-02 missing_entry_candle atm=22650 expiry=2024-05-30
+2026-06-21 17:42:48,471 INFO SKIPPED date=2024-05-03 missing_entry_candle atm=22750 expiry=2024-05-30
+2026-06-21 17:42:48,472 INFO SKIPPED date=2024-05-06 missing_entry_candle atm=22500 expiry=2024-05-30
+2026-06-21 17:42:48,486 INFO SKIPPED date=2024-05-07 missing_entry_candle atm=22450 expiry=2024-05-30
+2026-06-21 17:42:48,501 INFO SKIPPED date=2024-05-08 missing_entry_candle atm=22200 expiry=2024-05-30
+2026-06-21 17:42:48,517 INFO SKIPPED date=2024-05-09 missing_entry_candle atm=22300 expiry=2024-05-30
+2026-06-21 17:42:48,526 INFO SKIPPED date=2024-05-10 missing_entry_candle atm=21950 expiry=2024-05-30
+2026-06-21 17:42:48,526 INFO SKIPPED date=2024-05-13 missing_entry_candle atm=21950 expiry=2024-05-30
+2026-06-21 17:42:48,537 INFO SKIPPED date=2024-05-14 missing_entry_candle atm=22150 expiry=2024-05-30
+2026-06-21 17:42:48,550 INFO SKIPPED date=2024-05-15 missing_entry_candle atm=22250 expiry=2024-05-30
+2026-06-21 17:42:48,550 INFO SKIPPED date=2024-05-16 missing_entry_candle atm=22300 expiry=2024-05-30
+2026-06-21 17:42:48,569 INFO SKIPPED date=2024-05-17 missing_entry_candle atm=22400 expiry=2024-05-30
+2026-06-21 17:42:48,569 INFO SKIPPED date=2024-05-21 missing_entry_candle atm=22450 expiry=2024-05-30
+2026-06-21 17:42:48,898 INFO SKIPPED date=2024-05-22 missing_entry_candle atm=22550 expiry=2024-05-30
+2026-06-21 17:42:48,899 INFO SKIPPED date=2024-05-23 missing_entry_candle atm=22600 expiry=2024-05-30
+2026-06-21 17:42:48,920 INFO SKIPPED date=2024-05-24 balance_failed ce=206.50 pe=148.20
+2026-06-21 17:42:48,940 INFO SKIPPED date=2024-05-27 balance_failed ce=165.25 pe=129.40
+2026-06-21 17:42:48,941 INFO SKIPPED date=2024-05-28 balance_failed ce=159.40 pe=104.85
+2026-06-21 17:42:48,960 INFO SKIPPED date=2024-05-29 balance_failed ce=122.55 pe=92.00
+2026-06-21 17:42:48,977 INFO SKIPPED date=2024-05-30 missing_entry_candle atm=22700 expiry=2024-06-27
+2026-06-21 17:42:48,992 INFO SKIPPED date=2024-05-31 missing_entry_candle atm=22600 expiry=2024-06-27
+2026-06-21 17:42:49,010 INFO SKIPPED date=2024-06-03 missing_entry_candle atm=23150 expiry=2024-06-27
+2026-06-21 17:42:49,029 INFO SKIPPED date=2024-06-04 missing_entry_candle atm=22850 expiry=2024-06-27
+2026-06-21 17:42:49,038 INFO SKIPPED date=2024-06-05 missing_entry_candle atm=21950 expiry=2024-06-27
+2026-06-21 17:42:49,038 INFO SKIPPED date=2024-06-06 missing_entry_candle atm=22700 expiry=2024-06-27
+2026-06-21 17:42:49,055 INFO SKIPPED date=2024-06-07 missing_entry_candle atm=22800 expiry=2024-06-27
+2026-06-21 17:42:49,074 INFO SKIPPED date=2024-06-10 missing_entry_candle atm=23400 expiry=2024-06-27
+2026-06-21 17:42:49,092 INFO SKIPPED date=2024-06-11 missing_entry_candle atm=23250 expiry=2024-06-27
+2026-06-21 17:42:49,109 INFO SKIPPED date=2024-06-12 missing_entry_candle atm=23350 expiry=2024-06-27
+2026-06-21 17:42:49,126 INFO SKIPPED date=2024-06-13 missing_entry_candle atm=23450 expiry=2024-06-27
+2026-06-21 17:42:49,127 INFO SKIPPED date=2024-06-14 missing_entry_candle atm=23400 expiry=2024-06-27
+2026-06-21 17:42:49,145 INFO SKIPPED date=2024-06-18 missing_entry_candle atm=23550 expiry=2024-06-27
+2026-06-21 17:42:49,166 INFO SKIPPED date=2024-06-19 missing_entry_candle atm=23600 expiry=2024-06-27
+2026-06-21 17:42:49,182 INFO SKIPPED date=2024-06-20 missing_entry_candle atm=23500 expiry=2024-06-27
+2026-06-21 17:42:49,183 INFO TRADED date=2024-06-21 day=Friday expiry=2024-06-27 atm=23600 qty=300 ce=140.40 pe=138.95 sl=[PE_SL] net=9563.00
+2026-06-21 17:42:49,184 INFO TRADED date=2024-06-24 day=Monday expiry=2024-06-27 atm=23400 qty=300 ce=120.60 pe=137.25 sl=[CE_SL] net=13319.00
+2026-06-21 17:42:49,185 INFO TRADED date=2024-06-25 day=Tuesday expiry=2024-06-27 atm=23600 qty=300 ce=101.35 pe=114.60 sl=[CE_SL] net=10814.00
+2026-06-21 17:42:49,201 INFO TRADED date=2024-06-26 day=Wednesday expiry=2024-06-27 atm=23700 qty=300 ce=104.50 pe=93.25 sl=[CE_SL] net=14645.00
+2026-06-21 17:42:49,214 INFO SKIPPED date=2024-06-27 missing_entry_candle atm=23850 expiry=2024-07-25
+2026-06-21 17:42:49,230 INFO SKIPPED date=2024-06-28 missing_entry_candle atm=24100 expiry=2024-07-25
+2026-06-21 17:42:49,247 INFO SKIPPED date=2024-07-01 missing_entry_candle atm=24000 expiry=2024-07-25
+2026-06-21 17:42:49,273 INFO SKIPPED date=2024-07-02 missing_entry_candle atm=24200 expiry=2024-07-25
+2026-06-21 17:42:49,315 INFO SKIPPED date=2024-07-03 missing_entry_candle atm=24250 expiry=2024-07-25
+2026-06-21 17:42:49,356 INFO SKIPPED date=2024-07-04 missing_entry_candle atm=24350 expiry=2024-07-25
+2026-06-21 17:42:49,356 INFO SKIPPED date=2024-07-05 missing_entry_candle atm=24200 expiry=2024-07-25
+2026-06-21 17:42:49,384 INFO SKIPPED date=2024-07-08 missing_entry_candle atm=24300 expiry=2024-07-25
+2026-06-21 17:42:49,385 INFO SKIPPED date=2024-07-09 missing_entry_candle atm=24350 expiry=2024-07-25
+2026-06-21 17:42:49,409 INFO SKIPPED date=2024-07-10 missing_entry_candle atm=24400 expiry=2024-07-25
+2026-06-21 17:42:49,409 INFO SKIPPED date=2024-07-11 missing_entry_candle atm=24350 expiry=2024-07-25
+2026-06-21 17:42:49,410 INFO SKIPPED date=2024-07-12 missing_entry_candle atm=24350 expiry=2024-07-25
+2026-06-21 17:42:49,430 INFO SKIPPED date=2024-07-15 missing_entry_candle atm=24550 expiry=2024-07-25
+2026-06-21 17:42:49,447 INFO SKIPPED date=2024-07-16 missing_entry_candle atm=24600 expiry=2024-07-25
+2026-06-21 17:42:49,448 INFO SKIPPED date=2024-07-18 missing_entry_candle atm=24550 expiry=2024-07-25
+2026-06-21 17:42:49,469 INFO TRADED date=2024-07-19 day=Friday expiry=2024-07-25 atm=24750 qty=300 ce=231.60 pe=219.45 sl=[PE_SL] net=13940.00
+2026-06-21 17:42:49,469 INFO TRADED date=2024-07-22 day=Monday expiry=2024-07-25 atm=24400 qty=300 ce=230.05 pe=226.75 sl=[CE_SL] net=2312.00
+2026-06-21 17:42:49,470 INFO TRADED date=2024-07-23 day=Tuesday expiry=2024-07-25 atm=24550 qty=300 ce=192.90 pe=220.30 sl=[PE_SL] net=22307.00
+2026-06-21 17:42:49,488 INFO TRADED date=2024-07-24 day=Wednesday expiry=2024-07-25 atm=24450 qty=300 ce=91.55 pe=109.65 sl=[CE_SL,PE_SL] net=-12772.00
+2026-06-21 17:42:49,499 INFO SKIPPED date=2024-07-25 missing_entry_candle atm=24250 expiry=2024-08-29
+2026-06-21 17:42:49,513 INFO SKIPPED date=2024-07-26 missing_entry_candle atm=24450 expiry=2024-08-29
+2026-06-21 17:42:49,530 INFO SKIPPED date=2024-07-29 missing_entry_candle atm=24950 expiry=2024-08-29
+2026-06-21 17:42:49,546 INFO SKIPPED date=2024-07-30 missing_entry_candle atm=24850 expiry=2024-08-29
+2026-06-21 17:42:49,566 INFO SKIPPED date=2024-07-31 missing_entry_candle atm=24900 expiry=2024-08-29
+2026-06-21 17:42:49,583 INFO SKIPPED date=2024-08-01 missing_entry_candle atm=25050 expiry=2024-08-29
+2026-06-21 17:42:49,583 INFO SKIPPED date=2024-08-02 missing_entry_candle atm=24850 expiry=2024-08-29
+2026-06-21 17:42:49,598 INFO SKIPPED date=2024-08-05 missing_entry_candle atm=24300 expiry=2024-08-29
+2026-06-21 17:42:49,610 INFO SKIPPED date=2024-08-06 missing_entry_candle atm=24350 expiry=2024-08-29
+2026-06-21 17:42:49,610 INFO SKIPPED date=2024-08-07 missing_entry_candle atm=24300 expiry=2024-08-29
+2026-06-21 17:42:49,625 INFO SKIPPED date=2024-08-08 missing_entry_candle atm=24200 expiry=2024-08-29
+2026-06-21 17:42:49,625 INFO SKIPPED date=2024-08-09 missing_entry_candle atm=24350 expiry=2024-08-29
+2026-06-21 17:42:49,625 INFO SKIPPED date=2024-08-12 missing_entry_candle atm=24250 expiry=2024-08-29
+2026-06-21 17:42:49,625 INFO SKIPPED date=2024-08-13 missing_entry_candle atm=24350 expiry=2024-08-29
+2026-06-21 17:42:49,636 INFO SKIPPED date=2024-08-14 missing_entry_candle atm=24150 expiry=2024-08-29
+2026-06-21 17:42:49,636 INFO SKIPPED date=2024-08-16 missing_entry_candle atm=24350 expiry=2024-08-29
+2026-06-21 17:42:49,653 INFO SKIPPED date=2024-08-19 missing_entry_candle atm=24600 expiry=2024-08-29
+2026-06-21 17:42:49,669 INFO SKIPPED date=2024-08-20 missing_entry_candle atm=24650 expiry=2024-08-29
+2026-06-21 17:42:49,689 INFO SKIPPED date=2024-08-21 missing_entry_candle atm=24700 expiry=2024-08-29
+2026-06-21 17:42:49,689 INFO SKIPPED date=2024-08-22 missing_entry_candle atm=24850 expiry=2024-08-29
+2026-06-21 17:42:49,707 INFO TRADED date=2024-08-23 day=Friday expiry=2024-08-29 atm=24800 qty=300 ce=147.70 pe=125.30 sl=[CE_SL] net=-3862.00
+2026-06-21 17:42:49,708 INFO TRADED date=2024-08-26 day=Monday expiry=2024-08-29 atm=24900 qty=300 ce=111.95 pe=115.05 sl=[CE_SL] net=12218.00
+2026-06-21 17:42:49,725 INFO SKIPPED date=2024-08-27 balance_failed ce=114.00 pe=80.95
+2026-06-21 17:42:49,726 INFO TRADED date=2024-08-28 day=Wednesday expiry=2024-08-29 atm=25050 qty=300 ce=69.35 pe=83.00 sl=[CE_SL,PE_SL] net=-9841.00
+2026-06-21 17:42:49,738 INFO SKIPPED date=2024-08-29 missing_entry_candle atm=25050 expiry=2024-09-26
+2026-06-21 17:42:49,752 INFO SKIPPED date=2024-08-30 missing_entry_candle atm=25250 expiry=2024-09-26
+2026-06-21 17:42:49,768 INFO SKIPPED date=2024-09-02 missing_entry_candle atm=25300 expiry=2024-09-26
+2026-06-21 17:42:49,768 INFO SKIPPED date=2024-09-03 missing_entry_candle atm=25250 expiry=2024-09-26
+2026-06-21 17:42:49,784 INFO SKIPPED date=2024-09-04 missing_entry_candle atm=25100 expiry=2024-09-26
+2026-06-21 17:42:49,784 INFO SKIPPED date=2024-09-05 missing_entry_candle atm=25250 expiry=2024-09-26
+2026-06-21 17:42:49,784 INFO SKIPPED date=2024-09-06 missing_entry_candle atm=25100 expiry=2024-09-26
+2026-06-21 17:42:49,801 INFO SKIPPED date=2024-09-09 missing_entry_candle atm=24800 expiry=2024-09-26
+2026-06-21 17:42:49,813 INFO SKIPPED date=2024-09-10 missing_entry_candle atm=24950 expiry=2024-09-26
+2026-06-21 17:42:49,830 INFO SKIPPED date=2024-09-11 missing_entry_candle atm=25000 expiry=2024-09-26
+2026-06-21 17:42:49,830 INFO SKIPPED date=2024-09-12 missing_entry_candle atm=25000 expiry=2024-09-26
+2026-06-21 17:42:49,844 INFO SKIPPED date=2024-09-13 missing_entry_candle atm=25350 expiry=2024-09-26
+2026-06-21 17:42:49,861 INFO SKIPPED date=2024-09-16 missing_entry_candle atm=25400 expiry=2024-09-26
+2026-06-21 17:42:49,861 INFO SKIPPED date=2024-09-17 missing_entry_candle atm=25350 expiry=2024-09-26
+2026-06-21 17:42:49,862 INFO SKIPPED date=2024-09-18 missing_entry_candle atm=25400 expiry=2024-09-26
+2026-06-21 17:42:49,878 INFO SKIPPED date=2024-09-19 missing_entry_candle atm=25550 expiry=2024-09-26
+2026-06-21 17:42:49,896 INFO TRADED date=2024-09-20 day=Friday expiry=2024-09-26 atm=25500 qty=300 ce=157.75 pe=151.90 sl=[CE_SL,PE_SL] net=-19279.00
+2026-06-21 17:42:49,917 INFO TRADED date=2024-09-23 day=Monday expiry=2024-09-26 atm=25900 qty=300 ce=132.85 pe=145.30 sl=[CE_SL] net=239.00
+2026-06-21 17:42:49,935 INFO TRADED date=2024-09-24 day=Tuesday expiry=2024-09-26 atm=25950 qty=300 ce=111.40 pe=125.65 sl=[CE_SL] net=1541.00
+2026-06-21 17:42:49,935 INFO SKIPPED date=2024-09-25 balance_failed ce=76.70 pe=104.90
+2026-06-21 17:42:49,942 INFO SKIPPED date=2024-09-26 missing_entry_candle atm=26050 expiry=2024-10-31
+2026-06-21 17:42:49,948 INFO SKIPPED date=2024-09-27 missing_entry_candle atm=26250 expiry=2024-10-31
+2026-06-21 17:42:49,958 INFO SKIPPED date=2024-09-30 missing_entry_candle atm=26100 expiry=2024-10-31
+2026-06-21 17:42:49,969 INFO SKIPPED date=2024-10-01 missing_entry_candle atm=25900 expiry=2024-10-31
+2026-06-21 17:42:49,978 INFO SKIPPED date=2024-10-03 missing_entry_candle atm=25550 expiry=2024-10-31
+2026-06-21 17:42:49,988 INFO SKIPPED date=2024-10-04 missing_entry_candle atm=25150 expiry=2024-10-31
+2026-06-21 17:42:50,002 INFO SKIPPED date=2024-10-07 missing_entry_candle atm=25100 expiry=2024-10-31
+2026-06-21 17:42:50,022 INFO SKIPPED date=2024-10-08 missing_entry_candle atm=24800 expiry=2024-10-31
+2026-06-21 17:42:50,033 INFO SKIPPED date=2024-10-09 missing_entry_candle atm=25050 expiry=2024-10-31
+2026-06-21 17:42:50,033 INFO SKIPPED date=2024-10-10 missing_entry_candle atm=25050 expiry=2024-10-31
+2026-06-21 17:42:50,046 INFO SKIPPED date=2024-10-11 missing_entry_candle atm=24950 expiry=2024-10-31
+2026-06-21 17:42:50,046 INFO SKIPPED date=2024-10-14 missing_entry_candle atm=25050 expiry=2024-10-31
+2026-06-21 17:42:50,061 INFO SKIPPED date=2024-10-15 missing_entry_candle atm=25200 expiry=2024-10-31
+2026-06-21 17:42:50,078 INFO SKIPPED date=2024-10-16 missing_entry_candle atm=25000 expiry=2024-10-31
+2026-06-21 17:42:50,078 INFO SKIPPED date=2024-10-17 missing_entry_candle atm=24950 expiry=2024-10-31
+2026-06-21 17:42:50,095 INFO SKIPPED date=2024-10-18 missing_entry_candle atm=24600 expiry=2024-10-31
+2026-06-21 17:42:50,096 INFO SKIPPED date=2024-10-21 missing_entry_candle atm=24950 expiry=2024-10-31
+2026-06-21 17:42:50,110 INFO SKIPPED date=2024-10-22 missing_entry_candle atm=24850 expiry=2024-10-31
+2026-06-21 17:42:50,128 INFO SKIPPED date=2024-10-23 missing_entry_candle atm=24500 expiry=2024-10-31
+2026-06-21 17:42:50,149 INFO SKIPPED date=2024-10-24 missing_entry_candle atm=24450 expiry=2024-10-31
+2026-06-21 17:42:50,166 INFO TRADED date=2024-10-25 day=Friday expiry=2024-10-31 atm=24400 qty=300 ce=172.85 pe=148.00 sl=[PE_SL] net=21785.00
+2026-06-21 17:42:50,183 INFO TRADED date=2024-10-28 day=Monday expiry=2024-10-31 atm=24250 qty=300 ce=146.40 pe=127.40 sl=[CE_SL,PE_SL] net=-17128.00
+2026-06-21 17:42:50,201 INFO TRADED date=2024-10-29 day=Tuesday expiry=2024-10-31 atm=24300 qty=300 ce=120.25 pe=110.65 sl=[CE_SL,PE_SL] net=-14554.00
+2026-06-21 17:42:50,217 INFO SKIPPED date=2024-10-30 balance_failed ce=113.95 pe=81.95
+2026-06-21 17:42:50,234 INFO SKIPPED date=2024-10-31 missing_entry_candle atm=24300 expiry=2024-11-28
+2026-06-21 17:42:50,254 INFO SKIPPED date=2024-11-04 missing_entry_candle atm=24100 expiry=2024-11-28
+2026-06-21 17:42:50,270 INFO SKIPPED date=2024-11-05 missing_entry_candle atm=24000 expiry=2024-11-28
+2026-06-21 17:42:50,286 INFO SKIPPED date=2024-11-06 missing_entry_candle atm=24250 expiry=2024-11-28
+2026-06-21 17:42:50,302 INFO SKIPPED date=2024-11-07 missing_entry_candle atm=24450 expiry=2024-11-28
+2026-06-21 17:42:50,302 INFO SKIPPED date=2024-11-08 missing_entry_candle atm=24100 expiry=2024-11-28
+2026-06-21 17:42:50,318 INFO SKIPPED date=2024-11-11 missing_entry_candle atm=24050 expiry=2024-11-28
+2026-06-21 17:42:50,335 INFO SKIPPED date=2024-11-12 missing_entry_candle atm=24200 expiry=2024-11-28
+2026-06-21 17:42:50,355 INFO SKIPPED date=2024-11-13 missing_entry_candle atm=23850 expiry=2024-11-28
+2026-06-21 17:42:50,372 INFO SKIPPED date=2024-11-14 missing_entry_candle atm=23600 expiry=2024-11-28
+2026-06-21 17:42:50,387 INFO SKIPPED date=2024-11-18 missing_entry_candle atm=23550 expiry=2024-11-28
+2026-06-21 17:42:50,387 INFO SKIPPED date=2024-11-19 missing_entry_candle atm=23600 expiry=2024-11-28
+2026-06-21 17:42:50,401 INFO SKIPPED date=2024-11-21 missing_entry_candle atm=23350 expiry=2024-11-28
+2026-06-21 17:42:50,417 INFO TRADED date=2024-11-22 day=Friday expiry=2024-11-28 atm=23400 qty=300 ce=198.95 pe=162.85 sl=[CE_SL] net=15068.00
+2026-06-21 17:42:50,418 INFO TRADED date=2024-11-25 day=Monday expiry=2024-11-28 atm=24300 qty=300 ce=173.50 pe=174.90 sl=[PE_SL] net=2171.00
+2026-06-21 17:42:50,419 INFO TRADED date=2024-11-26 day=Tuesday expiry=2024-11-28 atm=24300 qty=300 ce=136.90 pe=123.30 sl=[PE_SL] net=11222.00
+2026-06-21 17:42:50,419 INFO SKIPPED date=2024-11-27 balance_failed ce=109.30 pe=86.80
+2026-06-21 17:42:50,432 INFO SKIPPED date=2024-11-28 missing_entry_candle atm=24300 expiry=2024-12-26
+2026-06-21 17:42:50,446 INFO SKIPPED date=2024-11-29 missing_entry_candle atm=23950 expiry=2024-12-26
+2026-06-21 17:42:50,460 INFO SKIPPED date=2024-12-02 missing_entry_candle atm=24050 expiry=2024-12-26
+2026-06-21 17:42:50,460 INFO SKIPPED date=2024-12-03 missing_entry_candle atm=24300 expiry=2024-12-26
+2026-06-21 17:42:50,479 INFO SKIPPED date=2024-12-04 missing_entry_candle atm=24500 expiry=2024-12-26
+2026-06-21 17:42:50,479 INFO SKIPPED date=2024-12-05 missing_entry_candle atm=24500 expiry=2024-12-26
+2026-06-21 17:42:50,493 INFO SKIPPED date=2024-12-06 missing_entry_candle atm=24700 expiry=2024-12-26
+2026-06-21 17:42:50,494 INFO SKIPPED date=2024-12-09 missing_entry_candle atm=24700 expiry=2024-12-26
+2026-06-21 17:42:50,508 INFO SKIPPED date=2024-12-10 missing_entry_candle atm=24600 expiry=2024-12-26
+2026-06-21 17:42:50,508 INFO SKIPPED date=2024-12-11 missing_entry_candle atm=24600 expiry=2024-12-26
+2026-06-21 17:42:50,519 INFO SKIPPED date=2024-12-12 missing_entry_candle atm=24650 expiry=2024-12-26
+2026-06-21 17:42:50,530 INFO SKIPPED date=2024-12-13 missing_entry_candle atm=24450 expiry=2024-12-26
+2026-06-21 17:42:50,540 INFO SKIPPED date=2024-12-16 missing_entry_candle atm=24750 expiry=2024-12-26
+2026-06-21 17:42:50,540 INFO SKIPPED date=2024-12-17 missing_entry_candle atm=24600 expiry=2024-12-26
+2026-06-21 17:42:50,552 INFO SKIPPED date=2024-12-18 missing_entry_candle atm=24350 expiry=2024-12-26
+2026-06-21 17:42:50,566 INFO SKIPPED date=2024-12-19 missing_entry_candle atm=23900 expiry=2024-12-26
+2026-06-21 17:42:50,567 INFO TRADED date=2024-12-20 day=Friday expiry=2024-12-26 atm=23950 qty=300 ce=207.20 pe=200.15 sl=[CE_SL,PE_SL] net=-25141.00
+2026-06-21 17:42:50,581 INFO SKIPPED date=2024-12-23 balance_failed ce=166.05 pe=122.10
+2026-06-21 17:42:50,582 INFO SKIPPED date=2024-12-24 balance_failed ce=91.35 pe=71.05
+2026-06-21 17:42:50,727 INFO SKIPPED date=2024-12-26 balance_failed ce=472.45 pe=302.20
+2026-06-21 17:42:50,950 INFO SKIPPED date=2024-12-27 balance_failed ce=502.75 pe=321.70
+2026-06-21 17:42:50,950 INFO SKIPPED date=2024-12-30 balance_failed ce=453.65 pe=304.05
+2026-06-21 17:42:51,096 INFO SKIPPED date=2024-12-31 balance_failed ce=453.30 pe=311.35
+2026-06-21 17:42:51,256 INFO SKIPPED date=2025-01-01 balance_failed ce=447.70 pe=310.00
+2026-06-21 17:42:51,256 INFO SKIPPED date=2025-01-02 balance_failed ce=437.65 pe=335.50
+2026-06-21 17:42:51,875 INFO TRADED date=2025-01-03 day=Friday expiry=2025-01-30 atm=24200 qty=300 ce=382.00 pe=329.05 sl=[PE_SL] net=5357.00
+2026-06-21 17:42:52,034 INFO TRADED date=2025-01-06 day=Monday expiry=2025-01-30 atm=24050 qty=300 ce=379.60 pe=315.30 sl=[PE_SL] net=27017.00
+2026-06-21 17:42:52,228 INFO SKIPPED date=2025-01-07 balance_failed ce=412.00 pe=318.30
+2026-06-21 17:42:52,439 INFO TRADED date=2025-01-08 day=Wednesday expiry=2025-01-30 atm=23700 qty=300 ce=365.90 pe=309.70 sl=[PE_SL] net=-21592.00
+2026-06-21 17:42:52,632 INFO SKIPPED date=2025-01-09 balance_failed ce=373.95 pe=273.00
+2026-06-21 17:42:52,632 INFO SKIPPED date=2025-01-10 balance_failed ce=363.75 pe=277.00
+2026-06-21 17:42:52,778 INFO TRADED date=2025-01-13 day=Monday expiry=2025-01-30 atm=23250 qty=300 ce=348.95 pe=301.25 sl=[PE_SL] net=5000.00
+2026-06-21 17:42:52,945 INFO SKIPPED date=2025-01-14 balance_failed ce=331.85 pe=258.64
+2026-06-21 17:42:52,948 INFO TRADED date=2025-01-15 day=Wednesday expiry=2025-01-30 atm=23250 qty=300 ce=285.20 pe=254.50 sl=[none] net=6218.00
+2026-06-21 17:42:53,101 INFO TRADED date=2025-01-16 day=Thursday expiry=2025-01-30 atm=23350 qty=300 ce=266.14 pe=222.45 sl=[none] net=-9235.00
+2026-06-21 17:42:53,105 INFO TRADED date=2025-01-17 day=Friday expiry=2025-01-30 atm=23200 qty=300 ce=283.35 pe=239.60 sl=[CE_SL,PE_SL] net=-32077.00
+2026-06-21 17:42:53,109 INFO TRADED date=2025-01-20 day=Monday expiry=2025-01-30 atm=23250 qty=300 ce=263.55 pe=238.75 sl=[CE_SL] net=3437.00
+2026-06-21 17:42:53,302 INFO TRADED date=2025-01-21 day=Tuesday expiry=2025-01-30 atm=23400 qty=300 ce=243.50 pe=216.20 sl=[PE_SL] net=26678.00
+2026-06-21 17:42:53,464 INFO TRADED date=2025-01-22 day=Wednesday expiry=2025-01-30 atm=23100 qty=300 ce=249.40 pe=211.35 sl=[PE_SL] net=-14311.00
+2026-06-21 17:42:53,468 INFO TRADED date=2025-01-23 day=Thursday expiry=2025-01-30 atm=23100 qty=300 ce=213.20 pe=171.30 sl=[CE_SL] net=1568.00
+2026-06-21 17:42:53,667 INFO TRADED date=2025-01-24 day=Friday expiry=2025-01-30 atm=23300 qty=300 ce=185.20 pe=191.40 sl=[PE_SL] net=15701.00
+2026-06-21 17:42:53,766 INFO TRADED date=2025-01-27 day=Monday expiry=2025-01-30 atm=22950 qty=300 ce=162.00 pe=184.55 sl=[CE_SL,PE_SL] net=-21493.00
+2026-06-21 17:42:53,769 INFO TRADED date=2025-01-28 day=Tuesday expiry=2025-01-30 atm=22950 qty=300 ce=147.44 pe=141.90 sl=[CE_SL,PE_SL] net=-18441.40
+2026-06-21 17:42:53,879 INFO TRADED date=2025-01-29 day=Wednesday expiry=2025-01-30 atm=23050 qty=300 ce=127.60 pe=132.60 sl=[CE_SL,PE_SL] net=-16312.00
+2026-06-21 17:42:54,023 INFO SKIPPED date=2025-01-30 balance_failed ce=570.60 pe=418.75
+2026-06-21 17:42:54,208 INFO SKIPPED date=2025-01-31 balance_failed ce=529.00 pe=394.10
+2026-06-21 17:42:54,313 INFO SKIPPED date=2025-02-03 balance_failed ce=398.65 pe=293.60
+2026-06-21 17:42:54,529 INFO TRADED date=2025-02-04 day=Tuesday expiry=2025-02-27 atm=23500 qty=300 ce=349.45 pe=287.30 sl=[CE_SL] net=4778.00
+2026-06-21 17:42:54,679 INFO SKIPPED date=2025-02-05 balance_failed ce=354.40 pe=273.39
+2026-06-21 17:42:54,872 INFO SKIPPED date=2025-02-06 balance_failed ce=358.85 pe=259.00
+2026-06-21 17:42:55,178 INFO SKIPPED date=2025-02-07 balance_failed ce=343.45 pe=271.70
+2026-06-21 17:42:55,961 INFO SKIPPED date=2025-02-10 balance_failed ce=330.95 pe=238.70
+2026-06-21 17:42:56,096 INFO TRADED date=2025-02-11 day=Tuesday expiry=2025-02-27 atm=23350 qty=300 ce=317.45 pe=256.00 sl=[PE_SL] net=24905.00
+2026-06-21 17:42:56,222 INFO SKIPPED date=2025-02-12 balance_failed ce=308.85 pe=235.85
+2026-06-21 17:42:56,361 INFO SKIPPED date=2025-02-13 balance_failed ce=293.20 pe=230.25
+2026-06-21 17:42:56,362 INFO SKIPPED date=2025-02-14 balance_failed ce=280.20 pe=205.30
+2026-06-21 17:42:56,500 INFO SKIPPED date=2025-02-17 balance_failed ce=290.85 pe=203.10
+2026-06-21 17:42:56,735 INFO SKIPPED date=2025-02-18 balance_failed ce=272.00 pe=207.50
+2026-06-21 17:42:56,825 INFO SKIPPED date=2025-02-19 balance_failed ce=238.25 pe=190.20
+2026-06-21 17:42:56,826 INFO SKIPPED date=2025-02-20 balance_failed ce=218.25 pe=165.30
+2026-06-21 17:42:56,828 INFO TRADED date=2025-02-21 day=Friday expiry=2025-02-27 atm=22900 qty=300 ce=176.70 pe=146.65 sl=[PE_SL] net=12611.00
+2026-06-21 17:42:56,907 INFO TRADED date=2025-02-24 day=Monday expiry=2025-02-27 atm=22650 qty=300 ce=150.00 pe=121.40 sl=[PE_SL] net=12116.00
+2026-06-21 17:42:56,971 INFO SKIPPED date=2025-02-25 balance_failed ce=103.30 pe=81.70
+2026-06-21 17:42:57,108 INFO SKIPPED date=2025-02-27 balance_failed ce=394.35 pe=265.45
+2026-06-21 17:42:57,229 INFO SKIPPED date=2025-02-28 balance_failed ce=426.85 pe=239.25
+2026-06-21 17:42:57,309 INFO SKIPPED date=2025-03-03 balance_failed ce=371.30 pe=250.10
+2026-06-21 17:42:57,470 INFO SKIPPED date=2025-03-04 missing_entry_candle atm=22000 expiry=2025-03-27
+2026-06-21 17:42:57,547 INFO SKIPPED date=2025-03-05 balance_failed ce=325.70 pe=249.00
+2026-06-21 17:42:57,634 INFO SKIPPED date=2025-03-06 balance_failed ce=308.14 pe=238.05
+2026-06-21 17:42:57,728 INFO SKIPPED date=2025-03-07 balance_failed ce=323.80 pe=233.05
+2026-06-21 17:42:57,732 INFO TRADED date=2025-03-10 day=Monday expiry=2025-03-27 atm=22600 qty=300 ce=273.40 pe=250.55 sl=[PE_SL] net=2075.00
+2026-06-21 17:42:57,818 INFO TRADED date=2025-03-11 day=Tuesday expiry=2025-03-27 atm=22350 qty=300 ce=272.00 pe=243.05 sl=[CE_SL] net=6215.00
+2026-06-21 17:42:57,821 INFO TRADED date=2025-03-12 day=Wednesday expiry=2025-03-27 atm=22550 qty=300 ce=258.30 pe=226.50 sl=[PE_SL] net=-1105.00
+2026-06-21 17:42:58,003 INFO TRADED date=2025-03-13 day=Thursday expiry=2025-03-27 atm=22500 qty=300 ce=230.80 pe=210.75 sl=[none] net=7775.00
+2026-06-21 17:42:58,003 INFO SKIPPED date=2025-03-17 balance_failed ce=246.80 pe=158.85
+2026-06-21 17:42:58,003 INFO SKIPPED date=2025-03-18 balance_failed ce=235.15 pe=147.50
+2026-06-21 17:42:58,165 INFO SKIPPED date=2025-03-19 balance_failed ce=198.65 pe=150.75
+2026-06-21 17:42:58,167 INFO SKIPPED date=2025-03-20 missing_entry_candle atm=23000 expiry=2025-03-27
+2026-06-21 17:42:58,360 INFO TRADED date=2025-03-21 day=Friday expiry=2025-03-27 atm=23200 qty=300 ce=142.00 pe=130.90 sl=[CE_SL] net=10640.00
+2026-06-21 17:42:58,568 INFO TRADED date=2025-03-24 day=Monday expiry=2025-03-27 atm=23500 qty=300 ce=136.05 pe=111.05 sl=[CE_SL,PE_SL] net=-15526.00
+2026-06-21 17:42:58,693 INFO TRADED date=2025-03-25 day=Tuesday expiry=2025-03-27 atm=23750 qty=300 ce=139.50 pe=152.40 sl=[CE_SL,PE_SL] net=-18214.00
+2026-06-21 17:42:58,876 INFO TRADED date=2025-03-26 day=Wednesday expiry=2025-03-27 atm=23700 qty=300 ce=105.50 pe=90.35 sl=[CE_SL,PE_SL] net=-12451.00
+2026-06-21 17:42:58,953 INFO SKIPPED date=2025-03-27 balance_failed ce=490.95 pe=297.10
+2026-06-21 17:42:59,025 INFO SKIPPED date=2025-03-28 balance_failed ce=450.55 pe=285.55
+2026-06-21 17:42:59,100 INFO SKIPPED date=2025-04-01 balance_failed ce=413.25 pe=270.55
+2026-06-21 17:42:59,175 INFO SKIPPED date=2025-04-02 balance_failed ce=429.95 pe=270.85
+2026-06-21 17:42:59,175 INFO SKIPPED date=2025-04-03 balance_failed ce=418.30 pe=264.50
+2026-06-21 17:42:59,255 INFO SKIPPED date=2025-04-04 balance_failed ce=375.00 pe=285.05
+2026-06-21 17:42:59,296 INFO SKIPPED date=2025-04-07 missing_entry_candle atm=21900 expiry=2025-04-30
+2026-06-21 17:42:59,358 INFO SKIPPED date=2025-04-08 balance_failed ce=512.15 pe=402.00
+2026-06-21 17:42:59,424 INFO SKIPPED date=2025-04-09 balance_failed ce=522.70 pe=414.95
+2026-06-21 17:42:59,473 INFO SKIPPED date=2025-04-11 balance_failed ce=485.00 pe=351.85
+2026-06-21 17:43:00,210 INFO SKIPPED date=2025-04-15 balance_failed ce=351.65 pe=281.30
+2026-06-21 17:43:00,213 INFO TRADED date=2025-04-16 day=Wednesday expiry=2025-04-30 atm=23300 qty=300 ce=275.30 pe=247.60 sl=[CE_SL] net=-4270.00
+2026-06-21 17:43:00,304 INFO SKIPPED date=2025-04-17 balance_failed ce=295.45 pe=233.45
+2026-06-21 17:43:00,356 INFO TRADED date=2025-04-21 day=Monday expiry=2025-04-30 atm=23950 qty=300 ce=253.25 pe=239.00 sl=[CE_SL] net=16385.00
+2026-06-21 17:43:00,435 INFO TRADED date=2025-04-22 day=Tuesday expiry=2025-04-30 atm=24100 qty=300 ce=233.30 pe=216.55 sl=[CE_SL] net=3212.00
+2026-06-21 17:43:00,493 INFO TRADED date=2025-04-23 day=Wednesday expiry=2025-04-30 atm=24300 qty=300 ce=217.75 pe=176.30 sl=[PE_SL] net=-12553.00
+2026-06-21 17:43:00,543 INFO SKIPPED date=2025-04-24 balance_failed ce=234.30 pe=160.90
+2026-06-21 17:43:00,594 INFO TRADED date=2025-04-25 day=Friday expiry=2025-04-30 atm=24350 qty=300 ce=177.65 pe=173.90 sl=[PE_SL] net=24446.00
+2026-06-21 17:43:00,646 INFO TRADED date=2025-04-28 day=Monday expiry=2025-04-30 atm=24150 qty=300 ce=130.00 pe=139.25 sl=[CE_SL,PE_SL] net=-16855.00
+2026-06-21 17:43:00,681 INFO TRADED date=2025-04-29 day=Tuesday expiry=2025-04-30 atm=24450 qty=300 ce=76.09 pe=89.60 sl=[PE_SL] net=10991.00
+2026-06-21 17:43:00,840 INFO SKIPPED date=2025-04-30 balance_failed ce=501.50 pe=385.65
+2026-06-21 17:43:00,982 INFO SKIPPED date=2025-05-02 balance_failed ce=492.10 pe=371.25
+2026-06-21 17:43:01,108 INFO TRADED date=2025-05-05 day=Monday expiry=2025-05-29 atm=24450 qty=300 ce=442.10 pe=379.95 sl=[none] net=2075.00
+2026-06-21 17:43:01,111 INFO TRADED date=2025-05-06 day=Tuesday expiry=2025-05-29 atm=24450 qty=300 ce=448.35 pe=359.60 sl=[none] net=8900.00
+2026-06-21 17:43:01,224 INFO TRADED date=2025-05-07 day=Wednesday expiry=2025-05-29 atm=24350 qty=300 ce=448.65 pe=359.20 sl=[none] net=5975.00
+2026-06-21 17:43:01,227 INFO TRADED date=2025-05-08 day=Thursday expiry=2025-05-29 atm=24400 qty=300 ce=410.40 pe=341.40 sl=[PE_SL] net=-2809.00
+2026-06-21 17:43:01,377 INFO TRADED date=2025-05-09 day=Friday expiry=2025-05-29 atm=24100 qty=300 ce=450.25 pe=406.20 sl=[PE_SL] net=-9172.00
+2026-06-21 17:43:01,491 INFO SKIPPED date=2025-05-12 balance_failed ce=353.50 pe=267.75
+2026-06-21 17:43:01,615 INFO SKIPPED date=2025-05-13 balance_failed ce=383.40 pe=298.00
+2026-06-21 17:43:01,711 INFO TRADED date=2025-05-14 day=Wednesday expiry=2025-05-29 atm=24650 qty=300 ce=355.05 pe=284.75 sl=[PE_SL] net=-11200.00
+2026-06-21 17:43:01,829 INFO SKIPPED date=2025-05-15 balance_failed ce=355.00 pe=262.55
+2026-06-21 17:43:01,989 INFO SKIPPED date=2025-05-16 balance_failed ce=324.10 pe=255.00
+2026-06-21 17:43:02,136 INFO TRADED date=2025-05-19 day=Monday expiry=2025-05-29 atm=25050 qty=300 ce=281.35 pe=260.50 sl=[PE_SL] net=275.00
+2026-06-21 17:43:02,140 INFO TRADED date=2025-05-20 day=Tuesday expiry=2025-05-29 atm=25000 qty=300 ce=262.75 pe=234.95 sl=[PE_SL] net=22703.00
+2026-06-21 17:43:02,257 INFO SKIPPED date=2025-05-21 balance_failed ce=273.14 pe=203.00
+2026-06-21 17:43:02,260 INFO TRADED date=2025-05-22 day=Thursday expiry=2025-05-29 atm=24650 qty=300 ce=247.35 pe=222.00 sl=[PE_SL] net=-1300.00
+2026-06-21 17:43:02,263 INFO TRADED date=2025-05-23 day=Friday expiry=2025-05-29 atm=24650 qty=300 ce=189.90 pe=195.70 sl=[CE_SL] net=12326.00
+2026-06-21 17:43:02,267 INFO TRADED date=2025-05-26 day=Monday expiry=2025-05-29 atm=25000 qty=300 ce=222.75 pe=189.60 sl=[CE_SL,PE_SL] net=-25441.00
+2026-06-21 17:43:02,377 INFO TRADED date=2025-05-27 day=Tuesday expiry=2025-05-29 atm=24900 qty=300 ce=211.05 pe=214.40 sl=[CE_SL,PE_SL] net=-26227.00
+2026-06-21 17:43:02,530 INFO TRADED date=2025-05-28 day=Wednesday expiry=2025-05-29 atm=24800 qty=300 ce=220.65 pe=178.05 sl=[none] net=51905.00
+2026-06-21 17:43:02,655 INFO SKIPPED date=2025-05-29 balance_failed ce=495.80 pe=393.20
+2026-06-21 17:43:02,802 INFO SKIPPED date=2025-05-30 balance_failed ce=473.40 pe=353.30
+2026-06-21 17:43:02,931 INFO SKIPPED date=2025-06-02 balance_failed ce=465.00 pe=370.55
+2026-06-21 17:43:03,082 INFO SKIPPED date=2025-06-03 balance_failed ce=477.70 pe=377.00
+2026-06-21 17:43:03,082 INFO SKIPPED date=2025-06-04 balance_failed ce=440.05 pe=323.65
+2026-06-21 17:43:03,206 INFO SKIPPED date=2025-06-05 balance_failed ce=394.65 pe=311.55
+2026-06-21 17:43:03,334 INFO SKIPPED date=2025-06-06 balance_failed ce=380.75 pe=299.00
+2026-06-21 17:43:03,464 INFO SKIPPED date=2025-06-09 balance_failed ce=364.30 pe=286.00
+2026-06-21 17:43:03,568 INFO TRADED date=2025-06-10 day=Tuesday expiry=2025-06-26 atm=25150 qty=300 ce=327.25 pe=278.00 sl=[none] net=14705.00
+2026-06-21 17:43:03,571 INFO TRADED date=2025-06-11 day=Wednesday expiry=2025-06-26 atm=25150 qty=300 ce=284.90 pe=250.80 sl=[CE_SL] net=-13369.00
+2026-06-21 17:43:03,571 INFO SKIPPED date=2025-06-12 balance_failed ce=300.25 pe=221.80
+2026-06-21 17:43:03,724 INFO TRADED date=2025-06-13 day=Friday expiry=2025-06-26 atm=24600 qty=300 ce=309.95 pe=251.20 sl=[CE_SL] net=-9382.00
+2026-06-21 17:43:03,728 INFO TRADED date=2025-06-16 day=Monday expiry=2025-06-26 atm=24800 qty=300 ce=257.70 pe=230.45 sl=[CE_SL] net=4883.00
+2026-06-21 17:43:03,905 INFO TRADED date=2025-06-17 day=Tuesday expiry=2025-06-26 atm=24900 qty=300 ce=248.85 pe=225.70 sl=[none] net=13175.00
+2026-06-21 17:43:03,908 INFO TRADED date=2025-06-18 day=Wednesday expiry=2025-06-26 atm=24850 qty=300 ce=210.35 pe=207.10 sl=[CE_SL] net=-16621.00
+2026-06-21 17:43:03,911 INFO TRADED date=2025-06-19 day=Thursday expiry=2025-06-26 atm=24750 qty=300 ce=206.30 pe=186.90 sl=[CE_SL] net=-7198.00
+2026-06-21 17:43:03,915 INFO TRADED date=2025-06-20 day=Friday expiry=2025-06-26 atm=24850 qty=300 ce=183.85 pe=155.10 sl=[CE_SL] net=12059.00
+2026-06-21 17:43:04,056 INFO TRADED date=2025-06-23 day=Monday expiry=2025-06-26 atm=24950 qty=300 ce=139.50 pe=145.50 sl=[CE_SL,PE_SL] net=-17800.00
+2026-06-21 17:43:04,178 INFO TRADED date=2025-06-24 day=Tuesday expiry=2025-06-26 atm=25250 qty=300 ce=118.90 pe=116.20 sl=[CE_SL,PE_SL] net=-14806.00
+2026-06-21 17:43:04,180 INFO TRADED date=2025-06-25 day=Wednesday expiry=2025-06-26 atm=25150 qty=300 ce=101.10 pe=81.75 sl=[CE_SL] net=6809.00
+2026-06-21 17:43:04,340 INFO SKIPPED date=2025-06-26 balance_failed ce=434.75 pe=337.95
+2026-06-21 17:43:04,498 INFO SKIPPED date=2025-06-27 balance_failed ce=436.80 pe=321.25
+2026-06-21 17:43:04,498 INFO SKIPPED date=2025-06-30 balance_failed ce=445.95 pe=302.55
+2026-06-21 17:43:05,421 INFO SKIPPED date=2025-07-01 balance_failed ce=403.80 pe=320.55
+2026-06-21 17:43:05,422 INFO SKIPPED date=2025-07-02 balance_failed ce=387.80 pe=297.75
+2026-06-21 17:43:05,635 INFO SKIPPED date=2025-07-03 balance_failed ce=388.80 pe=279.95
+2026-06-21 17:43:05,808 INFO SKIPPED date=2025-07-04 balance_failed ce=378.95 pe=285.00
+2026-06-21 17:43:05,944 INFO TRADED date=2025-07-07 day=Monday expiry=2025-07-31 atm=25450 qty=300 ce=348.00 pe=280.70 sl=[none] net=245.00
+2026-06-21 17:43:05,944 INFO SKIPPED date=2025-07-08 balance_failed ce=349.60 pe=271.80
+2026-06-21 17:43:05,945 INFO SKIPPED date=2025-07-09 balance_failed ce=329.05 pe=247.55
+2026-06-21 17:43:05,945 INFO SKIPPED date=2025-07-10 balance_failed ce=318.00 pe=226.65
+2026-06-21 17:43:05,949 INFO TRADED date=2025-07-11 day=Friday expiry=2025-07-31 atm=25300 qty=300 ce=276.45 pe=235.70 sl=[PE_SL] net=4793.00
+2026-06-21 17:43:06,115 INFO SKIPPED date=2025-07-14 balance_failed ce=279.30 pe=215.50
+2026-06-21 17:43:06,244 INFO SKIPPED date=2025-07-15 balance_failed ce=260.60 pe=206.70
+2026-06-21 17:43:06,245 INFO SKIPPED date=2025-07-16 balance_failed ce=243.90 pe=186.65
+2026-06-21 17:43:06,409 INFO SKIPPED date=2025-07-17 balance_failed ce=222.70 pe=170.60
+2026-06-21 17:43:06,412 INFO TRADED date=2025-07-18 day=Friday expiry=2025-07-31 atm=25100 qty=300 ce=212.50 pe=171.35 sl=[PE_SL] net=5114.00
+2026-06-21 17:43:06,544 INFO SKIPPED date=2025-07-21 balance_failed ce=200.80 pe=154.40
+2026-06-21 17:43:06,547 INFO TRADED date=2025-07-22 day=Tuesday expiry=2025-07-31 atm=25150 qty=300 ce=163.00 pe=156.00 sl=[PE_SL] net=2015.00
+2026-06-21 17:43:06,550 INFO TRADED date=2025-07-23 day=Wednesday expiry=2025-07-31 atm=25150 qty=300 ce=142.15 pe=132.70 sl=[CE_SL] net=4511.00
+2026-06-21 17:43:06,550 INFO SKIPPED date=2025-07-24 balance_failed ce=142.20 pe=109.40
+2026-06-21 17:43:06,553 INFO TRADED date=2025-07-25 day=Friday expiry=2025-07-31 atm=24950 qty=300 ce=127.25 pe=126.50 sl=[CE_SL,PE_SL] net=-15925.00
+2026-06-21 17:43:06,717 INFO TRADED date=2025-07-28 day=Monday expiry=2025-07-31 atm=24800 qty=300 ce=119.85 pe=115.80 sl=[CE_SL,PE_SL] net=-14839.00
+2026-06-21 17:43:06,883 INFO TRADED date=2025-07-29 day=Tuesday expiry=2025-07-31 atm=24700 qty=300 ce=109.90 pe=103.80 sl=[CE_SL,PE_SL] net=-13522.00
+2026-06-21 17:43:07,025 INFO TRADED date=2025-07-30 day=Wednesday expiry=2025-07-31 atm=24850 qty=300 ce=72.50 pe=76.60 sl=[CE_SL,PE_SL] net=-9646.00
+2026-06-21 17:43:07,174 INFO SKIPPED date=2025-07-31 balance_failed ce=341.50 pe=272.10
+2026-06-21 17:43:07,298 INFO TRADED date=2025-08-01 day=Friday expiry=2025-08-28 atm=24750 qty=300 ce=315.40 pe=275.20 sl=[PE_SL] net=6233.00
+2026-06-21 17:43:07,398 INFO SKIPPED date=2025-08-04 balance_failed ce=325.00 pe=253.05
+2026-06-21 17:43:07,402 INFO TRADED date=2025-08-05 day=Tuesday expiry=2025-08-28 atm=24700 qty=300 ce=297.65 pe=248.40 sl=[none] net=5705.00
+2026-06-21 17:43:07,402 INFO SKIPPED date=2025-08-06 balance_failed ce=300.05 pe=229.00
+2026-06-21 17:43:07,568 INFO SKIPPED date=2025-08-07 balance_failed ce=298.00 pe=214.65
+2026-06-21 17:43:07,669 INFO SKIPPED date=2025-08-08 balance_failed ce=293.40 pe=197.90
+2026-06-21 17:43:07,802 INFO SKIPPED date=2025-08-11 balance_failed ce=275.50 pe=209.75
+2026-06-21 17:43:07,803 INFO SKIPPED date=2025-08-12 balance_failed ce=263.00 pe=182.45
+2026-06-21 17:43:07,803 INFO SKIPPED date=2025-08-13 balance_failed ce=258.75 pe=173.60
+2026-06-21 17:43:07,803 INFO SKIPPED date=2025-08-14 balance_failed ce=232.55 pe=178.00
+2026-06-21 17:43:07,922 INFO SKIPPED date=2025-08-18 balance_failed ce=222.40 pe=166.40
+2026-06-21 17:43:08,080 INFO SKIPPED date=2025-08-19 balance_failed ce=193.90 pe=143.40
+2026-06-21 17:43:08,083 INFO TRADED date=2025-08-20 day=Wednesday expiry=2025-08-28 atm=24950 qty=300 ce=161.00 pe=135.40 sl=[CE_SL] net=3470.00
+2026-06-21 17:43:08,225 INFO SKIPPED date=2025-08-21 balance_failed ce=169.50 pe=105.30
+2026-06-21 17:43:08,403 INFO SKIPPED date=2025-08-22 balance_failed ce=133.10 pe=96.95
+2026-06-21 17:43:08,403 INFO SKIPPED date=2025-08-25 balance_failed ce=116.15 pe=86.50
+2026-06-21 17:43:08,532 INFO TRADED date=2025-08-26 day=Tuesday expiry=2025-08-28 atm=24850 qty=300 ce=79.75 pe=66.90 sl=[PE_SL] net=10211.00
+2026-06-21 17:43:08,684 INFO SKIPPED date=2025-08-28 balance_failed ce=399.10 pe=283.00
+2026-06-21 17:43:08,857 INFO SKIPPED date=2025-08-29 balance_failed ce=407.75 pe=257.55
+2026-06-21 17:43:08,857 INFO SKIPPED date=2025-09-01 balance_failed ce=387.55 pe=232.35
+2026-06-21 17:43:09,004 INFO SKIPPED date=2025-09-02 balance_failed ce=350.00 pe=224.55
+2026-06-21 17:43:09,144 INFO SKIPPED date=2025-09-03 balance_failed ce=334.40 pe=240.85
+2026-06-21 17:43:09,278 INFO SKIPPED date=2025-09-04 balance_failed ce=330.00 pe=214.70
+2026-06-21 17:43:09,278 INFO SKIPPED date=2025-09-05 balance_failed ce=287.80 pe=218.60
+2026-06-21 17:43:09,447 INFO SKIPPED date=2025-09-08 balance_failed ce=288.15 pe=210.55
+2026-06-21 17:43:09,447 INFO SKIPPED date=2025-09-09 balance_failed ce=290.40 pe=192.95
+2026-06-21 17:43:09,596 INFO SKIPPED date=2025-09-10 balance_failed ce=271.60 pe=185.90
+2026-06-21 17:43:09,861 INFO SKIPPED date=2025-09-11 missing_entry_candle atm=25000 expiry=2025-09-30
+2026-06-21 17:43:10,018 INFO SKIPPED date=2025-09-12 balance_failed ce=256.80 pe=158.05
+2026-06-21 17:43:10,194 INFO SKIPPED date=2025-09-15 balance_failed ce=234.90 pe=157.10
+2026-06-21 17:43:10,194 INFO SKIPPED date=2025-09-16 balance_failed ce=221.75 pe=149.65
+2026-06-21 17:43:11,266 INFO SKIPPED date=2025-09-17 balance_failed ce=215.30 pe=136.05
+2026-06-21 17:43:11,438 INFO SKIPPED date=2025-09-18 balance_failed ce=206.90 pe=113.95
+2026-06-21 17:43:11,442 INFO TRADED date=2025-09-19 day=Friday expiry=2025-09-30 atm=25400 qty=300 ce=157.70 pe=128.05 sl=[PE_SL] net=-6463.00
+2026-06-21 17:43:11,598 INFO SKIPPED date=2025-09-22 balance_failed ce=181.75 pe=102.00
+2026-06-21 17:43:11,777 INFO SKIPPED date=2025-09-23 balance_failed ce=176.60 pe=95.60
+2026-06-21 17:43:11,777 INFO SKIPPED date=2025-09-24 balance_failed ce=137.65 pe=98.60
+2026-06-21 17:43:11,778 INFO SKIPPED date=2025-09-25 balance_failed ce=121.70 pe=80.80
+2026-06-21 17:43:11,778 INFO SKIPPED date=2025-09-26 balance_failed ce=131.35 pe=61.50
+2026-06-21 17:43:11,778 INFO SKIPPED date=2025-09-29 balance_failed ce=127.75 pe=44.60
+2026-06-21 17:43:11,935 INFO SKIPPED date=2025-09-30 balance_failed ce=378.75 pe=225.00
+2026-06-21 17:43:12,087 INFO SKIPPED date=2025-10-01 balance_failed ce=367.95 pe=219.95
+2026-06-21 17:43:12,244 INFO SKIPPED date=2025-10-03 balance_failed ce=320.80 pe=208.20
+2026-06-21 17:43:12,378 INFO SKIPPED date=2025-10-06 balance_failed ce=275.40 pe=202.30
+2026-06-21 17:43:12,521 INFO SKIPPED date=2025-10-07 balance_failed ce=273.15 pe=186.05
+2026-06-21 17:43:12,665 INFO SKIPPED date=2025-10-08 balance_failed ce=267.25 pe=170.10
+2026-06-21 17:43:12,800 INFO SKIPPED date=2025-10-09 balance_failed ce=264.95 pe=166.75
+2026-06-21 17:43:12,952 INFO SKIPPED date=2025-10-10 balance_failed ce=272.65 pe=151.30
+2026-06-21 17:43:12,953 INFO SKIPPED date=2025-10-13 balance_failed ce=264.35 pe=158.90
+2026-06-21 17:43:13,099 INFO SKIPPED date=2025-10-14 balance_failed ce=223.40 pe=166.25
+2026-06-21 17:43:13,229 INFO SKIPPED date=2025-10-15 balance_failed ce=239.75 pe=136.55
+2026-06-21 17:43:13,368 INFO SKIPPED date=2025-10-16 balance_failed ce=230.45 pe=122.20
+2026-06-21 17:43:13,477 INFO SKIPPED date=2025-10-17 balance_failed ce=201.70 pe=142.90
+2026-06-21 17:43:13,561 INFO SKIPPED date=2025-10-20 balance_failed ce=179.20 pe=123.25
+2026-06-21 17:43:13,718 INFO SKIPPED date=2025-10-23 balance_failed ce=175.30 pe=88.45
+2026-06-21 17:43:13,791 INFO SKIPPED date=2025-10-24 balance_failed ce=142.50 pe=78.25
+2026-06-21 17:43:13,791 INFO SKIPPED date=2025-10-27 balance_failed ce=119.90 pe=51.80
+2026-06-21 17:43:13,868 INFO SKIPPED date=2025-10-28 balance_failed ce=454.00 pe=244.35
+2026-06-21 17:43:14,036 INFO SKIPPED date=2025-10-29 balance_failed ce=402.80 pe=243.55
+2026-06-21 17:43:14,036 INFO SKIPPED date=2025-10-30 balance_failed ce=386.60 pe=242.60
+2026-06-21 17:43:14,159 INFO SKIPPED date=2025-10-31 balance_failed ce=390.95 pe=225.45
+2026-06-21 17:43:14,298 INFO SKIPPED date=2025-11-03 balance_failed ce=371.45 pe=237.10
+2026-06-21 17:43:14,407 INFO SKIPPED date=2025-11-04 balance_failed ce=358.00 pe=231.75
+2026-06-21 17:43:14,519 INFO SKIPPED date=2025-11-06 balance_failed ce=352.55 pe=200.80
+2026-06-21 17:43:14,630 INFO SKIPPED date=2025-11-07 balance_failed ce=324.80 pe=186.80
+2026-06-21 17:43:14,743 INFO SKIPPED date=2025-11-10 balance_failed ce=292.25 pe=187.15
+2026-06-21 17:43:14,744 INFO SKIPPED date=2025-11-11 balance_failed ce=286.30 pe=189.55
+2026-06-21 17:43:14,872 INFO SKIPPED date=2025-11-12 balance_failed ce=285.35 pe=154.40
+2026-06-21 17:43:14,872 INFO SKIPPED date=2025-11-13 balance_failed ce=241.40 pe=164.25
+2026-06-21 17:43:14,872 INFO SKIPPED date=2025-11-14 balance_failed ce=260.00 pe=163.00
+2026-06-21 17:43:14,873 INFO SKIPPED date=2025-11-17 balance_failed ce=220.40 pe=151.10
+2026-06-21 17:43:14,874 INFO TRADED date=2025-11-18 day=Tuesday expiry=2025-11-25 atm=25950 qty=300 ce=184.85 pe=151.35 sl=[PE_SL] net=-1741.00
+2026-06-21 17:43:14,875 INFO SKIPPED date=2025-11-19 balance_failed ce=174.95 pe=128.65
+2026-06-21 17:43:15,000 INFO TRADED date=2025-11-20 day=Thursday expiry=2025-11-25 atm=26100 qty=300 ce=139.05 pe=120.05 sl=[CE_SL,PE_SL] net=-16246.00
+2026-06-21 17:43:15,093 INFO TRADED date=2025-11-21 day=Friday expiry=2025-11-25 atm=26150 qty=300 ce=118.35 pe=110.75 sl=[PE_SL] net=6260.00
+2026-06-21 17:43:15,094 INFO SKIPPED date=2025-11-24 balance_failed ce=98.30 pe=72.50
+2026-06-21 17:43:15,351 INFO SKIPPED date=2025-11-25 balance_failed ce=461.95 pe=266.95
+2026-06-21 17:43:15,352 INFO SKIPPED date=2025-11-26 balance_failed ce=452.25 pe=232.00
+2026-06-21 17:43:15,490 INFO SKIPPED date=2025-11-27 balance_failed ce=429.05 pe=239.10
+2026-06-21 17:43:15,490 INFO SKIPPED date=2025-11-28 balance_failed ce=412.45 pe=234.70
+2026-06-21 17:43:15,678 INFO SKIPPED date=2025-12-01 balance_failed ce=387.60 pe=225.50
+2026-06-21 17:43:15,819 INFO SKIPPED date=2025-12-02 balance_failed ce=384.10 pe=227.70
+2026-06-21 17:43:16,002 INFO SKIPPED date=2025-12-03 balance_failed ce=354.00 pe=228.95
+2026-06-21 17:43:16,002 INFO SKIPPED date=2025-12-04 balance_failed ce=345.00 pe=212.30
+2026-06-21 17:43:16,002 INFO SKIPPED date=2025-12-05 balance_failed ce=345.95 pe=199.40
+2026-06-21 17:43:16,002 INFO SKIPPED date=2025-12-08 balance_failed ce=335.65 pe=178.50
+2026-06-21 17:43:16,221 INFO SKIPPED date=2025-12-09 balance_failed ce=338.00 pe=183.20
+2026-06-21 17:43:16,463 INFO SKIPPED date=2025-12-10 balance_failed ce=285.35 pe=198.85
+2026-06-21 17:43:16,647 INFO SKIPPED date=2025-12-11 balance_failed ce=304.85 pe=171.45
+2026-06-21 17:43:16,647 INFO SKIPPED date=2025-12-12 missing_contract atm=26000 expiry=2025-12-30
+2026-06-21 17:43:16,647 INFO SKIPPED date=2025-12-15 balance_failed ce=250.85 pe=159.60
+2026-06-21 17:43:16,648 INFO SKIPPED date=2025-12-16 balance_failed ce=228.20 pe=156.00
+2026-06-21 17:43:16,885 INFO SKIPPED date=2025-12-17 balance_failed ce=245.50 pe=132.35
+2026-06-21 17:43:16,885 INFO SKIPPED date=2025-12-18 balance_failed ce=193.75 pe=143.44
+2026-06-21 17:43:16,885 INFO SKIPPED date=2025-12-19 balance_failed ce=201.90 pe=115.80
+2026-06-21 17:43:17,086 INFO SKIPPED date=2025-12-22 balance_failed ce=171.50 pe=106.45
+2026-06-21 17:43:17,087 INFO SKIPPED date=2025-12-23 balance_failed ce=162.90 pe=99.55
+2026-06-21 17:43:17,356 INFO SKIPPED date=2025-12-24 balance_failed ce=121.00 pe=91.55
+2026-06-21 17:43:17,356 INFO SKIPPED date=2025-12-26 balance_failed ce=67.95 pe=89.45
+2026-06-21 17:43:17,360 INFO TRADED date=2025-12-29 day=Monday expiry=2025-12-30 atm=26050 qty=300 ce=63.00 pe=51.30 sl=[CE_SL,PE_SL] net=-7558.00
+2026-06-21 17:43:19,126 INFO SKIPPED date=2025-12-30 balance_failed ce=366.40 pe=192.20
+2026-06-21 17:43:19,301 INFO SKIPPED date=2025-12-31 balance_failed ce=352.60 pe=178.80
+2026-06-21 17:43:19,447 INFO SKIPPED date=2026-01-01 balance_failed ce=331.95 pe=171.95
+2026-06-21 17:43:19,612 INFO SKIPPED date=2026-01-02 balance_failed ce=302.25 pe=171.25
+2026-06-21 17:43:19,763 INFO SKIPPED date=2026-01-05 balance_failed ce=296.40 pe=178.10
+2026-06-21 17:43:19,764 INFO SKIPPED date=2026-01-06 balance_failed ce=301.35 pe=166.80
+2026-06-21 17:43:19,764 INFO SKIPPED date=2026-01-07 balance_failed ce=253.20 pe=176.05
+2026-06-21 17:43:19,931 INFO SKIPPED date=2026-01-08 balance_failed ce=259.00 pe=155.15
+2026-06-21 17:43:20,086 INFO SKIPPED date=2026-01-09 balance_failed ce=250.00 pe=168.40
+2026-06-21 17:43:20,244 INFO SKIPPED date=2026-01-12 balance_failed ce=288.50 pe=161.15
+2026-06-21 17:43:20,389 INFO SKIPPED date=2026-01-13 balance_failed ce=230.30 pe=182.80
+2026-06-21 17:43:20,562 INFO SKIPPED date=2026-01-14 balance_failed ce=219.50 pe=175.00
+2026-06-21 17:43:20,689 INFO SKIPPED date=2026-01-16 balance_failed ce=207.15 pe=151.40
+2026-06-21 17:43:20,693 INFO TRADED date=2026-01-19 day=Monday expiry=2026-01-27 atm=25600 qty=325 ce=178.00 pe=156.95 sl=[PE_SL] net=-2046.75
+2026-06-21 17:43:20,816 INFO SKIPPED date=2026-01-20 balance_failed ce=170.55 pe=134.75
+2026-06-21 17:43:20,916 INFO SKIPPED date=2026-01-21 balance_failed ce=182.15 pe=141.50
+2026-06-21 17:43:21,069 INFO SKIPPED date=2026-01-22 balance_failed ce=155.65 pe=120.10
+2026-06-21 17:43:21,069 INFO SKIPPED date=2026-01-23 balance_failed ce=160.90 pe=99.00
+2026-06-21 17:43:21,261 INFO SKIPPED date=2026-01-27 balance_failed ce=526.65 pe=350.25
+2026-06-21 17:43:21,351 INFO SKIPPED date=2026-01-28 balance_failed ce=450.50 pe=328.40
+2026-06-21 17:43:21,513 INFO TRADED date=2026-01-29 day=Thursday expiry=2026-02-24 atm=25300 qty=325 ce=397.30 pe=318.90 sl=[CE_SL,PE_SL] net=-47303.00
+2026-06-21 17:43:21,614 INFO SKIPPED date=2026-01-30 balance_failed ce=415.25 pe=304.35
+2026-06-21 17:43:21,767 INFO TRADED date=2026-02-02 day=Monday expiry=2026-02-24 atm=24800 qty=325 ce=411.70 pe=347.00 sl=[CE_SL] net=21905.75
+2026-06-21 17:43:21,965 INFO SKIPPED date=2026-02-03 balance_failed ce=393.40 pe=301.45
+2026-06-21 17:43:22,160 INFO SKIPPED date=2026-02-04 balance_failed ce=331.20 pe=246.60
+2026-06-21 17:43:22,334 INFO TRADED date=2026-02-05 day=Thursday expiry=2026-02-24 atm=25750 qty=325 ce=285.80 pe=243.25 sl=[PE_SL] net=143.75
+2026-06-21 17:43:22,544 INFO SKIPPED date=2026-02-06 balance_failed ce=284.35 pe=219.00
+2026-06-21 17:43:22,544 INFO SKIPPED date=2026-02-09 balance_failed ce=267.25 pe=184.20
+2026-06-21 17:43:22,710 INFO SKIPPED date=2026-02-10 balance_failed ce=255.85 pe=170.60
+2026-06-21 17:43:22,890 INFO SKIPPED date=2026-02-11 balance_failed ce=219.40 pe=159.35
+2026-06-21 17:43:23,042 INFO SKIPPED date=2026-02-12 balance_failed ce=217.35 pe=149.80
+2026-06-21 17:43:23,043 INFO SKIPPED date=2026-02-13 balance_failed ce=217.75 pe=151.30
+2026-06-21 17:43:23,166 INFO SKIPPED date=2026-02-16 balance_failed ce=220.45 pe=161.00
+2026-06-21 17:43:23,170 INFO TRADED date=2026-02-17 day=Tuesday expiry=2026-02-24 atm=25600 qty=325 ce=173.30 pe=156.05 sl=[CE_SL] net=6445.50
+2026-06-21 17:43:23,173 INFO TRADED date=2026-02-18 day=Wednesday expiry=2026-02-24 atm=25750 qty=325 ce=140.35 pe=134.85 sl=[CE_SL,PE_SL] net=-18638.00
+2026-06-21 17:43:23,176 INFO TRADED date=2026-02-19 day=Thursday expiry=2026-02-24 atm=25850 qty=325 ce=118.65 pe=111.30 sl=[PE_SL] net=20501.75
+2026-06-21 17:43:23,179 INFO TRADED date=2026-02-20 day=Friday expiry=2026-02-24 atm=25450 qty=325 ce=139.00 pe=116.15 sl=[CE_SL,PE_SL] net=-17334.75
+2026-06-21 17:43:23,182 INFO TRADED date=2026-02-23 day=Monday expiry=2026-02-24 atm=25700 qty=325 ce=106.25 pe=102.35 sl=[CE_SL,PE_SL] net=-14309.00
+2026-06-21 17:43:23,183 INFO SKIPPED date=2026-02-24 missing_contract atm=25550 expiry=2026-03-24
+2026-06-21 17:43:23,183 INFO SKIPPED date=2026-02-25 missing_contract atm=25550 expiry=2026-03-24
+2026-06-21 17:43:23,183 INFO SKIPPED date=2026-02-26 missing_contract atm=25550 expiry=2026-03-24
+2026-06-21 17:43:23,183 INFO SKIPPED date=2026-02-27 missing_contract atm=25400 expiry=2026-03-24
+2026-06-21 17:43:23,184 INFO SKIPPED date=2026-03-02 missing_contract atm=24900 expiry=2026-03-24
+2026-06-21 17:43:23,184 INFO SKIPPED date=2026-03-04 missing_contract atm=24400 expiry=2026-03-24
+2026-06-21 17:43:23,185 INFO SKIPPED date=2026-03-05 missing_contract atm=24600 expiry=2026-03-24
+2026-06-21 17:43:23,185 INFO SKIPPED date=2026-03-06 missing_contract atm=24600 expiry=2026-03-24
+2026-06-21 17:43:23,186 INFO SKIPPED date=2026-03-09 missing_contract atm=23800 expiry=2026-03-24
+2026-06-21 17:43:23,186 INFO SKIPPED date=2026-03-10 missing_contract atm=24150 expiry=2026-03-24
+2026-06-21 17:43:23,186 INFO SKIPPED date=2026-03-11 missing_contract atm=24300 expiry=2026-03-24
+2026-06-21 17:43:23,224 INFO TRADED date=2026-03-12 day=Thursday expiry=2026-03-24 atm=23550 qty=325 ce=470.25 pe=391.20 sl=[CE_SL] net=-9395.00
+2026-06-21 17:43:23,268 INFO TRADED date=2026-03-13 day=Friday expiry=2026-03-24 atm=23450 qty=325 ce=405.60 pe=370.70 sl=[PE_SL] net=18997.00
+2026-06-21 17:43:23,305 INFO SKIPPED date=2026-03-16 balance_failed ce=406.00 pe=317.45
+2026-06-21 17:43:23,345 INFO TRADED date=2026-03-17 day=Tuesday expiry=2026-03-24 atm=23400 qty=325 ce=308.30 pe=310.80 sl=[CE_SL] net=18811.75
+2026-06-21 17:43:23,351 INFO SKIPPED date=2026-03-18 missing_contract atm=23700 expiry=2026-03-24
+2026-06-21 17:43:23,387 INFO TRADED date=2026-03-19 day=Thursday expiry=2026-03-24 atm=23300 qty=325 ce=212.75 pe=244.00 sl=[PE_SL] net=2321.25
+2026-06-21 17:43:23,389 INFO TRADED date=2026-03-20 day=Friday expiry=2026-03-24 atm=23300 qty=325 ce=234.70 pe=243.15 sl=[PE_SL] net=10144.00
+2026-06-21 17:43:23,410 INFO TRADED date=2026-03-23 day=Monday expiry=2026-03-24 atm=22700 qty=325 ce=203.95 pe=225.85 sl=[PE_SL] net=16176.00
+2026-06-21 17:43:23,500 INFO TRADED date=2026-03-24 day=Tuesday expiry=2026-04-28 atm=22800 qty=325 ce=811.10 pe=687.60 sl=[none] net=16523.75
+2026-06-21 17:43:23,630 INFO TRADED date=2026-03-25 day=Wednesday expiry=2026-04-28 atm=23150 qty=325 ce=754.40 pe=608.80 sl=[CE_SL] net=-35859.75
+2026-06-21 17:43:23,706 INFO TRADED date=2026-03-27 day=Friday expiry=2026-04-28 atm=23050 qty=325 ce=771.15 pe=635.50 sl=[PE_SL] net=-8891.25
+2026-06-21 17:43:23,786 INFO TRADED date=2026-03-30 day=Monday expiry=2026-04-28 atm=22500 qty=325 ce=841.80 pe=700.60 sl=[none] net=21967.50
+2026-06-21 17:43:23,884 INFO TRADED date=2026-04-01 day=Wednesday expiry=2026-04-28 atm=22900 qty=325 ce=681.65 pe=591.60 sl=[none] net=8285.00
+2026-06-21 17:43:23,885 INFO SKIPPED date=2026-04-02 missing_contract atm=22250 expiry=2026-04-28
+2026-06-21 17:43:24,038 INFO TRADED date=2026-04-06 day=Monday expiry=2026-04-28 atm=22650 qty=325 ce=668.00 pe=582.70 sl=[CE_SL] net=3052.50
+2026-06-21 17:43:24,185 INFO TRADED date=2026-04-07 day=Tuesday expiry=2026-04-28 atm=22750 qty=325 ce=657.95 pe=546.70 sl=[CE_SL] net=1820.75
+2026-06-21 17:43:24,397 INFO TRADED date=2026-04-08 day=Wednesday expiry=2026-04-28 atm=23900 qty=325 ce=449.55 pe=415.00 sl=[none] net=7196.25
+2026-06-21 17:43:24,549 INFO TRADED date=2026-04-09 day=Thursday expiry=2026-04-28 atm=23950 qty=325 ce=420.80 pe=399.45 sl=[PE_SL] net=-13194.25
+2026-06-21 17:43:24,554 INFO TRADED date=2026-04-10 day=Friday expiry=2026-04-28 atm=23950 qty=325 ce=418.80 pe=355.90 sl=[none] net=-685.00
+2026-06-21 17:43:24,767 INFO TRADED date=2026-04-13 day=Monday expiry=2026-04-28 atm=23600 qty=325 ce=453.10 pe=396.75 sl=[CE_SL] net=3842.25
+2026-06-21 17:43:24,954 INFO TRADED date=2026-04-15 day=Wednesday expiry=2026-04-28 atm=24250 qty=325 ce=323.95 pe=301.20 sl=[PE_SL] net=-18787.50
+2026-06-21 17:43:25,111 INFO TRADED date=2026-04-16 day=Thursday expiry=2026-04-28 atm=24400 qty=325 ce=283.90 pe=306.15 sl=[PE_SL] net=3611.50
+2026-06-21 17:43:25,269 INFO TRADED date=2026-04-17 day=Friday expiry=2026-04-28 atm=24200 qty=325 ce=304.95 pe=297.70 sl=[CE_SL] net=7930.75
+2026-06-21 17:43:25,516 INFO TRADED date=2026-04-20 day=Monday expiry=2026-04-28 atm=24350 qty=325 ce=273.25 pe=278.00 sl=[CE_SL] net=-29951.25
+2026-06-21 17:43:25,848 INFO TRADED date=2026-04-21 day=Tuesday expiry=2026-04-28 atm=24450 qty=325 ce=265.20 pe=255.90 sl=[CE_SL] net=5217.00
+2026-06-21 17:43:26,195 INFO TRADED date=2026-04-22 day=Wednesday expiry=2026-04-28 atm=24500 qty=325 ce=210.10 pe=252.80 sl=[PE_SL] net=-3450.75
+2026-06-21 17:43:26,202 INFO TRADED date=2026-04-23 day=Thursday expiry=2026-04-28 atm=24200 qty=325 ce=198.70 pe=221.50 sl=[CE_SL] net=-9359.25
+2026-06-21 17:43:26,421 INFO SKIPPED date=2026-04-24 balance_failed ce=191.90 pe=151.15
+2026-06-21 17:43:26,693 INFO SKIPPED date=2026-04-27 balance_failed ce=146.90 pe=98.65
+2026-06-21 17:43:26,885 INFO TRADED date=2026-04-28 day=Tuesday expiry=2026-05-26 atm=24100 qty=325 ce=517.00 pe=427.20 sl=[none] net=9065.00
+2026-06-21 17:43:26,889 INFO TRADED date=2026-04-29 day=Wednesday expiry=2026-05-26 atm=24100 qty=325 ce=476.50 pe=408.40 sl=[CE_SL] net=-18072.50
+2026-06-21 17:43:27,012 INFO TRADED date=2026-04-30 day=Thursday expiry=2026-05-26 atm=23950 qty=325 ce=475.95 pe=416.10 sl=[PE_SL] net=-49262.75
+2026-06-21 17:43:27,247 INFO SKIPPED date=2026-05-04 balance_failed ce=456.70 pe=364.60
+2026-06-21 17:43:27,465 INFO TRADED date=2026-05-05 day=Tuesday expiry=2026-05-26 atm=24050 qty=325 ce=448.00 pe=381.70 sl=[PE_SL] net=-19450.50
+2026-06-21 17:43:27,470 INFO TRADED date=2026-05-06 day=Wednesday expiry=2026-05-26 atm=24200 qty=325 ce=406.05 pe=337.90 sl=[CE_SL,PE_SL] net=-49106.75
+2026-06-21 17:43:27,622 INFO TRADED date=2026-05-07 day=Thursday expiry=2026-05-26 atm=24300 qty=325 ce=390.00 pe=317.00 sl=[CE_SL] net=-15765.00
+2026-06-21 17:43:27,625 INFO TRADED date=2026-05-08 day=Friday expiry=2026-05-26 atm=24200 qty=325 ce=376.15 pe=320.60 sl=[none] net=4125.00
+2026-06-21 17:43:27,761 INFO TRADED date=2026-05-11 day=Monday expiry=2026-05-26 atm=23900 qty=325 ce=389.25 pe=326.85 sl=[none] net=6205.00
+2026-06-21 17:43:27,880 INFO TRADED date=2026-05-12 day=Tuesday expiry=2026-05-26 atm=23750 qty=325 ce=345.60 pe=335.55 sl=[PE_SL] net=23849.25
+2026-06-21 17:43:28,006 INFO TRADED date=2026-05-13 day=Wednesday expiry=2026-05-26 atm=23400 qty=325 ce=373.30 pe=313.85 sl=[CE_SL,PE_SL] net=-45414.75
+2026-06-21 17:43:28,116 INFO TRADED date=2026-05-14 day=Thursday expiry=2026-05-26 atm=23550 qty=325 ce=329.55 pe=304.50 sl=[CE_SL,PE_SL] net=-41963.25
+2026-06-21 17:43:28,255 INFO TRADED date=2026-05-15 day=Friday expiry=2026-05-26 atm=23700 qty=325 ce=322.20 pe=277.75 sl=[CE_SL,PE_SL] net=-39746.75
+2026-06-21 17:43:28,258 INFO TRADED date=2026-05-18 day=Monday expiry=2026-05-26 atm=23400 qty=325 ce=306.25 pe=273.60 sl=[CE_SL] net=9828.75
+2026-06-21 17:43:28,260 INFO TRADED date=2026-05-19 day=Tuesday expiry=2026-05-26 atm=23750 qty=325 ce=230.30 pe=258.75 sl=[none] net=11031.25
+2026-06-21 17:43:28,370 INFO TRADED date=2026-05-20 day=Wednesday expiry=2026-05-26 atm=23450 qty=325 ce=221.90 pe=226.50 sl=[CE_SL] net=19114.00
+2026-06-21 17:43:28,373 INFO TRADED date=2026-05-21 day=Thursday expiry=2026-05-26 atm=23750 qty=325 ce=194.70 pe=177.00 sl=[PE_SL] net=12558.75
+2026-06-21 17:43:28,376 INFO TRADED date=2026-05-22 day=Friday expiry=2026-05-26 atm=23700 qty=325 ce=164.70 pe=155.30 sl=[CE_SL] net=1447.00
+2026-06-21 17:43:28,376 INFO SKIPPED date=2026-05-25 balance_failed ce=124.10 pe=95.45
+2026-06-21 17:43:30,168 INFO TRADED date=2026-05-26 day=Tuesday expiry=2026-06-30 atm=24000 qty=325 ce=468.60 pe=391.35 sl=[none] net=6838.75
+2026-06-21 17:43:30,275 INFO TRADED date=2026-05-27 day=Wednesday expiry=2026-06-30 atm=23950 qty=325 ce=429.10 pe=393.40 sl=[none] net=12103.75
+2026-06-21 17:43:30,275 INFO SKIPPED date=2026-05-29 balance_failed ce=431.10 pe=340.30
+2026-06-21 17:43:30,377 INFO TRADED date=2026-06-01 day=Monday expiry=2026-06-30 atm=23650 qty=325 ce=423.95 pe=364.40 sl=[PE_SL] net=12597.75
+2026-06-21 17:43:30,486 INFO TRADED date=2026-06-02 day=Tuesday expiry=2026-06-30 atm=23300 qty=325 ce=413.15 pe=367.95 sl=[CE_SL] net=15197.75
+2026-06-21 17:43:30,488 INFO TRADED date=2026-06-03 day=Wednesday expiry=2026-06-30 atm=23300 qty=325 ce=422.80 pe=356.10 sl=[CE_SL,PE_SL] net=-51378.50
+2026-06-21 17:43:30,574 INFO TRADED date=2026-06-04 day=Thursday expiry=2026-06-30 atm=23350 qty=325 ce=424.20 pe=347.90 sl=[none] net=3540.00
+2026-06-21 17:43:30,664 INFO TRADED date=2026-06-05 day=Friday expiry=2026-06-30 atm=23450 qty=325 ce=409.40 pe=331.65 sl=[PE_SL] net=-10607.25
+2026-06-21 17:43:30,745 INFO TRADED date=2026-06-08 day=Monday expiry=2026-06-30 atm=23150 qty=325 ce=412.90 pe=360.35 sl=[none] net=6741.25
+2026-06-21 17:43:30,837 INFO TRADED date=2026-06-09 day=Tuesday expiry=2026-06-30 atm=23250 qty=325 ce=356.10 pe=342.05 sl=[none] net=9780.00
+2026-06-21 17:43:30,840 INFO TRADED date=2026-06-10 day=Wednesday expiry=2026-06-30 atm=23350 qty=325 ce=340.90 pe=328.30 sl=[none] net=8691.25
+2026-06-21 17:43:30,942 INFO TRADED date=2026-06-11 day=Thursday expiry=2026-06-30 atm=23100 qty=325 ce=342.35 pe=304.15 sl=[CE_SL] net=-9694.00
+2026-06-21 17:43:30,944 INFO TRADED date=2026-06-12 day=Friday expiry=2026-06-30 atm=23450 qty=325 ce=296.30 pe=278.85 sl=[CE_SL,PE_SL] net=-38134.75
+2026-06-21 17:43:30,947 INFO TRADED date=2026-06-15 day=Monday expiry=2026-06-30 atm=23950 qty=325 ce=256.20 pe=250.75 sl=[none] net=-1448.75
+2026-06-21 17:43:30,949 INFO TRADED date=2026-06-16 day=Tuesday expiry=2026-06-30 atm=23950 qty=325 ce=247.05 pe=228.80 sl=[none] net=5603.75
+2026-06-21 17:43:30,949 INFO SKIPPED date=2026-06-17 missing_entry_candle atm=24000 expiry=2026-06-30
+2026-06-21 17:43:31,062 INFO SKIPPED date=2026-06-18 missing_entry_candle atm=24100 expiry=2026-06-30
+2026-06-21 17:43:31,062 INFO SKIPPED date=2026-06-19 missing_entry_candle atm=24000 expiry=2026-06-30
+2026-06-21 17:43:31,063 INFO COMPLETED traded=284 skipped=1442 total=1726

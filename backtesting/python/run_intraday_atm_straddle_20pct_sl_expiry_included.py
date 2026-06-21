@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Intraday ATM Straddle — 20% independent SL per leg — NIFTY 2020–2026."""
+"""Intraday ATM Straddle — 20% independent SL — NIFTY & SENSEX, expiry day included, no balance filter."""
 from __future__ import annotations
 
 import argparse
@@ -11,12 +11,50 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 
 IST_SUFFIX = "+05:30"
-BASE_FILENAME = "intraday_atm_straddle_20pct_sl_nifty_2020_2026"
-DAYWISE_FILENAME = f"{BASE_FILENAME}_daywise.csv"
-SUMMARY_FILENAME = f"{BASE_FILENAME}_summary.md"
-LOG_FILENAME = f"{BASE_FILENAME}.log"
 WEEKDAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
+
+# ---------------------------------------------------------------------------
+# Index configuration
+# ---------------------------------------------------------------------------
+
+@dataclass
+class IndexConfig:
+    name: str                    # "NIFTY" or "SENSEX"
+    spot_file: Path
+    options_dir: Path
+    strike_rounding: int         # 50 for NIFTY, 100 for SENSEX
+    contract_prefix: str         # "NIFTY" or "SENSEX"
+    lot_size_fixed: Optional[int]  # None → use expiry-aware NIFTY sizing
+    num_lots_fixed: Optional[int]
+
+    def base_filename(self) -> str:
+        return f"intraday_atm_straddle_expiry_incl_{self.name.lower()}"
+
+    def round_to_strike(self, price: float) -> int:
+        r = self.strike_rounding
+        rem = price % r
+        base = int(price - rem)
+        return base if rem < r / 2 else base + r
+
+
+def get_nifty_lot_config(expiry_date: str) -> Tuple[int, int]:
+    """(lot_size, num_lots) targeting ~300 quantity, expiry-aware."""
+    d = datetime.date.fromisoformat(expiry_date)
+    if d <= datetime.date(2021, 10, 6):
+        return 75, 4    # 300
+    if d <= datetime.date(2024, 4, 25):
+        return 50, 6    # 300
+    if d <= datetime.date(2024, 11, 21):
+        return 25, 12   # 300
+    if d <= datetime.date(2025, 12, 30):
+        return 75, 4    # 300
+    return 65, 5        # 325
+
+
+# ---------------------------------------------------------------------------
+# Data types
+# ---------------------------------------------------------------------------
 
 @dataclass
 class PriceRow:
@@ -39,7 +77,6 @@ class TradeResult:
     status: str
     skip_reason: str
     expiry_date: str
-    expiry_type: str
     spot_entry_timestamp: str
     spot_entry_open: str
     atm_strike: str
@@ -68,27 +105,9 @@ class TradeResult:
     remarks: str
 
 
-def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
-    p = argparse.ArgumentParser(
-        description="Backtest intraday ATM straddle with 20% independent SL — NIFTY 2020–2026."
-    )
-    p.add_argument("--spot-file", type=Path,
-                   default=repo_root / "nifty" / "NIFTY50_INDEX_5m_last_7y.csv")
-    p.add_argument("--options-dir", type=Path,
-                   default=repo_root / "NiftyOptions_2020_2026" / "Options")
-    p.add_argument("--results-dir", type=Path,
-                   default=repo_root / "backtesting" / "results")
-    p.add_argument("--entry-time", default="09:20")
-    p.add_argument("--exit-time", default="15:20")
-    p.add_argument("--sl-pct", type=float, default=0.20,
-                   help="Stop loss as fraction of entry price (0.20 = 20%%)")
-    p.add_argument("--balance-max-diff", type=float, default=0.20,
-                   help="Max allowed |CE-PE|/max(CE,PE) (0.20 = 20%%)")
-    p.add_argument("--brokerage-per-order", type=float, default=25.0)
-    p.add_argument("--slippage-per-order", type=float, default=0.5)
-    return p.parse_args()
-
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
 
 def fmt(v: float) -> str:
     return f"{v:.2f}"
@@ -99,32 +118,12 @@ def build_ts(day: str, time_text: str) -> str:
     return f"{day}T{h}:{m}:00{IST_SUFFIX}"
 
 
-def round_to_50(price: float) -> int:
-    rem = price % 50
-    base = int(price - rem)
-    return base if rem < 25 else base + 50
-
-
 def expiry_suffix(expiry_date: str) -> str:
     return datetime.datetime.strptime(expiry_date, "%Y-%m-%d").strftime("%d_%b_%y").upper()
 
 
-def get_lot_config(expiry_date: str) -> Tuple[int, int]:
-    """(lot_size, num_lots) targeting ~300 quantity, expiry-aware."""
-    d = datetime.date.fromisoformat(expiry_date)
-    if d <= datetime.date(2021, 10, 6):
-        return 75, 4    # 300
-    if d <= datetime.date(2024, 4, 25):
-        return 50, 6    # 300
-    if d <= datetime.date(2024, 11, 21):
-        return 25, 12   # 300
-    if d <= datetime.date(2025, 12, 30):
-        return 75, 4    # 300
-    return 65, 5        # 325
-
-
-def configure_logger(log_path: Path) -> logging.Logger:
-    logger = logging.getLogger(BASE_FILENAME)
+def configure_logger(log_path: Path, name: str) -> logging.Logger:
+    logger = logging.getLogger(name)
     for h in logger.handlers:
         h.close()
     logger.handlers.clear()
@@ -145,7 +144,6 @@ def close_logger(logger: logging.Logger) -> None:
 def load_spot_data(
     spot_file: Path, entry_time: str
 ) -> Tuple[List[str], Dict[str, Tuple[float, str]]]:
-    """Returns (sorted trading days, {day: (open_val, open_text)} at entry_time)."""
     trading_days: List[str] = []
     seen_days: Dict[str, bool] = {}
     spot_open: Dict[str, Tuple[float, str]] = {}
@@ -167,13 +165,6 @@ def load_spot_data(
 def load_expiry_folders(options_dir: Path) -> Tuple[List[str], Set[str]]:
     expiries = sorted(p.name for p in options_dir.iterdir() if p.is_dir())
     return expiries, set(expiries)
-
-
-def next_expiry_after(expiries: List[str], date: str) -> Optional[str]:
-    for e in expiries:
-        if e > date:
-            return e
-    return None
 
 
 def first_expiry_on_or_after(expiries: List[str], date: str) -> Optional[str]:
@@ -226,7 +217,6 @@ def resolve_leg(
     slippage: float,
     qty: int,
 ) -> Tuple[str, str, str, str, str]:
-    """Returns (exit_ts, exit_price, exit_reason, points_pnl, gross_pnl)."""
     stop = entry_open * (1.0 + sl_pct)
     window = sorted(ts for ts in contract.rows_by_timestamp if entry_ts <= ts <= exit_ts)
 
@@ -241,7 +231,6 @@ def resolve_leg(
     if exit_row:
         return _leg_result(entry_open, exit_row.open_value, "day_close", exit_ts, slippage, qty)
 
-    # Use last candle before exit if exact exit candle missing
     candidates = [ts for ts in contract.rows_by_timestamp if ts <= exit_ts]
     if candidates:
         last_ts = max(candidates)
@@ -253,14 +242,14 @@ def resolve_leg(
 
 def make_skip(
     entry_date: str, day_name: str, skip_reason: str, remarks: str = "",
-    expiry_date: str = "", expiry_type: str = "",
+    expiry_date: str = "",
     spot_ts: str = "", spot_open: str = "",
     atm: str = "", lot_size: str = "", lots: str = "", qty: str = "",
 ) -> TradeResult:
     return TradeResult(
         entry_date=entry_date, day_of_week=day_name,
         status="SKIPPED", skip_reason=skip_reason,
-        expiry_date=expiry_date, expiry_type=expiry_type,
+        expiry_date=expiry_date,
         spot_entry_timestamp=spot_ts, spot_entry_open=spot_open,
         atm_strike=atm, lot_size=lot_size, lots=lots, quantity=qty,
         ce_contract_file="", ce_entry_open="", ce_stop_price="",
@@ -273,14 +262,27 @@ def make_skip(
     )
 
 
-def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
-    args.results_dir.mkdir(parents=True, exist_ok=True)
-    logger = configure_logger(args.results_dir / LOG_FILENAME)
+# ---------------------------------------------------------------------------
+# Backtest core
+# ---------------------------------------------------------------------------
 
-    trading_days, spot_open_by_day = load_spot_data(args.spot_file, args.entry_time)
-    expiries, expiry_set = load_expiry_folders(args.options_dir)
+def run_backtest(
+    cfg: IndexConfig,
+    results_dir: Path,
+    entry_time: str,
+    exit_time: str,
+    sl_pct: float,
+    slippage: float,
+    brokerage_per_order: float,
+) -> List[TradeResult]:
+    results_dir.mkdir(parents=True, exist_ok=True)
+    log_name = cfg.base_filename()
+    logger = configure_logger(results_dir / f"{log_name}.log", log_name)
+
+    trading_days, spot_open_by_day = load_spot_data(cfg.spot_file, entry_time)
+    expiries, _ = load_expiry_folders(cfg.options_dir)
     contract_cache: Dict[Path, Optional[ContractData]] = {}
-    brokerage_per_straddle = args.brokerage_per_order * 4
+    brokerage_per_straddle = brokerage_per_order * 4
     results: List[TradeResult] = []
 
     try:
@@ -289,8 +291,8 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
             if wd >= 5:
                 continue
             day_name = WEEKDAY_NAMES[wd]
-            entry_ts = build_ts(entry_date, args.entry_time)
-            exit_ts = build_ts(entry_date, args.exit_time)
+            entry_ts = build_ts(entry_date, entry_time)
+            exit_ts = build_ts(entry_date, exit_time)
 
             spot = spot_open_by_day.get(entry_date)
             if not spot:
@@ -300,26 +302,26 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
 
             spot_val, spot_text = spot
 
-            if entry_date in expiry_set:
-                expiry_date = next_expiry_after(expiries, entry_date)
-                expiry_type = "next_week"
-            else:
-                expiry_date = first_expiry_on_or_after(expiries, entry_date)
-                expiry_type = "current_week"
+            # Always use current-week expiry, even on expiry day itself
+            expiry_date = first_expiry_on_or_after(expiries, entry_date)
 
             if expiry_date is None:
                 results.append(make_skip(entry_date, day_name, "no_expiry_found",
                                          "No suitable expiry found.",
-                                         expiry_type=expiry_type,
                                          spot_ts=entry_ts, spot_open=spot_text))
                 continue
 
-            lot_size, num_lots = get_lot_config(expiry_date)
+            if cfg.lot_size_fixed is not None:
+                lot_size = cfg.lot_size_fixed
+                num_lots = cfg.num_lots_fixed
+            else:
+                lot_size, num_lots = get_nifty_lot_config(expiry_date)
             qty = lot_size * num_lots
-            atm = round_to_50(spot_val)
+
+            atm = cfg.round_to_strike(spot_val)
             suffix = expiry_suffix(expiry_date)
-            ce_path = args.options_dir / expiry_date / f"NIFTY_{atm}_CE_{suffix}.csv"
-            pe_path = args.options_dir / expiry_date / f"NIFTY_{atm}_PE_{suffix}.csv"
+            ce_path = cfg.options_dir / expiry_date / f"{cfg.contract_prefix}_{atm}_CE_{suffix}.csv"
+            pe_path = cfg.options_dir / expiry_date / f"{cfg.contract_prefix}_{atm}_PE_{suffix}.csv"
 
             ce = load_contract(ce_path, contract_cache)
             pe = load_contract(pe_path, contract_cache)
@@ -328,7 +330,7 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
             if missing:
                 results.append(make_skip(entry_date, day_name, "missing_contract_file",
                                          f"Missing: {', '.join(missing)}",
-                                         expiry_date, expiry_type, entry_ts, spot_text,
+                                         expiry_date, entry_ts, spot_text,
                                          str(atm), str(lot_size), str(num_lots), str(qty)))
                 logger.info("SKIPPED date=%s missing_contract atm=%s", entry_date, atm)
                 continue
@@ -343,7 +345,7 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
             if missing_ts:
                 results.append(make_skip(entry_date, day_name, "missing_entry_candle",
                                          f"No {entry_ts} candle in: {', '.join(missing_ts)}",
-                                         expiry_date, expiry_type, entry_ts, spot_text,
+                                         expiry_date, entry_ts, spot_text,
                                          str(atm), str(lot_size), str(num_lots), str(qty)))
                 logger.info("SKIPPED date=%s missing_entry_candle atm=%s", entry_date, atm)
                 continue
@@ -351,18 +353,16 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
             ce_open = ce_row.open_value
             pe_open = pe_row.open_value
 
-            # Balance check: min/max >= 0.80 (within 20% of each other)
-            if ce_open <= 0 or pe_open <= 0 or \
-               min(ce_open, pe_open) / max(ce_open, pe_open) < (1.0 - args.balance_max_diff):
-                results.append(make_skip(entry_date, day_name, "balance_check_failed",
-                                         f"CE={fmt(ce_open)} PE={fmt(pe_open)} diff>{args.balance_max_diff*100:.0f}%",
-                                         expiry_date, expiry_type, entry_ts, spot_text,
+            if ce_open <= 0 or pe_open <= 0:
+                results.append(make_skip(entry_date, day_name, "zero_price",
+                                         f"CE={fmt(ce_open)} PE={fmt(pe_open)}",
+                                         expiry_date, entry_ts, spot_text,
                                          str(atm), str(lot_size), str(num_lots), str(qty)))
-                logger.info("SKIPPED date=%s balance_failed ce=%.2f pe=%.2f", entry_date, ce_open, pe_open)
+                logger.info("SKIPPED date=%s zero_price ce=%.2f pe=%.2f", entry_date, ce_open, pe_open)
                 continue
 
-            ce_res = resolve_leg(ce, ce_open, entry_ts, exit_ts, args.sl_pct, args.slippage_per_order, qty)
-            pe_res = resolve_leg(pe, pe_open, entry_ts, exit_ts, args.sl_pct, args.slippage_per_order, qty)
+            ce_res = resolve_leg(ce, ce_open, entry_ts, exit_ts, sl_pct, slippage, qty)
+            pe_res = resolve_leg(pe, pe_open, entry_ts, exit_ts, sl_pct, slippage, qty)
 
             ce_exit_ts, ce_exit_px, ce_exit_reason, ce_pts, ce_gross = ce_res
             pe_exit_ts, pe_exit_px, pe_exit_reason, pe_pts, pe_gross = pe_res
@@ -373,17 +373,17 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
             results.append(TradeResult(
                 entry_date=entry_date, day_of_week=day_name,
                 status="TRADED", skip_reason="",
-                expiry_date=expiry_date, expiry_type=expiry_type,
+                expiry_date=expiry_date,
                 spot_entry_timestamp=entry_ts, spot_entry_open=spot_text,
                 atm_strike=str(atm), lot_size=str(lot_size), lots=str(num_lots), quantity=str(qty),
                 ce_contract_file=ce_path.name,
                 ce_entry_open=fmt(ce_open),
-                ce_stop_price=fmt(ce_open * (1 + args.sl_pct)),
+                ce_stop_price=fmt(ce_open * (1 + sl_pct)),
                 ce_exit_timestamp=ce_exit_ts, ce_exit_price=ce_exit_px, ce_exit_reason=ce_exit_reason,
                 ce_points_pnl=ce_pts, ce_gross_pnl=ce_gross,
                 pe_contract_file=pe_path.name,
                 pe_entry_open=fmt(pe_open),
-                pe_stop_price=fmt(pe_open * (1 + args.sl_pct)),
+                pe_stop_price=fmt(pe_open * (1 + sl_pct)),
                 pe_exit_timestamp=pe_exit_ts, pe_exit_price=pe_exit_px, pe_exit_reason=pe_exit_reason,
                 pe_points_pnl=pe_pts, pe_gross_pnl=pe_gross,
                 gross_pnl=fmt(gross_pnl), brokerage=fmt(brokerage_per_straddle), net_pnl=fmt(net_pnl),
@@ -413,10 +413,14 @@ def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
     return results
 
 
+# ---------------------------------------------------------------------------
+# Output
+# ---------------------------------------------------------------------------
+
 def write_daywise_csv(results: List[TradeResult], output_path: Path) -> None:
     fieldnames = [
         "entry_date", "day_of_week", "status", "skip_reason",
-        "expiry_date", "expiry_type",
+        "expiry_date",
         "spot_entry_timestamp", "spot_entry_open", "atm_strike",
         "lot_size", "lots", "quantity",
         "ce_contract_file", "ce_entry_open", "ce_stop_price",
@@ -448,7 +452,16 @@ def compute_equity_stats(net_pnls: List[float]) -> Tuple[float, float]:
     return max_dd, peak_profit
 
 
-def write_summary(results: List[TradeResult], output_path: Path, args: argparse.Namespace) -> None:
+def write_summary(
+    results: List[TradeResult],
+    output_path: Path,
+    cfg: IndexConfig,
+    entry_time: str,
+    exit_time: str,
+    sl_pct: float,
+    slippage: float,
+    brokerage_per_order: float,
+) -> None:
     traded = [r for r in results if r.status == "TRADED"]
     skipped = [r for r in results if r.status == "SKIPPED"]
     net_total = sum(float(r.net_pnl) for r in traded)
@@ -461,7 +474,6 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
     pe_sl = sum(1 for r in traded if "sl" in r.pe_exit_reason)
     both_sl = sum(1 for r in traded if "sl" in r.ce_exit_reason and "sl" in r.pe_exit_reason)
     neither_sl = sum(1 for r in traded if "sl" not in r.ce_exit_reason and "sl" not in r.pe_exit_reason)
-    balance_fails = sum(1 for r in skipped if r.skip_reason == "balance_check_failed")
 
     max_profit_r = max(traded, key=lambda r: float(r.net_pnl), default=None)
     max_loss_r = min(traded, key=lambda r: float(r.net_pnl), default=None)
@@ -474,37 +486,45 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
     for r in skipped:
         skip_by_reason[r.skip_reason] = skip_by_reason.get(r.skip_reason, 0) + 1
 
+    index_name = cfg.name
+    strike_note = f"nearest {cfg.strike_rounding} to spot open"
+
+    if cfg.lot_size_fixed is not None:
+        lot_note = (f"- Lot size: `{cfg.lot_size_fixed}` × `{cfg.num_lots_fixed}` lots"
+                    f" = **{cfg.lot_size_fixed * cfg.num_lots_fixed} quantity** (fixed)")
+    else:
+        lot_note = (
+            "- Lot sizing (expiry-aware, targeting ~300 quantity):\n"
+            "  - Until 2021-10-06 expiry  : 75 × 4 = **300**\n"
+            "  - 2021-10-07 – 2024-04-25  : 50 × 6 = **300**\n"
+            "  - 2024-04-26 – 2024-11-21  : 25 × 12 = **300**\n"
+            "  - 2024-11-22 – 2025-12-30  : 75 × 4 = **300**\n"
+            "  - 2026+ expiry              : 65 × 5 = **325**"
+        )
+
     lines = [
-        "# NIFTY Intraday ATM Straddle — 20% Independent SL (2020–2026)",
+        f"# {index_name} Intraday ATM Straddle — 20% Independent SL, Expiry Day Included",
         "",
         "## Strategy Details",
         "",
-        f"- Entry: `{args.entry_time}` — sell ATM CE + PE (nearest 50 to spot open)",
-        f"- Exit: `{args.exit_time}` — day close if SL not hit",
-        f"- Stop loss: `{args.sl_pct * 100:.0f}%` above entry price, **independent per leg**",
-        f"- Balance rule: skip if |CE − PE| / max(CE, PE) > {args.balance_max_diff * 100:.0f}%",
-        "  (e.g. CE=100 → PE must be in [80, 120])",
-        "- Expiry: current week; on expiry day → next week",
-        "- Lot sizing (expiry-aware, targeting ~300 quantity):",
-        "  - Until 2021-10-06 expiry  : 75 × 4 = **300**",
-        "  - 2021-10-07 – 2024-04-25  : 50 × 6 = **300**",
-        "  - 2024-04-26 – 2024-11-21  : 25 × 12 = **300**",
-        "  - 2024-11-22 – 2025-12-30  : 75 × 4 = **300**",
-        "  - 2026+ expiry              : 65 × 5 = **325**",
-        f"- Slippage: {fmt(args.slippage_per_order)} pt/order (2 × per leg, applied to points P&L)",
-        f"- Brokerage: ₹{fmt(args.brokerage_per_order)}/order → ₹{fmt(args.brokerage_per_order * 4)}/straddle",
-        f"- Spot data: `NIFTY50_INDEX_5m_last_7y.csv` (5-minute candles)",
-        f"- Options data: `NiftyOptions_2020_2026/Options` (1-minute candles)",
+        f"- Entry: `{entry_time}` — sell ATM CE + PE ({strike_note})",
+        f"- Exit: `{exit_time}` — day close if SL not hit",
+        f"- Stop loss: `{sl_pct * 100:.0f}%` above entry price, **independent per leg**",
+        "- Expiry: always current-week expiry, **including on expiry day itself**",
+        "- Balance filter: **disabled** (no CE/PE ratio check)",
+        lot_note,
+        f"- Slippage: {fmt(slippage)} pt/order (2 × per leg, applied to points P&L)",
+        f"- Brokerage: ₹{fmt(brokerage_per_order)}/order → ₹{fmt(brokerage_per_order * 4)}/straddle",
         "",
         "## Overall Results",
         "",
-        f"| Metric | Value |",
-        f"|--------|-------|",
+        "| Metric | Value |",
+        "|--------|-------|",
         f"| Traded days | `{len(traded)}` |",
         f"| Skipped days | `{len(skipped)}` |",
         f"| Winning days | `{wins}` |",
         f"| Losing days | `{losses}` |",
-        f"| Win rate | `{wins / len(traded) * 100:.1f}%` |" if traded else "| Win rate | N/A |",
+        (f"| Win rate | `{wins / len(traded) * 100:.1f}%` |" if traded else "| Win rate | N/A |"),
         f"| Days CE SL hit | `{ce_sl}` |",
         f"| Days PE SL hit | `{pe_sl}` |",
         f"| Days both SL hit | `{both_sl}` |",
@@ -514,9 +534,11 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
         f"| **Net P/L** | **`₹{fmt(net_total)}`** |",
         f"| Peak cumulative profit | `₹{fmt(peak_profit)}` |",
         f"| Max drawdown | `₹{fmt(max_dd)}` |",
-        (f"| Best day | `{max_profit_r.entry_date}` ({max_profit_r.day_of_week}) `₹{max_profit_r.net_pnl}` qty={max_profit_r.quantity} |"
+        (f"| Best day | `{max_profit_r.entry_date}` ({max_profit_r.day_of_week})"
+         f" `₹{max_profit_r.net_pnl}` qty={max_profit_r.quantity} |"
          if max_profit_r else "| Best day | N/A |"),
-        (f"| Worst day | `{max_loss_r.entry_date}` ({max_loss_r.day_of_week}) `₹{max_loss_r.net_pnl}` qty={max_loss_r.quantity} |"
+        (f"| Worst day | `{max_loss_r.entry_date}` ({max_loss_r.day_of_week})"
+         f" `₹{max_loss_r.net_pnl}` qty={max_loss_r.quantity} |"
          if max_loss_r else "| Worst day | N/A |"),
         "",
         "## Results by Day of Week",
@@ -541,11 +563,7 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
             f"| `₹{fmt(d_net)}` | `₹{fmt(d_avg)}` |"
         )
 
-    lines += [
-        "",
-        "### Day-of-Week Detail",
-        "",
-    ]
+    lines += ["", "### Day-of-Week Detail", ""]
     for d in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
         dr = by_day.get(d, [])
         if not dr:
@@ -572,56 +590,11 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
             "",
         ]
 
-    by_year: Dict[str, List[TradeResult]] = {}
-    for r in traded:
-        by_year.setdefault(r.entry_date[:4], []).append(r)
-
-    lines += [
-        "## Yearly Summary",
-        "",
-        "| Year | Trades | Win | Loss | Total Net P/L | Avg Net/Day |",
-        "|------|--------|-----|------|---------------|-------------|",
-    ]
-    for year in sorted(by_year):
-        yr = by_year[year]
-        y_net = sum(float(r.net_pnl) for r in yr)
-        y_win = sum(1 for r in yr if float(r.net_pnl) > 0)
-        y_loss = sum(1 for r in yr if float(r.net_pnl) < 0)
-        lines.append(f"| {year} | {len(yr)} | {y_win} | {y_loss} | `₹{fmt(y_net)}` | `₹{fmt(y_net / len(yr))}` |")
-
-    by_month_key: Dict[str, List[TradeResult]] = {}
-    for r in traded:
-        by_month_key.setdefault(r.entry_date[:7], []).append(r)
-
-    lines += [
-        "",
-        "## Monthly Summary",
-        "",
-        "| Month | Trades | Win | Loss | Total Net P/L | Avg Net/Day |",
-        "|-------|--------|-----|------|---------------|-------------|",
-    ]
-    for month in sorted(by_month_key):
-        mr = by_month_key[month]
-        m_net = sum(float(r.net_pnl) for r in mr)
-        m_win = sum(1 for r in mr if float(r.net_pnl) > 0)
-        m_loss = sum(1 for r in mr if float(r.net_pnl) < 0)
-        lines.append(f"| {month} | {len(mr)} | {m_win} | {m_loss} | `₹{fmt(m_net)}` | `₹{fmt(m_net / len(mr))}` |")
-
-    lines += [
-        "",
-        "## Skip Reason Summary",
-        "",
-    ]
+    lines += ["## Skip Reason Summary", ""]
     for reason, count in sorted(skip_by_reason.items(), key=lambda x: -x[1]):
         lines.append(f"- `{reason}`: {count}")
-    if balance_fails:
-        lines.append(f"  _(balance check failures counted above: {balance_fails})_")
 
-    lines += [
-        "",
-        "## Exceptions (first 30)",
-        "",
-    ]
+    lines += ["", "## Exceptions (first 30)", ""]
     for r in skipped[:30]:
         lines.append(f"- `{r.entry_date}` ({r.day_of_week}): `{r.skip_reason}` — {r.remarks}")
 
@@ -633,25 +606,105 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
         "- Gap SL: if option opens ≥ SL price, fill at candle open.",
         "- Intrabar SL: if high ≥ SL price, fill at SL price.",
         "- SL monitoring uses the option contract's 1-minute candles.",
-        "- Balance check: if min(CE,PE)/max(CE,PE) < 0.80, the day is skipped.",
-        "- Lot sizing is applied per the expiry date of the traded contract.",
+        "- No balance filter applied — all days with valid entry candles are traded.",
+        "- On expiry day, the expiring contract itself is traded (not next week).",
+        f"- Strike interval: {cfg.strike_rounding} points.",
     ]
+    if cfg.lot_size_fixed is None:
+        lines.append("- NIFTY lot sizing is applied per the expiry date of the traded contract.")
 
     with output_path.open("w", encoding="utf-8", newline="") as fh:
         fh.write("\n".join(lines) + "\n")
 
 
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
+
+def parse_args() -> argparse.Namespace:
+    repo_root = Path(__file__).resolve().parents[2]
+    p = argparse.ArgumentParser(
+        description=(
+            "Intraday ATM straddle 20% SL — NIFTY & SENSEX, "
+            "expiry day included, no balance filter."
+        )
+    )
+    p.add_argument(
+        "--index", choices=["NIFTY", "SENSEX", "ALL"], default="ALL",
+        help="Which index to backtest (default: ALL runs both)",
+    )
+    p.add_argument("--nifty-spot-file", type=Path,
+                   default=repo_root / "nifty" / "NIFTY50_INDEX_5m_last_7y.csv")
+    p.add_argument("--nifty-options-dir", type=Path,
+                   default=repo_root / "NiftyOptions_2020_2026" / "Options")
+    p.add_argument("--sensex-spot-file", type=Path,
+                   default=repo_root / "nifty" / "SENSEX_INDEX_5m_last_7y.csv")
+    p.add_argument("--sensex-options-dir", type=Path,
+                   default=repo_root / "SensexOptions_2024_2026" / "Options")
+    p.add_argument("--results-dir", type=Path,
+                   default=repo_root / "backtesting" / "results")
+    p.add_argument("--entry-time", default="09:20")
+    p.add_argument("--exit-time", default="15:20")
+    p.add_argument("--sl-pct", type=float, default=0.20)
+    p.add_argument("--brokerage-per-order", type=float, default=25.0)
+    p.add_argument("--slippage-per-order", type=float, default=0.5)
+    p.add_argument("--sensex-lot-size", type=int, default=10)
+    p.add_argument("--sensex-lots", type=int, default=10)
+    return p.parse_args()
+
+
 def main() -> None:
     args = parse_args()
     args.results_dir.mkdir(parents=True, exist_ok=True)
-    results = run_backtest(args)
-    write_daywise_csv(results, args.results_dir / DAYWISE_FILENAME)
-    write_summary(results, args.results_dir / SUMMARY_FILENAME, args)
-    traded = sum(1 for r in results if r.status == "TRADED")
-    skipped = sum(1 for r in results if r.status == "SKIPPED")
-    print(f"Done. Traded={traded} Skipped={skipped} Total={len(results)}")
-    print(f"Daywise CSV : {args.results_dir / DAYWISE_FILENAME}")
-    print(f"Summary     : {args.results_dir / SUMMARY_FILENAME}")
+
+    configs = []
+    if args.index in ("NIFTY", "ALL"):
+        configs.append(IndexConfig(
+            name="NIFTY",
+            spot_file=args.nifty_spot_file,
+            options_dir=args.nifty_options_dir,
+            strike_rounding=50,
+            contract_prefix="NIFTY",
+            lot_size_fixed=None,
+            num_lots_fixed=None,
+        ))
+    if args.index in ("SENSEX", "ALL"):
+        configs.append(IndexConfig(
+            name="SENSEX",
+            spot_file=args.sensex_spot_file,
+            options_dir=args.sensex_options_dir,
+            strike_rounding=100,
+            contract_prefix="SENSEX",
+            lot_size_fixed=args.sensex_lot_size,
+            num_lots_fixed=args.sensex_lots,
+        ))
+
+    for cfg in configs:
+        print(f"\n{'='*60}")
+        print(f"Running {cfg.name} backtest ...")
+        results = run_backtest(
+            cfg=cfg,
+            results_dir=args.results_dir,
+            entry_time=args.entry_time,
+            exit_time=args.exit_time,
+            sl_pct=args.sl_pct,
+            slippage=args.slippage_per_order,
+            brokerage_per_order=args.brokerage_per_order,
+        )
+        base = cfg.base_filename()
+        csv_path = args.results_dir / f"{base}_daywise.csv"
+        summary_path = args.results_dir / f"{base}_summary.md"
+        write_daywise_csv(results, csv_path)
+        write_summary(
+            results, summary_path, cfg,
+            args.entry_time, args.exit_time,
+            args.sl_pct, args.slippage_per_order, args.brokerage_per_order,
+        )
+        traded = sum(1 for r in results if r.status == "TRADED")
+        skipped = sum(1 for r in results if r.status == "SKIPPED")
+        print(f"Done. Traded={traded}  Skipped={skipped}  Total={len(results)}")
+        print(f"  Daywise CSV : {csv_path}")
+        print(f"  Summary     : {summary_path}")
 
 
 if __name__ == "__main__":

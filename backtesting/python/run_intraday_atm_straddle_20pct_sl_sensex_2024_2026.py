@@ -553,7 +553,43 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
             "",
         ]
 
+    by_year: Dict[str, List[TradeResult]] = {}
+    for r in traded:
+        by_year.setdefault(r.entry_date[:4], []).append(r)
+
     lines += [
+        "## Yearly Summary",
+        "",
+        "| Year | Trades | Win | Loss | Total Net P/L | Avg Net/Day |",
+        "|------|--------|-----|------|---------------|-------------|",
+    ]
+    for year in sorted(by_year):
+        yr = by_year[year]
+        y_net = sum(float(r.net_pnl) for r in yr)
+        y_win = sum(1 for r in yr if float(r.net_pnl) > 0)
+        y_loss = sum(1 for r in yr if float(r.net_pnl) < 0)
+        lines.append(f"| {year} | {len(yr)} | {y_win} | {y_loss} | `₹{fmt(y_net)}` | `₹{fmt(y_net / len(yr))}` |")
+
+    by_month_key: Dict[str, List[TradeResult]] = {}
+    for r in traded:
+        by_month_key.setdefault(r.entry_date[:7], []).append(r)
+
+    lines += [
+        "",
+        "## Monthly Summary",
+        "",
+        "| Month | Trades | Win | Loss | Total Net P/L | Avg Net/Day |",
+        "|-------|--------|-----|------|---------------|-------------|",
+    ]
+    for month in sorted(by_month_key):
+        mr = by_month_key[month]
+        m_net = sum(float(r.net_pnl) for r in mr)
+        m_win = sum(1 for r in mr if float(r.net_pnl) > 0)
+        m_loss = sum(1 for r in mr if float(r.net_pnl) < 0)
+        lines.append(f"| {month} | {len(mr)} | {m_win} | {m_loss} | `₹{fmt(m_net)}` | `₹{fmt(m_net / len(mr))}` |")
+
+    lines += [
+        "",
         "## Skip Reason Summary",
         "",
     ]
