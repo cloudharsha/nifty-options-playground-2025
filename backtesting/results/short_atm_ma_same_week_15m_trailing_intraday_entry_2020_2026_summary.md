@@ -1,0 +1,600 @@
+# 15-Minute Same-Week ATM MA Short Options Backtest With Intraday First Entry (2020-2026)
+
+## Strategy Details
+
+- ATM reference time: `09:30`
+- Last fresh-entry time: `15:00`
+- Exit time: `15:15`
+- Spot ATM rule: fixed nearest 50 using the NIFTY 09:30 open
+- Expiry rule: first expiry folder on or after the trade date
+- Entry rule: monitor fixed 09:30 ATM CE and PE independently from 09:30 through 15:00; sell the first bar whose open is below the prior 25-close SMA
+- Trailing stop rule: every later 15-minute bar recalculates the prior 25-close SMA; exit when that bar open is above the updated SMA
+- MA source: option close (15-minute sampled from 1-minute data for 2020-2026)
+- Re-entry rule: each leg may trade at most once per day
+- Pricing rule: exact option open price at exact 15-minute boundary timestamps
+- Quantity: ~300 per trade (dynamic lot sizing by expiry era)
+  - pre-2021-10-07: 75x4=300 | 2021-10-07-2024-04-25: 50x6=300
+  - 2024-04-26-2024-11-21: 25x12=300 | 2024-11-22-2025-12-30: 75x4=300
+  - 2026+: 65x5=325
+- Slippage: 1.00 pt/order
+- Brokerage: Rs 25/order
+- Capital reference (CAGR): Rs 1,000,000
+- Data range: `2019-01-01` to `2026-06-19`
+
+## Results Summary
+
+- Traded days: `1315`
+- Skipped days: `536`
+- CE-only trade count: `83`
+- PE-only trade count: `122`
+- Both-legs trade count: `1110`
+- Winning days: `711`
+- Losing days: `604`
+- Max drawdown: `638220.00`
+- Best day: `2024-06-04` net `101950.00`
+- Worst day: `2025-05-27` net `-62770.00`
+- Total Profit/Loss: `139006.75`
+- Total Brokerage: `121250.00`
+- Gross P/L: `260256.75`
+- CAGR (on Rs 1,000,000): `1.76%`
+
+## Yearly Summary
+
+| Year | Traded | CE-only | PE-only | Both | Wins | Losses | Win% | Net P/L |
+|------|--------|---------|---------|------|------|--------|------|---------|
+| 2020 | 195 | 10 | 18 | 167 | 111 | 84 | 56.9% | 297005.00 |
+| 2021 | 194 | 8 | 21 | 165 | 109 | 85 | 56.2% | 93440.00 |
+| 2022 | 195 | 13 | 21 | 161 | 104 | 91 | 53.3% | -195325.00 |
+| 2023 | 189 | 10 | 19 | 160 | 95 | 94 | 50.3% | -105770.00 |
+| 2024 | 196 | 12 | 14 | 170 | 94 | 102 | 48.0% | -192477.00 |
+| 2025 | 248 | 20 | 24 | 204 | 148 | 100 | 59.7% | 478943.75 |
+| 2026 | 98 | 10 | 5 | 83 | 50 | 48 | 51.0% | -236810.00 |
+
+## Exceptions
+
+- `2019-01-01`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-01-02`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-01-03`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-01-04`: `both_sides_unavailable`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv; Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-01-07`: `both_sides_unavailable`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv; Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-01-08`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-01-09`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-01-10`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-01-11`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-01-14`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-01-15`: `both_sides_unavailable`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv; Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-01-16`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-01-17`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-01-18`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-01-21`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-01-22`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-01-23`: `both_sides_unavailable`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv; Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-01-24`: `both_sides_unavailable`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv; Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-01-25`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-01-28`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-01-29`: `both_sides_unavailable`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv; Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-01-30`: `both_sides_unavailable`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv; Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-01-31`: `both_sides_unavailable`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv; Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-02-01`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-02-04`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-02-05`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-02-06`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-02-06T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-02-06T09:30:00+05:30
+- `2019-02-07`: `both_sides_unavailable`. NIFTY_11100_CE_02_JAN_20.csv is header-only; NIFTY_11100_PE_02_JAN_20.csv is header-only
+- `2019-02-08`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-02-08T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-02-08T09:30:00+05:30
+- `2019-02-11`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-02-12`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-02-13`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-02-14`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-02-15`: `both_sides_unavailable`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv; Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-02-18`: `both_sides_unavailable`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv; Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-02-19`: `both_sides_unavailable`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv; Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-02-20`: `both_sides_unavailable`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv; Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-02-21`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-02-22`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-02-25`: `both_sides_unavailable`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv; Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-02-26`: `both_sides_unavailable`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv; Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-02-27`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-02-28`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-03-01`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-03-05`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-03-06`: `both_sides_unavailable`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv; Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-03-07`: `both_sides_unavailable`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv; Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-03-08`: `both_sides_unavailable`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv; Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-03-11`: `both_sides_unavailable`. NIFTY_11100_CE_02_JAN_20.csv is header-only; NIFTY_11100_PE_02_JAN_20.csv is header-only
+- `2019-03-12`: `both_sides_unavailable`. NIFTY_11250_CE_02_JAN_20.csv is header-only; NIFTY_11250_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-12T09:30:00+05:30
+- `2019-03-13`: `both_sides_unavailable`. NIFTY_11300_CE_02_JAN_20.csv is header-only; NIFTY_11300_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-13T09:30:00+05:30
+- `2019-03-14`: `both_sides_unavailable`. NIFTY_11400_CE_02_JAN_20.csv is header-only; NIFTY_11400_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-14T09:30:00+05:30
+- `2019-03-15`: `both_sides_unavailable`. NIFTY_11400_CE_02_JAN_20.csv is header-only; NIFTY_11400_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-15T09:30:00+05:30
+- `2019-03-18`: `both_sides_unavailable`. NIFTY_11500_CE_02_JAN_20.csv missing monitoring timestamp 2019-03-18T09:30:00+05:30; NIFTY_11500_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-18T09:30:00+05:30
+- `2019-03-19`: `both_sides_unavailable`. NIFTY_11500_CE_02_JAN_20.csv missing monitoring timestamp 2019-03-19T09:30:00+05:30; NIFTY_11500_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-19T09:30:00+05:30
+- `2019-03-20`: `both_sides_unavailable`. NIFTY_11500_CE_02_JAN_20.csv missing monitoring timestamp 2019-03-20T09:30:00+05:30; NIFTY_11500_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-20T09:30:00+05:30
+- `2019-03-22`: `both_sides_unavailable`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv; NIFTY_11550_PE_02_JAN_20.csv is header-only
+- `2019-03-25`: `both_sides_unavailable`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv; NIFTY_11350_PE_02_JAN_20.csv is header-only
+- `2019-03-26`: `both_sides_unavailable`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv; NIFTY_11350_PE_02_JAN_20.csv is header-only
+- `2019-03-27`: `both_sides_unavailable`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv; NIFTY_11550_PE_02_JAN_20.csv is header-only
+- `2019-03-28`: `both_sides_unavailable`. NIFTY_11500_CE_02_JAN_20.csv missing monitoring timestamp 2019-03-28T09:30:00+05:30; NIFTY_11500_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-28T09:30:00+05:30
+- `2019-03-29`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-03-29T09:30:00+05:30
+- `2019-04-01`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-04-01T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-01T09:30:00+05:30
+- `2019-04-02`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-02T09:30:00+05:30
+- `2019-04-03`: `both_sides_unavailable`. NIFTY_11750_CE_02_JAN_20.csv is header-only; NIFTY_11750_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-03T09:30:00+05:30
+- `2019-04-04`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-04T09:30:00+05:30
+- `2019-04-05`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-05T09:30:00+05:30
+- `2019-04-08`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-04-08T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-08T09:30:00+05:30
+- `2019-04-09`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-09T09:30:00+05:30
+- `2019-04-10`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-04-10T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-10T09:30:00+05:30
+- `2019-04-11`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-11T09:30:00+05:30
+- `2019-04-12`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-12T09:30:00+05:30
+- `2019-04-15`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-15T09:30:00+05:30
+- `2019-04-16`: `both_sides_unavailable`. NIFTY_11750_CE_02_JAN_20.csv is header-only; NIFTY_11750_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-16T09:30:00+05:30
+- `2019-04-18`: `both_sides_unavailable`. NIFTY_11800_CE_02_JAN_20.csv missing monitoring timestamp 2019-04-18T09:30:00+05:30; NIFTY_11800_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-18T09:30:00+05:30
+- `2019-04-22`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-04-22T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-22T09:30:00+05:30
+- `2019-04-23`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-23T09:30:00+05:30
+- `2019-04-24`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-24T09:30:00+05:30
+- `2019-04-25`: `both_sides_unavailable`. NIFTY_11750_CE_02_JAN_20.csv is header-only; NIFTY_11750_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-25T09:30:00+05:30
+- `2019-04-26`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-26T09:30:00+05:30
+- `2019-04-30`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-04-30T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-04-30T09:30:00+05:30
+- `2019-05-02`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-05-02T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-02T09:30:00+05:30
+- `2019-05-03`: `both_sides_unavailable`. NIFTY_11750_CE_02_JAN_20.csv is header-only; NIFTY_11750_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-03T09:30:00+05:30
+- `2019-05-06`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-06T09:30:00+05:30
+- `2019-05-07`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-07T09:30:00+05:30
+- `2019-05-08`: `both_sides_unavailable`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv; Missing option file: NIFTY_11450_PE_02_JAN_20.csv
+- `2019-05-09`: `both_sides_unavailable`. NIFTY_11300_CE_02_JAN_20.csv is header-only; NIFTY_11300_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-09T09:30:00+05:30
+- `2019-05-10`: `both_sides_unavailable`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv; NIFTY_11350_PE_02_JAN_20.csv is header-only
+- `2019-05-13`: `both_sides_unavailable`. NIFTY_11250_CE_02_JAN_20.csv is header-only; NIFTY_11250_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-13T09:30:00+05:30
+- `2019-05-14`: `both_sides_unavailable`. NIFTY_11150_CE_02_JAN_20.csv is header-only; Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-05-15`: `both_sides_unavailable`. NIFTY_11250_CE_02_JAN_20.csv is header-only; NIFTY_11250_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-15T09:30:00+05:30
+- `2019-05-16`: `both_sides_unavailable`. NIFTY_11150_CE_02_JAN_20.csv is header-only; Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-05-17`: `both_sides_unavailable`. NIFTY_11300_CE_02_JAN_20.csv is header-only; NIFTY_11300_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-17T09:30:00+05:30
+- `2019-05-20`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-20T09:30:00+05:30
+- `2019-05-21`: `both_sides_unavailable`. NIFTY_11850_CE_02_JAN_20.csv missing monitoring timestamp 2019-05-21T09:30:00+05:30; NIFTY_11850_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-21T09:30:00+05:30
+- `2019-05-22`: `both_sides_unavailable`. NIFTY_11750_CE_02_JAN_20.csv is header-only; NIFTY_11750_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-22T09:30:00+05:30
+- `2019-05-23`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-05-23T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-23T09:30:00+05:30
+- `2019-05-24`: `both_sides_unavailable`. NIFTY_11750_CE_02_JAN_20.csv is header-only; NIFTY_11750_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-24T09:30:00+05:30
+- `2019-05-27`: `both_sides_unavailable`. NIFTY_11850_CE_02_JAN_20.csv missing monitoring timestamp 2019-05-27T09:30:00+05:30; NIFTY_11850_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-27T09:30:00+05:30
+- `2019-05-28`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-05-28T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-28T09:30:00+05:30
+- `2019-05-29`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-05-29T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-29T09:30:00+05:30
+- `2019-05-30`: `both_sides_unavailable`. NIFTY_11850_CE_02_JAN_20.csv missing monitoring timestamp 2019-05-30T09:30:00+05:30; NIFTY_11850_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-30T09:30:00+05:30
+- `2019-05-31`: `both_sides_unavailable`. NIFTY_12050_CE_02_JAN_20.csv missing monitoring timestamp 2019-05-31T09:30:00+05:30; NIFTY_12050_PE_02_JAN_20.csv missing monitoring timestamp 2019-05-31T09:30:00+05:30
+- `2019-06-03`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-03T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-03T09:30:00+05:30
+- `2019-06-04`: `both_sides_unavailable`. NIFTY_12050_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-04T09:30:00+05:30; NIFTY_12050_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-04T09:30:00+05:30
+- `2019-06-06`: `both_sides_unavailable`. NIFTY_12000_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-06T09:30:00+05:30; NIFTY_12000_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-06T09:30:00+05:30
+- `2019-06-07`: `both_sides_unavailable`. NIFTY_11800_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-07T09:30:00+05:30; NIFTY_11800_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-07T09:30:00+05:30
+- `2019-06-10`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-10T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-10T09:30:00+05:30
+- `2019-06-11`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-11T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-11T09:30:00+05:30
+- `2019-06-12`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-12T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-12T09:30:00+05:30
+- `2019-06-13`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-13T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-13T09:30:00+05:30
+- `2019-06-14`: `both_sides_unavailable`. NIFTY_11850_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-14T09:30:00+05:30; NIFTY_11850_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-14T09:30:00+05:30
+- `2019-06-17`: `both_sides_unavailable`. NIFTY_11750_CE_02_JAN_20.csv is header-only; NIFTY_11750_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-17T09:30:00+05:30
+- `2019-06-18`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-18T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-18T09:30:00+05:30
+- `2019-06-19`: `both_sides_unavailable`. NIFTY_11800_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-19T09:30:00+05:30; NIFTY_11800_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-19T09:30:00+05:30
+- `2019-06-20`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-20T09:30:00+05:30
+- `2019-06-21`: `both_sides_unavailable`. NIFTY_11800_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-21T09:30:00+05:30; NIFTY_11800_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-21T09:30:00+05:30
+- `2019-06-24`: `both_sides_unavailable`. NIFTY_11750_CE_02_JAN_20.csv is header-only; NIFTY_11750_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-24T09:30:00+05:30
+- `2019-06-25`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-25T09:30:00+05:30
+- `2019-06-26`: `both_sides_unavailable`. NIFTY_11800_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-26T09:30:00+05:30; NIFTY_11800_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-26T09:30:00+05:30
+- `2019-06-27`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-27T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-27T09:30:00+05:30
+- `2019-06-28`: `both_sides_unavailable`. NIFTY_11850_CE_02_JAN_20.csv missing monitoring timestamp 2019-06-28T09:30:00+05:30; NIFTY_11850_PE_02_JAN_20.csv missing monitoring timestamp 2019-06-28T09:30:00+05:30
+- `2019-07-01`: `both_sides_unavailable`. NIFTY_11850_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-01T09:30:00+05:30; NIFTY_11850_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-01T09:30:00+05:30
+- `2019-07-02`: `both_sides_unavailable`. NIFTY_11850_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-02T09:30:00+05:30; NIFTY_11850_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-02T09:30:00+05:30
+- `2019-07-03`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-03T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-03T09:30:00+05:30
+- `2019-07-04`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-04T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-04T09:30:00+05:30
+- `2019-07-05`: `both_sides_unavailable`. NIFTY_12000_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-05T09:30:00+05:30; NIFTY_12000_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-05T09:30:00+05:30
+- `2019-07-08`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-08T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-08T09:30:00+05:30
+- `2019-07-09`: `both_sides_unavailable`. NIFTY_11500_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-09T09:30:00+05:30; NIFTY_11500_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-09T09:30:00+05:30
+- `2019-07-10`: `both_sides_unavailable`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv; NIFTY_11550_PE_02_JAN_20.csv is header-only
+- `2019-07-11`: `both_sides_unavailable`. NIFTY_11500_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-11T09:30:00+05:30; NIFTY_11500_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-11T09:30:00+05:30
+- `2019-07-12`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-12T09:30:00+05:30
+- `2019-07-15`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-15T09:30:00+05:30
+- `2019-07-16`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-16T09:30:00+05:30
+- `2019-07-17`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-17T09:30:00+05:30
+- `2019-07-18`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-18T09:30:00+05:30
+- `2019-07-19`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-19T09:30:00+05:30
+- `2019-07-22`: `both_sides_unavailable`. NIFTY_11300_CE_02_JAN_20.csv is header-only; NIFTY_11300_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-22T09:30:00+05:30
+- `2019-07-23`: `both_sides_unavailable`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv; NIFTY_11350_PE_02_JAN_20.csv is header-only
+- `2019-07-24`: `both_sides_unavailable`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv; NIFTY_11350_PE_02_JAN_20.csv is header-only
+- `2019-07-25`: `both_sides_unavailable`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv; NIFTY_11350_PE_02_JAN_20.csv is header-only
+- `2019-07-26`: `both_sides_unavailable`. NIFTY_11250_CE_02_JAN_20.csv is header-only; NIFTY_11250_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-26T09:30:00+05:30
+- `2019-07-29`: `both_sides_unavailable`. NIFTY_11250_CE_02_JAN_20.csv is header-only; NIFTY_11250_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-29T09:30:00+05:30
+- `2019-07-30`: `both_sides_unavailable`. NIFTY_11250_CE_02_JAN_20.csv is header-only; NIFTY_11250_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-30T09:30:00+05:30
+- `2019-07-31`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-07-31T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-07-31T09:30:00+05:30
+- `2019-08-01`: `both_sides_unavailable`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv; Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-08-02`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-08-05`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-08-06`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-08-07`: `both_sides_unavailable`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv; Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-08-08`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-08-09`: `both_sides_unavailable`. NIFTY_11100_CE_02_JAN_20.csv is header-only; NIFTY_11100_PE_02_JAN_20.csv is header-only
+- `2019-08-13`: `both_sides_unavailable`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv; Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-08-14`: `both_sides_unavailable`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv; Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-08-16`: `both_sides_unavailable`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv; Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-08-19`: `both_sides_unavailable`. NIFTY_11100_CE_02_JAN_20.csv is header-only; NIFTY_11100_PE_02_JAN_20.csv is header-only
+- `2019-08-20`: `both_sides_unavailable`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv; Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-08-21`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-08-21T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-08-21T09:30:00+05:30
+- `2019-08-22`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-08-23`: `both_sides_unavailable`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv; Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-08-26`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-08-27`: `both_sides_unavailable`. NIFTY_11100_CE_02_JAN_20.csv is header-only; NIFTY_11100_PE_02_JAN_20.csv is header-only
+- `2019-08-28`: `both_sides_unavailable`. NIFTY_11100_CE_02_JAN_20.csv is header-only; NIFTY_11100_PE_02_JAN_20.csv is header-only
+- `2019-08-29`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-08-29T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-08-29T09:30:00+05:30
+- `2019-08-30`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-08-30T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-08-30T09:30:00+05:30
+- `2019-09-03`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-09-04`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-09-05`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-09-06`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-09-09`: `both_sides_unavailable`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv; Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-09-11`: `both_sides_unavailable`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv; Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-09-12`: `both_sides_unavailable`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv; Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-09-13`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-09-13T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-09-13T09:30:00+05:30
+- `2019-09-16`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-09-16T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-09-16T09:30:00+05:30
+- `2019-09-17`: `both_sides_unavailable`. NIFTY_11000_CE_02_JAN_20.csv missing monitoring timestamp 2019-09-17T09:30:00+05:30; NIFTY_11000_PE_02_JAN_20.csv missing monitoring timestamp 2019-09-17T09:30:00+05:30
+- `2019-09-18`: `both_sides_unavailable`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv; Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-09-19`: `both_sides_unavailable`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv; Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-09-20`: `both_sides_unavailable`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv; Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-09-23`: `both_sides_unavailable`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv; NIFTY_11550_PE_02_JAN_20.csv is header-only
+- `2019-09-24`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-09-24T09:30:00+05:30
+- `2019-09-25`: `both_sides_unavailable`. NIFTY_11500_CE_02_JAN_20.csv missing monitoring timestamp 2019-09-25T09:30:00+05:30; NIFTY_11500_PE_02_JAN_20.csv missing monitoring timestamp 2019-09-25T09:30:00+05:30
+- `2019-09-26`: `both_sides_unavailable`. NIFTY_11500_CE_02_JAN_20.csv missing monitoring timestamp 2019-09-26T09:30:00+05:30; NIFTY_11500_PE_02_JAN_20.csv missing monitoring timestamp 2019-09-26T09:30:00+05:30
+- `2019-09-27`: `both_sides_unavailable`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv; NIFTY_11550_PE_02_JAN_20.csv is header-only
+- `2019-09-30`: `both_sides_unavailable`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv; Missing option file: NIFTY_11450_PE_02_JAN_20.csv
+- `2019-10-01`: `both_sides_unavailable`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv; NIFTY_11550_PE_02_JAN_20.csv is header-only
+- `2019-10-03`: `both_sides_unavailable`. NIFTY_11300_CE_02_JAN_20.csv is header-only; NIFTY_11300_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-03T09:30:00+05:30
+- `2019-10-04`: `both_sides_unavailable`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv; NIFTY_11350_PE_02_JAN_20.csv is header-only
+- `2019-10-07`: `both_sides_unavailable`. NIFTY_11150_CE_02_JAN_20.csv is header-only; Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-10-09`: `both_sides_unavailable`. NIFTY_11150_CE_02_JAN_20.csv is header-only; Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-10-10`: `both_sides_unavailable`. NIFTY_11250_CE_02_JAN_20.csv is header-only; NIFTY_11250_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-10T09:30:00+05:30
+- `2019-10-11`: `both_sides_unavailable`. NIFTY_11300_CE_02_JAN_20.csv is header-only; NIFTY_11300_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-11T09:30:00+05:30
+- `2019-10-14`: `both_sides_unavailable`. NIFTY_11300_CE_02_JAN_20.csv is header-only; NIFTY_11300_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-14T09:30:00+05:30
+- `2019-10-15`: `both_sides_unavailable`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv; NIFTY_11350_PE_02_JAN_20.csv is header-only
+- `2019-10-16`: `both_sides_unavailable`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv; Missing option file: NIFTY_11450_PE_02_JAN_20.csv
+- `2019-10-17`: `both_sides_unavailable`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv; Missing option file: NIFTY_11450_PE_02_JAN_20.csv
+- `2019-10-18`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-18T09:30:00+05:30
+- `2019-10-22`: `both_sides_unavailable`. NIFTY_11700_CE_02_JAN_20.csv missing monitoring timestamp 2019-10-22T09:30:00+05:30; NIFTY_11700_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-22T09:30:00+05:30
+- `2019-10-23`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-23T09:30:00+05:30
+- `2019-10-24`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-24T09:30:00+05:30
+- `2019-10-25`: `both_sides_unavailable`. NIFTY_11600_CE_02_JAN_20.csv is header-only; NIFTY_11600_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-25T09:30:00+05:30
+- `2019-10-27`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2019-10-27T09:30:00+05:30, 2019-10-27T09:45:00+05:30, 2019-10-27T10:00:00+05:30, 2019-10-27T10:15:00+05:30, 2019-10-27T10:30:00+05:30
+- `2019-10-29`: `both_sides_unavailable`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv; NIFTY_11650_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-29T09:30:00+05:30
+- `2019-10-30`: `both_sides_unavailable`. NIFTY_11850_CE_02_JAN_20.csv missing monitoring timestamp 2019-10-30T09:30:00+05:30; NIFTY_11850_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-30T09:30:00+05:30
+- `2019-10-31`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-10-31T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-10-31T09:30:00+05:30
+- `2019-11-01`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-01T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-01T09:30:00+05:30
+- `2019-11-04`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-04T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-04T09:30:00+05:30
+- `2019-11-05`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-05T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-05T09:30:00+05:30
+- `2019-11-06`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-06T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-06T09:30:00+05:30
+- `2019-11-07`: `both_sides_unavailable`. NIFTY_12000_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-07T09:30:00+05:30; NIFTY_12000_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-07T09:30:00+05:30
+- `2019-11-08`: `both_sides_unavailable`. NIFTY_12000_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-08T09:30:00+05:30; NIFTY_12000_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-08T09:30:00+05:30
+- `2019-11-11`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-11T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-11T09:30:00+05:30
+- `2019-11-13`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-13T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-13T09:30:00+05:30
+- `2019-11-14`: `both_sides_unavailable`. NIFTY_11800_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-14T09:30:00+05:30; NIFTY_11800_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-14T09:30:00+05:30
+- `2019-11-15`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-15T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-15T09:30:00+05:30
+- `2019-11-18`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-18T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-18T09:30:00+05:30
+- `2019-11-19`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-19T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-19T09:30:00+05:30
+- `2019-11-20`: `both_sides_unavailable`. NIFTY_12000_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-20T09:30:00+05:30; NIFTY_12000_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-20T09:30:00+05:30
+- `2019-11-21`: `both_sides_unavailable`. NIFTY_12000_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-21T09:30:00+05:30; NIFTY_12000_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-21T09:30:00+05:30
+- `2019-11-22`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-22T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-22T09:30:00+05:30
+- `2019-11-25`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-25T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-25T09:30:00+05:30
+- `2019-11-26`: `both_sides_unavailable`. NIFTY_12100_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-26T09:30:00+05:30; NIFTY_12100_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-26T09:30:00+05:30
+- `2019-11-27`: `both_sides_unavailable`. NIFTY_12100_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-27T09:30:00+05:30; NIFTY_12100_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-27T09:30:00+05:30
+- `2019-11-28`: `both_sides_unavailable`. NIFTY_12100_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-28T09:30:00+05:30; NIFTY_12100_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-28T09:30:00+05:30
+- `2019-11-29`: `both_sides_unavailable`. NIFTY_12100_CE_02_JAN_20.csv missing monitoring timestamp 2019-11-29T09:30:00+05:30; NIFTY_12100_PE_02_JAN_20.csv missing monitoring timestamp 2019-11-29T09:30:00+05:30
+- `2019-12-02`: `both_sides_unavailable`. NIFTY_12100_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-02T09:30:00+05:30; NIFTY_12100_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-02T09:30:00+05:30
+- `2019-12-03`: `both_sides_unavailable`. NIFTY_12050_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-03T09:30:00+05:30; NIFTY_12050_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-03T09:30:00+05:30
+- `2019-12-04`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-04T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-04T09:30:00+05:30
+- `2019-12-05`: `both_sides_unavailable`. NIFTY_12050_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-05T09:30:00+05:30; NIFTY_12050_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-05T09:30:00+05:30
+- `2019-12-06`: `both_sides_unavailable`. NIFTY_12050_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-06T09:30:00+05:30; NIFTY_12050_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-06T09:30:00+05:30
+- `2019-12-09`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-09T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-09T09:30:00+05:30
+- `2019-12-10`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-10T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-10T09:30:00+05:30
+- `2019-12-11`: `both_sides_unavailable`. NIFTY_11900_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-11T09:30:00+05:30; NIFTY_11900_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-11T09:30:00+05:30
+- `2019-12-12`: `both_sides_unavailable`. NIFTY_11950_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-12T09:30:00+05:30; NIFTY_11950_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-12T09:30:00+05:30
+- `2019-12-13`: `both_sides_unavailable`. NIFTY_12050_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-13T09:30:00+05:30; NIFTY_12050_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-13T09:30:00+05:30
+- `2019-12-16`: `both_sides_unavailable`. NIFTY_12100_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-16T09:30:00+05:30; NIFTY_12100_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-16T09:30:00+05:30
+- `2019-12-17`: `both_sides_unavailable`. NIFTY_12100_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-17T09:30:00+05:30; NIFTY_12100_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-17T09:30:00+05:30
+- `2019-12-18`: `both_sides_unavailable`. NIFTY_12200_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-18T09:30:00+05:30; NIFTY_12200_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-18T09:30:00+05:30
+- `2019-12-19`: `both_sides_unavailable`. NIFTY_12200_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-19T09:30:00+05:30; NIFTY_12200_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-19T09:30:00+05:30
+- `2019-12-20`: `both_sides_unavailable`. NIFTY_12300_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-20T09:30:00+05:30; NIFTY_12300_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-20T09:30:00+05:30
+- `2019-12-23`: `both_sides_unavailable`. NIFTY_12250_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-23T09:30:00+05:30; NIFTY_12250_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-23T09:30:00+05:30
+- `2019-12-24`: `both_sides_unavailable`. NIFTY_12300_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-24T09:30:00+05:30; NIFTY_12300_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-24T09:30:00+05:30
+- `2019-12-26`: `both_sides_unavailable`. NIFTY_12200_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-26T09:30:00+05:30; NIFTY_12200_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-26T09:30:00+05:30
+- `2019-12-27`: `both_sides_unavailable`. NIFTY_12150_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-27T09:30:00+05:30; NIFTY_12150_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-27T09:30:00+05:30
+- `2019-12-30`: `both_sides_unavailable`. NIFTY_12300_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-30T09:30:00+05:30; NIFTY_12300_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-30T09:30:00+05:30
+- `2019-12-31`: `both_sides_unavailable`. NIFTY_12250_CE_02_JAN_20.csv missing monitoring timestamp 2019-12-31T09:30:00+05:30; NIFTY_12250_PE_02_JAN_20.csv missing monitoring timestamp 2019-12-31T09:30:00+05:30
+- `2020-01-01`: `no_entry_signal`. NIFTY_12200_CE_02_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12200_PE_02_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-01-03`: `no_entry_signal`. NIFTY_12250_CE_09_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12250_PE_09_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-01-10`: `no_entry_signal`. NIFTY_12250_CE_16_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12250_PE_16_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-01-17`: `no_entry_signal`. NIFTY_12350_CE_23_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12350_PE_23_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-01-24`: `no_entry_signal`. NIFTY_12200_CE_30_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12200_PE_30_JAN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-01-31`: `no_entry_signal`. NIFTY_12100_CE_06_FEB_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12100_PE_06_FEB_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-02-07`: `no_entry_signal`. NIFTY_12100_CE_13_FEB_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12100_PE_13_FEB_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-02-14`: `no_entry_signal`. NIFTY_12250_CE_20_FEB_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12250_PE_20_FEB_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-02-24`: `no_entry_signal`. NIFTY_11950_CE_27_FEB_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11950_PE_27_FEB_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-02-28`: `no_entry_signal`. NIFTY_11350_CE_05_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11350_PE_05_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-03-06`: `no_entry_signal`. NIFTY_10950_CE_12_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 22; NIFTY_10950_PE_12_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-03-12`: `no_entry_signal`. NIFTY_9950_CE_12_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9950_PE_12_MAR_20.csv had no qualifying bar with open below prior 25-close SMA between 09:30 and 15:00
+- `2020-03-13`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2020-03-13T09:30:00+05:30, 2020-03-13T09:45:00+05:30, 2020-03-13T10:00:00+05:30
+- `2020-03-19`: `no_entry_signal`. NIFTY_7950_CE_19_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 22; NIFTY_7950_PE_19_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 22
+- `2020-03-20`: `no_entry_signal`. NIFTY_8300_CE_26_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_8300_PE_26_MAR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-03-23`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2020-03-23T10:00:00+05:30, 2020-03-23T10:15:00+05:30, 2020-03-23T10:30:00+05:30
+- `2020-03-27`: `no_entry_signal`. NIFTY_9000_CE_01_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9000_PE_01_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-04-03`: `no_entry_signal`. NIFTY_8150_CE_09_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_8150_PE_09_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-04-13`: `no_entry_signal`. NIFTY_9000_CE_16_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9000_PE_16_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-04-17`: `no_entry_signal`. NIFTY_9300_CE_23_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9300_PE_23_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-04-24`: `no_entry_signal`. NIFTY_9150_CE_30_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9150_PE_30_APR_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-05-04`: `no_entry_signal`. NIFTY_9450_CE_07_MAY_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9450_PE_07_MAY_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-05-08`: `no_entry_signal`. NIFTY_9350_CE_14_MAY_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9350_PE_14_MAY_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-05-15`: `no_entry_signal`. NIFTY_9150_CE_21_MAY_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9150_PE_21_MAY_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-05-22`: `no_entry_signal`. NIFTY_9100_CE_28_MAY_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9100_PE_28_MAY_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-05-29`: `no_entry_signal`. NIFTY_9450_CE_04_JUN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9450_PE_04_JUN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-06-05`: `no_entry_signal`. NIFTY_10150_CE_11_JUN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_10150_PE_11_JUN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-06-12`: `no_entry_signal`. NIFTY_9700_CE_18_JUN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_9700_PE_18_JUN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-06-19`: `no_entry_signal`. NIFTY_10150_CE_25_JUN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_10150_PE_25_JUN_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-06-26`: `no_entry_signal`. NIFTY_10400_CE_02_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_10400_PE_02_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-07-03`: `no_entry_signal`. NIFTY_10600_CE_09_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_10600_PE_09_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-07-10`: `no_entry_signal`. NIFTY_10800_CE_16_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_10800_PE_16_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-07-17`: `no_entry_signal`. NIFTY_10800_CE_23_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_10800_PE_23_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-07-24`: `no_entry_signal`. NIFTY_11150_CE_30_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11150_PE_30_JUL_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-07-31`: `no_entry_signal`. NIFTY_11100_CE_06_AUG_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11100_PE_06_AUG_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-08-07`: `no_entry_signal`. NIFTY_11150_CE_13_AUG_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11150_PE_13_AUG_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-08-14`: `no_entry_signal`. NIFTY_11350_CE_20_AUG_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11350_PE_20_AUG_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-08-21`: `no_entry_signal`. NIFTY_11400_CE_27_AUG_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11400_PE_27_AUG_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-08-28`: `no_entry_signal`. NIFTY_11600_CE_03_SEP_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11600_PE_03_SEP_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-09-04`: `no_entry_signal`. NIFTY_11350_CE_10_SEP_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11350_PE_10_SEP_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-09-11`: `no_entry_signal`. NIFTY_11500_CE_17_SEP_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11500_PE_17_SEP_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-09-18`: `no_entry_signal`. NIFTY_11550_CE_24_SEP_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11550_PE_24_SEP_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-09-25`: `no_entry_signal`. NIFTY_10900_CE_01_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_10900_PE_01_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-10-05`: `no_entry_signal`. NIFTY_11550_CE_08_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11550_PE_08_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-10-09`: `no_entry_signal`. NIFTY_11850_CE_15_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11850_PE_15_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-10-16`: `no_entry_signal`. NIFTY_11750_CE_22_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11750_PE_22_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-10-23`: `no_entry_signal`. NIFTY_11950_CE_29_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11950_PE_29_OCT_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-10-30`: `no_entry_signal`. NIFTY_11700_CE_05_NOV_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_11700_PE_05_NOV_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-11-06`: `no_entry_signal`. NIFTY_12150_CE_12_NOV_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12150_PE_12_NOV_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-11-13`: `no_entry_signal`. NIFTY_12600_CE_19_NOV_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12600_PE_19_NOV_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-11-14`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2020-11-14T09:30:00+05:30, 2020-11-14T09:45:00+05:30, 2020-11-14T10:00:00+05:30, 2020-11-14T10:15:00+05:30, 2020-11-14T10:30:00+05:30
+- `2020-11-20`: `no_entry_signal`. NIFTY_12800_CE_26_NOV_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_12800_PE_26_NOV_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-11-27`: `no_entry_signal`. NIFTY_13000_CE_03_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_13000_PE_03_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-12-04`: `no_entry_signal`. NIFTY_13200_CE_10_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_13200_PE_10_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-12-11`: `no_entry_signal`. NIFTY_13550_CE_17_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_13550_PE_17_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-12-18`: `no_entry_signal`. NIFTY_13750_CE_24_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_13750_PE_24_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2020-12-28`: `no_entry_signal`. NIFTY_13850_CE_31_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_13850_PE_31_DEC_20.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-01-01`: `no_entry_signal`. NIFTY_14000_CE_07_JAN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14000_PE_07_JAN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-01-08`: `no_entry_signal`. NIFTY_14250_CE_14_JAN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14250_PE_14_JAN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-01-15`: `no_entry_signal`. NIFTY_14550_CE_21_JAN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14550_PE_21_JAN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-01-22`: `no_entry_signal`. NIFTY_14550_CE_28_JAN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14550_PE_28_JAN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-01-29`: `no_entry_signal`. NIFTY_13900_CE_04_FEB_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_13900_PE_04_FEB_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-02-05`: `no_entry_signal`. NIFTY_14950_CE_11_FEB_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14950_PE_11_FEB_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-02-12`: `no_entry_signal`. NIFTY_15200_CE_18_FEB_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15200_PE_18_FEB_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-02-19`: `no_entry_signal`. NIFTY_15050_CE_25_FEB_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15050_PE_25_FEB_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-02-24`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2021-02-24T10:15:00+05:30, 2021-02-24T10:30:00+05:30, 2021-02-24T10:45:00+05:30, 2021-02-24T11:00:00+05:30, 2021-02-24T11:15:00+05:30
+- `2021-02-26`: `no_entry_signal`. NIFTY_14900_CE_04_MAR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14900_PE_04_MAR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-03-05`: `no_entry_signal`. NIFTY_15000_CE_10_MAR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15000_PE_10_MAR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-03-12`: `no_entry_signal`. NIFTY_15300_CE_18_MAR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15300_PE_18_MAR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-03-19`: `no_entry_signal`. NIFTY_14350_CE_25_MAR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14350_PE_25_MAR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-03-26`: `no_entry_signal`. NIFTY_14450_CE_01_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14450_PE_01_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-04-05`: `no_entry_signal`. NIFTY_14800_CE_08_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14800_PE_08_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-04-09`: `no_entry_signal`. NIFTY_14850_CE_15_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14850_PE_15_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-04-16`: `no_entry_signal`. NIFTY_14600_CE_22_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14600_PE_22_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-04-23`: `no_entry_signal`. NIFTY_14350_CE_29_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14350_PE_29_APR_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-04-30`: `no_entry_signal`. NIFTY_14800_CE_06_MAY_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14800_PE_06_MAY_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-05-07`: `no_entry_signal`. NIFTY_14850_CE_12_MAY_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14850_PE_12_MAY_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-05-14`: `no_entry_signal`. NIFTY_14650_CE_20_MAY_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_14650_PE_20_MAY_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-05-21`: `no_entry_signal`. NIFTY_15000_CE_27_MAY_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15000_PE_27_MAY_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-05-28`: `no_entry_signal`. NIFTY_15450_CE_03_JUN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15450_PE_03_JUN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-06-04`: `no_entry_signal`. NIFTY_15700_CE_10_JUN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15700_PE_10_JUN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-06-11`: `no_entry_signal`. NIFTY_15800_CE_17_JUN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15800_PE_17_JUN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-06-18`: `no_entry_signal`. NIFTY_15750_CE_24_JUN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15750_PE_24_JUN_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-06-25`: `no_entry_signal`. NIFTY_15800_CE_01_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15800_PE_01_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-07-02`: `no_entry_signal`. NIFTY_15650_CE_08_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15650_PE_08_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-07-09`: `no_entry_signal`. NIFTY_15650_CE_15_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15650_PE_15_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-07-16`: `no_entry_signal`. NIFTY_15950_CE_22_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15950_PE_22_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-07-23`: `no_entry_signal`. NIFTY_15850_CE_29_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15850_PE_29_JUL_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-07-30`: `no_entry_signal`. NIFTY_15800_CE_05_AUG_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15800_PE_05_AUG_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-08-06`: `no_entry_signal`. NIFTY_16300_CE_12_AUG_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16300_PE_12_AUG_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-08-13`: `no_entry_signal`. NIFTY_16450_CE_18_AUG_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16450_PE_18_AUG_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-08-20`: `no_entry_signal`. NIFTY_16450_CE_26_AUG_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16450_PE_26_AUG_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-08-27`: `no_entry_signal`. NIFTY_16600_CE_02_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16600_PE_02_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-09-03`: `no_entry_signal`. NIFTY_17300_CE_09_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17300_PE_09_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-09-13`: `no_entry_signal`. NIFTY_17300_CE_16_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17300_PE_16_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-09-17`: `no_entry_signal`. NIFTY_17750_CE_23_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17750_PE_23_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-09-24`: `no_entry_signal`. NIFTY_17900_CE_30_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17900_PE_30_SEP_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-10-01`: `no_entry_signal`. NIFTY_17500_CE_07_OCT_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17500_PE_07_OCT_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-10-08`: `no_entry_signal`. NIFTY_17900_CE_14_OCT_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17900_PE_14_OCT_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-10-18`: `no_entry_signal`. NIFTY_18500_CE_21_OCT_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18500_PE_21_OCT_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-10-22`: `no_entry_signal`. NIFTY_18300_CE_28_OCT_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18300_PE_28_OCT_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-10-29`: `no_entry_signal`. NIFTY_17700_CE_03_NOV_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17700_PE_03_NOV_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-11-04`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2021-11-04T09:30:00+05:30, 2021-11-04T09:45:00+05:30, 2021-11-04T10:00:00+05:30, 2021-11-04T10:15:00+05:30, 2021-11-04T10:30:00+05:30
+- `2021-11-12`: `no_entry_signal`. NIFTY_18000_CE_18_NOV_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18000_PE_18_NOV_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-11-22`: `no_entry_signal`. NIFTY_17650_CE_25_NOV_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17650_PE_25_NOV_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-11-26`: `no_entry_signal`. NIFTY_17300_CE_02_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17300_PE_02_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-12-03`: `no_entry_signal`. NIFTY_17450_CE_09_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17450_PE_09_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-12-10`: `no_entry_signal`. NIFTY_17500_CE_16_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17500_PE_16_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-12-17`: `no_entry_signal`. NIFTY_17150_CE_23_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17150_PE_23_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-12-24`: `no_entry_signal`. NIFTY_17100_CE_30_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17100_PE_30_DEC_21.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2021-12-31`: `no_entry_signal`. NIFTY_17300_CE_06_JAN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17300_PE_06_JAN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-01-07`: `no_entry_signal`. NIFTY_17850_CE_13_JAN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17850_PE_13_JAN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-01-14`: `no_entry_signal`. NIFTY_18200_CE_20_JAN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18200_PE_20_JAN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-01-21`: `no_entry_signal`. NIFTY_17550_CE_27_JAN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17550_PE_27_JAN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-01-28`: `no_entry_signal`. NIFTY_17250_CE_03_FEB_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17250_PE_03_FEB_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-02-04`: `no_entry_signal`. NIFTY_17600_CE_10_FEB_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17600_PE_10_FEB_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-02-11`: `no_entry_signal`. NIFTY_17400_CE_17_FEB_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17400_PE_17_FEB_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-02-18`: `no_entry_signal`. NIFTY_17300_CE_24_FEB_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17300_PE_24_FEB_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-02-25`: `no_entry_signal`. NIFTY_16600_CE_03_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16600_PE_03_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-03-04`: `no_entry_signal`. NIFTY_16250_CE_10_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16250_PE_10_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-03-11`: `no_entry_signal`. NIFTY_16600_CE_17_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16600_PE_17_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-03-21`: `no_entry_signal`. NIFTY_17350_CE_24_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17350_PE_24_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-03-25`: `no_entry_signal`. NIFTY_17200_CE_31_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17200_PE_31_MAR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-04-01`: `no_entry_signal`. NIFTY_17450_CE_07_APR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17450_PE_07_APR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-04-08`: `no_entry_signal`. NIFTY_17650_CE_13_APR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17650_PE_13_APR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-04-18`: `no_entry_signal`. NIFTY_17250_CE_21_APR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17250_PE_21_APR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-04-22`: `no_entry_signal`. NIFTY_17250_CE_28_APR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17250_PE_28_APR_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-04-29`: `no_entry_signal`. NIFTY_17350_CE_05_MAY_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17350_PE_05_MAY_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-05-06`: `no_entry_signal`. NIFTY_16450_CE_12_MAY_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16450_PE_12_MAY_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-05-13`: `no_entry_signal`. NIFTY_16000_CE_19_MAY_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16000_PE_19_MAY_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-05-20`: `no_entry_signal`. NIFTY_16100_CE_26_MAY_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16100_PE_26_MAY_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-05-27`: `no_entry_signal`. NIFTY_16300_CE_02_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16300_PE_02_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-06-03`: `no_entry_signal`. NIFTY_16800_CE_09_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16800_PE_09_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-06-10`: `no_entry_signal`. NIFTY_16250_CE_16_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16250_PE_16_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-06-17`: `no_entry_signal`. NIFTY_15200_CE_23_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15200_PE_23_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-06-24`: `no_entry_signal`. NIFTY_15700_CE_30_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15700_PE_30_JUN_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-07-01`: `no_entry_signal`. NIFTY_15700_CE_07_JUL_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_15700_PE_07_JUL_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-07-08`: `no_entry_signal`. NIFTY_16200_CE_14_JUL_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16200_PE_14_JUL_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-07-15`: `no_entry_signal`. NIFTY_16000_CE_21_JUL_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16000_PE_21_JUL_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-07-22`: `no_entry_signal`. NIFTY_16700_CE_28_JUL_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16700_PE_28_JUL_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-07-29`: `no_entry_signal`. NIFTY_17100_CE_04_AUG_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17100_PE_04_AUG_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-08-05`: `no_entry_signal`. NIFTY_17450_CE_11_AUG_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17450_PE_11_AUG_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-08-12`: `no_entry_signal`. NIFTY_17600_CE_18_AUG_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17600_PE_18_AUG_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-08-19`: `no_entry_signal`. NIFTY_17950_CE_25_AUG_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17950_PE_25_AUG_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-08-26`: `no_entry_signal`. NIFTY_17650_CE_01_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17650_PE_01_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-09-02`: `no_entry_signal`. NIFTY_17550_CE_08_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17550_PE_08_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-09-09`: `no_entry_signal`. NIFTY_17900_CE_15_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17900_PE_15_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-09-16`: `no_entry_signal`. NIFTY_17800_CE_22_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17800_PE_22_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-09-23`: `no_entry_signal`. NIFTY_17550_CE_29_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17550_PE_29_SEP_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-09-30`: `no_entry_signal`. NIFTY_16800_CE_06_OCT_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_16800_PE_06_OCT_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-10-07`: `no_entry_signal`. NIFTY_17250_CE_13_OCT_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17250_PE_13_OCT_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-10-14`: `no_entry_signal`. NIFTY_17300_CE_20_OCT_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17300_PE_20_OCT_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-10-21`: `no_entry_signal`. NIFTY_17650_CE_27_OCT_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17650_PE_27_OCT_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-10-24`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2022-10-24T09:30:00+05:30, 2022-10-24T09:45:00+05:30, 2022-10-24T10:00:00+05:30, 2022-10-24T10:15:00+05:30, 2022-10-24T10:30:00+05:30
+- `2022-10-28`: `no_entry_signal`. NIFTY_17800_CE_03_NOV_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17800_PE_03_NOV_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-11-04`: `no_entry_signal`. NIFTY_18100_CE_10_NOV_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18100_PE_10_NOV_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-11-11`: `no_entry_signal`. NIFTY_18300_CE_17_NOV_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18300_PE_17_NOV_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-11-18`: `no_entry_signal`. NIFTY_18350_CE_24_NOV_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18350_PE_24_NOV_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-11-25`: `no_entry_signal`. NIFTY_18500_CE_01_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18500_PE_01_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-12-02`: `no_entry_signal`. NIFTY_18750_CE_08_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18750_PE_08_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-12-09`: `no_entry_signal`. NIFTY_18600_CE_15_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18600_PE_15_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-12-16`: `no_entry_signal`. NIFTY_18400_CE_22_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18400_PE_22_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-12-23`: `no_entry_signal`. NIFTY_18000_CE_29_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18000_PE_29_DEC_22.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2022-12-30`: `no_entry_signal`. NIFTY_18250_CE_05_JAN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18250_PE_05_JAN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-01-06`: `no_entry_signal`. NIFTY_18000_CE_12_JAN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18000_PE_12_JAN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-01-13`: `no_entry_signal`. NIFTY_17800_CE_19_JAN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17800_PE_19_JAN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-01-20`: `no_entry_signal`. NIFTY_18100_CE_25_JAN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18100_PE_25_JAN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-01-27`: `no_entry_signal`. NIFTY_17750_CE_02_FEB_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17750_PE_02_FEB_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-02-03`: `no_entry_signal`. NIFTY_17700_CE_09_FEB_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17700_PE_09_FEB_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-02-10`: `no_entry_signal`. NIFTY_17850_CE_16_FEB_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17850_PE_16_FEB_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-02-17`: `no_entry_signal`. NIFTY_18000_CE_23_FEB_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18000_PE_23_FEB_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-02-24`: `no_entry_signal`. NIFTY_17550_CE_02_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17550_PE_02_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-03-03`: `no_entry_signal`. NIFTY_17450_CE_09_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17450_PE_09_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-03-10`: `no_entry_signal`. NIFTY_17400_CE_16_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17400_PE_16_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-03-17`: `no_entry_signal`. NIFTY_17100_CE_23_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17100_PE_23_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-03-24`: `no_entry_signal`. NIFTY_17000_CE_29_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17000_PE_29_MAR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-03-31`: `no_entry_signal`. NIFTY_17250_CE_06_APR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17250_PE_06_APR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-04-10`: `no_entry_signal`. NIFTY_17650_CE_13_APR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17650_PE_13_APR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-04-17`: `no_entry_signal`. NIFTY_17650_CE_20_APR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17650_PE_20_APR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-04-21`: `no_entry_signal`. NIFTY_17650_CE_27_APR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17650_PE_27_APR_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-04-28`: `no_entry_signal`. NIFTY_17900_CE_04_MAY_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_17900_PE_04_MAY_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-05-05`: `no_entry_signal`. NIFTY_18150_CE_11_MAY_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18150_PE_11_MAY_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-05-12`: `no_entry_signal`. NIFTY_18250_CE_18_MAY_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18250_PE_18_MAY_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-05-19`: `no_entry_signal`. NIFTY_18150_CE_25_MAY_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18150_PE_25_MAY_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-05-26`: `no_entry_signal`. NIFTY_18350_CE_01_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18350_PE_01_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-06-02`: `no_entry_signal`. NIFTY_18550_CE_08_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18550_PE_08_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-06-09`: `no_entry_signal`. NIFTY_18650_CE_15_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18650_PE_15_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-06-16`: `no_entry_signal`. NIFTY_18750_CE_22_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18750_PE_22_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-06-23`: `both_sides_unavailable`. NIFTY_18700_CE_28_JUN_23.csv missing monitoring timestamp 2023-06-23T09:30:00+05:30; NIFTY_18700_PE_28_JUN_23.csv missing monitoring timestamp 2023-06-23T09:30:00+05:30
+- `2023-06-26`: `both_sides_unavailable`. NIFTY_18700_CE_28_JUN_23.csv missing monitoring timestamp 2023-06-26T09:30:00+05:30; NIFTY_18700_PE_28_JUN_23.csv missing monitoring timestamp 2023-06-26T09:30:00+05:30
+- `2023-06-27`: `both_sides_unavailable`. NIFTY_18750_CE_28_JUN_23.csv missing monitoring timestamp 2023-06-27T09:30:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing monitoring timestamp 2023-06-27T09:30:00+05:30
+- `2023-06-28`: `no_entry_signal`. NIFTY_18850_CE_28_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18850_PE_28_JUN_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-06-30`: `no_entry_signal`. NIFTY_19100_CE_06_JUL_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19100_PE_06_JUL_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-07-07`: `no_entry_signal`. NIFTY_19500_CE_13_JUL_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19500_PE_13_JUL_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-07-14`: `no_entry_signal`. NIFTY_19500_CE_20_JUL_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19500_PE_20_JUL_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-07-21`: `no_entry_signal`. NIFTY_19850_CE_27_JUL_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19850_PE_27_JUL_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-07-28`: `no_entry_signal`. NIFTY_19600_CE_03_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19600_PE_03_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-08-04`: `no_entry_signal`. NIFTY_19500_CE_10_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19500_PE_10_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-08-11`: `no_entry_signal`. NIFTY_19500_CE_17_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19500_PE_17_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-08-18`: `no_entry_signal`. NIFTY_19350_CE_24_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19350_PE_24_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-08-25`: `no_entry_signal`. NIFTY_19350_CE_31_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19350_PE_31_AUG_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-09-01`: `no_entry_signal`. NIFTY_19300_CE_07_SEP_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19300_PE_07_SEP_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-09-08`: `no_entry_signal`. NIFTY_19800_CE_14_SEP_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19800_PE_14_SEP_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-09-15`: `no_entry_signal`. NIFTY_20150_CE_21_SEP_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_20150_PE_21_SEP_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-09-22`: `no_entry_signal`. NIFTY_19750_CE_28_SEP_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19750_PE_28_SEP_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-09-29`: `no_entry_signal`. NIFTY_19550_CE_05_OCT_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19550_PE_05_OCT_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-10-06`: `no_entry_signal`. NIFTY_19600_CE_12_OCT_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19600_PE_12_OCT_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-10-12`: `both_sides_unavailable`. NIFTY_19800_CE_12_OCT_23.csv missing monitoring timestamp 2023-10-12T15:15:00+05:30; NIFTY_19800_PE_12_OCT_23.csv missing monitoring timestamp 2023-10-12T15:00:00+05:30
+- `2023-10-13`: `no_entry_signal`. NIFTY_19700_CE_19_OCT_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19700_PE_19_OCT_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-10-20`: `no_entry_signal`. NIFTY_19600_CE_26_OCT_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19600_PE_26_OCT_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-10-27`: `no_entry_signal`. NIFTY_18950_CE_02_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_18950_PE_02_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-11-03`: `no_entry_signal`. NIFTY_19250_CE_09_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19250_PE_09_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-11-10`: `no_entry_signal`. NIFTY_19350_CE_16_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19350_PE_16_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-11-12`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2023-11-12T09:30:00+05:30, 2023-11-12T09:45:00+05:30, 2023-11-12T10:00:00+05:30, 2023-11-12T10:15:00+05:30, 2023-11-12T10:30:00+05:30
+- `2023-11-17`: `no_entry_signal`. NIFTY_19750_CE_23_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19750_PE_23_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-11-24`: `no_entry_signal`. NIFTY_19850_CE_30_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_19850_PE_30_NOV_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-12-01`: `no_entry_signal`. NIFTY_20250_CE_07_DEC_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_20250_PE_07_DEC_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-12-08`: `no_entry_signal`. NIFTY_20950_CE_14_DEC_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_20950_PE_14_DEC_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-12-15`: `no_entry_signal`. NIFTY_21250_CE_21_DEC_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21250_PE_21_DEC_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-12-22`: `no_entry_signal`. NIFTY_21250_CE_28_DEC_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21250_PE_28_DEC_23.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2023-12-29`: `no_entry_signal`. NIFTY_21750_CE_04_JAN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21750_PE_04_JAN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-01-05`: `no_entry_signal`. NIFTY_21700_CE_11_JAN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21700_PE_11_JAN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-01-12`: `no_entry_signal`. NIFTY_21750_CE_18_JAN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21750_PE_18_JAN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-01-19`: `no_entry_signal`. NIFTY_21650_CE_25_JAN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21650_PE_25_JAN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-01-29`: `no_entry_signal`. NIFTY_21550_CE_01_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21550_PE_01_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-02-02`: `no_entry_signal`. NIFTY_21950_CE_08_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21950_PE_08_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-02-09`: `no_entry_signal`. NIFTY_21750_CE_15_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21750_PE_15_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-02-16`: `no_entry_signal`. NIFTY_22000_CE_22_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22000_PE_22_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-02-23`: `no_entry_signal`. NIFTY_22250_CE_29_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22250_PE_29_FEB_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-03-01`: `no_entry_signal`. NIFTY_22100_CE_07_MAR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22100_PE_07_MAR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-03-02`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2024-03-02T10:00:00+05:30, 2024-03-02T10:15:00+05:30, 2024-03-02T10:30:00+05:30, 2024-03-02T10:45:00+05:30, 2024-03-02T11:00:00+05:30
+- `2024-03-11`: `no_entry_signal`. NIFTY_22500_CE_14_MAR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22500_PE_14_MAR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-03-15`: `no_entry_signal`. NIFTY_22100_CE_21_MAR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22100_PE_21_MAR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-03-22`: `no_entry_signal`. NIFTY_21900_CE_28_MAR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21900_PE_28_MAR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-04-01`: `no_entry_signal`. NIFTY_22500_CE_04_APR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22500_PE_04_APR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-04-05`: `no_entry_signal`. NIFTY_22450_CE_10_APR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22450_PE_10_APR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-04-12`: `no_entry_signal`. NIFTY_22700_CE_18_APR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22700_PE_18_APR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-04-19`: `no_entry_signal`. NIFTY_21850_CE_25_APR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_21850_PE_25_APR_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-04-26`: `no_entry_signal`. NIFTY_22600_CE_02_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22600_PE_02_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-05-03`: `no_entry_signal`. NIFTY_22800_CE_09_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22800_PE_09_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-05-10`: `no_entry_signal`. NIFTY_22050_CE_16_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22050_PE_16_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-05-17`: `no_entry_signal`. NIFTY_22400_CE_23_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22400_PE_23_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-05-18`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2024-05-18T10:00:00+05:30, 2024-05-18T10:15:00+05:30, 2024-05-18T10:30:00+05:30, 2024-05-18T10:45:00+05:30, 2024-05-18T11:00:00+05:30
+- `2024-05-24`: `no_entry_signal`. NIFTY_23000_CE_30_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_23000_PE_30_MAY_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-05-31`: `no_entry_signal`. NIFTY_22650_CE_06_JUN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22650_PE_06_JUN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-06-07`: `no_entry_signal`. NIFTY_22900_CE_13_JUN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_22900_PE_13_JUN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-06-14`: `no_entry_signal`. NIFTY_23350_CE_20_JUN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_23350_PE_20_JUN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-06-21`: `no_entry_signal`. NIFTY_23600_CE_27_JUN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_23600_PE_27_JUN_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-06-28`: `no_entry_signal`. NIFTY_24150_CE_04_JUL_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24150_PE_04_JUL_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-07-05`: `no_entry_signal`. NIFTY_24200_CE_11_JUL_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24200_PE_11_JUL_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-07-12`: `no_entry_signal`. NIFTY_24450_CE_18_JUL_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24450_PE_18_JUL_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-07-19`: `no_entry_signal`. NIFTY_24750_CE_25_JUL_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24750_PE_25_JUL_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-07-26`: `no_entry_signal`. NIFTY_24500_CE_01_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24500_PE_01_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-08-02`: `no_entry_signal`. NIFTY_24850_CE_08_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24850_PE_08_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-08-09`: `no_entry_signal`. NIFTY_24400_CE_14_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24400_PE_14_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-08-16`: `no_entry_signal`. NIFTY_24400_CE_22_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24400_PE_22_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-08-23`: `no_entry_signal`. NIFTY_24850_CE_29_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24850_PE_29_AUG_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-08-30`: `no_entry_signal`. NIFTY_25250_CE_05_SEP_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_25250_PE_05_SEP_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-09-06`: `no_entry_signal`. NIFTY_25150_CE_12_SEP_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_25150_PE_12_SEP_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-09-13`: `no_entry_signal`. NIFTY_25300_CE_19_SEP_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_25300_PE_19_SEP_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-09-20`: `no_entry_signal`. NIFTY_25500_CE_26_SEP_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_25500_PE_26_SEP_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-09-27`: `no_entry_signal`. NIFTY_26250_CE_03_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_26250_PE_03_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-10-04`: `no_entry_signal`. NIFTY_25150_CE_10_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_25150_PE_10_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-10-11`: `no_entry_signal`. NIFTY_25000_CE_17_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_25000_PE_17_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-10-18`: `no_entry_signal`. NIFTY_24550_CE_24_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24550_PE_24_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-10-25`: `no_entry_signal`. NIFTY_24450_CE_31_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24450_PE_31_OCT_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-11-01`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2024-11-01T09:30:00+05:30, 2024-11-01T09:45:00+05:30, 2024-11-01T10:00:00+05:30, 2024-11-01T10:15:00+05:30, 2024-11-01T10:30:00+05:30
+- `2024-11-08`: `no_entry_signal`. NIFTY_24150_CE_14_NOV_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24150_PE_14_NOV_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-11-18`: `no_entry_signal`. NIFTY_23450_CE_21_NOV_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_23450_PE_21_NOV_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-11-22`: `no_entry_signal`. NIFTY_23500_CE_28_NOV_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_23500_PE_28_NOV_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-11-29`: `no_entry_signal`. NIFTY_24050_CE_05_DEC_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24050_PE_05_DEC_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-12-06`: `no_entry_signal`. NIFTY_24700_CE_12_DEC_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24700_PE_12_DEC_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-12-13`: `no_entry_signal`. NIFTY_24400_CE_19_DEC_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_24400_PE_19_DEC_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2024-12-20`: `no_entry_signal`. NIFTY_23900_CE_26_DEC_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23; NIFTY_23900_PE_26_DEC_24.csv never had 25 prior bars by 15:00; max prior bars observed was 23
+- `2025-10-21`: `missing_spot_timestamp`. Missing spot monitoring timestamps: 2025-10-21T09:30:00+05:30, 2025-10-21T09:45:00+05:30, 2025-10-21T10:00:00+05:30, 2025-10-21T10:15:00+05:30, 2025-10-21T10:30:00+05:30
+- `2026-03-18`: `both_sides_unavailable`. Missing option file: NIFTY_23700_CE_24_MAR_26.csv; NIFTY_23700_PE_24_MAR_26.csv missing monitoring timestamp 2026-03-18T09:30:00+05:30
+- `2026-04-02`: `both_sides_unavailable`. Missing option file: NIFTY_22250_CE_28_APR_26.csv; Missing option file: NIFTY_22250_PE_28_APR_26.csv
+- `2026-05-04`: `both_sides_unavailable`. NIFTY_24200_CE_05_MAY_26.csv missing monitoring timestamp 2026-05-04T09:30:00+05:30; NIFTY_24200_PE_05_MAY_26.csv missing monitoring timestamp 2026-05-04T09:30:00+05:30
+- `2026-05-05`: `both_sides_unavailable`. NIFTY_24000_CE_05_MAY_26.csv missing monitoring timestamp 2026-05-05T09:30:00+05:30; NIFTY_24000_PE_05_MAY_26.csv missing monitoring timestamp 2026-05-05T09:30:00+05:30
+- `2026-05-06`: `both_sides_unavailable`. NIFTY_24150_CE_12_MAY_26.csv missing monitoring timestamp 2026-05-06T09:30:00+05:30; NIFTY_24150_PE_12_MAY_26.csv missing monitoring timestamp 2026-05-06T09:30:00+05:30
+- `2026-05-07`: `both_sides_unavailable`. NIFTY_24350_CE_12_MAY_26.csv missing monitoring timestamp 2026-05-07T09:30:00+05:30; NIFTY_24350_PE_12_MAY_26.csv missing monitoring timestamp 2026-05-07T09:30:00+05:30
+- `2026-05-08`: `both_sides_unavailable`. NIFTY_24250_CE_12_MAY_26.csv missing monitoring timestamp 2026-05-08T09:30:00+05:30; NIFTY_24250_PE_12_MAY_26.csv missing monitoring timestamp 2026-05-08T09:30:00+05:30
+- `2026-05-11`: `both_sides_unavailable`. NIFTY_23950_CE_12_MAY_26.csv missing monitoring timestamp 2026-05-11T09:30:00+05:30; NIFTY_23950_PE_12_MAY_26.csv missing monitoring timestamp 2026-05-11T09:30:00+05:30
+- `2026-05-12`: `both_sides_unavailable`. NIFTY_23650_CE_12_MAY_26.csv missing monitoring timestamp 2026-05-12T09:30:00+05:30; NIFTY_23650_PE_12_MAY_26.csv missing monitoring timestamp 2026-05-12T09:30:00+05:30
+- `2026-06-04`: `both_sides_unavailable`. NIFTY_23350_CE_09_JUN_26.csv missing monitoring timestamp 2026-06-04T09:30:00+05:30; NIFTY_23350_PE_09_JUN_26.csv missing monitoring timestamp 2026-06-04T09:30:00+05:30
+- `2026-06-05`: `both_sides_unavailable`. NIFTY_23450_CE_09_JUN_26.csv missing monitoring timestamp 2026-06-05T09:30:00+05:30; NIFTY_23450_PE_09_JUN_26.csv missing monitoring timestamp 2026-06-05T09:30:00+05:30
+- `2026-06-08`: `both_sides_unavailable`. NIFTY_23150_CE_09_JUN_26.csv missing monitoring timestamp 2026-06-08T09:30:00+05:30; NIFTY_23150_PE_09_JUN_26.csv missing monitoring timestamp 2026-06-08T09:30:00+05:30
+- `2026-06-09`: `both_sides_unavailable`. NIFTY_23200_CE_09_JUN_26.csv missing monitoring timestamp 2026-06-09T09:30:00+05:30; NIFTY_23200_PE_09_JUN_26.csv missing monitoring timestamp 2026-06-09T09:30:00+05:30
+- `2026-06-17`: `both_sides_unavailable`. NIFTY_24000_CE_23_JUN_26.csv missing monitoring timestamp 2026-06-17T09:30:00+05:30; NIFTY_24000_PE_23_JUN_26.csv missing monitoring timestamp 2026-06-17T09:30:00+05:30
+- `2026-06-18`: `both_sides_unavailable`. NIFTY_24100_CE_23_JUN_26.csv missing monitoring timestamp 2026-06-18T09:30:00+05:30; NIFTY_24100_PE_23_JUN_26.csv missing monitoring timestamp 2026-06-18T09:30:00+05:30
+- `2026-06-19`: `both_sides_unavailable`. NIFTY_23950_CE_23_JUN_26.csv missing monitoring timestamp 2026-06-19T09:30:00+05:30; NIFTY_23950_PE_23_JUN_26.csv missing monitoring timestamp 2026-06-19T09:30:00+05:30
+
+## Remarks
+
+- Exact timestamp matching; no nearest-candle fallback.
+- ATM is fixed from the 09:30 spot open and does not roll intraday.
+- CE and PE are monitored independently; both can trade on the same day.
+- Option data is 1-minute CSVs sampled at 15-minute boundaries (minute % 15 == 0).
+- The close at each 15-minute boundary row is used as the SMA input.
+- Expiry folder dates are used as truth for expiry selection.
+- Lot sizes are dynamic per expiry era to maintain ~300 quantity throughout the period.
