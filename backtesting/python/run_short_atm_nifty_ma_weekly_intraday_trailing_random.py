@@ -561,12 +561,13 @@ def run_single_simulation(
     skip_rate: float,
     rng: _random_mod.Random,
     logger: logging.Logger,
-) -> Tuple[List[DayResult], int, int, float]:
+) -> Tuple[List[DayResult], List[TradeResult], int, int, float]:
     """
-    Returns (day_results, random_skipped_count, strategy_skipped_count, avg_start_slot_index).
+    Returns (day_results, trade_results, random_skipped_count, strategy_skipped_count, avg_start_slot_index).
     avg_start_slot_index is the mean index of the randomly chosen entry start slot (0 = 09:30).
     """
     day_results: List[DayResult] = []
+    trade_results: List[TradeResult] = []
     random_skipped = 0
     start_slot_indices: List[int] = []
 
@@ -581,6 +582,7 @@ def run_single_simulation(
                 entry_timestamp=build_timestamp(entry_date, args.entry_start_time),
                 remarks="Day randomly skipped (human participation model).",
             )
+            trade_results.append(result)
             day_results.append(aggregate_day_result(entry_date, expiry_date, [result]))
             continue
 
@@ -774,12 +776,13 @@ def run_single_simulation(
             )
             day_trades.append(result)
 
+        trade_results.extend(day_trades)
         day_results.append(aggregate_day_result(entry_date, expiry_date, day_trades))
 
     strategy_skipped = sum(1 for r in day_results
                            if int(r.trades) == 0 and r.skip_reason != "random_skip")
     avg_slot = sum(start_slot_indices) / len(start_slot_indices) if start_slot_indices else 0.0
-    return day_results, random_skipped, strategy_skipped, avg_slot
+    return day_results, trade_results, random_skipped, strategy_skipped, avg_slot
 
 
 def compute_sim_result(
@@ -824,6 +827,24 @@ def compute_sim_result(
         first_day=first_day, last_day=last_day,
         avg_start_slot=avg_slot,
     )
+
+
+def write_tradewise_csv(results: List[TradeResult], path: Path) -> None:
+    fields = [f.name for f in TradeResult.__dataclass_fields__.values()]
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        w = csv.DictWriter(handle, fieldnames=fields)
+        w.writeheader()
+        for r in results:
+            w.writerow(r.__dict__)
+
+
+def write_daywise_csv(results: List[DayResult], path: Path) -> None:
+    fields = [f.name for f in DayResult.__dataclass_fields__.values()]
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        w = csv.DictWriter(handle, fieldnames=fields)
+        w.writeheader()
+        for r in results:
+            w.writerow(r.__dict__)
 
 
 def fmt_inr(v: float) -> str:
@@ -946,7 +967,7 @@ def main() -> None:
             print(f"  [{run_num}/{total_runs}] skip={int(skip_rate*100)}%  run={run_idx}  seed={seed}")
             logger.info("START skip_rate=%.0f%% run=%d seed=%d", skip_rate * 100, run_idx, seed)
 
-            day_results, random_skipped, strategy_skipped, avg_slot = run_single_simulation(
+            day_results, trade_results, random_skipped, strategy_skipped, avg_slot = run_single_simulation(
                 spot_15m, spot_5m, expiries, contract_cache, args, skip_rate, rng, logger
             )
             sr = compute_sim_result(
@@ -954,6 +975,11 @@ def main() -> None:
                 skip_rate, run_idx, seed
             )
             sim_results.append(sr)
+
+            tag = f"skip{int(skip_rate * 100)}_run{run_idx}"
+            write_tradewise_csv(trade_results, args.results_dir / f"short_atm_nifty_ma_weekly_intraday_trailing_random_{tag}_trades.csv")
+            write_daywise_csv(day_results, args.results_dir / f"short_atm_nifty_ma_weekly_intraday_trailing_random_{tag}_daywise.csv")
+
             logger.info("DONE skip=%.0f%% run=%d seed=%d traded=%d net=%.2f cagr=%.2f%%",
                         skip_rate * 100, run_idx, seed, sr.traded_days, sr.net_pnl, sr.cagr)
             print(f"         traded={sr.traded_days}  net={fmt_inr(sr.net_pnl)}  CAGR={sr.cagr:.2f}%")

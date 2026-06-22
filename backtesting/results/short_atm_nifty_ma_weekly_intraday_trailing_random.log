@@ -1,30 +1,30 @@
-2026-06-22 20:43:09,398 INFO START skip_rate=30% run=1 seed=42
-2026-06-22 20:43:54,640 INFO DONE skip=30% run=1 seed=42 traded=1131 net=2817143.75 cagr=19.66%
-2026-06-22 20:43:54,640 INFO START skip_rate=30% run=2 seed=137
-2026-06-22 20:44:15,631 INFO DONE skip=30% run=2 seed=137 traded=1108 net=2557005.25 cagr=18.53%
-2026-06-22 20:44:15,631 INFO START skip_rate=30% run=3 seed=999
-2026-06-22 20:44:26,384 INFO DONE skip=30% run=3 seed=999 traded=1083 net=2540560.25 cagr=18.46%
-2026-06-22 20:44:26,384 INFO START skip_rate=30% run=4 seed=2024
-2026-06-22 20:44:35,785 INFO DONE skip=30% run=4 seed=2024 traded=1084 net=2824737.00 cagr=19.69%
-2026-06-22 20:44:35,786 INFO START skip_rate=30% run=5 seed=31415
-2026-06-22 20:44:41,772 INFO DONE skip=30% run=5 seed=31415 traded=1106 net=2773722.50 cagr=19.48%
-2026-06-22 20:44:41,772 INFO START skip_rate=40% run=1 seed=42
-2026-06-22 20:44:46,660 INFO DONE skip=40% run=1 seed=42 traded=955 net=2408471.75 cagr=17.86%
-2026-06-22 20:44:46,661 INFO START skip_rate=40% run=2 seed=137
-2026-06-22 20:44:51,678 INFO DONE skip=40% run=2 seed=137 traded=942 net=2734789.75 cagr=19.31%
-2026-06-22 20:44:51,678 INFO START skip_rate=40% run=3 seed=999
-2026-06-22 20:44:56,853 INFO DONE skip=40% run=3 seed=999 traded=909 net=2281193.75 cagr=17.26%
-2026-06-22 20:44:56,853 INFO START skip_rate=40% run=4 seed=2024
-2026-06-22 20:45:00,433 INFO DONE skip=40% run=4 seed=2024 traded=952 net=2499014.25 cagr=18.27%
-2026-06-22 20:45:00,433 INFO START skip_rate=40% run=5 seed=31415
-2026-06-22 20:45:03,877 INFO DONE skip=40% run=5 seed=31415 traded=976 net=2350892.50 cagr=17.59%
-2026-06-22 20:45:03,877 INFO START skip_rate=50% run=1 seed=42
-2026-06-22 20:45:06,414 INFO DONE skip=50% run=1 seed=42 traded=795 net=2124493.00 cagr=16.49%
-2026-06-22 20:45:06,414 INFO START skip_rate=50% run=2 seed=137
-2026-06-22 20:45:08,879 INFO DONE skip=50% run=2 seed=137 traded=770 net=1732101.00 cagr=14.42%
-2026-06-22 20:45:08,879 INFO START skip_rate=50% run=3 seed=999
-2026-06-22 20:45:11,162 INFO DONE skip=50% run=3 seed=999 traded=741 net=1611922.00 cagr=13.73%
-2026-06-22 20:45:11,163 INFO START skip_rate=50% run=4 seed=2024
-2026-06-22 20:45:13,536 INFO DONE skip=50% run=4 seed=2024 traded=786 net=1775202.00 cagr=14.66%
-2026-06-22 20:45:13,536 INFO START skip_rate=50% run=5 seed=31415
-2026-06-22 20:45:15,763 INFO DONE skip=50% run=5 seed=31415 traded=809 net=1566389.75 cagr=13.46%
+2026-06-22 21:45:52,438 INFO START skip_rate=30% run=1 seed=42
+2026-06-22 21:46:22,360 INFO DONE skip=30% run=1 seed=42 traded=1131 net=2817143.75 cagr=19.66%
+2026-06-22 21:46:22,361 INFO START skip_rate=30% run=2 seed=137
+2026-06-22 21:46:40,056 INFO DONE skip=30% run=2 seed=137 traded=1108 net=2557005.25 cagr=18.53%
+2026-06-22 21:46:40,056 INFO START skip_rate=30% run=3 seed=999
+2026-06-22 21:46:50,190 INFO DONE skip=30% run=3 seed=999 traded=1083 net=2540560.25 cagr=18.46%
+2026-06-22 21:46:50,190 INFO START skip_rate=30% run=4 seed=2024
+2026-06-22 21:46:58,983 INFO DONE skip=30% run=4 seed=2024 traded=1084 net=2824737.00 cagr=19.69%
+2026-06-22 21:46:58,983 INFO START skip_rate=30% run=5 seed=31415
+2026-06-22 21:47:07,641 INFO DONE skip=30% run=5 seed=31415 traded=1106 net=2773722.50 cagr=19.48%
+2026-06-22 21:47:07,641 INFO START skip_rate=40% run=1 seed=42
+2026-06-22 21:47:12,234 INFO DONE skip=40% run=1 seed=42 traded=955 net=2408471.75 cagr=17.86%
+2026-06-22 21:47:12,234 INFO START skip_rate=40% run=2 seed=137
+2026-06-22 21:47:16,486 INFO DONE skip=40% run=2 seed=137 traded=942 net=2734789.75 cagr=19.31%
+2026-06-22 21:47:16,486 INFO START skip_rate=40% run=3 seed=999
+2026-06-22 21:47:21,542 INFO DONE skip=40% run=3 seed=999 traded=909 net=2281193.75 cagr=17.26%
+2026-06-22 21:47:21,542 INFO START skip_rate=40% run=4 seed=2024
+2026-06-22 21:47:25,515 INFO DONE skip=40% run=4 seed=2024 traded=952 net=2499014.25 cagr=18.27%
+2026-06-22 21:47:25,515 INFO START skip_rate=40% run=5 seed=31415
+2026-06-22 21:47:28,901 INFO DONE skip=40% run=5 seed=31415 traded=976 net=2350892.50 cagr=17.59%
+2026-06-22 21:47:28,901 INFO START skip_rate=50% run=1 seed=42
+2026-06-22 21:47:31,666 INFO DONE skip=50% run=1 seed=42 traded=795 net=2124493.00 cagr=16.49%
+2026-06-22 21:47:31,666 INFO START skip_rate=50% run=2 seed=137
+2026-06-22 21:47:34,150 INFO DONE skip=50% run=2 seed=137 traded=770 net=1732101.00 cagr=14.42%
+2026-06-22 21:47:34,151 INFO START skip_rate=50% run=3 seed=999
+2026-06-22 21:47:36,580 INFO DONE skip=50% run=3 seed=999 traded=741 net=1611922.00 cagr=13.73%
+2026-06-22 21:47:36,580 INFO START skip_rate=50% run=4 seed=2024
+2026-06-22 21:47:38,883 INFO DONE skip=50% run=4 seed=2024 traded=786 net=1775202.00 cagr=14.66%
+2026-06-22 21:47:38,883 INFO START skip_rate=50% run=5 seed=31415
+2026-06-22 21:47:41,526 INFO DONE skip=50% run=5 seed=31415 traded=809 net=1566389.75 cagr=13.46%
