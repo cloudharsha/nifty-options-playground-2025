@@ -1,0 +1,30 @@
+2026-06-23 19:16:56,362 INFO START skip_rate=30% run=1 seed=42
+2026-06-23 19:17:39,889 INFO DONE skip=30% run=1 seed=42 traded=1137 net=5339831.00 cagr=28.08% sl_day=2 sl_overall=32 2sl_capped=696
+2026-06-23 19:17:39,889 INFO START skip_rate=30% run=2 seed=137
+2026-06-23 19:17:51,150 INFO DONE skip=30% run=2 seed=137 traded=1099 net=5270887.75 cagr=27.89% sl_day=2 sl_overall=21 2sl_capped=664
+2026-06-23 19:17:51,150 INFO START skip_rate=30% run=3 seed=999
+2026-06-23 19:17:55,985 INFO DONE skip=30% run=3 seed=999 traded=1056 net=4719990.75 cagr=26.32% sl_day=2 sl_overall=31 2sl_capped=648
+2026-06-23 19:17:55,986 INFO START skip_rate=30% run=4 seed=2024
+2026-06-23 19:17:59,071 INFO DONE skip=30% run=4 seed=2024 traded=1123 net=5040391.00 cagr=27.25% sl_day=2 sl_overall=38 2sl_capped=699
+2026-06-23 19:17:59,071 INFO START skip_rate=30% run=5 seed=31415
+2026-06-23 19:18:01,585 INFO DONE skip=30% run=5 seed=31415 traded=1099 net=5173839.00 cagr=27.62% sl_day=2 sl_overall=27 2sl_capped=653
+2026-06-23 19:18:01,585 INFO START skip_rate=40% run=1 seed=42
+2026-06-23 19:18:03,605 INFO DONE skip=40% run=1 seed=42 traded=980 net=4837675.00 cagr=26.67% sl_day=2 sl_overall=37 2sl_capped=594
+2026-06-23 19:18:03,605 INFO START skip_rate=40% run=2 seed=137
+2026-06-23 19:18:05,433 INFO DONE skip=40% run=2 seed=137 traded=921 net=4247030.75 cagr=24.87% sl_day=2 sl_overall=21 2sl_capped=562
+2026-06-23 19:18:05,434 INFO START skip_rate=40% run=3 seed=999
+2026-06-23 19:18:07,251 INFO DONE skip=40% run=3 seed=999 traded=917 net=3961931.50 cagr=23.94% sl_day=2 sl_overall=27 2sl_capped=567
+2026-06-23 19:18:07,251 INFO START skip_rate=40% run=4 seed=2024
+2026-06-23 19:18:09,221 INFO DONE skip=40% run=4 seed=2024 traded=963 net=4242378.50 cagr=24.86% sl_day=2 sl_overall=38 2sl_capped=603
+2026-06-23 19:18:09,221 INFO START skip_rate=40% run=5 seed=31415
+2026-06-23 19:18:11,090 INFO DONE skip=40% run=5 seed=31415 traded=941 net=4523983.25 cagr=25.73% sl_day=2 sl_overall=22 2sl_capped=564
+2026-06-23 19:18:11,091 INFO START skip_rate=50% run=1 seed=42
+2026-06-23 19:18:12,723 INFO DONE skip=50% run=1 seed=42 traded=819 net=3984647.50 cagr=24.02% sl_day=2 sl_overall=33 2sl_capped=505
+2026-06-23 19:18:12,723 INFO START skip_rate=50% run=2 seed=137
+2026-06-23 19:18:14,311 INFO DONE skip=50% run=2 seed=137 traded=770 net=3290435.25 cagr=21.55% sl_day=2 sl_overall=27 2sl_capped=478
+2026-06-23 19:18:14,311 INFO START skip_rate=50% run=3 seed=999
+2026-06-23 19:18:15,919 INFO DONE skip=50% run=3 seed=999 traded=747 net=3274688.00 cagr=21.49% sl_day=2 sl_overall=33 2sl_capped=457
+2026-06-23 19:18:15,919 INFO START skip_rate=50% run=4 seed=2024
+2026-06-23 19:18:17,546 INFO DONE skip=50% run=4 seed=2024 traded=807 net=3511773.75 cagr=22.37% sl_day=2 sl_overall=28 2sl_capped=506
+2026-06-23 19:18:17,547 INFO START skip_rate=50% run=5 seed=31415
+2026-06-23 19:18:19,066 INFO DONE skip=50% run=5 seed=31415 traded=780 net=3788915.75 cagr=23.35% sl_day=2 sl_overall=23 2sl_capped=466

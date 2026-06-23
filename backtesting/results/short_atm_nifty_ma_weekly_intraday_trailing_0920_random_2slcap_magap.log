@@ -1,0 +1,120 @@
+2026-06-23 19:29:07,823 INFO START gap=75 skip_rate=30% run=1 seed=42
+2026-06-23 19:29:34,105 INFO DONE gap=75 skip=30% run=1 traded=1100 net=3606333.00 cagr=22.71% dd=114210.00 gap_filtered=6401 2sl_capped=694
+2026-06-23 19:29:34,105 INFO START gap=75 skip_rate=30% run=2 seed=137
+2026-06-23 19:29:41,581 INFO DONE gap=75 skip=30% run=2 traded=1056 net=3334020.50 cagr=21.71% dd=116635.00 gap_filtered=6418 2sl_capped=663
+2026-06-23 19:29:41,582 INFO START gap=75 skip_rate=30% run=3 seed=999
+2026-06-23 19:29:45,070 INFO DONE gap=75 skip=30% run=3 traded=1017 net=2795099.75 cagr=19.57% dd=116975.00 gap_filtered=6074 2sl_capped=646
+2026-06-23 19:29:45,070 INFO START gap=75 skip_rate=30% run=4 seed=2024
+2026-06-23 19:29:47,661 INFO DONE gap=75 skip=30% run=4 traded=1084 net=3102055.00 cagr=20.82% dd=68765.00 gap_filtered=6350 2sl_capped=697
+2026-06-23 19:29:47,661 INFO START gap=75 skip_rate=30% run=5 seed=31415
+2026-06-23 19:29:50,135 INFO DONE gap=75 skip=30% run=5 traded=1058 net=3280790.75 cagr=21.51% dd=87785.00 gap_filtered=6335 2sl_capped=652
+2026-06-23 19:29:50,135 INFO START gap=75 skip_rate=40% run=1 seed=42
+2026-06-23 19:29:52,187 INFO DONE gap=75 skip=40% run=1 traded=945 net=3192622.00 cagr=21.17% dd=96370.00 gap_filtered=5624 2sl_capped=593
+2026-06-23 19:29:52,187 INFO START gap=75 skip_rate=40% run=2 seed=137
+2026-06-23 19:29:54,323 INFO DONE gap=75 skip=40% run=2 traded=885 net=2531129.00 cagr=18.42% dd=60510.00 gap_filtered=5387 2sl_capped=562
+2026-06-23 19:29:54,323 INFO START gap=75 skip_rate=40% run=3 seed=999
+2026-06-23 19:29:56,384 INFO DONE gap=75 skip=40% run=3 traded=883 net=2375015.25 cagr=17.70% dd=108940.00 gap_filtered=5097 2sl_capped=565
+2026-06-23 19:29:56,384 INFO START gap=75 skip_rate=40% run=4 seed=2024
+2026-06-23 19:29:58,535 INFO DONE gap=75 skip=40% run=4 traded=929 net=2557459.25 cagr=18.53% dd=58930.00 gap_filtered=5362 2sl_capped=601
+2026-06-23 19:29:58,535 INFO START gap=75 skip_rate=40% run=5 seed=31415
+2026-06-23 19:30:00,142 INFO DONE gap=75 skip=40% run=5 traded=906 net=2813075.00 cagr=19.64% dd=69495.00 gap_filtered=5392 2sl_capped=563
+2026-06-23 19:30:00,143 INFO START gap=75 skip_rate=50% run=1 seed=42
+2026-06-23 19:30:02,012 INFO DONE gap=75 skip=50% run=1 traded=790 net=2721349.50 cagr=19.25% dd=88100.00 gap_filtered=4646 2sl_capped=504
+2026-06-23 19:30:02,012 INFO START gap=75 skip_rate=50% run=2 seed=137
+2026-06-23 19:30:03,793 INFO DONE gap=75 skip=50% run=2 traded=742 net=2092657.75 cagr=16.33% dd=67490.00 gap_filtered=4347 2sl_capped=478
+2026-06-23 19:30:03,793 INFO START gap=75 skip_rate=50% run=3 seed=999
+2026-06-23 19:30:05,542 INFO DONE gap=75 skip=50% run=3 traded=718 net=2137959.75 cagr=16.56% dd=122595.00 gap_filtered=4177 2sl_capped=456
+2026-06-23 19:30:05,543 INFO START gap=75 skip_rate=50% run=4 seed=2024
+2026-06-23 19:30:07,451 INFO DONE gap=75 skip=50% run=4 traded=778 net=2003542.75 cagr=15.88% dd=54475.00 gap_filtered=4561 2sl_capped=504
+2026-06-23 19:30:07,451 INFO START gap=75 skip_rate=50% run=5 seed=31415
+2026-06-23 19:30:09,195 INFO DONE gap=75 skip=50% run=5 traded=753 net=2373428.00 cagr=17.69% dd=55415.00 gap_filtered=4335 2sl_capped=466
+2026-06-23 19:30:09,195 INFO START gap=100 skip_rate=30% run=1 seed=42
+2026-06-23 19:30:15,455 INFO DONE gap=100 skip=30% run=1 traded=1114 net=4007160.00 cagr=24.09% dd=135860.00 gap_filtered=4232 2sl_capped=695
+2026-06-23 19:30:15,455 INFO START gap=100 skip_rate=30% run=2 seed=137
+2026-06-23 19:30:19,934 INFO DONE gap=100 skip=30% run=2 traded=1076 net=3845836.00 cagr=23.55% dd=123855.00 gap_filtered=4234 2sl_capped=663
+2026-06-23 19:30:19,934 INFO START gap=100 skip_rate=30% run=3 seed=999
+2026-06-23 19:30:22,621 INFO DONE gap=100 skip=30% run=3 traded=1034 net=3119305.25 cagr=20.89% dd=121525.00 gap_filtered=4026 2sl_capped=647
+2026-06-23 19:30:22,621 INFO START gap=100 skip_rate=30% run=4 seed=2024
+2026-06-23 19:30:25,545 INFO DONE gap=100 skip=30% run=4 traded=1101 net=3420955.50 cagr=22.04% dd=103680.00 gap_filtered=4258 2sl_capped=698
+2026-06-23 19:30:25,546 INFO START gap=100 skip_rate=30% run=5 seed=31415
+2026-06-23 19:30:28,119 INFO DONE gap=100 skip=30% run=5 traded=1075 net=3851870.50 cagr=23.57% dd=120680.00 gap_filtered=4276 2sl_capped=652
+2026-06-23 19:30:28,120 INFO START gap=100 skip_rate=40% run=1 seed=42
+2026-06-23 19:30:30,490 INFO DONE gap=100 skip=40% run=1 traded=957 net=3563754.00 cagr=22.56% dd=142900.00 gap_filtered=3701 2sl_capped=594
+2026-06-23 19:30:30,491 INFO START gap=100 skip_rate=40% run=2 seed=137
+2026-06-23 19:30:32,758 INFO DONE gap=100 skip=40% run=2 traded=903 net=3026684.00 cagr=20.52% dd=68300.00 gap_filtered=3510 2sl_capped=562
+2026-06-23 19:30:32,758 INFO START gap=100 skip_rate=40% run=3 seed=999
+2026-06-23 19:30:34,937 INFO DONE gap=100 skip=40% run=3 traded=898 net=2666557.00 cagr=19.02% dd=112200.00 gap_filtered=3350 2sl_capped=566
+2026-06-23 19:30:34,937 INFO START gap=100 skip_rate=40% run=4 seed=2024
+2026-06-23 19:30:37,227 INFO DONE gap=100 skip=40% run=4 traded=942 net=2762007.25 cagr=19.43% dd=89000.00 gap_filtered=3634 2sl_capped=602
+2026-06-23 19:30:37,228 INFO START gap=100 skip_rate=40% run=5 seed=31415
+2026-06-23 19:30:39,494 INFO DONE gap=100 skip=40% run=5 traded=921 net=3301532.25 cagr=21.59% dd=94485.00 gap_filtered=3601 2sl_capped=563
+2026-06-23 19:30:39,494 INFO START gap=100 skip_rate=50% run=1 seed=42
+2026-06-23 19:30:41,429 INFO DONE gap=100 skip=50% run=1 traded=798 net=2964729.00 cagr=20.27% dd=134015.00 gap_filtered=3062 2sl_capped=505
+2026-06-23 19:30:41,429 INFO START gap=100 skip_rate=50% run=2 seed=137
+2026-06-23 19:30:43,280 INFO DONE gap=100 skip=50% run=2 traded=760 net=2500857.75 cagr=18.28% dd=60620.00 gap_filtered=2782 2sl_capped=478
+2026-06-23 19:30:43,280 INFO START gap=100 skip_rate=50% run=3 seed=999
+2026-06-23 19:30:45,121 INFO DONE gap=100 skip=50% run=3 traded=732 net=2397469.75 cagr=17.81% dd=114395.00 gap_filtered=2732 2sl_capped=456
+2026-06-23 19:30:45,121 INFO START gap=100 skip_rate=50% run=4 seed=2024
+2026-06-23 19:30:47,041 INFO DONE gap=100 skip=50% run=4 traded=788 net=2222050.75 cagr=16.97% dd=82125.00 gap_filtered=3110 2sl_capped=505
+2026-06-23 19:30:47,041 INFO START gap=100 skip_rate=50% run=5 seed=31415
+2026-06-23 19:30:48,848 INFO DONE gap=100 skip=50% run=5 traded=765 net=2722228.25 cagr=19.26% dd=60890.00 gap_filtered=2927 2sl_capped=466
+2026-06-23 19:30:48,848 INFO START gap=125 skip_rate=30% run=1 seed=42
+2026-06-23 19:30:53,345 INFO DONE gap=125 skip=30% run=1 traded=1126 net=4266445.00 cagr=24.93% dd=161615.00 gap_filtered=2915 2sl_capped=696
+2026-06-23 19:30:53,345 INFO START gap=125 skip_rate=30% run=2 seed=137
+2026-06-23 19:30:56,445 INFO DONE gap=125 skip=30% run=2 traded=1087 net=4192739.75 cagr=24.70% dd=140175.00 gap_filtered=2815 2sl_capped=664
+2026-06-23 19:30:56,446 INFO START gap=125 skip_rate=30% run=3 seed=999
+2026-06-23 19:30:59,203 INFO DONE gap=125 skip=30% run=3 traded=1045 net=3382320.75 cagr=21.89% dd=137435.00 gap_filtered=2709 2sl_capped=648
+2026-06-23 19:30:59,203 INFO START gap=125 skip_rate=30% run=4 seed=2024
+2026-06-23 19:31:01,869 INFO DONE gap=125 skip=30% run=4 traded=1114 net=3811048.50 cagr=23.43% dd=129710.00 gap_filtered=2861 2sl_capped=699
+2026-06-23 19:31:01,869 INFO START gap=125 skip_rate=30% run=5 seed=31415
+2026-06-23 19:31:04,500 INFO DONE gap=125 skip=30% run=5 traded=1086 net=4119192.25 cagr=24.46% dd=131105.00 gap_filtered=2943 2sl_capped=653
+2026-06-23 19:31:04,501 INFO START gap=125 skip_rate=40% run=1 seed=42
+2026-06-23 19:31:06,892 INFO DONE gap=125 skip=40% run=1 traded=969 net=3831236.00 cagr=23.50% dd=166690.00 gap_filtered=2531 2sl_capped=594
+2026-06-23 19:31:06,892 INFO START gap=125 skip_rate=40% run=2 seed=137
+2026-06-23 19:31:08,978 INFO DONE gap=125 skip=40% run=2 traded=911 net=3252535.25 cagr=21.40% dd=76625.00 gap_filtered=2390 2sl_capped=562
+2026-06-23 19:31:08,978 INFO START gap=125 skip_rate=40% run=3 seed=999
+2026-06-23 19:31:10,903 INFO DONE gap=125 skip=40% run=3 traded=906 net=2851718.75 cagr=19.80% dd=120695.00 gap_filtered=2266 2sl_capped=567
+2026-06-23 19:31:10,903 INFO START gap=125 skip_rate=40% run=4 seed=2024
+2026-06-23 19:31:12,954 INFO DONE gap=125 skip=40% run=4 traded=954 net=3052405.25 cagr=20.62% dd=120085.00 gap_filtered=2474 2sl_capped=603
+2026-06-23 19:31:12,955 INFO START gap=125 skip_rate=40% run=5 seed=31415
+2026-06-23 19:31:14,893 INFO DONE gap=125 skip=40% run=5 traded=931 net=3548196.50 cagr=22.50% dd=105435.00 gap_filtered=2480 2sl_capped=564
+2026-06-23 19:31:14,893 INFO START gap=125 skip_rate=50% run=1 seed=42
+2026-06-23 19:31:16,825 INFO DONE gap=125 skip=50% run=1 traded=809 net=3182853.50 cagr=21.13% dd=163100.00 gap_filtered=2068 2sl_capped=505
+2026-06-23 19:31:16,825 INFO START gap=125 skip_rate=50% run=2 seed=137
+2026-06-23 19:31:18,888 INFO DONE gap=125 skip=50% run=2 traded=765 net=2743885.25 cagr=19.35% dd=65285.00 gap_filtered=1848 2sl_capped=478
+2026-06-23 19:31:18,888 INFO START gap=125 skip_rate=50% run=3 seed=999
+2026-06-23 19:31:20,726 INFO DONE gap=125 skip=50% run=3 traded=739 net=2592364.00 cagr=18.69% dd=121385.00 gap_filtered=1826 2sl_capped=457
+2026-06-23 19:31:20,726 INFO START gap=125 skip_rate=50% run=4 seed=2024
+2026-06-23 19:31:22,637 INFO DONE gap=125 skip=50% run=4 traded=798 net=2464520.50 cagr=18.12% dd=92260.00 gap_filtered=2153 2sl_capped=506
+2026-06-23 19:31:22,637 INFO START gap=125 skip_rate=50% run=5 seed=31415
+2026-06-23 19:31:24,588 INFO DONE gap=125 skip=50% run=5 traded=773 net=2895453.75 cagr=19.99% dd=62287.00 gap_filtered=2022 2sl_capped=466
+2026-06-23 19:31:24,588 INFO START gap=150 skip_rate=30% run=1 seed=42
+2026-06-23 19:31:27,746 INFO DONE gap=150 skip=30% run=1 traded=1129 net=4616312.25 cagr=26.01% dd=175680.00 gap_filtered=1990 2sl_capped=696
+2026-06-23 19:31:27,746 INFO START gap=150 skip_rate=30% run=2 seed=137
+2026-06-23 19:31:30,430 INFO DONE gap=150 skip=30% run=2 traded=1092 net=4575532.25 cagr=25.89% dd=131660.00 gap_filtered=1873 2sl_capped=664
+2026-06-23 19:31:30,431 INFO START gap=150 skip_rate=30% run=3 seed=999
+2026-06-23 19:31:32,588 INFO DONE gap=150 skip=30% run=3 traded=1049 net=3799380.00 cagr=23.39% dd=135440.00 gap_filtered=1801 2sl_capped=648
+2026-06-23 19:31:32,588 INFO START gap=150 skip_rate=30% run=4 seed=2024
+2026-06-23 19:31:34,775 INFO DONE gap=150 skip=30% run=4 traded=1116 net=4007049.00 cagr=24.09% dd=137885.00 gap_filtered=1952 2sl_capped=699
+2026-06-23 19:31:34,776 INFO START gap=150 skip_rate=30% run=5 seed=31415
+2026-06-23 19:31:37,001 INFO DONE gap=150 skip=30% run=5 traded=1092 net=4462674.00 cagr=25.55% dd=133455.00 gap_filtered=1991 2sl_capped=653
+2026-06-23 19:31:37,001 INFO START gap=150 skip_rate=40% run=1 seed=42
+2026-06-23 19:31:39,056 INFO DONE gap=150 skip=40% run=1 traded=972 net=4223792.00 cagr=24.80% dd=168115.00 gap_filtered=1726 2sl_capped=594
+2026-06-23 19:31:39,056 INFO START gap=150 skip_rate=40% run=2 seed=137
+2026-06-23 19:31:40,942 INFO DONE gap=150 skip=40% run=2 traded=916 net=3670981.50 cagr=22.94% dd=72770.00 gap_filtered=1579 2sl_capped=562
+2026-06-23 19:31:40,943 INFO START gap=150 skip_rate=40% run=3 seed=999
+2026-06-23 19:31:42,790 INFO DONE gap=150 skip=40% run=3 traded=910 net=3181620.75 cagr=21.13% dd=131490.00 gap_filtered=1485 2sl_capped=567
+2026-06-23 19:31:42,790 INFO START gap=150 skip_rate=40% run=4 seed=2024
+2026-06-23 19:31:44,816 INFO DONE gap=150 skip=40% run=4 traded=956 net=3213275.25 cagr=21.25% dd=126970.00 gap_filtered=1684 2sl_capped=603
+2026-06-23 19:31:44,816 INFO START gap=150 skip_rate=40% run=5 seed=31415
+2026-06-23 19:31:46,675 INFO DONE gap=150 skip=40% run=5 traded=936 net=3894188.25 cagr=23.71% dd=125160.00 gap_filtered=1678 2sl_capped=564
+2026-06-23 19:31:46,676 INFO START gap=150 skip_rate=50% run=1 seed=42
+2026-06-23 19:31:48,367 INFO DONE gap=150 skip=50% run=1 traded=812 net=3459468.25 cagr=22.18% dd=153050.00 gap_filtered=1404 2sl_capped=505
+2026-06-23 19:31:48,367 INFO START gap=150 skip_rate=50% run=2 seed=137
+2026-06-23 19:31:49,978 INFO DONE gap=150 skip=50% run=2 traded=768 net=2995715.25 cagr=20.39% dd=65885.00 gap_filtered=1214 2sl_capped=478
+2026-06-23 19:31:49,978 INFO START gap=150 skip_rate=50% run=3 seed=999
+2026-06-23 19:31:51,569 INFO DONE gap=150 skip=50% run=3 traded=742 net=2822919.75 cagr=19.68% dd=89850.00 gap_filtered=1182 2sl_capped=457
+2026-06-23 19:31:51,569 INFO START gap=150 skip_rate=50% run=4 seed=2024
+2026-06-23 19:31:53,331 INFO DONE gap=150 skip=50% run=4 traded=800 net=2556726.75 cagr=18.53% dd=91280.00 gap_filtered=1485 2sl_capped=506
+2026-06-23 19:31:53,331 INFO START gap=150 skip_rate=50% run=5 seed=31415
+2026-06-23 19:31:54,783 INFO DONE gap=150 skip=50% run=5 traded=778 net=3276763.75 cagr=21.50% dd=64372.00 gap_filtered=1340 2sl_capped=466
