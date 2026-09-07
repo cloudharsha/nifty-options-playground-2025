@@ -1,0 +1,77 @@
+entry_date,exit_date,expiry,atm,lot_size,traded,skip_reason,remarks,legs_traded,adds,unwinds,orders,max_legs,gross_points,gross_pnl,costs,net_pnl,stale_prices,adds_blocked,rolls,rolls_blocked,entry_offset,entry_balance
+2020-01-01,2020-01-30,2020-01-30,12200,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 12200 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-01-31,2020-02-27,2020-02-27,12050,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 12050 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-02-28,2020-03-26,2020-03-26,11350,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 11350 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-03-27,2020-04-30,2020-04-30,8950,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 8950 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-05-04,2020-05-28,2020-05-28,9450,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 9450 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-05-29,2020-06-25,2020-06-25,9450,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 9450 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-06-26,2020-07-30,2020-07-30,10350,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 10350 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-07-31,2020-08-27,2020-08-27,11050,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 11050 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-08-28,2020-09-24,2020-09-24,11600,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 11600 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-09-25,2020-10-29,2020-10-29,10900,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 10900 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-10-30,2020-11-26,2020-11-26,11700,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 11700 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2020-11-27,2020-12-31,2020-12-31,13000,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 13000 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-01-01,2021-01-28,2021-01-28,14000,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 14000 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-01-29,2021-02-25,2021-02-25,13950,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 13950 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-02-26,2021-03-25,2021-03-25,14850,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 14850 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-03-26,2021-04-29,2021-04-29,14450,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 14450 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-04-30,2021-05-27,2021-05-27,14800,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 14800 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-05-28,2021-06-24,2021-06-24,15450,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 15450 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-06-25,2021-07-29,2021-07-29,15800,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 15800 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-07-30,2021-08-26,2021-08-26,15800,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 15800 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-08-27,2021-09-30,2021-09-30,16650,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 16650 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-10-01,2021-10-28,2021-10-28,17500,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17500 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-10-29,2021-11-25,2021-11-25,17700,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17700 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-11-26,2021-12-30,2021-12-30,17300,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17300 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2021-12-31,2022-01-27,2022-01-27,17300,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17300 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-01-28,2022-02-24,2022-02-24,17300,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17300 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-02-25,2022-03-31,2022-03-31,16550,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 16550 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-04-01,2022-04-28,2022-04-28,17500,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17500 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-04-29,2022-05-26,2022-05-26,17300,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17300 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-05-27,2022-06-30,2022-06-30,16300,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 16300 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-07-01,2022-07-28,2022-07-28,15700,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 15700 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-07-29,2022-08-25,2022-08-25,17100,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17100 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-08-26,2022-09-29,2022-09-29,17650,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17650 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-09-30,2022-10-27,2022-10-27,16750,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 16750 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-10-28,2022-11-24,2022-11-24,17800,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17800 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-11-25,2022-12-29,2022-12-29,18450,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 18450 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2022-12-30,2023-01-25,2023-01-25,18200,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 18200 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-01-27,2023-02-23,2023-02-23,17800,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17800 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-02-24,2023-03-29,2023-03-29,17600,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17600 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-03-31,2023-04-27,2023-04-27,17250,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17250 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-04-28,2023-05-25,2023-05-25,17950,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 17950 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-05-26,2023-07-27,2023-07-27,18350,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 18350 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-07-28,2023-08-31,2023-08-31,19650,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 19650 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-09-01,2023-09-28,2023-09-28,19300,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 19300 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-09-29,2023-10-26,2023-10-26,19600,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 19600 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-10-27,2023-11-30,2023-11-30,18950,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 18950 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-12-01,2023-12-28,2023-12-28,20200,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 20200 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2023-12-29,2024-01-25,2024-01-25,21700,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 21700 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-01-29,2024-02-29,2024-02-29,21500,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 21500 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-03-01,2024-03-28,2024-03-28,22100,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 22100 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-04-01,2024-04-25,2024-04-25,22500,50,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 22500 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-04-26,2024-05-30,2024-05-30,22600,25,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 22600 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-05-31,2024-06-27,2024-06-27,22600,25,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 22600 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-06-28,2024-07-25,2024-07-25,24100,25,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 24100 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-07-26,2024-08-29,2024-08-29,24450,25,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 24450 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-08-30,2024-09-26,2024-09-26,25250,25,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 25250 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-09-27,2024-10-31,2024-10-31,26250,25,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 26250 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-11-01,2024-11-28,2024-11-28,24200,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 24200 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-11-29,2024-12-26,2024-12-26,23950,75,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 23950 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2024-12-27,2025-01-30,2025-01-30,23900,75,YES,,,24,18,16,48,4,499.07,37430.25,1440.00,35990.25,7,0,4,1362,100,0.82
+2025-01-31,2025-02-27,2025-02-27,23350,75,YES,,,21,15,13,42,4,353.02,26476.50,1260.00,25216.50,101,0,4,1440,50,0.82
+2025-02-28,2025-03-27,2025-03-27,22450,75,YES,,,13,7,5,26,4,-76.11,-5708.25,780.00,-6488.25,28,0,4,2273,150,0.89
+2025-03-28,2025-04-30,2025-04-30,23700,75,YES,,,13,7,6,26,4,-736.10,-55207.50,780.00,-55987.50,2207,4092,4,0,100,0.86
+2025-05-02,2025-05-29,2025-05-29,24450,75,YES,,,19,15,15,38,4,333.89,25041.75,1140.00,23901.75,1,113,2,0,50,0.83
+2025-05-30,2025-06-26,2025-06-26,24850,75,YES,,,18,15,13,36,4,204.35,15326.25,1080.00,14246.25,15,119,1,618,50,0.84
+2025-06-27,2025-07-31,2025-07-31,25650,75,YES,,,15,8,6,30,4,578.35,43376.25,900.00,42476.25,63,0,5,1857,50,0.86
+2025-08-01,2025-08-28,2025-08-28,24750,75,YES,,,15,11,9,30,4,192.00,14400.00,900.00,13500.00,0,20,2,639,0,0.87
+2025-08-29,2025-09-30,2025-09-30,24600,75,YES,,,18,14,12,36,4,483.05,36228.75,1080.00,35148.75,5,21,2,3898,100,0.84
+2025-10-01,2025-10-28,2025-10-28,24700,75,YES,,,9,4,2,18,4,-151.40,-11355.00,540.00,-11895.00,1282,0,3,3769,100,0.84
+2025-10-29,2025-11-25,2025-11-25,26100,75,YES,,,17,12,11,34,4,211.60,15870.00,1020.00,14850.00,0,22,3,1365,100,0.83
+2025-11-26,2025-12-30,2025-12-30,26100,75,YES,,,19,16,15,38,4,419.89,31491.75,1140.00,30351.75,0,409,1,276,150,0.81
+2025-12-31,2026-01-27,2026-01-27,26150,65,YES,,,13,8,6,26,4,26.20,1703.00,780.00,923.00,9,0,3,1855,150,0.91
+2026-01-28,2026-02-24,2026-02-24,25400,65,YES,,,16,13,13,32,4,-51.90,-3373.50,960.00,-4333.50,3,466,1,2155,50,0.83
+2026-02-25,2026-03-24,2026-03-24,25550,65,NO,missing_entry_bar,No priceable straddle within 5 strikes of ATM 25550 at 09:20.,0,0,0,0,2,0.00,0.00,0.00,0.00,0,0,0,0,0,0.00
+2026-03-25,2026-04-28,2026-04-28,23150,65,YES,,,13,9,8,26,4,711.30,46234.50,780.00,45454.50,513,739,2,1959,0,0.81
+2026-04-29,2026-05-26,2026-05-26,24100,65,YES,,,18,14,13,36,4,350.75,22798.75,1080.00,21718.75,0,350,2,0,0,0.86

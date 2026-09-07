@@ -26,3 +26,18 @@ Capital Base is what the strategy actually needs, not a fixed reference - read t
 | Current | 2020-2026 | Adjusted ATM Straddle - Weekly held to expiry (beyond-legs adds, 3-leg cap) | Profit | Rs 5.12L | Rs 6,37,350 | 13.41% CAGR | Rs 73,688 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_cap3_summary.md) | Identical to the uncapped beyond-legs run - the 3-leg cap never binds under that strike rule (0 rolls) |
 | Current | 2020-2026 | Adjusted ATM Straddle - Weekly held to expiry (cap 3, OTM-vs-spot, stale-entry probe) | Profit | Rs 6.45L | Rs 9,54,046 | 15.16% CAGR | Rs 41,725 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_stale_cap3_summary.md) | Byte-identical traded set to the main cap-3 run: relaxing the entry-bar rule recovers zero weeks, so the data skips carry no survivorship bias |
 | Current | 2020-2026 | Adjusted ATM Straddle - Monthly contracts, intraday (cap 3, OTM-vs-spot) | Profit | Rs 6.49L | Rs 90,859 | 2.06% CAGR | Rs 35,735 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_intraday_otm_monthly_stale_srch5_cap3_summary.md) | Only 540 of 1,606 days traded - before 2025 the dataset carries just the final week of each monthly contract |
+| Current | 2020-2026 | Adjusted ATM Straddle - Monthly contracts, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 1,57,898 | 3.45% CAGR | Rs 41,016 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_hold4_stale_srch5_fb_cap3_summary.md) | All 76 monthly cycles traded, no skips. 2022 and 2023 lose; win rate 45-58% every year, barely above a coin flip |
+
+## A note on the monthly rows
+
+There are two, and they are not variants of each other - they answer different
+questions, because the dataset constrains what a monthly test can even be.
+
+Until 2025 the data carries only the **final 3-5 trading days** of each monthly
+contract's life. A full-month hold therefore cannot be tested before 2025: the
+`2024-12 - 2026-05` row is the honest extent of it, 16 cycles.
+
+Clamping the hold to the last 4 sessions makes the whole 6 years testable - all
+76 monthly cycles, no skips - and has the side benefit of matching the weekly
+runs' holding period, so the comparison isolates the contract rather than
+confounding it with hold length.

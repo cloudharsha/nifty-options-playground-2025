@@ -1,0 +1,73 @@
+# Adjusted ATM Straddle — Half-Trigger / 25% Add — NIFTY Weekly (EXPIRY)
+
+## Strategy
+
+- Mode: Held to expiry — enter 09:20 the first session after the previous monthly expiry, adjust through every session, close 15:20 on expiry day.
+- Entry: sell 1 lot ATM straddle at `09:20` (ATM = spot rounded to nearest 50)
+- Balance filter: skip unless `min(CE,PE)/max(CE,PE) >= 80%` (CE/PE within 20%)
+- Add trigger: weaker side total `<= 50%` of stronger side total
+- Add size: new short on the weaker side targeting `25%` of the stronger side, accepted in band `20%-30%`
+- Add strike: strictly further OTM than every existing leg on that side
+- Legs capped at `3` per side. At the cap the strategy ROLLS instead of adding: exit the cheapest leg on the weak side and re-sell so the weak side totals `75%` of the strong side (band `65%-85%`)
+- Unwind: when the single side falls to `<= 100%` of the stacked side total, buy back the cheapest leg on the stacked side — one leg per parity touch
+- Symmetric for upside and downside moves
+- **No stop loss.** No target. Pure test.
+- Position size: 1 lot; lot size from expiry date (75/50/25/75/65 by era)
+- Costs: Rs 30 per order per leg (Rs 30 sell + Rs 30 buy), slippage 0.00 pt/order
+- Pricing: 1-minute option `open`; checks every 1 minute(s)
+- Reference capital for CAGR/DD: Rs 300,000
+
+## Results
+
+- Period: `2024-12-27` to `2026-05-26` (1.41 years)
+- Cycles traded: `16` (skipped `60`)
+- Total adds: `186`, total unwinds: `163`
+- Add trigger fired but **no strike existed in the target band**: `6351` times
+- Add strike rule: `otm-spot`
+- Contract: **monthly expiry** (last expiry of each calendar month)
+- Total rolls at the leg cap: `43`
+- Entry strike search: +/-`5` strikes around ATM with best-balance fallback; entries away from ATM: `13` of `16`
+- Orders executed: `522`
+- Max legs open at once: `4`
+
+| Metric | Value |
+|---|---:|
+| Gross P/L | Rs 240,733.50 |
+| Costs | Rs 15,660.00 |
+| **Net P/L** | **Rs 225,073.50** |
+| CAGR | 48.73% |
+| Max drawdown | Rs 62,475.75 |
+| Win rate | 75.00% (12W / 4L) |
+| Profit factor | 3.86 |
+| Best cycle | Rs 45,454.50 |
+| Worst cycle | Rs -55,987.50 |
+| Final equity | Rs 525,073.50 |
+
+## Yearly
+
+| Year | Cycles | Net P/L | Win % |
+|---|---:|---:|---:|
+| 2024 | 1 | Rs 35,990.25 | 100.0% |
+| 2025 | 12 | Rs 126,243.50 | 75.0% |
+| 2026 | 3 | Rs 62,839.75 | 66.7% |
+
+## Skips
+
+| Reason | Count |
+|---|---:|
+| `missing_entry_bar` | 60 |
+
+## Notes
+
+- Options data: `NiftyOptions_2020_2026/Options` (1-minute bars). Spot for ATM: 5-minute index file.
+- Leg prices use the last traded bar at or before the check minute; `stale_prices` in the cycle CSV counts how often a carried-forward bar was used (total 4234).
+- Candidate strikes for an add must have an exact bar at the check minute, so illiquid strikes are never selected on a stale quote.
+- Weekly expiry is taken from the options folder structure (Thursday to Aug 2025, Tuesday from Sep 2025, holiday-shifted).
+- Intraday mode rolls to the next weekly on expiry day to avoid same-day-expiry pin behaviour.
+
+## Files
+
+- Cycles: `adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_stale_srch5_fb_cap3_cycles.csv`
+- Legs: `adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_stale_srch5_fb_cap3_legs.csv`
+- Equity: `adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_stale_srch5_fb_cap3_equity.csv`
+- Log: `adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_stale_srch5_fb_cap3.log`

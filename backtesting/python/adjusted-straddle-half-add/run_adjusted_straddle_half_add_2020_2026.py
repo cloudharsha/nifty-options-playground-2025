@@ -148,6 +148,10 @@ def parse_args() -> argparse.Namespace:
                    help="Option points given up per order; 0 because Rs 30 is stated to cover costs")
     p.add_argument("--capital", type=float, default=3_00_000.0,
                    help="Reference capital for CAGR/drawdown %% only")
+    p.add_argument("--max-hold-sessions", type=int, default=0,
+                   help="Cap an expiry-mode cycle to its last N trading sessions before "
+                        "expiry. 0 = hold from the day after the previous expiry. Needed for "
+                        "monthly contracts, whose data starts ~6 days before expiry until 2025.")
     p.add_argument("--strike-search-steps", type=int, default=5,
                    help="Strikes to search either side of ATM (50 pts each) for a "
                         "straddle that passes the balance filter. 0 = ATM only.")
@@ -208,6 +212,30 @@ def minute_grid(day: str, start_hhmm: str, end_hhmm: str, step: int) -> List[str
         out.append(build_ts(day, cur.strftime("%H:%M")))
         cur += datetime.timedelta(minutes=step)
     return out
+
+
+def output_tag(args: argparse.Namespace) -> str:
+    """Filename tag encoding every option that changes a run's numbers.
+
+    Every artifact of a run - CSVs, summary and log - shares this tag, so two
+    runs that differ in any meaningful way can never overwrite each other.
+    """
+    tag = args.mode if args.add_strike_rule == "beyond-legs" else f"{args.mode}_otm"
+    if args.expiry_type == "monthly":
+        tag = f"{tag}_monthly"
+    if args.max_hold_sessions:
+        tag = f"{tag}_hold{args.max_hold_sessions}"
+    if args.allow_stale_entry:
+        tag = f"{tag}_stale"
+    if args.balance_max_diff >= 0.99:
+        tag = f"{tag}_nobal"
+    if args.strike_search_steps:
+        tag = f"{tag}_srch{args.strike_search_steps}"
+    if args.balance_fallback:
+        tag = f"{tag}_fb"
+    if args.max_legs_per_side:
+        tag = f"{tag}_cap{args.max_legs_per_side}"
+    return tag
 
 
 def configure_logger(log_path: Path) -> logging.Logger:
@@ -596,7 +624,8 @@ def build_intraday_cycles(days: List[str], expiries: List[str],
 
 
 def build_expiry_cycles(days: List[str], expiries: List[str],
-                        expiry_set: Set[str]) -> List[Tuple[str, str, str, List[str]]]:
+                        expiry_set: Set[str], max_hold: int = 0
+                        ) -> List[Tuple[str, str, str, List[str]]]:
     """One cycle per weekly expiry: first session after the previous expiry -> that expiry."""
     out = []
     day_pos = {d: i for i, d in enumerate(days)}
@@ -605,6 +634,8 @@ def build_expiry_cycles(days: List[str], expiries: List[str],
         prev_exp = tradable[i - 1] if i > 0 else None
         start_idx = day_pos[prev_exp] + 1 if prev_exp else 0
         end_idx = day_pos[exp]
+        if max_hold:
+            start_idx = max(start_idx, end_idx - max_hold + 1)
         if start_idx > end_idx:
             continue
         session_days = days[start_idx:end_idx + 1]
@@ -618,19 +649,7 @@ def build_expiry_cycles(days: List[str], expiries: List[str],
 def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging.Logger) -> None:
     res = args.results_dir
     res.mkdir(parents=True, exist_ok=True)
-    tag = args.mode if args.add_strike_rule == "beyond-legs" else f"{args.mode}_otm"
-    if args.expiry_type == "monthly":
-        tag = f"{tag}_monthly"
-    if args.allow_stale_entry:
-        tag = f"{tag}_stale"
-    if args.balance_max_diff >= 0.99:
-        tag = f"{tag}_nobal"
-    if args.strike_search_steps:
-        tag = f"{tag}_srch{args.strike_search_steps}"
-    if args.balance_fallback:
-        tag = f"{tag}_fb"
-    if args.max_legs_per_side:
-        tag = f"{tag}_cap{args.max_legs_per_side}"
+    tag = output_tag(args)
 
     traded = [c for c in cycles if c.traded]
     skipped = [c for c in cycles if not c.traded]
@@ -741,6 +760,8 @@ def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging
         f"- Total adds: `{sum(c.adds for c in traded)}`, total unwinds: `{sum(c.unwinds for c in traded)}`",
         f"- Add trigger fired but **no strike existed in the target band**: `{sum(c.adds_blocked for c in traded)}` times",
         f"- Add strike rule: `{args.add_strike_rule}`",
+        (f"- Hold capped to the last `{args.max_hold_sessions}` sessions before expiry"
+         if args.max_hold_sessions else "- Held from the day after the previous expiry"),
         f"- Contract: **{args.expiry_type} expiry**"
         + (" (last expiry of each calendar month)" if args.expiry_type == "monthly" else ""),
         f"- Total rolls at the leg cap: `{sum(c.rolls for c in traded)}`",
@@ -813,7 +834,7 @@ def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging
 def main() -> None:
     args = parse_args()
     args.results_dir.mkdir(parents=True, exist_ok=True)
-    logger = configure_logger(args.results_dir / f"{BASE_FILENAME}_{args.mode}_{args.add_strike_rule}_cap{args.max_legs_per_side}.log")
+    logger = configure_logger(args.results_dir / f"{BASE_FILENAME}_{output_tag(args)}.log")
 
     days, spot_open, spot_series = load_spot(args.spot_file, args.entry_time)
     days = [d for d in days if args.start_date <= d <= args.end_date]
@@ -828,7 +849,7 @@ def main() -> None:
     if args.mode == "intraday":
         schedule = build_intraday_cycles(days, expiries, expiry_set)
     else:
-        schedule = build_expiry_cycles(days, expiries, expiry_set)
+        schedule = build_expiry_cycles(days, expiries, expiry_set, args.max_hold_sessions)
 
     engine = Engine(args, logger, spot_series)
     cycles: List[Cycle] = []
