@@ -1,3 +1,20 @@
+# Only the backtesting workspace and the root README are versioned.
+# The market data (~11 GB), the FYERS download helpers and local scratch
+# directories all stay on disk and out of git. See README.md for the layout
+# a working copy is expected to have.
 /*
 !/.gitignore
+!/README.md
 !/backtesting/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+
+# Run logs: regenerated on every backtest, ~13 MB across 67 files
+*.log
+
+# Raw grid sweeps: 67 MB of two files, regenerable from heads-tails scripts.
+# Their _summary.md and the smaller trades CSVs are still tracked.
+backtesting/results/heads-tails/heads_tails_nifty_grid_long_daywise.csv
+backtesting/results/heads-tails/heads_tails_nifty_grid_daywise.csv
