@@ -2,12 +2,13 @@
 from __future__ import annotations
 
 import argparse
+import bisect
 import csv
 import datetime
 import logging
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 
 IST_SUFFIX = "+05:30"
@@ -40,6 +41,7 @@ class SpotData:
     rows_by_timestamp: Dict[str, SpotRow]
     ordered_rows: List[SpotRow]
     index_by_timestamp: Dict[str, int]
+    sorted_timestamps: List[str] = field(default_factory=list)
 
 
 @dataclass
@@ -53,6 +55,7 @@ class OptionRow:
 class ContractData:
     path: Path
     rows_by_timestamp: Dict[str, OptionRow]
+    sorted_timestamps: List[str] = field(default_factory=list)
 
 
 @dataclass
@@ -130,6 +133,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--itm-offsets", type=int, nargs="+", default=[100, 200, 300])
     parser.add_argument("--brokerage-per-order", type=float, default=25.0)
     parser.add_argument("--slippage-points-per-order", type=float, default=1.0)
+    parser.add_argument(
+        "--fallback-window-minutes", type=int, default=30,
+        help="Max minutes to search before/after a missing bar (0 = no fallback, exact match only).",
+    )
     args = parser.parse_args()
 
     if any(offset <= 0 for offset in args.otm_offsets + args.itm_offsets):
@@ -209,7 +216,8 @@ def load_spot_data(spot_file: Path) -> Tuple[SpotData, List[str]]:
                 trading_days.append(day)
                 seen_days.add(day)
 
-    return SpotData(rows_by_timestamp, ordered_rows, index_by_timestamp), trading_days
+    sorted_timestamps = [r.timestamp for r in ordered_rows]
+    return SpotData(rows_by_timestamp, ordered_rows, index_by_timestamp, sorted_timestamps), trading_days
 
 
 def load_expiry_folders(options_dir: Path) -> List[str]:
@@ -237,9 +245,60 @@ def load_contract(contract_path: Path, cache: Dict[Path, ContractData]) -> Optio
         for row in csv.DictReader(handle):
             ts = row["timestamp"]
             rows[ts] = OptionRow(timestamp=ts, open_value=float(row["open"]), open_text=row["open"])
-    cd = ContractData(path=contract_path, rows_by_timestamp=rows)
+    cd = ContractData(path=contract_path, rows_by_timestamp=rows, sorted_timestamps=sorted(rows.keys()))
     cache[contract_path] = cd
     return cd
+
+
+def _parse_ist_ts(ts: str) -> datetime.datetime:
+    """Parse an IST timestamp string (with or without +05:30 suffix) to a naive datetime."""
+    return datetime.datetime.fromisoformat(ts[:-6] if ts.endswith("+05:30") else ts)
+
+
+def _delta_minutes(ts_a: str, ts_b: str) -> float:
+    return abs((_parse_ist_ts(ts_a) - _parse_ist_ts(ts_b)).total_seconds() / 60)
+
+
+def _nearest_spot_bar(
+    spot_data: SpotData, target_ts: str, max_minutes: int
+) -> Optional[Tuple[str, SpotRow]]:
+    """Return (timestamp, row) for the spot bar nearest to target_ts within max_minutes."""
+    exact = spot_data.rows_by_timestamp.get(target_ts)
+    if exact is not None:
+        return target_ts, exact
+    if not spot_data.sorted_timestamps or max_minutes <= 0:
+        return None
+    pos = bisect.bisect_left(spot_data.sorted_timestamps, target_ts)
+    best_ts: Optional[str] = None
+    best_delta = float("inf")
+    for i in (pos - 1, pos):
+        if 0 <= i < len(spot_data.sorted_timestamps):
+            ts = spot_data.sorted_timestamps[i]
+            delta = _delta_minutes(ts, target_ts)
+            if delta <= max_minutes and delta < best_delta:
+                best_delta, best_ts = delta, ts
+    return (best_ts, spot_data.rows_by_timestamp[best_ts]) if best_ts else None
+
+
+def _nearest_option_bar(
+    cd: ContractData, target_ts: str, max_minutes: int
+) -> Optional[Tuple[str, OptionRow]]:
+    """Return (timestamp, row) for the option bar nearest to target_ts within max_minutes."""
+    exact = cd.rows_by_timestamp.get(target_ts)
+    if exact is not None:
+        return target_ts, exact
+    if not cd.sorted_timestamps or max_minutes <= 0:
+        return None
+    pos = bisect.bisect_left(cd.sorted_timestamps, target_ts)
+    best_ts: Optional[str] = None
+    best_delta = float("inf")
+    for i in (pos - 1, pos):
+        if 0 <= i < len(cd.sorted_timestamps):
+            ts = cd.sorted_timestamps[i]
+            delta = _delta_minutes(ts, target_ts)
+            if delta <= max_minutes and delta < best_delta:
+                best_delta, best_ts = delta, ts
+    return (best_ts, cd.rows_by_timestamp[best_ts]) if best_ts else None
 
 
 def compute_spot_sma(spot_data: SpotData, timestamp: str, ma_period: int) -> Tuple[Optional[float], int]:
@@ -323,21 +382,23 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[str]
         for entry_date in trading_days:
             sig_ts = build_timestamp(entry_date, args.signal_time)
             entry_ts = build_timestamp(entry_date, args.entry_time)
-            sig_row = spot_data.rows_by_timestamp.get(sig_ts)
-            if sig_row is None:
+            sig_result = _nearest_spot_bar(spot_data, sig_ts, args.fallback_window_minutes)
+            if sig_result is None:
                 add_common_skip_results(results, offset_specs, entry_date, "SKIPPED",
                                         "missing_spot_signal_timestamp",
                                         spot_signal_timestamp=sig_ts,
-                                        remarks=f"Missing spot signal timestamp {sig_ts}")
+                                        remarks=f"Missing spot signal timestamp {sig_ts}; no fallback within {args.fallback_window_minutes}m")
                 continue
+            actual_sig_ts, sig_row = sig_result
+            sig_fallback = f"signal bar fallback {sig_ts}->{actual_sig_ts}" if actual_sig_ts != sig_ts else ""
 
-            sma, n = compute_spot_sma(spot_data, sig_ts, args.ma_period)
+            sma, n = compute_spot_sma(spot_data, actual_sig_ts, args.ma_period)
             if sma is None:
                 add_common_skip_results(results, offset_specs, entry_date, "SKIPPED",
                                         "insufficient_spot_history",
-                                        spot_signal_timestamp=sig_ts,
+                                        spot_signal_timestamp=actual_sig_ts,
                                         spot_signal_close=sig_row.close_text,
-                                        remarks=f"{sig_ts} has {n} bars; needs {args.ma_period}")
+                                        remarks=f"{actual_sig_ts} has {n} bars; needs {args.ma_period}")
                 continue
 
             sma_text = format_money(sma)
@@ -351,7 +412,7 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[str]
             else:
                 add_common_skip_results(results, offset_specs, entry_date, "SKIPPED",
                                         "equal_close_and_sma",
-                                        spot_signal_timestamp=sig_ts, spot_signal_close=sig_row.close_text,
+                                        spot_signal_timestamp=actual_sig_ts, spot_signal_close=sig_row.close_text,
                                         spot_sma_25=sma_text, spot_signal_relation="EQUAL_SMA",
                                         atm_strike=strike_text,
                                         remarks=f"Close {sig_row.close_text} equals SMA {sma_text}")
@@ -361,7 +422,7 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[str]
             if not next_day:
                 add_common_skip_results(results, offset_specs, entry_date, "SKIPPED",
                                         "no_next_trading_day",
-                                        spot_signal_timestamp=sig_ts, spot_signal_close=sig_row.close_text,
+                                        spot_signal_timestamp=actual_sig_ts, spot_signal_close=sig_row.close_text,
                                         spot_sma_25=sma_text, spot_signal_relation=relation,
                                         atm_strike=strike_text, sold_side=sold_side,
                                         remarks="No next trading day in dataset.")
@@ -372,7 +433,7 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[str]
                 add_common_skip_results(results, offset_specs, entry_date, "SKIPPED",
                                         "no_next_weekly_expiry",
                                         next_trading_day=next_day,
-                                        spot_signal_timestamp=sig_ts, spot_signal_close=sig_row.close_text,
+                                        spot_signal_timestamp=actual_sig_ts, spot_signal_close=sig_row.close_text,
                                         spot_sma_25=sma_text, spot_signal_relation=relation,
                                         atm_strike=strike_text, sold_side=sold_side,
                                         remarks="No weekly expiry folder strictly after entry date.")
@@ -392,7 +453,7 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[str]
                         skip_reason="invalid_target_strike",
                         lot_size=lot_size, lots=lots,
                         expiry_date=expiry_date, next_trading_day=next_day,
-                        spot_signal_timestamp=sig_ts, spot_signal_close=sig_row.close_text,
+                        spot_signal_timestamp=actual_sig_ts, spot_signal_close=sig_row.close_text,
                         spot_sma_25=sma_text, spot_signal_relation=relation,
                         atm_strike=strike_text, target_strike=tgt_text, sold_side=sold_side,
                         remarks=f"Computed target strike {tgt_text} is not valid."))
@@ -406,7 +467,7 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[str]
                         skip_reason="missing_option_file",
                         lot_size=lot_size, lots=lots,
                         expiry_date=expiry_date, next_trading_day=next_day,
-                        spot_signal_timestamp=sig_ts, spot_signal_close=sig_row.close_text,
+                        spot_signal_timestamp=actual_sig_ts, spot_signal_close=sig_row.close_text,
                         spot_sma_25=sma_text, spot_signal_relation=relation,
                         atm_strike=strike_text, target_strike=tgt_text, sold_side=sold_side,
                         contract_name=contract_path.name,
@@ -414,26 +475,34 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[str]
                         remarks=f"Missing option file: {contract_path.name}"))
                     continue
 
-                entry_row = cd.rows_by_timestamp.get(entry_ts)
-                exit_row = cd.rows_by_timestamp.get(exit_ts)
+                entry_result = _nearest_option_bar(cd, entry_ts, args.fallback_window_minutes)
+                exit_result = _nearest_option_bar(cd, exit_ts, args.fallback_window_minutes)
                 missing = []
-                if entry_row is None:
-                    missing.append(f"{contract_path.name} missing entry {entry_ts}")
-                if exit_row is None:
-                    missing.append(f"{contract_path.name} missing exit {exit_ts}")
+                if entry_result is None:
+                    missing.append(f"{contract_path.name} no entry bar near {entry_ts} within {args.fallback_window_minutes}m")
+                if exit_result is None:
+                    missing.append(f"{contract_path.name} no exit bar near {exit_ts} within {args.fallback_window_minutes}m")
                 if missing:
                     results.append(make_result(
                         spec=spec, entry_date=entry_date, status="SKIPPED",
                         skip_reason="missing_entry_or_exit_timestamp",
                         lot_size=lot_size, lots=lots,
                         expiry_date=expiry_date, next_trading_day=next_day,
-                        spot_signal_timestamp=sig_ts, spot_signal_close=sig_row.close_text,
+                        spot_signal_timestamp=actual_sig_ts, spot_signal_close=sig_row.close_text,
                         spot_sma_25=sma_text, spot_signal_relation=relation,
                         atm_strike=strike_text, target_strike=tgt_text, sold_side=sold_side,
                         contract_name=contract_path.name,
                         option_entry_timestamp=entry_ts, option_exit_timestamp=exit_ts,
                         remarks="; ".join(missing)))
                     continue
+
+                actual_entry_ts, entry_row = entry_result
+                actual_exit_ts, exit_row = exit_result
+                fallback_notes = [n for n in [
+                    sig_fallback,
+                    f"entry bar fallback {entry_ts}->{actual_entry_ts}" if actual_entry_ts != entry_ts else "",
+                    f"exit bar fallback {exit_ts}->{actual_exit_ts}" if actual_exit_ts != exit_ts else "",
+                ] if n]
 
                 gross = leg_pnl_after_slippage(entry_row.open_value - exit_row.open_value,
                                                args.slippage_points_per_order) * contract_multiplier
@@ -442,16 +511,18 @@ def run_backtest(args: argparse.Namespace) -> Tuple[List[TradeResult], List[str]
                     spec=spec, entry_date=entry_date, status="TRADED", skip_reason="",
                     lot_size=lot_size, lots=lots,
                     expiry_date=expiry_date, next_trading_day=next_day,
-                    spot_signal_timestamp=sig_ts, spot_signal_close=sig_row.close_text,
+                    spot_signal_timestamp=actual_sig_ts, spot_signal_close=sig_row.close_text,
                     spot_sma_25=sma_text, spot_signal_relation=relation,
                     atm_strike=strike_text, target_strike=tgt_text, sold_side=sold_side,
                     contract_name=contract_path.name,
-                    option_entry_timestamp=entry_ts, option_entry_open=entry_row.open_text,
-                    option_exit_timestamp=exit_ts, option_exit_open=exit_row.open_text,
-                    gross_pnl=gross, brokerage=round_trip_brokerage, net_pnl=net))
-                logger.info("TRADED date=%s range=%s expiry=%s side=%s atm=%s tgt=%s lot=%sx%s net=%s",
+                    option_entry_timestamp=actual_entry_ts, option_entry_open=entry_row.open_text,
+                    option_exit_timestamp=actual_exit_ts, option_exit_open=exit_row.open_text,
+                    gross_pnl=gross, brokerage=round_trip_brokerage, net_pnl=net,
+                    remarks="; ".join(fallback_notes)))
+                logger.info("TRADED date=%s range=%s expiry=%s side=%s atm=%s tgt=%s lot=%sx%s net=%s%s",
                             entry_date, spec.range_label, expiry_date, sold_side, atm, tgt,
-                            lot_size, lots, format_money(net))
+                            lot_size, lots, format_money(net),
+                            f" [fallback: {'; '.join(fallback_notes)}]" if fallback_notes else "")
     except Exception:
         logger.exception("ERROR unexpected failure")
         raise
@@ -565,6 +636,7 @@ def write_summary(results: List[TradeResult], path: Path,
         "  - 2026+: 65x5=325",
         f"- Slippage: {format_money(args.slippage_points_per_order)} pt/order",
         f"- Brokerage: Rs {int(args.brokerage_per_order)}/order -> Rs {int(args.brokerage_per_order * 2)}/trade",
+        f"- Fallback window: {args.fallback_window_minutes}m (nearest bar used when exact timestamp missing; 0 = exact only)",
         f"- Capital reference (CAGR): Rs {int(CAPITAL_FOR_CAGR):,}",
         f"- Data range: `{trading_days[0]}` to `{trading_days[-1]}`" if trading_days else "",
         "",
@@ -601,7 +673,9 @@ def write_summary(results: List[TradeResult], path: Path,
     lines.extend([
         "## Remarks",
         "",
-        "- Exact timestamp matching; no nearest-candle fallback.",
+        f"- Fallback window: {args.fallback_window_minutes}m — when an exact timestamp is missing, "
+        "the nearest bar (before or after) within the window is used; the actual timestamp is recorded "
+        "in the `remarks` column. Set `--fallback-window-minutes 0` to restore exact-match-only behaviour.",
         "- The 15:15 spot row is the 15:30 close proxy; 15:29 option open is the entry proxy.",
         "- Expiry folder dates are the source of truth for expiry selection.",
         "- Lot sizes are dynamic per expiry era to maintain ~300 quantity throughout the period.",
