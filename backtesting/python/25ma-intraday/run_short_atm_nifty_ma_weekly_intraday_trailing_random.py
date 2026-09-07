@@ -178,7 +178,13 @@ def compute_cagr(net_total: float, capital: float, first_day: str, last_day: str
     days = (end - start).days
     if days <= 0 or capital <= 0:
         return 0.0
-    return ((1.0 + net_total / capital) ** (365.25 / days) - 1.0) * 100.0
+    ending_equity_ratio = 1.0 + net_total / capital
+    if ending_equity_ratio <= 0.0:
+        # Losses exceeded the capital base: the account is wiped out. A
+        # fractional power of a negative ratio is a complex number, not a
+        # return, so report the floor instead.
+        return -100.0
+    return (ending_equity_ratio ** (365.25 / days) - 1.0) * 100.0
 
 
 def parse_args() -> argparse.Namespace:
@@ -459,21 +465,26 @@ def resolve_trade_exit(
         stop_hit = (spot_row.low_value <= stop_sma if sold_side == "PE"
                     else spot_row.high_value >= stop_sma)
         if stop_hit:
-            exit_row = contract_data.rows_by_timestamp.get(spot_ts)
+            # The MA touch happens somewhere inside the 5m bar starting at
+            # spot_ts, so that bar's open is a price from before the stop
+            # existed. Fill at the next bar's open - the first price actually
+            # reachable once the touch has been observed.
+            fill_ts = datetime_to_timestamp(current_dt + datetime.timedelta(minutes=5))
+            exit_row = contract_data.rows_by_timestamp.get(fill_ts)
             if exit_row is None:
                 return ExitOutcome(
                     status="SKIPPED", skip_reason="missing_option_exit_timestamp",
-                    exit_timestamp=spot_ts, option_exit_open="",
+                    exit_timestamp=fill_ts, option_exit_open="",
                     exit_reason="stop_loss_ma_touch", exit_spot_ma=format_money(stop_sma),
                     gross_pnl=0.0, brokerage=0.0, net_pnl=0.0,
-                    remarks=f"{contract_data.path.name} missing stop exit timestamp {spot_ts}",
+                    remarks=f"{contract_data.path.name} missing stop exit timestamp {fill_ts}",
                 )
             gross = leg_pnl_after_slippage(entry_row.open_value - exit_row.open_value,
                                            slippage_points_per_order) * contract_multiplier
             brok = brokerage_per_order * 2
             return ExitOutcome(
                 status="TRADED", skip_reason="",
-                exit_timestamp=spot_ts, option_exit_open=exit_row.open_text,
+                exit_timestamp=fill_ts, option_exit_open=exit_row.open_text,
                 exit_reason="stop_loss_ma_touch", exit_spot_ma=format_money(stop_sma),
                 gross_pnl=gross, brokerage=brok, net_pnl=gross - brok, remarks="",
             )
@@ -863,8 +874,11 @@ def slot_to_time(slot: float) -> str:
 
 
 def write_summary(sim_results: List[SimResult], path: Path, args: argparse.Namespace) -> None:
-    baseline_cagr = 31.48
-    baseline_net = 67_11_939.0
+    # Post-lookahead-fix 09:30 full-participation baseline: the account is
+    # wiped out, so 'vs Base' is reported as a percentage-point difference
+    # rather than a ratio against a negative number.
+    baseline_cagr = -100.00
+    baseline_net = -14_15_087.0
 
     lines: List[str] = [
         "# Random-Participation Backtest — Short ATM NIFTY MA Weekly Intraday Trailing",
@@ -889,9 +903,9 @@ def write_summary(sim_results: List[SimResult], path: Path, args: argparse.Names
         "",
         f"| Metric | Value |",
         f"|--------|-------|",
-        f"| Net P/L | Rs 67,11,939 |",
-        f"| CAGR | 31.48% |",
-        f"| Max Drawdown | Rs 1,36,705 |",
+        f"| Net P/L | -Rs 14,15,087 |",
+        f"| CAGR | -100.00% |",
+        f"| Max Drawdown | Rs 19,86,026 |",
         f"| Capital base | Rs 10,00,000 |",
         "",
         "## Simulation Results",
@@ -903,7 +917,7 @@ def write_summary(sim_results: List[SimResult], path: Path, args: argparse.Names
     ]
 
     for r in sim_results:
-        vs = f"{r.cagr / baseline_cagr * 100:.1f}%" if baseline_cagr else "N/A"
+        vs = f"{r.cagr - baseline_cagr:+.1f}pp" if baseline_cagr else "N/A"
         lines.append(
             f"| {int(r.skip_rate * 100)}% | {r.run_index} | {r.seed} "
             f"| {r.traded_days} | {r.random_skipped_days} | {r.strategy_skipped_days} "

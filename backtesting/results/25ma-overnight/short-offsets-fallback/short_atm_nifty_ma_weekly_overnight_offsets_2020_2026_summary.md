@@ -3,7 +3,7 @@
 ## Strategy Details
 
 - Signal source: NIFTY 15-minute close
-- Signal bar time: `15:15` row as `15:30` close proxy
+- Signal bar time: `15:00` (15m bar, closes 15 minutes later)
 - MA rule: 25-SMA of spot closes including the signal bar
 - Direction rule: above SMA -> short PE; below SMA -> short CE; equal -> no trade
 - Strike ranges: OTM 100/200/300/400/500 and ITM 100/200/300, each tested independently
@@ -26,14 +26,14 @@
 
 | Range | Traded | Skipped | Wins | Losses | Max DD | Net P/L | Gross P/L | CAGR% |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| OTM_100 | 1315 | 536 | 762 | 553 | 253610.00 | 1244988.50 | 1310738.50 | 11.44% |
-| OTM_200 | 1314 | 537 | 732 | 582 | 241695.00 | 789793.50 | 855493.50 | 8.11% |
-| OTM_300 | 1314 | 537 | 655 | 659 | 205310.00 | 445637.75 | 511337.75 | 5.06% |
-| OTM_400 | 1313 | 538 | 562 | 751 | 207540.00 | 184121.00 | 249771.00 | 2.29% |
-| OTM_500 | 1313 | 538 | 439 | 874 | 353452.00 | -58270.00 | 7380.00 | -0.80% |
-| ITM_100 | 1315 | 536 | 710 | 605 | 365175.00 | 2237535.25 | 2303285.25 | 17.05% |
-| ITM_200 | 1313 | 538 | 696 | 617 | 355965.00 | 2526751.25 | 2592401.25 | 18.40% |
-| ITM_300 | 1299 | 552 | 692 | 607 | 296200.00 | 2978192.00 | 3043142.00 | 20.32% |
+| OTM_100 | 1315 | 536 | 746 | 569 | 243940.00 | 724195.50 | 789945.50 | 7.57% |
+| OTM_200 | 1314 | 537 | 712 | 602 | 238735.00 | 279821.25 | 345521.25 | 3.36% |
+| OTM_300 | 1316 | 535 | 640 | 676 | 298668.00 | 51264.75 | 117064.75 | 0.67% |
+| OTM_400 | 1315 | 536 | 542 | 773 | 421600.00 | -153765.50 | -88015.50 | -2.21% |
+| OTM_500 | 1313 | 538 | 422 | 891 | 529593.75 | -317048.75 | -251398.75 | -4.98% |
+| ITM_100 | 1313 | 538 | 693 | 620 | 374015.00 | 1417470.00 | 1483120.00 | 12.56% |
+| ITM_200 | 1312 | 539 | 676 | 636 | 422870.00 | 1610317.75 | 1675917.75 | 13.72% |
+| ITM_300 | 1297 | 554 | 672 | 625 | 394855.00 | 1857458.50 | 1922308.50 | 15.11% |
 
 ## Range Details
 
@@ -43,18 +43,18 @@
 - Skipped days: `536`
 - CE-sell count: `641`
 - PE-sell count: `674`
-- Winning days: `762`
-- Losing days: `553`
+- Winning days: `746`
+- Losing days: `569`
 - Break-even days: `0`
-- Max profit day: `2026-04-07` net `98067.50`
+- Max profit day: `2026-04-07` net `98571.25`
 - Max loss day: `2020-03-20` net `-123575.00`
-- Max consecutive wins: `8`
+- Max consecutive wins: `12`
 - Max consecutive losses: `7`
-- Max drawdown: `253610.00`
-- Total Profit/Loss: `1244988.50`
+- Max drawdown: `243940.00`
+- Total Profit/Loss: `724195.50`
 - Total Brokerage: `65750.00`
-- Gross P/L: `1310738.50`
-- CAGR (on Rs 1,000,000): `11.44%`
+- Gross P/L: `789945.50`
+- CAGR (on Rs 1,000,000): `7.57%`
 
 ### OTM_200
 
@@ -62,170 +62,170 @@
 - Skipped days: `537`
 - CE-sell count: `641`
 - PE-sell count: `673`
-- Winning days: `732`
-- Losing days: `582`
+- Winning days: `712`
+- Losing days: `602`
 - Break-even days: `0`
-- Max profit day: `2026-04-07` net `96962.50`
+- Max profit day: `2026-04-07` net `93777.50`
 - Max loss day: `2020-03-20` net `-121370.00`
 - Max consecutive wins: `12`
 - Max consecutive losses: `7`
-- Max drawdown: `241695.00`
-- Total Profit/Loss: `789793.50`
+- Max drawdown: `238735.00`
+- Total Profit/Loss: `279821.25`
 - Total Brokerage: `65700.00`
-- Gross P/L: `855493.50`
-- CAGR (on Rs 1,000,000): `8.11%`
+- Gross P/L: `345521.25`
+- CAGR (on Rs 1,000,000): `3.36%`
 
 ### OTM_300
 
-- Traded days: `1314`
-- Skipped days: `537`
+- Traded days: `1316`
+- Skipped days: `535`
 - CE-sell count: `641`
-- PE-sell count: `673`
-- Winning days: `655`
-- Losing days: `659`
+- PE-sell count: `675`
+- Winning days: `640`
+- Losing days: `676`
 - Break-even days: `0`
-- Max profit day: `2026-04-07` net `92396.25`
+- Max profit day: `2026-04-07` net `88398.75`
 - Max loss day: `2020-03-20` net `-87020.00`
-- Max consecutive wins: `10`
+- Max consecutive wins: `12`
 - Max consecutive losses: `12`
-- Max drawdown: `205310.00`
-- Total Profit/Loss: `445637.75`
-- Total Brokerage: `65700.00`
-- Gross P/L: `511337.75`
-- CAGR (on Rs 1,000,000): `5.06%`
+- Max drawdown: `298668.00`
+- Total Profit/Loss: `51264.75`
+- Total Brokerage: `65800.00`
+- Gross P/L: `117064.75`
+- CAGR (on Rs 1,000,000): `0.67%`
 
 ### OTM_400
-
-- Traded days: `1313`
-- Skipped days: `538`
-- CE-sell count: `640`
-- PE-sell count: `673`
-- Winning days: `562`
-- Losing days: `751`
-- Break-even days: `0`
-- Max profit day: `2026-04-07` net `86416.25`
-- Max loss day: `2024-06-03` net `-68465.00`
-- Max consecutive wins: `10`
-- Max consecutive losses: `15`
-- Max drawdown: `207540.00`
-- Total Profit/Loss: `184121.00`
-- Total Brokerage: `65650.00`
-- Gross P/L: `249771.00`
-- CAGR (on Rs 1,000,000): `2.29%`
-
-### OTM_500
-
-- Traded days: `1313`
-- Skipped days: `538`
-- CE-sell count: `641`
-- PE-sell count: `672`
-- Winning days: `439`
-- Losing days: `874`
-- Break-even days: `0`
-- Max profit day: `2026-04-07` net `79672.50`
-- Max loss day: `2020-03-20` net `-93650.00`
-- Max consecutive wins: `10`
-- Max consecutive losses: `30`
-- Max drawdown: `353452.00`
-- Total Profit/Loss: `-58270.00`
-- Total Brokerage: `65650.00`
-- Gross P/L: `7380.00`
-- CAGR (on Rs 1,000,000): `-0.80%`
-
-### ITM_100
 
 - Traded days: `1315`
 - Skipped days: `536`
 - CE-sell count: `641`
 - PE-sell count: `674`
-- Winning days: `710`
-- Losing days: `605`
+- Winning days: `542`
+- Losing days: `773`
 - Break-even days: `0`
-- Max profit day: `2026-04-07` net `113001.25`
-- Max loss day: `2020-03-20` net `-178895.00`
-- Max consecutive wins: `8`
-- Max consecutive losses: `7`
-- Max drawdown: `365175.00`
-- Total Profit/Loss: `2237535.25`
+- Max profit day: `2026-04-07` net `83231.25`
+- Max loss day: `2020-03-13` net `-90920.00`
+- Max consecutive wins: `11`
+- Max consecutive losses: `16`
+- Max drawdown: `421600.00`
+- Total Profit/Loss: `-153765.50`
 - Total Brokerage: `65750.00`
-- Gross P/L: `2303285.25`
-- CAGR (on Rs 1,000,000): `17.05%`
+- Gross P/L: `-88015.50`
+- CAGR (on Rs 1,000,000): `-2.21%`
 
-### ITM_200
+### OTM_500
+
+- Traded days: `1313`
+- Skipped days: `538`
+- CE-sell count: `639`
+- PE-sell count: `674`
+- Winning days: `422`
+- Losing days: `891`
+- Break-even days: `0`
+- Max profit day: `2026-04-07` net `77608.75`
+- Max loss day: `2020-03-20` net `-93650.00`
+- Max consecutive wins: `9`
+- Max consecutive losses: `27`
+- Max drawdown: `529593.75`
+- Total Profit/Loss: `-317048.75`
+- Total Brokerage: `65650.00`
+- Gross P/L: `-251398.75`
+- CAGR (on Rs 1,000,000): `-4.98%`
+
+### ITM_100
 
 - Traded days: `1313`
 - Skipped days: `538`
 - CE-sell count: `640`
 - PE-sell count: `673`
-- Winning days: `696`
-- Losing days: `617`
+- Winning days: `693`
+- Losing days: `620`
 - Break-even days: `0`
-- Max profit day: `2026-04-07` net `121028.75`
-- Max loss day: `2020-03-20` net `-195665.00`
-- Max consecutive wins: `8`
+- Max profit day: `2026-04-07` net `111360.00`
+- Max loss day: `2020-03-20` net `-178895.00`
+- Max consecutive wins: `12`
 - Max consecutive losses: `7`
-- Max drawdown: `355965.00`
-- Total Profit/Loss: `2526751.25`
+- Max drawdown: `374015.00`
+- Total Profit/Loss: `1417470.00`
 - Total Brokerage: `65650.00`
-- Gross P/L: `2592401.25`
-- CAGR (on Rs 1,000,000): `18.40%`
+- Gross P/L: `1483120.00`
+- CAGR (on Rs 1,000,000): `12.56%`
+
+### ITM_200
+
+- Traded days: `1312`
+- Skipped days: `539`
+- CE-sell count: `639`
+- PE-sell count: `673`
+- Winning days: `676`
+- Losing days: `636`
+- Break-even days: `0`
+- Max profit day: `2026-04-07` net `119550.00`
+- Max loss day: `2020-03-20` net `-195665.00`
+- Max consecutive wins: `12`
+- Max consecutive losses: `7`
+- Max drawdown: `422870.00`
+- Total Profit/Loss: `1610317.75`
+- Total Brokerage: `65600.00`
+- Gross P/L: `1675917.75`
+- CAGR (on Rs 1,000,000): `13.72%`
 
 ### ITM_300
 
-- Traded days: `1299`
-- Skipped days: `552`
-- CE-sell count: `633`
+- Traded days: `1297`
+- Skipped days: `554`
+- CE-sell count: `631`
 - PE-sell count: `666`
-- Winning days: `692`
-- Losing days: `607`
+- Winning days: `672`
+- Losing days: `625`
 - Break-even days: `0`
-- Max profit day: `2026-04-07` net `133232.50`
-- Max loss day: `2026-03-02` net `-130245.00`
-- Max consecutive wins: `8`
+- Max profit day: `2026-04-07` net `124750.00`
+- Max loss day: `2026-03-02` net `-133771.25`
+- Max consecutive wins: `12`
 - Max consecutive losses: `7`
-- Max drawdown: `296200.00`
-- Total Profit/Loss: `2978192.00`
-- Total Brokerage: `64950.00`
-- Gross P/L: `3043142.00`
-- CAGR (on Rs 1,000,000): `20.32%`
+- Max drawdown: `394855.00`
+- Total Profit/Loss: `1857458.50`
+- Total Brokerage: `64850.00`
+- Gross P/L: `1922308.50`
+- CAGR (on Rs 1,000,000): `15.11%`
 
 ## Exceptions By Range
 
 ### OTM_100
 
-- `2019-01-01`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-01-01`: `insufficient_spot_history`. 2019-01-01T15:00:00+05:30 has 24 bars; needs 25
 - `2019-01-02`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
 - `2019-01-03`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
-- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-01-07`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
 - `2019-01-08`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-01-09`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-01-10`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
-- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
+- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-01-14`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-01-15`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-01-16T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-01-17T09:16:00+05:30 within 30m
-- `2019-01-17`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-01-17T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-01-18T09:16:00+05:30 within 30m
+- `2019-01-17`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-01-18`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
-- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
-- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
-- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
+- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-01-24`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-01-25`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
-- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
-- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
+- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
+- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-01-30`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
-- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-02-01`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-02-04`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-02-05`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-02-06`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-02-07`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-02-07T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-02-08T09:16:00+05:30 within 30m
 - `2019-02-08`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
-- `2019-02-11`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-02-11T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-02-12T09:16:00+05:30 within 30m
 - `2019-02-12`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-02-13`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
-- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
 - `2019-02-15`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-02-18`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
 - `2019-02-19`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
@@ -239,29 +239,29 @@
 - `2019-03-01`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-03-05`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-03-06`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
-- `2019-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-03-07T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-03-08T09:16:00+05:30 within 30m
+- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-03-08`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
-- `2019-03-11`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-03-11T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-03-12T09:16:00+05:30 within 30m
+- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-03-12T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-03-13T09:16:00+05:30 within 30m
 - `2019-03-13`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-13T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-14T09:16:00+05:30 within 30m
 - `2019-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-14T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-15T09:16:00+05:30 within 30m
-- `2019-03-15`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
-- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
+- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
+- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
 - `2019-03-19`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-03-20T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-03-22T09:16:00+05:30 within 30m
 - `2019-03-22`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-25T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-26T09:16:00+05:30 within 30m
 - `2019-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-03-26T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-03-27T09:16:00+05:30 within 30m
 - `2019-03-27`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
-- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
+- `2019-03-28`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-03-29T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-04-01T09:16:00+05:30 within 30m
 - `2019-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-04-01T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-04-02T09:16:00+05:30 within 30m
-- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
+- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
 - `2019-04-03`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-04-03T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-04-04T09:16:00+05:30 within 30m
 - `2019-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-04-04T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-04-05T09:16:00+05:30 within 30m
-- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
+- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
 - `2019-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-04-08T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-04-09T09:16:00+05:30 within 30m
-- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
+- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
 - `2019-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-04-10T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-04-11T09:16:00+05:30 within 30m
 - `2019-04-11`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-04-11T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-04-12T09:16:00+05:30 within 30m
 - `2019-04-12`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-04-12T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-04-15T09:16:00+05:30 within 30m
@@ -270,26 +270,26 @@
 - `2019-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-04-18T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-04-22T09:16:00+05:30 within 30m
 - `2019-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-04-22T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-04-23T09:16:00+05:30 within 30m
 - `2019-04-23`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-04-23T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-04-24T09:16:00+05:30 within 30m
-- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
+- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
 - `2019-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-04-25T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-04-26T09:16:00+05:30 within 30m
 - `2019-04-26`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-04-26T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-04-30T09:16:00+05:30 within 30m
 - `2019-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-04-30T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-05-02T09:16:00+05:30 within 30m
-- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
+- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
 - `2019-05-03`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-03T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-05-06T09:16:00+05:30 within 30m
 - `2019-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-05-06T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-05-07T09:16:00+05:30 within 30m
 - `2019-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-05-07T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-05-08T09:16:00+05:30 within 30m
 - `2019-05-08`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-05-09T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-05-10T09:16:00+05:30 within 30m
-- `2019-05-10`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
+- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
 - `2019-05-13`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-05-13T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-05-14T09:16:00+05:30 within 30m
 - `2019-05-14`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-05-15`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-05-15T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-05-16T09:16:00+05:30 within 30m
-- `2019-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-05-16T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-05-17T09:16:00+05:30 within 30m
+- `2019-05-16`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-05-17`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-05-17T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-05-20T09:16:00+05:30 within 30m
-- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
+- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
 - `2019-05-21`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-21T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-05-22T09:16:00+05:30 within 30m
 - `2019-05-22`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-05-22T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-05-23T09:16:00+05:30 within 30m
-- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
+- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
 - `2019-05-24`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-05-24T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-05-27T09:16:00+05:30 within 30m
 - `2019-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-05-27T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-05-28T09:16:00+05:30 within 30m
 - `2019-05-28`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-05-28T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-05-29T09:16:00+05:30 within 30m
@@ -297,10 +297,10 @@
 - `2019-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-05-30T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-05-31T09:16:00+05:30 within 30m
 - `2019-05-31`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-05-31T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-06-03T09:16:00+05:30 within 30m
 - `2019-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-06-03T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-06-04T09:16:00+05:30 within 30m
-- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
+- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
 - `2019-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-06-06T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-06-07T09:16:00+05:30 within 30m
 - `2019-06-07`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-06-07T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-06-10T09:16:00+05:30 within 30m
-- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
+- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
 - `2019-06-11`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-06-11T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-06-12T09:16:00+05:30 within 30m
 - `2019-06-12`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-06-12T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-06-13T09:16:00+05:30 within 30m
 - `2019-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-06-13T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-06-14T09:16:00+05:30 within 30m
@@ -309,7 +309,7 @@
 - `2019-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-06-18T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-06-19T09:16:00+05:30 within 30m
 - `2019-06-19`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-06-19T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-06-20T09:16:00+05:30 within 30m
 - `2019-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-06-20T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-06-21T09:16:00+05:30 within 30m
-- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
+- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
 - `2019-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-06-24T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-06-25T09:16:00+05:30 within 30m
 - `2019-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-06-25T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-06-26T09:16:00+05:30 within 30m
 - `2019-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-06-26T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-06-27T09:16:00+05:30 within 30m
@@ -317,7 +317,7 @@
 - `2019-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-06-28T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-07-01T09:16:00+05:30 within 30m
 - `2019-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-07-01T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-07-02T09:16:00+05:30 within 30m
 - `2019-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-07-02T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-07-03T09:16:00+05:30 within 30m
-- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
+- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
 - `2019-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-07-04T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-07-05T09:16:00+05:30 within 30m
 - `2019-07-05`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-07-05T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-07-08T09:16:00+05:30 within 30m
 - `2019-07-08`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
@@ -329,54 +329,54 @@
 - `2019-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-07-16T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-07-17T09:16:00+05:30 within 30m
 - `2019-07-17`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-07-17T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-07-18T09:16:00+05:30 within 30m
 - `2019-07-18`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-07-18T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-07-19T09:16:00+05:30 within 30m
-- `2019-07-19`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
-- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
+- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
+- `2019-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-07-22T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-07-23T09:16:00+05:30 within 30m
 - `2019-07-23`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-07-24`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-07-25`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-07-26`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-07-26T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-07-29T09:16:00+05:30 within 30m
 - `2019-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-07-29T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-07-30T09:16:00+05:30 within 30m
 - `2019-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-07-30T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-07-31T09:16:00+05:30 within 30m
-- `2019-07-31`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-07-31T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-08-01T09:16:00+05:30 within 30m
+- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-08-01`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-08-02`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-08-05`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
-- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
+- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-08-07`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
-- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-08-09`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-08-09T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-08-13T09:16:00+05:30 within 30m
-- `2019-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-08-13T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-08-14T09:16:00+05:30 within 30m
-- `2019-08-14`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-08-14T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-08-16T09:16:00+05:30 within 30m
+- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
+- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-08-16`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-08-19`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-08-19T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-08-20T09:16:00+05:30 within 30m
-- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-08-20`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-08-20T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-08-21T09:16:00+05:30 within 30m
 - `2019-08-21`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-08-21T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-08-22T09:16:00+05:30 within 30m
 - `2019-08-22`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
 - `2019-08-23`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-08-26`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
-- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
+- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
 - `2019-08-28`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-08-28T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-08-29T09:16:00+05:30 within 30m
 - `2019-08-29`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
-- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-09-03`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
 - `2019-09-04`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-09-05`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-09-06`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-09-09`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
-- `2019-09-11`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-09-11T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-09-12T09:16:00+05:30 within 30m
+- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-09-12T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-09-13T09:16:00+05:30 within 30m
 - `2019-09-13`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-09-13T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-09-16T09:16:00+05:30 within 30m
 - `2019-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-09-16T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-09-17T09:16:00+05:30 within 30m
-- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
-- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
+- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-09-19`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
 - `2019-09-20`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-09-20T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-09-23T09:16:00+05:30 within 30m
-- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
-- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
+- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
+- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
 - `2019-09-25`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
-- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
+- `2019-09-26`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-09-27`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-09-27T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-09-30T09:16:00+05:30 within 30m
-- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
+- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
 - `2019-10-01`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-10-03T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-10-04T09:16:00+05:30 within 30m
 - `2019-10-04`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-10-04T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-10-07T09:16:00+05:30 within 30m
@@ -384,7 +384,7 @@
 - `2019-10-09`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-10-09T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-10-10T09:16:00+05:30 within 30m
 - `2019-10-10`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-10-11`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-10-11T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-10-14T09:16:00+05:30 within 30m
-- `2019-10-14`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
+- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
 - `2019-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-10-15T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-10-16T09:16:00+05:30 within 30m
 - `2019-10-16`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-10-16T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-10-17T09:16:00+05:30 within 30m
 - `2019-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-10-17T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-10-18T09:16:00+05:30 within 30m
@@ -393,12 +393,12 @@
 - `2019-10-23`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-10-23T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-10-24T09:16:00+05:30 within 30m
 - `2019-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-10-24T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-10-25T09:16:00+05:30 within 30m
 - `2019-10-25`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-10-25T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-10-27T09:16:00+05:30 within 30m
-- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:15:00+05:30; no fallback within 30m
+- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:00:00+05:30; no fallback within 30m
 - `2019-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-10-29T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-10-30T09:16:00+05:30 within 30m
 - `2019-10-30`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-10-30T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-10-31T09:16:00+05:30 within 30m
 - `2019-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-10-31T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-11-01T09:16:00+05:30 within 30m
 - `2019-11-01`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-11-01T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-11-04T09:16:00+05:30 within 30m
-- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
+- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
 - `2019-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-11-05T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-11-06T09:16:00+05:30 within 30m
 - `2019-11-06`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-11-06T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-11-07T09:16:00+05:30 within 30m
 - `2019-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-11-07T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-11-08T09:16:00+05:30 within 30m
@@ -407,11 +407,11 @@
 - `2019-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-11-13T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-11-14T09:16:00+05:30 within 30m
 - `2019-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-11-14T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-11-15T09:16:00+05:30 within 30m
 - `2019-11-15`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-11-15T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-11-18T09:16:00+05:30 within 30m
-- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
+- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
 - `2019-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-11-19T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-11-20T09:16:00+05:30 within 30m
 - `2019-11-20`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-11-20T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-11-21T09:16:00+05:30 within 30m
 - `2019-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-11-21T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-11-22T09:16:00+05:30 within 30m
-- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
+- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
 - `2019-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-11-25T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-11-26T09:16:00+05:30 within 30m
 - `2019-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-11-26T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-11-27T09:16:00+05:30 within 30m
 - `2019-11-27`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-11-27T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-11-28T09:16:00+05:30 within 30m
@@ -420,7 +420,7 @@
 - `2019-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-12-02T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-12-03T09:16:00+05:30 within 30m
 - `2019-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-12-03T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-12-04T09:16:00+05:30 within 30m
 - `2019-12-04`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-12-04T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-12-05T09:16:00+05:30 within 30m
-- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
+- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
 - `2019-12-06`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-12-06T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-12-09T09:16:00+05:30 within 30m
 - `2019-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-12-09T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-12-10T09:16:00+05:30 within 30m
 - `2019-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-12-10T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-12-11T09:16:00+05:30 within 30m
@@ -429,7 +429,7 @@
 - `2019-12-13`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-12-13T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-12-16T09:16:00+05:30 within 30m
 - `2019-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-12-16T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-12-17T09:16:00+05:30 within 30m
 - `2019-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-12-17T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-12-18T09:16:00+05:30 within 30m
-- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
+- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
 - `2019-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-12-19T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-12-20T09:16:00+05:30 within 30m
 - `2019-12-20`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-12-20T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-12-23T09:16:00+05:30 within 30m
 - `2019-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-12-23T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-12-24T09:16:00+05:30 within 30m
@@ -437,20 +437,20 @@
 - `2019-12-26`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-12-26T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-12-27T09:16:00+05:30 within 30m
 - `2019-12-27`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-12-27T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-12-30T09:16:00+05:30 within 30m
 - `2019-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-12-30T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-12-31T09:16:00+05:30 within 30m
-- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
+- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
 - `2020-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_09_JAN_20.csv no entry bar near 2020-01-02T15:29:00+05:30 within 30m
 - `2020-01-09`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_16_JAN_20.csv no entry bar near 2020-01-09T15:29:00+05:30 within 30m
 - `2020-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_23_JAN_20.csv no entry bar near 2020-01-16T15:29:00+05:30 within 30m
 - `2020-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_30_JAN_20.csv no entry bar near 2020-01-23T15:29:00+05:30 within 30m
-- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
+- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
 - `2020-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_13_FEB_20.csv no entry bar near 2020-02-06T15:29:00+05:30 within 30m
 - `2020-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_20_FEB_20.csv no entry bar near 2020-02-13T15:29:00+05:30 within 30m
 - `2020-02-20`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_27_FEB_20.csv no entry bar near 2020-02-20T15:29:00+05:30 within 30m
-- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
 - `2020-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11350_CE_12_MAR_20.csv no entry bar near 2020-03-05T15:29:00+05:30 within 30m
-- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9750_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m; NIFTY_9750_CE_19_MAR_20.csv no exit bar near 2020-03-13T09:16:00+05:30 within 30m
+- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9650_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m; NIFTY_9650_CE_19_MAR_20.csv no exit bar near 2020-03-13T09:16:00+05:30 within 30m
 - `2020-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_8150_PE_26_MAR_20.csv no entry bar near 2020-03-19T15:29:00+05:30 within 30m
-- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8550_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
+- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8500_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
 - `2020-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_8350_CE_09_APR_20.csv no entry bar near 2020-04-01T15:29:00+05:30 within 30m
 - `2020-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_9000_PE_16_APR_20.csv no entry bar near 2020-04-09T15:29:00+05:30 within 30m
 - `2020-04-16`: `missing_entry_or_exit_timestamp`. NIFTY_8900_PE_23_APR_20.csv no entry bar near 2020-04-16T15:29:00+05:30 within 30m
@@ -465,9 +465,9 @@
 - `2020-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_10000_PE_25_JUN_20.csv no entry bar near 2020-06-18T15:29:00+05:30 within 30m
 - `2020-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_10400_CE_02_JUL_20.csv no entry bar near 2020-06-25T15:29:00+05:30 within 30m
 - `2020-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_10450_PE_09_JUL_20.csv no entry bar near 2020-07-02T15:29:00+05:30 within 30m
-- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10750_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
+- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10700_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
 - `2020-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_10650_PE_23_JUL_20.csv no entry bar near 2020-07-16T15:29:00+05:30 within 30m
-- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11150_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
+- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
 - `2020-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_06_AUG_20.csv no entry bar near 2020-07-30T15:29:00+05:30 within 30m
 - `2020-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_13_AUG_20.csv no entry bar near 2020-08-06T15:29:00+05:30 within 30m
 - `2020-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_20_AUG_20.csv no entry bar near 2020-08-13T15:29:00+05:30 within 30m
@@ -477,40 +477,40 @@
 - `2020-09-10`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_17_SEP_20.csv no entry bar near 2020-09-10T15:29:00+05:30 within 30m
 - `2020-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_24_SEP_20.csv no entry bar near 2020-09-17T15:29:00+05:30 within 30m
 - `2020-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_10900_CE_01_OCT_20.csv no entry bar near 2020-09-24T15:29:00+05:30 within 30m
-- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
+- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
 - `2020-10-08`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_15_OCT_20.csv no entry bar near 2020-10-08T15:29:00+05:30 within 30m
 - `2020-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_22_OCT_20.csv no entry bar near 2020-10-15T15:29:00+05:30 within 30m
 - `2020-10-22`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_29_OCT_20.csv no entry bar near 2020-10-22T15:29:00+05:30 within 30m
-- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
-- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
+- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
+- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
 - `2020-11-12`: `missing_entry_or_exit_timestamp`. NIFTY_12600_PE_19_NOV_20.csv no entry bar near 2020-11-12T15:29:00+05:30 within 30m
 - `2020-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12600_PE_19_NOV_20.csv no exit bar near 2020-11-14T09:16:00+05:30 within 30m
-- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:15:00+05:30; no fallback within 30m
+- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:00:00+05:30; no fallback within 30m
 - `2020-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_12850_CE_26_NOV_20.csv no entry bar near 2020-11-19T15:29:00+05:30 within 30m
 - `2020-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12900_PE_03_DEC_20.csv no entry bar near 2020-11-26T15:29:00+05:30 within 30m
 - `2020-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_13250_CE_10_DEC_20.csv no entry bar near 2020-12-03T15:29:00+05:30 within 30m
-- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13400_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
+- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13350_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
 - `2020-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_13650_PE_24_DEC_20.csv no entry bar near 2020-12-17T15:29:00+05:30 within 30m
 - `2020-12-24`: `missing_entry_or_exit_timestamp`. NIFTY_13650_PE_31_DEC_20.csv no entry bar near 2020-12-24T15:29:00+05:30 within 30m
-- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14050_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
+- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14100_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
 - `2021-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_14250_CE_14_JAN_21.csv no entry bar near 2021-01-07T15:29:00+05:30 within 30m
 - `2021-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_14500_PE_21_JAN_21.csv no entry bar near 2021-01-14T15:29:00+05:30 within 30m
-- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14750_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
-- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13700_PE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
+- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14700_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
+- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13900_CE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
 - `2021-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_14800_PE_11_FEB_21.csv no entry bar near 2021-02-04T15:29:00+05:30 within 30m
-- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15100_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
+- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15050_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
 - `2021-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_15200_CE_25_FEB_21.csv no entry bar near 2021-02-18T15:29:00+05:30 within 30m
 - `2021-02-25`: `missing_entry_or_exit_timestamp`. NIFTY_15200_CE_04_MAR_21.csv no entry bar near 2021-02-25T15:29:00+05:30 within 30m
 - `2021-03-04`: `missing_entry_or_exit_timestamp`. NIFTY_15200_CE_10_MAR_21.csv no entry bar near 2021-03-04T15:29:00+05:30 within 30m
-- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15050_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
+- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15100_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
 - `2021-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_14700_CE_25_MAR_21.csv no entry bar near 2021-03-18T15:29:00+05:30 within 30m
-- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14450_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
-- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14750_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
-- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
+- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14400_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
+- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14800_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
+- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_14950_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
 - `2021-04-15`: `missing_entry_or_exit_timestamp`. NIFTY_14500_PE_22_APR_21.csv no entry bar near 2021-04-15T15:29:00+05:30 within 30m
 - `2021-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_14300_PE_29_APR_21.csv no entry bar near 2021-04-22T15:29:00+05:30 within 30m
 - `2021-04-29`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_06_MAY_21.csv no entry bar near 2021-04-29T15:29:00+05:30 within 30m
-- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14650_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
+- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14600_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
 - `2021-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_20_MAY_21.csv no entry bar near 2021-05-12T15:29:00+05:30 within 30m
 - `2021-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_27_MAY_21.csv no entry bar near 2021-05-20T15:29:00+05:30 within 30m
 - `2021-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_15250_PE_03_JUN_21.csv no entry bar near 2021-05-27T15:29:00+05:30 within 30m
@@ -520,85 +520,85 @@
 - `2021-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_15700_PE_01_JUL_21.csv no entry bar near 2021-06-24T15:29:00+05:30 within 30m
 - `2021-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_15800_CE_08_JUL_21.csv no entry bar near 2021-07-01T15:29:00+05:30 within 30m
 - `2021-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_15850_CE_15_JUL_21.csv no entry bar near 2021-07-08T15:29:00+05:30 within 30m
-- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_16000_CE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
-- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15750_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
+- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_15800_PE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
+- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15700_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
 - `2021-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_15900_CE_05_AUG_21.csv no entry bar near 2021-07-29T15:29:00+05:30 within 30m
 - `2021-08-05`: `missing_entry_or_exit_timestamp`. NIFTY_16200_PE_12_AUG_21.csv no entry bar near 2021-08-05T15:29:00+05:30 within 30m
 - `2021-08-12`: `missing_entry_or_exit_timestamp`. NIFTY_16250_PE_18_AUG_21.csv no entry bar near 2021-08-12T15:29:00+05:30 within 30m
-- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16650_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
+- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16700_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
 - `2021-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_02_SEP_21.csv no entry bar near 2021-08-26T15:29:00+05:30 within 30m
 - `2021-09-02`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_09_SEP_21.csv no entry bar near 2021-09-02T15:29:00+05:30 within 30m
 - `2021-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_16_SEP_21.csv no entry bar near 2021-09-09T15:29:00+05:30 within 30m
 - `2021-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_23_SEP_21.csv no entry bar near 2021-09-16T15:29:00+05:30 within 30m
 - `2021-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_30_SEP_21.csv no entry bar near 2021-09-23T15:29:00+05:30 within 30m
-- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
+- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
 - `2021-10-07`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_14_OCT_21.csv no entry bar near 2021-10-07T15:29:00+05:30 within 30m
 - `2021-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_18250_PE_21_OCT_21.csv no entry bar near 2021-10-14T15:29:00+05:30 within 30m
-- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
+- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
 - `2021-10-28`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_03_NOV_21.csv no entry bar near 2021-10-28T15:29:00+05:30 within 30m
-- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_17950_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
+- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_17900_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
 - `2021-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_11_NOV_21.csv no entry bar near 2021-11-04T15:29:00+05:30 within 30m
-- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
+- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
 - `2021-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_25_NOV_21.csv no entry bar near 2021-11-18T15:29:00+05:30 within 30m
 - `2021-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_02_DEC_21.csv no entry bar near 2021-11-25T15:29:00+05:30 within 30m
 - `2021-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_09_DEC_21.csv no entry bar near 2021-12-02T15:29:00+05:30 within 30m
 - `2021-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_16_DEC_21.csv no entry bar near 2021-12-09T15:29:00+05:30 within 30m
-- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
-- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
-- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
+- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
+- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
+- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
 - `2022-01-06`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_13_JAN_22.csv no entry bar near 2022-01-06T15:29:00+05:30 within 30m
 - `2022-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_20_JAN_22.csv no entry bar near 2022-01-13T15:29:00+05:30 within 30m
-- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
-- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
-- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
+- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
+- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
+- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
 - `2022-02-10`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_17_FEB_22.csv no entry bar near 2022-02-10T15:29:00+05:30 within 30m
 - `2022-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_24_FEB_22.csv no entry bar near 2022-02-17T15:29:00+05:30 within 30m
-- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
-- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16600_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
-- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16650_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
-- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
-- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
+- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
+- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16650_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
+- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16700_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
+- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
+- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
 - `2022-03-31`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_07_APR_22.csv no entry bar near 2022-03-31T15:29:00+05:30 within 30m
 - `2022-04-07`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_13_APR_22.csv no entry bar near 2022-04-07T15:29:00+05:30 within 30m
 - `2022-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_21_APR_22.csv no entry bar near 2022-04-13T15:29:00+05:30 within 30m
 - `2022-04-21`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_28_APR_22.csv no entry bar near 2022-04-21T15:29:00+05:30 within 30m
-- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
-- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
-- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15950_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
-- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_15950_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
-- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16100_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
+- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
+- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16800_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
+- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15900_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
+- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_15900_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
+- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16050_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
 - `2022-06-02`: `missing_entry_or_exit_timestamp`. NIFTY_16550_PE_09_JUN_22.csv no entry bar near 2022-06-02T15:29:00+05:30 within 30m
 - `2022-06-09`: `missing_entry_or_exit_timestamp`. NIFTY_16400_PE_16_JUN_22.csv no entry bar near 2022-06-09T15:29:00+05:30 within 30m
 - `2022-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_15450_CE_23_JUN_22.csv no entry bar near 2022-06-16T15:29:00+05:30 within 30m
-- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15500_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
-- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15850_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
+- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15450_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
+- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15900_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
 - `2022-07-07`: `missing_entry_or_exit_timestamp`. NIFTY_16050_PE_14_JUL_22.csv no entry bar near 2022-07-07T15:29:00+05:30 within 30m
 - `2022-07-14`: `missing_entry_or_exit_timestamp`. NIFTY_16050_CE_21_JUL_22.csv no entry bar near 2022-07-14T15:29:00+05:30 within 30m
 - `2022-07-21`: `missing_entry_or_exit_timestamp`. NIFTY_16500_PE_28_JUL_22.csv no entry bar near 2022-07-21T15:29:00+05:30 within 30m
-- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
-- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
+- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16850_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
+- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
 - `2022-08-11`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_18_AUG_22.csv no entry bar near 2022-08-11T15:29:00+05:30 within 30m
 - `2022-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_25_AUG_22.csv no entry bar near 2022-08-18T15:29:00+05:30 within 30m
 - `2022-08-25`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_01_SEP_22.csv no entry bar near 2022-08-25T15:29:00+05:30 within 30m
 - `2022-09-01`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_08_SEP_22.csv no entry bar near 2022-09-01T15:29:00+05:30 within 30m
 - `2022-09-08`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_15_SEP_22.csv no entry bar near 2022-09-08T15:29:00+05:30 within 30m
-- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
-- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
+- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
+- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
 - `2022-09-29`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_06_OCT_22.csv no entry bar near 2022-09-29T15:29:00+05:30 within 30m
-- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
+- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
 - `2022-10-13`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_20_OCT_22.csv no entry bar near 2022-10-13T15:29:00+05:30 within 30m
 - `2022-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_27_OCT_22.csv no entry bar near 2022-10-20T15:29:00+05:30 within 30m
-- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
-- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:15:00+05:30; no fallback within 30m
+- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
+- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:00:00+05:30; no fallback within 30m
 - `2022-10-27`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_03_NOV_22.csv no entry bar near 2022-10-27T15:29:00+05:30 within 30m
 - `2022-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_10_NOV_22.csv no entry bar near 2022-11-03T15:29:00+05:30 within 30m
 - `2022-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_17_NOV_22.csv no entry bar near 2022-11-10T15:29:00+05:30 within 30m
-- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18450_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
+- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
 - `2022-11-24`: `missing_entry_or_exit_timestamp`. NIFTY_18400_PE_01_DEC_22.csv no entry bar near 2022-11-24T15:29:00+05:30 within 30m
 - `2022-12-01`: `missing_entry_or_exit_timestamp`. NIFTY_18900_CE_08_DEC_22.csv no entry bar near 2022-12-01T15:29:00+05:30 within 30m
 - `2022-12-08`: `missing_entry_or_exit_timestamp`. NIFTY_18500_PE_15_DEC_22.csv no entry bar near 2022-12-08T15:29:00+05:30 within 30m
 - `2022-12-15`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_22_DEC_22.csv no entry bar near 2022-12-15T15:29:00+05:30 within 30m
-- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
+- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
 - `2022-12-29`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_05_JAN_23.csv no entry bar near 2022-12-29T15:29:00+05:30 within 30m
 - `2023-01-05`: `missing_entry_or_exit_timestamp`. NIFTY_17900_PE_12_JAN_23.csv no entry bar near 2023-01-05T15:29:00+05:30 within 30m
 - `2023-01-12`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_19_JAN_23.csv no entry bar near 2023-01-12T15:29:00+05:30 within 30m
@@ -606,33 +606,33 @@
 - `2023-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_02_FEB_23.csv no entry bar near 2023-01-25T15:29:00+05:30 within 30m
 - `2023-02-02`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_09_FEB_23.csv no entry bar near 2023-02-02T15:29:00+05:30 within 30m
 - `2023-02-09`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_16_FEB_23.csv no entry bar near 2023-02-09T15:29:00+05:30 within 30m
-- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
+- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
 - `2023-02-23`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_02_MAR_23.csv no entry bar near 2023-02-23T15:29:00+05:30 within 30m
-- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
+- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
 - `2023-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_16_MAR_23.csv no entry bar near 2023-03-09T15:29:00+05:30 within 30m
 - `2023-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_23_MAR_23.csv no entry bar near 2023-03-16T15:29:00+05:30 within 30m
 - `2023-03-23`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_29_MAR_23.csv no entry bar near 2023-03-23T15:29:00+05:30 within 30m
 - `2023-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_06_APR_23.csv no entry bar near 2023-03-29T15:29:00+05:30 within 30m
 - `2023-04-06`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_13_APR_23.csv no entry bar near 2023-04-06T15:29:00+05:30 within 30m
 - `2023-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_20_APR_23.csv no entry bar near 2023-04-13T15:29:00+05:30 within 30m
-- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
+- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
 - `2023-04-27`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_04_MAY_23.csv no entry bar near 2023-04-27T15:29:00+05:30 within 30m
 - `2023-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_11_MAY_23.csv no entry bar near 2023-05-04T15:29:00+05:30 within 30m
 - `2023-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_18_MAY_23.csv no entry bar near 2023-05-11T15:29:00+05:30 within 30m
 - `2023-05-18`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_25_MAY_23.csv no entry bar near 2023-05-18T15:29:00+05:30 within 30m
 - `2023-05-25`: `missing_entry_or_exit_timestamp`. NIFTY_18250_PE_01_JUN_23.csv no entry bar near 2023-05-25T15:29:00+05:30 within 30m
 - `2023-06-01`: `missing_entry_or_exit_timestamp`. NIFTY_18600_CE_08_JUN_23.csv no entry bar near 2023-06-01T15:29:00+05:30 within 30m
-- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18750_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
+- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18700_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
 - `2023-06-15`: `missing_entry_or_exit_timestamp`. NIFTY_18800_CE_22_JUN_23.csv no entry bar near 2023-06-15T15:29:00+05:30 within 30m
-- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18900_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18900_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
+- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18850_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18850_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
 - `2023-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_18750_CE_28_JUN_23.csv no entry bar near 2023-06-23T15:29:00+05:30 within 30m; NIFTY_18750_CE_28_JUN_23.csv no exit bar near 2023-06-26T09:16:00+05:30 within 30m
 - `2023-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_18600_PE_28_JUN_23.csv no entry bar near 2023-06-26T15:29:00+05:30 within 30m; NIFTY_18600_PE_28_JUN_23.csv no exit bar near 2023-06-27T09:16:00+05:30 within 30m
 - `2023-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_18700_PE_28_JUN_23.csv no entry bar near 2023-06-27T15:29:00+05:30 within 30m
-- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18900_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18900_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
+- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18850_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18850_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
 - `2023-07-06`: `missing_entry_or_exit_timestamp`. NIFTY_19400_PE_13_JUL_23.csv no entry bar near 2023-07-06T15:29:00+05:30 within 30m
-- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19550_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
-- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19850_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
-- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19800_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
+- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19500_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
+- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19900_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
+- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19750_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
 - `2023-08-03`: `missing_entry_or_exit_timestamp`. NIFTY_19500_CE_10_AUG_23.csv no entry bar near 2023-08-03T15:29:00+05:30 within 30m
 - `2023-08-10`: `missing_entry_or_exit_timestamp`. NIFTY_19650_CE_17_AUG_23.csv no entry bar near 2023-08-10T15:29:00+05:30 within 30m
 - `2023-08-17`: `missing_entry_or_exit_timestamp`. NIFTY_19450_CE_24_AUG_23.csv no entry bar near 2023-08-17T15:29:00+05:30 within 30m
@@ -641,49 +641,49 @@
 - `2023-09-07`: `missing_entry_or_exit_timestamp`. NIFTY_19600_PE_14_SEP_23.csv no entry bar near 2023-09-07T15:29:00+05:30 within 30m
 - `2023-09-14`: `missing_entry_or_exit_timestamp`. NIFTY_20000_PE_21_SEP_23.csv no entry bar near 2023-09-14T15:29:00+05:30 within 30m
 - `2023-09-21`: `missing_entry_or_exit_timestamp`. NIFTY_19850_CE_28_SEP_23.csv no entry bar near 2023-09-21T15:29:00+05:30 within 30m
-- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19650_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
+- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19600_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
 - `2023-10-05`: `missing_entry_or_exit_timestamp`. NIFTY_19450_PE_12_OCT_23.csv no entry bar near 2023-10-05T15:29:00+05:30 within 30m
 - `2023-10-12`: `missing_entry_or_exit_timestamp`. NIFTY_19900_CE_19_OCT_23.csv no entry bar near 2023-10-12T15:29:00+05:30 within 30m
-- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19700_CE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
+- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19500_PE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
 - `2023-10-26`: `missing_entry_or_exit_timestamp`. NIFTY_18950_CE_02_NOV_23.csv no entry bar near 2023-10-26T15:29:00+05:30 within 30m
-- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_19050_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
+- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_19000_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
 - `2023-11-09`: `missing_entry_or_exit_timestamp`. NIFTY_19500_CE_16_NOV_23.csv no entry bar near 2023-11-09T15:29:00+05:30 within 30m
 - `2023-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_19350_PE_16_NOV_23.csv no exit bar near 2023-11-12T09:16:00+05:30 within 30m
-- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:15:00+05:30; no fallback within 30m
+- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:00:00+05:30; no fallback within 30m
 - `2023-11-16`: `missing_entry_or_exit_timestamp`. NIFTY_19850_CE_23_NOV_23.csv no entry bar near 2023-11-16T15:29:00+05:30 within 30m
 - `2023-11-23`: `missing_entry_or_exit_timestamp`. NIFTY_19900_CE_30_NOV_23.csv no entry bar near 2023-11-23T15:29:00+05:30 within 30m
 - `2023-11-30`: `missing_entry_or_exit_timestamp`. NIFTY_20050_PE_07_DEC_23.csv no entry bar near 2023-11-30T15:29:00+05:30 within 30m
-- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_20800_PE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
-- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21100_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
-- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21200_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
-- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21650_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
+- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_21000_CE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
+- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21050_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
+- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21150_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
+- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21700_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
 - `2024-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_11_JAN_24.csv no entry bar near 2024-01-04T15:29:00+05:30 within 30m
-- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
-- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21400_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
+- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21750_CE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
+- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21350_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
 - `2024-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_21250_PE_01_FEB_24.csv no entry bar near 2024-01-25T15:29:00+05:30 within 30m
 - `2024-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_21800_CE_08_FEB_24.csv no entry bar near 2024-02-01T15:29:00+05:30 within 30m
-- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21850_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
-- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21850_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
+- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21800_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
+- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21800_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
 - `2024-02-22`: `missing_entry_or_exit_timestamp`. NIFTY_22100_PE_29_FEB_24.csv no entry bar near 2024-02-22T15:29:00+05:30 within 30m
-- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21950_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
-- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:15:00+05:30; no fallback within 30m
-- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22600_CE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
+- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21900_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
+- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:00:00+05:30; no fallback within 30m
+- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22400_PE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
 - `2024-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_22050_PE_21_MAR_24.csv no entry bar near 2024-03-14T15:29:00+05:30 within 30m
-- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_22100_CE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
-- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22450_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
-- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22450_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
+- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_21950_PE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
+- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22350_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
+- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22400_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
 - `2024-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_22650_PE_18_APR_24.csv no entry bar near 2024-04-10T15:29:00+05:30 within 30m
-- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22150_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
+- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22050_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
 - `2024-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_22450_PE_02_MAY_24.csv no entry bar near 2024-04-25T15:29:00+05:30 within 30m
 - `2024-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_22750_CE_09_MAY_24.csv no entry bar near 2024-05-02T15:29:00+05:30 within 30m
 - `2024-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_22050_CE_16_MAY_24.csv no entry bar near 2024-05-09T15:29:00+05:30 within 30m
 - `2024-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_22300_PE_23_MAY_24.csv no entry bar near 2024-05-16T15:29:00+05:30 within 30m
-- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:15:00+05:30; no fallback within 30m
-- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22850_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
-- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22450_PE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
+- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:00:00+05:30; no fallback within 30m
+- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22900_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
+- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22600_CE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
 - `2024-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_22750_PE_13_JUN_24.csv no entry bar near 2024-06-06T15:29:00+05:30 within 30m
 - `2024-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_23300_PE_20_JUN_24.csv no entry bar near 2024-06-13T15:29:00+05:30 within 30m
-- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23500_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
+- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23450_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
 - `2024-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_23950_PE_04_JUL_24.csv no entry bar near 2024-06-27T15:29:00+05:30 within 30m
 - `2024-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_24400_CE_11_JUL_24.csv no entry bar near 2024-07-04T15:29:00+05:30 within 30m
 - `2024-07-11`: `missing_entry_or_exit_timestamp`. NIFTY_24250_PE_18_JUL_24.csv no entry bar near 2024-07-11T15:29:00+05:30 within 30m
@@ -695,36 +695,36 @@
 - `2024-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_24900_CE_29_AUG_24.csv no entry bar near 2024-08-22T15:29:00+05:30 within 30m
 - `2024-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_25050_PE_05_SEP_24.csv no entry bar near 2024-08-29T15:29:00+05:30 within 30m
 - `2024-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_25250_CE_12_SEP_24.csv no entry bar near 2024-09-05T15:29:00+05:30 within 30m
-- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25200_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
+- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25300_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
 - `2024-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_25550_CE_26_SEP_24.csv no entry bar near 2024-09-19T15:29:00+05:30 within 30m
 - `2024-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_26100_PE_03_OCT_24.csv no entry bar near 2024-09-26T15:29:00+05:30 within 30m
 - `2024-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_25350_CE_10_OCT_24.csv no entry bar near 2024-10-03T15:29:00+05:30 within 30m
 - `2024-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_25100_CE_17_OCT_24.csv no entry bar near 2024-10-10T15:29:00+05:30 within 30m
 - `2024-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_24850_CE_24_OCT_24.csv no entry bar near 2024-10-17T15:29:00+05:30 within 30m
-- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24300_PE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
-- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24150_PE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24150_PE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
-- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:15:00+05:30; no fallback within 30m
+- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24500_CE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
+- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24300_CE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24300_CE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
+- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:00:00+05:30; no fallback within 30m
 - `2024-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_24300_CE_14_NOV_24.csv no entry bar near 2024-11-07T15:29:00+05:30 within 30m
-- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23450_PE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
+- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23650_CE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
 - `2024-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_23250_PE_28_NOV_24.csv no entry bar near 2024-11-21T15:29:00+05:30 within 30m
-- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24050_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
-- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24600_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
+- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
+- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24650_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
 - `2024-12-12`: `missing_entry_or_exit_timestamp`. NIFTY_24650_CE_19_DEC_24.csv no entry bar near 2024-12-12T15:29:00+05:30 within 30m
-- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
+- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_24050_CE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
 - `2025-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_25950_CE_28_OCT_25.csv no exit bar near 2025-10-21T09:16:00+05:30 within 30m
 - `2025-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_25950_CE_28_OCT_25.csv no entry bar near 2025-10-21T15:29:00+05:30 within 30m
-- `2026-03-18`: `missing_option_file`. Missing option file: NIFTY_23850_CE_24_MAR_26.csv
-- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23950_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
+- `2026-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_24_MAR_26.csv no entry bar near 2026-03-18T15:29:00+05:30 within 30m; NIFTY_23700_PE_24_MAR_26.csv no exit bar near 2026-03-19T09:16:00+05:30 within 30m
+- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23900_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
 - `2026-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_24200_CE_05_MAY_26.csv no entry bar near 2026-05-04T15:29:00+05:30 within 30m; NIFTY_24200_CE_05_MAY_26.csv no exit bar near 2026-05-05T09:16:00+05:30 within 30m
 - `2026-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_23950_PE_12_MAY_26.csv no entry bar near 2026-05-05T15:29:00+05:30 within 30m; NIFTY_23950_PE_12_MAY_26.csv no exit bar near 2026-05-06T09:16:00+05:30 within 30m
-- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24250_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24250_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
-- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24450_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24450_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
+- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24200_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24200_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
+- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24400_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24400_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
 - `2026-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_24300_CE_12_MAY_26.csv no entry bar near 2026-05-08T15:29:00+05:30 within 30m; NIFTY_24300_CE_12_MAY_26.csv no exit bar near 2026-05-11T09:16:00+05:30 within 30m
 - `2026-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_23900_CE_12_MAY_26.csv no entry bar near 2026-05-11T15:29:00+05:30 within 30m; NIFTY_23900_CE_12_MAY_26.csv no exit bar near 2026-05-12T09:16:00+05:30 within 30m
 - `2026-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_23300_PE_09_JUN_26.csv no exit bar near 2026-06-04T09:16:00+05:30 within 30m
-- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23350_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23350_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
+- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23300_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23300_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
 - `2026-06-05`: `missing_entry_or_exit_timestamp`. NIFTY_23450_CE_09_JUN_26.csv no entry bar near 2026-06-05T15:29:00+05:30 within 30m; NIFTY_23450_CE_09_JUN_26.csv no exit bar near 2026-06-08T09:16:00+05:30 within 30m
-- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23200_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23200_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
+- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23250_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23250_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
 - `2026-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_23900_PE_23_JUN_26.csv no exit bar near 2026-06-17T09:16:00+05:30 within 30m
 - `2026-06-17`: `missing_entry_or_exit_timestamp`. NIFTY_24000_PE_23_JUN_26.csv no entry bar near 2026-06-17T15:29:00+05:30 within 30m; NIFTY_24000_PE_23_JUN_26.csv no exit bar near 2026-06-18T09:16:00+05:30 within 30m
 - `2026-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_24100_PE_23_JUN_26.csv no entry bar near 2026-06-18T15:29:00+05:30 within 30m; NIFTY_24100_PE_23_JUN_26.csv no exit bar near 2026-06-19T09:16:00+05:30 within 30m
@@ -732,39 +732,39 @@
 
 ### OTM_200
 
-- `2019-01-01`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-01-01`: `insufficient_spot_history`. 2019-01-01T15:00:00+05:30 has 24 bars; needs 25
 - `2019-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-01-02T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-01-03T09:16:00+05:30 within 30m
 - `2019-01-03`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
-- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
+- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-01-07`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-01-08`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-01-09`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-01-10`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-01-10T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-01-11T09:16:00+05:30 within 30m
-- `2019-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-01-11T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-01-14T09:16:00+05:30 within 30m
+- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-01-14`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-01-15`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-01-16T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-01-17T09:16:00+05:30 within 30m
-- `2019-01-17`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-01-17T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-01-18T09:16:00+05:30 within 30m
+- `2019-01-17`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-01-18`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
-- `2019-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-01-21T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-01-22T09:16:00+05:30 within 30m
-- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
-- `2019-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-01-23T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-01-24T09:16:00+05:30 within 30m
+- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-01-24`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-01-25T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-01-28T09:16:00+05:30 within 30m
-- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
-- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
+- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
+- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-01-30`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
-- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
+- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-02-01`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-02-04`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-02-05`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-02-06`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-02-07`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-02-07T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-02-08T09:16:00+05:30 within 30m
 - `2019-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-02-08T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-02-11T09:16:00+05:30 within 30m
-- `2019-02-11`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-02-11T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-02-12T09:16:00+05:30 within 30m
 - `2019-02-12`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-02-13T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-02-14T09:16:00+05:30 within 30m
-- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
+- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-02-15`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-02-18`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
 - `2019-02-19`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
@@ -778,29 +778,29 @@
 - `2019-03-01`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-03-05`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-03-06`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
-- `2019-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-03-07T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-03-08T09:16:00+05:30 within 30m
+- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-03-08`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
-- `2019-03-11`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-03-11T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-03-12T09:16:00+05:30 within 30m
+- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-03-12T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-03-13T09:16:00+05:30 within 30m
 - `2019-03-13`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-03-14`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
-- `2019-03-15`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
-- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
+- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
+- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
 - `2019-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-03-19T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-03-20T09:16:00+05:30 within 30m
 - `2019-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-03-20T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-03-22T09:16:00+05:30 within 30m
 - `2019-03-22`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-03-25`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-03-26T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-03-27T09:16:00+05:30 within 30m
 - `2019-03-27`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
-- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
+- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
 - `2019-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-03-29T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-04-01T09:16:00+05:30 within 30m
 - `2019-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-04-01T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-04-02T09:16:00+05:30 within 30m
-- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
+- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
 - `2019-04-03`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-04-03T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-04-04T09:16:00+05:30 within 30m
 - `2019-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-04-04T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-04-05T09:16:00+05:30 within 30m
-- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
+- `2019-04-05`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-04-08T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-04-09T09:16:00+05:30 within 30m
-- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
+- `2019-04-09`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-04-10T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-04-11T09:16:00+05:30 within 30m
 - `2019-04-11`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-04-11T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-04-12T09:16:00+05:30 within 30m
 - `2019-04-12`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
@@ -809,26 +809,26 @@
 - `2019-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-04-18T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-04-22T09:16:00+05:30 within 30m
 - `2019-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-04-22T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-04-23T09:16:00+05:30 within 30m
 - `2019-04-23`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-04-23T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-04-24T09:16:00+05:30 within 30m
-- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
+- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
 - `2019-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-04-25T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-04-26T09:16:00+05:30 within 30m
 - `2019-04-26`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-04-26T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-04-30T09:16:00+05:30 within 30m
 - `2019-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-04-30T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-05-02T09:16:00+05:30 within 30m
-- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
+- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
 - `2019-05-03`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-05-03T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-05-06T09:16:00+05:30 within 30m
 - `2019-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-06T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-05-07T09:16:00+05:30 within 30m
 - `2019-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-05-07T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-05-08T09:16:00+05:30 within 30m
 - `2019-05-08`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-05-09T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-05-10T09:16:00+05:30 within 30m
-- `2019-05-10`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
+- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
 - `2019-05-13`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-05-14`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-05-15`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-05-16T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-05-17T09:16:00+05:30 within 30m
+- `2019-05-16`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-05-17`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-05-17T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-05-20T09:16:00+05:30 within 30m
-- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
+- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
 - `2019-05-21`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-05-21T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-05-22T09:16:00+05:30 within 30m
 - `2019-05-22`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-05-22T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-05-23T09:16:00+05:30 within 30m
-- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
+- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
 - `2019-05-24`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-05-24T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-05-27T09:16:00+05:30 within 30m
 - `2019-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-05-27T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-05-28T09:16:00+05:30 within 30m
 - `2019-05-28`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-05-28T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-05-29T09:16:00+05:30 within 30m
@@ -836,10 +836,10 @@
 - `2019-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-05-30T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-05-31T09:16:00+05:30 within 30m
 - `2019-05-31`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-05-31T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-06-03T09:16:00+05:30 within 30m
 - `2019-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-06-03T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-06-04T09:16:00+05:30 within 30m
-- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
+- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
 - `2019-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-06-06T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-06-07T09:16:00+05:30 within 30m
 - `2019-06-07`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-06-07T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-06-10T09:16:00+05:30 within 30m
-- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
+- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
 - `2019-06-11`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-06-11T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-06-12T09:16:00+05:30 within 30m
 - `2019-06-12`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-06-12T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-06-13T09:16:00+05:30 within 30m
 - `2019-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-06-13T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-06-14T09:16:00+05:30 within 30m
@@ -848,7 +848,7 @@
 - `2019-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-06-18T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-06-19T09:16:00+05:30 within 30m
 - `2019-06-19`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-06-19T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-06-20T09:16:00+05:30 within 30m
 - `2019-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-06-20T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-06-21T09:16:00+05:30 within 30m
-- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
+- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
 - `2019-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-06-24T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-06-25T09:16:00+05:30 within 30m
 - `2019-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-06-25T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-06-26T09:16:00+05:30 within 30m
 - `2019-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-06-26T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-06-27T09:16:00+05:30 within 30m
@@ -856,7 +856,7 @@
 - `2019-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-06-28T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-07-01T09:16:00+05:30 within 30m
 - `2019-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-07-01T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-07-02T09:16:00+05:30 within 30m
 - `2019-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-07-02T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-07-03T09:16:00+05:30 within 30m
-- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
+- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
 - `2019-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-07-04T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-07-05T09:16:00+05:30 within 30m
 - `2019-07-05`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-07-05T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-07-08T09:16:00+05:30 within 30m
 - `2019-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-07-08T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-07-09T09:16:00+05:30 within 30m
@@ -868,54 +868,54 @@
 - `2019-07-16`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-07-17`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-07-17T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-07-18T09:16:00+05:30 within 30m
 - `2019-07-18`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-07-18T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-07-19T09:16:00+05:30 within 30m
-- `2019-07-19`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
-- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
+- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
+- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-07-23`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-07-24`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-07-25`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-07-26`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-07-26T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-07-29T09:16:00+05:30 within 30m
 - `2019-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-07-29T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-07-30T09:16:00+05:30 within 30m
 - `2019-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-07-30T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-07-31T09:16:00+05:30 within 30m
-- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-08-01`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-08-02`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-08-05`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
-- `2019-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-08-06T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-08-07T09:16:00+05:30 within 30m
+- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-08-07`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
-- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-08-09`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-08-09T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-08-13T09:16:00+05:30 within 30m
-- `2019-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-08-13T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-08-14T09:16:00+05:30 within 30m
-- `2019-08-14`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-08-14T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-08-16T09:16:00+05:30 within 30m
+- `2019-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-08-13T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-08-14T09:16:00+05:30 within 30m
+- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-08-16`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-08-19`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-08-19T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-08-20T09:16:00+05:30 within 30m
-- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-08-20`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-08-20T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-08-21T09:16:00+05:30 within 30m
 - `2019-08-21`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-08-21T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-08-22T09:16:00+05:30 within 30m
 - `2019-08-22`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-08-23`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-08-26`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
-- `2019-08-27`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
 - `2019-08-28`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-08-28T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-08-29T09:16:00+05:30 within 30m
 - `2019-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-08-29T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-08-30T09:16:00+05:30 within 30m
-- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-09-03`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-09-03T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-09-04T09:16:00+05:30 within 30m
 - `2019-09-04`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-09-05`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-09-06`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-09-09`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
-- `2019-09-11`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-09-11T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-09-12T09:16:00+05:30 within 30m
+- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-09-12T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-09-13T09:16:00+05:30 within 30m
 - `2019-09-13`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-09-16T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-09-17T09:16:00+05:30 within 30m
-- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
-- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-09-17T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-09-18T09:16:00+05:30 within 30m
+- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-09-19`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
 - `2019-09-20`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-09-20T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-09-23T09:16:00+05:30 within 30m
-- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
-- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
+- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
+- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
 - `2019-09-25`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
-- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
+- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
 - `2019-09-27`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-09-27T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-09-30T09:16:00+05:30 within 30m
-- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
+- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
 - `2019-10-01`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-10-03T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-10-04T09:16:00+05:30 within 30m
 - `2019-10-04`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
@@ -923,7 +923,7 @@
 - `2019-10-09`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-10-09T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-10-10T09:16:00+05:30 within 30m
 - `2019-10-10`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-10-11`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-10-11T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-10-14T09:16:00+05:30 within 30m
-- `2019-10-14`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
+- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
 - `2019-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-10-15T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-10-16T09:16:00+05:30 within 30m
 - `2019-10-16`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-10-16T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-10-17T09:16:00+05:30 within 30m
 - `2019-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-10-17T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-10-18T09:16:00+05:30 within 30m
@@ -932,12 +932,12 @@
 - `2019-10-23`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-10-23T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-10-24T09:16:00+05:30 within 30m
 - `2019-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-10-24T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-10-25T09:16:00+05:30 within 30m
 - `2019-10-25`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-10-25T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-10-27T09:16:00+05:30 within 30m
-- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:15:00+05:30; no fallback within 30m
+- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:00:00+05:30; no fallback within 30m
 - `2019-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-10-29T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-10-30T09:16:00+05:30 within 30m
 - `2019-10-30`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-10-30T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-10-31T09:16:00+05:30 within 30m
 - `2019-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-10-31T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-11-01T09:16:00+05:30 within 30m
 - `2019-11-01`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-11-01T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-11-04T09:16:00+05:30 within 30m
-- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
+- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
 - `2019-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-11-05T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-11-06T09:16:00+05:30 within 30m
 - `2019-11-06`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-11-06T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-11-07T09:16:00+05:30 within 30m
 - `2019-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-11-07T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-11-08T09:16:00+05:30 within 30m
@@ -946,11 +946,11 @@
 - `2019-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-11-13T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-11-14T09:16:00+05:30 within 30m
 - `2019-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-11-14T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-11-15T09:16:00+05:30 within 30m
 - `2019-11-15`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-11-15T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-11-18T09:16:00+05:30 within 30m
-- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
+- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
 - `2019-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-11-19T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-11-20T09:16:00+05:30 within 30m
 - `2019-11-20`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-11-20T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-11-21T09:16:00+05:30 within 30m
 - `2019-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-11-21T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-11-22T09:16:00+05:30 within 30m
-- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
+- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
 - `2019-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-11-25T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-11-26T09:16:00+05:30 within 30m
 - `2019-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-11-26T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-11-27T09:16:00+05:30 within 30m
 - `2019-11-27`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-11-27T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-11-28T09:16:00+05:30 within 30m
@@ -959,7 +959,7 @@
 - `2019-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-12-02T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-12-03T09:16:00+05:30 within 30m
 - `2019-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-12-03T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-12-04T09:16:00+05:30 within 30m
 - `2019-12-04`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-12-04T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-12-05T09:16:00+05:30 within 30m
-- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
+- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
 - `2019-12-06`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-12-06T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-12-09T09:16:00+05:30 within 30m
 - `2019-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-12-09T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-12-10T09:16:00+05:30 within 30m
 - `2019-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-12-10T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-12-11T09:16:00+05:30 within 30m
@@ -968,7 +968,7 @@
 - `2019-12-13`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-12-13T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-12-16T09:16:00+05:30 within 30m
 - `2019-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-12-16T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-12-17T09:16:00+05:30 within 30m
 - `2019-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-12-17T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-12-18T09:16:00+05:30 within 30m
-- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
+- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
 - `2019-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-12-19T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-12-20T09:16:00+05:30 within 30m
 - `2019-12-20`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-12-20T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-12-23T09:16:00+05:30 within 30m
 - `2019-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-12-23T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-12-24T09:16:00+05:30 within 30m
@@ -976,20 +976,20 @@
 - `2019-12-26`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-12-26T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-12-27T09:16:00+05:30 within 30m
 - `2019-12-27`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-12-27T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-12-30T09:16:00+05:30 within 30m
 - `2019-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-12-30T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-12-31T09:16:00+05:30 within 30m
-- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
+- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
 - `2020-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_09_JAN_20.csv no entry bar near 2020-01-02T15:29:00+05:30 within 30m
 - `2020-01-09`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_16_JAN_20.csv no entry bar near 2020-01-09T15:29:00+05:30 within 30m
 - `2020-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_23_JAN_20.csv no entry bar near 2020-01-16T15:29:00+05:30 within 30m
 - `2020-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_30_JAN_20.csv no entry bar near 2020-01-23T15:29:00+05:30 within 30m
-- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
+- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
 - `2020-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_13_FEB_20.csv no entry bar near 2020-02-06T15:29:00+05:30 within 30m
 - `2020-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_20_FEB_20.csv no entry bar near 2020-02-13T15:29:00+05:30 within 30m
 - `2020-02-20`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_27_FEB_20.csv no entry bar near 2020-02-20T15:29:00+05:30 within 30m
-- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11450_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
 - `2020-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11450_CE_12_MAR_20.csv no entry bar near 2020-03-05T15:29:00+05:30 within 30m
-- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9850_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m
+- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9750_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m; NIFTY_9750_CE_19_MAR_20.csv no exit bar near 2020-03-13T09:16:00+05:30 within 30m
 - `2020-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_8050_PE_26_MAR_20.csv no entry bar near 2020-03-19T15:29:00+05:30 within 30m
-- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8450_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
+- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8400_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
 - `2020-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_8450_CE_09_APR_20.csv no entry bar near 2020-04-01T15:29:00+05:30 within 30m
 - `2020-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_8900_PE_16_APR_20.csv no entry bar near 2020-04-09T15:29:00+05:30 within 30m
 - `2020-04-16`: `missing_entry_or_exit_timestamp`. NIFTY_8800_PE_23_APR_20.csv no entry bar near 2020-04-16T15:29:00+05:30 within 30m
@@ -1004,9 +1004,9 @@
 - `2020-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_9900_PE_25_JUN_20.csv no entry bar near 2020-06-18T15:29:00+05:30 within 30m
 - `2020-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_10500_CE_02_JUL_20.csv no entry bar near 2020-06-25T15:29:00+05:30 within 30m
 - `2020-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_10350_PE_09_JUL_20.csv no entry bar near 2020-07-02T15:29:00+05:30 within 30m
-- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10650_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
+- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10600_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
 - `2020-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_10550_PE_23_JUL_20.csv no entry bar near 2020-07-16T15:29:00+05:30 within 30m
-- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11050_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
+- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
 - `2020-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_06_AUG_20.csv no entry bar near 2020-07-30T15:29:00+05:30 within 30m
 - `2020-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_13_AUG_20.csv no entry bar near 2020-08-06T15:29:00+05:30 within 30m
 - `2020-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_20_AUG_20.csv no entry bar near 2020-08-13T15:29:00+05:30 within 30m
@@ -1016,40 +1016,40 @@
 - `2020-09-10`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_17_SEP_20.csv no entry bar near 2020-09-10T15:29:00+05:30 within 30m
 - `2020-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_24_SEP_20.csv no entry bar near 2020-09-17T15:29:00+05:30 within 30m
 - `2020-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_01_OCT_20.csv no entry bar near 2020-09-24T15:29:00+05:30 within 30m
-- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
+- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
 - `2020-10-08`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_15_OCT_20.csv no entry bar near 2020-10-08T15:29:00+05:30 within 30m
 - `2020-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_22_OCT_20.csv no entry bar near 2020-10-15T15:29:00+05:30 within 30m
 - `2020-10-22`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_29_OCT_20.csv no entry bar near 2020-10-22T15:29:00+05:30 within 30m
-- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
-- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
+- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
+- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
 - `2020-11-12`: `missing_entry_or_exit_timestamp`. NIFTY_12500_PE_19_NOV_20.csv no entry bar near 2020-11-12T15:29:00+05:30 within 30m
 - `2020-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12500_PE_19_NOV_20.csv no exit bar near 2020-11-14T09:16:00+05:30 within 30m
-- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:15:00+05:30; no fallback within 30m
+- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:00:00+05:30; no fallback within 30m
 - `2020-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_12950_CE_26_NOV_20.csv no entry bar near 2020-11-19T15:29:00+05:30 within 30m
 - `2020-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12800_PE_03_DEC_20.csv no entry bar near 2020-11-26T15:29:00+05:30 within 30m
 - `2020-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_13350_CE_10_DEC_20.csv no entry bar near 2020-12-03T15:29:00+05:30 within 30m
-- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13300_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
+- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13250_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
 - `2020-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_13550_PE_24_DEC_20.csv no entry bar near 2020-12-17T15:29:00+05:30 within 30m
 - `2020-12-24`: `missing_entry_or_exit_timestamp`. NIFTY_13550_PE_31_DEC_20.csv no entry bar near 2020-12-24T15:29:00+05:30 within 30m
-- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14150_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
+- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14200_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
 - `2021-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_14350_CE_14_JAN_21.csv no entry bar near 2021-01-07T15:29:00+05:30 within 30m
 - `2021-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_14400_PE_21_JAN_21.csv no entry bar near 2021-01-14T15:29:00+05:30 within 30m
-- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14850_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
-- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13600_PE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
+- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
+- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_14000_CE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
 - `2021-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_14700_PE_11_FEB_21.csv no entry bar near 2021-02-04T15:29:00+05:30 within 30m
-- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15000_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
+- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_14950_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
 - `2021-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_15300_CE_25_FEB_21.csv no entry bar near 2021-02-18T15:29:00+05:30 within 30m
 - `2021-02-25`: `missing_entry_or_exit_timestamp`. NIFTY_15300_CE_04_MAR_21.csv no entry bar near 2021-02-25T15:29:00+05:30 within 30m
 - `2021-03-04`: `missing_entry_or_exit_timestamp`. NIFTY_15300_CE_10_MAR_21.csv no entry bar near 2021-03-04T15:29:00+05:30 within 30m
-- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_14950_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
+- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15000_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
 - `2021-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_25_MAR_21.csv no entry bar near 2021-03-18T15:29:00+05:30 within 30m
-- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14550_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
-- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14650_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
-- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15100_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
+- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14500_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
+- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14700_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
+- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15050_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
 - `2021-04-15`: `missing_entry_or_exit_timestamp`. NIFTY_14400_PE_22_APR_21.csv no entry bar near 2021-04-15T15:29:00+05:30 within 30m
 - `2021-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_14200_PE_29_APR_21.csv no entry bar near 2021-04-22T15:29:00+05:30 within 30m
 - `2021-04-29`: `missing_entry_or_exit_timestamp`. NIFTY_15100_CE_06_MAY_21.csv no entry bar near 2021-04-29T15:29:00+05:30 within 30m
-- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14550_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
+- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14500_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
 - `2021-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_14900_CE_20_MAY_21.csv no entry bar near 2021-05-12T15:29:00+05:30 within 30m
 - `2021-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_15100_CE_27_MAY_21.csv no entry bar near 2021-05-20T15:29:00+05:30 within 30m
 - `2021-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_15150_PE_03_JUN_21.csv no entry bar near 2021-05-27T15:29:00+05:30 within 30m
@@ -1059,85 +1059,85 @@
 - `2021-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_15600_PE_01_JUL_21.csv no entry bar near 2021-06-24T15:29:00+05:30 within 30m
 - `2021-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_15900_CE_08_JUL_21.csv no entry bar near 2021-07-01T15:29:00+05:30 within 30m
 - `2021-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_15950_CE_15_JUL_21.csv no entry bar near 2021-07-08T15:29:00+05:30 within 30m
-- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_16100_CE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
-- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15650_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
+- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_15700_PE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
+- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15600_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
 - `2021-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_16000_CE_05_AUG_21.csv no entry bar near 2021-07-29T15:29:00+05:30 within 30m
 - `2021-08-05`: `missing_entry_or_exit_timestamp`. NIFTY_16100_PE_12_AUG_21.csv no entry bar near 2021-08-05T15:29:00+05:30 within 30m
 - `2021-08-12`: `missing_entry_or_exit_timestamp`. NIFTY_16150_PE_18_AUG_21.csv no entry bar near 2021-08-12T15:29:00+05:30 within 30m
-- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
+- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16800_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
 - `2021-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_16850_CE_02_SEP_21.csv no entry bar near 2021-08-26T15:29:00+05:30 within 30m
 - `2021-09-02`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_09_SEP_21.csv no entry bar near 2021-09-02T15:29:00+05:30 within 30m
 - `2021-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_16_SEP_21.csv no entry bar near 2021-09-09T15:29:00+05:30 within 30m
 - `2021-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_23_SEP_21.csv no entry bar near 2021-09-16T15:29:00+05:30 within 30m
 - `2021-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_30_SEP_21.csv no entry bar near 2021-09-23T15:29:00+05:30 within 30m
-- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
+- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
 - `2021-10-07`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_14_OCT_21.csv no entry bar near 2021-10-07T15:29:00+05:30 within 30m
 - `2021-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_21_OCT_21.csv no entry bar near 2021-10-14T15:29:00+05:30 within 30m
-- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18000_PE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
+- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
 - `2021-10-28`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_03_NOV_21.csv no entry bar near 2021-10-28T15:29:00+05:30 within 30m
-- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_18050_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
+- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_18000_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
 - `2021-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_11_NOV_21.csv no entry bar near 2021-11-04T15:29:00+05:30 within 30m
-- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
+- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
 - `2021-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_25_NOV_21.csv no entry bar near 2021-11-18T15:29:00+05:30 within 30m
 - `2021-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_02_DEC_21.csv no entry bar near 2021-11-25T15:29:00+05:30 within 30m
 - `2021-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_09_DEC_21.csv no entry bar near 2021-12-02T15:29:00+05:30 within 30m
 - `2021-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_16_DEC_21.csv no entry bar near 2021-12-09T15:29:00+05:30 within 30m
-- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
-- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
-- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
+- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
+- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
+- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
 - `2022-01-06`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_13_JAN_22.csv no entry bar near 2022-01-06T15:29:00+05:30 within 30m
 - `2022-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_20_JAN_22.csv no entry bar near 2022-01-13T15:29:00+05:30 within 30m
-- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
-- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_16950_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
-- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
+- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
+- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
+- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
 - `2022-02-10`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_17_FEB_22.csv no entry bar near 2022-02-10T15:29:00+05:30 within 30m
 - `2022-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_24_FEB_22.csv no entry bar near 2022-02-17T15:29:00+05:30 within 30m
-- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16400_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
-- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16700_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
-- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
-- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
-- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
+- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16450_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
+- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
+- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16800_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
+- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
+- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
 - `2022-03-31`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_07_APR_22.csv no entry bar near 2022-03-31T15:29:00+05:30 within 30m
 - `2022-04-07`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_13_APR_22.csv no entry bar near 2022-04-07T15:29:00+05:30 within 30m
 - `2022-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_21_APR_22.csv no entry bar near 2022-04-13T15:29:00+05:30 within 30m
 - `2022-04-21`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_28_APR_22.csv no entry bar near 2022-04-21T15:29:00+05:30 within 30m
-- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
-- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16850_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
-- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_16050_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
-- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_16050_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
-- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16000_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
+- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
+- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16900_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
+- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_16000_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
+- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_16000_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
+- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_15950_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
 - `2022-06-02`: `missing_entry_or_exit_timestamp`. NIFTY_16450_PE_09_JUN_22.csv no entry bar near 2022-06-02T15:29:00+05:30 within 30m
 - `2022-06-09`: `missing_entry_or_exit_timestamp`. NIFTY_16300_PE_16_JUN_22.csv no entry bar near 2022-06-09T15:29:00+05:30 within 30m
 - `2022-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_15550_CE_23_JUN_22.csv no entry bar near 2022-06-16T15:29:00+05:30 within 30m
-- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15400_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
-- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15950_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
+- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15350_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
+- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_16000_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
 - `2022-07-07`: `missing_entry_or_exit_timestamp`. NIFTY_15950_PE_14_JUL_22.csv no entry bar near 2022-07-07T15:29:00+05:30 within 30m
 - `2022-07-14`: `missing_entry_or_exit_timestamp`. NIFTY_16150_CE_21_JUL_22.csv no entry bar near 2022-07-14T15:29:00+05:30 within 30m
 - `2022-07-21`: `missing_entry_or_exit_timestamp`. NIFTY_16400_PE_28_JUL_22.csv no entry bar near 2022-07-21T15:29:00+05:30 within 30m
-- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
-- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
+- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16750_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
+- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
 - `2022-08-11`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_18_AUG_22.csv no entry bar near 2022-08-11T15:29:00+05:30 within 30m
 - `2022-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_25_AUG_22.csv no entry bar near 2022-08-18T15:29:00+05:30 within 30m
 - `2022-08-25`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_01_SEP_22.csv no entry bar near 2022-08-25T15:29:00+05:30 within 30m
 - `2022-09-01`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_08_SEP_22.csv no entry bar near 2022-09-01T15:29:00+05:30 within 30m
 - `2022-09-08`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_15_SEP_22.csv no entry bar near 2022-09-08T15:29:00+05:30 within 30m
-- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
-- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
+- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
+- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
 - `2022-09-29`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_06_OCT_22.csv no entry bar near 2022-09-29T15:29:00+05:30 within 30m
-- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
+- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
 - `2022-10-13`: `missing_entry_or_exit_timestamp`. NIFTY_17200_CE_20_OCT_22.csv no entry bar near 2022-10-13T15:29:00+05:30 within 30m
 - `2022-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_27_OCT_22.csv no entry bar near 2022-10-20T15:29:00+05:30 within 30m
-- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
-- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:15:00+05:30; no fallback within 30m
+- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
+- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:00:00+05:30; no fallback within 30m
 - `2022-10-27`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_03_NOV_22.csv no entry bar near 2022-10-27T15:29:00+05:30 within 30m
 - `2022-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_10_NOV_22.csv no entry bar near 2022-11-03T15:29:00+05:30 within 30m
 - `2022-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_17_NOV_22.csv no entry bar near 2022-11-10T15:29:00+05:30 within 30m
-- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
+- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
 - `2022-11-24`: `missing_entry_or_exit_timestamp`. NIFTY_18300_PE_01_DEC_22.csv no entry bar near 2022-11-24T15:29:00+05:30 within 30m
 - `2022-12-01`: `missing_entry_or_exit_timestamp`. NIFTY_19000_CE_08_DEC_22.csv no entry bar near 2022-12-01T15:29:00+05:30 within 30m
 - `2022-12-08`: `missing_entry_or_exit_timestamp`. NIFTY_18400_PE_15_DEC_22.csv no entry bar near 2022-12-08T15:29:00+05:30 within 30m
 - `2022-12-15`: `missing_entry_or_exit_timestamp`. NIFTY_18600_CE_22_DEC_22.csv no entry bar near 2022-12-15T15:29:00+05:30 within 30m
-- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
+- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
 - `2022-12-29`: `missing_entry_or_exit_timestamp`. NIFTY_18000_PE_05_JAN_23.csv no entry bar near 2022-12-29T15:29:00+05:30 within 30m
 - `2023-01-05`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_12_JAN_23.csv no entry bar near 2023-01-05T15:29:00+05:30 within 30m
 - `2023-01-12`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_19_JAN_23.csv no entry bar near 2023-01-12T15:29:00+05:30 within 30m
@@ -1145,33 +1145,33 @@
 - `2023-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_02_FEB_23.csv no entry bar near 2023-01-25T15:29:00+05:30 within 30m
 - `2023-02-02`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_09_FEB_23.csv no entry bar near 2023-02-02T15:29:00+05:30 within 30m
 - `2023-02-09`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_16_FEB_23.csv no entry bar near 2023-02-09T15:29:00+05:30 within 30m
-- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
+- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
 - `2023-02-23`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_02_MAR_23.csv no entry bar near 2023-02-23T15:29:00+05:30 within 30m
-- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
+- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
 - `2023-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_16_MAR_23.csv no entry bar near 2023-03-09T15:29:00+05:30 within 30m
 - `2023-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_23_MAR_23.csv no entry bar near 2023-03-16T15:29:00+05:30 within 30m
 - `2023-03-23`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_29_MAR_23.csv no entry bar near 2023-03-23T15:29:00+05:30 within 30m
 - `2023-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_06_APR_23.csv no entry bar near 2023-03-29T15:29:00+05:30 within 30m
 - `2023-04-06`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_13_APR_23.csv no entry bar near 2023-04-06T15:29:00+05:30 within 30m
 - `2023-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_20_APR_23.csv no entry bar near 2023-04-13T15:29:00+05:30 within 30m
-- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
+- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
 - `2023-04-27`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_04_MAY_23.csv no entry bar near 2023-04-27T15:29:00+05:30 within 30m
 - `2023-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_11_MAY_23.csv no entry bar near 2023-05-04T15:29:00+05:30 within 30m
 - `2023-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_18_MAY_23.csv no entry bar near 2023-05-11T15:29:00+05:30 within 30m
 - `2023-05-18`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_25_MAY_23.csv no entry bar near 2023-05-18T15:29:00+05:30 within 30m
 - `2023-05-25`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_01_JUN_23.csv no entry bar near 2023-05-25T15:29:00+05:30 within 30m
 - `2023-06-01`: `missing_entry_or_exit_timestamp`. NIFTY_18700_CE_08_JUN_23.csv no entry bar near 2023-06-01T15:29:00+05:30 within 30m
-- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18850_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
+- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18800_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
 - `2023-06-15`: `missing_entry_or_exit_timestamp`. NIFTY_18900_CE_22_JUN_23.csv no entry bar near 2023-06-15T15:29:00+05:30 within 30m
-- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_19000_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_19000_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
+- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18950_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18950_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
 - `2023-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_18850_CE_28_JUN_23.csv no entry bar near 2023-06-23T15:29:00+05:30 within 30m; NIFTY_18850_CE_28_JUN_23.csv no exit bar near 2023-06-26T09:16:00+05:30 within 30m
 - `2023-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_18500_PE_28_JUN_23.csv no entry bar near 2023-06-26T15:29:00+05:30 within 30m; NIFTY_18500_PE_28_JUN_23.csv no exit bar near 2023-06-27T09:16:00+05:30 within 30m
 - `2023-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_18600_PE_28_JUN_23.csv no entry bar near 2023-06-27T15:29:00+05:30 within 30m
-- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18800_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18800_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
+- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18750_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18750_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
 - `2023-07-06`: `missing_entry_or_exit_timestamp`. NIFTY_19300_PE_13_JUL_23.csv no entry bar near 2023-07-06T15:29:00+05:30 within 30m
-- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19650_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
-- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19750_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
-- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19900_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
+- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19600_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
+- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19800_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
+- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19850_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
 - `2023-08-03`: `missing_entry_or_exit_timestamp`. NIFTY_19600_CE_10_AUG_23.csv no entry bar near 2023-08-03T15:29:00+05:30 within 30m
 - `2023-08-10`: `missing_entry_or_exit_timestamp`. NIFTY_19750_CE_17_AUG_23.csv no entry bar near 2023-08-10T15:29:00+05:30 within 30m
 - `2023-08-17`: `missing_entry_or_exit_timestamp`. NIFTY_19550_CE_24_AUG_23.csv no entry bar near 2023-08-17T15:29:00+05:30 within 30m
@@ -1180,49 +1180,49 @@
 - `2023-09-07`: `missing_entry_or_exit_timestamp`. NIFTY_19500_PE_14_SEP_23.csv no entry bar near 2023-09-07T15:29:00+05:30 within 30m
 - `2023-09-14`: `missing_entry_or_exit_timestamp`. NIFTY_19900_PE_21_SEP_23.csv no entry bar near 2023-09-14T15:29:00+05:30 within 30m
 - `2023-09-21`: `missing_entry_or_exit_timestamp`. NIFTY_19950_CE_28_SEP_23.csv no entry bar near 2023-09-21T15:29:00+05:30 within 30m
-- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19750_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
+- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19700_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
 - `2023-10-05`: `missing_entry_or_exit_timestamp`. NIFTY_19350_PE_12_OCT_23.csv no entry bar near 2023-10-05T15:29:00+05:30 within 30m
 - `2023-10-12`: `missing_entry_or_exit_timestamp`. NIFTY_20000_CE_19_OCT_23.csv no entry bar near 2023-10-12T15:29:00+05:30 within 30m
-- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19800_CE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
+- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19400_PE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
 - `2023-10-26`: `missing_entry_or_exit_timestamp`. NIFTY_19050_CE_02_NOV_23.csv no entry bar near 2023-10-26T15:29:00+05:30 within 30m
-- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_18950_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
+- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_18900_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
 - `2023-11-09`: `missing_entry_or_exit_timestamp`. NIFTY_19600_CE_16_NOV_23.csv no entry bar near 2023-11-09T15:29:00+05:30 within 30m
 - `2023-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_19250_PE_16_NOV_23.csv no exit bar near 2023-11-12T09:16:00+05:30 within 30m
-- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:15:00+05:30; no fallback within 30m
+- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:00:00+05:30; no fallback within 30m
 - `2023-11-16`: `missing_entry_or_exit_timestamp`. NIFTY_19950_CE_23_NOV_23.csv no entry bar near 2023-11-16T15:29:00+05:30 within 30m
 - `2023-11-23`: `missing_entry_or_exit_timestamp`. NIFTY_20000_CE_30_NOV_23.csv no entry bar near 2023-11-23T15:29:00+05:30 within 30m
 - `2023-11-30`: `missing_entry_or_exit_timestamp`. NIFTY_19950_PE_07_DEC_23.csv no entry bar near 2023-11-30T15:29:00+05:30 within 30m
-- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_20700_PE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
-- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21000_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
-- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21100_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
-- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
+- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_21100_CE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
+- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_20950_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
+- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21050_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
+- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21600_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
 - `2024-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_21450_PE_11_JAN_24.csv no entry bar near 2024-01-04T15:29:00+05:30 within 30m
-- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21450_PE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
-- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21300_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
+- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21850_CE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
+- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21250_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
 - `2024-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_21150_PE_01_FEB_24.csv no entry bar near 2024-01-25T15:29:00+05:30 within 30m
 - `2024-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_21900_CE_08_FEB_24.csv no entry bar near 2024-02-01T15:29:00+05:30 within 30m
-- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21950_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
-- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21750_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
+- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21900_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
+- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21700_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
 - `2024-02-22`: `missing_entry_or_exit_timestamp`. NIFTY_22000_PE_29_FEB_24.csv no entry bar near 2024-02-22T15:29:00+05:30 within 30m
-- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21850_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
-- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:15:00+05:30; no fallback within 30m
-- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22700_CE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
+- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21800_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
+- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:00:00+05:30; no fallback within 30m
+- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22300_PE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
 - `2024-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_21950_PE_21_MAR_24.csv no entry bar near 2024-03-14T15:29:00+05:30 within 30m
-- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_22200_CE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
-- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22550_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
-- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22350_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
+- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_21850_PE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
+- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22450_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
+- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22300_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
 - `2024-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_22550_PE_18_APR_24.csv no entry bar near 2024-04-10T15:29:00+05:30 within 30m
-- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22250_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
+- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22150_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
 - `2024-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_22350_PE_02_MAY_24.csv no entry bar near 2024-04-25T15:29:00+05:30 within 30m
 - `2024-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_22850_CE_09_MAY_24.csv no entry bar near 2024-05-02T15:29:00+05:30 within 30m
 - `2024-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_22150_CE_16_MAY_24.csv no entry bar near 2024-05-09T15:29:00+05:30 within 30m
 - `2024-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_22200_PE_23_MAY_24.csv no entry bar near 2024-05-16T15:29:00+05:30 within 30m
-- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:15:00+05:30; no fallback within 30m
-- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22750_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
-- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22350_PE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
+- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:00:00+05:30; no fallback within 30m
+- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22800_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
+- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22700_CE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
 - `2024-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_22650_PE_13_JUN_24.csv no entry bar near 2024-06-06T15:29:00+05:30 within 30m
 - `2024-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_23200_PE_20_JUN_24.csv no entry bar near 2024-06-13T15:29:00+05:30 within 30m
-- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23400_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
+- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23350_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
 - `2024-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_04_JUL_24.csv no entry bar near 2024-06-27T15:29:00+05:30 within 30m
 - `2024-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_24500_CE_11_JUL_24.csv no entry bar near 2024-07-04T15:29:00+05:30 within 30m
 - `2024-07-11`: `missing_entry_or_exit_timestamp`. NIFTY_24150_PE_18_JUL_24.csv no entry bar near 2024-07-11T15:29:00+05:30 within 30m
@@ -1234,37 +1234,37 @@
 - `2024-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_25000_CE_29_AUG_24.csv no entry bar near 2024-08-22T15:29:00+05:30 within 30m
 - `2024-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_24950_PE_05_SEP_24.csv no entry bar near 2024-08-29T15:29:00+05:30 within 30m
 - `2024-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_25350_CE_12_SEP_24.csv no entry bar near 2024-09-05T15:29:00+05:30 within 30m
-- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25100_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
+- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25200_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
 - `2024-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_25650_CE_26_SEP_24.csv no entry bar near 2024-09-19T15:29:00+05:30 within 30m
 - `2024-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_26000_PE_03_OCT_24.csv no entry bar near 2024-09-26T15:29:00+05:30 within 30m
 - `2024-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_25450_CE_10_OCT_24.csv no entry bar near 2024-10-03T15:29:00+05:30 within 30m
 - `2024-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_25200_CE_17_OCT_24.csv no entry bar near 2024-10-10T15:29:00+05:30 within 30m
 - `2024-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_24950_CE_24_OCT_24.csv no entry bar near 2024-10-17T15:29:00+05:30 within 30m
-- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24200_PE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
-- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24050_PE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24050_PE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
-- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:15:00+05:30; no fallback within 30m
+- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24600_CE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
+- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24400_CE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24400_CE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
+- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:00:00+05:30; no fallback within 30m
 - `2024-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_24400_CE_14_NOV_24.csv no entry bar near 2024-11-07T15:29:00+05:30 within 30m
-- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23350_PE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
+- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23750_CE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
 - `2024-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_23150_PE_28_NOV_24.csv no entry bar near 2024-11-21T15:29:00+05:30 within 30m
-- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24150_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
-- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24500_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
+- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24100_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
+- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24550_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
 - `2024-12-12`: `missing_entry_or_exit_timestamp`. NIFTY_24750_CE_19_DEC_24.csv no entry bar near 2024-12-12T15:29:00+05:30 within 30m
-- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_23750_PE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
-- `2025-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_25000_PE_30_SEP_25.csv no entry bar near 2025-09-23T15:29:00+05:30 within 30m; NIFTY_25000_PE_30_SEP_25.csv no exit bar near 2025-09-24T09:16:00+05:30 within 30m
+- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_24150_CE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
+- `2025-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_23000_PE_27_MAR_25.csv no entry bar near 2025-03-20T15:29:00+05:30 within 30m; NIFTY_23000_PE_27_MAR_25.csv no exit bar near 2025-03-21T09:16:00+05:30 within 30m
 - `2025-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_26050_CE_28_OCT_25.csv no exit bar near 2025-10-21T09:16:00+05:30 within 30m
 - `2025-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_26050_CE_28_OCT_25.csv no entry bar near 2025-10-21T15:29:00+05:30 within 30m
-- `2026-03-18`: `missing_option_file`. Missing option file: NIFTY_23950_CE_24_MAR_26.csv
-- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
+- `2025-12-23`: `missing_option_file`. Missing option file: NIFTY_26000_PE_30_DEC_25.csv
+- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23800_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
 - `2026-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_24300_CE_05_MAY_26.csv no entry bar near 2026-05-04T15:29:00+05:30 within 30m; NIFTY_24300_CE_05_MAY_26.csv no exit bar near 2026-05-05T09:16:00+05:30 within 30m
 - `2026-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_12_MAY_26.csv no entry bar near 2026-05-05T15:29:00+05:30 within 30m; NIFTY_23850_PE_12_MAY_26.csv no exit bar near 2026-05-06T09:16:00+05:30 within 30m
-- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24150_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24150_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
-- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24550_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24550_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
+- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24100_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24100_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
+- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24500_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24500_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
 - `2026-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_24400_CE_12_MAY_26.csv no entry bar near 2026-05-08T15:29:00+05:30 within 30m; NIFTY_24400_CE_12_MAY_26.csv no exit bar near 2026-05-11T09:16:00+05:30 within 30m
 - `2026-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_12_MAY_26.csv no entry bar near 2026-05-11T15:29:00+05:30 within 30m; NIFTY_24000_CE_12_MAY_26.csv no exit bar near 2026-05-12T09:16:00+05:30 within 30m
 - `2026-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_23200_PE_09_JUN_26.csv no exit bar near 2026-06-04T09:16:00+05:30 within 30m
-- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23250_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23250_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
+- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23200_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23200_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
 - `2026-06-05`: `missing_entry_or_exit_timestamp`. NIFTY_23550_CE_09_JUN_26.csv no entry bar near 2026-06-05T15:29:00+05:30 within 30m; NIFTY_23550_CE_09_JUN_26.csv no exit bar near 2026-06-08T09:16:00+05:30 within 30m
-- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23300_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23300_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
+- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23350_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23350_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
 - `2026-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_23800_PE_23_JUN_26.csv no exit bar near 2026-06-17T09:16:00+05:30 within 30m
 - `2026-06-17`: `missing_entry_or_exit_timestamp`. NIFTY_23900_PE_23_JUN_26.csv no entry bar near 2026-06-17T15:29:00+05:30 within 30m; NIFTY_23900_PE_23_JUN_26.csv no exit bar near 2026-06-18T09:16:00+05:30 within 30m
 - `2026-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_24000_PE_23_JUN_26.csv no entry bar near 2026-06-18T15:29:00+05:30 within 30m; NIFTY_24000_PE_23_JUN_26.csv no exit bar near 2026-06-19T09:16:00+05:30 within 30m
@@ -1272,39 +1272,39 @@
 
 ### OTM_300
 
-- `2019-01-01`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
+- `2019-01-01`: `insufficient_spot_history`. 2019-01-01T15:00:00+05:30 has 24 bars; needs 25
 - `2019-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-01-02T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-01-03T09:16:00+05:30 within 30m
 - `2019-01-03`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
-- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
+- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
 - `2019-01-07`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-01-08`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-01-09`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-01-10`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-01-10T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-01-11T09:16:00+05:30 within 30m
-- `2019-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-01-11T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-01-14T09:16:00+05:30 within 30m
+- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-01-14`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-01-15`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-01-16T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-01-17T09:16:00+05:30 within 30m
-- `2019-01-17`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-01-17T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-01-18T09:16:00+05:30 within 30m
+- `2019-01-17`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-01-18`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
-- `2019-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-01-21T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-01-22T09:16:00+05:30 within 30m
-- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
-- `2019-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-01-23T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-01-24T09:16:00+05:30 within 30m
+- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-01-23T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-01-24T09:16:00+05:30 within 30m
 - `2019-01-24`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-01-25T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-01-28T09:16:00+05:30 within 30m
-- `2019-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-01-28T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-01-29T09:16:00+05:30 within 30m
-- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
+- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
+- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-01-30`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
-- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
+- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-02-01`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-02-04`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-02-05`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-02-06`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-02-07`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-02-08T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-02-11T09:16:00+05:30 within 30m
-- `2019-02-11`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
+- `2019-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-02-11T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-02-12T09:16:00+05:30 within 30m
 - `2019-02-12`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-02-12T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-02-13T09:16:00+05:30 within 30m
 - `2019-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-02-13T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-02-14T09:16:00+05:30 within 30m
-- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
+- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-02-15`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-02-18`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-02-19`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
@@ -1318,29 +1318,29 @@
 - `2019-03-01`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-03-05`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-03-06`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
-- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
+- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-03-08`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
-- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-03-12T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-03-13T09:16:00+05:30 within 30m
 - `2019-03-13`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-03-14`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
-- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
-- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
+- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
+- `2019-03-18`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-19T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-20T09:16:00+05:30 within 30m
 - `2019-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-03-20T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-03-22T09:16:00+05:30 within 30m
 - `2019-03-22`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-03-22T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-03-25T09:16:00+05:30 within 30m
 - `2019-03-25`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-03-26T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-03-27T09:16:00+05:30 within 30m
 - `2019-03-27`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-03-27T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-03-28T09:16:00+05:30 within 30m
-- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
+- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
 - `2019-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-03-29T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-04-01T09:16:00+05:30 within 30m
 - `2019-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-04-01T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-04-02T09:16:00+05:30 within 30m
-- `2019-04-02`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
+- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
 - `2019-04-03`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-04-03T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-04-04T09:16:00+05:30 within 30m
 - `2019-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-04-04T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-04-05T09:16:00+05:30 within 30m
-- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
+- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
 - `2019-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-04-08T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-04-09T09:16:00+05:30 within 30m
-- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
+- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
 - `2019-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-04-10T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-04-11T09:16:00+05:30 within 30m
 - `2019-04-11`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-04-11T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-04-12T09:16:00+05:30 within 30m
 - `2019-04-12`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-04-12T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-04-15T09:16:00+05:30 within 30m
@@ -1349,26 +1349,26 @@
 - `2019-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-04-18T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-04-22T09:16:00+05:30 within 30m
 - `2019-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-04-22T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-04-23T09:16:00+05:30 within 30m
 - `2019-04-23`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-04-23T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-04-24T09:16:00+05:30 within 30m
-- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
+- `2019-04-24`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-04-25T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-04-26T09:16:00+05:30 within 30m
 - `2019-04-26`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-04-30`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
-- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
+- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
 - `2019-05-03`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-05-03T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-05-06T09:16:00+05:30 within 30m
 - `2019-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-05-06T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-05-07T09:16:00+05:30 within 30m
 - `2019-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-07T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-05-08T09:16:00+05:30 within 30m
 - `2019-05-08`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-05-09T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-05-10T09:16:00+05:30 within 30m
-- `2019-05-10`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
+- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
 - `2019-05-13`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-05-14`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-05-15`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
-- `2019-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-05-16T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-05-17T09:16:00+05:30 within 30m
+- `2019-05-16`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-05-17`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-05-17T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-05-20T09:16:00+05:30 within 30m
-- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
+- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
 - `2019-05-21`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-05-21T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-05-22T09:16:00+05:30 within 30m
 - `2019-05-22`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
-- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
+- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
 - `2019-05-24`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-05-24T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-05-27T09:16:00+05:30 within 30m
 - `2019-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-05-27T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-05-28T09:16:00+05:30 within 30m
 - `2019-05-28`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-05-28T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-05-29T09:16:00+05:30 within 30m
@@ -1376,10 +1376,10 @@
 - `2019-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-05-30T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-05-31T09:16:00+05:30 within 30m
 - `2019-05-31`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-05-31T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-06-03T09:16:00+05:30 within 30m
 - `2019-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-06-03T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-06-04T09:16:00+05:30 within 30m
-- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
+- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
 - `2019-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-06-06T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-06-07T09:16:00+05:30 within 30m
 - `2019-06-07`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-06-07T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-06-10T09:16:00+05:30 within 30m
-- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
+- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
 - `2019-06-11`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-06-11T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-06-12T09:16:00+05:30 within 30m
 - `2019-06-12`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-06-12T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-06-13T09:16:00+05:30 within 30m
 - `2019-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-06-13T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-06-14T09:16:00+05:30 within 30m
@@ -1388,7 +1388,7 @@
 - `2019-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-06-18T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-06-19T09:16:00+05:30 within 30m
 - `2019-06-19`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-06-19T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-06-20T09:16:00+05:30 within 30m
 - `2019-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-06-20T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-06-21T09:16:00+05:30 within 30m
-- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
+- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
 - `2019-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-06-24T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-06-25T09:16:00+05:30 within 30m
 - `2019-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-06-25T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-06-26T09:16:00+05:30 within 30m
 - `2019-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-06-26T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-06-27T09:16:00+05:30 within 30m
@@ -1396,7 +1396,7 @@
 - `2019-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-06-28T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-07-01T09:16:00+05:30 within 30m
 - `2019-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-07-01T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-07-02T09:16:00+05:30 within 30m
 - `2019-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-07-02T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-07-03T09:16:00+05:30 within 30m
-- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
+- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
 - `2019-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-07-04T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-07-05T09:16:00+05:30 within 30m
 - `2019-07-05`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-07-05T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-07-08T09:16:00+05:30 within 30m
 - `2019-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-07-08T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-07-09T09:16:00+05:30 within 30m
@@ -1408,54 +1408,54 @@
 - `2019-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-07-16T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-07-17T09:16:00+05:30 within 30m
 - `2019-07-17`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-07-17T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-07-18T09:16:00+05:30 within 30m
 - `2019-07-18`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-07-18T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-07-19T09:16:00+05:30 within 30m
-- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
-- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
+- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
+- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-07-23`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-07-24`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-07-25`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-07-26`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-07-26T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-07-29T09:16:00+05:30 within 30m
 - `2019-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-07-29T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-07-30T09:16:00+05:30 within 30m
 - `2019-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-07-30T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-07-31T09:16:00+05:30 within 30m
-- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-08-01`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-08-02`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-08-05`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
-- `2019-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-08-06T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-08-07T09:16:00+05:30 within 30m
+- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-08-07`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-08-07T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-08-08T09:16:00+05:30 within 30m
-- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-08-09`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-08-09T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-08-13T09:16:00+05:30 within 30m
-- `2019-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-08-13T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-08-14T09:16:00+05:30 within 30m
-- `2019-08-14`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-08-14T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-08-16T09:16:00+05:30 within 30m
+- `2019-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-08-13T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-08-14T09:16:00+05:30 within 30m
+- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-08-16`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-08-19`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-08-20`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-08-20T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-08-21T09:16:00+05:30 within 30m
 - `2019-08-21`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-08-21T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-08-22T09:16:00+05:30 within 30m
 - `2019-08-22`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-08-23`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-08-26`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
-- `2019-08-27`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
 - `2019-08-28`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-08-29T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-08-30T09:16:00+05:30 within 30m
-- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
+- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-09-03`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-09-03T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-09-04T09:16:00+05:30 within 30m
 - `2019-09-04`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-09-05T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-09-06T09:16:00+05:30 within 30m
 - `2019-09-06`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-09-09`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
-- `2019-09-11`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-09-11T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-09-12T09:16:00+05:30 within 30m
+- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-09-12T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-09-13T09:16:00+05:30 within 30m
 - `2019-09-13`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-09-16T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-09-17T09:16:00+05:30 within 30m
-- `2019-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-09-17T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-09-18T09:16:00+05:30 within 30m
-- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
+- `2019-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-09-17T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-09-18T09:16:00+05:30 within 30m
+- `2019-09-18`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-09-18T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-09-19T09:16:00+05:30 within 30m
 - `2019-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-09-19T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-09-20T09:16:00+05:30 within 30m
 - `2019-09-20`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-09-20T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-09-23T09:16:00+05:30 within 30m
-- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
-- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
+- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
+- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
 - `2019-09-25`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-09-25T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-09-26T09:16:00+05:30 within 30m
-- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
+- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
 - `2019-09-27`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-09-27T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-09-30T09:16:00+05:30 within 30m
-- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
+- `2019-09-30`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-10-01`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-10-03T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-10-04T09:16:00+05:30 within 30m
 - `2019-10-04`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
@@ -1463,7 +1463,7 @@
 - `2019-10-09`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-10-09T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-10-10T09:16:00+05:30 within 30m
 - `2019-10-10`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-10-11`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-10-11T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-10-14T09:16:00+05:30 within 30m
-- `2019-10-14`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
+- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
 - `2019-10-15`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-10-16`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-10-17T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-10-18T09:16:00+05:30 within 30m
@@ -1472,12 +1472,12 @@
 - `2019-10-23`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-10-23T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-10-24T09:16:00+05:30 within 30m
 - `2019-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-10-24T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-10-25T09:16:00+05:30 within 30m
 - `2019-10-25`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-10-25T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-10-27T09:16:00+05:30 within 30m
-- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:15:00+05:30; no fallback within 30m
+- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:00:00+05:30; no fallback within 30m
 - `2019-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-10-29T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-10-30T09:16:00+05:30 within 30m
 - `2019-10-30`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-10-30T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-10-31T09:16:00+05:30 within 30m
 - `2019-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-10-31T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-11-01T09:16:00+05:30 within 30m
 - `2019-11-01`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-11-01T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-11-04T09:16:00+05:30 within 30m
-- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
+- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
 - `2019-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-11-05T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-11-06T09:16:00+05:30 within 30m
 - `2019-11-06`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-11-06T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-11-07T09:16:00+05:30 within 30m
 - `2019-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-11-07T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-11-08T09:16:00+05:30 within 30m
@@ -1486,11 +1486,11 @@
 - `2019-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-11-13T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-11-14T09:16:00+05:30 within 30m
 - `2019-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-11-14T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-11-15T09:16:00+05:30 within 30m
 - `2019-11-15`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-11-15T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-11-18T09:16:00+05:30 within 30m
-- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
+- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
 - `2019-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-11-19T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-11-20T09:16:00+05:30 within 30m
 - `2019-11-20`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-11-20T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-11-21T09:16:00+05:30 within 30m
 - `2019-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-11-21T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-11-22T09:16:00+05:30 within 30m
-- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
+- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
 - `2019-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-11-25T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-11-26T09:16:00+05:30 within 30m
 - `2019-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-11-26T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-11-27T09:16:00+05:30 within 30m
 - `2019-11-27`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-11-27T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-11-28T09:16:00+05:30 within 30m
@@ -1499,7 +1499,7 @@
 - `2019-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-12-02T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-12-03T09:16:00+05:30 within 30m
 - `2019-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-12-03T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-12-04T09:16:00+05:30 within 30m
 - `2019-12-04`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-12-04T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-12-05T09:16:00+05:30 within 30m
-- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
+- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
 - `2019-12-06`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-12-06T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-12-09T09:16:00+05:30 within 30m
 - `2019-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-12-09T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-12-10T09:16:00+05:30 within 30m
 - `2019-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-12-10T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-12-11T09:16:00+05:30 within 30m
@@ -1508,7 +1508,7 @@
 - `2019-12-13`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-12-13T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-12-16T09:16:00+05:30 within 30m
 - `2019-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-12-16T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-12-17T09:16:00+05:30 within 30m
 - `2019-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-12-17T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-12-18T09:16:00+05:30 within 30m
-- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
+- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
 - `2019-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-12-19T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-12-20T09:16:00+05:30 within 30m
 - `2019-12-20`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_02_JAN_20.csv no entry bar near 2019-12-20T15:29:00+05:30 within 30m; NIFTY_12550_CE_02_JAN_20.csv no exit bar near 2019-12-23T09:16:00+05:30 within 30m
 - `2019-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-12-23T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-12-24T09:16:00+05:30 within 30m
@@ -1516,20 +1516,20 @@
 - `2019-12-26`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-12-26T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-12-27T09:16:00+05:30 within 30m
 - `2019-12-27`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-12-27T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-12-30T09:16:00+05:30 within 30m
 - `2019-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-12-30T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-12-31T09:16:00+05:30 within 30m
-- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12500_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
+- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
 - `2020-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_09_JAN_20.csv no entry bar near 2020-01-02T15:29:00+05:30 within 30m
 - `2020-01-09`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_16_JAN_20.csv no entry bar near 2020-01-09T15:29:00+05:30 within 30m
 - `2020-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_23_JAN_20.csv no entry bar near 2020-01-16T15:29:00+05:30 within 30m
 - `2020-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_30_JAN_20.csv no entry bar near 2020-01-23T15:29:00+05:30 within 30m
-- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
+- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
 - `2020-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_13_FEB_20.csv no entry bar near 2020-02-06T15:29:00+05:30 within 30m
 - `2020-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_20_FEB_20.csv no entry bar near 2020-02-13T15:29:00+05:30 within 30m
 - `2020-02-20`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_27_FEB_20.csv no entry bar near 2020-02-20T15:29:00+05:30 within 30m
-- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
 - `2020-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11550_CE_12_MAR_20.csv no entry bar near 2020-03-05T15:29:00+05:30 within 30m
-- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9950_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m
+- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9850_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m
 - `2020-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_7950_PE_26_MAR_20.csv no entry bar near 2020-03-19T15:29:00+05:30 within 30m
-- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8350_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
+- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8300_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
 - `2020-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_8550_CE_09_APR_20.csv no entry bar near 2020-04-01T15:29:00+05:30 within 30m
 - `2020-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_8800_PE_16_APR_20.csv no entry bar near 2020-04-09T15:29:00+05:30 within 30m
 - `2020-04-16`: `missing_entry_or_exit_timestamp`. NIFTY_8700_PE_23_APR_20.csv no entry bar near 2020-04-16T15:29:00+05:30 within 30m
@@ -1544,9 +1544,9 @@
 - `2020-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_9800_PE_25_JUN_20.csv no entry bar near 2020-06-18T15:29:00+05:30 within 30m
 - `2020-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_10600_CE_02_JUL_20.csv no entry bar near 2020-06-25T15:29:00+05:30 within 30m
 - `2020-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_10250_PE_09_JUL_20.csv no entry bar near 2020-07-02T15:29:00+05:30 within 30m
-- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10550_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
+- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10500_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
 - `2020-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_10450_PE_23_JUL_20.csv no entry bar near 2020-07-16T15:29:00+05:30 within 30m
-- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_10950_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
+- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_10900_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
 - `2020-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_06_AUG_20.csv no entry bar near 2020-07-30T15:29:00+05:30 within 30m
 - `2020-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_10900_PE_13_AUG_20.csv no entry bar near 2020-08-06T15:29:00+05:30 within 30m
 - `2020-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_20_AUG_20.csv no entry bar near 2020-08-13T15:29:00+05:30 within 30m
@@ -1556,40 +1556,40 @@
 - `2020-09-10`: `missing_entry_or_exit_timestamp`. NIFTY_11150_PE_17_SEP_20.csv no entry bar near 2020-09-10T15:29:00+05:30 within 30m
 - `2020-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_24_SEP_20.csv no entry bar near 2020-09-17T15:29:00+05:30 within 30m
 - `2020-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_01_OCT_20.csv no entry bar near 2020-09-24T15:29:00+05:30 within 30m
-- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
+- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11150_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
 - `2020-10-08`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_15_OCT_20.csv no entry bar near 2020-10-08T15:29:00+05:30 within 30m
 - `2020-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_22_OCT_20.csv no entry bar near 2020-10-15T15:29:00+05:30 within 30m
 - `2020-10-22`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_29_OCT_20.csv no entry bar near 2020-10-22T15:29:00+05:30 within 30m
-- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
-- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
+- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
+- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
 - `2020-11-12`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_19_NOV_20.csv no entry bar near 2020-11-12T15:29:00+05:30 within 30m
 - `2020-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_19_NOV_20.csv no exit bar near 2020-11-14T09:16:00+05:30 within 30m
-- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:15:00+05:30; no fallback within 30m
+- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:00:00+05:30; no fallback within 30m
 - `2020-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_13050_CE_26_NOV_20.csv no entry bar near 2020-11-19T15:29:00+05:30 within 30m
 - `2020-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12700_PE_03_DEC_20.csv no entry bar near 2020-11-26T15:29:00+05:30 within 30m
 - `2020-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_13450_CE_10_DEC_20.csv no entry bar near 2020-12-03T15:29:00+05:30 within 30m
-- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13200_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
+- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13150_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
 - `2020-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_13450_PE_24_DEC_20.csv no entry bar near 2020-12-17T15:29:00+05:30 within 30m
 - `2020-12-24`: `missing_entry_or_exit_timestamp`. NIFTY_13450_PE_31_DEC_20.csv no entry bar near 2020-12-24T15:29:00+05:30 within 30m
-- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14250_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
+- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14300_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
 - `2021-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_14450_CE_14_JAN_21.csv no entry bar near 2021-01-07T15:29:00+05:30 within 30m
 - `2021-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_14300_PE_21_JAN_21.csv no entry bar near 2021-01-14T15:29:00+05:30 within 30m
-- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14950_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
-- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13500_PE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
+- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14900_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
+- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_14100_CE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
 - `2021-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_14600_PE_11_FEB_21.csv no entry bar near 2021-02-04T15:29:00+05:30 within 30m
-- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_14900_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
+- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_14850_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
 - `2021-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_15400_CE_25_FEB_21.csv no entry bar near 2021-02-18T15:29:00+05:30 within 30m
 - `2021-02-25`: `missing_entry_or_exit_timestamp`. NIFTY_15400_CE_04_MAR_21.csv no entry bar near 2021-02-25T15:29:00+05:30 within 30m
 - `2021-03-04`: `missing_entry_or_exit_timestamp`. NIFTY_15400_CE_10_MAR_21.csv no entry bar near 2021-03-04T15:29:00+05:30 within 30m
-- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_14850_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
+- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_14900_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
 - `2021-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_14900_CE_25_MAR_21.csv no entry bar near 2021-03-18T15:29:00+05:30 within 30m
-- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14650_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
-- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14550_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
-- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15200_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
+- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14600_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
+- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14600_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
+- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15150_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
 - `2021-04-15`: `missing_entry_or_exit_timestamp`. NIFTY_14300_PE_22_APR_21.csv no entry bar near 2021-04-15T15:29:00+05:30 within 30m
 - `2021-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_14100_PE_29_APR_21.csv no entry bar near 2021-04-22T15:29:00+05:30 within 30m
 - `2021-04-29`: `missing_entry_or_exit_timestamp`. NIFTY_15200_CE_06_MAY_21.csv no entry bar near 2021-04-29T15:29:00+05:30 within 30m
-- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14450_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
+- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14400_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
 - `2021-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_20_MAY_21.csv no entry bar near 2021-05-12T15:29:00+05:30 within 30m
 - `2021-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_15200_CE_27_MAY_21.csv no entry bar near 2021-05-20T15:29:00+05:30 within 30m
 - `2021-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_15050_PE_03_JUN_21.csv no entry bar near 2021-05-27T15:29:00+05:30 within 30m
@@ -1599,85 +1599,85 @@
 - `2021-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_15500_PE_01_JUL_21.csv no entry bar near 2021-06-24T15:29:00+05:30 within 30m
 - `2021-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_16000_CE_08_JUL_21.csv no entry bar near 2021-07-01T15:29:00+05:30 within 30m
 - `2021-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_16050_CE_15_JUL_21.csv no entry bar near 2021-07-08T15:29:00+05:30 within 30m
-- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_16200_CE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
-- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15550_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
+- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_15600_PE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
+- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15500_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
 - `2021-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_16100_CE_05_AUG_21.csv no entry bar near 2021-07-29T15:29:00+05:30 within 30m
 - `2021-08-05`: `missing_entry_or_exit_timestamp`. NIFTY_16000_PE_12_AUG_21.csv no entry bar near 2021-08-05T15:29:00+05:30 within 30m
 - `2021-08-12`: `missing_entry_or_exit_timestamp`. NIFTY_16050_PE_18_AUG_21.csv no entry bar near 2021-08-12T15:29:00+05:30 within 30m
-- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16850_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
+- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16900_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
 - `2021-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_02_SEP_21.csv no entry bar near 2021-08-26T15:29:00+05:30 within 30m
 - `2021-09-02`: `missing_entry_or_exit_timestamp`. NIFTY_16950_PE_09_SEP_21.csv no entry bar near 2021-09-02T15:29:00+05:30 within 30m
 - `2021-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_16_SEP_21.csv no entry bar near 2021-09-09T15:29:00+05:30 within 30m
 - `2021-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_23_SEP_21.csv no entry bar near 2021-09-16T15:29:00+05:30 within 30m
 - `2021-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_30_SEP_21.csv no entry bar near 2021-09-23T15:29:00+05:30 within 30m
-- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
+- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
 - `2021-10-07`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_14_OCT_21.csv no entry bar near 2021-10-07T15:29:00+05:30 within 30m
 - `2021-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_21_OCT_21.csv no entry bar near 2021-10-14T15:29:00+05:30 within 30m
-- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17900_PE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
+- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18450_CE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
 - `2021-10-28`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_03_NOV_21.csv no entry bar near 2021-10-28T15:29:00+05:30 within 30m
-- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_18150_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
+- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_18100_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
 - `2021-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_11_NOV_21.csv no entry bar near 2021-11-04T15:29:00+05:30 within 30m
-- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
+- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
 - `2021-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_25_NOV_21.csv no entry bar near 2021-11-18T15:29:00+05:30 within 30m
 - `2021-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_02_DEC_21.csv no entry bar near 2021-11-25T15:29:00+05:30 within 30m
 - `2021-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_09_DEC_21.csv no entry bar near 2021-12-02T15:29:00+05:30 within 30m
 - `2021-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_16_DEC_21.csv no entry bar near 2021-12-09T15:29:00+05:30 within 30m
-- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
-- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
-- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
+- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
+- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
+- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
 - `2022-01-06`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_13_JAN_22.csv no entry bar near 2022-01-06T15:29:00+05:30 within 30m
 - `2022-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_20_JAN_22.csv no entry bar near 2022-01-13T15:29:00+05:30 within 30m
-- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
-- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_16850_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
-- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
+- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
+- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
+- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
 - `2022-02-10`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_17_FEB_22.csv no entry bar near 2022-02-10T15:29:00+05:30 within 30m
 - `2022-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_24_FEB_22.csv no entry bar near 2022-02-17T15:29:00+05:30 within 30m
-- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16500_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
-- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16800_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
-- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16850_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
-- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
-- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
+- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16550_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
+- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16850_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
+- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16900_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
+- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_16950_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
+- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
 - `2022-03-31`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_07_APR_22.csv no entry bar near 2022-03-31T15:29:00+05:30 within 30m
 - `2022-04-07`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_13_APR_22.csv no entry bar near 2022-04-07T15:29:00+05:30 within 30m
 - `2022-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_21_APR_22.csv no entry bar near 2022-04-13T15:29:00+05:30 within 30m
 - `2022-04-21`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_28_APR_22.csv no entry bar near 2022-04-21T15:29:00+05:30 within 30m
-- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_16950_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
-- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
-- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_16150_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
-- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_16150_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
-- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_15900_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
+- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
+- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
+- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_16100_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
+- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_16100_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
+- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_15850_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
 - `2022-06-02`: `missing_entry_or_exit_timestamp`. NIFTY_16350_PE_09_JUN_22.csv no entry bar near 2022-06-02T15:29:00+05:30 within 30m
 - `2022-06-09`: `missing_entry_or_exit_timestamp`. NIFTY_16200_PE_16_JUN_22.csv no entry bar near 2022-06-09T15:29:00+05:30 within 30m
 - `2022-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_15650_CE_23_JUN_22.csv no entry bar near 2022-06-16T15:29:00+05:30 within 30m
-- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15300_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
-- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_16050_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
+- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15250_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
+- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_16100_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
 - `2022-07-07`: `missing_entry_or_exit_timestamp`. NIFTY_15850_PE_14_JUL_22.csv no entry bar near 2022-07-07T15:29:00+05:30 within 30m
 - `2022-07-14`: `missing_entry_or_exit_timestamp`. NIFTY_16250_CE_21_JUL_22.csv no entry bar near 2022-07-14T15:29:00+05:30 within 30m
 - `2022-07-21`: `missing_entry_or_exit_timestamp`. NIFTY_16300_PE_28_JUL_22.csv no entry bar near 2022-07-21T15:29:00+05:30 within 30m
-- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16600_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
-- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
+- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16650_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
+- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
 - `2022-08-11`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_18_AUG_22.csv no entry bar near 2022-08-11T15:29:00+05:30 within 30m
 - `2022-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_25_AUG_22.csv no entry bar near 2022-08-18T15:29:00+05:30 within 30m
 - `2022-08-25`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_01_SEP_22.csv no entry bar near 2022-08-25T15:29:00+05:30 within 30m
 - `2022-09-01`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_08_SEP_22.csv no entry bar near 2022-09-01T15:29:00+05:30 within 30m
 - `2022-09-08`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_15_SEP_22.csv no entry bar near 2022-09-08T15:29:00+05:30 within 30m
-- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
-- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
+- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
+- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
 - `2022-09-29`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_06_OCT_22.csv no entry bar near 2022-09-29T15:29:00+05:30 within 30m
-- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
+- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
 - `2022-10-13`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_20_OCT_22.csv no entry bar near 2022-10-13T15:29:00+05:30 within 30m
 - `2022-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_27_OCT_22.csv no entry bar near 2022-10-20T15:29:00+05:30 within 30m
-- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
-- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:15:00+05:30; no fallback within 30m
+- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
+- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:00:00+05:30; no fallback within 30m
 - `2022-10-27`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_03_NOV_22.csv no entry bar near 2022-10-27T15:29:00+05:30 within 30m
 - `2022-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_10_NOV_22.csv no entry bar near 2022-11-03T15:29:00+05:30 within 30m
 - `2022-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_17_NOV_22.csv no entry bar near 2022-11-10T15:29:00+05:30 within 30m
-- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18650_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
+- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18600_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
 - `2022-11-24`: `missing_entry_or_exit_timestamp`. NIFTY_18200_PE_01_DEC_22.csv no entry bar near 2022-11-24T15:29:00+05:30 within 30m
 - `2022-12-01`: `missing_entry_or_exit_timestamp`. NIFTY_19100_CE_08_DEC_22.csv no entry bar near 2022-12-01T15:29:00+05:30 within 30m
 - `2022-12-08`: `missing_entry_or_exit_timestamp`. NIFTY_18300_PE_15_DEC_22.csv no entry bar near 2022-12-08T15:29:00+05:30 within 30m
 - `2022-12-15`: `missing_entry_or_exit_timestamp`. NIFTY_18700_CE_22_DEC_22.csv no entry bar near 2022-12-15T15:29:00+05:30 within 30m
-- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
+- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
 - `2022-12-29`: `missing_entry_or_exit_timestamp`. NIFTY_17900_PE_05_JAN_23.csv no entry bar near 2022-12-29T15:29:00+05:30 within 30m
 - `2023-01-05`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_12_JAN_23.csv no entry bar near 2023-01-05T15:29:00+05:30 within 30m
 - `2023-01-12`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_19_JAN_23.csv no entry bar near 2023-01-12T15:29:00+05:30 within 30m
@@ -1685,33 +1685,33 @@
 - `2023-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_02_FEB_23.csv no entry bar near 2023-01-25T15:29:00+05:30 within 30m
 - `2023-02-02`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_09_FEB_23.csv no entry bar near 2023-02-02T15:29:00+05:30 within 30m
 - `2023-02-09`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_16_FEB_23.csv no entry bar near 2023-02-09T15:29:00+05:30 within 30m
-- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
+- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
 - `2023-02-23`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_02_MAR_23.csv no entry bar near 2023-02-23T15:29:00+05:30 within 30m
-- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
+- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
 - `2023-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_16_MAR_23.csv no entry bar near 2023-03-09T15:29:00+05:30 within 30m
 - `2023-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_23_MAR_23.csv no entry bar near 2023-03-16T15:29:00+05:30 within 30m
 - `2023-03-23`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_29_MAR_23.csv no entry bar near 2023-03-23T15:29:00+05:30 within 30m
 - `2023-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_06_APR_23.csv no entry bar near 2023-03-29T15:29:00+05:30 within 30m
 - `2023-04-06`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_13_APR_23.csv no entry bar near 2023-04-06T15:29:00+05:30 within 30m
 - `2023-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_20_APR_23.csv no entry bar near 2023-04-13T15:29:00+05:30 within 30m
-- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
+- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
 - `2023-04-27`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_04_MAY_23.csv no entry bar near 2023-04-27T15:29:00+05:30 within 30m
 - `2023-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_11_MAY_23.csv no entry bar near 2023-05-04T15:29:00+05:30 within 30m
 - `2023-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_18600_CE_18_MAY_23.csv no entry bar near 2023-05-11T15:29:00+05:30 within 30m
 - `2023-05-18`: `missing_entry_or_exit_timestamp`. NIFTY_18450_CE_25_MAY_23.csv no entry bar near 2023-05-18T15:29:00+05:30 within 30m
 - `2023-05-25`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_01_JUN_23.csv no entry bar near 2023-05-25T15:29:00+05:30 within 30m
 - `2023-06-01`: `missing_entry_or_exit_timestamp`. NIFTY_18800_CE_08_JUN_23.csv no entry bar near 2023-06-01T15:29:00+05:30 within 30m
-- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18950_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
+- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18900_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
 - `2023-06-15`: `missing_entry_or_exit_timestamp`. NIFTY_19000_CE_22_JUN_23.csv no entry bar near 2023-06-15T15:29:00+05:30 within 30m
-- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_19100_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_19100_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
+- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_19050_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_19050_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
 - `2023-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_18950_CE_28_JUN_23.csv no entry bar near 2023-06-23T15:29:00+05:30 within 30m; NIFTY_18950_CE_28_JUN_23.csv no exit bar near 2023-06-26T09:16:00+05:30 within 30m
 - `2023-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_18400_PE_28_JUN_23.csv no entry bar near 2023-06-26T15:29:00+05:30 within 30m; NIFTY_18400_PE_28_JUN_23.csv no exit bar near 2023-06-27T09:16:00+05:30 within 30m
 - `2023-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_18500_PE_28_JUN_23.csv no entry bar near 2023-06-27T15:29:00+05:30 within 30m
-- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18700_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18700_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
+- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18650_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18650_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
 - `2023-07-06`: `missing_entry_or_exit_timestamp`. NIFTY_19200_PE_13_JUL_23.csv no entry bar near 2023-07-06T15:29:00+05:30 within 30m
-- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19750_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
-- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19650_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
-- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_20000_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
+- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19700_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
+- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19700_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
+- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19950_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
 - `2023-08-03`: `missing_entry_or_exit_timestamp`. NIFTY_19700_CE_10_AUG_23.csv no entry bar near 2023-08-03T15:29:00+05:30 within 30m
 - `2023-08-10`: `missing_entry_or_exit_timestamp`. NIFTY_19850_CE_17_AUG_23.csv no entry bar near 2023-08-10T15:29:00+05:30 within 30m
 - `2023-08-17`: `missing_entry_or_exit_timestamp`. NIFTY_19650_CE_24_AUG_23.csv no entry bar near 2023-08-17T15:29:00+05:30 within 30m
@@ -1720,49 +1720,49 @@
 - `2023-09-07`: `missing_entry_or_exit_timestamp`. NIFTY_19400_PE_14_SEP_23.csv no entry bar near 2023-09-07T15:29:00+05:30 within 30m
 - `2023-09-14`: `missing_entry_or_exit_timestamp`. NIFTY_19800_PE_21_SEP_23.csv no entry bar near 2023-09-14T15:29:00+05:30 within 30m
 - `2023-09-21`: `missing_entry_or_exit_timestamp`. NIFTY_20050_CE_28_SEP_23.csv no entry bar near 2023-09-21T15:29:00+05:30 within 30m
-- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19850_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
+- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19800_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
 - `2023-10-05`: `missing_entry_or_exit_timestamp`. NIFTY_19250_PE_12_OCT_23.csv no entry bar near 2023-10-05T15:29:00+05:30 within 30m
 - `2023-10-12`: `missing_entry_or_exit_timestamp`. NIFTY_20100_CE_19_OCT_23.csv no entry bar near 2023-10-12T15:29:00+05:30 within 30m
-- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19900_CE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
+- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19300_PE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
 - `2023-10-26`: `missing_entry_or_exit_timestamp`. NIFTY_19150_CE_02_NOV_23.csv no entry bar near 2023-10-26T15:29:00+05:30 within 30m
-- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_18850_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
+- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_18800_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
 - `2023-11-09`: `missing_entry_or_exit_timestamp`. NIFTY_19700_CE_16_NOV_23.csv no entry bar near 2023-11-09T15:29:00+05:30 within 30m
 - `2023-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_19150_PE_16_NOV_23.csv no exit bar near 2023-11-12T09:16:00+05:30 within 30m
-- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:15:00+05:30; no fallback within 30m
+- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:00:00+05:30; no fallback within 30m
 - `2023-11-16`: `missing_entry_or_exit_timestamp`. NIFTY_20050_CE_23_NOV_23.csv no entry bar near 2023-11-16T15:29:00+05:30 within 30m
 - `2023-11-23`: `missing_entry_or_exit_timestamp`. NIFTY_20100_CE_30_NOV_23.csv no entry bar near 2023-11-23T15:29:00+05:30 within 30m
 - `2023-11-30`: `missing_entry_or_exit_timestamp`. NIFTY_19850_PE_07_DEC_23.csv no entry bar near 2023-11-30T15:29:00+05:30 within 30m
-- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_20600_PE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
-- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_20900_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
-- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21000_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
-- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21450_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
+- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_21200_CE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
+- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_20850_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
+- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_20950_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
+- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21500_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
 - `2024-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_21350_PE_11_JAN_24.csv no entry bar near 2024-01-04T15:29:00+05:30 within 30m
-- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21350_PE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
-- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21200_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
+- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21950_CE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
+- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21150_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
 - `2024-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_21050_PE_01_FEB_24.csv no entry bar near 2024-01-25T15:29:00+05:30 within 30m
 - `2024-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_22000_CE_08_FEB_24.csv no entry bar near 2024-02-01T15:29:00+05:30 within 30m
-- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_22050_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
-- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21650_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
+- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_22000_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
+- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21600_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
 - `2024-02-22`: `missing_entry_or_exit_timestamp`. NIFTY_21900_PE_29_FEB_24.csv no entry bar near 2024-02-22T15:29:00+05:30 within 30m
-- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21750_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
-- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:15:00+05:30; no fallback within 30m
-- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22800_CE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
+- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21700_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
+- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:00:00+05:30; no fallback within 30m
+- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22200_PE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
 - `2024-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_21850_PE_21_MAR_24.csv no entry bar near 2024-03-14T15:29:00+05:30 within 30m
-- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_22300_CE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
-- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22650_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
-- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22250_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
+- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_21750_PE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
+- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22550_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
+- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22200_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
 - `2024-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_22450_PE_18_APR_24.csv no entry bar near 2024-04-10T15:29:00+05:30 within 30m
-- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22350_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
+- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22250_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
 - `2024-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_22250_PE_02_MAY_24.csv no entry bar near 2024-04-25T15:29:00+05:30 within 30m
 - `2024-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_22950_CE_09_MAY_24.csv no entry bar near 2024-05-02T15:29:00+05:30 within 30m
 - `2024-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_22250_CE_16_MAY_24.csv no entry bar near 2024-05-09T15:29:00+05:30 within 30m
 - `2024-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_22100_PE_23_MAY_24.csv no entry bar near 2024-05-16T15:29:00+05:30 within 30m
-- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:15:00+05:30; no fallback within 30m
-- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22650_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
-- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22250_PE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
+- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:00:00+05:30; no fallback within 30m
+- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22700_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
+- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22800_CE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
 - `2024-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_22550_PE_13_JUN_24.csv no entry bar near 2024-06-06T15:29:00+05:30 within 30m
 - `2024-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_23100_PE_20_JUN_24.csv no entry bar near 2024-06-13T15:29:00+05:30 within 30m
-- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23300_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
+- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23250_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
 - `2024-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_23750_PE_04_JUL_24.csv no entry bar near 2024-06-27T15:29:00+05:30 within 30m
 - `2024-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_24600_CE_11_JUL_24.csv no entry bar near 2024-07-04T15:29:00+05:30 within 30m
 - `2024-07-11`: `missing_entry_or_exit_timestamp`. NIFTY_24050_PE_18_JUL_24.csv no entry bar near 2024-07-11T15:29:00+05:30 within 30m
@@ -1774,37 +1774,35 @@
 - `2024-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_25100_CE_29_AUG_24.csv no entry bar near 2024-08-22T15:29:00+05:30 within 30m
 - `2024-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_24850_PE_05_SEP_24.csv no entry bar near 2024-08-29T15:29:00+05:30 within 30m
 - `2024-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_25450_CE_12_SEP_24.csv no entry bar near 2024-09-05T15:29:00+05:30 within 30m
-- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25000_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
+- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25100_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
 - `2024-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_25750_CE_26_SEP_24.csv no entry bar near 2024-09-19T15:29:00+05:30 within 30m
 - `2024-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_25900_PE_03_OCT_24.csv no entry bar near 2024-09-26T15:29:00+05:30 within 30m
 - `2024-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_25550_CE_10_OCT_24.csv no entry bar near 2024-10-03T15:29:00+05:30 within 30m
 - `2024-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_25300_CE_17_OCT_24.csv no entry bar near 2024-10-10T15:29:00+05:30 within 30m
 - `2024-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_25050_CE_24_OCT_24.csv no entry bar near 2024-10-17T15:29:00+05:30 within 30m
-- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24100_PE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
-- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_23950_PE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_23950_PE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
-- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:15:00+05:30; no fallback within 30m
+- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24700_CE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
+- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24500_CE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24500_CE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
+- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:00:00+05:30; no fallback within 30m
 - `2024-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_24500_CE_14_NOV_24.csv no entry bar near 2024-11-07T15:29:00+05:30 within 30m
-- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23250_PE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
+- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23850_CE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
 - `2024-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_23050_PE_28_NOV_24.csv no entry bar near 2024-11-21T15:29:00+05:30 within 30m
-- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24250_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
-- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24400_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
+- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24200_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
+- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24450_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
 - `2024-12-12`: `missing_entry_or_exit_timestamp`. NIFTY_24850_CE_19_DEC_24.csv no entry bar near 2024-12-12T15:29:00+05:30 within 30m
-- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_23650_PE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
+- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_24250_CE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
 - `2025-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_26150_CE_28_OCT_25.csv no exit bar near 2025-10-21T09:16:00+05:30 within 30m
 - `2025-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_26150_CE_28_OCT_25.csv no entry bar near 2025-10-21T15:29:00+05:30 within 30m
-- `2026-03-18`: `missing_option_file`. Missing option file: NIFTY_24050_CE_24_MAR_26.csv
-- `2026-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_22650_PE_28_APR_26.csv no entry bar near 2026-03-24T15:29:00+05:30 within 30m; NIFTY_22650_PE_28_APR_26.csv no exit bar near 2026-03-25T09:16:00+05:30 within 30m
-- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23750_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
+- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
 - `2026-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_24400_CE_05_MAY_26.csv no entry bar near 2026-05-04T15:29:00+05:30 within 30m; NIFTY_24400_CE_05_MAY_26.csv no exit bar near 2026-05-05T09:16:00+05:30 within 30m
 - `2026-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_23750_PE_12_MAY_26.csv no entry bar near 2026-05-05T15:29:00+05:30 within 30m; NIFTY_23750_PE_12_MAY_26.csv no exit bar near 2026-05-06T09:16:00+05:30 within 30m
-- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24050_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24050_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
-- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24650_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24650_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
+- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24000_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24000_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
+- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24600_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24600_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
 - `2026-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_24500_CE_12_MAY_26.csv no entry bar near 2026-05-08T15:29:00+05:30 within 30m; NIFTY_24500_CE_12_MAY_26.csv no exit bar near 2026-05-11T09:16:00+05:30 within 30m
 - `2026-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_24100_CE_12_MAY_26.csv no entry bar near 2026-05-11T15:29:00+05:30 within 30m; NIFTY_24100_CE_12_MAY_26.csv no exit bar near 2026-05-12T09:16:00+05:30 within 30m
 - `2026-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_23100_PE_09_JUN_26.csv no exit bar near 2026-06-04T09:16:00+05:30 within 30m
-- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23150_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23150_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
+- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23100_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23100_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
 - `2026-06-05`: `missing_entry_or_exit_timestamp`. NIFTY_23650_CE_09_JUN_26.csv no entry bar near 2026-06-05T15:29:00+05:30 within 30m; NIFTY_23650_CE_09_JUN_26.csv no exit bar near 2026-06-08T09:16:00+05:30 within 30m
-- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23400_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23400_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
+- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23450_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23450_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
 - `2026-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_23_JUN_26.csv no exit bar near 2026-06-17T09:16:00+05:30 within 30m
 - `2026-06-17`: `missing_entry_or_exit_timestamp`. NIFTY_23800_PE_23_JUN_26.csv no entry bar near 2026-06-17T15:29:00+05:30 within 30m; NIFTY_23800_PE_23_JUN_26.csv no exit bar near 2026-06-18T09:16:00+05:30 within 30m
 - `2026-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_23900_PE_23_JUN_26.csv no entry bar near 2026-06-18T15:29:00+05:30 within 30m; NIFTY_23900_PE_23_JUN_26.csv no exit bar near 2026-06-19T09:16:00+05:30 within 30m
@@ -1812,39 +1810,39 @@
 
 ### OTM_400
 
-- `2019-01-01`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
+- `2019-01-01`: `insufficient_spot_history`. 2019-01-01T15:00:00+05:30 has 24 bars; needs 25
 - `2019-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-01-02T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-01-03T09:16:00+05:30 within 30m
 - `2019-01-03`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
-- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
+- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10300_PE_02_JAN_20.csv
 - `2019-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-01-07T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-01-08T09:16:00+05:30 within 30m
 - `2019-01-08`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
 - `2019-01-09`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-01-10`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-01-10T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-01-11T09:16:00+05:30 within 30m
-- `2019-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-01-11T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-01-14T09:16:00+05:30 within 30m
+- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
 - `2019-01-14`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-01-15`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-01-16T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-01-17T09:16:00+05:30 within 30m
-- `2019-01-17`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-01-17T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-01-18T09:16:00+05:30 within 30m
+- `2019-01-17`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-01-18`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
-- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
-- `2019-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-01-23T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-01-24T09:16:00+05:30 within 30m
+- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
+- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
+- `2019-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-01-23T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-01-24T09:16:00+05:30 within 30m
 - `2019-01-24`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-01-25T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-01-28T09:16:00+05:30 within 30m
-- `2019-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-01-28T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-01-29T09:16:00+05:30 within 30m
-- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10300_PE_02_JAN_20.csv
+- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
+- `2019-01-29`: `missing_entry_or_exit_timestamp`. NIFTY_10250_PE_02_JAN_20.csv no entry bar near 2019-01-29T15:29:00+05:30 within 30m; NIFTY_10250_PE_02_JAN_20.csv no exit bar near 2019-01-30T09:16:00+05:30 within 30m
 - `2019-01-30`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
-- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
+- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-02-01`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-02-04`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-02-05`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-02-06`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-02-07`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-02-08`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-02-11`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
+- `2019-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-02-11T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-02-12T09:16:00+05:30 within 30m
 - `2019-02-12`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-02-12T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-02-13T09:16:00+05:30 within 30m
 - `2019-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-02-13T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-02-14T09:16:00+05:30 within 30m
-- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
+- `2019-02-14`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-02-14T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-02-15T09:16:00+05:30 within 30m
 - `2019-02-15`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-02-18`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-02-19`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-02-19T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-02-20T09:16:00+05:30 within 30m
@@ -1858,29 +1856,29 @@
 - `2019-03-01`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-03-05`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-03-06`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
-- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
+- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-03-08`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
-- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-03-12`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-03-13`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-03-14`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
-- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
-- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
+- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
+- `2019-03-18`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-03-19`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-03-20T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-03-22T09:16:00+05:30 within 30m
 - `2019-03-22`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-03-22T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-03-25T09:16:00+05:30 within 30m
 - `2019-03-25`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-03-26T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-03-27T09:16:00+05:30 within 30m
 - `2019-03-27`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-03-27T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-03-28T09:16:00+05:30 within 30m
-- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
+- `2019-03-28`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-03-29T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-04-01T09:16:00+05:30 within 30m
 - `2019-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-04-01T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-04-02T09:16:00+05:30 within 30m
-- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
+- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
 - `2019-04-03`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-04-03T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-04-04T09:16:00+05:30 within 30m
 - `2019-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-04-04T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-04-05T09:16:00+05:30 within 30m
-- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
+- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
 - `2019-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-04-08T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-04-09T09:16:00+05:30 within 30m
-- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
+- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
 - `2019-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-04-10T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-04-11T09:16:00+05:30 within 30m
 - `2019-04-11`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-04-11T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-04-12T09:16:00+05:30 within 30m
 - `2019-04-12`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-04-12T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-04-15T09:16:00+05:30 within 30m
@@ -1889,26 +1887,26 @@
 - `2019-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-04-18T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-04-22T09:16:00+05:30 within 30m
 - `2019-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-04-22T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-04-23T09:16:00+05:30 within 30m
 - `2019-04-23`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-04-23T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-04-24T09:16:00+05:30 within 30m
-- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
+- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
 - `2019-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-04-25T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-04-26T09:16:00+05:30 within 30m
 - `2019-04-26`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-04-26T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-04-30T09:16:00+05:30 within 30m
 - `2019-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-04-30T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-05-02T09:16:00+05:30 within 30m
-- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
+- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
 - `2019-05-03`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-05-03T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-05-06T09:16:00+05:30 within 30m
 - `2019-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-05-06T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-05-07T09:16:00+05:30 within 30m
 - `2019-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-05-07T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-05-08T09:16:00+05:30 within 30m
 - `2019-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-05-08T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-05-09T09:16:00+05:30 within 30m
 - `2019-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-05-09T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-05-10T09:16:00+05:30 within 30m
-- `2019-05-10`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
+- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
 - `2019-05-13`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-05-14`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-05-15`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
-- `2019-05-16`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-05-16`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-05-17`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-05-17T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-05-20T09:16:00+05:30 within 30m
-- `2019-05-20`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
+- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
 - `2019-05-21`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-05-21T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-05-22T09:16:00+05:30 within 30m
 - `2019-05-22`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-05-22T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-05-23T09:16:00+05:30 within 30m
-- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
+- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
 - `2019-05-24`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-05-27T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-05-28T09:16:00+05:30 within 30m
 - `2019-05-28`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-05-28T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-05-29T09:16:00+05:30 within 30m
@@ -1916,10 +1914,10 @@
 - `2019-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-05-30T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-05-31T09:16:00+05:30 within 30m
 - `2019-05-31`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-05-31T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-06-03T09:16:00+05:30 within 30m
 - `2019-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-06-03T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-06-04T09:16:00+05:30 within 30m
-- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
+- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
 - `2019-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-06-06T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-06-07T09:16:00+05:30 within 30m
 - `2019-06-07`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
-- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
+- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
 - `2019-06-11`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-06-11T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-06-12T09:16:00+05:30 within 30m
 - `2019-06-12`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-06-12T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-06-13T09:16:00+05:30 within 30m
 - `2019-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-06-13T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-06-14T09:16:00+05:30 within 30m
@@ -1928,7 +1926,7 @@
 - `2019-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-06-18T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-06-19T09:16:00+05:30 within 30m
 - `2019-06-19`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-06-19T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-06-20T09:16:00+05:30 within 30m
 - `2019-06-20`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
-- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
+- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
 - `2019-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-06-24T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-06-25T09:16:00+05:30 within 30m
 - `2019-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-06-25T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-06-26T09:16:00+05:30 within 30m
 - `2019-06-26`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
@@ -1936,7 +1934,7 @@
 - `2019-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-06-28T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-07-01T09:16:00+05:30 within 30m
 - `2019-07-01`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-07-02T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-07-03T09:16:00+05:30 within 30m
-- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
+- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
 - `2019-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-07-04T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-07-05T09:16:00+05:30 within 30m
 - `2019-07-05`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-07-05T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-07-08T09:16:00+05:30 within 30m
 - `2019-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-07-08T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-07-09T09:16:00+05:30 within 30m
@@ -1948,54 +1946,54 @@
 - `2019-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-07-16T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-07-17T09:16:00+05:30 within 30m
 - `2019-07-17`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-07-17T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-07-18T09:16:00+05:30 within 30m
 - `2019-07-18`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-07-18T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-07-19T09:16:00+05:30 within 30m
-- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
-- `2019-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-07-22T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-07-23T09:16:00+05:30 within 30m
+- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
+- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-07-23T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-07-24T09:16:00+05:30 within 30m
 - `2019-07-24`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-07-25`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-07-26`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-07-29T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-07-30T09:16:00+05:30 within 30m
 - `2019-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-07-30T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-07-31T09:16:00+05:30 within 30m
-- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-08-01`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-08-02`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-08-05`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
-- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
+- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-08-07`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-08-07T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-08-08T09:16:00+05:30 within 30m
-- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-08-09`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-08-09T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-08-13T09:16:00+05:30 within 30m
-- `2019-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-08-13T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-08-14T09:16:00+05:30 within 30m
-- `2019-08-14`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-08-14T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-08-16T09:16:00+05:30 within 30m
+- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
+- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-08-16`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-08-19`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
-- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-08-20`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-08-20T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-08-21T09:16:00+05:30 within 30m
 - `2019-08-21`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-08-21T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-08-22T09:16:00+05:30 within 30m
 - `2019-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-08-22T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-08-23T09:16:00+05:30 within 30m
 - `2019-08-23`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-08-26`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
-- `2019-08-27`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
 - `2019-08-28`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-08-29`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
+- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-09-03`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-09-03T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-09-04T09:16:00+05:30 within 30m
 - `2019-09-04`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-09-05T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-09-06T09:16:00+05:30 within 30m
 - `2019-09-06`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-09-09`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
-- `2019-09-11`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-09-11T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-09-12T09:16:00+05:30 within 30m
+- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-09-12T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-09-13T09:16:00+05:30 within 30m
 - `2019-09-13`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
 - `2019-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-09-16T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-09-17T09:16:00+05:30 within 30m
-- `2019-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-09-17T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-09-18T09:16:00+05:30 within 30m
-- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
+- `2019-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-09-17T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-09-18T09:16:00+05:30 within 30m
+- `2019-09-18`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-09-18T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-09-19T09:16:00+05:30 within 30m
 - `2019-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-09-19T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-09-20T09:16:00+05:30 within 30m
 - `2019-09-20`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
-- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
-- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
+- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
+- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
 - `2019-09-25`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-09-25T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-09-26T09:16:00+05:30 within 30m
-- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
+- `2019-09-26`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-09-27`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-09-27T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-09-30T09:16:00+05:30 within 30m
-- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
+- `2019-09-30`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-10-01T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-10-03T09:16:00+05:30 within 30m
 - `2019-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-10-03T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-10-04T09:16:00+05:30 within 30m
 - `2019-10-04`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
@@ -2003,7 +2001,7 @@
 - `2019-10-09`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-10-10`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-10-11`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
-- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
+- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
 - `2019-10-15`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-10-16`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-10-17T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-10-18T09:16:00+05:30 within 30m
@@ -2012,12 +2010,12 @@
 - `2019-10-23`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-10-23T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-10-24T09:16:00+05:30 within 30m
 - `2019-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-10-24T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-10-25T09:16:00+05:30 within 30m
 - `2019-10-25`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-10-25T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-10-27T09:16:00+05:30 within 30m
-- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:15:00+05:30; no fallback within 30m
+- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:00:00+05:30; no fallback within 30m
 - `2019-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-10-29T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-10-30T09:16:00+05:30 within 30m
 - `2019-10-30`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-10-31T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-11-01T09:16:00+05:30 within 30m
 - `2019-11-01`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-11-01T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-11-04T09:16:00+05:30 within 30m
-- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
+- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
 - `2019-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-11-05T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-11-06T09:16:00+05:30 within 30m
 - `2019-11-06`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-11-06T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-11-07T09:16:00+05:30 within 30m
 - `2019-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-11-07T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-11-08T09:16:00+05:30 within 30m
@@ -2026,11 +2024,11 @@
 - `2019-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-11-13T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-11-14T09:16:00+05:30 within 30m
 - `2019-11-14`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-11-15`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-11-15T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-11-18T09:16:00+05:30 within 30m
-- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
+- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
 - `2019-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-11-19T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-11-20T09:16:00+05:30 within 30m
 - `2019-11-20`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-11-20T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-11-21T09:16:00+05:30 within 30m
 - `2019-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-11-21T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-11-22T09:16:00+05:30 within 30m
-- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
+- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
 - `2019-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-11-25T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-11-26T09:16:00+05:30 within 30m
 - `2019-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-11-26T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-11-27T09:16:00+05:30 within 30m
 - `2019-11-27`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-11-27T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-11-28T09:16:00+05:30 within 30m
@@ -2039,7 +2037,7 @@
 - `2019-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-12-02T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-12-03T09:16:00+05:30 within 30m
 - `2019-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-12-03T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-12-04T09:16:00+05:30 within 30m
 - `2019-12-04`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-12-04T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-12-05T09:16:00+05:30 within 30m
-- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
+- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
 - `2019-12-06`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-12-06T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-12-09T09:16:00+05:30 within 30m
 - `2019-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-12-09T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-12-10T09:16:00+05:30 within 30m
 - `2019-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-12-10T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-12-11T09:16:00+05:30 within 30m
@@ -2048,7 +2046,7 @@
 - `2019-12-13`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-12-13T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-12-16T09:16:00+05:30 within 30m
 - `2019-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-12-16T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-12-17T09:16:00+05:30 within 30m
 - `2019-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-12-17T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-12-18T09:16:00+05:30 within 30m
-- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
+- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
 - `2019-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-12-19T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-12-20T09:16:00+05:30 within 30m
 - `2019-12-20`: `missing_entry_or_exit_timestamp`. NIFTY_12650_CE_02_JAN_20.csv no entry bar near 2019-12-20T15:29:00+05:30 within 30m; NIFTY_12650_CE_02_JAN_20.csv no exit bar near 2019-12-23T09:16:00+05:30 within 30m
 - `2019-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-12-23T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-12-24T09:16:00+05:30 within 30m
@@ -2056,20 +2054,20 @@
 - `2019-12-26`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_02_JAN_20.csv no entry bar near 2019-12-26T15:29:00+05:30 within 30m; NIFTY_12550_CE_02_JAN_20.csv no exit bar near 2019-12-27T09:16:00+05:30 within 30m
 - `2019-12-27`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-12-27T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-12-30T09:16:00+05:30 within 30m
 - `2019-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-12-30T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-12-31T09:16:00+05:30 within 30m
-- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12600_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
+- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
 - `2020-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_09_JAN_20.csv no entry bar near 2020-01-02T15:29:00+05:30 within 30m
 - `2020-01-09`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_16_JAN_20.csv no entry bar near 2020-01-09T15:29:00+05:30 within 30m
 - `2020-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_23_JAN_20.csv no entry bar near 2020-01-16T15:29:00+05:30 within 30m
 - `2020-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_30_JAN_20.csv no entry bar near 2020-01-23T15:29:00+05:30 within 30m
-- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
+- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
 - `2020-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_13_FEB_20.csv no entry bar near 2020-02-06T15:29:00+05:30 within 30m
 - `2020-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_20_FEB_20.csv no entry bar near 2020-02-13T15:29:00+05:30 within 30m
 - `2020-02-20`: `missing_entry_or_exit_timestamp`. NIFTY_12500_CE_27_FEB_20.csv no entry bar near 2020-02-20T15:29:00+05:30 within 30m
-- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
 - `2020-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11650_CE_12_MAR_20.csv no entry bar near 2020-03-05T15:29:00+05:30 within 30m
-- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_10050_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m
+- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9950_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m
 - `2020-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_7850_PE_26_MAR_20.csv no entry bar near 2020-03-19T15:29:00+05:30 within 30m
-- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8250_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
+- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8200_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
 - `2020-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_8650_CE_09_APR_20.csv no entry bar near 2020-04-01T15:29:00+05:30 within 30m
 - `2020-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_8700_PE_16_APR_20.csv no entry bar near 2020-04-09T15:29:00+05:30 within 30m
 - `2020-04-16`: `missing_entry_or_exit_timestamp`. NIFTY_8600_PE_23_APR_20.csv no entry bar near 2020-04-16T15:29:00+05:30 within 30m
@@ -2084,9 +2082,9 @@
 - `2020-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_9700_PE_25_JUN_20.csv no entry bar near 2020-06-18T15:29:00+05:30 within 30m
 - `2020-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_10700_CE_02_JUL_20.csv no entry bar near 2020-06-25T15:29:00+05:30 within 30m
 - `2020-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_10150_PE_09_JUL_20.csv no entry bar near 2020-07-02T15:29:00+05:30 within 30m
-- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10450_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
+- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10400_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
 - `2020-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_10350_PE_23_JUL_20.csv no entry bar near 2020-07-16T15:29:00+05:30 within 30m
-- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_10850_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
+- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_10800_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
 - `2020-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_06_AUG_20.csv no entry bar near 2020-07-30T15:29:00+05:30 within 30m
 - `2020-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_10800_PE_13_AUG_20.csv no entry bar near 2020-08-06T15:29:00+05:30 within 30m
 - `2020-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_20_AUG_20.csv no entry bar near 2020-08-13T15:29:00+05:30 within 30m
@@ -2096,40 +2094,40 @@
 - `2020-09-10`: `missing_entry_or_exit_timestamp`. NIFTY_11050_PE_17_SEP_20.csv no entry bar near 2020-09-10T15:29:00+05:30 within 30m
 - `2020-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_24_SEP_20.csv no entry bar near 2020-09-17T15:29:00+05:30 within 30m
 - `2020-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_01_OCT_20.csv no entry bar near 2020-09-24T15:29:00+05:30 within 30m
-- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
+- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11050_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
 - `2020-10-08`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_15_OCT_20.csv no entry bar near 2020-10-08T15:29:00+05:30 within 30m
 - `2020-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_22_OCT_20.csv no entry bar near 2020-10-15T15:29:00+05:30 within 30m
 - `2020-10-22`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_29_OCT_20.csv no entry bar near 2020-10-22T15:29:00+05:30 within 30m
-- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
-- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
+- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
+- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
 - `2020-11-12`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_19_NOV_20.csv no entry bar near 2020-11-12T15:29:00+05:30 within 30m
 - `2020-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_19_NOV_20.csv no exit bar near 2020-11-14T09:16:00+05:30 within 30m
-- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:15:00+05:30; no fallback within 30m
+- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:00:00+05:30; no fallback within 30m
 - `2020-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_13150_CE_26_NOV_20.csv no entry bar near 2020-11-19T15:29:00+05:30 within 30m
 - `2020-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12600_PE_03_DEC_20.csv no entry bar near 2020-11-26T15:29:00+05:30 within 30m
 - `2020-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_13550_CE_10_DEC_20.csv no entry bar near 2020-12-03T15:29:00+05:30 within 30m
-- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13100_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
+- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13050_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
 - `2020-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_13350_PE_24_DEC_20.csv no entry bar near 2020-12-17T15:29:00+05:30 within 30m
 - `2020-12-24`: `missing_entry_or_exit_timestamp`. NIFTY_13350_PE_31_DEC_20.csv no entry bar near 2020-12-24T15:29:00+05:30 within 30m
-- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14350_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
+- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14400_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
 - `2021-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_14550_CE_14_JAN_21.csv no entry bar near 2021-01-07T15:29:00+05:30 within 30m
 - `2021-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_14200_PE_21_JAN_21.csv no entry bar near 2021-01-14T15:29:00+05:30 within 30m
-- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_15050_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
-- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13400_PE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
+- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
+- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_14200_CE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
 - `2021-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_14500_PE_11_FEB_21.csv no entry bar near 2021-02-04T15:29:00+05:30 within 30m
-- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_14800_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
+- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_14750_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
 - `2021-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_15500_CE_25_FEB_21.csv no entry bar near 2021-02-18T15:29:00+05:30 within 30m
 - `2021-02-25`: `missing_entry_or_exit_timestamp`. NIFTY_15500_CE_04_MAR_21.csv no entry bar near 2021-02-25T15:29:00+05:30 within 30m
 - `2021-03-04`: `missing_entry_or_exit_timestamp`. NIFTY_15500_CE_10_MAR_21.csv no entry bar near 2021-03-04T15:29:00+05:30 within 30m
-- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_14750_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
+- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_14800_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
 - `2021-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_25_MAR_21.csv no entry bar near 2021-03-18T15:29:00+05:30 within 30m
-- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14750_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
-- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14450_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
-- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15300_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
+- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14700_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
+- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14500_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
+- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15250_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
 - `2021-04-15`: `missing_entry_or_exit_timestamp`. NIFTY_14200_PE_22_APR_21.csv no entry bar near 2021-04-15T15:29:00+05:30 within 30m
 - `2021-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_14000_PE_29_APR_21.csv no entry bar near 2021-04-22T15:29:00+05:30 within 30m
 - `2021-04-29`: `missing_entry_or_exit_timestamp`. NIFTY_15300_CE_06_MAY_21.csv no entry bar near 2021-04-29T15:29:00+05:30 within 30m
-- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14350_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
+- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14300_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
 - `2021-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15100_CE_20_MAY_21.csv no entry bar near 2021-05-12T15:29:00+05:30 within 30m
 - `2021-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_15300_CE_27_MAY_21.csv no entry bar near 2021-05-20T15:29:00+05:30 within 30m
 - `2021-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_14950_PE_03_JUN_21.csv no entry bar near 2021-05-27T15:29:00+05:30 within 30m
@@ -2139,85 +2137,85 @@
 - `2021-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_15400_PE_01_JUL_21.csv no entry bar near 2021-06-24T15:29:00+05:30 within 30m
 - `2021-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_16100_CE_08_JUL_21.csv no entry bar near 2021-07-01T15:29:00+05:30 within 30m
 - `2021-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_16150_CE_15_JUL_21.csv no entry bar near 2021-07-08T15:29:00+05:30 within 30m
-- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
-- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15450_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
+- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_15500_PE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
+- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15400_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
 - `2021-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_16200_CE_05_AUG_21.csv no entry bar near 2021-07-29T15:29:00+05:30 within 30m
 - `2021-08-05`: `missing_entry_or_exit_timestamp`. NIFTY_15900_PE_12_AUG_21.csv no entry bar near 2021-08-05T15:29:00+05:30 within 30m
 - `2021-08-12`: `missing_entry_or_exit_timestamp`. NIFTY_15950_PE_18_AUG_21.csv no entry bar near 2021-08-12T15:29:00+05:30 within 30m
-- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
+- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
 - `2021-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_02_SEP_21.csv no entry bar near 2021-08-26T15:29:00+05:30 within 30m
 - `2021-09-02`: `missing_entry_or_exit_timestamp`. NIFTY_16850_PE_09_SEP_21.csv no entry bar near 2021-09-02T15:29:00+05:30 within 30m
 - `2021-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_16950_PE_16_SEP_21.csv no entry bar near 2021-09-09T15:29:00+05:30 within 30m
 - `2021-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_23_SEP_21.csv no entry bar near 2021-09-16T15:29:00+05:30 within 30m
 - `2021-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_30_SEP_21.csv no entry bar near 2021-09-23T15:29:00+05:30 within 30m
-- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
+- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
 - `2021-10-07`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_14_OCT_21.csv no entry bar near 2021-10-07T15:29:00+05:30 within 30m
 - `2021-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_21_OCT_21.csv no entry bar near 2021-10-14T15:29:00+05:30 within 30m
-- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
+- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
 - `2021-10-28`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_03_NOV_21.csv no entry bar near 2021-10-28T15:29:00+05:30 within 30m
-- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_18250_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
+- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_18200_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
 - `2021-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_11_NOV_21.csv no entry bar near 2021-11-04T15:29:00+05:30 within 30m
-- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
+- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
 - `2021-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_25_NOV_21.csv no entry bar near 2021-11-18T15:29:00+05:30 within 30m
 - `2021-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_02_DEC_21.csv no entry bar near 2021-11-25T15:29:00+05:30 within 30m
 - `2021-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_09_DEC_21.csv no entry bar near 2021-12-02T15:29:00+05:30 within 30m
 - `2021-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_16_DEC_21.csv no entry bar near 2021-12-09T15:29:00+05:30 within 30m
-- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
-- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
-- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
+- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
+- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
+- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
 - `2022-01-06`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_13_JAN_22.csv no entry bar near 2022-01-06T15:29:00+05:30 within 30m
 - `2022-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_20_JAN_22.csv no entry bar near 2022-01-13T15:29:00+05:30 within 30m
-- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
-- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_16750_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
-- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
+- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
+- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
+- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
 - `2022-02-10`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_17_FEB_22.csv no entry bar near 2022-02-10T15:29:00+05:30 within 30m
 - `2022-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_24_FEB_22.csv no entry bar near 2022-02-17T15:29:00+05:30 within 30m
-- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16600_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
-- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16900_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
-- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
-- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
-- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
+- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16650_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
+- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
+- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
+- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_16850_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
+- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
 - `2022-03-31`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_07_APR_22.csv no entry bar near 2022-03-31T15:29:00+05:30 within 30m
 - `2022-04-07`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_13_APR_22.csv no entry bar near 2022-04-07T15:29:00+05:30 within 30m
 - `2022-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_21_APR_22.csv no entry bar near 2022-04-13T15:29:00+05:30 within 30m
 - `2022-04-21`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_28_APR_22.csv no entry bar near 2022-04-21T15:29:00+05:30 within 30m
-- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_16850_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
-- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
-- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_16250_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
-- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_16250_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
-- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_15800_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
+- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
+- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
+- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_16200_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
+- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_16200_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
+- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_15750_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
 - `2022-06-02`: `missing_entry_or_exit_timestamp`. NIFTY_16250_PE_09_JUN_22.csv no entry bar near 2022-06-02T15:29:00+05:30 within 30m
 - `2022-06-09`: `missing_entry_or_exit_timestamp`. NIFTY_16100_PE_16_JUN_22.csv no entry bar near 2022-06-09T15:29:00+05:30 within 30m
 - `2022-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_15750_CE_23_JUN_22.csv no entry bar near 2022-06-16T15:29:00+05:30 within 30m
-- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15200_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
-- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_16150_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
+- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15150_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
+- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_16200_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
 - `2022-07-07`: `missing_entry_or_exit_timestamp`. NIFTY_15750_PE_14_JUL_22.csv no entry bar near 2022-07-07T15:29:00+05:30 within 30m
 - `2022-07-14`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_21_JUL_22.csv no entry bar near 2022-07-14T15:29:00+05:30 within 30m
 - `2022-07-21`: `missing_entry_or_exit_timestamp`. NIFTY_16200_PE_28_JUL_22.csv no entry bar near 2022-07-21T15:29:00+05:30 within 30m
-- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16500_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
-- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_16950_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
+- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16550_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
+- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
 - `2022-08-11`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_18_AUG_22.csv no entry bar near 2022-08-11T15:29:00+05:30 within 30m
 - `2022-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_25_AUG_22.csv no entry bar near 2022-08-18T15:29:00+05:30 within 30m
 - `2022-08-25`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_01_SEP_22.csv no entry bar near 2022-08-25T15:29:00+05:30 within 30m
 - `2022-09-01`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_08_SEP_22.csv no entry bar near 2022-09-01T15:29:00+05:30 within 30m
 - `2022-09-08`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_15_SEP_22.csv no entry bar near 2022-09-08T15:29:00+05:30 within 30m
-- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
-- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
+- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
+- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
 - `2022-09-29`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_06_OCT_22.csv no entry bar near 2022-09-29T15:29:00+05:30 within 30m
-- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
+- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
 - `2022-10-13`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_20_OCT_22.csv no entry bar near 2022-10-13T15:29:00+05:30 within 30m
 - `2022-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_27_OCT_22.csv no entry bar near 2022-10-20T15:29:00+05:30 within 30m
-- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
-- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:15:00+05:30; no fallback within 30m
+- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
+- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:00:00+05:30; no fallback within 30m
 - `2022-10-27`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_03_NOV_22.csv no entry bar near 2022-10-27T15:29:00+05:30 within 30m
 - `2022-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18450_CE_10_NOV_22.csv no entry bar near 2022-11-03T15:29:00+05:30 within 30m
 - `2022-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_17_NOV_22.csv no entry bar near 2022-11-10T15:29:00+05:30 within 30m
-- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18750_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
+- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18700_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
 - `2022-11-24`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_01_DEC_22.csv no entry bar near 2022-11-24T15:29:00+05:30 within 30m
 - `2022-12-01`: `missing_entry_or_exit_timestamp`. NIFTY_19200_CE_08_DEC_22.csv no entry bar near 2022-12-01T15:29:00+05:30 within 30m
 - `2022-12-08`: `missing_entry_or_exit_timestamp`. NIFTY_18200_PE_15_DEC_22.csv no entry bar near 2022-12-08T15:29:00+05:30 within 30m
 - `2022-12-15`: `missing_entry_or_exit_timestamp`. NIFTY_18800_CE_22_DEC_22.csv no entry bar near 2022-12-15T15:29:00+05:30 within 30m
-- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
+- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
 - `2022-12-29`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_05_JAN_23.csv no entry bar near 2022-12-29T15:29:00+05:30 within 30m
 - `2023-01-05`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_12_JAN_23.csv no entry bar near 2023-01-05T15:29:00+05:30 within 30m
 - `2023-01-12`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_19_JAN_23.csv no entry bar near 2023-01-12T15:29:00+05:30 within 30m
@@ -2225,33 +2223,33 @@
 - `2023-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_02_FEB_23.csv no entry bar near 2023-01-25T15:29:00+05:30 within 30m
 - `2023-02-02`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_09_FEB_23.csv no entry bar near 2023-02-02T15:29:00+05:30 within 30m
 - `2023-02-09`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_16_FEB_23.csv no entry bar near 2023-02-09T15:29:00+05:30 within 30m
-- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
+- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18450_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
 - `2023-02-23`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_02_MAR_23.csv no entry bar near 2023-02-23T15:29:00+05:30 within 30m
-- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
+- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
 - `2023-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_16_MAR_23.csv no entry bar near 2023-03-09T15:29:00+05:30 within 30m
 - `2023-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_16600_PE_23_MAR_23.csv no entry bar near 2023-03-16T15:29:00+05:30 within 30m
 - `2023-03-23`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_29_MAR_23.csv no entry bar near 2023-03-23T15:29:00+05:30 within 30m
 - `2023-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_06_APR_23.csv no entry bar near 2023-03-29T15:29:00+05:30 within 30m
 - `2023-04-06`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_13_APR_23.csv no entry bar near 2023-04-06T15:29:00+05:30 within 30m
 - `2023-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_20_APR_23.csv no entry bar near 2023-04-13T15:29:00+05:30 within 30m
-- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
+- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
 - `2023-04-27`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_04_MAY_23.csv no entry bar near 2023-04-27T15:29:00+05:30 within 30m
 - `2023-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_11_MAY_23.csv no entry bar near 2023-05-04T15:29:00+05:30 within 30m
 - `2023-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_18700_CE_18_MAY_23.csv no entry bar near 2023-05-11T15:29:00+05:30 within 30m
 - `2023-05-18`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_25_MAY_23.csv no entry bar near 2023-05-18T15:29:00+05:30 within 30m
 - `2023-05-25`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_01_JUN_23.csv no entry bar near 2023-05-25T15:29:00+05:30 within 30m
 - `2023-06-01`: `missing_entry_or_exit_timestamp`. NIFTY_18900_CE_08_JUN_23.csv no entry bar near 2023-06-01T15:29:00+05:30 within 30m
-- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_19050_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
+- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_19000_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
 - `2023-06-15`: `missing_entry_or_exit_timestamp`. NIFTY_19100_CE_22_JUN_23.csv no entry bar near 2023-06-15T15:29:00+05:30 within 30m
-- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_19200_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_19200_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
+- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_19150_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_19150_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
 - `2023-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_19050_CE_28_JUN_23.csv no entry bar near 2023-06-23T15:29:00+05:30 within 30m; NIFTY_19050_CE_28_JUN_23.csv no exit bar near 2023-06-26T09:16:00+05:30 within 30m
 - `2023-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_18300_PE_28_JUN_23.csv no entry bar near 2023-06-26T15:29:00+05:30 within 30m; NIFTY_18300_PE_28_JUN_23.csv no exit bar near 2023-06-27T09:16:00+05:30 within 30m
 - `2023-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_18400_PE_28_JUN_23.csv no entry bar near 2023-06-27T15:29:00+05:30 within 30m
-- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18600_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18600_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
+- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18550_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18550_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
 - `2023-07-06`: `missing_entry_or_exit_timestamp`. NIFTY_19100_PE_13_JUL_23.csv no entry bar near 2023-07-06T15:29:00+05:30 within 30m
-- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19850_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
-- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19550_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
-- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_20100_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
+- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19800_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
+- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19600_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
+- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_20050_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
 - `2023-08-03`: `missing_entry_or_exit_timestamp`. NIFTY_19800_CE_10_AUG_23.csv no entry bar near 2023-08-03T15:29:00+05:30 within 30m
 - `2023-08-10`: `missing_entry_or_exit_timestamp`. NIFTY_19950_CE_17_AUG_23.csv no entry bar near 2023-08-10T15:29:00+05:30 within 30m
 - `2023-08-17`: `missing_entry_or_exit_timestamp`. NIFTY_19750_CE_24_AUG_23.csv no entry bar near 2023-08-17T15:29:00+05:30 within 30m
@@ -2260,49 +2258,49 @@
 - `2023-09-07`: `missing_entry_or_exit_timestamp`. NIFTY_19300_PE_14_SEP_23.csv no entry bar near 2023-09-07T15:29:00+05:30 within 30m
 - `2023-09-14`: `missing_entry_or_exit_timestamp`. NIFTY_19700_PE_21_SEP_23.csv no entry bar near 2023-09-14T15:29:00+05:30 within 30m
 - `2023-09-21`: `missing_entry_or_exit_timestamp`. NIFTY_20150_CE_28_SEP_23.csv no entry bar near 2023-09-21T15:29:00+05:30 within 30m
-- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19950_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
+- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19900_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
 - `2023-10-05`: `missing_entry_or_exit_timestamp`. NIFTY_19150_PE_12_OCT_23.csv no entry bar near 2023-10-05T15:29:00+05:30 within 30m
 - `2023-10-12`: `missing_entry_or_exit_timestamp`. NIFTY_20200_CE_19_OCT_23.csv no entry bar near 2023-10-12T15:29:00+05:30 within 30m
-- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_20000_CE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
+- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19200_PE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
 - `2023-10-26`: `missing_entry_or_exit_timestamp`. NIFTY_19250_CE_02_NOV_23.csv no entry bar near 2023-10-26T15:29:00+05:30 within 30m
-- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_18750_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
+- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_18700_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
 - `2023-11-09`: `missing_entry_or_exit_timestamp`. NIFTY_19800_CE_16_NOV_23.csv no entry bar near 2023-11-09T15:29:00+05:30 within 30m
 - `2023-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_19050_PE_16_NOV_23.csv no exit bar near 2023-11-12T09:16:00+05:30 within 30m
-- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:15:00+05:30; no fallback within 30m
+- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:00:00+05:30; no fallback within 30m
 - `2023-11-16`: `missing_entry_or_exit_timestamp`. NIFTY_20150_CE_23_NOV_23.csv no entry bar near 2023-11-16T15:29:00+05:30 within 30m
 - `2023-11-23`: `missing_entry_or_exit_timestamp`. NIFTY_20200_CE_30_NOV_23.csv no entry bar near 2023-11-23T15:29:00+05:30 within 30m
 - `2023-11-30`: `missing_entry_or_exit_timestamp`. NIFTY_19750_PE_07_DEC_23.csv no entry bar near 2023-11-30T15:29:00+05:30 within 30m
-- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_20500_PE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
-- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_20800_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
-- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_20900_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
-- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21350_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
+- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_21300_CE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
+- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_20750_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
+- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_20850_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
+- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21400_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
 - `2024-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_21250_PE_11_JAN_24.csv no entry bar near 2024-01-04T15:29:00+05:30 within 30m
-- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21250_PE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
-- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21100_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
+- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_22050_CE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
+- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21050_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
 - `2024-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_20950_PE_01_FEB_24.csv no entry bar near 2024-01-25T15:29:00+05:30 within 30m
 - `2024-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_22100_CE_08_FEB_24.csv no entry bar near 2024-02-01T15:29:00+05:30 within 30m
-- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_22150_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
-- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
+- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_22100_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
+- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21500_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
 - `2024-02-22`: `missing_entry_or_exit_timestamp`. NIFTY_21800_PE_29_FEB_24.csv no entry bar near 2024-02-22T15:29:00+05:30 within 30m
-- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21650_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
-- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:15:00+05:30; no fallback within 30m
-- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22900_CE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
+- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21600_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
+- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:00:00+05:30; no fallback within 30m
+- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22100_PE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
 - `2024-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_21750_PE_21_MAR_24.csv no entry bar near 2024-03-14T15:29:00+05:30 within 30m
-- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_22400_CE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
-- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22750_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
-- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22150_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
+- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_21650_PE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
+- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22650_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
+- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22100_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
 - `2024-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_22350_PE_18_APR_24.csv no entry bar near 2024-04-10T15:29:00+05:30 within 30m
-- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22450_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
+- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22350_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
 - `2024-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_22150_PE_02_MAY_24.csv no entry bar near 2024-04-25T15:29:00+05:30 within 30m
 - `2024-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_23050_CE_09_MAY_24.csv no entry bar near 2024-05-02T15:29:00+05:30 within 30m
 - `2024-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_22350_CE_16_MAY_24.csv no entry bar near 2024-05-09T15:29:00+05:30 within 30m
 - `2024-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_22000_PE_23_MAY_24.csv no entry bar near 2024-05-16T15:29:00+05:30 within 30m
-- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:15:00+05:30; no fallback within 30m
-- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22550_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
-- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22150_PE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
+- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:00:00+05:30; no fallback within 30m
+- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22600_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
+- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22900_CE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
 - `2024-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_22450_PE_13_JUN_24.csv no entry bar near 2024-06-06T15:29:00+05:30 within 30m
 - `2024-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_23000_PE_20_JUN_24.csv no entry bar near 2024-06-13T15:29:00+05:30 within 30m
-- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23200_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
+- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23150_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
 - `2024-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_23650_PE_04_JUL_24.csv no entry bar near 2024-06-27T15:29:00+05:30 within 30m
 - `2024-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_24700_CE_11_JUL_24.csv no entry bar near 2024-07-04T15:29:00+05:30 within 30m
 - `2024-07-11`: `missing_entry_or_exit_timestamp`. NIFTY_23950_PE_18_JUL_24.csv no entry bar near 2024-07-11T15:29:00+05:30 within 30m
@@ -2314,38 +2312,36 @@
 - `2024-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_25200_CE_29_AUG_24.csv no entry bar near 2024-08-22T15:29:00+05:30 within 30m
 - `2024-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_24750_PE_05_SEP_24.csv no entry bar near 2024-08-29T15:29:00+05:30 within 30m
 - `2024-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_25550_CE_12_SEP_24.csv no entry bar near 2024-09-05T15:29:00+05:30 within 30m
-- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_24900_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
+- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25000_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
 - `2024-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_25850_CE_26_SEP_24.csv no entry bar near 2024-09-19T15:29:00+05:30 within 30m
 - `2024-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_25800_PE_03_OCT_24.csv no entry bar near 2024-09-26T15:29:00+05:30 within 30m
 - `2024-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_25650_CE_10_OCT_24.csv no entry bar near 2024-10-03T15:29:00+05:30 within 30m
 - `2024-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_25400_CE_17_OCT_24.csv no entry bar near 2024-10-10T15:29:00+05:30 within 30m
 - `2024-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_25150_CE_24_OCT_24.csv no entry bar near 2024-10-17T15:29:00+05:30 within 30m
-- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24000_PE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
-- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_23850_PE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
-- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:15:00+05:30; no fallback within 30m
+- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24800_CE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
+- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24600_CE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24600_CE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
+- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:00:00+05:30; no fallback within 30m
 - `2024-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_24600_CE_14_NOV_24.csv no entry bar near 2024-11-07T15:29:00+05:30 within 30m
-- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23150_PE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
+- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23950_CE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
 - `2024-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_22950_PE_28_NOV_24.csv no entry bar near 2024-11-21T15:29:00+05:30 within 30m
-- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24350_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
-- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24300_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
+- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24300_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
+- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24350_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
 - `2024-12-12`: `missing_entry_or_exit_timestamp`. NIFTY_24950_CE_19_DEC_24.csv no entry bar near 2024-12-12T15:29:00+05:30 within 30m
-- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_23550_PE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
-- `2025-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_27_MAR_25.csv no entry bar near 2025-03-25T15:29:00+05:30 within 30m; NIFTY_24000_CE_27_MAR_25.csv no exit bar near 2025-03-26T09:16:00+05:30 within 30m
+- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_24350_CE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
 - `2025-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_26250_CE_28_OCT_25.csv no exit bar near 2025-10-21T09:16:00+05:30 within 30m
 - `2025-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_26250_CE_28_OCT_25.csv no entry bar near 2025-10-21T15:29:00+05:30 within 30m
-- `2026-03-18`: `missing_option_file`. Missing option file: NIFTY_24150_CE_24_MAR_26.csv
-- `2026-04-02`: `missing_option_file`. Missing option file: NIFTY_22300_PE_28_APR_26.csv
-- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23650_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
+- `2026-04-02`: `missing_option_file`. Missing option file: NIFTY_22350_PE_28_APR_26.csv
+- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23600_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
 - `2026-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_24500_CE_05_MAY_26.csv no entry bar near 2026-05-04T15:29:00+05:30 within 30m; NIFTY_24500_CE_05_MAY_26.csv no exit bar near 2026-05-05T09:16:00+05:30 within 30m
 - `2026-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_23650_PE_12_MAY_26.csv no entry bar near 2026-05-05T15:29:00+05:30 within 30m; NIFTY_23650_PE_12_MAY_26.csv no exit bar near 2026-05-06T09:16:00+05:30 within 30m
-- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_23950_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_23950_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
-- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24750_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24750_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
+- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_23900_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_23900_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
+- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24700_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24700_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
 - `2026-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_24600_CE_12_MAY_26.csv no entry bar near 2026-05-08T15:29:00+05:30 within 30m; NIFTY_24600_CE_12_MAY_26.csv no exit bar near 2026-05-11T09:16:00+05:30 within 30m
 - `2026-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_24200_CE_12_MAY_26.csv no entry bar near 2026-05-11T15:29:00+05:30 within 30m; NIFTY_24200_CE_12_MAY_26.csv no exit bar near 2026-05-12T09:16:00+05:30 within 30m
 - `2026-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_23000_PE_09_JUN_26.csv no exit bar near 2026-06-04T09:16:00+05:30 within 30m
-- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23050_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23050_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
+- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23000_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23000_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
 - `2026-06-05`: `missing_entry_or_exit_timestamp`. NIFTY_23750_CE_09_JUN_26.csv no entry bar near 2026-06-05T15:29:00+05:30 within 30m; NIFTY_23750_CE_09_JUN_26.csv no exit bar near 2026-06-08T09:16:00+05:30 within 30m
-- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23500_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23500_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
+- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23550_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23550_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
 - `2026-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_23600_PE_23_JUN_26.csv no exit bar near 2026-06-17T09:16:00+05:30 within 30m
 - `2026-06-17`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_23_JUN_26.csv no entry bar near 2026-06-17T15:29:00+05:30 within 30m; NIFTY_23700_PE_23_JUN_26.csv no exit bar near 2026-06-18T09:16:00+05:30 within 30m
 - `2026-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_23800_PE_23_JUN_26.csv no entry bar near 2026-06-18T15:29:00+05:30 within 30m; NIFTY_23800_PE_23_JUN_26.csv no exit bar near 2026-06-19T09:16:00+05:30 within 30m
@@ -2353,39 +2349,39 @@
 
 ### OTM_500
 
-- `2019-01-01`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
+- `2019-01-01`: `insufficient_spot_history`. 2019-01-01T15:00:00+05:30 has 24 bars; needs 25
 - `2019-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-01-02T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-01-03T09:16:00+05:30 within 30m
 - `2019-01-03`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-01-03T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-01-04T09:16:00+05:30 within 30m
-- `2019-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_10250_PE_02_JAN_20.csv no entry bar near 2019-01-04T15:29:00+05:30 within 30m; NIFTY_10250_PE_02_JAN_20.csv no exit bar near 2019-01-07T09:16:00+05:30 within 30m
+- `2019-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_10200_PE_02_JAN_20.csv no entry bar near 2019-01-04T15:29:00+05:30 within 30m; NIFTY_10200_PE_02_JAN_20.csv no exit bar near 2019-01-07T09:16:00+05:30 within 30m
 - `2019-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-01-07T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-01-08T09:16:00+05:30 within 30m
 - `2019-01-08`: `missing_option_file`. Missing option file: NIFTY_10300_PE_02_JAN_20.csv
 - `2019-01-09`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-01-10`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-01-10T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-01-11T09:16:00+05:30 within 30m
-- `2019-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-01-11T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-01-14T09:16:00+05:30 within 30m
+- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10300_PE_02_JAN_20.csv
 - `2019-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_10250_PE_02_JAN_20.csv no entry bar near 2019-01-14T15:29:00+05:30 within 30m; NIFTY_10250_PE_02_JAN_20.csv no exit bar near 2019-01-15T09:16:00+05:30 within 30m
 - `2019-01-15`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
 - `2019-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-01-16T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-01-17T09:16:00+05:30 within 30m
-- `2019-01-17`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-01-17T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-01-18T09:16:00+05:30 within 30m
+- `2019-01-17`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
 - `2019-01-18`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
-- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
-- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
-- `2019-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-01-23T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-01-24T09:16:00+05:30 within 30m
+- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
+- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
+- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-01-24`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-01-25T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-01-28T09:16:00+05:30 within 30m
-- `2019-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-01-28T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-01-29T09:16:00+05:30 within 30m
-- `2019-01-29`: `missing_entry_or_exit_timestamp`. NIFTY_10200_PE_02_JAN_20.csv no entry bar near 2019-01-29T15:29:00+05:30 within 30m; NIFTY_10200_PE_02_JAN_20.csv no exit bar near 2019-01-30T09:16:00+05:30 within 30m
+- `2019-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-01-28T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-01-29T09:16:00+05:30 within 30m
+- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10150_PE_02_JAN_20.csv
 - `2019-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-01-30T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-01-31T09:16:00+05:30 within 30m
-- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10300_PE_02_JAN_20.csv
+- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-02-01`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
 - `2019-02-04`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
 - `2019-02-05`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-02-06`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-02-07`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-02-08`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
-- `2019-02-11`: `missing_option_file`. Missing option file: NIFTY_10400_PE_02_JAN_20.csv
+- `2019-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-02-11T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-02-12T09:16:00+05:30 within 30m
 - `2019-02-12`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-02-13T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-02-14T09:16:00+05:30 within 30m
-- `2019-02-14`: `missing_entry_or_exit_timestamp`. NIFTY_10250_PE_02_JAN_20.csv no entry bar near 2019-02-14T15:29:00+05:30 within 30m; NIFTY_10250_PE_02_JAN_20.csv no exit bar near 2019-02-15T09:16:00+05:30 within 30m
+- `2019-02-14`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-02-14T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-02-15T09:16:00+05:30 within 30m
 - `2019-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_10250_PE_02_JAN_20.csv no entry bar near 2019-02-15T15:29:00+05:30 within 30m; NIFTY_10250_PE_02_JAN_20.csv no exit bar near 2019-02-18T09:16:00+05:30 within 30m
 - `2019-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-02-18T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-02-19T09:16:00+05:30 within 30m
 - `2019-02-19`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-02-19T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-02-20T09:16:00+05:30 within 30m
@@ -2399,29 +2395,29 @@
 - `2019-03-01`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-03-05`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-03-06`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
-- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
+- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-03-08`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
-- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_10700_PE_02_JAN_20.csv
+- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-03-12`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-03-13`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-03-14`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
-- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
-- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
+- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
+- `2019-03-18`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-03-19`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-03-20T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-03-22T09:16:00+05:30 within 30m
 - `2019-03-22`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-03-22T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-03-25T09:16:00+05:30 within 30m
 - `2019-03-25`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-03-26T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-03-27T09:16:00+05:30 within 30m
 - `2019-03-27`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-03-27T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-03-28T09:16:00+05:30 within 30m
-- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
+- `2019-03-28`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-03-29T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-04-01T09:16:00+05:30 within 30m
 - `2019-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-04-01T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-04-02T09:16:00+05:30 within 30m
-- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
+- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
 - `2019-04-03`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-04-03T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-04-04T09:16:00+05:30 within 30m
 - `2019-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-04-04T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-04-05T09:16:00+05:30 within 30m
-- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
+- `2019-04-05`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-04-08T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-04-09T09:16:00+05:30 within 30m
-- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
+- `2019-04-09`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-04-10T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-04-11T09:16:00+05:30 within 30m
 - `2019-04-11`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-04-11T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-04-12T09:16:00+05:30 within 30m
 - `2019-04-12`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
@@ -2430,26 +2426,26 @@
 - `2019-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-04-18T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-04-22T09:16:00+05:30 within 30m
 - `2019-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-04-22T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-04-23T09:16:00+05:30 within 30m
 - `2019-04-23`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-04-23T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-04-24T09:16:00+05:30 within 30m
-- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
+- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
 - `2019-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-04-25T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-04-26T09:16:00+05:30 within 30m
 - `2019-04-26`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-04-26T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-04-30T09:16:00+05:30 within 30m
 - `2019-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-04-30T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-05-02T09:16:00+05:30 within 30m
-- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
+- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
 - `2019-05-03`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-05-03T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-05-06T09:16:00+05:30 within 30m
 - `2019-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-05-06T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-05-07T09:16:00+05:30 within 30m
 - `2019-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-05-07T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-05-08T09:16:00+05:30 within 30m
 - `2019-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-05-08T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-05-09T09:16:00+05:30 within 30m
 - `2019-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-09T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-05-10T09:16:00+05:30 within 30m
-- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
+- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
 - `2019-05-13`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-05-14`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-05-15`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
-- `2019-05-16`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-05-16`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-05-17`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
-- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
+- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
 - `2019-05-21`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-05-21T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-05-22T09:16:00+05:30 within 30m
 - `2019-05-22`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-05-22T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-05-23T09:16:00+05:30 within 30m
-- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
+- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
 - `2019-05-24`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-05-24T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-05-27T09:16:00+05:30 within 30m
 - `2019-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-05-27T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-05-28T09:16:00+05:30 within 30m
 - `2019-05-28`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
@@ -2457,10 +2453,10 @@
 - `2019-05-30`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-05-31`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-05-31T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-06-03T09:16:00+05:30 within 30m
 - `2019-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-06-03T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-06-04T09:16:00+05:30 within 30m
-- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12550_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
+- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_12500_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_12500_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
 - `2019-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-06-06T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-06-07T09:16:00+05:30 within 30m
 - `2019-06-07`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-06-07T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-06-10T09:16:00+05:30 within 30m
-- `2019-06-10`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
+- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
 - `2019-06-11`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-06-12`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-06-12T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-06-13T09:16:00+05:30 within 30m
 - `2019-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-06-13T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-06-14T09:16:00+05:30 within 30m
@@ -2469,7 +2465,7 @@
 - `2019-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-06-18T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-06-19T09:16:00+05:30 within 30m
 - `2019-06-19`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-06-19T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-06-20T09:16:00+05:30 within 30m
 - `2019-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-06-20T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-06-21T09:16:00+05:30 within 30m
-- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_12250_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_12250_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
+- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
 - `2019-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_02_JAN_20.csv no entry bar near 2019-06-24T15:29:00+05:30 within 30m; NIFTY_12200_CE_02_JAN_20.csv no exit bar near 2019-06-25T09:16:00+05:30 within 30m
 - `2019-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-06-25T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-06-26T09:16:00+05:30 within 30m
 - `2019-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-06-26T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-06-27T09:16:00+05:30 within 30m
@@ -2477,7 +2473,7 @@
 - `2019-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-06-28T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-07-01T09:16:00+05:30 within 30m
 - `2019-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-07-01T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-07-02T09:16:00+05:30 within 30m
 - `2019-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-07-02T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-07-03T09:16:00+05:30 within 30m
-- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
+- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
 - `2019-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-07-04T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-07-05T09:16:00+05:30 within 30m
 - `2019-07-05`: `missing_entry_or_exit_timestamp`. NIFTY_12300_CE_02_JAN_20.csv no entry bar near 2019-07-05T15:29:00+05:30 within 30m; NIFTY_12300_CE_02_JAN_20.csv no exit bar near 2019-07-08T09:16:00+05:30 within 30m
 - `2019-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-07-08T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-07-09T09:16:00+05:30 within 30m
@@ -2489,54 +2485,54 @@
 - `2019-07-16`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-07-17`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-07-17T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-07-18T09:16:00+05:30 within 30m
 - `2019-07-18`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-07-18T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-07-19T09:16:00+05:30 within 30m
-- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
-- `2019-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-07-22T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-07-23T09:16:00+05:30 within 30m
+- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
+- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-07-23T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-07-24T09:16:00+05:30 within 30m
 - `2019-07-24`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-07-25`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-07-25T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-07-26T09:16:00+05:30 within 30m
 - `2019-07-26`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-07-29T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-07-30T09:16:00+05:30 within 30m
 - `2019-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-07-30T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-07-31T09:16:00+05:30 within 30m
-- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
+- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_10650_PE_02_JAN_20.csv
 - `2019-08-01`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-08-02`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-08-05`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
-- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
+- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-08-07`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
+- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-08-09`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-08-09T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-08-13T09:16:00+05:30 within 30m
-- `2019-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-08-13T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-08-14T09:16:00+05:30 within 30m
-- `2019-08-14`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-08-14T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-08-16T09:16:00+05:30 within 30m
+- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
+- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-08-16`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-08-19`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
-- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
+- `2019-08-20`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-08-20T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-08-21T09:16:00+05:30 within 30m
 - `2019-08-21`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-08-21T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-08-22T09:16:00+05:30 within 30m
 - `2019-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-08-22T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-08-23T09:16:00+05:30 within 30m
 - `2019-08-23`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-08-26`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
-- `2019-08-27`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
+- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
 - `2019-08-28`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-08-29`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
-- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
+- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
 - `2019-09-03`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-09-03T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-09-04T09:16:00+05:30 within 30m
 - `2019-09-04`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
 - `2019-09-05`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-09-06`: `missing_option_file`. Missing option file: NIFTY_10450_PE_02_JAN_20.csv
 - `2019-09-09`: `missing_option_file`. Missing option file: NIFTY_10500_PE_02_JAN_20.csv
-- `2019-09-11`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-09-11T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-09-12T09:16:00+05:30 within 30m
+- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_10550_PE_02_JAN_20.csv
 - `2019-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-09-12T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-09-13T09:16:00+05:30 within 30m
 - `2019-09-13`: `missing_option_file`. Missing option file: NIFTY_10600_PE_02_JAN_20.csv
 - `2019-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-09-16T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-09-17T09:16:00+05:30 within 30m
-- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10350_PE_02_JAN_20.csv
+- `2019-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-09-17T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-09-18T09:16:00+05:30 within 30m
+- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-09-19T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-09-20T09:16:00+05:30 within 30m
 - `2019-09-20`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
-- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
-- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
+- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
+- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
 - `2019-09-25`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-09-25T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-09-26T09:16:00+05:30 within 30m
-- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
+- `2019-09-26`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-09-27`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-09-27T15:29:00+05:30 within 30m; NIFTY_12000_CE_02_JAN_20.csv no exit bar near 2019-09-30T09:16:00+05:30 within 30m
-- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
+- `2019-09-30`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-10-01T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-10-03T09:16:00+05:30 within 30m
 - `2019-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-10-03T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-10-04T09:16:00+05:30 within 30m
 - `2019-10-04`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
@@ -2544,7 +2540,7 @@
 - `2019-10-09`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-10-10T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-10-11T09:16:00+05:30 within 30m
 - `2019-10-11`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
-- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
+- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
 - `2019-10-15`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-10-16`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-10-17T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-10-18T09:16:00+05:30 within 30m
@@ -2553,12 +2549,12 @@
 - `2019-10-23`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-10-23T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-10-24T09:16:00+05:30 within 30m
 - `2019-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-10-24T15:29:00+05:30 within 30m; NIFTY_12100_CE_02_JAN_20.csv no exit bar near 2019-10-25T09:16:00+05:30 within 30m
 - `2019-10-25`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-10-25T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-10-27T09:16:00+05:30 within 30m
-- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:15:00+05:30; no fallback within 30m
+- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:00:00+05:30; no fallback within 30m
 - `2019-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-10-29T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-10-30T09:16:00+05:30 within 30m
 - `2019-10-30`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-10-30T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-10-31T09:16:00+05:30 within 30m
 - `2019-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-10-31T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-11-01T09:16:00+05:30 within 30m
 - `2019-11-01`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-11-01T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-11-04T09:16:00+05:30 within 30m
-- `2019-11-04`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
+- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
 - `2019-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-11-05T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-11-06T09:16:00+05:30 within 30m
 - `2019-11-06`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-11-07T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-11-08T09:16:00+05:30 within 30m
@@ -2567,11 +2563,11 @@
 - `2019-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-11-13T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-11-14T09:16:00+05:30 within 30m
 - `2019-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-11-14T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-11-15T09:16:00+05:30 within 30m
 - `2019-11-15`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-11-15T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-11-18T09:16:00+05:30 within 30m
-- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
+- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
 - `2019-11-19`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-11-20`: `missing_entry_or_exit_timestamp`. NIFTY_12500_CE_02_JAN_20.csv no entry bar near 2019-11-20T15:29:00+05:30 within 30m; NIFTY_12500_CE_02_JAN_20.csv no exit bar near 2019-11-21T09:16:00+05:30 within 30m
 - `2019-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-11-21T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-11-22T09:16:00+05:30 within 30m
-- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
+- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
 - `2019-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-11-25T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-11-26T09:16:00+05:30 within 30m
 - `2019-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_02_JAN_20.csv no entry bar near 2019-11-26T15:29:00+05:30 within 30m; NIFTY_12550_CE_02_JAN_20.csv no exit bar near 2019-11-27T09:16:00+05:30 within 30m
 - `2019-11-27`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-11-27T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-11-28T09:16:00+05:30 within 30m
@@ -2580,7 +2576,7 @@
 - `2019-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_02_JAN_20.csv no entry bar near 2019-12-02T15:29:00+05:30 within 30m; NIFTY_12550_CE_02_JAN_20.csv no exit bar near 2019-12-03T09:16:00+05:30 within 30m
 - `2019-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-12-03T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-12-04T09:16:00+05:30 within 30m
 - `2019-12-04`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-12-04T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-12-05T09:16:00+05:30 within 30m
-- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12500_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12500_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
+- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_12550_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
 - `2019-12-06`: `missing_entry_or_exit_timestamp`. NIFTY_12400_CE_02_JAN_20.csv no entry bar near 2019-12-06T15:29:00+05:30 within 30m; NIFTY_12400_CE_02_JAN_20.csv no exit bar near 2019-12-09T09:16:00+05:30 within 30m
 - `2019-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_02_JAN_20.csv no entry bar near 2019-12-09T15:29:00+05:30 within 30m; NIFTY_12450_CE_02_JAN_20.csv no exit bar near 2019-12-10T09:16:00+05:30 within 30m
 - `2019-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_02_JAN_20.csv no entry bar near 2019-12-10T15:29:00+05:30 within 30m; NIFTY_12350_CE_02_JAN_20.csv no exit bar near 2019-12-11T09:16:00+05:30 within 30m
@@ -2589,7 +2585,7 @@
 - `2019-12-13`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-12-13T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-12-16T09:16:00+05:30 within 30m
 - `2019-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_02_JAN_20.csv no entry bar near 2019-12-16T15:29:00+05:30 within 30m; NIFTY_12550_CE_02_JAN_20.csv no exit bar near 2019-12-17T09:16:00+05:30 within 30m
 - `2019-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-12-17T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-12-18T09:16:00+05:30 within 30m
-- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
+- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
 - `2019-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-12-19T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-12-20T09:16:00+05:30 within 30m
 - `2019-12-20`: `missing_entry_or_exit_timestamp`. NIFTY_12750_CE_02_JAN_20.csv no entry bar near 2019-12-20T15:29:00+05:30 within 30m; NIFTY_12750_CE_02_JAN_20.csv no exit bar near 2019-12-23T09:16:00+05:30 within 30m
 - `2019-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-12-23T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-12-24T09:16:00+05:30 within 30m
@@ -2597,20 +2593,21 @@
 - `2019-12-26`: `missing_entry_or_exit_timestamp`. NIFTY_12650_CE_02_JAN_20.csv no entry bar near 2019-12-26T15:29:00+05:30 within 30m; NIFTY_12650_CE_02_JAN_20.csv no exit bar near 2019-12-27T09:16:00+05:30 within 30m
 - `2019-12-27`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-12-27T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-12-30T09:16:00+05:30 within 30m
 - `2019-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-12-30T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-12-31T09:16:00+05:30 within 30m
-- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12700_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
+- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12650_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
 - `2020-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_09_JAN_20.csv no entry bar near 2020-01-02T15:29:00+05:30 within 30m
+- `2020-01-03`: `missing_entry_or_exit_timestamp`. NIFTY_12750_CE_09_JAN_20.csv no exit bar near 2020-01-06T09:16:00+05:30 within 30m
 - `2020-01-09`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_16_JAN_20.csv no entry bar near 2020-01-09T15:29:00+05:30 within 30m
 - `2020-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_23_JAN_20.csv no entry bar near 2020-01-16T15:29:00+05:30 within 30m
 - `2020-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_30_JAN_20.csv no entry bar near 2020-01-23T15:29:00+05:30 within 30m
-- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12500_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
+- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
 - `2020-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_13_FEB_20.csv no entry bar near 2020-02-06T15:29:00+05:30 within 30m
 - `2020-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_20_FEB_20.csv no entry bar near 2020-02-13T15:29:00+05:30 within 30m
 - `2020-02-20`: `missing_entry_or_exit_timestamp`. NIFTY_12600_CE_27_FEB_20.csv no entry bar near 2020-02-20T15:29:00+05:30 within 30m
-- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11150_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
 - `2020-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_12_MAR_20.csv no entry bar near 2020-03-05T15:29:00+05:30 within 30m
-- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_10150_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m
+- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_10050_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m
 - `2020-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_7750_PE_26_MAR_20.csv no entry bar near 2020-03-19T15:29:00+05:30 within 30m
-- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8150_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
+- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8100_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
 - `2020-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_8750_CE_09_APR_20.csv no entry bar near 2020-04-01T15:29:00+05:30 within 30m
 - `2020-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_8600_PE_16_APR_20.csv no entry bar near 2020-04-09T15:29:00+05:30 within 30m
 - `2020-04-16`: `missing_entry_or_exit_timestamp`. NIFTY_8500_PE_23_APR_20.csv no entry bar near 2020-04-16T15:29:00+05:30 within 30m
@@ -2625,9 +2622,9 @@
 - `2020-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_9600_PE_25_JUN_20.csv no entry bar near 2020-06-18T15:29:00+05:30 within 30m
 - `2020-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_10800_CE_02_JUL_20.csv no entry bar near 2020-06-25T15:29:00+05:30 within 30m
 - `2020-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_10050_PE_09_JUL_20.csv no entry bar near 2020-07-02T15:29:00+05:30 within 30m
-- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10350_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
+- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10300_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
 - `2020-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_10250_PE_23_JUL_20.csv no entry bar near 2020-07-16T15:29:00+05:30 within 30m
-- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_10750_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
+- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_10700_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
 - `2020-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_06_AUG_20.csv no entry bar near 2020-07-30T15:29:00+05:30 within 30m
 - `2020-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_10700_PE_13_AUG_20.csv no entry bar near 2020-08-06T15:29:00+05:30 within 30m
 - `2020-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_20_AUG_20.csv no entry bar near 2020-08-13T15:29:00+05:30 within 30m
@@ -2637,40 +2634,40 @@
 - `2020-09-10`: `missing_entry_or_exit_timestamp`. NIFTY_10950_PE_17_SEP_20.csv no entry bar near 2020-09-10T15:29:00+05:30 within 30m
 - `2020-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_24_SEP_20.csv no entry bar near 2020-09-17T15:29:00+05:30 within 30m
 - `2020-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_01_OCT_20.csv no entry bar near 2020-09-24T15:29:00+05:30 within 30m
-- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_10900_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
+- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_10950_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
 - `2020-10-08`: `missing_entry_or_exit_timestamp`. NIFTY_12350_CE_15_OCT_20.csv no entry bar near 2020-10-08T15:29:00+05:30 within 30m
 - `2020-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_22_OCT_20.csv no entry bar near 2020-10-15T15:29:00+05:30 within 30m
 - `2020-10-22`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_29_OCT_20.csv no entry bar near 2020-10-22T15:29:00+05:30 within 30m
-- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
-- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
+- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_12200_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
+- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
 - `2020-11-12`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_19_NOV_20.csv no entry bar near 2020-11-12T15:29:00+05:30 within 30m
 - `2020-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_19_NOV_20.csv no exit bar near 2020-11-14T09:16:00+05:30 within 30m
-- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:15:00+05:30; no fallback within 30m
+- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:00:00+05:30; no fallback within 30m
 - `2020-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_13250_CE_26_NOV_20.csv no entry bar near 2020-11-19T15:29:00+05:30 within 30m
 - `2020-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_12500_PE_03_DEC_20.csv no entry bar near 2020-11-26T15:29:00+05:30 within 30m
 - `2020-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_13650_CE_10_DEC_20.csv no entry bar near 2020-12-03T15:29:00+05:30 within 30m
-- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13000_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
+- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_12950_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
 - `2020-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_13250_PE_24_DEC_20.csv no entry bar near 2020-12-17T15:29:00+05:30 within 30m
 - `2020-12-24`: `missing_entry_or_exit_timestamp`. NIFTY_13250_PE_31_DEC_20.csv no entry bar near 2020-12-24T15:29:00+05:30 within 30m
-- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14450_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
+- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_14500_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
 - `2021-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_14650_CE_14_JAN_21.csv no entry bar near 2021-01-07T15:29:00+05:30 within 30m
 - `2021-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_14100_PE_21_JAN_21.csv no entry bar near 2021-01-14T15:29:00+05:30 within 30m
-- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_15150_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
-- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13300_PE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
+- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_15100_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
+- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_14300_CE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
 - `2021-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_14400_PE_11_FEB_21.csv no entry bar near 2021-02-04T15:29:00+05:30 within 30m
-- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_14700_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
+- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_14650_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
 - `2021-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_25_FEB_21.csv no entry bar near 2021-02-18T15:29:00+05:30 within 30m
 - `2021-02-25`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_04_MAR_21.csv no entry bar near 2021-02-25T15:29:00+05:30 within 30m
 - `2021-03-04`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_10_MAR_21.csv no entry bar near 2021-03-04T15:29:00+05:30 within 30m
-- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_14650_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
+- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_14700_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
 - `2021-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_15100_CE_25_MAR_21.csv no entry bar near 2021-03-18T15:29:00+05:30 within 30m
-- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14850_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
-- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14350_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
-- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15400_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
+- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
+- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14400_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
+- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_15350_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
 - `2021-04-15`: `missing_entry_or_exit_timestamp`. NIFTY_14100_PE_22_APR_21.csv no entry bar near 2021-04-15T15:29:00+05:30 within 30m
 - `2021-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_13900_PE_29_APR_21.csv no entry bar near 2021-04-22T15:29:00+05:30 within 30m
 - `2021-04-29`: `missing_entry_or_exit_timestamp`. NIFTY_15400_CE_06_MAY_21.csv no entry bar near 2021-04-29T15:29:00+05:30 within 30m
-- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14250_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
+- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14200_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
 - `2021-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15200_CE_20_MAY_21.csv no entry bar near 2021-05-12T15:29:00+05:30 within 30m
 - `2021-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_15400_CE_27_MAY_21.csv no entry bar near 2021-05-20T15:29:00+05:30 within 30m
 - `2021-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_14850_PE_03_JUN_21.csv no entry bar near 2021-05-27T15:29:00+05:30 within 30m
@@ -2680,85 +2677,85 @@
 - `2021-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_15300_PE_01_JUL_21.csv no entry bar near 2021-06-24T15:29:00+05:30 within 30m
 - `2021-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_16200_CE_08_JUL_21.csv no entry bar near 2021-07-01T15:29:00+05:30 within 30m
 - `2021-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_16250_CE_15_JUL_21.csv no entry bar near 2021-07-08T15:29:00+05:30 within 30m
-- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_16400_CE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
-- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15350_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
+- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_15400_PE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
+- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15300_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
 - `2021-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_05_AUG_21.csv no entry bar near 2021-07-29T15:29:00+05:30 within 30m
 - `2021-08-05`: `missing_entry_or_exit_timestamp`. NIFTY_15800_PE_12_AUG_21.csv no entry bar near 2021-08-05T15:29:00+05:30 within 30m
 - `2021-08-12`: `missing_entry_or_exit_timestamp`. NIFTY_15850_PE_18_AUG_21.csv no entry bar near 2021-08-12T15:29:00+05:30 within 30m
-- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
+- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
 - `2021-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_02_SEP_21.csv no entry bar near 2021-08-26T15:29:00+05:30 within 30m
 - `2021-09-02`: `missing_entry_or_exit_timestamp`. NIFTY_16750_PE_09_SEP_21.csv no entry bar near 2021-09-02T15:29:00+05:30 within 30m
 - `2021-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_16850_PE_16_SEP_21.csv no entry bar near 2021-09-09T15:29:00+05:30 within 30m
 - `2021-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_23_SEP_21.csv no entry bar near 2021-09-16T15:29:00+05:30 within 30m
 - `2021-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_30_SEP_21.csv no entry bar near 2021-09-23T15:29:00+05:30 within 30m
-- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
+- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
 - `2021-10-07`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_14_OCT_21.csv no entry bar near 2021-10-07T15:29:00+05:30 within 30m
 - `2021-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_21_OCT_21.csv no entry bar near 2021-10-14T15:29:00+05:30 within 30m
-- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
+- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18650_CE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
 - `2021-10-28`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_03_NOV_21.csv no entry bar near 2021-10-28T15:29:00+05:30 within 30m
-- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_18350_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
+- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_18300_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
 - `2021-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_11_NOV_21.csv no entry bar near 2021-11-04T15:29:00+05:30 within 30m
-- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
+- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
 - `2021-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_25_NOV_21.csv no entry bar near 2021-11-18T15:29:00+05:30 within 30m
 - `2021-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_02_DEC_21.csv no entry bar near 2021-11-25T15:29:00+05:30 within 30m
 - `2021-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_09_DEC_21.csv no entry bar near 2021-12-02T15:29:00+05:30 within 30m
 - `2021-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_16_DEC_21.csv no entry bar near 2021-12-09T15:29:00+05:30 within 30m
-- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
-- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
-- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
+- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
+- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_16600_PE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
+- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
 - `2022-01-06`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_13_JAN_22.csv no entry bar near 2022-01-06T15:29:00+05:30 within 30m
 - `2022-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_20_JAN_22.csv no entry bar near 2022-01-13T15:29:00+05:30 within 30m
-- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
-- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_16650_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
-- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
+- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
+- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_16600_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
+- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
 - `2022-02-10`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_17_FEB_22.csv no entry bar near 2022-02-10T15:29:00+05:30 within 30m
 - `2022-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_24_FEB_22.csv no entry bar near 2022-02-17T15:29:00+05:30 within 30m
-- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16700_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
-- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
-- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
-- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
-- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
+- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
+- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
+- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
+- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_16750_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
+- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
 - `2022-03-31`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_07_APR_22.csv no entry bar near 2022-03-31T15:29:00+05:30 within 30m
 - `2022-04-07`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_13_APR_22.csv no entry bar near 2022-04-07T15:29:00+05:30 within 30m
 - `2022-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_21_APR_22.csv no entry bar near 2022-04-13T15:29:00+05:30 within 30m
 - `2022-04-21`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_28_APR_22.csv no entry bar near 2022-04-21T15:29:00+05:30 within 30m
-- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_16750_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
-- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
-- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
-- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
-- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_15700_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
+- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
+- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_17200_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
+- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
+- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
+- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_15650_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
 - `2022-06-02`: `missing_entry_or_exit_timestamp`. NIFTY_16150_PE_09_JUN_22.csv no entry bar near 2022-06-02T15:29:00+05:30 within 30m
 - `2022-06-09`: `missing_entry_or_exit_timestamp`. NIFTY_16000_PE_16_JUN_22.csv no entry bar near 2022-06-09T15:29:00+05:30 within 30m
 - `2022-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_15850_CE_23_JUN_22.csv no entry bar near 2022-06-16T15:29:00+05:30 within 30m
-- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15100_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
-- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_16250_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
+- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15050_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
+- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
 - `2022-07-07`: `missing_entry_or_exit_timestamp`. NIFTY_15650_PE_14_JUL_22.csv no entry bar near 2022-07-07T15:29:00+05:30 within 30m
 - `2022-07-14`: `missing_entry_or_exit_timestamp`. NIFTY_16450_CE_21_JUL_22.csv no entry bar near 2022-07-14T15:29:00+05:30 within 30m
 - `2022-07-21`: `missing_entry_or_exit_timestamp`. NIFTY_16100_PE_28_JUL_22.csv no entry bar near 2022-07-21T15:29:00+05:30 within 30m
-- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16400_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
-- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_16850_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
+- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_16450_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
+- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
 - `2022-08-11`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_18_AUG_22.csv no entry bar near 2022-08-11T15:29:00+05:30 within 30m
 - `2022-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_25_AUG_22.csv no entry bar near 2022-08-18T15:29:00+05:30 within 30m
 - `2022-08-25`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_01_SEP_22.csv no entry bar near 2022-08-25T15:29:00+05:30 within 30m
 - `2022-09-01`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_08_SEP_22.csv no entry bar near 2022-09-01T15:29:00+05:30 within 30m
 - `2022-09-08`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_15_SEP_22.csv no entry bar near 2022-09-08T15:29:00+05:30 within 30m
-- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
-- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
+- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
+- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
 - `2022-09-29`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_06_OCT_22.csv no entry bar near 2022-09-29T15:29:00+05:30 within 30m
-- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
+- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
 - `2022-10-13`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_20_OCT_22.csv no entry bar near 2022-10-13T15:29:00+05:30 within 30m
 - `2022-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_27_OCT_22.csv no entry bar near 2022-10-20T15:29:00+05:30 within 30m
-- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
-- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:15:00+05:30; no fallback within 30m
+- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
+- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:00:00+05:30; no fallback within 30m
 - `2022-10-27`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_03_NOV_22.csv no entry bar near 2022-10-27T15:29:00+05:30 within 30m
 - `2022-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_10_NOV_22.csv no entry bar near 2022-11-03T15:29:00+05:30 within 30m
 - `2022-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_17_NOV_22.csv no entry bar near 2022-11-10T15:29:00+05:30 within 30m
-- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18850_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
+- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18800_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
 - `2022-11-24`: `missing_entry_or_exit_timestamp`. NIFTY_18000_PE_01_DEC_22.csv no entry bar near 2022-11-24T15:29:00+05:30 within 30m
 - `2022-12-01`: `missing_entry_or_exit_timestamp`. NIFTY_19300_CE_08_DEC_22.csv no entry bar near 2022-12-01T15:29:00+05:30 within 30m
 - `2022-12-08`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_15_DEC_22.csv no entry bar near 2022-12-08T15:29:00+05:30 within 30m
 - `2022-12-15`: `missing_entry_or_exit_timestamp`. NIFTY_18900_CE_22_DEC_22.csv no entry bar near 2022-12-15T15:29:00+05:30 within 30m
-- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18600_CE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
+- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
 - `2022-12-29`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_05_JAN_23.csv no entry bar near 2022-12-29T15:29:00+05:30 within 30m
 - `2023-01-05`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_12_JAN_23.csv no entry bar near 2023-01-05T15:29:00+05:30 within 30m
 - `2023-01-12`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_19_JAN_23.csv no entry bar near 2023-01-12T15:29:00+05:30 within 30m
@@ -2766,33 +2763,33 @@
 - `2023-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_02_FEB_23.csv no entry bar near 2023-01-25T15:29:00+05:30 within 30m
 - `2023-02-02`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_09_FEB_23.csv no entry bar near 2023-02-02T15:29:00+05:30 within 30m
 - `2023-02-09`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_16_FEB_23.csv no entry bar near 2023-02-09T15:29:00+05:30 within 30m
-- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
+- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
 - `2023-02-23`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_02_MAR_23.csv no entry bar near 2023-02-23T15:29:00+05:30 within 30m
-- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
+- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
 - `2023-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_16_MAR_23.csv no entry bar near 2023-03-09T15:29:00+05:30 within 30m
 - `2023-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_16500_PE_23_MAR_23.csv no entry bar near 2023-03-16T15:29:00+05:30 within 30m
 - `2023-03-23`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_29_MAR_23.csv no entry bar near 2023-03-23T15:29:00+05:30 within 30m
 - `2023-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_16600_PE_06_APR_23.csv no entry bar near 2023-03-29T15:29:00+05:30 within 30m
 - `2023-04-06`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_13_APR_23.csv no entry bar near 2023-04-06T15:29:00+05:30 within 30m
 - `2023-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_20_APR_23.csv no entry bar near 2023-04-13T15:29:00+05:30 within 30m
-- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
+- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
 - `2023-04-27`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_04_MAY_23.csv no entry bar near 2023-04-27T15:29:00+05:30 within 30m
 - `2023-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_11_MAY_23.csv no entry bar near 2023-05-04T15:29:00+05:30 within 30m
 - `2023-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_18800_CE_18_MAY_23.csv no entry bar near 2023-05-11T15:29:00+05:30 within 30m
 - `2023-05-18`: `missing_entry_or_exit_timestamp`. NIFTY_18650_CE_25_MAY_23.csv no entry bar near 2023-05-18T15:29:00+05:30 within 30m
 - `2023-05-25`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_01_JUN_23.csv no entry bar near 2023-05-25T15:29:00+05:30 within 30m
 - `2023-06-01`: `missing_entry_or_exit_timestamp`. NIFTY_19000_CE_08_JUN_23.csv no entry bar near 2023-06-01T15:29:00+05:30 within 30m
-- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_19150_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
+- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_19100_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
 - `2023-06-15`: `missing_entry_or_exit_timestamp`. NIFTY_19200_CE_22_JUN_23.csv no entry bar near 2023-06-15T15:29:00+05:30 within 30m
-- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_19300_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_19300_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
+- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_19250_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_19250_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
 - `2023-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_19150_CE_28_JUN_23.csv no entry bar near 2023-06-23T15:29:00+05:30 within 30m; NIFTY_19150_CE_28_JUN_23.csv no exit bar near 2023-06-26T09:16:00+05:30 within 30m
 - `2023-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_18200_PE_28_JUN_23.csv no entry bar near 2023-06-26T15:29:00+05:30 within 30m; NIFTY_18200_PE_28_JUN_23.csv no exit bar near 2023-06-27T09:16:00+05:30 within 30m
 - `2023-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_18300_PE_28_JUN_23.csv no entry bar near 2023-06-27T15:29:00+05:30 within 30m
-- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18500_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18500_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
+- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_18450_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_18450_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
 - `2023-07-06`: `missing_entry_or_exit_timestamp`. NIFTY_19000_PE_13_JUL_23.csv no entry bar near 2023-07-06T15:29:00+05:30 within 30m
-- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19950_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
-- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19450_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
-- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_20200_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
+- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19900_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
+- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_19500_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
+- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_20150_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
 - `2023-08-03`: `missing_entry_or_exit_timestamp`. NIFTY_19900_CE_10_AUG_23.csv no entry bar near 2023-08-03T15:29:00+05:30 within 30m
 - `2023-08-10`: `missing_entry_or_exit_timestamp`. NIFTY_20050_CE_17_AUG_23.csv no entry bar near 2023-08-10T15:29:00+05:30 within 30m
 - `2023-08-17`: `missing_entry_or_exit_timestamp`. NIFTY_19850_CE_24_AUG_23.csv no entry bar near 2023-08-17T15:29:00+05:30 within 30m
@@ -2801,49 +2798,49 @@
 - `2023-09-07`: `missing_entry_or_exit_timestamp`. NIFTY_19200_PE_14_SEP_23.csv no entry bar near 2023-09-07T15:29:00+05:30 within 30m
 - `2023-09-14`: `missing_entry_or_exit_timestamp`. NIFTY_19600_PE_21_SEP_23.csv no entry bar near 2023-09-14T15:29:00+05:30 within 30m
 - `2023-09-21`: `missing_entry_or_exit_timestamp`. NIFTY_20250_CE_28_SEP_23.csv no entry bar near 2023-09-21T15:29:00+05:30 within 30m
-- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_20050_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
+- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_20000_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
 - `2023-10-05`: `missing_entry_or_exit_timestamp`. NIFTY_19050_PE_12_OCT_23.csv no entry bar near 2023-10-05T15:29:00+05:30 within 30m
 - `2023-10-12`: `missing_entry_or_exit_timestamp`. NIFTY_20300_CE_19_OCT_23.csv no entry bar near 2023-10-12T15:29:00+05:30 within 30m
-- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_20100_CE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
+- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19100_PE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
 - `2023-10-26`: `missing_entry_or_exit_timestamp`. NIFTY_19350_CE_02_NOV_23.csv no entry bar near 2023-10-26T15:29:00+05:30 within 30m
-- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_18650_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
+- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_18600_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
 - `2023-11-09`: `missing_entry_or_exit_timestamp`. NIFTY_19900_CE_16_NOV_23.csv no entry bar near 2023-11-09T15:29:00+05:30 within 30m
 - `2023-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_18950_PE_16_NOV_23.csv no exit bar near 2023-11-12T09:16:00+05:30 within 30m
-- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:15:00+05:30; no fallback within 30m
+- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:00:00+05:30; no fallback within 30m
 - `2023-11-16`: `missing_entry_or_exit_timestamp`. NIFTY_20250_CE_23_NOV_23.csv no entry bar near 2023-11-16T15:29:00+05:30 within 30m
 - `2023-11-23`: `missing_entry_or_exit_timestamp`. NIFTY_20300_CE_30_NOV_23.csv no entry bar near 2023-11-23T15:29:00+05:30 within 30m
 - `2023-11-30`: `missing_entry_or_exit_timestamp`. NIFTY_19650_PE_07_DEC_23.csv no entry bar near 2023-11-30T15:29:00+05:30 within 30m
-- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_20400_PE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
-- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_20700_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
-- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_20800_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
-- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21250_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
+- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_21400_CE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
+- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_20650_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
+- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_20750_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
+- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21300_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
 - `2024-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_21150_PE_11_JAN_24.csv no entry bar near 2024-01-04T15:29:00+05:30 within 30m
-- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21150_PE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
-- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21000_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
+- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_22150_CE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
+- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_20950_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
 - `2024-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_20850_PE_01_FEB_24.csv no entry bar near 2024-01-25T15:29:00+05:30 within 30m
 - `2024-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_22200_CE_08_FEB_24.csv no entry bar near 2024-02-01T15:29:00+05:30 within 30m
-- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_22250_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
-- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21450_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
+- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_22200_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
+- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_21400_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
 - `2024-02-22`: `missing_entry_or_exit_timestamp`. NIFTY_21700_PE_29_FEB_24.csv no entry bar near 2024-02-22T15:29:00+05:30 within 30m
-- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
-- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:15:00+05:30; no fallback within 30m
-- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_23000_CE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
+- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_21500_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
+- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:00:00+05:30; no fallback within 30m
+- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22000_PE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
 - `2024-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_21650_PE_21_MAR_24.csv no entry bar near 2024-03-14T15:29:00+05:30 within 30m
-- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_22500_CE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
-- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22850_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
-- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22050_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
+- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
+- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22750_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
+- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22000_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
 - `2024-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_22250_PE_18_APR_24.csv no entry bar near 2024-04-10T15:29:00+05:30 within 30m
-- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22550_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
+- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_22450_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
 - `2024-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_22050_PE_02_MAY_24.csv no entry bar near 2024-04-25T15:29:00+05:30 within 30m
 - `2024-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_23150_CE_09_MAY_24.csv no entry bar near 2024-05-02T15:29:00+05:30 within 30m
 - `2024-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_22450_CE_16_MAY_24.csv no entry bar near 2024-05-09T15:29:00+05:30 within 30m
 - `2024-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_21900_PE_23_MAY_24.csv no entry bar near 2024-05-16T15:29:00+05:30 within 30m
-- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:15:00+05:30; no fallback within 30m
-- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22450_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
-- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22050_PE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
+- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:00:00+05:30; no fallback within 30m
+- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_22500_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
+- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_23000_CE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
 - `2024-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_22350_PE_13_JUN_24.csv no entry bar near 2024-06-06T15:29:00+05:30 within 30m
 - `2024-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_22900_PE_20_JUN_24.csv no entry bar near 2024-06-13T15:29:00+05:30 within 30m
-- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23100_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
+- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23050_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
 - `2024-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_23550_PE_04_JUL_24.csv no entry bar near 2024-06-27T15:29:00+05:30 within 30m
 - `2024-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_24800_CE_11_JUL_24.csv no entry bar near 2024-07-04T15:29:00+05:30 within 30m
 - `2024-07-11`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_18_JUL_24.csv no entry bar near 2024-07-11T15:29:00+05:30 within 30m
@@ -2855,38 +2852,37 @@
 - `2024-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_25300_CE_29_AUG_24.csv no entry bar near 2024-08-22T15:29:00+05:30 within 30m
 - `2024-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_24650_PE_05_SEP_24.csv no entry bar near 2024-08-29T15:29:00+05:30 within 30m
 - `2024-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_25650_CE_12_SEP_24.csv no entry bar near 2024-09-05T15:29:00+05:30 within 30m
-- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_24800_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
+- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_24900_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
 - `2024-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_25950_CE_26_SEP_24.csv no entry bar near 2024-09-19T15:29:00+05:30 within 30m
 - `2024-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_25700_PE_03_OCT_24.csv no entry bar near 2024-09-26T15:29:00+05:30 within 30m
 - `2024-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_25750_CE_10_OCT_24.csv no entry bar near 2024-10-03T15:29:00+05:30 within 30m
 - `2024-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_25500_CE_17_OCT_24.csv no entry bar near 2024-10-10T15:29:00+05:30 within 30m
 - `2024-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_25250_CE_24_OCT_24.csv no entry bar near 2024-10-17T15:29:00+05:30 within 30m
-- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_23900_PE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
-- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_23750_PE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_23750_PE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
-- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:15:00+05:30; no fallback within 30m
+- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24900_CE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
+- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24700_CE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24700_CE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
+- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:00:00+05:30; no fallback within 30m
 - `2024-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_24700_CE_14_NOV_24.csv no entry bar near 2024-11-07T15:29:00+05:30 within 30m
-- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23050_PE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
+- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_24050_CE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
 - `2024-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_22850_PE_28_NOV_24.csv no entry bar near 2024-11-21T15:29:00+05:30 within 30m
-- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24450_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
-- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24200_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
+- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_24400_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
+- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24250_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
 - `2024-12-12`: `missing_entry_or_exit_timestamp`. NIFTY_25050_CE_19_DEC_24.csv no entry bar near 2024-12-12T15:29:00+05:30 within 30m
-- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_23450_PE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
+- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_24450_CE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
+- `2025-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_27_MAR_25.csv no entry bar near 2025-03-26T15:29:00+05:30 within 30m; NIFTY_24000_CE_27_MAR_25.csv no exit bar near 2025-03-27T09:16:00+05:30 within 30m
 - `2025-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_26350_CE_28_OCT_25.csv no exit bar near 2025-10-21T09:16:00+05:30 within 30m
 - `2025-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_26350_CE_28_OCT_25.csv no entry bar near 2025-10-21T15:29:00+05:30 within 30m
-- `2026-03-18`: `missing_option_file`. Missing option file: NIFTY_24250_CE_24_MAR_26.csv
-- `2026-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_22450_PE_28_APR_26.csv no entry bar near 2026-03-24T15:29:00+05:30 within 30m; NIFTY_22450_PE_28_APR_26.csv no exit bar near 2026-03-25T09:16:00+05:30 within 30m
-- `2026-04-02`: `missing_option_file`. Missing option file: NIFTY_22200_PE_28_APR_26.csv
-- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23550_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
+- `2026-04-02`: `missing_option_file`. Missing option file: NIFTY_22250_PE_28_APR_26.csv
+- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_23500_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
 - `2026-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_24600_CE_05_MAY_26.csv no entry bar near 2026-05-04T15:29:00+05:30 within 30m; NIFTY_24600_CE_05_MAY_26.csv no exit bar near 2026-05-05T09:16:00+05:30 within 30m
 - `2026-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_23550_PE_12_MAY_26.csv no entry bar near 2026-05-05T15:29:00+05:30 within 30m; NIFTY_23550_PE_12_MAY_26.csv no exit bar near 2026-05-06T09:16:00+05:30 within 30m
-- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_23850_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
-- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24850_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24850_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
+- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_23800_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_23800_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
+- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24800_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24800_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
 - `2026-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_24700_CE_12_MAY_26.csv no entry bar near 2026-05-08T15:29:00+05:30 within 30m; NIFTY_24700_CE_12_MAY_26.csv no exit bar near 2026-05-11T09:16:00+05:30 within 30m
 - `2026-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_24300_CE_12_MAY_26.csv no entry bar near 2026-05-11T15:29:00+05:30 within 30m; NIFTY_24300_CE_12_MAY_26.csv no exit bar near 2026-05-12T09:16:00+05:30 within 30m
 - `2026-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_22900_PE_09_JUN_26.csv no exit bar near 2026-06-04T09:16:00+05:30 within 30m
-- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_22950_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_22950_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
+- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_22900_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_22900_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
 - `2026-06-05`: `missing_entry_or_exit_timestamp`. NIFTY_23850_CE_09_JUN_26.csv no entry bar near 2026-06-05T15:29:00+05:30 within 30m; NIFTY_23850_CE_09_JUN_26.csv no exit bar near 2026-06-08T09:16:00+05:30 within 30m
-- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23600_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23600_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
+- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23650_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23650_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
 - `2026-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_23500_PE_23_JUN_26.csv no exit bar near 2026-06-17T09:16:00+05:30 within 30m
 - `2026-06-17`: `missing_entry_or_exit_timestamp`. NIFTY_23600_PE_23_JUN_26.csv no entry bar near 2026-06-17T15:29:00+05:30 within 30m; NIFTY_23600_PE_23_JUN_26.csv no exit bar near 2026-06-18T09:16:00+05:30 within 30m
 - `2026-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_23_JUN_26.csv no entry bar near 2026-06-18T15:29:00+05:30 within 30m; NIFTY_23700_PE_23_JUN_26.csv no exit bar near 2026-06-19T09:16:00+05:30 within 30m
@@ -2894,39 +2890,39 @@
 
 ### ITM_100
 
-- `2019-01-01`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-01T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-02T09:16:00+05:30 within 30m
+- `2019-01-01`: `insufficient_spot_history`. 2019-01-01T15:00:00+05:30 has 24 bars; needs 25
 - `2019-01-02`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
 - `2019-01-03`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
-- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
 - `2019-01-07`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
 - `2019-01-08`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-01-09`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-01-10`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
-- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
+- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-01-14`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-01-15`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-15T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-16T09:16:00+05:30 within 30m
 - `2019-01-16`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
-- `2019-01-17`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
+- `2019-01-17`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-17T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-18T09:16:00+05:30 within 30m
 - `2019-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-18T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-21T09:16:00+05:30 within 30m
-- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
-- `2019-01-22`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-22T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-23T09:16:00+05:30 within 30m
-- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
+- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
 - `2019-01-24`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-01-25`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
-- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
-- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10800_PE_02_JAN_20.csv
+- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
+- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10750_PE_02_JAN_20.csv
 - `2019-01-30`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
-- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-02-01T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-02-04T09:16:00+05:30 within 30m
 - `2019-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-02-04T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-02-05T09:16:00+05:30 within 30m
 - `2019-02-05`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-02-06`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-02-07`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-02-08`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
-- `2019-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-02-11T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-02-12T09:16:00+05:30 within 30m
+- `2019-02-11`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
 - `2019-02-12`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
 - `2019-02-13`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
-- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
+- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
 - `2019-02-15`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-02-18`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
 - `2019-02-19`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
@@ -2940,29 +2936,29 @@
 - `2019-03-01`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-03-05T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-03-06T09:16:00+05:30 within 30m
 - `2019-03-06`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
-- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
+- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-03-08`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
-- `2019-03-11`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-03-11T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-03-12T09:16:00+05:30 within 30m
+- `2019-03-11`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-11T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-12T09:16:00+05:30 within 30m
 - `2019-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-03-12T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-03-13T09:16:00+05:30 within 30m
 - `2019-03-13`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-03-14`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
-- `2019-03-15`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
+- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
+- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
 - `2019-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-03-19T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-03-20T09:16:00+05:30 within 30m
 - `2019-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-03-20T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-03-22T09:16:00+05:30 within 30m
 - `2019-03-22`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-03-25`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-03-26T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-03-27T09:16:00+05:30 within 30m
 - `2019-03-27`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
+- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
 - `2019-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-03-29T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-04-01T09:16:00+05:30 within 30m
 - `2019-04-01`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
-- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
+- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
 - `2019-04-03`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-04-04T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-04-05T09:16:00+05:30 within 30m
-- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
+- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
 - `2019-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-04-08T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-04-09T09:16:00+05:30 within 30m
-- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
+- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
 - `2019-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-04-10T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-04-11T09:16:00+05:30 within 30m
 - `2019-04-11`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-04-11T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-04-12T09:16:00+05:30 within 30m
 - `2019-04-12`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-04-12T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-04-15T09:16:00+05:30 within 30m
@@ -2971,26 +2967,26 @@
 - `2019-04-18`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-04-22T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-04-23T09:16:00+05:30 within 30m
 - `2019-04-23`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-04-23T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-04-24T09:16:00+05:30 within 30m
-- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
+- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
 - `2019-04-25`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-04-26`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-04-26T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-04-30T09:16:00+05:30 within 30m
 - `2019-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-04-30T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-05-02T09:16:00+05:30 within 30m
-- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
+- `2019-05-02`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-05-03`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-05-03T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-05-06T09:16:00+05:30 within 30m
 - `2019-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-05-06T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-05-07T09:16:00+05:30 within 30m
 - `2019-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-05-07T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-05-08T09:16:00+05:30 within 30m
 - `2019-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-05-08T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-05-09T09:16:00+05:30 within 30m
 - `2019-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-05-09T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-05-10T09:16:00+05:30 within 30m
-- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
+- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
 - `2019-05-13`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-05-14`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-05-14T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-05-15T09:16:00+05:30 within 30m
 - `2019-05-15`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
-- `2019-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-05-16T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-05-17T09:16:00+05:30 within 30m
+- `2019-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-05-16T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-05-17T09:16:00+05:30 within 30m
 - `2019-05-17`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-05-17T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-05-20T09:16:00+05:30 within 30m
-- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
+- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
 - `2019-05-21`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-05-21T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-05-22T09:16:00+05:30 within 30m
 - `2019-05-22`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-05-22T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-05-23T09:16:00+05:30 within 30m
-- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
+- `2019-05-23`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-05-24`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-05-24T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-05-27T09:16:00+05:30 within 30m
 - `2019-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-05-27T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-05-28T09:16:00+05:30 within 30m
 - `2019-05-28`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-05-28T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-05-29T09:16:00+05:30 within 30m
@@ -2998,10 +2994,10 @@
 - `2019-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-05-30T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-05-31T09:16:00+05:30 within 30m
 - `2019-05-31`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-05-31T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-06-03T09:16:00+05:30 within 30m
 - `2019-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-06-03T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-06-04T09:16:00+05:30 within 30m
-- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
+- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
 - `2019-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-06-06T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-06-07T09:16:00+05:30 within 30m
 - `2019-06-07`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-06-07T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-06-10T09:16:00+05:30 within 30m
-- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
+- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
 - `2019-06-11`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-06-11T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-06-12T09:16:00+05:30 within 30m
 - `2019-06-12`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-06-12T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-06-13T09:16:00+05:30 within 30m
 - `2019-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-06-13T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-06-14T09:16:00+05:30 within 30m
@@ -3010,7 +3006,7 @@
 - `2019-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-06-18T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-06-19T09:16:00+05:30 within 30m
 - `2019-06-19`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-06-19T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-06-20T09:16:00+05:30 within 30m
 - `2019-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-06-20T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-06-21T09:16:00+05:30 within 30m
-- `2019-06-21`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
+- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
 - `2019-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-06-24T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-06-25T09:16:00+05:30 within 30m
 - `2019-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-06-25T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-06-26T09:16:00+05:30 within 30m
 - `2019-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-06-26T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-06-27T09:16:00+05:30 within 30m
@@ -3018,7 +3014,7 @@
 - `2019-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-06-28T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-07-01T09:16:00+05:30 within 30m
 - `2019-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-07-01T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-07-02T09:16:00+05:30 within 30m
 - `2019-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-07-02T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-07-03T09:16:00+05:30 within 30m
-- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
+- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
 - `2019-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-07-04T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-07-05T09:16:00+05:30 within 30m
 - `2019-07-05`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-07-05T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-07-08T09:16:00+05:30 within 30m
 - `2019-07-08`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
@@ -3030,54 +3026,54 @@
 - `2019-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-07-16T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-07-17T09:16:00+05:30 within 30m
 - `2019-07-17`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-07-17T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-07-18T09:16:00+05:30 within 30m
 - `2019-07-18`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-07-18T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-07-19T09:16:00+05:30 within 30m
-- `2019-07-19`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-07-22T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-07-23T09:16:00+05:30 within 30m
+- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
+- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-07-23T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-07-24T09:16:00+05:30 within 30m
 - `2019-07-24`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-07-24T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-07-25T09:16:00+05:30 within 30m
 - `2019-07-25`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-07-25T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-07-26T09:16:00+05:30 within 30m
 - `2019-07-26`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-07-26T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-07-29T09:16:00+05:30 within 30m
 - `2019-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-07-29T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-07-30T09:16:00+05:30 within 30m
 - `2019-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-07-30T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-07-31T09:16:00+05:30 within 30m
-- `2019-07-31`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-07-31T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-08-01T09:16:00+05:30 within 30m
+- `2019-07-31`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-07-31T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-08-01T09:16:00+05:30 within 30m
 - `2019-08-01`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-08-01T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-08-02T09:16:00+05:30 within 30m
 - `2019-08-02`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-08-02T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-08-05T09:16:00+05:30 within 30m
 - `2019-08-05`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
-- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
+- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-08-07`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
-- `2019-08-08`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-08-08`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-08-08T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-08-09T09:16:00+05:30 within 30m
 - `2019-08-09`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-08-09T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-08-13T09:16:00+05:30 within 30m
-- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
-- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
+- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
+- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-08-16`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-08-19`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
-- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
 - `2019-08-21`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
 - `2019-08-22`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
 - `2019-08-23`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-08-26`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
-- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
+- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
 - `2019-08-28`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-08-29`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
-- `2019-08-30`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-08-30`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-08-30T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-09-03T09:16:00+05:30 within 30m
 - `2019-09-03`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
 - `2019-09-04`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-09-05`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
 - `2019-09-06`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-09-09T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-09-11T09:16:00+05:30 within 30m
-- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
+- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-09-12`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
 - `2019-09-13`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-09-13T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-09-16T09:16:00+05:30 within 30m
 - `2019-09-16`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
-- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
-- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
+- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
 - `2019-09-19`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
 - `2019-09-20`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-09-20T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-09-23T09:16:00+05:30 within 30m
-- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
-- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
+- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
+- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
 - `2019-09-25`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
+- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
 - `2019-09-27`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-09-27T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-09-30T09:16:00+05:30 within 30m
-- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
+- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
 - `2019-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-10-01T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-10-03T09:16:00+05:30 within 30m
 - `2019-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-10-03T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-10-04T09:16:00+05:30 within 30m
 - `2019-10-04`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
@@ -3085,7 +3081,7 @@
 - `2019-10-09`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-10-09T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-10-10T09:16:00+05:30 within 30m
 - `2019-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-10-10T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-10-11T09:16:00+05:30 within 30m
 - `2019-10-11`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-10-11T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-10-14T09:16:00+05:30 within 30m
-- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
+- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
 - `2019-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-10-15T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-10-16T09:16:00+05:30 within 30m
 - `2019-10-16`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-10-16T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-10-17T09:16:00+05:30 within 30m
 - `2019-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-10-17T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-10-18T09:16:00+05:30 within 30m
@@ -3094,12 +3090,12 @@
 - `2019-10-23`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-10-23T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-10-24T09:16:00+05:30 within 30m
 - `2019-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-10-24T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-10-25T09:16:00+05:30 within 30m
 - `2019-10-25`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-10-25T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-10-27T09:16:00+05:30 within 30m
-- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:15:00+05:30; no fallback within 30m
+- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:00:00+05:30; no fallback within 30m
 - `2019-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-10-29T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-10-30T09:16:00+05:30 within 30m
 - `2019-10-30`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-10-30T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-10-31T09:16:00+05:30 within 30m
 - `2019-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-10-31T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-11-01T09:16:00+05:30 within 30m
 - `2019-11-01`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-11-01T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-11-04T09:16:00+05:30 within 30m
-- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
+- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
 - `2019-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-11-05T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-11-06T09:16:00+05:30 within 30m
 - `2019-11-06`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-11-06T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-11-07T09:16:00+05:30 within 30m
 - `2019-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-11-07T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-11-08T09:16:00+05:30 within 30m
@@ -3108,11 +3104,11 @@
 - `2019-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-11-13T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-11-14T09:16:00+05:30 within 30m
 - `2019-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-11-14T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-11-15T09:16:00+05:30 within 30m
 - `2019-11-15`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-11-15T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-11-18T09:16:00+05:30 within 30m
-- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
+- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
 - `2019-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-11-19T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-11-20T09:16:00+05:30 within 30m
 - `2019-11-20`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-11-20T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-11-21T09:16:00+05:30 within 30m
 - `2019-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-11-21T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-11-22T09:16:00+05:30 within 30m
-- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
+- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
 - `2019-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-11-25T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-11-26T09:16:00+05:30 within 30m
 - `2019-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-11-26T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-11-27T09:16:00+05:30 within 30m
 - `2019-11-27`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-11-27T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-11-28T09:16:00+05:30 within 30m
@@ -3121,7 +3117,7 @@
 - `2019-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-12-02T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-12-03T09:16:00+05:30 within 30m
 - `2019-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-12-03T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-12-04T09:16:00+05:30 within 30m
 - `2019-12-04`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-12-04T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-12-05T09:16:00+05:30 within 30m
-- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_11900_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
+- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
 - `2019-12-06`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-12-06T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-12-09T09:16:00+05:30 within 30m
 - `2019-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-12-09T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-12-10T09:16:00+05:30 within 30m
 - `2019-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-12-10T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-12-11T09:16:00+05:30 within 30m
@@ -3130,7 +3126,7 @@
 - `2019-12-13`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-12-13T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-12-16T09:16:00+05:30 within 30m
 - `2019-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-12-16T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-12-17T09:16:00+05:30 within 30m
 - `2019-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-12-17T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-12-18T09:16:00+05:30 within 30m
-- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12350_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
+- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12300_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
 - `2019-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_02_JAN_20.csv no entry bar near 2019-12-19T15:29:00+05:30 within 30m; NIFTY_12350_PE_02_JAN_20.csv no exit bar near 2019-12-20T09:16:00+05:30 within 30m
 - `2019-12-20`: `missing_entry_or_exit_timestamp`. NIFTY_12150_CE_02_JAN_20.csv no entry bar near 2019-12-20T15:29:00+05:30 within 30m; NIFTY_12150_CE_02_JAN_20.csv no exit bar near 2019-12-23T09:16:00+05:30 within 30m
 - `2019-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_02_JAN_20.csv no entry bar near 2019-12-23T15:29:00+05:30 within 30m; NIFTY_12350_PE_02_JAN_20.csv no exit bar near 2019-12-24T09:16:00+05:30 within 30m
@@ -3138,20 +3134,20 @@
 - `2019-12-26`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-12-26T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-12-27T09:16:00+05:30 within 30m
 - `2019-12-27`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_02_JAN_20.csv no entry bar near 2019-12-27T15:29:00+05:30 within 30m; NIFTY_12350_PE_02_JAN_20.csv no exit bar near 2019-12-30T09:16:00+05:30 within 30m
 - `2019-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_02_JAN_20.csv no entry bar near 2019-12-30T15:29:00+05:30 within 30m; NIFTY_12350_PE_02_JAN_20.csv no exit bar near 2019-12-31T09:16:00+05:30 within 30m
-- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12100_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
+- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
 - `2020-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_09_JAN_20.csv no entry bar near 2020-01-02T15:29:00+05:30 within 30m
 - `2020-01-09`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_16_JAN_20.csv no entry bar near 2020-01-09T15:29:00+05:30 within 30m
 - `2020-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_23_JAN_20.csv no entry bar near 2020-01-16T15:29:00+05:30 within 30m
 - `2020-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_30_JAN_20.csv no entry bar near 2020-01-23T15:29:00+05:30 within 30m
-- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
+- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
 - `2020-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_13_FEB_20.csv no entry bar near 2020-02-06T15:29:00+05:30 within 30m
 - `2020-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_20_FEB_20.csv no entry bar near 2020-02-13T15:29:00+05:30 within 30m
 - `2020-02-20`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_27_FEB_20.csv no entry bar near 2020-02-20T15:29:00+05:30 within 30m
-- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
 - `2020-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_12_MAR_20.csv no entry bar near 2020-03-05T15:29:00+05:30 within 30m
-- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9550_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m; NIFTY_9550_CE_19_MAR_20.csv no exit bar near 2020-03-13T09:16:00+05:30 within 30m
+- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9450_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m; NIFTY_9450_CE_19_MAR_20.csv no exit bar near 2020-03-13T09:16:00+05:30 within 30m
 - `2020-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_8350_PE_26_MAR_20.csv no entry bar near 2020-03-19T15:29:00+05:30 within 30m
-- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8750_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
+- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8700_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
 - `2020-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_8150_CE_09_APR_20.csv no entry bar near 2020-04-01T15:29:00+05:30 within 30m
 - `2020-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_9200_PE_16_APR_20.csv no entry bar near 2020-04-09T15:29:00+05:30 within 30m
 - `2020-04-16`: `missing_entry_or_exit_timestamp`. NIFTY_9100_PE_23_APR_20.csv no entry bar near 2020-04-16T15:29:00+05:30 within 30m
@@ -3166,9 +3162,9 @@
 - `2020-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_10200_PE_25_JUN_20.csv no entry bar near 2020-06-18T15:29:00+05:30 within 30m
 - `2020-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_10200_CE_02_JUL_20.csv no entry bar near 2020-06-25T15:29:00+05:30 within 30m
 - `2020-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_10650_PE_09_JUL_20.csv no entry bar near 2020-07-02T15:29:00+05:30 within 30m
-- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10950_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
+- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_10900_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
 - `2020-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_10850_PE_23_JUL_20.csv no entry bar near 2020-07-16T15:29:00+05:30 within 30m
-- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
+- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
 - `2020-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_06_AUG_20.csv no entry bar near 2020-07-30T15:29:00+05:30 within 30m
 - `2020-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_13_AUG_20.csv no entry bar near 2020-08-06T15:29:00+05:30 within 30m
 - `2020-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_20_AUG_20.csv no entry bar near 2020-08-13T15:29:00+05:30 within 30m
@@ -3178,40 +3174,40 @@
 - `2020-09-10`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_17_SEP_20.csv no entry bar near 2020-09-10T15:29:00+05:30 within 30m
 - `2020-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_24_SEP_20.csv no entry bar near 2020-09-17T15:29:00+05:30 within 30m
 - `2020-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_10700_CE_01_OCT_20.csv no entry bar near 2020-09-24T15:29:00+05:30 within 30m
-- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
+- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
 - `2020-10-08`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_15_OCT_20.csv no entry bar near 2020-10-08T15:29:00+05:30 within 30m
 - `2020-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11550_CE_22_OCT_20.csv no entry bar near 2020-10-15T15:29:00+05:30 within 30m
 - `2020-10-22`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_29_OCT_20.csv no entry bar near 2020-10-22T15:29:00+05:30 within 30m
-- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11550_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
-- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
+- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
+- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
 - `2020-11-12`: `missing_entry_or_exit_timestamp`. NIFTY_12800_PE_19_NOV_20.csv no entry bar near 2020-11-12T15:29:00+05:30 within 30m
 - `2020-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12800_PE_19_NOV_20.csv no exit bar near 2020-11-14T09:16:00+05:30 within 30m
-- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:15:00+05:30; no fallback within 30m
+- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:00:00+05:30; no fallback within 30m
 - `2020-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_12650_CE_26_NOV_20.csv no entry bar near 2020-11-19T15:29:00+05:30 within 30m
 - `2020-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_13100_PE_03_DEC_20.csv no entry bar near 2020-11-26T15:29:00+05:30 within 30m
 - `2020-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_13050_CE_10_DEC_20.csv no entry bar near 2020-12-03T15:29:00+05:30 within 30m
-- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13600_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
+- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13550_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
 - `2020-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_13850_PE_24_DEC_20.csv no entry bar near 2020-12-17T15:29:00+05:30 within 30m
 - `2020-12-24`: `missing_entry_or_exit_timestamp`. NIFTY_13850_PE_31_DEC_20.csv no entry bar near 2020-12-24T15:29:00+05:30 within 30m
-- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_13850_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
+- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_13900_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
 - `2021-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_14050_CE_14_JAN_21.csv no entry bar near 2021-01-07T15:29:00+05:30 within 30m
 - `2021-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_14700_PE_21_JAN_21.csv no entry bar near 2021-01-14T15:29:00+05:30 within 30m
-- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14550_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
-- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13900_PE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
+- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14500_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
+- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13700_CE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
 - `2021-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_15000_PE_11_FEB_21.csv no entry bar near 2021-02-04T15:29:00+05:30 within 30m
-- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15300_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
+- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15250_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
 - `2021-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_25_FEB_21.csv no entry bar near 2021-02-18T15:29:00+05:30 within 30m
 - `2021-02-25`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_04_MAR_21.csv no entry bar near 2021-02-25T15:29:00+05:30 within 30m
 - `2021-03-04`: `missing_entry_or_exit_timestamp`. NIFTY_15000_CE_10_MAR_21.csv no entry bar near 2021-03-04T15:29:00+05:30 within 30m
-- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15250_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
+- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15300_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
 - `2021-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_14500_CE_25_MAR_21.csv no entry bar near 2021-03-18T15:29:00+05:30 within 30m
-- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14250_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
-- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_14950_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
-- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
+- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14200_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
+- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_15000_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
+- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_14750_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
 - `2021-04-15`: `missing_entry_or_exit_timestamp`. NIFTY_14700_PE_22_APR_21.csv no entry bar near 2021-04-15T15:29:00+05:30 within 30m
 - `2021-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_14500_PE_29_APR_21.csv no entry bar near 2021-04-22T15:29:00+05:30 within 30m
 - `2021-04-29`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_06_MAY_21.csv no entry bar near 2021-04-29T15:29:00+05:30 within 30m
-- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14850_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
+- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14800_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
 - `2021-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_14600_CE_20_MAY_21.csv no entry bar near 2021-05-12T15:29:00+05:30 within 30m
 - `2021-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_27_MAY_21.csv no entry bar near 2021-05-20T15:29:00+05:30 within 30m
 - `2021-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_15450_PE_03_JUN_21.csv no entry bar near 2021-05-27T15:29:00+05:30 within 30m
@@ -3221,85 +3217,85 @@
 - `2021-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_15900_PE_01_JUL_21.csv no entry bar near 2021-06-24T15:29:00+05:30 within 30m
 - `2021-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_08_JUL_21.csv no entry bar near 2021-07-01T15:29:00+05:30 within 30m
 - `2021-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_15650_CE_15_JUL_21.csv no entry bar near 2021-07-08T15:29:00+05:30 within 30m
-- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_15800_CE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
-- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15950_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
+- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_16000_PE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
+- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_15900_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
 - `2021-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_15700_CE_05_AUG_21.csv no entry bar near 2021-07-29T15:29:00+05:30 within 30m
 - `2021-08-05`: `missing_entry_or_exit_timestamp`. NIFTY_16400_PE_12_AUG_21.csv no entry bar near 2021-08-05T15:29:00+05:30 within 30m
 - `2021-08-12`: `missing_entry_or_exit_timestamp`. NIFTY_16450_PE_18_AUG_21.csv no entry bar near 2021-08-12T15:29:00+05:30 within 30m
-- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16450_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
+- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16500_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
 - `2021-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_16550_CE_02_SEP_21.csv no entry bar near 2021-08-26T15:29:00+05:30 within 30m
 - `2021-09-02`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_09_SEP_21.csv no entry bar near 2021-09-02T15:29:00+05:30 within 30m
 - `2021-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_16_SEP_21.csv no entry bar near 2021-09-09T15:29:00+05:30 within 30m
 - `2021-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_23_SEP_21.csv no entry bar near 2021-09-16T15:29:00+05:30 within 30m
 - `2021-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_30_SEP_21.csv no entry bar near 2021-09-23T15:29:00+05:30 within 30m
-- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
+- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
 - `2021-10-07`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_14_OCT_21.csv no entry bar near 2021-10-07T15:29:00+05:30 within 30m
 - `2021-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_18450_PE_21_OCT_21.csv no entry bar near 2021-10-14T15:29:00+05:30 within 30m
-- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18300_PE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
+- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
 - `2021-10-28`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_03_NOV_21.csv no entry bar near 2021-10-28T15:29:00+05:30 within 30m
-- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_17750_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
+- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_17700_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
 - `2021-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_11_NOV_21.csv no entry bar near 2021-11-04T15:29:00+05:30 within 30m
-- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_18000_PE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
+- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
 - `2021-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_25_NOV_21.csv no entry bar near 2021-11-18T15:29:00+05:30 within 30m
 - `2021-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_02_DEC_21.csv no entry bar near 2021-11-25T15:29:00+05:30 within 30m
 - `2021-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_09_DEC_21.csv no entry bar near 2021-12-02T15:29:00+05:30 within 30m
 - `2021-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_16_DEC_21.csv no entry bar near 2021-12-09T15:29:00+05:30 within 30m
-- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
-- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
-- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
+- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
+- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
+- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
 - `2022-01-06`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_13_JAN_22.csv no entry bar near 2022-01-06T15:29:00+05:30 within 30m
 - `2022-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_18350_PE_20_JAN_22.csv no entry bar near 2022-01-13T15:29:00+05:30 within 30m
-- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
-- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
-- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
+- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
+- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
+- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
 - `2022-02-10`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_17_FEB_22.csv no entry bar near 2022-02-10T15:29:00+05:30 within 30m
 - `2022-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_17200_CE_24_FEB_22.csv no entry bar near 2022-02-17T15:29:00+05:30 within 30m
-- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16100_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
-- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16400_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
-- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16450_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
-- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
-- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
+- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16150_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
+- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16450_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
+- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16500_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
+- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
+- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
 - `2022-03-31`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_07_APR_22.csv no entry bar near 2022-03-31T15:29:00+05:30 within 30m
 - `2022-04-07`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_13_APR_22.csv no entry bar near 2022-04-07T15:29:00+05:30 within 30m
 - `2022-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_21_APR_22.csv no entry bar near 2022-04-13T15:29:00+05:30 within 30m
 - `2022-04-21`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_28_APR_22.csv no entry bar near 2022-04-21T15:29:00+05:30 within 30m
-- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
-- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16550_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
-- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15750_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
-- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_15750_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
-- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16300_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
+- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
+- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16600_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
+- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15700_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
+- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_15700_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
+- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16250_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
 - `2022-06-02`: `missing_entry_or_exit_timestamp`. NIFTY_16750_PE_09_JUN_22.csv no entry bar near 2022-06-02T15:29:00+05:30 within 30m
 - `2022-06-09`: `missing_entry_or_exit_timestamp`. NIFTY_16600_PE_16_JUN_22.csv no entry bar near 2022-06-09T15:29:00+05:30 within 30m
 - `2022-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_15250_CE_23_JUN_22.csv no entry bar near 2022-06-16T15:29:00+05:30 within 30m
-- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15700_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
-- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15650_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
+- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15650_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
+- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15700_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
 - `2022-07-07`: `missing_entry_or_exit_timestamp`. NIFTY_16250_PE_14_JUL_22.csv no entry bar near 2022-07-07T15:29:00+05:30 within 30m
 - `2022-07-14`: `missing_entry_or_exit_timestamp`. NIFTY_15850_CE_21_JUL_22.csv no entry bar near 2022-07-14T15:29:00+05:30 within 30m
 - `2022-07-21`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_28_JUL_22.csv no entry bar near 2022-07-21T15:29:00+05:30 within 30m
-- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_17000_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
-- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
+- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_17050_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
+- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
 - `2022-08-11`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_18_AUG_22.csv no entry bar near 2022-08-11T15:29:00+05:30 within 30m
 - `2022-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_25_AUG_22.csv no entry bar near 2022-08-18T15:29:00+05:30 within 30m
 - `2022-08-25`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_01_SEP_22.csv no entry bar near 2022-08-25T15:29:00+05:30 within 30m
 - `2022-09-01`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_08_SEP_22.csv no entry bar near 2022-09-01T15:29:00+05:30 within 30m
 - `2022-09-08`: `missing_entry_or_exit_timestamp`. NIFTY_17900_PE_15_SEP_22.csv no entry bar near 2022-09-08T15:29:00+05:30 within 30m
-- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
-- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
+- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
+- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
 - `2022-09-29`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_06_OCT_22.csv no entry bar near 2022-09-29T15:29:00+05:30 within 30m
-- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17200_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
+- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
 - `2022-10-13`: `missing_entry_or_exit_timestamp`. NIFTY_16900_CE_20_OCT_22.csv no entry bar near 2022-10-13T15:29:00+05:30 within 30m
 - `2022-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_27_OCT_22.csv no entry bar near 2022-10-20T15:29:00+05:30 within 30m
-- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
-- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:15:00+05:30; no fallback within 30m
+- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
+- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:00:00+05:30; no fallback within 30m
 - `2022-10-27`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_03_NOV_22.csv no entry bar near 2022-10-27T15:29:00+05:30 within 30m
 - `2022-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_10_NOV_22.csv no entry bar near 2022-11-03T15:29:00+05:30 within 30m
 - `2022-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_17_NOV_22.csv no entry bar near 2022-11-10T15:29:00+05:30 within 30m
-- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18250_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
+- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
 - `2022-11-24`: `missing_entry_or_exit_timestamp`. NIFTY_18600_PE_01_DEC_22.csv no entry bar near 2022-11-24T15:29:00+05:30 within 30m
 - `2022-12-01`: `missing_entry_or_exit_timestamp`. NIFTY_18700_CE_08_DEC_22.csv no entry bar near 2022-12-01T15:29:00+05:30 within 30m
 - `2022-12-08`: `missing_entry_or_exit_timestamp`. NIFTY_18700_PE_15_DEC_22.csv no entry bar near 2022-12-08T15:29:00+05:30 within 30m
 - `2022-12-15`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_22_DEC_22.csv no entry bar near 2022-12-15T15:29:00+05:30 within 30m
-- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
+- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18250_PE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
 - `2022-12-29`: `missing_entry_or_exit_timestamp`. NIFTY_18300_PE_05_JAN_23.csv no entry bar near 2022-12-29T15:29:00+05:30 within 30m
 - `2023-01-05`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_12_JAN_23.csv no entry bar near 2023-01-05T15:29:00+05:30 within 30m
 - `2023-01-12`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_19_JAN_23.csv no entry bar near 2023-01-12T15:29:00+05:30 within 30m
@@ -3307,33 +3303,33 @@
 - `2023-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_02_FEB_23.csv no entry bar near 2023-01-25T15:29:00+05:30 within 30m
 - `2023-02-02`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_09_FEB_23.csv no entry bar near 2023-02-02T15:29:00+05:30 within 30m
 - `2023-02-09`: `missing_entry_or_exit_timestamp`. NIFTY_18000_PE_16_FEB_23.csv no entry bar near 2023-02-09T15:29:00+05:30 within 30m
-- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
+- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
 - `2023-02-23`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_02_MAR_23.csv no entry bar near 2023-02-23T15:29:00+05:30 within 30m
-- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17200_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
+- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
 - `2023-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_16_MAR_23.csv no entry bar near 2023-03-09T15:29:00+05:30 within 30m
 - `2023-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_23_MAR_23.csv no entry bar near 2023-03-16T15:29:00+05:30 within 30m
 - `2023-03-23`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_29_MAR_23.csv no entry bar near 2023-03-23T15:29:00+05:30 within 30m
 - `2023-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_06_APR_23.csv no entry bar near 2023-03-29T15:29:00+05:30 within 30m
 - `2023-04-06`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_13_APR_23.csv no entry bar near 2023-04-06T15:29:00+05:30 within 30m
 - `2023-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_20_APR_23.csv no entry bar near 2023-04-13T15:29:00+05:30 within 30m
-- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
+- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
 - `2023-04-27`: `missing_entry_or_exit_timestamp`. NIFTY_18000_PE_04_MAY_23.csv no entry bar near 2023-04-27T15:29:00+05:30 within 30m
 - `2023-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_18350_PE_11_MAY_23.csv no entry bar near 2023-05-04T15:29:00+05:30 within 30m
 - `2023-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_18_MAY_23.csv no entry bar near 2023-05-11T15:29:00+05:30 within 30m
 - `2023-05-18`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_25_MAY_23.csv no entry bar near 2023-05-18T15:29:00+05:30 within 30m
 - `2023-05-25`: `missing_entry_or_exit_timestamp`. NIFTY_18450_PE_01_JUN_23.csv no entry bar near 2023-05-25T15:29:00+05:30 within 30m
 - `2023-06-01`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_08_JUN_23.csv no entry bar near 2023-06-01T15:29:00+05:30 within 30m
-- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
+- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
 - `2023-06-15`: `missing_entry_or_exit_timestamp`. NIFTY_18600_CE_22_JUN_23.csv no entry bar near 2023-06-15T15:29:00+05:30 within 30m
-- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18700_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18700_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
+- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18650_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18650_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
 - `2023-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_28_JUN_23.csv no entry bar near 2023-06-23T15:29:00+05:30 within 30m; NIFTY_18550_CE_28_JUN_23.csv no exit bar near 2023-06-26T09:16:00+05:30 within 30m
 - `2023-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_18800_PE_28_JUN_23.csv no entry bar near 2023-06-26T15:29:00+05:30 within 30m; NIFTY_18800_PE_28_JUN_23.csv no exit bar near 2023-06-27T09:16:00+05:30 within 30m
 - `2023-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_18900_PE_28_JUN_23.csv no entry bar near 2023-06-27T15:29:00+05:30 within 30m
-- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_19100_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_19100_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
+- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_19050_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_19050_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
 - `2023-07-06`: `missing_entry_or_exit_timestamp`. NIFTY_19600_PE_13_JUL_23.csv no entry bar near 2023-07-06T15:29:00+05:30 within 30m
-- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19350_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
-- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_20050_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
-- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19600_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
+- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19300_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
+- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_20100_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
+- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19550_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
 - `2023-08-03`: `missing_entry_or_exit_timestamp`. NIFTY_19300_CE_10_AUG_23.csv no entry bar near 2023-08-03T15:29:00+05:30 within 30m
 - `2023-08-10`: `missing_entry_or_exit_timestamp`. NIFTY_19450_CE_17_AUG_23.csv no entry bar near 2023-08-10T15:29:00+05:30 within 30m
 - `2023-08-17`: `missing_entry_or_exit_timestamp`. NIFTY_19250_CE_24_AUG_23.csv no entry bar near 2023-08-17T15:29:00+05:30 within 30m
@@ -3342,49 +3338,49 @@
 - `2023-09-07`: `missing_entry_or_exit_timestamp`. NIFTY_19800_PE_14_SEP_23.csv no entry bar near 2023-09-07T15:29:00+05:30 within 30m
 - `2023-09-14`: `missing_entry_or_exit_timestamp`. NIFTY_20200_PE_21_SEP_23.csv no entry bar near 2023-09-14T15:29:00+05:30 within 30m
 - `2023-09-21`: `missing_entry_or_exit_timestamp`. NIFTY_19650_CE_28_SEP_23.csv no entry bar near 2023-09-21T15:29:00+05:30 within 30m
-- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19450_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
+- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19400_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
 - `2023-10-05`: `missing_entry_or_exit_timestamp`. NIFTY_19650_PE_12_OCT_23.csv no entry bar near 2023-10-05T15:29:00+05:30 within 30m
 - `2023-10-12`: `missing_entry_or_exit_timestamp`. NIFTY_19700_CE_19_OCT_23.csv no entry bar near 2023-10-12T15:29:00+05:30 within 30m
-- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19500_CE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
+- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19700_PE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
 - `2023-10-26`: `missing_entry_or_exit_timestamp`. NIFTY_18750_CE_02_NOV_23.csv no entry bar near 2023-10-26T15:29:00+05:30 within 30m
-- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_19250_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
+- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_19200_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
 - `2023-11-09`: `missing_entry_or_exit_timestamp`. NIFTY_19300_CE_16_NOV_23.csv no entry bar near 2023-11-09T15:29:00+05:30 within 30m
 - `2023-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_19550_PE_16_NOV_23.csv no exit bar near 2023-11-12T09:16:00+05:30 within 30m
-- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:15:00+05:30; no fallback within 30m
+- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:00:00+05:30; no fallback within 30m
 - `2023-11-16`: `missing_entry_or_exit_timestamp`. NIFTY_19650_CE_23_NOV_23.csv no entry bar near 2023-11-16T15:29:00+05:30 within 30m
 - `2023-11-23`: `missing_entry_or_exit_timestamp`. NIFTY_19700_CE_30_NOV_23.csv no entry bar near 2023-11-23T15:29:00+05:30 within 30m
 - `2023-11-30`: `missing_entry_or_exit_timestamp`. NIFTY_20250_PE_07_DEC_23.csv no entry bar near 2023-11-30T15:29:00+05:30 within 30m
-- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_21000_PE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
-- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21300_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
-- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21400_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
-- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21850_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
+- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_20800_CE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
+- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21250_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
+- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21350_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
+- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21900_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
 - `2024-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_21750_PE_11_JAN_24.csv no entry bar near 2024-01-04T15:29:00+05:30 within 30m
-- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21750_PE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
-- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21600_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
+- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21550_CE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
+- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
 - `2024-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_21450_PE_01_FEB_24.csv no entry bar near 2024-01-25T15:29:00+05:30 within 30m
 - `2024-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_21600_CE_08_FEB_24.csv no entry bar near 2024-02-01T15:29:00+05:30 within 30m
-- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21650_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
-- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_22050_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
+- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21600_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
+- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_22000_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
 - `2024-02-22`: `missing_entry_or_exit_timestamp`. NIFTY_22300_PE_29_FEB_24.csv no entry bar near 2024-02-22T15:29:00+05:30 within 30m
-- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_22150_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
-- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:15:00+05:30; no fallback within 30m
-- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22400_CE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
+- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_22100_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
+- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:00:00+05:30; no fallback within 30m
+- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22600_PE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
 - `2024-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_22250_PE_21_MAR_24.csv no entry bar near 2024-03-14T15:29:00+05:30 within 30m
-- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_21900_CE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
-- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22250_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
-- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22650_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
+- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_22150_PE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
+- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22150_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
+- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22600_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
 - `2024-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_22850_PE_18_APR_24.csv no entry bar near 2024-04-10T15:29:00+05:30 within 30m
-- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_21950_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
+- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_21850_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
 - `2024-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_22650_PE_02_MAY_24.csv no entry bar near 2024-04-25T15:29:00+05:30 within 30m
 - `2024-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_22550_CE_09_MAY_24.csv no entry bar near 2024-05-02T15:29:00+05:30 within 30m
 - `2024-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_21850_CE_16_MAY_24.csv no entry bar near 2024-05-09T15:29:00+05:30 within 30m
 - `2024-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_22500_PE_23_MAY_24.csv no entry bar near 2024-05-16T15:29:00+05:30 within 30m
-- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:15:00+05:30; no fallback within 30m
-- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_23050_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
-- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22650_PE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
+- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:00:00+05:30; no fallback within 30m
+- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_23100_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
+- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22400_CE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
 - `2024-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_22950_PE_13_JUN_24.csv no entry bar near 2024-06-06T15:29:00+05:30 within 30m
 - `2024-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_23500_PE_20_JUN_24.csv no entry bar near 2024-06-13T15:29:00+05:30 within 30m
-- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
+- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23650_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
 - `2024-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_24150_PE_04_JUL_24.csv no entry bar near 2024-06-27T15:29:00+05:30 within 30m
 - `2024-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_24200_CE_11_JUL_24.csv no entry bar near 2024-07-04T15:29:00+05:30 within 30m
 - `2024-07-11`: `missing_entry_or_exit_timestamp`. NIFTY_24450_PE_18_JUL_24.csv no entry bar near 2024-07-11T15:29:00+05:30 within 30m
@@ -3396,36 +3392,38 @@
 - `2024-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_24700_CE_29_AUG_24.csv no entry bar near 2024-08-22T15:29:00+05:30 within 30m
 - `2024-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_25250_PE_05_SEP_24.csv no entry bar near 2024-08-29T15:29:00+05:30 within 30m
 - `2024-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_25050_CE_12_SEP_24.csv no entry bar near 2024-09-05T15:29:00+05:30 within 30m
-- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25400_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
+- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25500_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
 - `2024-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_25350_CE_26_SEP_24.csv no entry bar near 2024-09-19T15:29:00+05:30 within 30m
 - `2024-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_26300_PE_03_OCT_24.csv no entry bar near 2024-09-26T15:29:00+05:30 within 30m
 - `2024-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_25150_CE_10_OCT_24.csv no entry bar near 2024-10-03T15:29:00+05:30 within 30m
 - `2024-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_24900_CE_17_OCT_24.csv no entry bar near 2024-10-10T15:29:00+05:30 within 30m
 - `2024-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_24650_CE_24_OCT_24.csv no entry bar near 2024-10-17T15:29:00+05:30 within 30m
-- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24500_PE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
-- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24350_PE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24350_PE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
-- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:15:00+05:30; no fallback within 30m
+- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24300_CE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
+- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24100_CE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24100_CE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
+- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:00:00+05:30; no fallback within 30m
 - `2024-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_24100_CE_14_NOV_24.csv no entry bar near 2024-11-07T15:29:00+05:30 within 30m
-- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23650_PE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
+- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23450_CE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
 - `2024-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_23450_PE_28_NOV_24.csv no entry bar near 2024-11-21T15:29:00+05:30 within 30m
-- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_23850_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
-- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24800_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
+- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_23800_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
+- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24850_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
 - `2024-12-12`: `missing_entry_or_exit_timestamp`. NIFTY_24450_CE_19_DEC_24.csv no entry bar near 2024-12-12T15:29:00+05:30 within 30m
-- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_24050_PE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
+- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_23850_CE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
 - `2025-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_25750_CE_28_OCT_25.csv no exit bar near 2025-10-21T09:16:00+05:30 within 30m
 - `2025-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_25750_CE_28_OCT_25.csv no entry bar near 2025-10-21T15:29:00+05:30 within 30m
-- `2026-03-30`: `missing_option_file`. Missing option file: NIFTY_22300_CE_28_APR_26.csv
-- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_24150_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
+- `2026-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_24_MAR_26.csv no entry bar near 2026-03-17T15:29:00+05:30 within 30m; NIFTY_23700_PE_24_MAR_26.csv no exit bar near 2026-03-18T09:16:00+05:30 within 30m
+- `2026-03-18`: `missing_option_file`. Missing option file: NIFTY_23900_PE_24_MAR_26.csv
+- `2026-03-30`: `missing_option_file`. Missing option file: NIFTY_22250_CE_28_APR_26.csv
+- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_24100_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
 - `2026-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_05_MAY_26.csv no entry bar near 2026-05-04T15:29:00+05:30 within 30m; NIFTY_24000_CE_05_MAY_26.csv no exit bar near 2026-05-05T09:16:00+05:30 within 30m
 - `2026-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_24150_PE_12_MAY_26.csv no entry bar near 2026-05-05T15:29:00+05:30 within 30m; NIFTY_24150_PE_12_MAY_26.csv no exit bar near 2026-05-06T09:16:00+05:30 within 30m
-- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24450_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24450_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
-- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24250_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24250_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
+- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24400_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24400_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
+- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24200_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24200_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
 - `2026-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_24100_CE_12_MAY_26.csv no entry bar near 2026-05-08T15:29:00+05:30 within 30m; NIFTY_24100_CE_12_MAY_26.csv no exit bar near 2026-05-11T09:16:00+05:30 within 30m
 - `2026-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_23700_CE_12_MAY_26.csv no entry bar near 2026-05-11T15:29:00+05:30 within 30m; NIFTY_23700_CE_12_MAY_26.csv no exit bar near 2026-05-12T09:16:00+05:30 within 30m
 - `2026-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_23500_PE_09_JUN_26.csv no exit bar near 2026-06-04T09:16:00+05:30 within 30m
-- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23550_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23550_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
+- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23500_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23500_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
 - `2026-06-05`: `missing_entry_or_exit_timestamp`. NIFTY_23250_CE_09_JUN_26.csv no entry bar near 2026-06-05T15:29:00+05:30 within 30m; NIFTY_23250_CE_09_JUN_26.csv no exit bar near 2026-06-08T09:16:00+05:30 within 30m
-- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23000_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23000_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
+- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_23050_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_23050_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
 - `2026-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_24100_PE_23_JUN_26.csv no exit bar near 2026-06-17T09:16:00+05:30 within 30m
 - `2026-06-17`: `missing_entry_or_exit_timestamp`. NIFTY_24200_PE_23_JUN_26.csv no entry bar near 2026-06-17T15:29:00+05:30 within 30m; NIFTY_24200_PE_23_JUN_26.csv no exit bar near 2026-06-18T09:16:00+05:30 within 30m
 - `2026-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_24300_PE_23_JUN_26.csv no entry bar near 2026-06-18T15:29:00+05:30 within 30m; NIFTY_24300_PE_23_JUN_26.csv no exit bar near 2026-06-19T09:16:00+05:30 within 30m
@@ -3433,39 +3431,39 @@
 
 ### ITM_200
 
-- `2019-01-01`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-01-01T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-01-02T09:16:00+05:30 within 30m
+- `2019-01-01`: `insufficient_spot_history`. 2019-01-01T15:00:00+05:30 has 24 bars; needs 25
 - `2019-01-02`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
 - `2019-01-03`: `missing_option_file`. Missing option file: NIFTY_10450_CE_02_JAN_20.csv
-- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
 - `2019-01-07`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
 - `2019-01-08`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-08T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-09T09:16:00+05:30 within 30m
 - `2019-01-09`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-01-10`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
-- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
+- `2019-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-11T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-14T09:16:00+05:30 within 30m
 - `2019-01-14`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-01-15`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-01-15T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-01-16T09:16:00+05:30 within 30m
 - `2019-01-16`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
-- `2019-01-17`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
+- `2019-01-17`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-01-17T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-01-18T09:16:00+05:30 within 30m
 - `2019-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-01-18T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-01-21T09:16:00+05:30 within 30m
-- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
-- `2019-01-22`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-01-22T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-01-23T09:16:00+05:30 within 30m
-- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
+- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-01-22`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
 - `2019-01-24`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-01-25`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
-- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
-- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10900_PE_02_JAN_20.csv
+- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10450_CE_02_JAN_20.csv
+- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10850_PE_02_JAN_20.csv
 - `2019-01-30`: `missing_option_file`. Missing option file: NIFTY_10450_CE_02_JAN_20.csv
-- `2019-01-31`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-31T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-02-01T09:16:00+05:30 within 30m
+- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-02-01T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-02-04T09:16:00+05:30 within 30m
 - `2019-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-02-04T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-02-05T09:16:00+05:30 within 30m
 - `2019-02-05`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-02-06T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-02-07T09:16:00+05:30 within 30m
 - `2019-02-07`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
 - `2019-02-08`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
-- `2019-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-02-11T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-02-12T09:16:00+05:30 within 30m
+- `2019-02-11`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
 - `2019-02-12`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
 - `2019-02-13`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
-- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
+- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
 - `2019-02-15`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-02-18`: `missing_option_file`. Missing option file: NIFTY_10450_CE_02_JAN_20.csv
 - `2019-02-19`: `missing_option_file`. Missing option file: NIFTY_10400_CE_02_JAN_20.csv
@@ -3479,29 +3477,29 @@
 - `2019-03-01`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-03-05T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-03-06T09:16:00+05:30 within 30m
 - `2019-03-06`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-06T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-07T09:16:00+05:30 within 30m
-- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
+- `2019-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-07T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-08T09:16:00+05:30 within 30m
 - `2019-03-08`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-03-08T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-03-11T09:16:00+05:30 within 30m
-- `2019-03-11`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-03-11T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-03-12T09:16:00+05:30 within 30m
+- `2019-03-11`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-03-11T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-03-12T09:16:00+05:30 within 30m
 - `2019-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-03-12T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-03-13T09:16:00+05:30 within 30m
 - `2019-03-13`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-03-13T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-03-14T09:16:00+05:30 within 30m
 - `2019-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-03-14T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-03-15T09:16:00+05:30 within 30m
-- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
-- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
+- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
+- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
 - `2019-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-03-19T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-03-20T09:16:00+05:30 within 30m
 - `2019-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-03-20T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-03-22T09:16:00+05:30 within 30m
 - `2019-03-22`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-03-22T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-03-25T09:16:00+05:30 within 30m
 - `2019-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-03-25T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-03-26T09:16:00+05:30 within 30m
 - `2019-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-03-26T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-03-27T09:16:00+05:30 within 30m
 - `2019-03-27`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-03-27T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-03-28T09:16:00+05:30 within 30m
-- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
+- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
 - `2019-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-03-29T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-04-01T09:16:00+05:30 within 30m
 - `2019-04-01`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
-- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
+- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
 - `2019-04-03`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-04-04T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-04-05T09:16:00+05:30 within 30m
-- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
+- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
 - `2019-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-04-08T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-04-09T09:16:00+05:30 within 30m
-- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
+- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
 - `2019-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-04-10T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-04-11T09:16:00+05:30 within 30m
 - `2019-04-11`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-04-11T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-04-12T09:16:00+05:30 within 30m
 - `2019-04-12`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-04-12T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-04-15T09:16:00+05:30 within 30m
@@ -3510,26 +3508,26 @@
 - `2019-04-18`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-04-22T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-04-23T09:16:00+05:30 within 30m
 - `2019-04-23`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-04-23T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-04-24T09:16:00+05:30 within 30m
-- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
+- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
 - `2019-04-25`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-04-26`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-04-26T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-04-30T09:16:00+05:30 within 30m
 - `2019-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-04-30T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-05-02T09:16:00+05:30 within 30m
-- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
+- `2019-05-02`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-05-03`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-05-03T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-05-06T09:16:00+05:30 within 30m
 - `2019-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-05-06T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-05-07T09:16:00+05:30 within 30m
 - `2019-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-05-07T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-05-08T09:16:00+05:30 within 30m
 - `2019-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-05-08T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-05-09T09:16:00+05:30 within 30m
 - `2019-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-05-09T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-05-10T09:16:00+05:30 within 30m
-- `2019-05-10`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
+- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
 - `2019-05-13`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-05-14`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-05-15`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
-- `2019-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-05-16T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-05-17T09:16:00+05:30 within 30m
+- `2019-05-16`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-05-17`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-05-17T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-05-20T09:16:00+05:30 within 30m
-- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
+- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
 - `2019-05-21`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-05-21T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-05-22T09:16:00+05:30 within 30m
 - `2019-05-22`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-05-22T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-05-23T09:16:00+05:30 within 30m
-- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
+- `2019-05-23`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-05-24`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-05-24T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-05-27T09:16:00+05:30 within 30m
 - `2019-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-05-27T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-05-28T09:16:00+05:30 within 30m
 - `2019-05-28`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-05-28T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-05-29T09:16:00+05:30 within 30m
@@ -3537,10 +3535,10 @@
 - `2019-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-05-30T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-05-31T09:16:00+05:30 within 30m
 - `2019-05-31`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-05-31T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-06-03T09:16:00+05:30 within 30m
 - `2019-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_02_JAN_20.csv no entry bar near 2019-06-03T15:29:00+05:30 within 30m; NIFTY_12300_PE_02_JAN_20.csv no exit bar near 2019-06-04T09:16:00+05:30 within 30m
-- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
+- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
 - `2019-06-06`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-06-07`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-06-07T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-06-10T09:16:00+05:30 within 30m
-- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
+- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
 - `2019-06-11`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-06-11T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-06-12T09:16:00+05:30 within 30m
 - `2019-06-12`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-06-12T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-06-13T09:16:00+05:30 within 30m
 - `2019-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-06-13T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-06-14T09:16:00+05:30 within 30m
@@ -3549,7 +3547,7 @@
 - `2019-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-06-18T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-06-19T09:16:00+05:30 within 30m
 - `2019-06-19`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-06-19T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-06-20T09:16:00+05:30 within 30m
 - `2019-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-06-20T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-06-21T09:16:00+05:30 within 30m
-- `2019-06-21`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
+- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
 - `2019-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-06-24T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-06-25T09:16:00+05:30 within 30m
 - `2019-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-06-25T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-06-26T09:16:00+05:30 within 30m
 - `2019-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-06-26T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-06-27T09:16:00+05:30 within 30m
@@ -3557,7 +3555,7 @@
 - `2019-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-06-28T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-07-01T09:16:00+05:30 within 30m
 - `2019-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-07-01T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-07-02T09:16:00+05:30 within 30m
 - `2019-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-07-02T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-07-03T09:16:00+05:30 within 30m
-- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
+- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
 - `2019-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-07-04T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-07-05T09:16:00+05:30 within 30m
 - `2019-07-05`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-07-05T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-07-08T09:16:00+05:30 within 30m
 - `2019-07-08`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
@@ -3569,54 +3567,54 @@
 - `2019-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-07-16T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-07-17T09:16:00+05:30 within 30m
 - `2019-07-17`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-07-17T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-07-18T09:16:00+05:30 within 30m
 - `2019-07-18`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-07-18T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-07-19T09:16:00+05:30 within 30m
-- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
-- `2019-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-07-22T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-07-23T09:16:00+05:30 within 30m
+- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
+- `2019-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-07-22T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-07-23T09:16:00+05:30 within 30m
 - `2019-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-07-23T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-07-24T09:16:00+05:30 within 30m
 - `2019-07-24`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-07-25`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-07-26`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-07-26T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-07-29T09:16:00+05:30 within 30m
 - `2019-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-07-29T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-07-30T09:16:00+05:30 within 30m
 - `2019-07-30`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
-- `2019-07-31`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-07-31T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-08-01T09:16:00+05:30 within 30m
+- `2019-07-31`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-07-31T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-08-01T09:16:00+05:30 within 30m
 - `2019-08-01`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-08-01T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-08-02T09:16:00+05:30 within 30m
 - `2019-08-02`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-08-02T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-08-05T09:16:00+05:30 within 30m
 - `2019-08-05`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
-- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
+- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-08-07`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
-- `2019-08-08`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-08-08T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-08-09T09:16:00+05:30 within 30m
+- `2019-08-08`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-08-08T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-08-09T09:16:00+05:30 within 30m
 - `2019-08-09`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
-- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
-- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
+- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
+- `2019-08-14`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-08-14T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-08-16T09:16:00+05:30 within 30m
 - `2019-08-16`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-08-16T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-08-19T09:16:00+05:30 within 30m
 - `2019-08-19`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
-- `2019-08-20`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-08-20T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-08-21T09:16:00+05:30 within 30m
+- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
 - `2019-08-21`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
 - `2019-08-22`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
 - `2019-08-23`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-08-26T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-08-27T09:16:00+05:30 within 30m
-- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
+- `2019-08-27`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
 - `2019-08-28`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
 - `2019-08-29`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
-- `2019-08-30`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-08-30T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-09-03T09:16:00+05:30 within 30m
+- `2019-08-30`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-08-30T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-09-03T09:16:00+05:30 within 30m
 - `2019-09-03`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
 - `2019-09-04`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-09-05`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
 - `2019-09-06`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-09-09T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-09-11T09:16:00+05:30 within 30m
-- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
+- `2019-09-11`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-09-11T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-09-12T09:16:00+05:30 within 30m
 - `2019-09-12`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
 - `2019-09-13`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-09-13T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-09-16T09:16:00+05:30 within 30m
 - `2019-09-16`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
-- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
-- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
+- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
 - `2019-09-19`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
 - `2019-09-20`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-09-20T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-09-23T09:16:00+05:30 within 30m
-- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
-- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
+- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
+- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
 - `2019-09-25`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-09-25T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-09-26T09:16:00+05:30 within 30m
-- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
+- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
 - `2019-09-27`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-09-27T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-09-30T09:16:00+05:30 within 30m
-- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
+- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
 - `2019-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-10-01T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-10-03T09:16:00+05:30 within 30m
 - `2019-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-10-03T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-10-04T09:16:00+05:30 within 30m
 - `2019-10-04`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
@@ -3624,7 +3622,7 @@
 - `2019-10-09`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-10-09T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-10-10T09:16:00+05:30 within 30m
 - `2019-10-10`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-10-11`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-10-11T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-10-14T09:16:00+05:30 within 30m
-- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
+- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
 - `2019-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-10-15T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-10-16T09:16:00+05:30 within 30m
 - `2019-10-16`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-10-16T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-10-17T09:16:00+05:30 within 30m
 - `2019-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-10-17T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-10-18T09:16:00+05:30 within 30m
@@ -3633,12 +3631,12 @@
 - `2019-10-23`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-10-23T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-10-24T09:16:00+05:30 within 30m
 - `2019-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-10-24T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-10-25T09:16:00+05:30 within 30m
 - `2019-10-25`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-10-25T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-10-27T09:16:00+05:30 within 30m
-- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:15:00+05:30; no fallback within 30m
+- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:00:00+05:30; no fallback within 30m
 - `2019-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-10-29T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-10-30T09:16:00+05:30 within 30m
 - `2019-10-30`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-10-30T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-10-31T09:16:00+05:30 within 30m
 - `2019-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-10-31T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-11-01T09:16:00+05:30 within 30m
 - `2019-11-01`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-11-01T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-11-04T09:16:00+05:30 within 30m
-- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
+- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
 - `2019-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-11-05T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-11-06T09:16:00+05:30 within 30m
 - `2019-11-06`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-11-06T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-11-07T09:16:00+05:30 within 30m
 - `2019-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-11-07T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-11-08T09:16:00+05:30 within 30m
@@ -3647,11 +3645,11 @@
 - `2019-11-13`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-11-14T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-11-15T09:16:00+05:30 within 30m
 - `2019-11-15`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-11-15T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-11-18T09:16:00+05:30 within 30m
-- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
+- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
 - `2019-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-11-19T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-11-20T09:16:00+05:30 within 30m
 - `2019-11-20`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-11-20T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-11-21T09:16:00+05:30 within 30m
 - `2019-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-11-21T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-11-22T09:16:00+05:30 within 30m
-- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
+- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
 - `2019-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_02_JAN_20.csv no entry bar near 2019-11-25T15:29:00+05:30 within 30m; NIFTY_12300_PE_02_JAN_20.csv no exit bar near 2019-11-26T09:16:00+05:30 within 30m
 - `2019-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-11-26T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-11-27T09:16:00+05:30 within 30m
 - `2019-11-27`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_02_JAN_20.csv no entry bar near 2019-11-27T15:29:00+05:30 within 30m; NIFTY_12300_PE_02_JAN_20.csv no exit bar near 2019-11-28T09:16:00+05:30 within 30m
@@ -3660,7 +3658,7 @@
 - `2019-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-12-02T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-12-03T09:16:00+05:30 within 30m
 - `2019-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-12-03T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-12-04T09:16:00+05:30 within 30m
 - `2019-12-04`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-12-04T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-12-05T09:16:00+05:30 within 30m
-- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_11800_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
+- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
 - `2019-12-06`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-12-06T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-12-09T09:16:00+05:30 within 30m
 - `2019-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-12-09T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-12-10T09:16:00+05:30 within 30m
 - `2019-12-10`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
@@ -3669,7 +3667,7 @@
 - `2019-12-13`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_02_JAN_20.csv no entry bar near 2019-12-13T15:29:00+05:30 within 30m; NIFTY_12300_PE_02_JAN_20.csv no exit bar near 2019-12-16T09:16:00+05:30 within 30m
 - `2019-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-12-16T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-12-17T09:16:00+05:30 within 30m
 - `2019-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_02_JAN_20.csv no entry bar near 2019-12-17T15:29:00+05:30 within 30m; NIFTY_12350_PE_02_JAN_20.csv no exit bar near 2019-12-18T09:16:00+05:30 within 30m
-- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12450_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
+- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12400_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
 - `2019-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_02_JAN_20.csv no entry bar near 2019-12-19T15:29:00+05:30 within 30m; NIFTY_12450_PE_02_JAN_20.csv no exit bar near 2019-12-20T09:16:00+05:30 within 30m
 - `2019-12-20`: `missing_entry_or_exit_timestamp`. NIFTY_12050_CE_02_JAN_20.csv no entry bar near 2019-12-20T15:29:00+05:30 within 30m; NIFTY_12050_CE_02_JAN_20.csv no exit bar near 2019-12-23T09:16:00+05:30 within 30m
 - `2019-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_02_JAN_20.csv no entry bar near 2019-12-23T15:29:00+05:30 within 30m; NIFTY_12450_PE_02_JAN_20.csv no exit bar near 2019-12-24T09:16:00+05:30 within 30m
@@ -3677,21 +3675,21 @@
 - `2019-12-26`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-12-26T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-12-27T09:16:00+05:30 within 30m
 - `2019-12-27`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_02_JAN_20.csv no entry bar near 2019-12-27T15:29:00+05:30 within 30m; NIFTY_12450_PE_02_JAN_20.csv no exit bar near 2019-12-30T09:16:00+05:30 within 30m
 - `2019-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_02_JAN_20.csv no entry bar near 2019-12-30T15:29:00+05:30 within 30m; NIFTY_12450_PE_02_JAN_20.csv no exit bar near 2019-12-31T09:16:00+05:30 within 30m
-- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_12000_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
+- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
 - `2020-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_12500_PE_09_JAN_20.csv no entry bar near 2020-01-02T15:29:00+05:30 within 30m
 - `2020-01-09`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_16_JAN_20.csv no entry bar near 2020-01-09T15:29:00+05:30 within 30m
 - `2020-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_12550_PE_23_JAN_20.csv no entry bar near 2020-01-16T15:29:00+05:30 within 30m
 - `2020-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_23_JAN_20.csv no entry bar near 2020-01-21T15:29:00+05:30 within 30m
 - `2020-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_30_JAN_20.csv no entry bar near 2020-01-23T15:29:00+05:30 within 30m
-- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
+- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
 - `2020-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_13_FEB_20.csv no entry bar near 2020-02-06T15:29:00+05:30 within 30m
 - `2020-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_20_FEB_20.csv no entry bar near 2020-02-13T15:29:00+05:30 within 30m
 - `2020-02-20`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_27_FEB_20.csv no entry bar near 2020-02-20T15:29:00+05:30 within 30m
-- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
 - `2020-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11050_CE_12_MAR_20.csv no entry bar near 2020-03-05T15:29:00+05:30 within 30m
-- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9450_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m; NIFTY_9450_CE_19_MAR_20.csv no exit bar near 2020-03-13T09:16:00+05:30 within 30m
+- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9350_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m; NIFTY_9350_CE_19_MAR_20.csv no exit bar near 2020-03-13T09:16:00+05:30 within 30m
 - `2020-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_8450_PE_26_MAR_20.csv no entry bar near 2020-03-19T15:29:00+05:30 within 30m
-- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8850_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
+- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8800_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
 - `2020-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_8050_CE_09_APR_20.csv no entry bar near 2020-04-01T15:29:00+05:30 within 30m
 - `2020-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_9300_PE_16_APR_20.csv no entry bar near 2020-04-09T15:29:00+05:30 within 30m
 - `2020-04-16`: `missing_entry_or_exit_timestamp`. NIFTY_9200_PE_23_APR_20.csv no entry bar near 2020-04-16T15:29:00+05:30 within 30m
@@ -3706,9 +3704,9 @@
 - `2020-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_10300_PE_25_JUN_20.csv no entry bar near 2020-06-18T15:29:00+05:30 within 30m
 - `2020-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_10100_CE_02_JUL_20.csv no entry bar near 2020-06-25T15:29:00+05:30 within 30m
 - `2020-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_10750_PE_09_JUL_20.csv no entry bar near 2020-07-02T15:29:00+05:30 within 30m
-- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_11050_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
+- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
 - `2020-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_10950_PE_23_JUL_20.csv no entry bar near 2020-07-16T15:29:00+05:30 within 30m
-- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11450_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
+- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
 - `2020-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_10900_CE_06_AUG_20.csv no entry bar near 2020-07-30T15:29:00+05:30 within 30m
 - `2020-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_13_AUG_20.csv no entry bar near 2020-08-06T15:29:00+05:30 within 30m
 - `2020-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_20_AUG_20.csv no entry bar near 2020-08-13T15:29:00+05:30 within 30m
@@ -3718,40 +3716,40 @@
 - `2020-09-10`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_17_SEP_20.csv no entry bar near 2020-09-10T15:29:00+05:30 within 30m
 - `2020-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_24_SEP_20.csv no entry bar near 2020-09-17T15:29:00+05:30 within 30m
 - `2020-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_10600_CE_01_OCT_20.csv no entry bar near 2020-09-24T15:29:00+05:30 within 30m
-- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
+- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
 - `2020-10-08`: `missing_entry_or_exit_timestamp`. NIFTY_11650_CE_15_OCT_20.csv no entry bar near 2020-10-08T15:29:00+05:30 within 30m
 - `2020-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11450_CE_22_OCT_20.csv no entry bar near 2020-10-15T15:29:00+05:30 within 30m
 - `2020-10-22`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_29_OCT_20.csv no entry bar near 2020-10-22T15:29:00+05:30 within 30m
-- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11450_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
-- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
+- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
+- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
 - `2020-11-12`: `missing_entry_or_exit_timestamp`. NIFTY_12900_PE_19_NOV_20.csv no entry bar near 2020-11-12T15:29:00+05:30 within 30m
 - `2020-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_12900_PE_19_NOV_20.csv no exit bar near 2020-11-14T09:16:00+05:30 within 30m
-- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:15:00+05:30; no fallback within 30m
+- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:00:00+05:30; no fallback within 30m
 - `2020-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_12550_CE_26_NOV_20.csv no entry bar near 2020-11-19T15:29:00+05:30 within 30m
 - `2020-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_13200_PE_03_DEC_20.csv no entry bar near 2020-11-26T15:29:00+05:30 within 30m
 - `2020-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_12950_CE_10_DEC_20.csv no entry bar near 2020-12-03T15:29:00+05:30 within 30m
-- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13700_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
+- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13650_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
 - `2020-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_13950_PE_24_DEC_20.csv no entry bar near 2020-12-17T15:29:00+05:30 within 30m
 - `2020-12-24`: `missing_entry_or_exit_timestamp`. NIFTY_13950_PE_31_DEC_20.csv no entry bar near 2020-12-24T15:29:00+05:30 within 30m
-- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_13750_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
+- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_13800_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
 - `2021-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_13950_CE_14_JAN_21.csv no entry bar near 2021-01-07T15:29:00+05:30 within 30m
 - `2021-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_14800_PE_21_JAN_21.csv no entry bar near 2021-01-14T15:29:00+05:30 within 30m
-- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14450_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
-- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_14000_PE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
+- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14400_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
+- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13600_CE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
 - `2021-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_15100_PE_11_FEB_21.csv no entry bar near 2021-02-04T15:29:00+05:30 within 30m
-- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15400_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
+- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15350_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
 - `2021-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_14900_CE_25_FEB_21.csv no entry bar near 2021-02-18T15:29:00+05:30 within 30m
 - `2021-02-25`: `missing_entry_or_exit_timestamp`. NIFTY_14900_CE_04_MAR_21.csv no entry bar near 2021-02-25T15:29:00+05:30 within 30m
 - `2021-03-04`: `missing_entry_or_exit_timestamp`. NIFTY_14900_CE_10_MAR_21.csv no entry bar near 2021-03-04T15:29:00+05:30 within 30m
-- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15350_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
+- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15400_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
 - `2021-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_14400_CE_25_MAR_21.csv no entry bar near 2021-03-18T15:29:00+05:30 within 30m
-- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14150_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
-- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_15050_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
-- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_14700_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
+- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14100_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
+- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_15100_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
+- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_14650_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
 - `2021-04-15`: `missing_entry_or_exit_timestamp`. NIFTY_14800_PE_22_APR_21.csv no entry bar near 2021-04-15T15:29:00+05:30 within 30m
 - `2021-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_14600_PE_29_APR_21.csv no entry bar near 2021-04-22T15:29:00+05:30 within 30m
 - `2021-04-29`: `missing_entry_or_exit_timestamp`. NIFTY_14700_CE_06_MAY_21.csv no entry bar near 2021-04-29T15:29:00+05:30 within 30m
-- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14950_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
+- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_14900_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
 - `2021-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_14500_CE_20_MAY_21.csv no entry bar near 2021-05-12T15:29:00+05:30 within 30m
 - `2021-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_14700_CE_27_MAY_21.csv no entry bar near 2021-05-20T15:29:00+05:30 within 30m
 - `2021-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_15550_PE_03_JUN_21.csv no entry bar near 2021-05-27T15:29:00+05:30 within 30m
@@ -3761,85 +3759,85 @@
 - `2021-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_16000_PE_01_JUL_21.csv no entry bar near 2021-06-24T15:29:00+05:30 within 30m
 - `2021-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_15500_CE_08_JUL_21.csv no entry bar near 2021-07-01T15:29:00+05:30 within 30m
 - `2021-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_15550_CE_15_JUL_21.csv no entry bar near 2021-07-08T15:29:00+05:30 within 30m
-- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_15700_CE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
-- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_16050_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
+- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_16100_PE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
+- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_16000_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
 - `2021-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_05_AUG_21.csv no entry bar near 2021-07-29T15:29:00+05:30 within 30m
 - `2021-08-05`: `missing_entry_or_exit_timestamp`. NIFTY_16500_PE_12_AUG_21.csv no entry bar near 2021-08-05T15:29:00+05:30 within 30m
 - `2021-08-12`: `missing_entry_or_exit_timestamp`. NIFTY_16550_PE_18_AUG_21.csv no entry bar near 2021-08-12T15:29:00+05:30 within 30m
-- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
+- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16400_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
 - `2021-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_16450_CE_02_SEP_21.csv no entry bar near 2021-08-26T15:29:00+05:30 within 30m
 - `2021-09-02`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_09_SEP_21.csv no entry bar near 2021-09-02T15:29:00+05:30 within 30m
 - `2021-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_16_SEP_21.csv no entry bar near 2021-09-09T15:29:00+05:30 within 30m
 - `2021-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_23_SEP_21.csv no entry bar near 2021-09-16T15:29:00+05:30 within 30m
 - `2021-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_30_SEP_21.csv no entry bar near 2021-09-23T15:29:00+05:30 within 30m
-- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
+- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
 - `2021-10-07`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_14_OCT_21.csv no entry bar near 2021-10-07T15:29:00+05:30 within 30m
 - `2021-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_18550_PE_21_OCT_21.csv no entry bar near 2021-10-14T15:29:00+05:30 within 30m
-- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18400_PE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
+- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
 - `2021-10-28`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_03_NOV_21.csv no entry bar near 2021-10-28T15:29:00+05:30 within 30m
-- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_17650_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
+- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_17600_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
 - `2021-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_11_NOV_21.csv no entry bar near 2021-11-04T15:29:00+05:30 within 30m
-- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
+- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
 - `2021-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_25_NOV_21.csv no entry bar near 2021-11-18T15:29:00+05:30 within 30m
 - `2021-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_02_DEC_21.csv no entry bar near 2021-11-25T15:29:00+05:30 within 30m
 - `2021-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_09_DEC_21.csv no entry bar near 2021-12-02T15:29:00+05:30 within 30m
 - `2021-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_16_DEC_21.csv no entry bar near 2021-12-09T15:29:00+05:30 within 30m
-- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
-- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_16850_CE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
-- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
+- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
+- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
+- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
 - `2022-01-06`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_13_JAN_22.csv no entry bar near 2022-01-06T15:29:00+05:30 within 30m
 - `2022-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_18450_PE_20_JAN_22.csv no entry bar near 2022-01-13T15:29:00+05:30 within 30m
-- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
-- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_17350_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
-- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
+- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
+- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
+- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
 - `2022-02-10`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_17_FEB_22.csv no entry bar near 2022-02-10T15:29:00+05:30 within 30m
 - `2022-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_24_FEB_22.csv no entry bar near 2022-02-17T15:29:00+05:30 within 30m
-- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16000_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
-- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
-- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
-- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
-- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
+- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_16050_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
+- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
+- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16400_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
+- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
+- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
 - `2022-03-31`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_07_APR_22.csv no entry bar near 2022-03-31T15:29:00+05:30 within 30m
 - `2022-04-07`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_13_APR_22.csv no entry bar near 2022-04-07T15:29:00+05:30 within 30m
 - `2022-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_21_APR_22.csv no entry bar near 2022-04-13T15:29:00+05:30 within 30m
 - `2022-04-21`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_28_APR_22.csv no entry bar near 2022-04-21T15:29:00+05:30 within 30m
-- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
-- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16450_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
-- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15650_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
-- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_15650_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
-- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16400_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
+- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
+- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16500_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
+- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
+- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
+- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16350_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
 - `2022-06-02`: `missing_entry_or_exit_timestamp`. NIFTY_16850_PE_09_JUN_22.csv no entry bar near 2022-06-02T15:29:00+05:30 within 30m
 - `2022-06-09`: `missing_entry_or_exit_timestamp`. NIFTY_16700_PE_16_JUN_22.csv no entry bar near 2022-06-09T15:29:00+05:30 within 30m
 - `2022-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_15150_CE_23_JUN_22.csv no entry bar near 2022-06-16T15:29:00+05:30 within 30m
-- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15800_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
-- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15550_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
+- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15750_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
+- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
 - `2022-07-07`: `missing_entry_or_exit_timestamp`. NIFTY_16350_PE_14_JUL_22.csv no entry bar near 2022-07-07T15:29:00+05:30 within 30m
 - `2022-07-14`: `missing_entry_or_exit_timestamp`. NIFTY_15750_CE_21_JUL_22.csv no entry bar near 2022-07-14T15:29:00+05:30 within 30m
 - `2022-07-21`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_28_JUL_22.csv no entry bar near 2022-07-21T15:29:00+05:30 within 30m
-- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_17100_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
-- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
+- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_17150_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
+- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
 - `2022-08-11`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_18_AUG_22.csv no entry bar near 2022-08-11T15:29:00+05:30 within 30m
 - `2022-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_25_AUG_22.csv no entry bar near 2022-08-18T15:29:00+05:30 within 30m
 - `2022-08-25`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_01_SEP_22.csv no entry bar near 2022-08-25T15:29:00+05:30 within 30m
 - `2022-09-01`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_08_SEP_22.csv no entry bar near 2022-09-01T15:29:00+05:30 within 30m
 - `2022-09-08`: `missing_entry_or_exit_timestamp`. NIFTY_18000_PE_15_SEP_22.csv no entry bar near 2022-09-08T15:29:00+05:30 within 30m
-- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_17650_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
-- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
+- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
+- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
 - `2022-09-29`: `missing_entry_or_exit_timestamp`. NIFTY_16650_CE_06_OCT_22.csv no entry bar near 2022-09-29T15:29:00+05:30 within 30m
-- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
+- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
 - `2022-10-13`: `missing_entry_or_exit_timestamp`. NIFTY_16800_CE_20_OCT_22.csv no entry bar near 2022-10-13T15:29:00+05:30 within 30m
 - `2022-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_17750_PE_27_OCT_22.csv no entry bar near 2022-10-20T15:29:00+05:30 within 30m
-- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
-- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:15:00+05:30; no fallback within 30m
+- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
+- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:00:00+05:30; no fallback within 30m
 - `2022-10-27`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_03_NOV_22.csv no entry bar near 2022-10-27T15:29:00+05:30 within 30m
 - `2022-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_10_NOV_22.csv no entry bar near 2022-11-03T15:29:00+05:30 within 30m
 - `2022-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_18250_PE_17_NOV_22.csv no entry bar near 2022-11-10T15:29:00+05:30 within 30m
-- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18150_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
+- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
 - `2022-11-24`: `missing_entry_or_exit_timestamp`. NIFTY_18700_PE_01_DEC_22.csv no entry bar near 2022-11-24T15:29:00+05:30 within 30m
 - `2022-12-01`: `missing_entry_or_exit_timestamp`. NIFTY_18600_CE_08_DEC_22.csv no entry bar near 2022-12-01T15:29:00+05:30 within 30m
 - `2022-12-08`: `missing_entry_or_exit_timestamp`. NIFTY_18800_PE_15_DEC_22.csv no entry bar near 2022-12-08T15:29:00+05:30 within 30m
 - `2022-12-15`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_22_DEC_22.csv no entry bar near 2022-12-15T15:29:00+05:30 within 30m
-- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_17900_CE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
+- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18350_PE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
 - `2022-12-29`: `missing_entry_or_exit_timestamp`. NIFTY_18400_PE_05_JAN_23.csv no entry bar near 2022-12-29T15:29:00+05:30 within 30m
 - `2023-01-05`: `missing_entry_or_exit_timestamp`. NIFTY_18200_PE_12_JAN_23.csv no entry bar near 2023-01-05T15:29:00+05:30 within 30m
 - `2023-01-12`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_19_JAN_23.csv no entry bar near 2023-01-12T15:29:00+05:30 within 30m
@@ -3847,33 +3845,33 @@
 - `2023-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_02_FEB_23.csv no entry bar near 2023-01-25T15:29:00+05:30 within 30m
 - `2023-02-02`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_09_FEB_23.csv no entry bar near 2023-02-02T15:29:00+05:30 within 30m
 - `2023-02-09`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_16_FEB_23.csv no entry bar near 2023-02-09T15:29:00+05:30 within 30m
-- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
+- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
 - `2023-02-23`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_02_MAR_23.csv no entry bar near 2023-02-23T15:29:00+05:30 within 30m
-- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17100_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
+- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
 - `2023-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_17400_CE_16_MAR_23.csv no entry bar near 2023-03-09T15:29:00+05:30 within 30m
 - `2023-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_23_MAR_23.csv no entry bar near 2023-03-16T15:29:00+05:30 within 30m
 - `2023-03-23`: `missing_entry_or_exit_timestamp`. NIFTY_16850_CE_29_MAR_23.csv no entry bar near 2023-03-23T15:29:00+05:30 within 30m
 - `2023-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_06_APR_23.csv no entry bar near 2023-03-29T15:29:00+05:30 within 30m
 - `2023-04-06`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_13_APR_23.csv no entry bar near 2023-04-06T15:29:00+05:30 within 30m
 - `2023-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_20_APR_23.csv no entry bar near 2023-04-13T15:29:00+05:30 within 30m
-- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
+- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
 - `2023-04-27`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_04_MAY_23.csv no entry bar near 2023-04-27T15:29:00+05:30 within 30m
 - `2023-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_18450_PE_11_MAY_23.csv no entry bar near 2023-05-04T15:29:00+05:30 within 30m
 - `2023-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_18_MAY_23.csv no entry bar near 2023-05-11T15:29:00+05:30 within 30m
 - `2023-05-18`: `missing_entry_or_exit_timestamp`. NIFTY_17950_CE_25_MAY_23.csv no entry bar near 2023-05-18T15:29:00+05:30 within 30m
 - `2023-05-25`: `missing_entry_or_exit_timestamp`. NIFTY_18550_PE_01_JUN_23.csv no entry bar near 2023-05-25T15:29:00+05:30 within 30m
 - `2023-06-01`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_08_JUN_23.csv no entry bar near 2023-06-01T15:29:00+05:30 within 30m
-- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18450_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
+- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
 - `2023-06-15`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_22_JUN_23.csv no entry bar near 2023-06-15T15:29:00+05:30 within 30m
-- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18600_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18600_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
+- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18550_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
 - `2023-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_18450_CE_28_JUN_23.csv no entry bar near 2023-06-23T15:29:00+05:30 within 30m; NIFTY_18450_CE_28_JUN_23.csv no exit bar near 2023-06-26T09:16:00+05:30 within 30m
 - `2023-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_18900_PE_28_JUN_23.csv no entry bar near 2023-06-26T15:29:00+05:30 within 30m; NIFTY_18900_PE_28_JUN_23.csv no exit bar near 2023-06-27T09:16:00+05:30 within 30m
 - `2023-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_19000_PE_28_JUN_23.csv no entry bar near 2023-06-27T15:29:00+05:30 within 30m
-- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_19200_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_19200_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
+- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_19150_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_19150_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
 - `2023-07-06`: `missing_entry_or_exit_timestamp`. NIFTY_19700_PE_13_JUL_23.csv no entry bar near 2023-07-06T15:29:00+05:30 within 30m
-- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19250_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
-- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_20150_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
-- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19500_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
+- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19200_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
+- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_20200_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
+- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19450_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
 - `2023-08-03`: `missing_entry_or_exit_timestamp`. NIFTY_19200_CE_10_AUG_23.csv no entry bar near 2023-08-03T15:29:00+05:30 within 30m
 - `2023-08-10`: `missing_entry_or_exit_timestamp`. NIFTY_19350_CE_17_AUG_23.csv no entry bar near 2023-08-10T15:29:00+05:30 within 30m
 - `2023-08-17`: `missing_entry_or_exit_timestamp`. NIFTY_19150_CE_24_AUG_23.csv no entry bar near 2023-08-17T15:29:00+05:30 within 30m
@@ -3882,49 +3880,49 @@
 - `2023-09-07`: `missing_entry_or_exit_timestamp`. NIFTY_19900_PE_14_SEP_23.csv no entry bar near 2023-09-07T15:29:00+05:30 within 30m
 - `2023-09-14`: `missing_entry_or_exit_timestamp`. NIFTY_20300_PE_21_SEP_23.csv no entry bar near 2023-09-14T15:29:00+05:30 within 30m
 - `2023-09-21`: `missing_entry_or_exit_timestamp`. NIFTY_19550_CE_28_SEP_23.csv no entry bar near 2023-09-21T15:29:00+05:30 within 30m
-- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19350_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
+- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19300_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
 - `2023-10-05`: `missing_entry_or_exit_timestamp`. NIFTY_19750_PE_12_OCT_23.csv no entry bar near 2023-10-05T15:29:00+05:30 within 30m
 - `2023-10-12`: `missing_entry_or_exit_timestamp`. NIFTY_19600_CE_19_OCT_23.csv no entry bar near 2023-10-12T15:29:00+05:30 within 30m
-- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19400_CE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
+- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19800_PE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
 - `2023-10-26`: `missing_entry_or_exit_timestamp`. NIFTY_18650_CE_02_NOV_23.csv no entry bar near 2023-10-26T15:29:00+05:30 within 30m
-- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_19350_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
+- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_19300_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
 - `2023-11-09`: `missing_entry_or_exit_timestamp`. NIFTY_19200_CE_16_NOV_23.csv no entry bar near 2023-11-09T15:29:00+05:30 within 30m
 - `2023-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_19650_PE_16_NOV_23.csv no exit bar near 2023-11-12T09:16:00+05:30 within 30m
-- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:15:00+05:30; no fallback within 30m
+- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:00:00+05:30; no fallback within 30m
 - `2023-11-16`: `missing_entry_or_exit_timestamp`. NIFTY_19550_CE_23_NOV_23.csv no entry bar near 2023-11-16T15:29:00+05:30 within 30m
 - `2023-11-23`: `missing_entry_or_exit_timestamp`. NIFTY_19600_CE_30_NOV_23.csv no entry bar near 2023-11-23T15:29:00+05:30 within 30m
 - `2023-11-30`: `missing_entry_or_exit_timestamp`. NIFTY_20350_PE_07_DEC_23.csv no entry bar near 2023-11-30T15:29:00+05:30 within 30m
-- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_21100_PE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
-- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21400_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
-- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21500_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
-- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_21950_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
+- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_20700_CE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
+- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21350_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
+- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21450_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
+- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_22000_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
 - `2024-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_21850_PE_11_JAN_24.csv no entry bar near 2024-01-04T15:29:00+05:30 within 30m
-- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21850_PE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
-- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21700_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
+- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21450_CE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
+- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21650_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
 - `2024-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_01_FEB_24.csv no entry bar near 2024-01-25T15:29:00+05:30 within 30m
 - `2024-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_21500_CE_08_FEB_24.csv no entry bar near 2024-02-01T15:29:00+05:30 within 30m
-- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21550_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
-- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_22150_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
+- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21500_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
+- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_22100_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
 - `2024-02-22`: `missing_entry_or_exit_timestamp`. NIFTY_22400_PE_29_FEB_24.csv no entry bar near 2024-02-22T15:29:00+05:30 within 30m
-- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_22250_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
-- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:15:00+05:30; no fallback within 30m
-- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22300_CE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
+- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_22200_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
+- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:00:00+05:30; no fallback within 30m
+- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22700_PE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
 - `2024-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_22350_PE_21_MAR_24.csv no entry bar near 2024-03-14T15:29:00+05:30 within 30m
-- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_21800_CE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
-- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22150_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
-- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22750_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
+- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_22250_PE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
+- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22050_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
+- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22700_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
 - `2024-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_22950_PE_18_APR_24.csv no entry bar near 2024-04-10T15:29:00+05:30 within 30m
-- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_21850_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
+- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_21750_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
 - `2024-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_22750_PE_02_MAY_24.csv no entry bar near 2024-04-25T15:29:00+05:30 within 30m
 - `2024-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_22450_CE_09_MAY_24.csv no entry bar near 2024-05-02T15:29:00+05:30 within 30m
 - `2024-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_21750_CE_16_MAY_24.csv no entry bar near 2024-05-09T15:29:00+05:30 within 30m
 - `2024-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_22600_PE_23_MAY_24.csv no entry bar near 2024-05-16T15:29:00+05:30 within 30m
-- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:15:00+05:30; no fallback within 30m
-- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_23150_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
-- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22750_PE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
+- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:00:00+05:30; no fallback within 30m
+- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_23200_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
+- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22300_CE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
 - `2024-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_23050_PE_13_JUN_24.csv no entry bar near 2024-06-06T15:29:00+05:30 within 30m
 - `2024-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_23600_PE_20_JUN_24.csv no entry bar near 2024-06-13T15:29:00+05:30 within 30m
-- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23800_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
+- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23750_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
 - `2024-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_24250_PE_04_JUL_24.csv no entry bar near 2024-06-27T15:29:00+05:30 within 30m
 - `2024-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_24100_CE_11_JUL_24.csv no entry bar near 2024-07-04T15:29:00+05:30 within 30m
 - `2024-07-11`: `missing_entry_or_exit_timestamp`. NIFTY_24550_PE_18_JUL_24.csv no entry bar near 2024-07-11T15:29:00+05:30 within 30m
@@ -3936,37 +3934,38 @@
 - `2024-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_24600_CE_29_AUG_24.csv no entry bar near 2024-08-22T15:29:00+05:30 within 30m
 - `2024-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_25350_PE_05_SEP_24.csv no entry bar near 2024-08-29T15:29:00+05:30 within 30m
 - `2024-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_24950_CE_12_SEP_24.csv no entry bar near 2024-09-05T15:29:00+05:30 within 30m
-- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25500_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
+- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25600_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
 - `2024-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_25250_CE_26_SEP_24.csv no entry bar near 2024-09-19T15:29:00+05:30 within 30m
 - `2024-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_26400_PE_03_OCT_24.csv no entry bar near 2024-09-26T15:29:00+05:30 within 30m
 - `2024-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_25050_CE_10_OCT_24.csv no entry bar near 2024-10-03T15:29:00+05:30 within 30m
 - `2024-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_24800_CE_17_OCT_24.csv no entry bar near 2024-10-10T15:29:00+05:30 within 30m
 - `2024-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_24550_CE_24_OCT_24.csv no entry bar near 2024-10-17T15:29:00+05:30 within 30m
-- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24600_PE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
-- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24450_PE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24450_PE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
-- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:15:00+05:30; no fallback within 30m
+- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24200_CE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
+- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24000_CE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
+- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:00:00+05:30; no fallback within 30m
 - `2024-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_14_NOV_24.csv no entry bar near 2024-11-07T15:29:00+05:30 within 30m
-- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23750_PE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
+- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23350_CE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
 - `2024-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_23550_PE_28_NOV_24.csv no entry bar near 2024-11-21T15:29:00+05:30 within 30m
-- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_23750_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
-- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24900_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
+- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_23700_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
+- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_24950_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
 - `2024-12-12`: `missing_entry_or_exit_timestamp`. NIFTY_24350_CE_19_DEC_24.csv no entry bar near 2024-12-12T15:29:00+05:30 within 30m
-- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_24150_PE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
+- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_23750_CE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
 - `2025-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_25650_CE_28_OCT_25.csv no exit bar near 2025-10-21T09:16:00+05:30 within 30m
 - `2025-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_25650_CE_28_OCT_25.csv no entry bar near 2025-10-21T15:29:00+05:30 within 30m
-- `2026-03-17`: `missing_option_file`. Missing option file: NIFTY_23750_PE_24_MAR_26.csv
-- `2026-03-30`: `missing_option_file`. Missing option file: NIFTY_22200_CE_28_APR_26.csv
-- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_24250_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
+- `2026-03-17`: `missing_option_file`. Missing option file: NIFTY_23800_PE_24_MAR_26.csv
+- `2026-03-18`: `missing_option_file`. Missing option file: NIFTY_24000_PE_24_MAR_26.csv
+- `2026-03-30`: `missing_option_file`. Missing option file: NIFTY_22150_CE_28_APR_26.csv
+- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_24200_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
 - `2026-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_23900_CE_05_MAY_26.csv no entry bar near 2026-05-04T15:29:00+05:30 within 30m; NIFTY_23900_CE_05_MAY_26.csv no exit bar near 2026-05-05T09:16:00+05:30 within 30m
 - `2026-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_24250_PE_12_MAY_26.csv no entry bar near 2026-05-05T15:29:00+05:30 within 30m; NIFTY_24250_PE_12_MAY_26.csv no exit bar near 2026-05-06T09:16:00+05:30 within 30m
-- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24550_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24550_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
-- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24150_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24150_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
+- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24500_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24500_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
+- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24100_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24100_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
 - `2026-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_12_MAY_26.csv no entry bar near 2026-05-08T15:29:00+05:30 within 30m; NIFTY_24000_CE_12_MAY_26.csv no exit bar near 2026-05-11T09:16:00+05:30 within 30m
 - `2026-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_23600_CE_12_MAY_26.csv no entry bar near 2026-05-11T15:29:00+05:30 within 30m; NIFTY_23600_CE_12_MAY_26.csv no exit bar near 2026-05-12T09:16:00+05:30 within 30m
 - `2026-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_23600_PE_09_JUN_26.csv no exit bar near 2026-06-04T09:16:00+05:30 within 30m
-- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23650_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23650_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
+- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23600_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23600_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
 - `2026-06-05`: `missing_entry_or_exit_timestamp`. NIFTY_23150_CE_09_JUN_26.csv no entry bar near 2026-06-05T15:29:00+05:30 within 30m; NIFTY_23150_CE_09_JUN_26.csv no exit bar near 2026-06-08T09:16:00+05:30 within 30m
-- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_22900_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_22900_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
+- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_22950_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_22950_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
 - `2026-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_24200_PE_23_JUN_26.csv no exit bar near 2026-06-17T09:16:00+05:30 within 30m
 - `2026-06-17`: `missing_entry_or_exit_timestamp`. NIFTY_24300_PE_23_JUN_26.csv no entry bar near 2026-06-17T15:29:00+05:30 within 30m; NIFTY_24300_PE_23_JUN_26.csv no exit bar near 2026-06-18T09:16:00+05:30 within 30m
 - `2026-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_24400_PE_23_JUN_26.csv no entry bar near 2026-06-18T15:29:00+05:30 within 30m; NIFTY_24400_PE_23_JUN_26.csv no exit bar near 2026-06-19T09:16:00+05:30 within 30m
@@ -3974,39 +3973,39 @@
 
 ### ITM_300
 
-- `2019-01-01`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-01-01T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-01-02T09:16:00+05:30 within 30m
+- `2019-01-01`: `insufficient_spot_history`. 2019-01-01T15:00:00+05:30 has 24 bars; needs 25
 - `2019-01-02`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
 - `2019-01-03`: `missing_option_file`. Missing option file: NIFTY_10350_CE_02_JAN_20.csv
-- `2019-01-04`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-04T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-07T09:16:00+05:30 within 30m
 - `2019-01-07`: `missing_option_file`. Missing option file: NIFTY_10450_CE_02_JAN_20.csv
 - `2019-01-08`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-01-08T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-01-09T09:16:00+05:30 within 30m
 - `2019-01-09`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-01-10`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
-- `2019-01-11`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
+- `2019-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-01-11T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-01-14T09:16:00+05:30 within 30m
 - `2019-01-14`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-01-15`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-01-15T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-01-16T09:16:00+05:30 within 30m
 - `2019-01-16`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
-- `2019-01-17`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
+- `2019-01-17`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-01-17T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-01-18T09:16:00+05:30 within 30m
 - `2019-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-01-18T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-01-21T09:16:00+05:30 within 30m
-- `2019-01-21`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
-- `2019-01-22`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-01-22T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-01-23T09:16:00+05:30 within 30m
-- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
+- `2019-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-01-21T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-01-22T09:16:00+05:30 within 30m
+- `2019-01-22`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-01-22T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-01-23T09:16:00+05:30 within 30m
+- `2019-01-23`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
 - `2019-01-24`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-01-25`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
-- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10400_CE_02_JAN_20.csv
-- `2019-01-29`: `missing_entry_or_exit_timestamp`. NIFTY_11000_PE_02_JAN_20.csv no entry bar near 2019-01-29T15:29:00+05:30 within 30m; NIFTY_11000_PE_02_JAN_20.csv no exit bar near 2019-01-30T09:16:00+05:30 within 30m
+- `2019-01-28`: `missing_option_file`. Missing option file: NIFTY_10350_CE_02_JAN_20.csv
+- `2019-01-29`: `missing_option_file`. Missing option file: NIFTY_10950_PE_02_JAN_20.csv
 - `2019-01-30`: `missing_option_file`. Missing option file: NIFTY_10350_CE_02_JAN_20.csv
-- `2019-01-31`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_02_JAN_20.csv no entry bar near 2019-01-31T15:29:00+05:30 within 30m; NIFTY_11100_PE_02_JAN_20.csv no exit bar near 2019-02-01T09:16:00+05:30 within 30m
+- `2019-01-31`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-02-01T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-02-04T09:16:00+05:30 within 30m
 - `2019-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-02-04T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-02-05T09:16:00+05:30 within 30m
 - `2019-02-05`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-02-05T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-02-06T09:16:00+05:30 within 30m
 - `2019-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-02-06T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-02-07T09:16:00+05:30 within 30m
 - `2019-02-07`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
 - `2019-02-08`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
-- `2019-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_11200_PE_02_JAN_20.csv no entry bar near 2019-02-11T15:29:00+05:30 within 30m; NIFTY_11200_PE_02_JAN_20.csv no exit bar near 2019-02-12T09:16:00+05:30 within 30m
+- `2019-02-11`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
 - `2019-02-12`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
 - `2019-02-13`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
-- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
+- `2019-02-14`: `missing_option_file`. Missing option file: NIFTY_10450_CE_02_JAN_20.csv
 - `2019-02-15`: `missing_option_file`. Missing option file: NIFTY_11050_PE_02_JAN_20.csv
 - `2019-02-18`: `missing_option_file`. Missing option file: NIFTY_10350_CE_02_JAN_20.csv
 - `2019-02-19`: `missing_option_file`. Missing option file: NIFTY_10300_CE_02_JAN_20.csv
@@ -4020,29 +4019,29 @@
 - `2019-03-01`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-03-05T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-03-06T09:16:00+05:30 within 30m
 - `2019-03-06`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-03-06T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-03-07T09:16:00+05:30 within 30m
-- `2019-03-07`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
+- `2019-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-03-07T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-03-08T09:16:00+05:30 within 30m
 - `2019-03-08`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-03-08T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-03-11T09:16:00+05:30 within 30m
-- `2019-03-11`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_02_JAN_20.csv no entry bar near 2019-03-11T15:29:00+05:30 within 30m; NIFTY_11500_PE_02_JAN_20.csv no exit bar near 2019-03-12T09:16:00+05:30 within 30m
+- `2019-03-11`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-03-12T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-03-13T09:16:00+05:30 within 30m
 - `2019-03-13`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-03-13T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-03-14T09:16:00+05:30 within 30m
 - `2019-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-03-14T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-03-15T09:16:00+05:30 within 30m
-- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
-- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
+- `2019-03-15`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-03-15T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-03-18T09:16:00+05:30 within 30m
+- `2019-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-03-18T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-03-19T09:16:00+05:30 within 30m
 - `2019-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-03-19T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-03-20T09:16:00+05:30 within 30m
 - `2019-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-03-20T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-03-22T09:16:00+05:30 within 30m
 - `2019-03-22`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-03-22T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-03-25T09:16:00+05:30 within 30m
 - `2019-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-03-25T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-03-26T09:16:00+05:30 within 30m
 - `2019-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-03-26T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-03-27T09:16:00+05:30 within 30m
 - `2019-03-27`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-03-27T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-03-28T09:16:00+05:30 within 30m
-- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
+- `2019-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-03-28T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-03-29T09:16:00+05:30 within 30m
 - `2019-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-03-29T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-04-01T09:16:00+05:30 within 30m
 - `2019-04-01`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
-- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
+- `2019-04-02`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-04-02T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-04-03T09:16:00+05:30 within 30m
 - `2019-04-03`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-04-04T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-04-05T09:16:00+05:30 within 30m
-- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
+- `2019-04-05`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-04-05T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-04-08T09:16:00+05:30 within 30m
 - `2019-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-04-08T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-04-09T09:16:00+05:30 within 30m
-- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
+- `2019-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-04-09T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-04-10T09:16:00+05:30 within 30m
 - `2019-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-04-10T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-04-11T09:16:00+05:30 within 30m
 - `2019-04-11`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-04-11T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-04-12T09:16:00+05:30 within 30m
 - `2019-04-12`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-04-12T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-04-15T09:16:00+05:30 within 30m
@@ -4051,26 +4050,26 @@
 - `2019-04-18`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-04-22T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-04-23T09:16:00+05:30 within 30m
 - `2019-04-23`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-04-23T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-04-24T09:16:00+05:30 within 30m
-- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
+- `2019-04-24`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-04-24T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-04-25T09:16:00+05:30 within 30m
 - `2019-04-25`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-04-26`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-04-26T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-04-30T09:16:00+05:30 within 30m
 - `2019-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-04-30T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-05-02T09:16:00+05:30 within 30m
-- `2019-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-05-02T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-05-03T09:16:00+05:30 within 30m
+- `2019-05-02`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
 - `2019-05-03`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-05-03T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-05-06T09:16:00+05:30 within 30m
 - `2019-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-05-06T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-05-07T09:16:00+05:30 within 30m
 - `2019-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-05-07T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-05-08T09:16:00+05:30 within 30m
 - `2019-05-08`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-05-09T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-05-10T09:16:00+05:30 within 30m
-- `2019-05-10`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
+- `2019-05-10`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-05-10T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-05-13T09:16:00+05:30 within 30m
 - `2019-05-13`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
 - `2019-05-14`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-05-14T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-05-15T09:16:00+05:30 within 30m
 - `2019-05-15`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
-- `2019-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-05-16T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-05-17T09:16:00+05:30 within 30m
+- `2019-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-05-16T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-05-17T09:16:00+05:30 within 30m
 - `2019-05-17`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_02_JAN_20.csv no entry bar near 2019-05-17T15:29:00+05:30 within 30m; NIFTY_11700_PE_02_JAN_20.csv no exit bar near 2019-05-20T09:16:00+05:30 within 30m
-- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
+- `2019-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-05-20T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-05-21T09:16:00+05:30 within 30m
 - `2019-05-21`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-05-21T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-05-22T09:16:00+05:30 within 30m
 - `2019-05-22`: `missing_entry_or_exit_timestamp`. NIFTY_12050_PE_02_JAN_20.csv no entry bar near 2019-05-22T15:29:00+05:30 within 30m; NIFTY_12050_PE_02_JAN_20.csv no exit bar near 2019-05-23T09:16:00+05:30 within 30m
-- `2019-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-05-23T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-05-24T09:16:00+05:30 within 30m
+- `2019-05-23`: `missing_option_file`. Missing option file: NIFTY_11350_CE_02_JAN_20.csv
 - `2019-05-24`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-05-24T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-05-27T09:16:00+05:30 within 30m
 - `2019-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-05-27T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-05-28T09:16:00+05:30 within 30m
 - `2019-05-28`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-05-28T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-05-29T09:16:00+05:30 within 30m
@@ -4078,10 +4077,10 @@
 - `2019-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-05-30T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-05-31T09:16:00+05:30 within 30m
 - `2019-05-31`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-05-31T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-06-03T09:16:00+05:30 within 30m
 - `2019-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_02_JAN_20.csv no entry bar near 2019-06-03T15:29:00+05:30 within 30m; NIFTY_12400_PE_02_JAN_20.csv no exit bar near 2019-06-04T09:16:00+05:30 within 30m
-- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
+- `2019-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-06-04T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-06-06T09:16:00+05:30 within 30m
 - `2019-06-06`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-06-07`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-06-07T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-06-10T09:16:00+05:30 within 30m
-- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
+- `2019-06-10`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-06-10T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-06-11T09:16:00+05:30 within 30m
 - `2019-06-11`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-06-11T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-06-12T09:16:00+05:30 within 30m
 - `2019-06-12`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-06-12T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-06-13T09:16:00+05:30 within 30m
 - `2019-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-06-13T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-06-14T09:16:00+05:30 within 30m
@@ -4090,7 +4089,7 @@
 - `2019-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-06-18T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-06-19T09:16:00+05:30 within 30m
 - `2019-06-19`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-06-19T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-06-20T09:16:00+05:30 within 30m
 - `2019-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-06-20T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-06-21T09:16:00+05:30 within 30m
-- `2019-06-21`: `missing_option_file`. Missing option file: NIFTY_11450_CE_02_JAN_20.csv
+- `2019-06-21`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-06-21T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-06-24T09:16:00+05:30 within 30m
 - `2019-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_02_JAN_20.csv no entry bar near 2019-06-24T15:29:00+05:30 within 30m; NIFTY_11400_CE_02_JAN_20.csv no exit bar near 2019-06-25T09:16:00+05:30 within 30m
 - `2019-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-06-25T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-06-26T09:16:00+05:30 within 30m
 - `2019-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-06-26T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-06-27T09:16:00+05:30 within 30m
@@ -4098,7 +4097,7 @@
 - `2019-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-06-28T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-07-01T09:16:00+05:30 within 30m
 - `2019-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-07-01T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-07-02T09:16:00+05:30 within 30m
 - `2019-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-07-02T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-07-03T09:16:00+05:30 within 30m
-- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
+- `2019-07-03`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-07-03T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-07-04T09:16:00+05:30 within 30m
 - `2019-07-04`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-07-05`: `missing_entry_or_exit_timestamp`. NIFTY_11500_CE_02_JAN_20.csv no entry bar near 2019-07-05T15:29:00+05:30 within 30m; NIFTY_11500_CE_02_JAN_20.csv no exit bar near 2019-07-08T09:16:00+05:30 within 30m
 - `2019-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_11250_CE_02_JAN_20.csv no entry bar near 2019-07-08T15:29:00+05:30 within 30m; NIFTY_11250_CE_02_JAN_20.csv no exit bar near 2019-07-09T09:16:00+05:30 within 30m
@@ -4110,54 +4109,54 @@
 - `2019-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_02_JAN_20.csv no entry bar near 2019-07-16T15:29:00+05:30 within 30m; NIFTY_11950_PE_02_JAN_20.csv no exit bar near 2019-07-17T09:16:00+05:30 within 30m
 - `2019-07-17`: `missing_entry_or_exit_timestamp`. NIFTY_12000_PE_02_JAN_20.csv no entry bar near 2019-07-17T15:29:00+05:30 within 30m; NIFTY_12000_PE_02_JAN_20.csv no exit bar near 2019-07-18T09:16:00+05:30 within 30m
 - `2019-07-18`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-07-18T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-07-19T09:16:00+05:30 within 30m
-- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
-- `2019-07-22`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
+- `2019-07-19`: `missing_entry_or_exit_timestamp`. NIFTY_11100_CE_02_JAN_20.csv no entry bar near 2019-07-19T15:29:00+05:30 within 30m; NIFTY_11100_CE_02_JAN_20.csv no exit bar near 2019-07-22T09:16:00+05:30 within 30m
+- `2019-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_11650_PE_02_JAN_20.csv no entry bar near 2019-07-22T15:29:00+05:30 within 30m; NIFTY_11650_PE_02_JAN_20.csv no exit bar near 2019-07-23T09:16:00+05:30 within 30m
 - `2019-07-23`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-07-24`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_02_JAN_20.csv no entry bar near 2019-07-24T15:29:00+05:30 within 30m; NIFTY_11550_PE_02_JAN_20.csv no exit bar near 2019-07-25T09:16:00+05:30 within 30m
 - `2019-07-25`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-07-26`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-07-26T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-07-29T09:16:00+05:30 within 30m
 - `2019-07-29`: `missing_option_file`. Missing option file: NIFTY_10900_CE_02_JAN_20.csv
 - `2019-07-30`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
-- `2019-07-31`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-07-31T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-08-01T09:16:00+05:30 within 30m
+- `2019-07-31`: `missing_option_file`. Missing option file: NIFTY_11450_PE_02_JAN_20.csv
 - `2019-08-01`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-08-01T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-08-02T09:16:00+05:30 within 30m
 - `2019-08-02`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-08-02T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-08-05T09:16:00+05:30 within 30m
 - `2019-08-05`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
-- `2019-08-06`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
+- `2019-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-08-06T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-08-07T09:16:00+05:30 within 30m
 - `2019-08-07`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
-- `2019-08-08`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-08-08T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-08-09T09:16:00+05:30 within 30m
+- `2019-08-08`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-08-08T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-08-09T09:16:00+05:30 within 30m
 - `2019-08-09`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
-- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
-- `2019-08-14`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
+- `2019-08-13`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
+- `2019-08-14`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-08-14T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-08-16T09:16:00+05:30 within 30m
 - `2019-08-16`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-08-16T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-08-19T09:16:00+05:30 within 30m
 - `2019-08-19`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
-- `2019-08-20`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-08-20T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-08-21T09:16:00+05:30 within 30m
+- `2019-08-20`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
 - `2019-08-21`: `missing_option_file`. Missing option file: NIFTY_10600_CE_02_JAN_20.csv
 - `2019-08-22`: `missing_option_file`. Missing option file: NIFTY_10450_CE_02_JAN_20.csv
 - `2019-08-23`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-08-26T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-08-27T09:16:00+05:30 within 30m
-- `2019-08-27`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-08-27T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-08-28T09:16:00+05:30 within 30m
+- `2019-08-27`: `missing_option_file`. Missing option file: NIFTY_10800_CE_02_JAN_20.csv
 - `2019-08-28`: `missing_option_file`. Missing option file: NIFTY_10750_CE_02_JAN_20.csv
 - `2019-08-29`: `missing_option_file`. Missing option file: NIFTY_10650_CE_02_JAN_20.csv
-- `2019-08-30`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-08-30T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-09-03T09:16:00+05:30 within 30m
+- `2019-08-30`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-08-30T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-09-03T09:16:00+05:30 within 30m
 - `2019-09-03`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
 - `2019-09-04`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
 - `2019-09-05`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
 - `2019-09-06`: `missing_entry_or_exit_timestamp`. NIFTY_11250_PE_02_JAN_20.csv no entry bar near 2019-09-06T15:29:00+05:30 within 30m; NIFTY_11250_PE_02_JAN_20.csv no exit bar near 2019-09-09T09:16:00+05:30 within 30m
 - `2019-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_11300_PE_02_JAN_20.csv no entry bar near 2019-09-09T15:29:00+05:30 within 30m; NIFTY_11300_PE_02_JAN_20.csv no exit bar near 2019-09-11T09:16:00+05:30 within 30m
-- `2019-09-11`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
+- `2019-09-11`: `missing_entry_or_exit_timestamp`. NIFTY_11350_PE_02_JAN_20.csv no entry bar near 2019-09-11T15:29:00+05:30 within 30m; NIFTY_11350_PE_02_JAN_20.csv no exit bar near 2019-09-12T09:16:00+05:30 within 30m
 - `2019-09-12`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
 - `2019-09-13`: `missing_entry_or_exit_timestamp`. NIFTY_11400_PE_02_JAN_20.csv no entry bar near 2019-09-13T15:29:00+05:30 within 30m; NIFTY_11400_PE_02_JAN_20.csv no exit bar near 2019-09-16T09:16:00+05:30 within 30m
 - `2019-09-16`: `missing_option_file`. Missing option file: NIFTY_10700_CE_02_JAN_20.csv
-- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
-- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_11150_PE_02_JAN_20.csv
+- `2019-09-17`: `missing_option_file`. Missing option file: NIFTY_10500_CE_02_JAN_20.csv
+- `2019-09-18`: `missing_option_file`. Missing option file: NIFTY_10550_CE_02_JAN_20.csv
 - `2019-09-19`: `missing_option_file`. Missing option file: NIFTY_10400_CE_02_JAN_20.csv
 - `2019-09-20`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-09-20T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-09-23T09:16:00+05:30 within 30m
-- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
-- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
+- `2019-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-09-23T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-09-24T09:16:00+05:30 within 30m
+- `2019-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-09-24T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-09-25T09:16:00+05:30 within 30m
 - `2019-09-25`: `missing_entry_or_exit_timestamp`. NIFTY_11150_CE_02_JAN_20.csv no entry bar near 2019-09-25T15:29:00+05:30 within 30m; NIFTY_11150_CE_02_JAN_20.csv no exit bar near 2019-09-26T09:16:00+05:30 within 30m
-- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
+- `2019-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_11850_PE_02_JAN_20.csv no entry bar near 2019-09-26T15:29:00+05:30 within 30m; NIFTY_11850_PE_02_JAN_20.csv no exit bar near 2019-09-27T09:16:00+05:30 within 30m
 - `2019-09-27`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_02_JAN_20.csv no entry bar near 2019-09-27T15:29:00+05:30 within 30m; NIFTY_11200_CE_02_JAN_20.csv no exit bar near 2019-09-30T09:16:00+05:30 within 30m
-- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11800_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11800_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
+- `2019-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-09-30T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-10-01T09:16:00+05:30 within 30m
 - `2019-10-01`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
 - `2019-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-10-03T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-10-04T09:16:00+05:30 within 30m
 - `2019-10-04`: `missing_option_file`. Missing option file: NIFTY_10850_CE_02_JAN_20.csv
@@ -4165,7 +4164,7 @@
 - `2019-10-09`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-10-09T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-10-10T09:16:00+05:30 within 30m
 - `2019-10-10`: `missing_option_file`. Missing option file: NIFTY_10950_CE_02_JAN_20.csv
 - `2019-10-11`: `missing_entry_or_exit_timestamp`. NIFTY_11600_PE_02_JAN_20.csv no entry bar near 2019-10-11T15:29:00+05:30 within 30m; NIFTY_11600_PE_02_JAN_20.csv no exit bar near 2019-10-14T09:16:00+05:30 within 30m
-- `2019-10-14`: `missing_option_file`. Missing option file: NIFTY_11050_CE_02_JAN_20.csv
+- `2019-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_02_JAN_20.csv no entry bar near 2019-10-14T15:29:00+05:30 within 30m; NIFTY_11000_CE_02_JAN_20.csv no exit bar near 2019-10-15T09:16:00+05:30 within 30m
 - `2019-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-10-15T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-10-16T09:16:00+05:30 within 30m
 - `2019-10-16`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_02_JAN_20.csv no entry bar near 2019-10-16T15:29:00+05:30 within 30m; NIFTY_11750_PE_02_JAN_20.csv no exit bar near 2019-10-17T09:16:00+05:30 within 30m
 - `2019-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-10-17T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-10-18T09:16:00+05:30 within 30m
@@ -4174,12 +4173,12 @@
 - `2019-10-23`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-10-23T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-10-24T09:16:00+05:30 within 30m
 - `2019-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_11300_CE_02_JAN_20.csv no entry bar near 2019-10-24T15:29:00+05:30 within 30m; NIFTY_11300_CE_02_JAN_20.csv no exit bar near 2019-10-25T09:16:00+05:30 within 30m
 - `2019-10-25`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_02_JAN_20.csv no entry bar near 2019-10-25T15:29:00+05:30 within 30m; NIFTY_11900_PE_02_JAN_20.csv no exit bar near 2019-10-27T09:16:00+05:30 within 30m
-- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:15:00+05:30; no fallback within 30m
+- `2019-10-27`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2019-10-27T15:00:00+05:30; no fallback within 30m
 - `2019-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_12100_PE_02_JAN_20.csv no entry bar near 2019-10-29T15:29:00+05:30 within 30m; NIFTY_12100_PE_02_JAN_20.csv no exit bar near 2019-10-30T09:16:00+05:30 within 30m
 - `2019-10-30`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-10-30T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-10-31T09:16:00+05:30 within 30m
 - `2019-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-10-31T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-11-01T09:16:00+05:30 within 30m
 - `2019-11-01`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-11-01T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-11-04T09:16:00+05:30 within 30m
-- `2019-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-11-04T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-11-05T09:16:00+05:30 within 30m
+- `2019-11-04`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-11-05T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-11-06T09:16:00+05:30 within 30m
 - `2019-11-06`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-11-06T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-11-07T09:16:00+05:30 within 30m
 - `2019-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_02_JAN_20.csv no entry bar near 2019-11-07T15:29:00+05:30 within 30m; NIFTY_12300_PE_02_JAN_20.csv no exit bar near 2019-11-08T09:16:00+05:30 within 30m
@@ -4188,11 +4187,11 @@
 - `2019-11-13`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
 - `2019-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_12150_PE_02_JAN_20.csv no entry bar near 2019-11-14T15:29:00+05:30 within 30m; NIFTY_12150_PE_02_JAN_20.csv no exit bar near 2019-11-15T09:16:00+05:30 within 30m
 - `2019-11-15`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-11-15T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-11-18T09:16:00+05:30 within 30m
-- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
+- `2019-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-11-18T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-11-19T09:16:00+05:30 within 30m
 - `2019-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_12250_PE_02_JAN_20.csv no entry bar near 2019-11-19T15:29:00+05:30 within 30m; NIFTY_12250_PE_02_JAN_20.csv no exit bar near 2019-11-20T09:16:00+05:30 within 30m
 - `2019-11-20`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-11-20T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-11-21T09:16:00+05:30 within 30m
 - `2019-11-21`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
-- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_12200_PE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
+- `2019-11-22`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-11-22T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-11-25T09:16:00+05:30 within 30m
 - `2019-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_02_JAN_20.csv no entry bar near 2019-11-25T15:29:00+05:30 within 30m; NIFTY_12400_PE_02_JAN_20.csv no exit bar near 2019-11-26T09:16:00+05:30 within 30m
 - `2019-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-11-26T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-11-27T09:16:00+05:30 within 30m
 - `2019-11-27`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_02_JAN_20.csv no entry bar near 2019-11-27T15:29:00+05:30 within 30m; NIFTY_12400_PE_02_JAN_20.csv no exit bar near 2019-11-28T09:16:00+05:30 within 30m
@@ -4201,7 +4200,7 @@
 - `2019-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-12-02T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-12-03T09:16:00+05:30 within 30m
 - `2019-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_12300_PE_02_JAN_20.csv no entry bar near 2019-12-03T15:29:00+05:30 within 30m; NIFTY_12300_PE_02_JAN_20.csv no exit bar near 2019-12-04T09:16:00+05:30 within 30m
 - `2019-12-04`: `missing_entry_or_exit_timestamp`. NIFTY_12350_PE_02_JAN_20.csv no entry bar near 2019-12-04T15:29:00+05:30 within 30m; NIFTY_12350_PE_02_JAN_20.csv no exit bar near 2019-12-05T09:16:00+05:30 within 30m
-- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_11700_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
+- `2019-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-12-05T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-12-06T09:16:00+05:30 within 30m
 - `2019-12-06`: `missing_entry_or_exit_timestamp`. NIFTY_11600_CE_02_JAN_20.csv no entry bar near 2019-12-06T15:29:00+05:30 within 30m; NIFTY_11600_CE_02_JAN_20.csv no exit bar near 2019-12-09T09:16:00+05:30 within 30m
 - `2019-12-09`: `missing_option_file`. Missing option file: NIFTY_11650_CE_02_JAN_20.csv
 - `2019-12-10`: `missing_option_file`. Missing option file: NIFTY_11550_CE_02_JAN_20.csv
@@ -4210,7 +4209,7 @@
 - `2019-12-13`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_02_JAN_20.csv no entry bar near 2019-12-13T15:29:00+05:30 within 30m; NIFTY_12400_PE_02_JAN_20.csv no exit bar near 2019-12-16T09:16:00+05:30 within 30m
 - `2019-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_02_JAN_20.csv no entry bar near 2019-12-16T15:29:00+05:30 within 30m; NIFTY_11750_CE_02_JAN_20.csv no exit bar near 2019-12-17T09:16:00+05:30 within 30m
 - `2019-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_02_JAN_20.csv no entry bar near 2019-12-17T15:29:00+05:30 within 30m; NIFTY_12450_PE_02_JAN_20.csv no exit bar near 2019-12-18T09:16:00+05:30 within 30m
-- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12550_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12550_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
+- `2019-12-18`: `missing_entry_or_exit_timestamp`. NIFTY_12500_PE_02_JAN_20.csv no entry bar near 2019-12-18T15:29:00+05:30 within 30m; NIFTY_12500_PE_02_JAN_20.csv no exit bar near 2019-12-19T09:16:00+05:30 within 30m
 - `2019-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_12550_PE_02_JAN_20.csv no entry bar near 2019-12-19T15:29:00+05:30 within 30m; NIFTY_12550_PE_02_JAN_20.csv no exit bar near 2019-12-20T09:16:00+05:30 within 30m
 - `2019-12-20`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_02_JAN_20.csv no entry bar near 2019-12-20T15:29:00+05:30 within 30m; NIFTY_11950_CE_02_JAN_20.csv no exit bar near 2019-12-23T09:16:00+05:30 within 30m
 - `2019-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_12550_PE_02_JAN_20.csv no entry bar near 2019-12-23T15:29:00+05:30 within 30m; NIFTY_12550_PE_02_JAN_20.csv no exit bar near 2019-12-24T09:16:00+05:30 within 30m
@@ -4218,33 +4217,33 @@
 - `2019-12-26`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-12-26T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2019-12-27T09:16:00+05:30 within 30m
 - `2019-12-27`: `missing_entry_or_exit_timestamp`. NIFTY_12550_PE_02_JAN_20.csv no entry bar near 2019-12-27T15:29:00+05:30 within 30m; NIFTY_12550_PE_02_JAN_20.csv no exit bar near 2019-12-30T09:16:00+05:30 within 30m
 - `2019-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_12550_PE_02_JAN_20.csv no entry bar near 2019-12-30T15:29:00+05:30 within 30m; NIFTY_12550_PE_02_JAN_20.csv no exit bar near 2019-12-31T09:16:00+05:30 within 30m
-- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_11900_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m
+- `2019-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_02_JAN_20.csv no entry bar near 2019-12-31T15:29:00+05:30 within 30m; NIFTY_11850_CE_02_JAN_20.csv no exit bar near 2020-01-01T09:16:00+05:30 within 30m
 - `2020-01-02`: `missing_entry_or_exit_timestamp`. NIFTY_12600_PE_09_JAN_20.csv no entry bar near 2020-01-02T15:29:00+05:30 within 30m; NIFTY_12600_PE_09_JAN_20.csv no exit bar near 2020-01-03T09:16:00+05:30 within 30m
 - `2020-01-09`: `missing_entry_or_exit_timestamp`. NIFTY_12500_PE_16_JAN_20.csv no entry bar near 2020-01-09T15:29:00+05:30 within 30m
 - `2020-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_12650_PE_16_JAN_20.csv no entry bar near 2020-01-13T15:29:00+05:30 within 30m; NIFTY_12650_PE_16_JAN_20.csv no exit bar near 2020-01-14T09:16:00+05:30 within 30m
 - `2020-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_12650_PE_16_JAN_20.csv no entry bar near 2020-01-14T15:29:00+05:30 within 30m; NIFTY_12650_PE_16_JAN_20.csv no exit bar near 2020-01-15T09:16:00+05:30 within 30m
 - `2020-01-15`: `missing_entry_or_exit_timestamp`. NIFTY_12650_PE_16_JAN_20.csv no entry bar near 2020-01-15T15:29:00+05:30 within 30m; NIFTY_12650_PE_16_JAN_20.csv no exit bar near 2020-01-16T09:16:00+05:30 within 30m
 - `2020-01-16`: `missing_entry_or_exit_timestamp`. NIFTY_12650_PE_23_JAN_20.csv no entry bar near 2020-01-16T15:29:00+05:30 within 30m; NIFTY_12650_PE_23_JAN_20.csv no exit bar near 2020-01-17T09:16:00+05:30 within 30m
-- `2020-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_11950_CE_23_JAN_20.csv no entry bar near 2020-01-20T15:29:00+05:30 within 30m
 - `2020-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_11850_CE_23_JAN_20.csv no exit bar near 2020-01-22T09:16:00+05:30 within 30m
 - `2020-01-23`: `missing_entry_or_exit_timestamp`. NIFTY_12500_PE_30_JAN_20.csv no entry bar near 2020-01-23T15:29:00+05:30 within 30m
 - `2020-01-24`: `missing_entry_or_exit_timestamp`. NIFTY_12550_PE_30_JAN_20.csv no exit bar near 2020-01-27T09:16:00+05:30 within 30m
-- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_11700_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m
+- `2020-01-30`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_06_FEB_20.csv no entry bar near 2020-01-30T15:29:00+05:30 within 30m; NIFTY_11750_CE_06_FEB_20.csv no exit bar near 2020-01-31T09:16:00+05:30 within 30m
 - `2020-01-31`: `missing_entry_or_exit_timestamp`. NIFTY_11650_CE_06_FEB_20.csv no entry bar near 2020-01-31T15:29:00+05:30 within 30m
 - `2020-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_11350_CE_06_FEB_20.csv no entry bar near 2020-02-01T15:29:00+05:30 within 30m
 - `2020-02-06`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_13_FEB_20.csv no entry bar near 2020-02-06T15:29:00+05:30 within 30m; NIFTY_12450_PE_13_FEB_20.csv no exit bar near 2020-02-07T09:16:00+05:30 within 30m
 - `2020-02-13`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_20_FEB_20.csv no entry bar near 2020-02-13T15:29:00+05:30 within 30m
 - `2020-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_11750_CE_20_FEB_20.csv no entry bar near 2020-02-17T15:29:00+05:30 within 30m; NIFTY_11750_CE_20_FEB_20.csv no exit bar near 2020-02-18T09:16:00+05:30 within 30m
-- `2020-02-19`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_20_FEB_20.csv no entry bar near 2020-02-19T15:29:00+05:30 within 30m; NIFTY_12450_PE_20_FEB_20.csv no exit bar near 2020-02-20T09:16:00+05:30 within 30m
 - `2020-02-20`: `missing_entry_or_exit_timestamp`. NIFTY_11800_CE_27_FEB_20.csv no entry bar near 2020-02-20T15:29:00+05:30 within 30m
-- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11900_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-02-27`: `missing_entry_or_exit_timestamp`. NIFTY_11950_PE_05_MAR_20.csv no entry bar near 2020-02-27T15:29:00+05:30 within 30m
+- `2020-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_10750_CE_05_MAR_20.csv no entry bar near 2020-03-02T15:29:00+05:30 within 30m; NIFTY_10750_CE_05_MAR_20.csv no exit bar near 2020-03-03T09:16:00+05:30 within 30m
 - `2020-03-05`: `missing_entry_or_exit_timestamp`. NIFTY_10950_CE_12_MAR_20.csv no entry bar near 2020-03-05T15:29:00+05:30 within 30m
 - `2020-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_10150_CE_12_MAR_20.csv no entry bar near 2020-03-09T15:29:00+05:30 within 30m
-- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9350_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m; NIFTY_9350_CE_19_MAR_20.csv no exit bar near 2020-03-13T09:16:00+05:30 within 30m
+- `2020-03-12`: `missing_entry_or_exit_timestamp`. NIFTY_9250_CE_19_MAR_20.csv no entry bar near 2020-03-12T15:29:00+05:30 within 30m
+- `2020-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_8850_CE_19_MAR_20.csv no entry bar near 2020-03-16T15:29:00+05:30 within 30m
 - `2020-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_8650_CE_19_MAR_20.csv no exit bar near 2020-03-18T09:16:00+05:30 within 30m
 - `2020-03-19`: `missing_entry_or_exit_timestamp`. NIFTY_8550_PE_26_MAR_20.csv no entry bar near 2020-03-19T15:29:00+05:30 within 30m
 - `2020-03-20`: `missing_entry_or_exit_timestamp`. NIFTY_9050_PE_26_MAR_20.csv no entry bar near 2020-03-20T15:29:00+05:30 within 30m; NIFTY_9050_PE_26_MAR_20.csv no exit bar near 2020-03-23T09:16:00+05:30 within 30m
-- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8950_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
+- `2020-03-26`: `missing_entry_or_exit_timestamp`. NIFTY_8900_PE_01_APR_20.csv no entry bar near 2020-03-26T15:29:00+05:30 within 30m
 - `2020-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_7950_CE_09_APR_20.csv no entry bar near 2020-04-01T15:29:00+05:30 within 30m
 - `2020-04-09`: `missing_entry_or_exit_timestamp`. NIFTY_9400_PE_16_APR_20.csv no entry bar near 2020-04-09T15:29:00+05:30 within 30m
 - `2020-04-16`: `missing_entry_or_exit_timestamp`. NIFTY_9300_PE_23_APR_20.csv no entry bar near 2020-04-16T15:29:00+05:30 within 30m
@@ -4259,10 +4258,11 @@
 - `2020-06-11`: `missing_entry_or_exit_timestamp`. NIFTY_9600_CE_18_JUN_20.csv no entry bar near 2020-06-11T15:29:00+05:30 within 30m
 - `2020-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_10400_PE_25_JUN_20.csv no entry bar near 2020-06-18T15:29:00+05:30 within 30m
 - `2020-06-25`: `missing_entry_or_exit_timestamp`. NIFTY_10000_CE_02_JUL_20.csv no entry bar near 2020-06-25T15:29:00+05:30 within 30m
+- `2020-06-29`: `missing_entry_or_exit_timestamp`. NIFTY_10650_PE_02_JUL_20.csv no entry bar near 2020-06-29T15:29:00+05:30 within 30m
 - `2020-07-02`: `missing_entry_or_exit_timestamp`. NIFTY_10850_PE_09_JUL_20.csv no entry bar near 2020-07-02T15:29:00+05:30 within 30m
-- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_11150_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
+- `2020-07-09`: `missing_entry_or_exit_timestamp`. NIFTY_11100_PE_16_JUL_20.csv no entry bar near 2020-07-09T15:29:00+05:30 within 30m
 - `2020-07-16`: `missing_entry_or_exit_timestamp`. NIFTY_11050_PE_23_JUL_20.csv no entry bar near 2020-07-16T15:29:00+05:30 within 30m
-- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11550_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
+- `2020-07-23`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_30_JUL_20.csv no entry bar near 2020-07-23T15:29:00+05:30 within 30m
 - `2020-07-30`: `missing_entry_or_exit_timestamp`. NIFTY_10800_CE_06_AUG_20.csv no entry bar near 2020-07-30T15:29:00+05:30 within 30m
 - `2020-08-06`: `missing_entry_or_exit_timestamp`. NIFTY_11500_PE_13_AUG_20.csv no entry bar near 2020-08-06T15:29:00+05:30 within 30m
 - `2020-08-13`: `missing_entry_or_exit_timestamp`. NIFTY_11000_CE_20_AUG_20.csv no entry bar near 2020-08-13T15:29:00+05:30 within 30m
@@ -4272,41 +4272,40 @@
 - `2020-09-10`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_17_SEP_20.csv no entry bar near 2020-09-10T15:29:00+05:30 within 30m
 - `2020-09-17`: `missing_entry_or_exit_timestamp`. NIFTY_11200_CE_24_SEP_20.csv no entry bar near 2020-09-17T15:29:00+05:30 within 30m
 - `2020-09-24`: `missing_entry_or_exit_timestamp`. NIFTY_10500_CE_01_OCT_20.csv no entry bar near 2020-09-24T15:29:00+05:30 within 30m
-- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11700_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
+- `2020-10-01`: `missing_entry_or_exit_timestamp`. NIFTY_11750_PE_08_OCT_20.csv no entry bar near 2020-10-01T15:29:00+05:30 within 30m
 - `2020-10-08`: `missing_entry_or_exit_timestamp`. NIFTY_11550_CE_15_OCT_20.csv no entry bar near 2020-10-08T15:29:00+05:30 within 30m
 - `2020-10-15`: `missing_entry_or_exit_timestamp`. NIFTY_11350_CE_22_OCT_20.csv no entry bar near 2020-10-15T15:29:00+05:30 within 30m
 - `2020-10-22`: `missing_entry_or_exit_timestamp`. NIFTY_12200_PE_29_OCT_20.csv no entry bar near 2020-10-22T15:29:00+05:30 within 30m
-- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11350_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
-- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12450_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
+- `2020-10-29`: `missing_entry_or_exit_timestamp`. NIFTY_11400_CE_05_NOV_20.csv no entry bar near 2020-10-29T15:29:00+05:30 within 30m
+- `2020-11-05`: `missing_entry_or_exit_timestamp`. NIFTY_12400_PE_12_NOV_20.csv no entry bar near 2020-11-05T15:29:00+05:30 within 30m
 - `2020-11-12`: `missing_entry_or_exit_timestamp`. NIFTY_13000_PE_19_NOV_20.csv no entry bar near 2020-11-12T15:29:00+05:30 within 30m
 - `2020-11-13`: `missing_entry_or_exit_timestamp`. NIFTY_13000_PE_19_NOV_20.csv no exit bar near 2020-11-14T09:16:00+05:30 within 30m
-- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:15:00+05:30; no fallback within 30m
+- `2020-11-14`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2020-11-14T15:00:00+05:30; no fallback within 30m
 - `2020-11-19`: `missing_entry_or_exit_timestamp`. NIFTY_12450_CE_26_NOV_20.csv no entry bar near 2020-11-19T15:29:00+05:30 within 30m
 - `2020-11-26`: `missing_entry_or_exit_timestamp`. NIFTY_13300_PE_03_DEC_20.csv no entry bar near 2020-11-26T15:29:00+05:30 within 30m
 - `2020-12-03`: `missing_entry_or_exit_timestamp`. NIFTY_12850_CE_10_DEC_20.csv no entry bar near 2020-12-03T15:29:00+05:30 within 30m
-- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13800_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
+- `2020-12-10`: `missing_entry_or_exit_timestamp`. NIFTY_13750_PE_17_DEC_20.csv no entry bar near 2020-12-10T15:29:00+05:30 within 30m
 - `2020-12-17`: `missing_entry_or_exit_timestamp`. NIFTY_14050_PE_24_DEC_20.csv no entry bar near 2020-12-17T15:29:00+05:30 within 30m
 - `2020-12-24`: `missing_entry_or_exit_timestamp`. NIFTY_14050_PE_31_DEC_20.csv no entry bar near 2020-12-24T15:29:00+05:30 within 30m
-- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_13650_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
+- `2020-12-31`: `missing_entry_or_exit_timestamp`. NIFTY_13700_CE_07_JAN_21.csv no entry bar near 2020-12-31T15:29:00+05:30 within 30m
 - `2021-01-07`: `missing_entry_or_exit_timestamp`. NIFTY_13850_CE_14_JAN_21.csv no entry bar near 2021-01-07T15:29:00+05:30 within 30m
 - `2021-01-14`: `missing_entry_or_exit_timestamp`. NIFTY_14900_PE_21_JAN_21.csv no entry bar near 2021-01-14T15:29:00+05:30 within 30m
-- `2021-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_13950_CE_21_JAN_21.csv no exit bar near 2021-01-19T09:16:00+05:30 within 30m
-- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14350_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
-- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_14100_PE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
+- `2021-01-21`: `missing_entry_or_exit_timestamp`. NIFTY_14300_CE_28_JAN_21.csv no entry bar near 2021-01-21T15:29:00+05:30 within 30m
+- `2021-01-28`: `missing_entry_or_exit_timestamp`. NIFTY_13500_CE_04_FEB_21.csv no entry bar near 2021-01-28T15:29:00+05:30 within 30m
 - `2021-02-04`: `missing_entry_or_exit_timestamp`. NIFTY_15200_PE_11_FEB_21.csv no entry bar near 2021-02-04T15:29:00+05:30 within 30m
-- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15500_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
+- `2021-02-11`: `missing_entry_or_exit_timestamp`. NIFTY_15450_PE_18_FEB_21.csv no entry bar near 2021-02-11T15:29:00+05:30 within 30m
 - `2021-02-18`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_25_FEB_21.csv no entry bar near 2021-02-18T15:29:00+05:30 within 30m
 - `2021-02-25`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_04_MAR_21.csv no entry bar near 2021-02-25T15:29:00+05:30 within 30m
 - `2021-03-04`: `missing_entry_or_exit_timestamp`. NIFTY_14800_CE_10_MAR_21.csv no entry bar near 2021-03-04T15:29:00+05:30 within 30m
-- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15450_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
+- `2021-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_15500_PE_18_MAR_21.csv no entry bar near 2021-03-10T15:29:00+05:30 within 30m
 - `2021-03-18`: `missing_entry_or_exit_timestamp`. NIFTY_14300_CE_25_MAR_21.csv no entry bar near 2021-03-18T15:29:00+05:30 within 30m
-- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14050_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
-- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_15150_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
-- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_14600_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
+- `2021-03-25`: `missing_entry_or_exit_timestamp`. NIFTY_14000_CE_01_APR_21.csv no entry bar near 2021-03-25T15:29:00+05:30 within 30m
+- `2021-04-01`: `missing_entry_or_exit_timestamp`. NIFTY_15200_PE_08_APR_21.csv no entry bar near 2021-04-01T15:29:00+05:30 within 30m
+- `2021-04-08`: `missing_entry_or_exit_timestamp`. NIFTY_14550_CE_15_APR_21.csv no entry bar near 2021-04-08T15:29:00+05:30 within 30m
 - `2021-04-15`: `missing_entry_or_exit_timestamp`. NIFTY_14900_PE_22_APR_21.csv no entry bar near 2021-04-15T15:29:00+05:30 within 30m
 - `2021-04-22`: `missing_entry_or_exit_timestamp`. NIFTY_14700_PE_29_APR_21.csv no entry bar near 2021-04-22T15:29:00+05:30 within 30m
 - `2021-04-29`: `missing_entry_or_exit_timestamp`. NIFTY_14600_CE_06_MAY_21.csv no entry bar near 2021-04-29T15:29:00+05:30 within 30m
-- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_15050_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
+- `2021-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_15000_PE_12_MAY_21.csv no entry bar near 2021-05-06T15:29:00+05:30 within 30m
 - `2021-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_14400_CE_20_MAY_21.csv no entry bar near 2021-05-12T15:29:00+05:30 within 30m
 - `2021-05-20`: `missing_entry_or_exit_timestamp`. NIFTY_14600_CE_27_MAY_21.csv no entry bar near 2021-05-20T15:29:00+05:30 within 30m
 - `2021-05-27`: `missing_entry_or_exit_timestamp`. NIFTY_15650_PE_03_JUN_21.csv no entry bar near 2021-05-27T15:29:00+05:30 within 30m
@@ -4316,85 +4315,85 @@
 - `2021-06-24`: `missing_entry_or_exit_timestamp`. NIFTY_16100_PE_01_JUL_21.csv no entry bar near 2021-06-24T15:29:00+05:30 within 30m
 - `2021-07-01`: `missing_entry_or_exit_timestamp`. NIFTY_15400_CE_08_JUL_21.csv no entry bar near 2021-07-01T15:29:00+05:30 within 30m
 - `2021-07-08`: `missing_entry_or_exit_timestamp`. NIFTY_15450_CE_15_JUL_21.csv no entry bar near 2021-07-08T15:29:00+05:30 within 30m
-- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_15600_CE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
-- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_16150_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
+- `2021-07-15`: `missing_entry_or_exit_timestamp`. NIFTY_16200_PE_22_JUL_21.csv no entry bar near 2021-07-15T15:29:00+05:30 within 30m
+- `2021-07-22`: `missing_entry_or_exit_timestamp`. NIFTY_16100_PE_29_JUL_21.csv no entry bar near 2021-07-22T15:29:00+05:30 within 30m
 - `2021-07-29`: `missing_entry_or_exit_timestamp`. NIFTY_15500_CE_05_AUG_21.csv no entry bar near 2021-07-29T15:29:00+05:30 within 30m
 - `2021-08-05`: `missing_entry_or_exit_timestamp`. NIFTY_16600_PE_12_AUG_21.csv no entry bar near 2021-08-05T15:29:00+05:30 within 30m
 - `2021-08-12`: `missing_entry_or_exit_timestamp`. NIFTY_16650_PE_18_AUG_21.csv no entry bar near 2021-08-12T15:29:00+05:30 within 30m
-- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16250_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
+- `2021-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_26_AUG_21.csv no entry bar near 2021-08-18T15:29:00+05:30 within 30m
 - `2021-08-26`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_02_SEP_21.csv no entry bar near 2021-08-26T15:29:00+05:30 within 30m
 - `2021-09-02`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_09_SEP_21.csv no entry bar near 2021-09-02T15:29:00+05:30 within 30m
 - `2021-09-09`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_16_SEP_21.csv no entry bar near 2021-09-09T15:29:00+05:30 within 30m
 - `2021-09-16`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_23_SEP_21.csv no entry bar near 2021-09-16T15:29:00+05:30 within 30m
 - `2021-09-23`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_30_SEP_21.csv no entry bar near 2021-09-23T15:29:00+05:30 within 30m
-- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
+- `2021-09-30`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_07_OCT_21.csv no entry bar near 2021-09-30T15:29:00+05:30 within 30m
 - `2021-10-07`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_14_OCT_21.csv no entry bar near 2021-10-07T15:29:00+05:30 within 30m
 - `2021-10-14`: `missing_entry_or_exit_timestamp`. NIFTY_18650_PE_21_OCT_21.csv no entry bar near 2021-10-14T15:29:00+05:30 within 30m
-- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_18500_PE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
+- `2021-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_28_OCT_21.csv no entry bar near 2021-10-21T15:29:00+05:30 within 30m
 - `2021-10-28`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_03_NOV_21.csv no entry bar near 2021-10-28T15:29:00+05:30 within 30m
-- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_17550_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
+- `2021-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_11_NOV_21.csv no entry bar near 2021-11-03T15:29:00+05:30 within 30m; NIFTY_17500_CE_11_NOV_21.csv no exit bar near 2021-11-04T09:16:00+05:30 within 30m
 - `2021-11-04`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_11_NOV_21.csv no entry bar near 2021-11-04T15:29:00+05:30 within 30m
-- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_18200_PE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
+- `2021-11-11`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_18_NOV_21.csv no entry bar near 2021-11-11T15:29:00+05:30 within 30m
 - `2021-11-18`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_25_NOV_21.csv no entry bar near 2021-11-18T15:29:00+05:30 within 30m
 - `2021-11-25`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_02_DEC_21.csv no entry bar near 2021-11-25T15:29:00+05:30 within 30m
 - `2021-12-02`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_09_DEC_21.csv no entry bar near 2021-12-02T15:29:00+05:30 within 30m
 - `2021-12-09`: `missing_entry_or_exit_timestamp`. NIFTY_17800_PE_16_DEC_21.csv no entry bar near 2021-12-09T15:29:00+05:30 within 30m
-- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
-- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
-- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
+- `2021-12-16`: `missing_entry_or_exit_timestamp`. NIFTY_16950_CE_23_DEC_21.csv no entry bar near 2021-12-16T15:29:00+05:30 within 30m
+- `2021-12-23`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_30_DEC_21.csv no entry bar near 2021-12-23T15:29:00+05:30 within 30m
+- `2021-12-30`: `missing_entry_or_exit_timestamp`. NIFTY_16900_CE_06_JAN_22.csv no entry bar near 2021-12-30T15:29:00+05:30 within 30m
 - `2022-01-06`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_13_JAN_22.csv no entry bar near 2022-01-06T15:29:00+05:30 within 30m
 - `2022-01-13`: `missing_entry_or_exit_timestamp`. NIFTY_18550_PE_20_JAN_22.csv no entry bar near 2022-01-13T15:29:00+05:30 within 30m
-- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17500_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
-- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_17450_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
-- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17200_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
+- `2022-01-20`: `missing_entry_or_exit_timestamp`. NIFTY_17450_CE_27_JAN_22.csv no entry bar near 2022-01-20T15:29:00+05:30 within 30m
+- `2022-01-27`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_03_FEB_22.csv no entry bar near 2022-01-27T15:29:00+05:30 within 30m
+- `2022-02-03`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_10_FEB_22.csv no entry bar near 2022-02-03T15:29:00+05:30 within 30m
 - `2022-02-10`: `missing_entry_or_exit_timestamp`. NIFTY_17900_PE_17_FEB_22.csv no entry bar near 2022-02-10T15:29:00+05:30 within 30m
 - `2022-02-17`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_24_FEB_22.csv no entry bar near 2022-02-17T15:29:00+05:30 within 30m
-- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_15900_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
-- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16200_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
-- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16250_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
-- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17600_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
-- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_16900_CE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
+- `2022-02-24`: `missing_entry_or_exit_timestamp`. NIFTY_15950_CE_03_MAR_22.csv no entry bar near 2022-02-24T15:29:00+05:30 within 30m
+- `2022-03-03`: `missing_entry_or_exit_timestamp`. NIFTY_16250_CE_10_MAR_22.csv no entry bar near 2022-03-03T15:29:00+05:30 within 30m
+- `2022-03-10`: `missing_entry_or_exit_timestamp`. NIFTY_16300_CE_17_MAR_22.csv no entry bar near 2022-03-10T15:29:00+05:30 within 30m
+- `2022-03-17`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_24_MAR_22.csv no entry bar near 2022-03-17T15:29:00+05:30 within 30m
+- `2022-03-24`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_31_MAR_22.csv no entry bar near 2022-03-24T15:29:00+05:30 within 30m
 - `2022-03-31`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_07_APR_22.csv no entry bar near 2022-03-31T15:29:00+05:30 within 30m
 - `2022-04-07`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_13_APR_22.csv no entry bar near 2022-04-07T15:29:00+05:30 within 30m
 - `2022-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_17150_CE_21_APR_22.csv no entry bar near 2022-04-13T15:29:00+05:30 within 30m
 - `2022-04-21`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_28_APR_22.csv no entry bar near 2022-04-21T15:29:00+05:30 within 30m
-- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17550_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
-- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16350_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
-- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15550_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
-- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_15550_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
-- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16500_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
+- `2022-04-28`: `missing_entry_or_exit_timestamp`. NIFTY_17500_PE_05_MAY_22.csv no entry bar near 2022-04-28T15:29:00+05:30 within 30m
+- `2022-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_16400_CE_12_MAY_22.csv no entry bar near 2022-05-05T15:29:00+05:30 within 30m
+- `2022-05-12`: `missing_entry_or_exit_timestamp`. NIFTY_15500_CE_19_MAY_22.csv no entry bar near 2022-05-12T15:29:00+05:30 within 30m
+- `2022-05-19`: `missing_entry_or_exit_timestamp`. NIFTY_15500_CE_26_MAY_22.csv no entry bar near 2022-05-19T15:29:00+05:30 within 30m
+- `2022-05-26`: `missing_entry_or_exit_timestamp`. NIFTY_16450_PE_02_JUN_22.csv no entry bar near 2022-05-26T15:29:00+05:30 within 30m
 - `2022-06-02`: `missing_entry_or_exit_timestamp`. NIFTY_16950_PE_09_JUN_22.csv no entry bar near 2022-06-02T15:29:00+05:30 within 30m
 - `2022-06-09`: `missing_entry_or_exit_timestamp`. NIFTY_16800_PE_16_JUN_22.csv no entry bar near 2022-06-09T15:29:00+05:30 within 30m
 - `2022-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_15050_CE_23_JUN_22.csv no entry bar near 2022-06-16T15:29:00+05:30 within 30m
-- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15900_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
-- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15450_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
+- `2022-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_15850_PE_30_JUN_22.csv no entry bar near 2022-06-23T15:29:00+05:30 within 30m
+- `2022-06-30`: `missing_entry_or_exit_timestamp`. NIFTY_15500_CE_07_JUL_22.csv no entry bar near 2022-06-30T15:29:00+05:30 within 30m
 - `2022-07-07`: `missing_entry_or_exit_timestamp`. NIFTY_16450_PE_14_JUL_22.csv no entry bar near 2022-07-07T15:29:00+05:30 within 30m
 - `2022-07-14`: `missing_entry_or_exit_timestamp`. NIFTY_15650_CE_21_JUL_22.csv no entry bar near 2022-07-14T15:29:00+05:30 within 30m
 - `2022-07-21`: `missing_entry_or_exit_timestamp`. NIFTY_16900_PE_28_JUL_22.csv no entry bar near 2022-07-21T15:29:00+05:30 within 30m
-- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_17200_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
-- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17650_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
+- `2022-07-28`: `missing_entry_or_exit_timestamp`. NIFTY_17250_PE_04_AUG_22.csv no entry bar near 2022-07-28T15:29:00+05:30 within 30m
+- `2022-08-04`: `missing_entry_or_exit_timestamp`. NIFTY_17700_PE_11_AUG_22.csv no entry bar near 2022-08-04T15:29:00+05:30 within 30m
 - `2022-08-11`: `missing_entry_or_exit_timestamp`. NIFTY_17350_CE_18_AUG_22.csv no entry bar near 2022-08-11T15:29:00+05:30 within 30m
 - `2022-08-18`: `missing_entry_or_exit_timestamp`. NIFTY_18250_PE_25_AUG_22.csv no entry bar near 2022-08-18T15:29:00+05:30 within 30m
 - `2022-08-25`: `missing_entry_or_exit_timestamp`. NIFTY_17200_CE_01_SEP_22.csv no entry bar near 2022-08-25T15:29:00+05:30 within 30m
 - `2022-09-01`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_08_SEP_22.csv no entry bar near 2022-09-01T15:29:00+05:30 within 30m
 - `2022-09-08`: `missing_entry_or_exit_timestamp`. NIFTY_18100_PE_15_SEP_22.csv no entry bar near 2022-09-08T15:29:00+05:30 within 30m
-- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_17550_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
-- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
+- `2022-09-15`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_22_SEP_22.csv no entry bar near 2022-09-15T15:29:00+05:30 within 30m
+- `2022-09-22`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_29_SEP_22.csv no entry bar near 2022-09-22T15:29:00+05:30 within 30m
 - `2022-09-29`: `missing_entry_or_exit_timestamp`. NIFTY_16550_CE_06_OCT_22.csv no entry bar near 2022-09-29T15:29:00+05:30 within 30m
-- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
+- `2022-10-06`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_13_OCT_22.csv no entry bar near 2022-10-06T15:29:00+05:30 within 30m
 - `2022-10-13`: `missing_entry_or_exit_timestamp`. NIFTY_16700_CE_20_OCT_22.csv no entry bar near 2022-10-13T15:29:00+05:30 within 30m
 - `2022-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_17850_PE_27_OCT_22.csv no entry bar near 2022-10-20T15:29:00+05:30 within 30m
-- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
-- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:15:00+05:30; no fallback within 30m
+- `2022-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_17250_CE_27_OCT_22.csv no exit bar near 2022-10-24T09:16:00+05:30 within 30m
+- `2022-10-24`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2022-10-24T15:00:00+05:30; no fallback within 30m
 - `2022-10-27`: `missing_entry_or_exit_timestamp`. NIFTY_18050_PE_03_NOV_22.csv no entry bar near 2022-10-27T15:29:00+05:30 within 30m
 - `2022-11-03`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_10_NOV_22.csv no entry bar near 2022-11-03T15:29:00+05:30 within 30m
 - `2022-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_18350_PE_17_NOV_22.csv no entry bar near 2022-11-10T15:29:00+05:30 within 30m
-- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18050_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
+- `2022-11-17`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_24_NOV_22.csv no entry bar near 2022-11-17T15:29:00+05:30 within 30m
 - `2022-11-24`: `missing_entry_or_exit_timestamp`. NIFTY_18800_PE_01_DEC_22.csv no entry bar near 2022-11-24T15:29:00+05:30 within 30m
 - `2022-12-01`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_08_DEC_22.csv no entry bar near 2022-12-01T15:29:00+05:30 within 30m
 - `2022-12-08`: `missing_entry_or_exit_timestamp`. NIFTY_18900_PE_15_DEC_22.csv no entry bar near 2022-12-08T15:29:00+05:30 within 30m
 - `2022-12-15`: `missing_entry_or_exit_timestamp`. NIFTY_18100_CE_22_DEC_22.csv no entry bar near 2022-12-15T15:29:00+05:30 within 30m
-- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_17800_CE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
+- `2022-12-22`: `missing_entry_or_exit_timestamp`. NIFTY_18450_PE_29_DEC_22.csv no entry bar near 2022-12-22T15:29:00+05:30 within 30m
 - `2022-12-29`: `missing_entry_or_exit_timestamp`. NIFTY_18500_PE_05_JAN_23.csv no entry bar near 2022-12-29T15:29:00+05:30 within 30m
 - `2023-01-05`: `missing_entry_or_exit_timestamp`. NIFTY_18300_PE_12_JAN_23.csv no entry bar near 2023-01-05T15:29:00+05:30 within 30m
 - `2023-01-12`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_19_JAN_23.csv no entry bar near 2023-01-12T15:29:00+05:30 within 30m
@@ -4402,33 +4401,33 @@
 - `2023-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_17600_CE_02_FEB_23.csv no entry bar near 2023-01-25T15:29:00+05:30 within 30m
 - `2023-02-02`: `missing_entry_or_exit_timestamp`. NIFTY_17900_PE_09_FEB_23.csv no entry bar near 2023-02-02T15:29:00+05:30 within 30m
 - `2023-02-09`: `missing_entry_or_exit_timestamp`. NIFTY_18200_PE_16_FEB_23.csv no entry bar near 2023-02-09T15:29:00+05:30 within 30m
-- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_17700_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
+- `2023-02-16`: `missing_entry_or_exit_timestamp`. NIFTY_17750_CE_23_FEB_23.csv no entry bar near 2023-02-16T15:29:00+05:30 within 30m
 - `2023-02-23`: `missing_entry_or_exit_timestamp`. NIFTY_17200_CE_02_MAR_23.csv no entry bar near 2023-02-23T15:29:00+05:30 within 30m
-- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17000_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
+- `2023-03-02`: `missing_entry_or_exit_timestamp`. NIFTY_17050_CE_09_MAR_23.csv no entry bar near 2023-03-02T15:29:00+05:30 within 30m
 - `2023-03-09`: `missing_entry_or_exit_timestamp`. NIFTY_17300_CE_16_MAR_23.csv no entry bar near 2023-03-09T15:29:00+05:30 within 30m
 - `2023-03-16`: `missing_entry_or_exit_timestamp`. NIFTY_17300_PE_23_MAR_23.csv no entry bar near 2023-03-16T15:29:00+05:30 within 30m
 - `2023-03-23`: `missing_entry_or_exit_timestamp`. NIFTY_16750_CE_29_MAR_23.csv no entry bar near 2023-03-23T15:29:00+05:30 within 30m
 - `2023-03-29`: `missing_entry_or_exit_timestamp`. NIFTY_17400_PE_06_APR_23.csv no entry bar near 2023-03-29T15:29:00+05:30 within 30m
 - `2023-04-06`: `missing_entry_or_exit_timestamp`. NIFTY_17900_PE_13_APR_23.csv no entry bar near 2023-04-06T15:29:00+05:30 within 30m
 - `2023-04-13`: `missing_entry_or_exit_timestamp`. NIFTY_18150_PE_20_APR_23.csv no entry bar near 2023-04-13T15:29:00+05:30 within 30m
-- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17900_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
+- `2023-04-20`: `missing_entry_or_exit_timestamp`. NIFTY_17950_PE_27_APR_23.csv no entry bar near 2023-04-20T15:29:00+05:30 within 30m
 - `2023-04-27`: `missing_entry_or_exit_timestamp`. NIFTY_18200_PE_04_MAY_23.csv no entry bar near 2023-04-27T15:29:00+05:30 within 30m
 - `2023-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_18550_PE_11_MAY_23.csv no entry bar near 2023-05-04T15:29:00+05:30 within 30m
 - `2023-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_18000_CE_18_MAY_23.csv no entry bar near 2023-05-11T15:29:00+05:30 within 30m
 - `2023-05-18`: `missing_entry_or_exit_timestamp`. NIFTY_17850_CE_25_MAY_23.csv no entry bar near 2023-05-18T15:29:00+05:30 within 30m
 - `2023-05-25`: `missing_entry_or_exit_timestamp`. NIFTY_18650_PE_01_JUN_23.csv no entry bar near 2023-05-25T15:29:00+05:30 within 30m
 - `2023-06-01`: `missing_entry_or_exit_timestamp`. NIFTY_18200_CE_08_JUN_23.csv no entry bar near 2023-06-01T15:29:00+05:30 within 30m
-- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
+- `2023-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_18300_CE_15_JUN_23.csv no entry bar near 2023-06-08T15:29:00+05:30 within 30m
 - `2023-06-15`: `missing_entry_or_exit_timestamp`. NIFTY_18400_CE_22_JUN_23.csv no entry bar near 2023-06-15T15:29:00+05:30 within 30m
-- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18500_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18500_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
+- `2023-06-22`: `missing_entry_or_exit_timestamp`. NIFTY_18450_CE_28_JUN_23.csv no entry bar near 2023-06-22T15:29:00+05:30 within 30m; NIFTY_18450_CE_28_JUN_23.csv no exit bar near 2023-06-23T09:16:00+05:30 within 30m
 - `2023-06-23`: `missing_entry_or_exit_timestamp`. NIFTY_18350_CE_28_JUN_23.csv no entry bar near 2023-06-23T15:29:00+05:30 within 30m; NIFTY_18350_CE_28_JUN_23.csv no exit bar near 2023-06-26T09:16:00+05:30 within 30m
 - `2023-06-26`: `missing_entry_or_exit_timestamp`. NIFTY_19000_PE_28_JUN_23.csv no entry bar near 2023-06-26T15:29:00+05:30 within 30m; NIFTY_19000_PE_28_JUN_23.csv no exit bar near 2023-06-27T09:16:00+05:30 within 30m
 - `2023-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_19100_PE_28_JUN_23.csv no entry bar near 2023-06-27T15:29:00+05:30 within 30m
-- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_19300_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_19300_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
+- `2023-06-28`: `missing_entry_or_exit_timestamp`. NIFTY_19250_PE_29_JUN_23.csv no entry bar near 2023-06-28T15:29:00+05:30 within 30m; NIFTY_19250_PE_29_JUN_23.csv no exit bar near 2023-06-30T09:16:00+05:30 within 30m
 - `2023-07-06`: `missing_entry_or_exit_timestamp`. NIFTY_19800_PE_13_JUL_23.csv no entry bar near 2023-07-06T15:29:00+05:30 within 30m
-- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19150_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
-- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_20250_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
-- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19400_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
+- `2023-07-13`: `missing_entry_or_exit_timestamp`. NIFTY_19100_CE_20_JUL_23.csv no entry bar near 2023-07-13T15:29:00+05:30 within 30m
+- `2023-07-20`: `missing_entry_or_exit_timestamp`. NIFTY_20300_PE_27_JUL_23.csv no entry bar near 2023-07-20T15:29:00+05:30 within 30m
+- `2023-07-27`: `missing_entry_or_exit_timestamp`. NIFTY_19350_CE_03_AUG_23.csv no entry bar near 2023-07-27T15:29:00+05:30 within 30m
 - `2023-08-03`: `missing_entry_or_exit_timestamp`. NIFTY_19100_CE_10_AUG_23.csv no entry bar near 2023-08-03T15:29:00+05:30 within 30m
 - `2023-08-10`: `missing_entry_or_exit_timestamp`. NIFTY_19250_CE_17_AUG_23.csv no entry bar near 2023-08-10T15:29:00+05:30 within 30m
 - `2023-08-17`: `missing_entry_or_exit_timestamp`. NIFTY_19050_CE_24_AUG_23.csv no entry bar near 2023-08-17T15:29:00+05:30 within 30m
@@ -4437,49 +4436,49 @@
 - `2023-09-07`: `missing_entry_or_exit_timestamp`. NIFTY_20000_PE_14_SEP_23.csv no entry bar near 2023-09-07T15:29:00+05:30 within 30m
 - `2023-09-14`: `missing_entry_or_exit_timestamp`. NIFTY_20400_PE_21_SEP_23.csv no entry bar near 2023-09-14T15:29:00+05:30 within 30m
 - `2023-09-21`: `missing_entry_or_exit_timestamp`. NIFTY_19450_CE_28_SEP_23.csv no entry bar near 2023-09-21T15:29:00+05:30 within 30m
-- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19250_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
+- `2023-09-28`: `missing_entry_or_exit_timestamp`. NIFTY_19200_CE_05_OCT_23.csv no entry bar near 2023-09-28T15:29:00+05:30 within 30m
 - `2023-10-05`: `missing_entry_or_exit_timestamp`. NIFTY_19850_PE_12_OCT_23.csv no entry bar near 2023-10-05T15:29:00+05:30 within 30m
 - `2023-10-12`: `missing_entry_or_exit_timestamp`. NIFTY_19500_CE_19_OCT_23.csv no entry bar near 2023-10-12T15:29:00+05:30 within 30m
-- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19300_CE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
+- `2023-10-19`: `missing_entry_or_exit_timestamp`. NIFTY_19900_PE_26_OCT_23.csv no entry bar near 2023-10-19T15:29:00+05:30 within 30m
 - `2023-10-26`: `missing_entry_or_exit_timestamp`. NIFTY_18550_CE_02_NOV_23.csv no entry bar near 2023-10-26T15:29:00+05:30 within 30m
-- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_19450_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
+- `2023-11-02`: `missing_entry_or_exit_timestamp`. NIFTY_19400_PE_09_NOV_23.csv no entry bar near 2023-11-02T15:29:00+05:30 within 30m
 - `2023-11-09`: `missing_entry_or_exit_timestamp`. NIFTY_19100_CE_16_NOV_23.csv no entry bar near 2023-11-09T15:29:00+05:30 within 30m
 - `2023-11-10`: `missing_entry_or_exit_timestamp`. NIFTY_19750_PE_16_NOV_23.csv no exit bar near 2023-11-12T09:16:00+05:30 within 30m
-- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:15:00+05:30; no fallback within 30m
+- `2023-11-12`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2023-11-12T15:00:00+05:30; no fallback within 30m
 - `2023-11-16`: `missing_entry_or_exit_timestamp`. NIFTY_19450_CE_23_NOV_23.csv no entry bar near 2023-11-16T15:29:00+05:30 within 30m
 - `2023-11-23`: `missing_entry_or_exit_timestamp`. NIFTY_19500_CE_30_NOV_23.csv no entry bar near 2023-11-23T15:29:00+05:30 within 30m
 - `2023-11-30`: `missing_entry_or_exit_timestamp`. NIFTY_20450_PE_07_DEC_23.csv no entry bar near 2023-11-30T15:29:00+05:30 within 30m
-- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_21200_PE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
-- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21500_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
-- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21600_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
-- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_22050_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
+- `2023-12-07`: `missing_entry_or_exit_timestamp`. NIFTY_20600_CE_14_DEC_23.csv no entry bar near 2023-12-07T15:29:00+05:30 within 30m
+- `2023-12-14`: `missing_entry_or_exit_timestamp`. NIFTY_21450_PE_21_DEC_23.csv no entry bar near 2023-12-14T15:29:00+05:30 within 30m
+- `2023-12-21`: `missing_entry_or_exit_timestamp`. NIFTY_21550_PE_28_DEC_23.csv no entry bar near 2023-12-21T15:29:00+05:30 within 30m
+- `2023-12-28`: `missing_entry_or_exit_timestamp`. NIFTY_22100_PE_04_JAN_24.csv no entry bar near 2023-12-28T15:29:00+05:30 within 30m
 - `2024-01-04`: `missing_entry_or_exit_timestamp`. NIFTY_21950_PE_11_JAN_24.csv no entry bar near 2024-01-04T15:29:00+05:30 within 30m
-- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21950_PE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
-- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21800_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
+- `2024-01-11`: `missing_entry_or_exit_timestamp`. NIFTY_21350_CE_18_JAN_24.csv no entry bar near 2024-01-11T15:29:00+05:30 within 30m
+- `2024-01-18`: `missing_entry_or_exit_timestamp`. NIFTY_21750_PE_25_JAN_24.csv no entry bar near 2024-01-18T15:29:00+05:30 within 30m
 - `2024-01-25`: `missing_entry_or_exit_timestamp`. NIFTY_21650_PE_01_FEB_24.csv no entry bar near 2024-01-25T15:29:00+05:30 within 30m
 - `2024-02-01`: `missing_entry_or_exit_timestamp`. NIFTY_21400_CE_08_FEB_24.csv no entry bar near 2024-02-01T15:29:00+05:30 within 30m
-- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21450_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
-- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_22250_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
+- `2024-02-08`: `missing_entry_or_exit_timestamp`. NIFTY_21400_CE_15_FEB_24.csv no entry bar near 2024-02-08T15:29:00+05:30 within 30m
+- `2024-02-15`: `missing_entry_or_exit_timestamp`. NIFTY_22200_PE_22_FEB_24.csv no entry bar near 2024-02-15T15:29:00+05:30 within 30m
 - `2024-02-22`: `missing_entry_or_exit_timestamp`. NIFTY_22500_PE_29_FEB_24.csv no entry bar near 2024-02-22T15:29:00+05:30 within 30m
-- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_22350_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
-- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:15:00+05:30; no fallback within 30m
-- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22200_CE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
+- `2024-02-29`: `missing_entry_or_exit_timestamp`. NIFTY_22300_PE_07_MAR_24.csv no entry bar near 2024-02-29T15:29:00+05:30 within 30m
+- `2024-03-02`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-03-02T15:00:00+05:30; no fallback within 30m
+- `2024-03-07`: `missing_entry_or_exit_timestamp`. NIFTY_22800_PE_14_MAR_24.csv no entry bar near 2024-03-07T15:29:00+05:30 within 30m
 - `2024-03-14`: `missing_entry_or_exit_timestamp`. NIFTY_22450_PE_21_MAR_24.csv no entry bar near 2024-03-14T15:29:00+05:30 within 30m
-- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_21700_CE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
-- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_22050_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
-- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22850_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
+- `2024-03-21`: `missing_entry_or_exit_timestamp`. NIFTY_22350_PE_28_MAR_24.csv no entry bar near 2024-03-21T15:29:00+05:30 within 30m
+- `2024-03-28`: `missing_entry_or_exit_timestamp`. NIFTY_21950_CE_04_APR_24.csv no entry bar near 2024-03-28T15:29:00+05:30 within 30m
+- `2024-04-04`: `missing_entry_or_exit_timestamp`. NIFTY_22800_PE_10_APR_24.csv no entry bar near 2024-04-04T15:29:00+05:30 within 30m
 - `2024-04-10`: `missing_entry_or_exit_timestamp`. NIFTY_23050_PE_18_APR_24.csv no entry bar near 2024-04-10T15:29:00+05:30 within 30m
-- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_21750_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
+- `2024-04-18`: `missing_entry_or_exit_timestamp`. NIFTY_21650_CE_25_APR_24.csv no entry bar near 2024-04-18T15:29:00+05:30 within 30m
 - `2024-04-25`: `missing_entry_or_exit_timestamp`. NIFTY_22850_PE_02_MAY_24.csv no entry bar near 2024-04-25T15:29:00+05:30 within 30m
 - `2024-05-02`: `missing_entry_or_exit_timestamp`. NIFTY_22350_CE_09_MAY_24.csv no entry bar near 2024-05-02T15:29:00+05:30 within 30m
 - `2024-05-09`: `missing_entry_or_exit_timestamp`. NIFTY_21650_CE_16_MAY_24.csv no entry bar near 2024-05-09T15:29:00+05:30 within 30m
 - `2024-05-16`: `missing_entry_or_exit_timestamp`. NIFTY_22700_PE_23_MAY_24.csv no entry bar near 2024-05-16T15:29:00+05:30 within 30m
-- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:15:00+05:30; no fallback within 30m
-- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_23250_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
-- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22850_PE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
+- `2024-05-18`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-05-18T15:00:00+05:30; no fallback within 30m
+- `2024-05-23`: `missing_entry_or_exit_timestamp`. NIFTY_23300_PE_30_MAY_24.csv no entry bar near 2024-05-23T15:29:00+05:30 within 30m
+- `2024-05-30`: `missing_entry_or_exit_timestamp`. NIFTY_22200_CE_06_JUN_24.csv no entry bar near 2024-05-30T15:29:00+05:30 within 30m
 - `2024-06-06`: `missing_entry_or_exit_timestamp`. NIFTY_23150_PE_13_JUN_24.csv no entry bar near 2024-06-06T15:29:00+05:30 within 30m
 - `2024-06-13`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_20_JUN_24.csv no entry bar near 2024-06-13T15:29:00+05:30 within 30m
-- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23900_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
+- `2024-06-20`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_27_JUN_24.csv no entry bar near 2024-06-20T15:29:00+05:30 within 30m
 - `2024-06-27`: `missing_entry_or_exit_timestamp`. NIFTY_24350_PE_04_JUL_24.csv no entry bar near 2024-06-27T15:29:00+05:30 within 30m
 - `2024-07-04`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_11_JUL_24.csv no entry bar near 2024-07-04T15:29:00+05:30 within 30m
 - `2024-07-11`: `missing_entry_or_exit_timestamp`. NIFTY_24650_PE_18_JUL_24.csv no entry bar near 2024-07-11T15:29:00+05:30 within 30m
@@ -4491,37 +4490,39 @@
 - `2024-08-22`: `missing_entry_or_exit_timestamp`. NIFTY_24500_CE_29_AUG_24.csv no entry bar near 2024-08-22T15:29:00+05:30 within 30m
 - `2024-08-29`: `missing_entry_or_exit_timestamp`. NIFTY_25450_PE_05_SEP_24.csv no entry bar near 2024-08-29T15:29:00+05:30 within 30m
 - `2024-09-05`: `missing_entry_or_exit_timestamp`. NIFTY_24850_CE_12_SEP_24.csv no entry bar near 2024-09-05T15:29:00+05:30 within 30m
-- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25600_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
+- `2024-09-12`: `missing_entry_or_exit_timestamp`. NIFTY_25700_PE_19_SEP_24.csv no entry bar near 2024-09-12T15:29:00+05:30 within 30m
 - `2024-09-19`: `missing_entry_or_exit_timestamp`. NIFTY_25150_CE_26_SEP_24.csv no entry bar near 2024-09-19T15:29:00+05:30 within 30m
 - `2024-09-26`: `missing_entry_or_exit_timestamp`. NIFTY_26500_PE_03_OCT_24.csv no entry bar near 2024-09-26T15:29:00+05:30 within 30m
 - `2024-10-03`: `missing_entry_or_exit_timestamp`. NIFTY_24950_CE_10_OCT_24.csv no entry bar near 2024-10-03T15:29:00+05:30 within 30m
 - `2024-10-10`: `missing_entry_or_exit_timestamp`. NIFTY_24700_CE_17_OCT_24.csv no entry bar near 2024-10-10T15:29:00+05:30 within 30m
 - `2024-10-17`: `missing_entry_or_exit_timestamp`. NIFTY_24450_CE_24_OCT_24.csv no entry bar near 2024-10-17T15:29:00+05:30 within 30m
-- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24700_PE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
-- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_24550_PE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_24550_PE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
-- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:15:00+05:30; no fallback within 30m
+- `2024-10-24`: `missing_entry_or_exit_timestamp`. NIFTY_24100_CE_31_OCT_24.csv no entry bar near 2024-10-24T15:29:00+05:30 within 30m
+- `2024-10-31`: `missing_entry_or_exit_timestamp`. NIFTY_23900_CE_07_NOV_24.csv no entry bar near 2024-10-31T15:29:00+05:30 within 30m; NIFTY_23900_CE_07_NOV_24.csv no exit bar near 2024-11-01T09:16:00+05:30 within 30m
+- `2024-11-01`: `missing_spot_signal_timestamp`. Missing spot signal timestamp 2024-11-01T15:00:00+05:30; no fallback within 30m
 - `2024-11-07`: `missing_entry_or_exit_timestamp`. NIFTY_23900_CE_14_NOV_24.csv no entry bar near 2024-11-07T15:29:00+05:30 within 30m
-- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23850_PE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
+- `2024-11-14`: `missing_entry_or_exit_timestamp`. NIFTY_23250_CE_21_NOV_24.csv no entry bar near 2024-11-14T15:29:00+05:30 within 30m
 - `2024-11-21`: `missing_entry_or_exit_timestamp`. NIFTY_23650_PE_28_NOV_24.csv no entry bar near 2024-11-21T15:29:00+05:30 within 30m
-- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_23650_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
-- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_25000_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
+- `2024-11-28`: `missing_entry_or_exit_timestamp`. NIFTY_23600_CE_05_DEC_24.csv no entry bar near 2024-11-28T15:29:00+05:30 within 30m
+- `2024-12-05`: `missing_entry_or_exit_timestamp`. NIFTY_25050_PE_12_DEC_24.csv no entry bar near 2024-12-05T15:29:00+05:30 within 30m
 - `2024-12-12`: `missing_entry_or_exit_timestamp`. NIFTY_24250_CE_19_DEC_24.csv no entry bar near 2024-12-12T15:29:00+05:30 within 30m
-- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_24250_PE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
+- `2024-12-19`: `missing_entry_or_exit_timestamp`. NIFTY_23650_CE_26_DEC_24.csv no entry bar near 2024-12-19T15:29:00+05:30 within 30m
 - `2025-10-20`: `missing_entry_or_exit_timestamp`. NIFTY_25550_CE_28_OCT_25.csv no exit bar near 2025-10-21T09:16:00+05:30 within 30m
 - `2025-10-21`: `missing_entry_or_exit_timestamp`. NIFTY_25550_CE_28_OCT_25.csv no entry bar near 2025-10-21T15:29:00+05:30 within 30m
-- `2026-03-17`: `missing_option_file`. Missing option file: NIFTY_23850_PE_24_MAR_26.csv
-- `2026-03-30`: `missing_option_file`. Missing option file: NIFTY_22100_CE_28_APR_26.csv
-- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_24350_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
+- `2026-03-17`: `missing_option_file`. Missing option file: NIFTY_23900_PE_24_MAR_26.csv
+- `2026-03-18`: `missing_option_file`. Missing option file: NIFTY_24100_PE_24_MAR_26.csv
+- `2026-03-30`: `missing_option_file`. Missing option file: NIFTY_22050_CE_28_APR_26.csv
+- `2026-04-01`: `missing_option_file`. Missing option file: NIFTY_22350_CE_28_APR_26.csv
+- `2026-04-30`: `missing_entry_or_exit_timestamp`. NIFTY_24300_PE_05_MAY_26.csv no exit bar near 2026-05-04T09:16:00+05:30 within 30m
 - `2026-05-04`: `missing_entry_or_exit_timestamp`. NIFTY_23800_CE_05_MAY_26.csv no entry bar near 2026-05-04T15:29:00+05:30 within 30m; NIFTY_23800_CE_05_MAY_26.csv no exit bar near 2026-05-05T09:16:00+05:30 within 30m
 - `2026-05-05`: `missing_entry_or_exit_timestamp`. NIFTY_24350_PE_12_MAY_26.csv no entry bar near 2026-05-05T15:29:00+05:30 within 30m; NIFTY_24350_PE_12_MAY_26.csv no exit bar near 2026-05-06T09:16:00+05:30 within 30m
-- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24650_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24650_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
-- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24050_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24050_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
+- `2026-05-06`: `missing_entry_or_exit_timestamp`. NIFTY_24600_PE_12_MAY_26.csv no entry bar near 2026-05-06T15:29:00+05:30 within 30m; NIFTY_24600_PE_12_MAY_26.csv no exit bar near 2026-05-07T09:16:00+05:30 within 30m
+- `2026-05-07`: `missing_entry_or_exit_timestamp`. NIFTY_24000_CE_12_MAY_26.csv no entry bar near 2026-05-07T15:29:00+05:30 within 30m; NIFTY_24000_CE_12_MAY_26.csv no exit bar near 2026-05-08T09:16:00+05:30 within 30m
 - `2026-05-08`: `missing_entry_or_exit_timestamp`. NIFTY_23900_CE_12_MAY_26.csv no entry bar near 2026-05-08T15:29:00+05:30 within 30m; NIFTY_23900_CE_12_MAY_26.csv no exit bar near 2026-05-11T09:16:00+05:30 within 30m
 - `2026-05-11`: `missing_entry_or_exit_timestamp`. NIFTY_23500_CE_12_MAY_26.csv no entry bar near 2026-05-11T15:29:00+05:30 within 30m; NIFTY_23500_CE_12_MAY_26.csv no exit bar near 2026-05-12T09:16:00+05:30 within 30m
 - `2026-06-03`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_09_JUN_26.csv no exit bar near 2026-06-04T09:16:00+05:30 within 30m
-- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23750_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23750_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
+- `2026-06-04`: `missing_entry_or_exit_timestamp`. NIFTY_23700_PE_09_JUN_26.csv no entry bar near 2026-06-04T15:29:00+05:30 within 30m; NIFTY_23700_PE_09_JUN_26.csv no exit bar near 2026-06-05T09:16:00+05:30 within 30m
 - `2026-06-05`: `missing_entry_or_exit_timestamp`. NIFTY_23050_CE_09_JUN_26.csv no entry bar near 2026-06-05T15:29:00+05:30 within 30m; NIFTY_23050_CE_09_JUN_26.csv no exit bar near 2026-06-08T09:16:00+05:30 within 30m
-- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_22800_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_22800_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
+- `2026-06-08`: `missing_entry_or_exit_timestamp`. NIFTY_22850_CE_09_JUN_26.csv no entry bar near 2026-06-08T15:29:00+05:30 within 30m; NIFTY_22850_CE_09_JUN_26.csv no exit bar near 2026-06-09T09:16:00+05:30 within 30m
 - `2026-06-16`: `missing_entry_or_exit_timestamp`. NIFTY_24300_PE_23_JUN_26.csv no exit bar near 2026-06-17T09:16:00+05:30 within 30m
 - `2026-06-17`: `missing_entry_or_exit_timestamp`. NIFTY_24400_PE_23_JUN_26.csv no entry bar near 2026-06-17T15:29:00+05:30 within 30m; NIFTY_24400_PE_23_JUN_26.csv no exit bar near 2026-06-18T09:16:00+05:30 within 30m
 - `2026-06-18`: `missing_entry_or_exit_timestamp`. NIFTY_24500_PE_23_JUN_26.csv no entry bar near 2026-06-18T15:29:00+05:30 within 30m; NIFTY_24500_PE_23_JUN_26.csv no exit bar near 2026-06-19T09:16:00+05:30 within 30m
@@ -4530,6 +4531,8 @@
 ## Remarks
 
 - Fallback window: 30m — when an exact timestamp is missing, the nearest bar (before or after) within the window is used; the actual timestamp is recorded in the `remarks` column. Set `--fallback-window-minutes 0` to restore exact-match-only behaviour.
-- The 15:15 spot row is the 15:30 close proxy; 15:29 option open is the entry proxy.
+- The 15:00 spot row closes at 15:15, so it is fully known at the 15:29 entry.
+- The 15:15 row was used previously; it does not close until 15:30 and so
+  was not available to a 15:29 entry.
 - Expiry folder dates are the source of truth for expiry selection.
 - Lot sizes are dynamic per expiry era to maintain ~300 quantity throughout the period.

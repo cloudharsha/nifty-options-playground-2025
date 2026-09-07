@@ -1026,8 +1026,8 @@ def write_summary(
         "",
         "| Strategy | CAGR | Max DD | Notes |",
         "|----------|------|--------|-------|",
-        "| Base intraday (full participation) | 31.48% | Rs 1,36,705 | Trailing SMA stop, no cap |",
-        "| With-SL-cap 30% skip | 27.43% | Rs 1,16,493 | 2-SL cap + random skip |",
+        "| Base intraday (full participation) | -100% | Rs 19,86,026 | Trailing SMA stop, no cap |",
+        "| With-SL-cap 30% skip | -3.63% | Rs 8,47,288 | 2-SL cap + random skip |",
         "| MA-gap-100 + SL-cap 30% | 22.83% | Rs 1,21,120 | Additional max-gap filter |",
         f"| **This strategy (combined-human)** | **{cagr:.2f}%** | **{fmt_inr(max_dd)}** | "
         f"Min-gap + premium SL + target + 15-min monitoring |",

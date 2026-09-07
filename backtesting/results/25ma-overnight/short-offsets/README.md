@@ -17,33 +17,46 @@ Eight offset distances are stored in a single daywise CSV, distinguished by `ran
 | `short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md` | Full per-variant summary |
 | `short_atm_nifty_ma_weekly_overnight_offsets_2020_2026.log` | Run log |
 
+> **Corrected 2026-09-08.** These runs took their direction from the 15:15
+> 15-minute bar but entered at 15:29 — that bar does not close until 15:30, so
+> the entry preceded its own signal. The signal bar is now 15:00, which closes
+> at 15:15. Every figure below is post-fix; see the
+> [lookahead audit](../../../docs/lookahead-audit.md).
+
 ## Range Comparison (2020–2026, Rs 10L capital)
 
-| Range | Traded | Win% | Net P/L | CAGR | Max DD |
-|-------|--------|------|---------|------|--------|
-| ITM_300 | 1,180 | 53.2% | Rs 26,53,098 | 18.96% | Rs 2,96,200 |
-| ITM_200 | 1,274 | 53.5% | Rs 27,36,233 | 19.32% | Rs 2,70,220 |
-| ITM_100 | 1,307 | 53.9% | Rs 23,08,668 | 17.39% | Rs 2,28,640 |
-| OTM_100 | 1,313 | 57.9% | Rs 11,72,399 | 10.95% | Rs 2,98,630 |
-| OTM_200 | 1,311 | 55.7% | Rs 7,36,394 | 7.67% | Rs 2,70,775 |
-| OTM_300 | 1,312 | 49.8% | Rs 4,45,963 | 5.07% | Rs 2,05,310 |
-| OTM_400 | 1,311 | 42.8% | Rs 1,85,151 | 2.30% | Rs 2,06,510 |
-| OTM_500 | 1,303 | 33.5% | Rs −86,223 | −1.20% | Rs 3,49,702 |
+| Range | Traded | Win% | Net P/L | CAGR | Max DD | Was (pre-fix) |
+|-------|--------|------|---------|------|--------|---------------|
+| ITM_300 | 1,174 | 51.6% | Rs 16,29,235 | 13.83% | Rs 3,94,855 | Rs 26,53,098 / 18.96% |
+| ITM_200 | 1,271 | 51.9% | Rs 18,24,282 | 14.93% | Rs 3,53,561 | Rs 27,36,233 / 19.32% |
+| ITM_100 | 1,307 | 52.8% | Rs 16,52,625 | 13.96% | Rs 3,14,282 | Rs 23,08,668 / 17.39% |
+| OTM_100 | 1,313 | 56.7% | Rs 6,51,606 | 6.95% | Rs 3,01,850 | Rs 11,72,399 / 10.95% |
+| OTM_200 | 1,311 | 54.2% | Rs 2,26,421 | 2.77% | Rs 2,75,020 | Rs 7,36,394 / 7.67% |
+| OTM_300 | 1,313 | 48.6% | Rs 22,715 | 0.30% | Rs 2,98,343 | Rs 4,45,963 / 5.07% |
+| OTM_400 | 1,312 | 41.2% | Rs −1,52,176 | −2.19% | Rs 4,20,010 | Rs 1,85,151 / 2.30% |
+| OTM_500 | 1,303 | 32.2% | Rs −3,63,001 | −5.86% | Rs 5,25,709 | Rs −86,223 / −1.20% |
 
-ITM variants outperform OTM on raw CAGR. OTM_100 has the best win rate but lower P/L.
+ITM variants still outperform OTM, and the decay from ITM to far-OTM is intact —
+but the whole curve shifts down by 3–5 points, one more range goes negative, and
+every drawdown grows. ITM_200 at 14.93% is now the family's best, below the
+17.38% random-entry control.
+
+These are exact-match numbers (`--fallback-window-minutes 0`), matching how this
+folder has always been generated. The script's own default is 30; see
+[`../short-offsets-fallback/`](../short-offsets-fallback/).
 
 ## Streak Summary by Range
 
 | Range | Max Win Streak | Max Loss Streak |
 |-------|---------------|-----------------|
-| ITM_100 | 8 | 7 |
-| ITM_200 | 8 | 7 |
-| ITM_300 | 8 | 7 |
-| OTM_100 | 8 | 7 |
+| ITM_100 | 12 | 7 |
+| ITM_200 | 12 | 7 |
+| ITM_300 | 12 | 7 |
+| OTM_100 | 12 | 7 |
 | OTM_200 | 12 | 7 |
-| OTM_300 | 10 | 12 |
-| OTM_400 | 10 | 15 |
-| OTM_500 | 10 | 30 |
+| OTM_300 | 12 | 12 |
+| OTM_400 | 11 | 16 |
+| OTM_500 | 9 | 27 |
 
 ## Per-Range Streak Detail
 

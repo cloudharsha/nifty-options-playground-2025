@@ -39,7 +39,9 @@ RUN_SEEDS = [42, 137, 999, 2024, 31415]
 
 EARLY_ENTRY_TIME = "09:20"
 STANDARD_ENTRY_START = "09:30"
-EARLY_ENTRY_SIGNAL_TIME = "09:15"
+# The 09:15 15m bar does not close until 09:30, so a 09:20 entry cannot read
+# it. Use the previous session's 15:15 candle - the newest one already closed.
+PREV_SESSION_SIGNAL_TIME = "15:15"
 
 # Stop trading for the rest of the day after this many SL exits
 SL_CAP_PER_DAY = 2
@@ -195,7 +197,13 @@ def compute_cagr(net_total: float, capital: float, first_day: str, last_day: str
     days = (end - start).days
     if days <= 0 or capital <= 0:
         return 0.0
-    return ((1.0 + net_total / capital) ** (365.25 / days) - 1.0) * 100.0
+    ending_equity_ratio = 1.0 + net_total / capital
+    if ending_equity_ratio <= 0.0:
+        # Losses exceeded the capital base: the account is wiped out. A
+        # fractional power of a negative ratio is a complex number, not a
+        # return, so report the floor instead.
+        return -100.0
+    return (ending_equity_ratio ** (365.25 / days) - 1.0) * 100.0
 
 
 def parse_args() -> argparse.Namespace:
@@ -243,11 +251,34 @@ def build_intraday_timestamps(day: str, start_time: str, end_time: str, step_min
     return timestamps
 
 
-def signal_timestamp_for_entry(entry_ts: str, day: str) -> str:
+def signal_timestamp_for_entry(entry_ts: str, day: str, prev_day: Optional[str] = None) -> str:
     entry_dt = timestamp_to_datetime(entry_ts)
     if entry_dt.hour == 9 and entry_dt.minute < 30:
-        return build_timestamp(day, EARLY_ENTRY_SIGNAL_TIME)
+        if prev_day is None:
+            return ""
+        return build_timestamp(prev_day, PREV_SESSION_SIGNAL_TIME)
     return datetime_to_timestamp(entry_dt - datetime.timedelta(minutes=15))
+
+
+def atm_reference_close(
+    entry_ts: str, sig_row: PriceRow, spot_5m_rows: Dict[str, PriceRow]
+) -> float:
+    """
+    Spot level used to pick the ATM strike.
+
+    For 09:30+ entries the signal bar closes exactly at the entry minute, so its
+    close is the current spot. For the 09:20 entry the signal bar belongs to the
+    previous session and is stale across the overnight gap, so use the 09:15 5m
+    bar instead - it closes at 09:20 and is the freshest price available then.
+    """
+    entry_dt = timestamp_to_datetime(entry_ts)
+    if entry_dt.hour == 9 and entry_dt.minute < 30:
+        ref = spot_5m_rows.get(
+            datetime_to_timestamp(entry_dt - datetime.timedelta(minutes=5))
+        )
+        if ref is not None:
+            return ref.close_value
+    return sig_row.close_value
 
 
 def latest_completed_signal_timestamp(monitor_ts: str) -> str:
@@ -480,21 +511,26 @@ def resolve_trade_exit(
         stop_hit = (spot_row.low_value <= stop_sma if sold_side == "PE"
                     else spot_row.high_value >= stop_sma)
         if stop_hit:
-            exit_row = contract_data.rows_by_timestamp.get(spot_ts)
+            # The MA touch happens somewhere inside the 5m bar starting at
+            # spot_ts, so that bar's open is a price from before the stop
+            # existed. Fill at the next bar's open - the first price actually
+            # reachable once the touch has been observed.
+            fill_ts = datetime_to_timestamp(current_dt + datetime.timedelta(minutes=5))
+            exit_row = contract_data.rows_by_timestamp.get(fill_ts)
             if exit_row is None:
                 return ExitOutcome(
                     status="SKIPPED", skip_reason="missing_option_exit_timestamp",
-                    exit_timestamp=spot_ts, option_exit_open="",
+                    exit_timestamp=fill_ts, option_exit_open="",
                     exit_reason="stop_loss_ma_touch", exit_spot_ma=format_money(stop_sma),
                     gross_pnl=0.0, brokerage=0.0, net_pnl=0.0,
-                    remarks=f"{contract_data.path.name} missing stop exit timestamp {spot_ts}",
+                    remarks=f"{contract_data.path.name} missing stop exit timestamp {fill_ts}",
                 )
             gross = leg_pnl_after_slippage(entry_row.open_value - exit_row.open_value,
                                            slippage_points_per_order) * contract_multiplier
             brok = brokerage_per_order * 2
             return ExitOutcome(
                 status="TRADED", skip_reason="",
-                exit_timestamp=spot_ts, option_exit_open=exit_row.open_text,
+                exit_timestamp=fill_ts, option_exit_open=exit_row.open_text,
                 exit_reason="stop_loss_ma_touch", exit_spot_ma=format_money(stop_sma),
                 gross_pnl=gross, brokerage=brok, net_pnl=gross - brok, remarks="",
             )
@@ -607,7 +643,8 @@ def run_single_simulation(
     all_traded_trades: List[TradeResult] = []
     random_skipped = 0
 
-    for entry_date in spot_15m.trading_days:
+    for day_index, entry_date in enumerate(spot_15m.trading_days):
+        prev_day = spot_15m.trading_days[day_index - 1] if day_index > 0 else None
         # Random day skip
         if rng.random() < skip_rate:
             random_skipped += 1
@@ -668,7 +705,7 @@ def run_single_simulation(
             if timestamp_to_datetime(entry_ts) < next_allowed_entry_dt:
                 continue
 
-            sig_ts = signal_timestamp_for_entry(entry_ts, entry_date)
+            sig_ts = signal_timestamp_for_entry(entry_ts, entry_date, prev_day)
             sig_row = spot_15m.rows_by_timestamp.get(sig_ts)
             if sig_row is None:
                 result = make_skipped_trade(
@@ -693,7 +730,7 @@ def run_single_simulation(
                 continue
 
             sma_text = format_money(sma)
-            atm = round_to_nearest_50(sig_row.close_value)
+            atm = round_to_nearest_50(atm_reference_close(entry_ts, sig_row, spot_5m_rows))
             strike_text = str(atm)
 
             if sig_row.close_value > sma:
@@ -904,9 +941,12 @@ def fmt_inr(v: float) -> str:
 
 
 def write_summary(sim_results: List[SimResult], path: Path, args: argparse.Namespace) -> None:
-    baseline_net = 67_11_939
-    baseline_cagr = 31.48
-    baseline_dd = 1_36_705
+    baseline_net = -14_15_087
+    # Post-lookahead-fix 09:30 full-participation baseline: the account is
+    # wiped out, so 'vs Base' is reported as a percentage-point difference
+    # rather than a ratio against a negative number.
+    baseline_cagr = -100.00
+    baseline_dd = 19_86_026
 
     lines: List[str] = [
         "# 09:20-Start Random-Skip + 2-SL/Day Cap Backtest — Short ATM NIFTY MA Weekly Intraday Trailing",
@@ -914,7 +954,8 @@ def write_summary(sim_results: List[SimResult], path: Path, args: argparse.Names
         "## Strategy changes vs baseline",
         "",
         "- **Entry start**: 09:20 (vs 09:30 in baseline); falls through to 09:30 if no option data at 09:20",
-        "- **Signal at 09:20**: uses the 09:15 15m bar (same bar the 09:30 entry uses)",
+        "- **Signal at 09:20**: uses the previous session's 15:15 bar - the newest 15m",
+        "  candle closed by 09:20. ATM strike comes from the 09:15 5m bar close.",
         "- **Day skipping**: random at 30% / 40% / 50% (5 runs each, 15 total)",
         f"- **Seeds**: {RUN_SEEDS}",
         "- **Exit logic**: trailing 25-SMA stop on 5m candles, or EOD 15:15",
@@ -939,7 +980,7 @@ def write_summary(sim_results: List[SimResult], path: Path, args: argparse.Names
     ]
 
     for r in sim_results:
-        vs = f"{r.cagr / baseline_cagr * 100:.1f}%"
+        vs = f"{r.cagr - baseline_cagr:+.1f}pp"
         lines.append(
             f"| {int(r.skip_rate * 100)}% | {r.run_index} | {r.seed} "
             f"| {r.traded_days} | {r.random_skipped_days} | {r.strategy_skipped_days} "

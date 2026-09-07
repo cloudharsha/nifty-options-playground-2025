@@ -47,14 +47,22 @@ CAGR are not comparable numbers.
 
 | Strategy | Net P/L | CAGR | Max DD |
 |---|---:|---:|---:|
-| [25-SMA intraday trailing, 09:20 entry, 30% random skip](docs/results/25ma-intraday.md) | Rs 68,20,328 | 31.72% | Rs 1,14,299 |
-| [25-SMA overnight, ITM 200 offset](docs/results/25ma-overnight.md) | Rs 27,36,233 | 19.32% | Rs 2,70,220 |
 | [Heads & Tails random-entry control](docs/results/heads-tails.md) | Rs 9,73,379 | 17.38% | Rs 4,81,637 |
 | [Adjusted straddle, held to expiry, 3-leg cap](docs/results/adjusted-straddle.md) | Rs 9,54,046 | 15.16% | Rs 41,725 |
+| [25-SMA overnight, ITM 200 offset](docs/results/25ma-overnight.md) | Rs 18,24,282 | 14.93% | Rs 3,53,561 |
+| [25-SMA intraday trailing, 09:30 entry](docs/results/25ma-intraday.md) | −Rs 14,15,087 | −100% | Rs 19,86,026 |
 
-The random-entry control sits third. That is the point of running it: any
-signal-based strategy below ~17% CAGR on this instrument has not yet shown
-that its signal beats a coin flip on the same costs.
+**The random-entry control is now first, and nothing beats it.** That is the
+point of running it: any signal-based strategy below ~17% CAGR on this
+instrument has not shown that its signal beats a coin flip on the same costs.
+
+The two 25-SMA rows used to head this table at 31.72% and 19.32%. Both were
+inflated by lookahead — a trailing stop that filled at a price recorded before
+the stop triggered, an entry that read a 15-minute bar ten minutes before it
+closed, and an overnight entry placed one minute before its own signal bar
+closed. All three are fixed; see the [lookahead audit](docs/lookahead-audit.md)
+for the before-and-after on every affected run. The control itself was audited
+and needed no change.
 
 ## Running a backtest
 
@@ -95,6 +103,13 @@ Read this before comparing rows across families.
 - **Costs are modelled, fills are not.** Brokerage and taxes are charged per
   order. Every backtest assumes it got filled at the recorded price, which is
   optimistic for illiquid strikes and for gap days.
+- **A bar stamped `T` closes at `T + interval`, and nothing before then can read
+  it.** Three violations of this in the 25-SMA families turned two losing
+  strategies into the best-performing rows in this repo. If a stop is detected
+  from a bar's high or low, the fill belongs on the *next* bar — that bar's own
+  open predates the trigger. See the [lookahead audit](docs/lookahead-audit.md),
+  and `python/tests/test_lookahead_guards.py` for the assertions that now hold
+  the line.
 - **Skipped days matter.** Several strategies decline to trade when an entry
   filter fails. A high skip rate can mean the filter is doing real work, or that
   the sample is thin — the per-strategy summaries report skip counts and reasons.

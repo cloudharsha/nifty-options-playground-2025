@@ -7,6 +7,20 @@ A deliberately low-attention strategy: check the market every 15 minutes, set GT
 
 Back to the [backtesting index](../../README.md).
 
+> **Audited 2026-09-08 for the lookahead bugs found in the 25-SMA families —
+> clean, own numbers unchanged.** `resolve_trade_exit_human` reads the last
+> *completed* 15-minute candle and fills at the open of the candle starting at
+> the check time, which is after that signal candle closed. Correct causality.
+>
+> One caveat on the two variant folders: `test-no-premsl/` and `test-wide-sl/`
+> summaries carry a "vs base intraday" comparison table that still quotes the
+> pre-fix 25-SMA figures (31.48% / 27.43%). The base run was regenerated with
+> corrected references; the two variants were not, because their summaries do
+> not record every parameter they were run with and re-running them from the
+> displayed parameters does not reproduce their numbers. Their own results are
+> unaffected — read the comparison rows in those two files against the
+> [lookahead audit](../lookahead-audit.md) instead.
+
 Capital Base is what the strategy actually needs, not a fixed reference - read the
 [index notes](../../README.md#reading-the-numbers) before comparing rows across families.
 

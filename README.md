@@ -106,6 +106,12 @@ knowing before you trust any number here:
 - **Fills are assumed.** Costs are modelled per order, but every backtest assumes
   it traded at the recorded price. That is optimistic for illiquid strikes and
   for gap days.
+- **Lookahead is the failure mode that actually bit us.** A bar stamped `T`
+  closes at `T + interval`; nothing before then may read it. Three breaches of
+  that rule in the 25-SMA directional scripts were producing the two best
+  results in the repo. Corrected, both lose money. The
+  [lookahead audit](backtesting/docs/lookahead-audit.md) has the before-and-after
+  for every affected run.
 - **Skipped days matter.** Several strategies decline to trade when an entry
   filter fails. Each summary reports how many days were skipped and why — a high
   skip rate can mean a filter is doing real work, or that the sample is thin.

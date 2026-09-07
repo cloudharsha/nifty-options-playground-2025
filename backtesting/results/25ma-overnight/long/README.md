@@ -14,25 +14,31 @@ SMA buy CE, below SMA buy PE. A pure long-premium overnight directional play.
 | `long_atm_nifty_ma_weekly_overnight_2020_2026_summary.md` | Full summary with monthly breakdown |
 | `long_atm_nifty_ma_weekly_overnight_2020_2026.log` | Run log |
 
+> **Corrected 2026-09-08.** These runs took their direction from the 15:15
+> 15-minute bar but entered at 15:29 — that bar does not close until 15:30, so
+> the entry preceded its own signal. The signal bar is now 15:00, which closes
+> at 15:15. Every figure below is post-fix; see the
+> [lookahead audit](../../../docs/lookahead-audit.md).
+
 ## Key Results (2020–2026)
 
-| Metric | Value |
-|--------|-------|
-| Capital base | Rs 5,00,000 |
-| Net P/L | Rs 3,30,944 |
-| CAGR | 7.04% |
-| Traded days | 1,312 |
-| Skipped days | 539 |
-| Win days | 604 |
-| Loss days | 708 |
-| Win rate | 46.0% |
-| Max drawdown | Rs 5,68,615 |
-| Best day | 2026-02-02 — Rs 1,72,606 |
-| Worst day | 2020-03-20 — Rs −91,325 |
+| Metric | Value | Was (pre-fix) |
+|--------|-------|---------------|
+| Capital base | Rs 5,00,000 | Rs 5,00,000 |
+| Net P/L | −Rs 1,82,442 | Rs 3,30,944 |
+| CAGR | −5.90% | 7.04% |
+| Traded days | 1,310 | 1,312 |
+| Skipped days | 541 | 539 |
+| Win days | 589 | 604 |
+| Loss days | 721 | 708 |
+| Win rate | 45.0% | 46.0% |
+| Max drawdown | Rs 7,39,380 | Rs 5,68,615 |
 
-> **Note:** Despite positive CAGR, the win rate is below 50% — a few large wins
-> offset many small losses. The max drawdown (Rs 5.7L) exceeds the capital base (Rs 5L),
-> making this high-risk for standalone deployment. 2020 was deeply negative.
+> **Note:** This variant flipped from profit to loss once the entry stopped
+> preceding its own signal bar. The long side has always had a sub-50% win rate
+> and depended on a few large wins; a one-minute peek at the close was enough to
+> pick out enough of those to look profitable. Max drawdown (Rs 7.4L) now exceeds
+> the Rs 5L capital base by half again.
 
 ## Streak Analysis
 

@@ -7,6 +7,18 @@ Underlying-only and single-leg studies used to test signals before wiring them i
 
 Back to the [backtesting index](../../README.md).
 
+> **Not audited, not re-run — treat every row as an upper bound.** These scripts
+> live in the deliberately non-functional `python/legacy/` folder, so the
+> [lookahead fixes](../lookahead-audit.md) applied to the 25-SMA families were
+> not applied here and these numbers were not regenerated. They carry a second,
+> larger problem of their own: each summary states "No brokerage, slippage,
+> lots, or option data are used". At this repo's own convention (Rs 25/order
+> plus 1 pt/order slippage, 1 pt = Rs 65) that is roughly Rs 180 per round trip
+> — about Rs 7.75L of the Rs 11.88L headline on the 4,306-trade continuous
+> trailing run, and enough to leave the two crossover rows barely positive.
+> Reviving one of these means fixing the folder's path bugs, adding costs,
+> checking causality, and indexing it as a new result.
+
 Capital Base is what the strategy actually needs, not a fixed reference - read the
 [index notes](../../README.md#reading-the-numbers) before comparing rows across families.
 

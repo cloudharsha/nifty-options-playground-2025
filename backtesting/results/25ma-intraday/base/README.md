@@ -18,32 +18,42 @@ trade, with re-entry after the next 15-minute boundary. Closes any open position
 
 ## Key Results (2020–2026)
 
-| Metric | Value |
-|--------|-------|
-| Capital base | Rs 10,00,000 |
-| Net P/L | Rs 67,11,939 |
-| CAGR | 31.48% |
-| Traded days | 1,578 |
-| Skipped days | 273 |
-| Total trades | 6,501 |
-| Stop-loss exits | 5,257 |
-| Day-close exits | 1,244 |
-| Win days | 1,037 |
-| Loss days | 541 |
-| Win rate (day) | 65.7% |
-| Max drawdown | Rs 1,36,705 |
-| Best day | 2024-06-04 — Rs 1,01,950 |
-| Worst day | 2020-03-27 — Rs −58,885 |
+> **Corrected 2026-09-08.** The trailing stop used to fill at the option open of
+> the same 5-minute bar whose high/low triggered it — a price from before the
+> stop existed. That single bug was the entire edge. See the
+> [lookahead audit](../../../docs/lookahead-audit.md).
+
+| Metric | Value | Was (pre-fix) |
+|--------|-------|---------------|
+| Capital base | Rs 10,00,000 | Rs 10,00,000 |
+| Net P/L | −Rs 14,15,087 | Rs 67,11,939 |
+| CAGR | −100% (wiped out) | 31.48% |
+| Traded days | 1,578 | 1,578 |
+| Skipped days | 273 | 273 |
+| Total trades | 5,888 | 6,501 |
+| Stop-loss exits | 4,673 | 5,257 |
+| Day-close exits | 1,215 | 1,244 |
+| Win days | 839 | 1,037 |
+| Loss days | 739 | 541 |
+| Win rate (day) | 53.2% | 65.7% |
+| Max drawdown | Rs 19,86,026 | Rs 1,36,705 |
+| Best day | 2024-06-04 — Rs 1,01,950 | 2024-06-04 — Rs 1,01,950 |
+| Worst day | 2026-01-27 — Rs −77,166 | 2020-03-27 — Rs −58,885 |
+
+Losses exceed the Rs 10L capital base, so CAGR floors at −100% rather than
+returning the complex number the old formula produced.
 
 ## SL Exit Quality
 
-Of all stop-loss exits, **40%+ are profitable** — the trailing MA stop fires while the
-trade is still in profit, locking in gains. Only the remaining ~60% are true losses.
+Only **21.5%** of stop-loss exits are profitable. The pre-fix figure of 30.7% was
+the bug's clearest fingerprint: filling at the triggering bar's open booked a
+gain on stops that had actually moved against the position by the time they
+could be acted on.
 
-| SL type | Count | % |
-|---------|-------|---|
-| Profitable SL (stop locked in gain) | 1,616 | 30.7% |
-| Loss-making SL | 3,641 | 69.3% |
+| SL type | Count | % | Was (pre-fix) |
+|---------|-------|---|---------------|
+| Profitable SL (stop locked in gain) | 1,004 | 21.5% | 1,616 / 30.7% |
+| Loss-making SL | 3,669 | 78.5% | 3,641 / 69.3% |
 
 ## Streak Analysis
 
@@ -54,30 +64,31 @@ trade is still in profit, locking in gains. Only the remaining ~60% are true los
 
 | Streak | Count | Cumul % |
 |--------|-------|---------|
-| 1 | 111 | 30.8% |
-| 2 | 95 | 57.2% |
-| 3 | 66 | 75.6% |
-| 4 | 28 | 83.3% |
-| 5 | 19 | 88.6% |
-| 6 | 13 | 92.2% |
-| 7-9 | 18 | 97.2% |
-| 10+ | 10 | 100.0% |
+| 1 | 185 | 45.9% |
+| 2 | 102 | 71.2% |
+| 3 | 66 | 87.6% |
+| 4 | 23 | 93.3% |
+| 5 | 14 | 96.8% |
+| 6 | 7 | 98.5% |
+| 7-9 | 5 | 99.8% |
+| 10+ | 1 | 100.0% |
 
-_Longest streak: **13**_
+_Longest streak: **10**_
 
 ### Consecutive Losing Days / Trades
 
 | Streak | Count | Cumul % |
 |--------|-------|---------|
-| 1 | 243 | 67.5% |
-| 2 | 77 | 88.9% |
-| 3 | 28 | 96.7% |
-| 4 | 6 | 98.3% |
-| 5 | 4 | 99.4% |
-| 6 | 1 | 99.7% |
+| 1 | 221 | 54.7% |
+| 2 | 109 | 81.7% |
+| 3 | 39 | 91.3% |
+| 4 | 14 | 94.8% |
+| 5 | 12 | 97.8% |
+| 6 | 5 | 99.0% |
+| 7-9 | 3 | 99.8% |
 | 10+ | 1 | 100.0% |
 
-_Longest streak: **10**_
+_Longest streak: **14**_
 
 ### Consecutive Loss-Making SL Exits (trade-level)
 

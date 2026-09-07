@@ -137,7 +137,13 @@ def compute_cagr(net_total: float, capital: float, first_day: str, last_day: str
     days = (end - start).days
     if days <= 0 or capital <= 0:
         return 0.0
-    return ((1.0 + net_total / capital) ** (365.25 / days) - 1.0) * 100.0
+    ending_equity_ratio = 1.0 + net_total / capital
+    if ending_equity_ratio <= 0.0:
+        # Losses exceeded the capital base: the account is wiped out. A
+        # fractional power of a negative ratio is a complex number, not a
+        # return, so report the floor instead.
+        return -100.0
+    return (ending_equity_ratio ** (365.25 / days) - 1.0) * 100.0
 
 
 def parse_args() -> argparse.Namespace:
@@ -426,21 +432,26 @@ def resolve_trade_exit(
         stop_hit = (spot_row.low_value <= stop_sma if sold_side == "PE"
                     else spot_row.high_value >= stop_sma)
         if stop_hit:
-            exit_row = contract_data.rows_by_timestamp.get(spot_ts)
+            # The MA touch happens somewhere inside the 5m bar starting at
+            # spot_ts, so that bar's open is a price from before the stop
+            # existed. Fill at the next bar's open - the first price actually
+            # reachable once the touch has been observed.
+            fill_ts = datetime_to_timestamp(current_dt + datetime.timedelta(minutes=5))
+            exit_row = contract_data.rows_by_timestamp.get(fill_ts)
             if exit_row is None:
                 return ExitOutcome(
                     status="SKIPPED", skip_reason="missing_option_exit_timestamp",
-                    exit_timestamp=spot_ts, option_exit_open="",
+                    exit_timestamp=fill_ts, option_exit_open="",
                     exit_reason="stop_loss_ma_touch", exit_spot_ma=format_money(stop_sma),
                     gross_pnl=0.0, brokerage=0.0, net_pnl=0.0,
-                    remarks=f"{contract_data.path.name} missing stop exit timestamp {spot_ts}",
+                    remarks=f"{contract_data.path.name} missing stop exit timestamp {fill_ts}",
                 )
             gross = leg_pnl_after_slippage(entry_row.open_value - exit_row.open_value,
                                            slippage_points_per_order) * contract_multiplier
             brok = brokerage_per_order * 2
             return ExitOutcome(
                 status="TRADED", skip_reason="",
-                exit_timestamp=spot_ts, option_exit_open=exit_row.open_text,
+                exit_timestamp=fill_ts, option_exit_open=exit_row.open_text,
                 exit_reason="stop_loss_ma_touch", exit_spot_ma=format_money(stop_sma),
                 gross_pnl=gross, brokerage=brok, net_pnl=gross - brok, remarks="",
             )
@@ -788,6 +799,7 @@ def write_summary(
         "- Direction rule: above SMA -> short ATM PE; below SMA -> short ATM CE; equal -> no trade",
         "- Stop source: NIFTY 5-minute candles (proxy for 1-minute for multi-year data)",
         "- Stop rule: short PE exits when 5-minute NIFTY low touches the trailing MA; short CE when high touches it",
+        "- Stop fill: the option open of the *next* 5-minute bar, since the MA touch happens inside the bar that detects it",
         "- Trailing MA rule: latest completed 15-minute SMA stays fixed until the next 15-minute close",
         "- Re-entry rule: one active trade at a time; next entry only after next 15-minute boundary post-stop",
         "- Expiry rule: first weekly expiry on or after the trade date",

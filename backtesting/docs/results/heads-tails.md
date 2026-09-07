@@ -7,6 +7,15 @@ Coin-flip entry baselines. These exist to answer 'is the signal doing anything?'
 
 Back to the [backtesting index](../../README.md).
 
+> **Audited 2026-09-08 for the lookahead bugs found in the 25-SMA families —
+> clean, numbers unchanged.** `resolve_sell_leg` checks the bar open first (so a
+> gap through the level fills at the gapped price), then fills a triggered stop
+> or target at the level itself rather than at the bar's open. That is the
+> correct treatment for a resting order. Because this control is sound and the
+> directional strategies were not, it is now the top row of the
+> [headline table](../../README.md#headline-six-year-runs). See the
+> [lookahead audit](../lookahead-audit.md).
+
 Capital Base is what the strategy actually needs, not a fixed reference - read the
 [index notes](../../README.md#reading-the-numbers) before comparing rows across families.
 

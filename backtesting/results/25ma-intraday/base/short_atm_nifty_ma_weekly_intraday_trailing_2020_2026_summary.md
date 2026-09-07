@@ -9,6 +9,7 @@
 - Direction rule: above SMA -> short ATM PE; below SMA -> short ATM CE; equal -> no trade
 - Stop source: NIFTY 5-minute candles (proxy for 1-minute for multi-year data)
 - Stop rule: short PE exits when 5-minute NIFTY low touches the trailing MA; short CE when high touches it
+- Stop fill: the option open of the *next* 5-minute bar, since the MA touch happens inside the bar that detects it
 - Trailing MA rule: latest completed 15-minute SMA stays fixed until the next 15-minute close
 - Re-entry rule: one active trade at a time; next entry only after next 15-minute boundary post-stop
 - Expiry rule: first weekly expiry on or after the trade date
@@ -26,35 +27,35 @@
 
 - Traded days: `1578`
 - Skipped days: `273`
-- Completed trades: `6501`
-- CE-sell count: `3128`
-- PE-sell count: `3373`
-- Stop-loss exits: `5257`
-- Day-close exits: `1244`
-- Winning days: `1037`
-- Losing days: `541`
+- Completed trades: `5888`
+- CE-sell count: `2798`
+- PE-sell count: `3090`
+- Stop-loss exits: `4673`
+- Day-close exits: `1215`
+- Winning days: `839`
+- Losing days: `739`
 - Break-even days: `0`
 - Max profit day: `2024-06-04` net `101950.00`
-- Max loss day: `2020-03-27` net `-58885.00`
-- Max consecutive wins: `13`
-- Max consecutive losses: `10`
-- Max drawdown: `136705.00`
-- Total Profit/Loss: `6711939.00`
-- Total Brokerage: `325050.00`
-- Gross P/L: `7036989.00`
-- CAGR (on Rs 1,000,000): `31.48%`
+- Max loss day: `2026-01-27` net `-77166.25`
+- Max consecutive wins: `10`
+- Max consecutive losses: `14`
+- Max drawdown: `1986025.50`
+- Total Profit/Loss: `-1415086.75`
+- Total Brokerage: `294400.00`
+- Gross P/L: `-1120686.75`
+- CAGR (on Rs 1,000,000): `-100.00%`
 
 ## Yearly Summary
 
 | Year | Traded Days | Wins | Losses | Win% | Net P/L |
 |------|------------|------|--------|------|---------|
-| 2020 | 249 | 166 | 83 | 66.7% | 1085130.00 |
-| 2021 | 246 | 172 | 74 | 69.9% | 1198050.00 |
-| 2022 | 247 | 155 | 92 | 62.8% | 698305.00 |
-| 2023 | 242 | 146 | 96 | 60.3% | 250435.00 |
-| 2024 | 246 | 161 | 85 | 65.4% | 1462353.00 |
-| 2025 | 248 | 171 | 77 | 69.0% | 1466775.75 |
-| 2026 | 100 | 66 | 34 | 66.0% | 550890.25 |
+| 2020 | 249 | 141 | 108 | 56.6% | 130180.00 |
+| 2021 | 246 | 135 | 111 | 54.9% | 92910.00 |
+| 2022 | 247 | 126 | 121 | 51.0% | -493550.00 |
+| 2023 | 242 | 124 | 118 | 51.2% | -516945.00 |
+| 2024 | 246 | 120 | 126 | 48.8% | -516281.00 |
+| 2025 | 248 | 137 | 111 | 55.2% | 14991.75 |
+| 2026 | 100 | 56 | 44 | 56.0% | -126392.50 |
 
 ## Exceptions
 
@@ -305,13 +306,11 @@
 - `2019-12-31`: `missing_option_entry_timestamp`. NIFTY_12250_CE_02_JAN_20.csv missing entry 2019-12-31T09:30:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T09:45:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T10:00:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T10:15:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T10:30:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T10:45:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T11:00:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T11:15:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T11:30:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T11:45:00+05:30; NIFTY_12250_PE_02_JAN_20.csv missing entry 2019-12-31T12:00:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T12:15:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T12:30:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T12:45:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T13:00:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T13:15:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T13:30:00+05:30; NIFTY_12250_PE_02_JAN_20.csv missing entry 2019-12-31T13:45:00+05:30; NIFTY_12250_PE_02_JAN_20.csv missing entry 2019-12-31T14:00:00+05:30; NIFTY_12250_PE_02_JAN_20.csv missing entry 2019-12-31T14:15:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T14:30:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T14:45:00+05:30; NIFTY_12200_CE_02_JAN_20.csv missing entry 2019-12-31T15:00:00+05:30
 - `2020-03-13`: `missing_spot_5m_timestamp`. Missing 5-minute NIFTY monitoring timestamps: 2020-03-13T09:30:00+05:30, 2020-03-13T09:35:00+05:30, 2020-03-13T09:40:00+05:30, 2020-03-13T09:45:00+05:30, 2020-03-13T09:50:00+05:30, 2020-03-13T09:55:00+05:30, 2020-03-13T10:00:00+05:30, 2020-03-13T10:05:00+05:30, 2020-03-13T10:10:00+05:30, 2020-03-13T10:15:00+05:30
 - `2020-03-23`: `missing_spot_5m_timestamp`. Missing 5-minute NIFTY monitoring timestamps: 11 missing from 2020-03-23T10:00:00+05:30 through 2020-03-23T10:50:00+05:30; first 5: 2020-03-23T10:00:00+05:30, 2020-03-23T10:05:00+05:30, 2020-03-23T10:10:00+05:30, 2020-03-23T10:15:00+05:30, 2020-03-23T10:20:00+05:30; last 5: 2020-03-23T10:30:00+05:30, 2020-03-23T10:35:00+05:30, 2020-03-23T10:40:00+05:30, 2020-03-23T10:45:00+05:30, 2020-03-23T10:50:00+05:30
-- `2020-03-27`: `missing_option_exit_timestamp`. NIFTY_8550_CE_01_APR_20.csv missing stop exit timestamp 2020-03-27T11:55:00+05:30
 - `2020-11-14`: `missing_spot_5m_timestamp`. Missing 5-minute NIFTY monitoring timestamps: 70 missing from 2020-11-14T09:30:00+05:30 through 2020-11-14T15:15:00+05:30; first 5: 2020-11-14T09:30:00+05:30, 2020-11-14T09:35:00+05:30, 2020-11-14T09:40:00+05:30, 2020-11-14T09:45:00+05:30, 2020-11-14T09:50:00+05:30; last 5: 2020-11-14T14:55:00+05:30, 2020-11-14T15:00:00+05:30, 2020-11-14T15:05:00+05:30, 2020-11-14T15:10:00+05:30, 2020-11-14T15:15:00+05:30
 - `2021-02-24`: `missing_spot_5m_timestamp`. Missing 5-minute NIFTY monitoring timestamps: 61 missing from 2021-02-24T10:10:00+05:30 through 2021-02-24T15:15:00+05:30; first 5: 2021-02-24T10:10:00+05:30, 2021-02-24T10:15:00+05:30, 2021-02-24T10:20:00+05:30, 2021-02-24T10:25:00+05:30, 2021-02-24T10:30:00+05:30; last 5: 2021-02-24T14:55:00+05:30, 2021-02-24T15:00:00+05:30, 2021-02-24T15:05:00+05:30, 2021-02-24T15:10:00+05:30, 2021-02-24T15:15:00+05:30
 - `2021-11-04`: `missing_spot_5m_timestamp`. Missing 5-minute NIFTY monitoring timestamps: 63 missing from 2021-11-04T09:30:00+05:30 through 2021-11-04T14:40:00+05:30; first 5: 2021-11-04T09:30:00+05:30, 2021-11-04T09:35:00+05:30, 2021-11-04T09:40:00+05:30, 2021-11-04T09:45:00+05:30, 2021-11-04T09:50:00+05:30; last 5: 2021-11-04T14:20:00+05:30, 2021-11-04T14:25:00+05:30, 2021-11-04T14:30:00+05:30, 2021-11-04T14:35:00+05:30, 2021-11-04T14:40:00+05:30
-- `2022-09-22`: `missing_option_exit_timestamp`. NIFTY_17650_PE_22_SEP_22.csv missing stop exit timestamp 2022-09-22T14:55:00+05:30
+- `2022-09-22`: `missing_option_exit_timestamp`. NIFTY_17650_PE_22_SEP_22.csv missing stop exit timestamp 2022-09-22T15:00:00+05:30
 - `2022-10-24`: `missing_spot_5m_timestamp`. Missing 5-minute NIFTY monitoring timestamps: 70 missing from 2022-10-24T09:30:00+05:30 through 2022-10-24T15:15:00+05:30; first 5: 2022-10-24T09:30:00+05:30, 2022-10-24T09:35:00+05:30, 2022-10-24T09:40:00+05:30, 2022-10-24T09:45:00+05:30, 2022-10-24T09:50:00+05:30; last 5: 2022-10-24T14:55:00+05:30, 2022-10-24T15:00:00+05:30, 2022-10-24T15:05:00+05:30, 2022-10-24T15:10:00+05:30, 2022-10-24T15:15:00+05:30
-- `2023-04-11`: `equal_close_and_sma`. Close 17675.7 equals SMA 17675.70
 - `2023-06-23`: `missing_option_entry_timestamp`. NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T09:30:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-23T09:45:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T10:00:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T10:15:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T10:30:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T10:45:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T11:00:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T11:15:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T11:30:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T11:45:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T12:00:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T12:15:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T12:30:00+05:30; NIFTY_18750_CE_28_JUN_23.csv missing entry 2023-06-23T12:45:00+05:30; NIFTY_18750_CE_28_JUN_23.csv missing entry 2023-06-23T13:00:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T13:15:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T13:30:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T13:45:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T14:00:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T14:15:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T14:30:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T14:45:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-23T15:00:00+05:30
 - `2023-06-26`: `missing_option_entry_timestamp`. NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-26T09:30:00+05:30; NIFTY_18700_PE_28_JUN_23.csv missing entry 2023-06-26T09:45:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T10:00:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T10:15:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T10:30:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T10:45:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T11:00:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T11:15:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-26T11:30:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-26T11:45:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-26T12:00:00+05:30; NIFTY_18700_CE_28_JUN_23.csv missing entry 2023-06-26T12:15:00+05:30; NIFTY_18700_PE_28_JUN_23.csv missing entry 2023-06-26T12:30:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T12:45:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T13:00:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T13:15:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T13:30:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T13:45:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T14:00:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T14:15:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T14:30:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T14:45:00+05:30; NIFTY_18650_CE_28_JUN_23.csv missing entry 2023-06-26T15:00:00+05:30
 - `2023-06-27`: `missing_option_entry_timestamp`. NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T09:30:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T09:45:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T10:00:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T10:15:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T10:30:00+05:30; NIFTY_18700_PE_28_JUN_23.csv missing entry 2023-06-27T10:45:00+05:30; NIFTY_18700_PE_28_JUN_23.csv missing entry 2023-06-27T11:00:00+05:30; NIFTY_18700_PE_28_JUN_23.csv missing entry 2023-06-27T11:15:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T11:30:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T11:45:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T12:00:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T12:15:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T12:30:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T12:45:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T13:00:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T13:15:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T13:30:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T13:45:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T14:00:00+05:30; NIFTY_18800_PE_28_JUN_23.csv missing entry 2023-06-27T14:15:00+05:30; NIFTY_18800_PE_28_JUN_23.csv missing entry 2023-06-27T14:30:00+05:30; NIFTY_18750_PE_28_JUN_23.csv missing entry 2023-06-27T14:45:00+05:30; NIFTY_18800_PE_28_JUN_23.csv missing entry 2023-06-27T15:00:00+05:30

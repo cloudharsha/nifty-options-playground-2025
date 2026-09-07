@@ -18,24 +18,30 @@ Tested across **4 gap thresholds** (75 / 100 / 125 / 150 pts) × **3 skip rates*
 | `*_magap_summary.md` | 1 | Full summary across all gap/skip combinations |
 | `*_magap.log` | 1 | Run log |
 
+> **Corrected 2026-09-08.** These runs previously carried lookahead: the trailing
+> stop filled at the open of the very 5-minute bar that triggered it, and the
+> 09:20 entry read a 15-minute bar that does not close until 09:30. Every figure
+> below is post-fix. See the [lookahead audit](../../../docs/lookahead-audit.md).
+
 ## Key Results (30% skip, averaged across 5 seeds)
 
-| Gap threshold | Avg Net P/L | Avg CAGR | Max DD |
-|--------------|-------------|----------|--------|
-| 75 pts | Rs 32,23,660 | 21.26% | Rs 1,00,874 |
-| 100 pts | Rs 36,49,025 | 22.83% | Rs 1,21,120 |
-| 125 pts | Rs 39,54,349 | 23.88% | Rs 1,40,008 |
-| 150 pts | Rs 42,92,189 | 24.99% | Rs 1,42,824 |
+| Gap threshold | Avg Net P/L | Avg CAGR | Max DD | Was (pre-fix) |
+|--------------|-------------|----------|--------|---------------|
+| 75 pts | −Rs 1,19,994 | −2.27% | Rs 6,31,263 | Rs 32,23,660 / 21.26% |
+| 100 pts | −Rs 2,04,727 | −3.87% | Rs 7,80,258 | Rs 36,49,025 / 22.83% |
+| 125 pts | −Rs 3,24,239 | −6.48% | Rs 8,58,006 | Rs 39,54,349 / 23.88% |
+| 150 pts | −Rs 3,13,403 | −6.38% | Rs 9,23,108 | Rs 42,92,189 / 24.99% |
 
-Tighter MA gap filter = fewer trades, lower CAGR, but also meaningfully lower drawdown.
+The ordering inverts after the fix: the *tightest* filter is now the least-bad,
+because trading less of this signal costs less. None reach break-even.
 See `*_magap_summary.md` for the full 40%/50% skip-rate breakdown.
 
 ## SL Exit Quality (pooled across all 60 runs)
 
-| SL type | Count | % |
-|---------|-------|---|
-| Profitable SL (trailing stop locked in gain) | 30,497 | 39.0% |
-| Loss-making SL | 47,789 | 61.0% |
+| SL type | Count | % | Was (pre-fix) |
+|---------|-------|---|---------------|
+| Profitable SL (trailing stop locked in gain) | 24,453 | 29.8% | 30,497 / 39.0% |
+| Loss-making SL | 57,739 | 70.2% | 47,789 / 61.0% |
 
 ## Streak Analysis
 
@@ -46,31 +52,31 @@ See `*_magap_summary.md` for the full 40%/50% skip-rate breakdown.
 
 | Streak | Count | Cumul % |
 |--------|-------|---------|
-| 1 | 11,382 | 47.4% |
-| 2 | 6,270 | 73.6% |
-| 3 | 3,360 | 87.6% |
-| 4 | 1,654 | 94.5% |
-| 5 | 624 | 97.1% |
-| 6 | 362 | 98.6% |
-| 7-9 | 294 | 99.8% |
-| 10+ | 50 | 100.0% |
+| 1 | 13,626 | 57.0% |
+| 2 | 5,698 | 80.8% |
+| 3 | 2,463 | 91.1% |
+| 4 | 1,157 | 96.0% |
+| 5 | 571 | 98.3% |
+| 6 | 182 | 99.1% |
+| 7-9 | 204 | 100.0% |
+| 10+ | 10 | 100.0% |
 
-_Longest streak: **17**_
+_Longest streak: **13**_
 
 ### Consecutive Losing Days / Trades
 
 | Streak | Count | Cumul % |
 |--------|-------|---------|
-| 1 | 11,762 | 49.0% |
-| 2 | 5,861 | 73.4% |
-| 3 | 3,098 | 86.3% |
-| 4 | 1,768 | 93.6% |
-| 5 | 759 | 96.8% |
-| 6 | 479 | 98.8% |
-| 7-9 | 242 | 99.8% |
-| 10+ | 51 | 100.0% |
+| 1 | 9,172 | 38.3% |
+| 2 | 6,160 | 64.0% |
+| 3 | 3,533 | 78.8% |
+| 4 | 2,266 | 88.3% |
+| 5 | 1,186 | 93.2% |
+| 6 | 841 | 96.7% |
+| 7-9 | 621 | 99.3% |
+| 10+ | 160 | 100.0% |
 
-_Longest streak: **19**_
+_Longest streak: **20**_
 
 ### Consecutive Loss-Making SL Exits (trade-level)
 
@@ -78,13 +84,13 @@ _Longest streak: **19**_
 
 | Streak | Count | Cumul % |
 |--------|-------|---------|
-| 1 | 11,687 | 49.3% |
-| 2 | 5,942 | 74.3% |
-| 3 | 2,973 | 86.9% |
-| 4 | 1,726 | 94.1% |
-| 5 | 691 | 97.0% |
-| 6 | 430 | 98.9% |
-| 7-9 | 221 | 99.8% |
-| 10+ | 51 | 100.0% |
+| 1 | 9,542 | 39.7% |
+| 2 | 6,111 | 65.2% |
+| 3 | 3,471 | 79.6% |
+| 4 | 2,208 | 88.8% |
+| 5 | 1,144 | 93.6% |
+| 6 | 794 | 96.9% |
+| 7-9 | 597 | 99.4% |
+| 10+ | 149 | 100.0% |
 
-_Longest streak: **19**_
+_Longest streak: **20**_

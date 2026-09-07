@@ -21,22 +21,32 @@ Each variant was run at skip rates of **30% / 40% / 50%** with **5 random seeds*
 | `*_0920_random_summary.md` | 1 | Aggregated summary for 09:20 variant |
 | `*.log` | 2 | Run logs |
 
+> **Corrected 2026-09-08.** These runs previously carried lookahead: the trailing
+> stop filled at the open of the very 5-minute bar that triggered it, and the
+> 09:20 entry read a 15-minute bar that does not close until 09:30. Every figure
+> below is post-fix. See the [lookahead audit](../../../docs/lookahead-audit.md).
+
 ## Key Results (averaged across all 30 runs)
 
-| Skip rate | Avg Net P/L | Avg CAGR |
-|-----------|-------------|----------|
-| 30% | ~Rs 57–68L | ~28–32% |
-| 40% | ~Rs 48–58L | ~26–29% |
-| 50% | ~Rs 40–48L | ~24–26% |
+Every skip rate is now a loss, in both entry variants. The 09:20 variant is far
+worse than the 09:30 one because its entire signal was the ten-minute peek.
+
+| Skip rate | 09:30 entry — Avg Net P/L | Avg CAGR | 09:20 entry — Avg Net P/L | Avg CAGR |
+|-----------|--------------------------|----------|---------------------------|----------|
+| 30% | −Rs 4,13,558 | −7.85% | −Rs 11,68,852 | −69.06% |
+| 40% | −Rs 1,43,304 | −2.20% | −Rs 10,52,214 | −51.39% |
+| 50% | −Rs 3,70,234 | −6.58% | −Rs 9,50,304 | −39.07% |
+
+Pre-fix these read ~Rs 57–68L and ~28–32% at the 30% skip rate.
 
 See the individual `*_summary.md` files for precise per-seed and per-skip-rate numbers.
 
 ## SL Exit Quality (pooled across all 30 runs)
 
-| SL type | Count | % |
-|---------|-------|---|
-| Profitable SL (stop locked in gain) | 22,792 | 31.0% |
-| Loss-making SL | 50,706 | 69.0% |
+| SL type | Count | % | Was (pre-fix) |
+|---------|-------|---|---------------|
+| Profitable SL (stop locked in gain) | 14,786 | 21.6% | 22,792 / 31.0% |
+| Loss-making SL | 53,603 | 78.4% | 50,706 / 69.0% |
 
 ## Streak Analysis
 
@@ -47,14 +57,14 @@ See the individual `*_summary.md` files for precise per-seed and per-skip-rate n
 
 | Streak | Count | Cumul % |
 |--------|-------|---------|
-| 1 | 11,503 | 52.1% |
-| 2 | 5,225 | 75.7% |
-| 3 | 2,816 | 88.5% |
-| 4 | 1,364 | 94.7% |
-| 5 | 591 | 97.3% |
-| 6 | 314 | 98.8% |
-| 7-9 | 239 | 99.8% |
-| 10+ | 37 | 100.0% |
+| 1 | 11,814 | 59.6% |
+| 2 | 4,398 | 81.7% |
+| 3 | 2,022 | 91.9% |
+| 4 | 936 | 96.7% |
+| 5 | 363 | 98.5% |
+| 6 | 159 | 99.3% |
+| 7-9 | 132 | 100.0% |
+| 10+ | 9 | 100.0% |
 
 _Longest streak: **15**_
 
@@ -62,16 +72,16 @@ _Longest streak: **15**_
 
 | Streak | Count | Cumul % |
 |--------|-------|---------|
-| 1 | 9,430 | 42.7% |
-| 2 | 5,256 | 66.5% |
-| 3 | 3,092 | 80.5% |
-| 4 | 1,730 | 88.3% |
-| 5 | 1,036 | 93.0% |
-| 6 | 576 | 95.6% |
-| 7-9 | 808 | 99.3% |
-| 10+ | 154 | 100.0% |
+| 1 | 7,465 | 37.7% |
+| 2 | 4,160 | 58.6% |
+| 3 | 2,758 | 72.5% |
+| 4 | 1,974 | 82.5% |
+| 5 | 1,047 | 87.8% |
+| 6 | 901 | 92.3% |
+| 7-9 | 1,127 | 98.0% |
+| 10+ | 395 | 100.0% |
 
-_Longest streak: **19**_
+_Longest streak: **23**_
 
 ### Consecutive Loss-Making SL Exits (trade-level)
 
@@ -79,13 +89,13 @@ _Longest streak: **19**_
 
 | Streak | Count | Cumul % |
 |--------|-------|---------|
-| 1 | 9,680 | 44.2% |
-| 2 | 5,179 | 67.9% |
-| 3 | 3,097 | 82.0% |
-| 4 | 1,603 | 89.3% |
-| 5 | 1,010 | 94.0% |
-| 6 | 540 | 96.4% |
-| 7-9 | 671 | 99.5% |
-| 10+ | 113 | 100.0% |
+| 1 | 7,802 | 39.2% |
+| 2 | 4,265 | 60.6% |
+| 3 | 2,829 | 74.8% |
+| 4 | 1,880 | 84.2% |
+| 5 | 992 | 89.2% |
+| 6 | 846 | 93.4% |
+| 7-9 | 1,013 | 98.5% |
+| 10+ | 296 | 100.0% |
 
-_Longest streak: **16**_
+_Longest streak: **22**_

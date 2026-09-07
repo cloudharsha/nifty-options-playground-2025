@@ -115,7 +115,13 @@ def compute_cagr(net_total: float, capital: float, first_day: str, last_day: str
     days = (end - start).days
     if days <= 0 or capital <= 0:
         return 0.0
-    return ((1.0 + net_total / capital) ** (365.25 / days) - 1.0) * 100.0
+    ending_equity_ratio = 1.0 + net_total / capital
+    if ending_equity_ratio <= 0.0:
+        # Losses exceeded the capital base: the account is wiped out. A
+        # fractional power of a negative ratio is a complex number, not a
+        # return, so report the floor instead.
+        return -100.0
+    return (ending_equity_ratio ** (365.25 / days) - 1.0) * 100.0
 
 
 def parse_args() -> argparse.Namespace:

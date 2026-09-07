@@ -108,7 +108,13 @@ def compute_cagr(net_total: float, capital: float, first_day: str, last_day: str
     days = (end - start).days
     if days <= 0 or capital <= 0:
         return 0.0
-    return ((1.0 + net_total / capital) ** (365.25 / days) - 1.0) * 100.0
+    ending_equity_ratio = 1.0 + net_total / capital
+    if ending_equity_ratio <= 0.0:
+        # Losses exceeded the capital base: the account is wiped out. A
+        # fractional power of a negative ratio is a complex number, not a
+        # return, so report the floor instead.
+        return -100.0
+    return (ending_equity_ratio ** (365.25 / days) - 1.0) * 100.0
 
 
 def parse_args() -> argparse.Namespace:
@@ -125,7 +131,7 @@ def parse_args() -> argparse.Namespace:
                         default=repo_root / "NiftyOptions_2020_2026" / "Options")
     parser.add_argument("--results-dir", type=Path,
                         default=repo_root / "backtesting" / "results" / "25ma-overnight" / "short-offsets")
-    parser.add_argument("--signal-time", default="15:15")
+    parser.add_argument("--signal-time", default="15:00")
     parser.add_argument("--entry-time", default="15:29")
     parser.add_argument("--exit-time", default="09:16")
     parser.add_argument("--ma-period", type=int, default=25)
@@ -621,7 +627,7 @@ def write_summary(results: List[TradeResult], path: Path,
         "## Strategy Details",
         "",
         "- Signal source: NIFTY 15-minute close",
-        f"- Signal bar time: `{args.signal_time}` row as `15:30` close proxy",
+        f"- Signal bar time: `{args.signal_time}` (15m bar, closes 15 minutes later)",
         f"- MA rule: {args.ma_period}-SMA of spot closes including the signal bar",
         "- Direction rule: above SMA -> short PE; below SMA -> short CE; equal -> no trade",
         "- Strike ranges: OTM 100/200/300/400/500 and ITM 100/200/300, each tested independently",
@@ -676,7 +682,9 @@ def write_summary(results: List[TradeResult], path: Path,
         f"- Fallback window: {args.fallback_window_minutes}m — when an exact timestamp is missing, "
         "the nearest bar (before or after) within the window is used; the actual timestamp is recorded "
         "in the `remarks` column. Set `--fallback-window-minutes 0` to restore exact-match-only behaviour.",
-        "- The 15:15 spot row is the 15:30 close proxy; 15:29 option open is the entry proxy.",
+        "- The 15:00 spot row closes at 15:15, so it is fully known at the 15:29 entry.",
+        "- The 15:15 row was used previously; it does not close until 15:30 and so",
+        "  was not available to a 15:29 entry.",
         "- Expiry folder dates are the source of truth for expiry selection.",
         "- Lot sizes are dynamic per expiry era to maintain ~300 quantity throughout the period.",
     ])
