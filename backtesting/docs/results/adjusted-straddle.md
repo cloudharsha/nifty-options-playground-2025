@@ -29,6 +29,38 @@ Capital Base is what the strategy actually needs, not a fixed reference - read t
 | Current | 2020-2026 | Adjusted ATM Straddle - Monthly contracts, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 1,57,898 | 3.45% CAGR | Rs 41,016 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_hold4_stale_srch5_fb_cap3_summary.md) | All 76 monthly cycles traded, no skips. 2022 and 2023 lose; win rate 45-58% every year, barely above a coin flip |
 | Current | 2020-2026 | Adjusted ATM Straddle - Weekly, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 7,93,303 | 13.23% CAGR | Rs 63,497 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_hold4_stale_srch5_fb_cap3_summary.md) | Hold-matched control for the monthly row: same capital, same 4-session hold, same rules. 333 cycles vs monthly's 76 |
 
+## Rolling instead of expiring
+
+Holding to 15:20 on expiry day has two problems the backtest was quietly
+ignoring: the book went **flat overnight every week** between the expiry-day
+exit and the next morning's entry, and it carried expiry-day gamma, where an ATM
+straddle moves fastest and an adjustment is least likely to fill anywhere near
+the recorded price.
+
+`--mode roll` fixes both. It enters at 15:20 one session before expiry in the
+*next* week's contract and rolls at 15:20 one session before that expiry, so the
+old position closes and the new one opens in the same minute. Every cycle exits
+with a full day of contract life left, and one cycle's exit day is the next
+cycle's entry day.
+
+On the 73 cycles where both can be measured (from 2024-12-24):
+
+| | Cycles | Net P/L | Per cycle | Win rate | Max DD |
+|---|---:|---:|---:|---:|---:|
+| Roll, never holds expiry day | 73 | Rs 4,05,833 | Rs 5,559 | 75.3% | **Rs 25,597** |
+| Held to expiry | 73 | Rs 3,56,517 | Rs 4,884 | 72.6% | Rs 55,647 |
+
+The roll earns 14% more and halves the drawdown. Giving up the last day of
+theta - normally the richest - costs less than the expiry-day gamma it avoids.
+
+**This is an 18-month result, not a six-year one.** The roll must buy next
+week's contract a day before this week expires, and until 2025 the dataset has
+no bars for that contract until the morning after the current one expires:
+pre-2025 weekly contracts carry exactly 5 sessions, starting the day after the
+previous expiry. So 2020-2024 traded zero roll cycles. The same limitation means
+the overnight flat gap in the held-to-expiry runs is not fixable on this data
+either - the next contract genuinely is not there to roll into.
+
 ## Monthly vs weekly
 
 Holding the same strategy on monthly contracts is worse, and the reason is
@@ -40,6 +72,7 @@ the contract:
 |---|---:|---:|---:|---:|
 | Weekly | 333 | Rs 2,382 | Rs 7,93,303 | 13.23% |
 | Monthly | 76 | Rs 2,078 | Rs 1,57,898 | 3.45% |
+| Current | 2024-12 - 2026-06 | Adjusted ATM Straddle - Weekly continuous roll, never holds expiry day (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.48L | Rs 4,05,833 | 39.05% CAGR | Rs 25,597 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_roll_otm_stale_srch5_fb_cap3_summary.md) | **73 cycles only** - the roll needs next week's contract to exist a day early, and pre-2025 data does not carry it. Beats held-to-expiry on the same 73 cycles: Rs 4,05,833 vs Rs 3,56,517, drawdown Rs 25,597 vs Rs 55,647 |
 
 A monthly cycle earns 87% of what a weekly cycle earns - close enough that the
 monthly contract is not the problem. There are simply **4.4x fewer of them** for

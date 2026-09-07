@@ -111,7 +111,9 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="Adjusted ATM straddle with half-trigger / 25% adds — NIFTY 2020-2026."
     )
-    p.add_argument("--mode", choices=["intraday", "expiry"], default="intraday")
+    p.add_argument("--mode", choices=["intraday", "expiry", "roll"], default="intraday")
+    p.add_argument("--roll-time", default="15:20",
+                   help="Time of day the weekly roll happens in --mode roll.")
     p.add_argument("--expiry-type", choices=["weekly", "monthly"], default="weekly",
                    help="monthly = last expiry of each calendar month; "
                         "weekly = every expiry folder.")
@@ -623,6 +625,31 @@ def build_intraday_cycles(days: List[str], expiries: List[str],
     return out
 
 
+def build_roll_cycles(days: List[str], expiries: List[str],
+                      expiry_set: Set[str]) -> List[Tuple[str, str, str, List[str]]]:
+    """Continuous weekly roll that never holds into expiry day.
+
+    At the roll point - one session before expiry E_i - the old position is
+    closed and a new one opened in the NEXT week's contract (E_i+1). That
+    position is held until the session before E_i+1, where it rolls again.
+
+    So each cycle exits with a full day of life left in the contract, and one
+    cycle's exit day is the next cycle's entry day: the book is never flat and
+    never carries expiry-day gamma.
+    """
+    out = []
+    day_pos = {d: i for i, d in enumerate(days)}
+    tradable = [e for e in expiries if e in day_pos]
+    for i in range(len(tradable) - 1):
+        entry_idx = day_pos[tradable[i]] - 1        # session before this expiry
+        exit_idx = day_pos[tradable[i + 1]] - 1     # session before the next one
+        if entry_idx < 0 or exit_idx <= entry_idx:
+            continue
+        session_days = days[entry_idx:exit_idx + 1]
+        out.append((days[entry_idx], days[exit_idx], tradable[i + 1], session_days))
+    return out
+
+
 def build_expiry_cycles(days: List[str], expiries: List[str],
                         expiry_set: Set[str], max_hold: int = 0
                         ) -> List[Tuple[str, str, str, List[str]]]:
@@ -717,7 +744,12 @@ def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging
     for c in skipped:
         skip_counts[c.skip_reason] = skip_counts.get(c.skip_reason, 0) + 1
 
-    mode_desc = ("Intraday — enter 09:20, close all legs 15:20 same session."
+    if args.mode == "roll":
+        mode_desc = (f"Weekly roll — enter {args.roll_time} one session before expiry in the "
+                     f"NEXT week's contract, hold, then roll at {args.roll_time} one session "
+                     "before that expiry. Never flat, never holds expiry-day gamma.")
+    else:
+        mode_desc = ("Intraday — enter 09:20, close all legs 15:20 same session."
                  if args.mode == "intraday" else
                  "Held to expiry — enter 09:20 the first session after the previous "
                  f"{args.expiry_type} expiry, "
@@ -836,6 +868,8 @@ def main() -> None:
     args.results_dir.mkdir(parents=True, exist_ok=True)
     logger = configure_logger(args.results_dir / f"{BASE_FILENAME}_{output_tag(args)}.log")
 
+    if args.mode == "roll":
+        args.entry_time = args.roll_time
     days, spot_open, spot_series = load_spot(args.spot_file, args.entry_time)
     days = [d for d in days if args.start_date <= d <= args.end_date]
     expiries = sorted(p.name for p in args.options_dir.iterdir() if p.is_dir())
@@ -848,6 +882,8 @@ def main() -> None:
 
     if args.mode == "intraday":
         schedule = build_intraday_cycles(days, expiries, expiry_set)
+    elif args.mode == "roll":
+        schedule = build_roll_cycles(days, expiries, expiry_set)
     else:
         schedule = build_expiry_cycles(days, expiries, expiry_set, args.max_hold_sessions)
 
