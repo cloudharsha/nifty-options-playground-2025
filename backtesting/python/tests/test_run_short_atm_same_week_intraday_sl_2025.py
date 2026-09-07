@@ -9,7 +9,7 @@ import unittest
 from pathlib import Path
 
 
-MODULE_PATH = Path(__file__).resolve().parents[1] / "run_short_atm_same_week_intraday_sl_2025.py"
+MODULE_PATH = Path(__file__).resolve().parents[1] / "legacy" / "run_short_atm_same_week_intraday_sl_2025.py"
 SPEC = importlib.util.spec_from_file_location("run_short_atm_same_week_intraday_sl_2025", MODULE_PATH)
 assert SPEC is not None and SPEC.loader is not None
 MODULE = importlib.util.module_from_spec(SPEC)
