@@ -5,6 +5,8 @@ ATM straddles that adjust as the market moves - when one side decays to half the
 - Scripts: [`backtesting/python/adjusted-straddle-half-add/`](../../python/adjusted-straddle-half-add/)
 - Results: [`backtesting/results/adjusted-straddle-half-add/`](../../results/adjusted-straddle-half-add/)
 
+**The settled spec from this family is written up in [strategy-weekly-adjusted-straddle.md](../strategy-weekly-adjusted-straddle.md).**
+
 Back to the [backtesting index](../../README.md).
 
 Capital Base is what the strategy actually needs, not a fixed reference - read the

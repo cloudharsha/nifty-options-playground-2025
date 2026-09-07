@@ -21,6 +21,9 @@ backtesting/
     legacy/ legacy-2/         archived runs
 ```
 
+**Settled strategy:** [Weekly Adjusted ATM Straddle](docs/strategy-weekly-adjusted-straddle.md)
+— the spec arrived at after testing 20+ variants, with the rejected alternatives and why.
+
 ## Results by strategy family
 
 | Family | What it tests | Runs |
