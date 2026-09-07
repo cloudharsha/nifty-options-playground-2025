@@ -12,8 +12,11 @@ read is worth more than a profitable one you can't reproduce.
 Everything is plain Python 3.13 with the standard library. No pandas, no numpy,
 nothing to install.
 
-**→ [Start with the backtesting index](backtesting/README.md)** — every strategy,
-what it does, and what it returned.
+**→ [Finalized strategies](backtesting/finalized/)** — the ones that finished testing,
+with full rules and frozen results.
+
+**→ [Backtesting index](backtesting/README.md)** — every strategy tried, what it does,
+and what it returned.
 
 ## What's in the repo
 
