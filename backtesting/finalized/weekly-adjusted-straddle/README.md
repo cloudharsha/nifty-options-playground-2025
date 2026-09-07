@@ -8,6 +8,13 @@ This folder is self-contained: the rules below, and in [`results/`](results/) th
 exact output files the numbers come from. Re-running the strategy overwrites
 `backtesting/results/`, but never this folder.
 
+> **If you cannot check hourly**, see
+> [weekly-adjusted-straddle-low-touch](../weekly-adjusted-straddle-low-touch/) —
+> the same strategy at three checks a day with a 0.40 trigger: 12.54% CAGR and
+> 2.95 adjustments a week. Note that it changes the *trigger* as well as the
+> frequency. Simply running this spec's 0.50 trigger at three checks a day is
+> worse than either (12.20% CAGR on a Rs 80,378 drawdown).
+
 ---
 
 ## The rules

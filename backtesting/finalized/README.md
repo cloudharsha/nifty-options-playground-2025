@@ -10,6 +10,12 @@ a backtest overwrites `../results/`, never this folder.
 | Strategy | Instrument | CAGR | Max DD | Effort | Details |
 |---|---|---:|---:|---|---|
 | [Weekly Adjusted ATM Straddle](weekly-adjusted-straddle/) | NIFTY weekly options, 1 lot | 13.19% | Rs 42,159 | ~6 adjustments/week | [README](weekly-adjusted-straddle/README.md) |
+| [Weekly Adjusted ATM Straddle — Low-Touch](weekly-adjusted-straddle-low-touch/) | NIFTY weekly options, 1 lot | 12.54% | Rs 56,768 | **~3 adjustments/week, 3 checks/day** | [README](weekly-adjusted-straddle-low-touch/README.md) |
+
+The two rows are the same strategy at two paces. Trade the first if you can
+genuinely check hourly — it returns more and risks less. Trade the second if you
+cannot, because it is tuned for three checks a day rather than simply being the
+first one watched less often, which is materially worse than either.
 
 ## Reading these
 
