@@ -31,6 +31,29 @@ Capital Base is what the strategy actually needs, not a fixed reference - read t
 | Current | 2020-2026 | Adjusted ATM Straddle - Monthly contracts, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 1,57,898 | 3.45% CAGR | Rs 41,016 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_hold4_stale_srch5_fb_cap3_summary.md) | All 76 monthly cycles traded, no skips. 2022 and 2023 lose; win rate 45-58% every year, barely above a coin flip |
 | Current | 2020-2026 | Adjusted ATM Straddle - Weekly, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 7,93,303 | 13.23% CAGR | Rs 63,497 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_hold4_stale_srch5_fb_cap3_summary.md) | Hold-matched control for the monthly row: same capital, same 4-session hold, same rules. 333 cycles vs monthly's 76 |
 
+## Check frequency is the biggest lever
+
+Tuned last, and it mattered more than anything tuned before it. All rows trade
+every week across the full 6 years:
+
+| Checks | Trigger | Adj/cycle | CAGR | Max DD |
+|---|---|---:|---:|---:|
+| Every minute + strike search | 0.50 | 14.8 | 16.53% | Rs 99,098 |
+| Every 15 min | 0.50 | 9.2 | 15.60% | Rs 91,993 |
+| Every 30 min | 0.50 | 7.5 | 14.67% | Rs 68,066 |
+| **Every 60 min** | **0.50** | **5.9** | **15.00%** | **Rs 67,919** |
+| Every 60 min | 0.40 | 4.1 | 13.52% | Rs 68,889 |
+| Every 30 min | 0.40 | 4.7 | 13.15% | Rs 79,180 |
+| Every 30 min | 0.35 | 3.8 | 12.48% | Rs 75,466 |
+
+Minute-level to hourly cuts adjustments 60% and drawdown 32% for 1.5 CAGR
+points. Hourly also beats 30-minute on all three axes simultaneously - 30-minute
+is simply dominated, not a trade-off.
+
+A minute-level checker reacts to noise: it opens a leg, pays Rs 60, and unwinds
+it shortly after when the move reverses. An hourly check only sees moves that
+persisted.
+
 ## Does avoiding expiry day help?
 
 Barely on return, and **not at all on risk**. Closing one session before expiry
@@ -96,6 +119,10 @@ the contract:
 | Current | 2024-12 - 2026-06 | Adjusted ATM Straddle - Weekly continuous roll, never holds expiry day (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.48L | Rs 4,05,833 | 39.05% CAGR | Rs 25,597 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_roll_otm_stale_srch5_fb_cap3_summary.md) | **73 cycles only** - the roll needs next week's contract to exist a day early, and pre-2025 data does not carry it. Beats held-to-expiry on the same 73 cycles: Rs 4,05,833 vs Rs 3,56,517, drawdown Rs 25,597 vs Rs 55,647 |
 | Current | 2020-2026 | Adjusted ATM Straddle - **FINAL SPEC**: exit 1 session before expiry, ATM-only entry (cap 3, OTM-vs-spot) | Profit | Rs 6.45L | Rs 9,34,197 | 14.94% CAGR | Rs 41,246 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_cap3_summary.md) | 245 cycles, every year profitable. See [the spec](../strategy-weekly-adjusted-straddle.md) |
 | Current | 2020-2026 | Adjusted ATM Straddle - exit 1 session before expiry, +/-5 strike search (cap 3, OTM-vs-spot) | Profit | Rs 6.48L | Rs 10,84,694 | 16.53% CAGR | Rs 99,098 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_srch5_cap3_summary.md) | 1.6 more CAGR points than the final spec for 2.4x the drawdown - the 77 extra weeks earn a third of a core week |
+| Current | 2020-2026 | Adjusted ATM Straddle - **FINAL SPEC**: hourly checks, trade every week, exit 1 session early (cap 3, OTM-vs-spot) | Profit | Rs 6.47L | Rs 9,42,294 | 15.00% CAGR | Rs 67,919 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_nobal_cap3_ci60_summary.md) | 329/334 weeks, 5.9 adjustments/cycle, every year profitable. See [the spec](../strategy-weekly-adjusted-straddle.md) |
+| Current | 2020-2026 | Adjusted ATM Straddle - hourly checks, trigger 0.40 (lighter workload) | Profit | Rs 6.48L | Rs 8,16,250 | 13.52% CAGR | Rs 68,889 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_nobal_cap3_ci60_trig40_summary.md) | 4.1 adjustments/cycle - 31% less work than the final spec for 1.5 CAGR points, drawdown unchanged |
+| Current | 2020-2026 | Adjusted ATM Straddle - 15-min checks, trade every week | Profit | Rs 6.47L | Rs 9,96,209 | 15.60% CAGR | Rs 91,993 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_nobal_cap3_ci15_summary.md) | 9.2 adjustments/cycle; +0.6 CAGR points over hourly for +35% drawdown |
+| Current | 2020-2026 | Adjusted ATM Straddle - 30-min checks, trade every week | Profit | Rs 6.47L | Rs 9,13,054 | 14.67% CAGR | Rs 68,066 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_nobal_cap3_ci30_summary.md) | Dominated by hourly: more adjustments, less profit, same drawdown |
 
 A monthly cycle earns 87% of what a weekly cycle earns - close enough that the
 monthly contract is not the problem. There are simply **4.4x fewer of them** for

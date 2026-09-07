@@ -244,6 +244,10 @@ def output_tag(args: argparse.Namespace) -> str:
         tag = f"{tag}_fb"
     if args.max_legs_per_side:
         tag = f"{tag}_cap{args.max_legs_per_side}"
+    if args.check_interval != 1:
+        tag = f"{tag}_ci{args.check_interval}"
+    if abs(args.half_trigger_ratio - 0.50) > 1e-9:
+        tag = f"{tag}_trig{int(round(args.half_trigger_ratio * 100))}"
     return tag
 
 
