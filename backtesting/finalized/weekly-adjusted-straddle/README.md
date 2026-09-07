@@ -216,8 +216,70 @@ Each was tested, not assumed.
 | Trigger below 0.40 | Raises drawdown | 0.35 gives Rs 75,466 vs 0.40's Rs 68,889 |
 | Holding through expiry day | **2.7x the drawdown**, 3.8x the worst week | Rs 1,12,597 vs Rs 42,159 max DD; -Rs 1,04,823 vs -Rs 27,619 worst week |
 | Intraday version | 15.00% → 2–3% | Costs consume 73–86% of gross over 893 cycles |
+| Daily overnight roll (enter 15:20, exit 15:20 next day, re-enter) | 13.19% → 8.88% | **Worse even at zero cost.** See [below](#the-daily-overnight-roll) |
 | Monthly contracts | 15.00% → 3.45% | 4.4x fewer cycles for identical margin |
 | A stop loss | untested | Deliberately excluded — the cap and unwind are the risk control |
+
+---
+
+## The daily overnight roll
+
+Tested at the request of a reader of this spec: keep every adjustment rule, but
+instead of holding the contract for the week, **sell the ATM straddle at 15:20,
+adjust across the next session, close everything at 15:20 the next day and open
+a fresh ATM straddle.** The position carries into expiry day and closes on it; no
+cycle starts on an expiry day, because next week's contract is not in the data on
+expiry day before 2025 (0 of 262 expiries across 2020-2024). Checks are the open
+plus hourly, so an overnight gap is seen at 09:15 rather than 09:20.
+
+Six years, 1,264 cycles, identical rules and costs:
+
+| | Weekly, exit 1 session early | Weekly, holds expiry day | **Daily overnight roll** |
+|---|---:|---:|---:|
+| Cycles | 329 | 329 | **1,264** |
+| Gross P/L | Rs 9,10,540 | Rs 10,56,947 | **Rs 7,38,658** |
+| Costs | Rs 1,17,300 | Rs 1,21,620 | **Rs 2,63,820** |
+| Costs as % of gross | 12.9% | 11.5% | **35.7%** |
+| Net P/L | Rs 7,93,240 | Rs 9,35,327 | **Rs 4,74,838** |
+| Peak margin | Rs 6,46,950 | ~Rs 6.5L | Rs 6,48,075 |
+| **CAGR on peak margin** | **13.19%** | **14.85%** | **8.88%** |
+| Max drawdown | Rs 42,159 | Rs 1,12,597 | Rs 1,03,474 |
+| Profit factor | 2.63 | 1.94 | **1.30** |
+| Worst cycle | −Rs 27,619 | −Rs 1,04,823 | −Rs 70,340 |
+
+**Rejected, and not because of costs.** That is the part worth keeping. Set the
+daily roll's brokerage to zero and its net becomes its gross, Rs 7,38,658 —
+still below the weekly's Rs 7,93,240 *after* the weekly has paid its own costs.
+The upper bound on the daily roll is 12.50% CAGR against the weekly's realised
+13.19%. No broker discount reaches it.
+
+Costs then make it much worse on top. 8,794 orders against 3,910, and **57% of
+the daily bill (Rs 1,51,680) is the mandated straddle round trip** — closing a
+position only to re-open a nearly identical one. Only 16.4% of handoffs land on
+the same strike, so carrying those over instead of round-tripping would save
+Rs 18,240 and lift the CAGR to about 9.2%. Not a rescue.
+
+The mechanism is that a one-overnight cycle does not give the adjustment rules
+enough time to work. Adjustments run at 1.9 per cycle versus 5.9 per week, and
+the add trigger fired **1,828 times with no strike available in the 20-30% band**
+— more often than the 1,698 adds that did happen. The position is repeatedly
+reset to flat ATM before the adjustment structure that earns the weekly its
+2.63 profit factor can assemble.
+
+Capital is not saved either. The daily roll still reaches 3 legs on one side
+within a single overnight, so peak margin is Rs 6,48,075 — the same Rs 6.5L the
+weekly needs.
+
+One finding runs against expectation: the 333 cycles that close **on** expiry day
+average Rs 709 against Rs 256 for all others. Expiry-day theta helps here, where
+in the weekly version expiry-day gamma produced the entire tail. It is not enough
+to change the conclusion.
+
+Run it:
+
+```bash
+python backtesting/python/adjusted-straddle-half-add/run_adjusted_straddle_half_add_2020_2026.py     --mode daily --allow-stale-entry --balance-max-diff 1.0     --strike-search-steps 0 --check-interval 60
+```
 
 ---
 

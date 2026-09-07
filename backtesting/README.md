@@ -31,7 +31,7 @@ rather than the exploration.
 |---|---|---:|
 | [25-SMA Intraday](docs/results/25ma-intraday.md) | Short ATM on a 25-SMA signal, closed same session | 14 |
 | [25-SMA Overnight](docs/results/25ma-overnight.md) | Same signal carried overnight to weekly expiry, plus the strike-offset sweep | 23 |
-| [Adjusted Straddle](docs/results/adjusted-straddle.md) | ATM straddle that adds to the weak side as the market moves, then unwinds | 14 |
+| [Adjusted Straddle](docs/results/adjusted-straddle.md) | ATM straddle that adds to the weak side as the market moves, then unwinds | 15 |
 | [Intraday Straddle](docs/results/intraday-straddle.md) | Plain ATM straddle, one session, independent or joint stops | 11 |
 | [Iron Condors & Flies](docs/results/iron-condor.md) | Defined-risk short premium | 5 |
 | [Strangles](docs/results/strangles.md) | Short OTM strangles, various holds | 6 |

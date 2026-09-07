@@ -9,6 +9,8 @@ Filenames encode the variant, and the differences matter:
 | Token | Meaning |
 |---|---|
 | `expiry` / `intraday` | Held to weekly expiry, or closed the same session |
+| `daily` | Overnight roll: enter 15:20, exit 15:20 the next session, re-enter |
+| `ci60` | Adjustment checks every 60 minutes instead of every minute |
 | `otm` | Adds may sit nearer the money (OTM vs current spot) rather than beyond existing legs |
 | `cap3` | At most 3 legs per side; at the cap the strategy rolls instead of adding |
 | `srch5` | Entry strike searched ±5 strikes for a balanced CE/PE pair |

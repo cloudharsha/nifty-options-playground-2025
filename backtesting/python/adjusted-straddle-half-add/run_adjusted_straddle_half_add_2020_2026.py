@@ -18,11 +18,19 @@ Strategy (as specified):
   SYMMETRIC  Identical logic whichever side is stronger.
   NO STOP    No stop loss. Pure test, tails included.
 
-Two hold modes:
+Hold modes:
   --mode intraday   Enter 09:20, close every leg 15:20 the same day.
   --mode expiry     Enter 09:20 on the first session after the previous expiry,
                     hold the same weekly contracts (adjusting through every
                     minute of every session) until 15:20 on expiry day.
+  --mode daily      Overnight cycle. Enter 15:20 in the current week's contract,
+                    adjust across the next session, close every leg 15:20 the
+                    next day, then open a fresh ATM straddle. The position
+                    carries INTO expiry day and is closed at 15:20 on it; no
+                    new cycle starts on an expiry day, so the book is flat for
+                    one overnight per week. See build_daily_cycles.
+  --mode roll       Enter 15:20 one session before expiry in the NEXT week's
+                    contract; roll at the same point each week.
 
 Costs: Rs 30 per order per leg (Rs 30 sell + Rs 30 buy). 1 lot throughout,
 lot size resolved from the contract's expiry date.
@@ -111,9 +119,10 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="Adjusted ATM straddle with half-trigger / 25% adds — NIFTY 2020-2026."
     )
-    p.add_argument("--mode", choices=["intraday", "expiry", "roll"], default="intraday")
+    p.add_argument("--mode", choices=["intraday", "expiry", "daily", "roll"], default="intraday")
     p.add_argument("--roll-time", default="15:20",
-                   help="Time of day the weekly roll happens in --mode roll.")
+                   help="Time of day the roll happens in --mode roll, and the "
+                        "daily entry/exit time in --mode daily.")
     p.add_argument("--expiry-type", choices=["weekly", "monthly"], default="weekly",
                    help="monthly = last expiry of each calendar month; "
                         "weekly = every expiry folder.")
@@ -207,6 +216,11 @@ def get_lot_size(expiry_date: str) -> int:
     if d <= datetime.date(2025, 12, 30):
         return 75
     return 65
+
+
+# --mode daily check schedule: the open, then hourly on the entry minute.
+DAILY_OPEN_CHECK = "09:15"
+DAILY_FIRST_CHECK = "09:20"
 
 
 def minute_grid(day: str, start_hhmm: str, end_hhmm: str, step: int) -> List[str]:
@@ -492,10 +506,20 @@ class Engine:
         # ---- monitor ----
         eval_ts_list: List[str] = []
         for day in session_days:
-            start = a.entry_time if day == entry_date else "09:15"
-            end = a.exit_time if day == exit_date else "15:29"
-            eval_ts_list.extend(minute_grid(day, start, end, a.check_interval))
-        eval_ts_list = [t for t in eval_ts_list if t > entry_ts and t < final_ts]
+            if a.mode == "daily" and day != entry_date:
+                # An overnight hold is only monitored on the session after
+                # entry. Check the open first - a gap through the trigger is
+                # this mode's distinctive risk, and hourly checks anchored on
+                # the entry minute would not see it until 09:20.
+                eval_ts_list.append(build_ts(day, DAILY_OPEN_CHECK))
+                eval_ts_list.extend(minute_grid(day, DAILY_FIRST_CHECK,
+                                                a.exit_time, a.check_interval))
+            else:
+                start = a.entry_time if day == entry_date else "09:15"
+                end = a.exit_time if day == exit_date else "15:29"
+                eval_ts_list.extend(minute_grid(day, start, end, a.check_interval))
+        eval_ts_list = sorted({t for t in eval_ts_list
+                               if t > entry_ts and t < final_ts})
 
         for ts in eval_ts_list:
             for _ in range(12):  # at most a few actions per minute
@@ -636,6 +660,31 @@ def build_intraday_cycles(days: List[str], expiries: List[str],
     return out
 
 
+def build_daily_cycles(days: List[str], expiries: List[str],
+                       expiry_set: Set[str]) -> List[Tuple[str, str, str, List[str]]]:
+    """One cycle per overnight hold: enter 15:20, exit 15:20 the next session.
+
+    The contract is always the current week's, so a cycle entered on the session
+    before expiry carries INTO expiry day and closes at 15:20 on it.
+
+    No cycle starts ON an expiry day. That contract dies at 15:30, and next
+    week's is absent from the data on expiry day before 2025 (0 of 262 expiries
+    across 2020-2024, then 53 of 53 in 2025), so rolling straight into it cannot
+    be tested across the sample. The book is therefore flat for exactly one
+    overnight a week, from the expiry-day close to the next session's 15:20.
+    """
+    out = []
+    for i in range(len(days) - 1):
+        day, nxt = days[i], days[i + 1]
+        if day in expiry_set:
+            continue                       # contract dies today; stay flat
+        exp = next((e for e in expiries if e >= nxt), None)
+        if exp is None:
+            continue                       # nothing alive to hold overnight
+        out.append((day, nxt, exp, [day, nxt]))
+    return out
+
+
 def build_roll_cycles(days: List[str], expiries: List[str],
                       expiry_set: Set[str]) -> List[Tuple[str, str, str, List[str]]]:
     """Continuous weekly roll that never holds into expiry day.
@@ -760,7 +809,13 @@ def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging
     for c in skipped:
         skip_counts[c.skip_reason] = skip_counts.get(c.skip_reason, 0) + 1
 
-    if args.mode == "roll":
+    if args.mode == "daily":
+        mode_desc = (f"Daily overnight roll — sell the current week's ATM straddle at "
+                     f"{args.roll_time}, adjust across the next session, close every leg at "
+                     f"{args.roll_time} the next day and open a fresh ATM straddle. Carries "
+                     "into expiry day and closes on it; no cycle starts on an expiry day, so "
+                     "the book is flat one overnight a week.")
+    elif args.mode == "roll":
         mode_desc = (f"Weekly roll — enter {args.roll_time} one session before expiry in the "
                      f"NEXT week's contract, hold, then roll at {args.roll_time} one session "
                      "before that expiry. Never flat, never holds expiry-day gamma.")
@@ -884,8 +939,11 @@ def main() -> None:
     args.results_dir.mkdir(parents=True, exist_ok=True)
     logger = configure_logger(args.results_dir / f"{BASE_FILENAME}_{output_tag(args)}.log")
 
-    if args.mode == "roll":
+    if args.mode in ("roll", "daily"):
         args.entry_time = args.roll_time
+    if args.mode == "daily":
+        # The cycle both opens and closes at the roll time.
+        args.exit_time = args.roll_time
     days, spot_open, spot_series = load_spot(args.spot_file, args.entry_time)
     days = [d for d in days if args.start_date <= d <= args.end_date]
     expiries = sorted(p.name for p in args.options_dir.iterdir() if p.is_dir())
@@ -898,6 +956,8 @@ def main() -> None:
 
     if args.mode == "intraday":
         schedule = build_intraday_cycles(days, expiries, expiry_set)
+    elif args.mode == "daily":
+        schedule = build_daily_cycles(days, expiries, expiry_set)
     elif args.mode == "roll":
         schedule = build_roll_cycles(days, expiries, expiry_set)
     else:
