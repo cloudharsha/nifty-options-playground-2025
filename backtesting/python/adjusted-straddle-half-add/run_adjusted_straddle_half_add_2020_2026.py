@@ -150,6 +150,11 @@ def parse_args() -> argparse.Namespace:
                    help="Option points given up per order; 0 because Rs 30 is stated to cover costs")
     p.add_argument("--capital", type=float, default=3_00_000.0,
                    help="Reference capital for CAGR/drawdown %% only")
+    p.add_argument("--exit-lead-sessions", type=int, default=0,
+                   help="Close the position N sessions BEFORE expiry instead of on expiry day, "
+                        "staying flat through it. 1 avoids expiry-day gamma without needing next "
+                        "week's contract to exist early, so unlike --mode roll it is testable "
+                        "across the whole dataset.")
     p.add_argument("--max-hold-sessions", type=int, default=0,
                    help="Cap an expiry-mode cycle to its last N trading sessions before "
                         "expiry. 0 = hold from the day after the previous expiry. Needed for "
@@ -227,6 +232,8 @@ def output_tag(args: argparse.Namespace) -> str:
         tag = f"{tag}_monthly"
     if args.max_hold_sessions:
         tag = f"{tag}_hold{args.max_hold_sessions}"
+    if args.exit_lead_sessions:
+        tag = f"{tag}_exit{args.exit_lead_sessions}early"
     if args.allow_stale_entry:
         tag = f"{tag}_stale"
     if args.balance_max_diff >= 0.99:
@@ -651,7 +658,8 @@ def build_roll_cycles(days: List[str], expiries: List[str],
 
 
 def build_expiry_cycles(days: List[str], expiries: List[str],
-                        expiry_set: Set[str], max_hold: int = 0
+                        expiry_set: Set[str], max_hold: int = 0,
+                        exit_lead: int = 0
                         ) -> List[Tuple[str, str, str, List[str]]]:
     """One cycle per weekly expiry: first session after the previous expiry -> that expiry."""
     out = []
@@ -660,7 +668,7 @@ def build_expiry_cycles(days: List[str], expiries: List[str],
     for i, exp in enumerate(tradable):
         prev_exp = tradable[i - 1] if i > 0 else None
         start_idx = day_pos[prev_exp] + 1 if prev_exp else 0
-        end_idx = day_pos[exp]
+        end_idx = day_pos[exp] - exit_lead
         if max_hold:
             start_idx = max(start_idx, end_idx - max_hold + 1)
         if start_idx > end_idx:
@@ -885,7 +893,8 @@ def main() -> None:
     elif args.mode == "roll":
         schedule = build_roll_cycles(days, expiries, expiry_set)
     else:
-        schedule = build_expiry_cycles(days, expiries, expiry_set, args.max_hold_sessions)
+        schedule = build_expiry_cycles(days, expiries, expiry_set,
+                                       args.max_hold_sessions, args.exit_lead_sessions)
 
     engine = Engine(args, logger, spot_series)
     cycles: List[Cycle] = []

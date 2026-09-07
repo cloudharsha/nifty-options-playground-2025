@@ -31,6 +31,25 @@ Capital Base is what the strategy actually needs, not a fixed reference - read t
 | Current | 2020-2026 | Adjusted ATM Straddle - Monthly contracts, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 1,57,898 | 3.45% CAGR | Rs 41,016 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_hold4_stale_srch5_fb_cap3_summary.md) | All 76 monthly cycles traded, no skips. 2022 and 2023 lose; win rate 45-58% every year, barely above a coin flip |
 | Current | 2020-2026 | Adjusted ATM Straddle - Weekly, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 7,93,303 | 13.23% CAGR | Rs 63,497 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_hold4_stale_srch5_fb_cap3_summary.md) | Hold-matched control for the monthly row: same capital, same 4-session hold, same rules. 333 cycles vs monthly's 76 |
 
+## Does avoiding expiry day help?
+
+Barely on return, and **not at all on risk**. Closing one session before expiry
+against holding to expiry day, identical entries, 6 years:
+
+| | Net P/L | Max DD |
+|---|---:|---:|
+| Exit 1 session early | Rs 9,34,197 | Rs 41,246 |
+| Hold to expiry day | Rs 9,54,046 | Rs 41,725 |
+
+On every stress week the two are identical to the rupee - 2020-03-06,
+2020-03-13, 2022-06-10 and 2025-04-04 all differ by exactly 0. Those weeks were
+lost mid-week on the move itself; by expiry day the damage was already done.
+
+So exit timing is an execution choice, not an edge. The `--mode roll` numbers
+below look far better on drawdown, but this test is the clean isolation of the
+same idea and it finds nothing - which is good reason to read the roll's
+Rs 25,597 as a property of its calm 18-month window rather than of the mechanism.
+
 ## Rolling instead of expiring
 
 Holding to 15:20 on expiry day has two problems the backtest was quietly
@@ -75,6 +94,8 @@ the contract:
 | Weekly | 333 | Rs 2,382 | Rs 7,93,303 | 13.23% |
 | Monthly | 76 | Rs 2,078 | Rs 1,57,898 | 3.45% |
 | Current | 2024-12 - 2026-06 | Adjusted ATM Straddle - Weekly continuous roll, never holds expiry day (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.48L | Rs 4,05,833 | 39.05% CAGR | Rs 25,597 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_roll_otm_stale_srch5_fb_cap3_summary.md) | **73 cycles only** - the roll needs next week's contract to exist a day early, and pre-2025 data does not carry it. Beats held-to-expiry on the same 73 cycles: Rs 4,05,833 vs Rs 3,56,517, drawdown Rs 25,597 vs Rs 55,647 |
+| Current | 2020-2026 | Adjusted ATM Straddle - **FINAL SPEC**: exit 1 session before expiry, ATM-only entry (cap 3, OTM-vs-spot) | Profit | Rs 6.45L | Rs 9,34,197 | 14.94% CAGR | Rs 41,246 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_cap3_summary.md) | 245 cycles, every year profitable. See [the spec](../strategy-weekly-adjusted-straddle.md) |
+| Current | 2020-2026 | Adjusted ATM Straddle - exit 1 session before expiry, +/-5 strike search (cap 3, OTM-vs-spot) | Profit | Rs 6.48L | Rs 10,84,694 | 16.53% CAGR | Rs 99,098 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_srch5_cap3_summary.md) | 1.6 more CAGR points than the final spec for 2.4x the drawdown - the 77 extra weeks earn a third of a core week |
 
 A monthly cycle earns 87% of what a weekly cycle earns - close enough that the
 monthly contract is not the problem. There are simply **4.4x fewer of them** for

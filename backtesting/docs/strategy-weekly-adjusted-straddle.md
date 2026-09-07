@@ -1,99 +1,129 @@
 # Weekly Adjusted ATM Straddle — final spec
 
-The strategy settled on after testing 20+ variants of the straddle-adjustment
-idea. Full result tables: [adjusted-straddle.md](results/adjusted-straddle.md).
-Runner: [`../python/adjusted-straddle-half-add/`](../python/adjusted-straddle-half-add/).
+The configuration settled on after testing 25+ variants. Full tables:
+[adjusted-straddle.md](results/adjusted-straddle.md). Runner:
+[`../python/adjusted-straddle-half-add/`](../python/adjusted-straddle-half-add/).
 
 ## Rules
 
-**Entry.** At 15:20 one session before expiry, sell 1 lot of the **next week's**
-ATM straddle. Search ±5 strikes around ATM and take the nearest strike whose CE
-and PE are within 20% of each other. If none qualifies, sit the week out.
+**Entry.** At 09:20 on the first session after the previous expiry, sell 1 lot of
+that week's **ATM** straddle. Enter only if CE and PE are within 20% of each
+other; otherwise sit the week out.
 
 **Adjustment.** When the weaker side's total falls to **≤50%** of the stronger
 side, sell one more option on the weak side worth **~25%** of the stronger side
-(accept anything in 20–30%). The new strike must be **OTM against current spot** —
-not merely further out than the legs already held.
+(accept 20–30%). The new strike must be **OTM against current spot** — not merely
+further out than the legs already held.
 
-**Cap.** Never exceed **3 legs per side**. At the cap, do not add a fourth: exit
-the cheapest leg on the weak side and re-sell so that side totals ~75% of the
-strong side.
+**Cap.** Never exceed **3 legs per side**. At the cap, exit the cheapest leg on
+the weak side and re-sell so that side totals ~75% of the strong side.
 
 **Unwind.** When the single side falls back to at or below the stacked side's
-total, buy back **one** leg — the cheapest. One leg per parity touch, so the
-stack unwinds gradually. The original ATM leg is the most expensive on its side
-and therefore always the last to go.
+total, buy back **one** leg — the cheapest. One per parity touch.
 
-**Exit.** Roll the entire position at 15:20 one session before expiry: close the
-old and open the next week's in the same minute. Never hold expiry day.
+**Exit.** Close at 15:20 **one session before expiry**, and stay flat through
+expiry day.
 
 **No stop loss.** Costs Rs 30 per order per leg.
 
 ```bash
 python backtesting/python/adjusted-straddle-half-add/run_adjusted_straddle_half_add_2020_2026.py \
-    --mode roll --allow-stale-entry
+    --mode expiry --allow-stale-entry --exit-lead-sessions 1 --strike-search-steps 0
 ```
-
-## Capital
-
-Budget **Rs 6.5L** of margin for one lot. That is the peak the position reaches
-(3 legs one side + 1 the other), not the typical requirement — median across
-cycles is about Rs 3.1L, but the peak is what must be funded or the position is
-liquidated in the week that matters.
-
-This figure comes from a model (10% of contract value per naked short lot,
-same-side legs additive, cross-side netting at 30%), **not from SPAN**. Verify a
-3 CE + 1 PE NIFTY position on a real margin calculator before sizing — every
-return figure below rests on it.
 
 ## What to expect
 
-Use the six-year held-to-expiry numbers, not the roll's headline:
+245 cycles over 6.4 years, every year profitable:
 
 | | Value |
 |---|---:|
-| CAGR | **15.16%** |
-| Max drawdown | Rs 41,725 |
-| Win rate | 69% |
-| Profit factor | 2.91 |
-| Cycles | 245 over 6.4 years, every year profitable |
+| Net P/L | Rs 9,34,197 |
+| CAGR on Rs 6.45L peak margin | **14.94%** |
+| Max drawdown | Rs 41,246 |
+| Win rate | ~69% |
 
-The roll returns 39% CAGR over its measurable window, but that is 73 cycles in
-18 months of a single regime. Treat it as "the roll does not hurt, and probably
-helps" rather than as a forecast.
+Budget **Rs 6.5L** of margin per lot — the peak (3 legs one side, 1 the other),
+not the median of ~Rs 3.0L. The peak is what must be funded. That figure is
+modelled (10% of contract value per naked short lot, cross-side netting at 30%),
+**not SPAN**: verify a 3 CE + 1 PE position on a real calculator before sizing,
+because every return number rests on it.
 
-## Why each choice
+## The one decision that matters
 
-Every rejected alternative was tested, not assumed:
+Entry strike selection drives drawdown; almost nothing else does.
+
+| Entry rule | Cycles | Net P/L | CAGR | Max DD | CAGR per Rs 1L of DD |
+|---|---:|---:|---:|---:|---:|
+| **ATM only, skip unbalanced weeks** | 245 | Rs 9,34,197 | 14.94% | **Rs 41,246** | **36.2** |
+| ±5 strike search | 322 | Rs 10,84,694 | 16.53% | Rs 99,098 | 16.7 |
+
+The strike search earns 1.6 more CAGR points and **2.4x the drawdown**. The 77
+extra weeks it unlocks are precisely the ones the balance filter was right to
+decline: they earn about a third of what a core week earns. Skip them.
+
+## Exit timing barely matters
+
+Closing a session early versus holding to expiry, same entries, 6 years:
+
+| | Net P/L | Max DD |
+|---|---:|---:|
+| Exit 1 session early | Rs 9,34,197 | Rs 41,246 |
+| Hold to expiry day | Rs 9,54,046 | Rs 41,725 |
+
+Under half a CAGR point apart, drawdown effectively identical. **Choose on
+execution, not on edge** — the spec exits early because an expiry-day 15:20 exit
+in a multi-leg adjusted position is hard to actually achieve.
+
+**Avoiding expiry day does not reduce tail risk.** On every stress week the two
+are identical to the rupee:
+
+| Week | Difference |
+|---|---:|
+| 2020-03-06, 2020-03-13 (COVID) | +0 |
+| 2022-06-10 | +0 |
+| 2025-04-04 (tariff selloff) | +0 |
+
+By expiry day the damage is already done — those weeks were lost mid-week, on the
+move itself, not to expiry-day gamma.
+
+## Why each rejected alternative was rejected
 
 | Rejected | Cost | Evidence |
 |---|---|---|
-| Uncapped adds | −8 CAGR points, 2.75x the capital | Stacked to 12 legs, Rs 17.8L peak margin |
-| Adds only further OTM than existing legs | Disengages in crashes, silently | COVID week needed a CE worth 66; the best available beyond the existing leg was 27.5, so nothing was added and the week lost Rs 72,596 |
-| Dropping the 20% balance requirement | Rs 41,725 → Rs 75,972 drawdown for +1 CAGR point | 6-year held-to-expiry runs |
-| Holding through expiry day | −14% net, 2x drawdown | 73-cycle like-for-like against the roll |
-| Intraday instead of weekly | 15.16% → 2–3% | Costs consume 73–86% of gross over 893 cycles |
-| Monthly contracts | 15.16% → 3.45% | 4.4x fewer cycles for identical margin |
-| A stop loss | not tested | Deliberately excluded; the cap and unwind are the risk control |
+| Uncapped adds | −8 CAGR points, 2.75x capital | Stacked to 12 legs, Rs 17.8L peak margin |
+| Adds only further OTM than existing legs | Silently disengages in crashes | COVID week needed a CE worth 66; best available beyond the held leg was 27.5, so nothing was added and the week lost Rs 72,596 |
+| Dropping the 20% balance filter | Rs 41,725 → Rs 75,972 drawdown | 6-year runs |
+| ±5 strike search | 2.4x drawdown for 1.6 CAGR points | Table above |
+| Intraday instead of weekly | 14.94% → 2–3% | Costs consume 73–86% of gross over 893 cycles |
+| Monthly contracts | 14.94% → 3.45% | 4.4x fewer cycles for identical margin |
+| A stop loss | not tested | Deliberately excluded; the leg cap and unwind are the risk control |
 
-## Two things that are not settled
+## `--mode roll`: promising, unproven, do not size for it
 
-**The ±5 strike search is mode-dependent, and that is unexplained.** Held to
-expiry it costs 2.4x drawdown for one CAGR point and should be dropped. In roll
-mode it is mildly positive (return per unit drawdown 14.3 → 15.9) and the weeks
-it recovers earn 39% of a core week rather than 30%. The spec above includes it
-because the spec rolls. A plausible reason is that CE/PE imbalance at 15:20 the
-day before expiry is mechanical — forward and skew — rather than informative,
-while imbalance at 09:20 with five days to run says something real about the
-week ahead. That is a hypothesis, not a finding. **If you drop the roll, drop
-the strike search with it.**
+A continuous roll — enter next week's contract at 15:20 a session before expiry,
+never flat, never holding expiry day — returned 39% CAGR with only Rs 25,597
+drawdown over 73 cycles.
 
-**The roll is the weakest-evidenced part.** 2020–2024 cannot be tested: the
-dataset carries no bars for next week's contract until the current one expires
-(pre-2025 weekly contracts hold exactly 5 sessions, starting the day after the
-previous expiry). If the roll disappoints live, fall back to holding to expiry
-with ATM-only entry — that is the 6-year-validated configuration.
+**Do not plan around those numbers.**
 
-`--balance-fallback` is deliberately **not** in the spec. In 73 roll cycles the
-±5 search always found a balanced strike, so the flag never once changed an
-outcome.
+- **It covers 18 months, and cannot be tested further back.** The roll must buy
+  next week's contract while this week is still alive. In this dataset that
+  contract has no bars until the day after the current expiry: an exhaustive scan
+  found next-week data available early in **0 of 52 expiries in 2020**, 0 of 52
+  in 2021, 0 of 52 in 2022, 1 of 53 in 2023, 0 of 52 in 2024 — then **53 of 53 in
+  2025**. Five empty years. This is a data-capture gap, not a market fact: NSE
+  listed those weeklies concurrently and they really were tradeable.
+- **Its window contains no crisis.** Three of the six-year strategy's five worst
+  weeks fall outside it, including both COVID weeks (−Rs 57,851 and −Rs 41,246
+  back to back).
+- **The window was unusually generous** — Rs 4,981 per cycle in 2025–26 against
+  Rs 2,691 in 2020–24.
+- **Its low drawdown is not evidence the mechanism helps.** The clean 6-year test
+  of the same idea (exit-lead-sessions, above) shows zero drawdown improvement.
+
+The roll is still the more realistic way to trade — no overnight flat gap, no
+expiry-day fills — and worth running live. Just size from the 14.94% / Rs 41,246
+figures above, and treat any improvement as upside rather than plan.
+
+To settle it properly: re-pull 2020–2024 weekly contracts with full listed
+history. `--mode roll` then runs unchanged.
