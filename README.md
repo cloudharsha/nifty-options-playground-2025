@@ -1,311 +1,152 @@
 # nifty-options-playground-2025
 
-2025 NIFTY market data for backtesting:
+Backtests of NIFTY and SENSEX index-option strategies against 1-minute contract
+data, 2020–2026.
 
-- expiry-wise NIFTY option contract candles in `Options_2025/`
-- derived 15-minute option contract candles in `Options_2025_15m/`
-- 1-minute and 15-minute NIFTY 50 index candles in `nifty/`
-- local conversion utilities in `scripts/`
-- FYERS helper scripts in `fyers-api/` to pull the index data again if needed
+This is a research playground, not a trading system. Strategies here are tested
+until they either hold up or fall apart, and **both outcomes are kept**. Several
+of the most carefully built strategies in this repo lose money; those results
+are indexed alongside the profitable ones, because a losing backtest you can
+read is worth more than a profitable one you can't reproduce.
 
-## Repo contents
+Everything is plain Python 3.13 with the standard library. No pandas, no numpy,
+nothing to install.
 
-### `Options_2025/`
+**→ [Start with the backtesting index](backtesting/README.md)** — every strategy,
+what it does, and what it returned.
 
-Raw option contract data, grouped by expiry date.
+## What's in the repo
 
-- `53` expiry folders
-- date span: `2025-01-02` to `2025-12-30`
-- `10,388` CSV files total
+Only the `backtesting/` workspace is versioned:
 
-Structure:
-
-```text
-Options_2025/
-  2025-01-02/
-    NIFTY_21600_CE_02_JAN_25.csv
-    NIFTY_21600_PE_02_JAN_25.csv
-    ...
-  2025-01-09/
-  ...
-  2025-12-30/
+```
+backtesting/
+  README.md                 index: families, headline runs, how to run
+  docs/
+    dataset-reference.md    data schema, lot-size eras, expiry-day history
+    results/                one index doc per strategy family
+  python/
+    _template/example.py    copy this to start a new strategy
+    <family>/               runner scripts
+    legacy/                 archived; does not run as-is
+    tests/
+  results/
+    <family>/               generated output, mirrors python/<family>/
 ```
 
-Each folder is one expiry.  
-Each file is one contract: `NIFTY_<strike>_<CE|PE>_<expiry>.csv`
+`python/<family>/` and `results/<family>/` mirror each other. That is the only
+structural rule you need to hold in your head.
 
-Options CSV schema:
+## Data layout
+
+**The market data is not in this repo** — it is roughly 11 GB and stays local.
+The scripts expect it at the repo root:
+
+```
+NiftyOptions_2020_2026/Options/<YYYY-MM-DD>/NIFTY_<strike>_<CE|PE>_<DD>_<MON>_<YY>.csv
+SensexOptions_2024_2026/Options/<YYYY-MM-DD>/SENSEX_<strike>_<CE|PE>_<DD>_<MON>_<YY>.csv
+nifty/NIFTY50_INDEX_5m_last_7y.csv        spot series used for signals and ATM selection
+nifty/NIFTY50_INDEX_1m_2025.csv
+nifty/SENSEX_INDEX_5m_last_7y.csv
+```
+
+Each options folder is one expiry date; each CSV is one contract, in 1-minute
+OHLCV+OI bars with IST timestamps:
 
 ```csv
 timestamp,open,high,low,close,volume,oi
+2025-01-02T09:15:00+05:30,150.3,152.0,149.5,151.2,3750.0,284875.0
 ```
 
-Important behavior:
+Every script takes `--options-dir` and `--spot-file`, so you can point them
+anywhere. Full schema and the contract conventions that change P/L are in
+[backtesting/docs/dataset-reference.md](backtesting/docs/dataset-reference.md).
 
-- one file = one expiry + strike + option type
-- files contain contract history, not just expiry-day candles
-- some files can be header-only, so loaders should skip empty files
-- strike coverage changes by expiry
-- the strike ladder is typically in `50` point intervals
-- do not hardcode Thursday expiry; use the folder date as truth
-
-### `Options_2025_15m/`
-
-Derived 15-minute option contract data, grouped by the same expiry folders and filenames as `Options_2025/`.
-
-Generation command:
+## Running a backtest
 
 ```bash
-python3 scripts/build_options_2025_15m.py --clean-output
+python backtesting/python/<family>/<script>.py --help
 ```
 
-Structure:
-
-```text
-Options_2025_15m/
-  2025-01-02/
-    NIFTY_21600_CE_02_JAN_25.csv
-    NIFTY_21600_PE_02_JAN_25.csv
-    ...
-  2025-01-09/
-  ...
-  2025-12-30/
-```
-
-Schema:
-
-```csv
-timestamp,open,high,low,close,volume,oi
-```
-
-Aggregation rules:
-
-- the folder and filename layout mirrors `Options_2025/` exactly
-- timestamps are floored to 15-minute IST clock boundaries such as `09:15`, `09:30`, `09:45`, and `15:15`
-- `open` is the first 1-minute row in the bucket
-- `high` is the highest `high` in the bucket
-- `low` is the lowest `low` in the bucket
-- `close` is the last `close` in the bucket
-- `volume` is summed across the bucket
-- `oi` is taken from the last 1-minute row in the bucket
-- partial buckets are preserved when a contract starts late or has sparse source minutes
-- header-only source contracts remain header-only in `Options_2025_15m/`
-
-### `nifty/`
-
-Underlying NIFTY 50 index candles for the same year.
-
-- file: `nifty/NIFTY50_INDEX_1m_2025.csv`
-- file: `nifty/NIFTY50_INDEX_15m_last_4y.csv`
-- `93,061` minute rows
-- date span: `2025-01-01T09:15:00+05:30` to `2025-12-31T15:29:00+05:30`
-
-Schema:
-
-```csv
-timestamp,open,high,low,close,volume
-```
-
-Example:
-
-```csv
-timestamp,open,high,low,close,volume
-2025-01-01T09:15:00+05:30,23637.65,23681.7,23633.35,23649.55,0
-```
-
-Notes:
-
-- timestamps are timezone-aware and use `+05:30`
-- this file is suitable as the underlying index series for option backtests
-- volume is `0` for many earlier rows; treat index volume carefully if your strategy depends on it
-
-### `fyers-api/`
-
-Utility scripts for FYERS-based data pull:
-
-- [fyers-api/fyers_auth.py](/mnt/c/Users/harsh/Desktop/workspace/git/nifty-options-playground-2025/fyers-api/fyers_auth.py:1): generate auth URL and exchange auth code for access token
-- [fyers-api/download_nifty_history.py](/mnt/c/Users/harsh/Desktop/workspace/git/nifty-options-playground-2025/fyers-api/download_nifty_history.py:1): download NIFTY 50 minute history into `nifty/`
-- [fyers-api/README.md](/mnt/c/Users/harsh/Desktop/workspace/git/nifty-options-playground-2025/fyers-api/README.md:1): setup and run instructions
-
-### `backtesting/`
-
-Backtest runners and generated results:
-
-**Overnight strategies**
-- [backtesting/python/run_short_atm_weekly_straddle_2025.py](backtesting/python/run_short_atm_weekly_straddle_2025.py): overnight weekly short ATM straddle (sell 15:20, buy 09:16 next day)
-- [backtesting/python/run_short_iron_fly_2025.py](backtesting/python/run_short_iron_fly_2025.py): overnight short iron fly
-- [backtesting/python/run_overnight_strangle_by_day_2025.py](backtesting/python/run_overnight_strangle_by_day_2025.py): overnight OTM short strangle with day-of-week premium bands (sell 15:20, buy 09:20 next day); fallback band if primary not found
-
-**Intraday strategies**
-- [backtesting/python/run_intraday_joint_sl_strangle_2025.py](backtesting/python/run_intraday_joint_sl_strangle_2025.py): intraday OTM short strangle with day-of-week bands and joint 2× SL (if either leg hits SL, both exit together)
-- [backtesting/python/run_intraday_atm_straddle_joint_sl_2025.py](backtesting/python/run_intraday_atm_straddle_joint_sl_2025.py): intraday ATM short straddle with joint 2× SL (enter 09:20, exit 15:20)
-- [backtesting/python/run_intraday_atm_straddle_indep_sl_2025.py](backtesting/python/run_intraday_atm_straddle_indep_sl_2025.py): intraday ATM short straddle with independent 2× SL per leg (each leg manages itself; partner continues when one is stopped out)
-
-`backtesting/results/`: generated CSV, summary, and log files for each strategy
-
-## How to use this repo for testing
-
-Use the two datasets together like this:
-
-- underlying spot/index path comes from `nifty/NIFTY50_INDEX_1m_2025.csv`
-- option contract candles come from `Options_2025/<expiry>/...`
-- join on `timestamp` when comparing option candles with index candles
-- derive expiry from the folder name, not by weekday assumptions
-- derive strike and option type from the option filename
-
-Practical loader assumptions:
-
-- parse timestamps as timezone-aware datetimes
-- skip header-only option CSVs
-- do not assume every expiry has the same strike set
-- do not assume CE and PE files both exist for every strike, even though they usually do
-- do not assume all contracts have the same row count
-- if you use `Options_2025_15m/`, pair it with a 15-minute spot series and matching timestamps
-
-## Backtesting
-
-Both backtest scripts:
-
-- use `nifty/NIFTY50_INDEX_1m_2025.csv` as the trading-day calendar and spot reference
-- use exact option timestamps from `Options_2025/`
-- write outputs into `backtesting/results/`
-- support default runs and explicit parameter overrides
-- are intentionally unchanged by the 15-minute dataset build
-
-Default execution assumptions vary by script. Intraday scripts use:
-
-- `lot_size = 75`, `lots = 1`, multiplier = `75` per point
-- `slippage_points_per_order = 0.5`
-- `brokerage_per_order = 25`
-
-Overnight scripts use:
-
-- `lot_size = 65`, `lots = 4`, multiplier = `260` per point
-- `slippage_points_per_order = 1`
-- `brokerage_per_order = 25`
-
-All scripts support `--lot-size`, `--lots`, `--slippage-points-per-order`, `--brokerage-per-order` overrides.
-
-Summary files include: total net P/L, gross P/L, brokerage, winning/losing days, max single-day profit/loss, **peak cumulative profit**, and **max drawdown**.
-
-### 1. Weekly Short ATM Straddle
-
-Run with defaults:
+For example, a short window of the adjusted straddle:
 
 ```bash
-python3 backtesting/python/run_short_atm_weekly_straddle_2025.py
+python backtesting/python/adjusted-straddle-half-add/run_adjusted_straddle_half_add_2020_2026.py \
+    --mode expiry --start-date 2025-01-01 --end-date 2025-03-31
 ```
 
-Run with explicit parameters:
+Output lands in `backtesting/results/<family>/`. Each run writes a
+`_summary.md` report plus CSVs of the underlying trades.
+
+Tests run one file at a time (no `__init__.py`, so `unittest discover` won't
+find them):
 
 ```bash
-python3 backtesting/python/run_short_atm_weekly_straddle_2025.py \
-  --spot-file nifty/NIFTY50_INDEX_1m_2025.csv \
-  --options-dir Options_2025 \
-  --results-dir backtesting/results \
-  --entry-time 15:20 \
-  --exit-time 09:16 \
-  --brokerage-per-order 25 \
-  --lot-size 65 \
-  --lots 4 \
-  --slippage-points-per-order 1
+python backtesting/python/tests/test_run_weekly_short_strangle_0920_2025.py
 ```
 
-Outputs:
+## Reading the results honestly
 
-- `backtesting/results/short_atm_weekly_straddle_2025_daywise.csv`
-- `backtesting/results/short_atm_weekly_straddle_2025_summary.md`
-- `backtesting/results/short_atm_weekly_straddle_2025.log`
+A few things are easy to get wrong when comparing runs, and they are worth
+knowing before you trust any number here:
 
-Check progress while it runs:
+- **Capital base is not uniform, deliberately.** Most rows use a fixed reference
+  base; the adjusted-straddle rows use the peak margin the position actually
+  reaches, because they stack multiple short legs. The same strategy shows
+  25.65% on a Rs 3L base and 7.21% on the Rs 17.77L it really needs. A CAGR
+  means nothing without the capital it was measured against.
+- **CAGR and single-year return are different columns.** Don't rank them together.
+- **Lot size changed five times** between 2020 and 2026 (75 → 50 → 25 → 75 → 65),
+  keyed to the contract's *expiry* date, not the trade date. Get it wrong and
+  every number in a run is silently rescaled.
+- **Weekly expiry moved from Thursday to Tuesday** in September 2025.
+- **Fills are assumed.** Costs are modelled per order, but every backtest assumes
+  it traded at the recorded price. That is optimistic for illiquid strikes and
+  for gap days.
+- **Skipped days matter.** Several strategies decline to trade when an entry
+  filter fails. Each summary reports how many days were skipped and why — a high
+  skip rate can mean a filter is doing real work, or that the sample is thin.
 
-```bash
-tail -f backtesting/results/short_atm_weekly_straddle_2025.log
-```
+## Contributing
 
-### 2. Short Iron Fly
+**Pull requests with tested strategies are welcome**, including ones that lost
+money. A negative result that is clearly reported saves the next person from
+re-running it.
 
-Run with defaults:
+1. Fork and branch.
+2. Copy [`backtesting/python/_template/example.py`](backtesting/python/_template/example.py)
+   into the matching `python/<family>/` folder, or a new family folder if none
+   fits. It carries the repo's conventions: argparse defaults, CSV and summary
+   writers, logging, and the `parents[3]` repo-root resolution that assumes your
+   script sits exactly one level below `python/`.
+3. Point `--results-dir` at your own `results/<family>/` folder so a re-run
+   never overwrites someone else's output.
+4. Run it, and commit the generated `_summary.md` and trade CSVs.
+5. Add a row to the matching doc in [`backtesting/docs/results/`](backtesting/docs/results/).
+   New family? Add a doc there, a `README.md` in both new folders, and a row in
+   [`backtesting/README.md`](backtesting/README.md).
+6. Open the PR.
 
-```bash
-python3 backtesting/python/run_short_iron_fly_2025.py
-```
+What a good strategy PR states plainly:
 
-Run with explicit parameters:
+- the exact date range tested, and how many days or cycles actually traded
+- **the cost model** — brokerage and taxes per order, and any slippage assumed
+- **the capital base** and why that figure (margin required, or a stated reference)
+- how many days were skipped and for what reason
+- max drawdown in rupees, not just the return
+- anything the backtest assumes that live trading wouldn't give you
 
-```bash
-python3 backtesting/python/run_short_iron_fly_2025.py \
-  --spot-file nifty/NIFTY50_INDEX_1m_2025.csv \
-  --options-dir Options_2025 \
-  --results-dir backtesting/results \
-  --entry-time 15:20 \
-  --exit-time 09:16 \
-  --brokerage-per-order 25 \
-  --lot-size 65 \
-  --lots 4 \
-  --slippage-points-per-order 1 \
-  --wing-min-ratio 0.25 \
-  --wing-max-ratio 0.35 \
-  --wing-target-ratio 0.3333333333
-```
+Please don't commit market data, `.log` files, or `__pycache__` — the
+`.gitignore` blocks these, and they are all regenerable.
 
-Outputs:
+If a result looks too good, say so in the PR. The
+[Heads & Tails](backtesting/docs/results/heads-tails.md) random-entry controls
+are there as a sanity check: a strategy that can't beat a coin flip on the same
+instrument and the same costs hasn't shown that its signal does anything.
 
-- `backtesting/results/short_iron_fly_2025_daywise.csv`
-- `backtesting/results/short_iron_fly_2025_summary.md`
-- `backtesting/results/short_iron_fly_2025.log`
+## Disclaimer
 
-Check progress while it runs:
-
-```bash
-tail -f backtesting/results/short_iron_fly_2025.log
-```
-
-If you want to watch both logs in separate terminals:
-
-```bash
-tail -f backtesting/results/short_atm_weekly_straddle_2025.log
-tail -f backtesting/results/short_iron_fly_2025.log
-```
-
-## Quick examples
-
-Inspect one expiry:
-
-```bash
-ls Options_2025/2025-01-02 | head
-```
-
-Inspect one option contract:
-
-```bash
-sed -n '1,10p' Options_2025/2025-01-02/NIFTY_22000_PE_02_JAN_25.csv
-```
-
-Inspect the NIFTY index series:
-
-```bash
-sed -n '1,10p' nifty/NIFTY50_INDEX_1m_2025.csv
-```
-
-Count option files in one expiry:
-
-```bash
-find Options_2025/2025-01-02 -maxdepth 1 -type f -name '*.csv' | wc -l
-```
-
-Build the 15-minute options dataset:
-
-```bash
-python3 scripts/build_options_2025_15m.py --clean-output
-```
-
-## Summary
-
-The main testing model in this repository is:
-
-- `Options_2025/` = option contracts by expiry
-- `Options_2025_15m/` = derived 15-minute option contracts by expiry
-- `nifty/` = underlying index data
-- `scripts/` = local conversion utilities
-- `fyers-api/` = data pull utilities
+Research and education only. Nothing here is investment advice. Backtested
+results are not predictions — they assume fills that live markets may not offer,
+and past behaviour of an index or its options implies nothing about the future.
+Trading options carries real risk of losing more than you put in.
