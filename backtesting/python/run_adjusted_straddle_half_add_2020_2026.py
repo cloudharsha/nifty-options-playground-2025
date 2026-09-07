@@ -99,6 +99,8 @@ class Cycle:
     adds_blocked: int = 0
     rolls: int = 0
     rolls_blocked: int = 0
+    entry_offset: int = 0
+    entry_balance: float = 0.0
 
 
 # --------------------------------------------------------------------------- #
@@ -110,6 +112,9 @@ def parse_args() -> argparse.Namespace:
         description="Adjusted ATM straddle with half-trigger / 25% adds — NIFTY 2020-2026."
     )
     p.add_argument("--mode", choices=["intraday", "expiry"], default="intraday")
+    p.add_argument("--expiry-type", choices=["weekly", "monthly"], default="weekly",
+                   help="monthly = last expiry of each calendar month; "
+                        "weekly = every expiry folder.")
     p.add_argument("--spot-file", type=Path,
                    default=repo_root / "nifty" / "NIFTY50_INDEX_5m_last_7y.csv")
     p.add_argument("--options-dir", type=Path,
@@ -143,6 +148,15 @@ def parse_args() -> argparse.Namespace:
                    help="Option points given up per order; 0 because Rs 30 is stated to cover costs")
     p.add_argument("--capital", type=float, default=3_00_000.0,
                    help="Reference capital for CAGR/drawdown %% only")
+    p.add_argument("--strike-search-steps", type=int, default=5,
+                   help="Strikes to search either side of ATM (50 pts each) for a "
+                        "straddle that passes the balance filter. 0 = ATM only.")
+    p.add_argument("--balance-fallback", action="store_true",
+                   help="If no strike in range passes the filter, enter the best-balanced "
+                        "one anyway instead of skipping the cycle.")
+    p.add_argument("--allow-stale-entry", action="store_true",
+                   help="Enter on the last bar at or before entry time instead of "
+                        "requiring an exact bar. Tests the bias from data-driven skips.")
     p.add_argument("--check-interval", type=int, default=1,
                    help="Minutes between adjustment checks")
     return p.parse_args()
@@ -364,35 +378,67 @@ class Engine:
         entry_ts = build_ts(entry_date, a.entry_time)
         final_ts = build_ts(exit_date, a.exit_time)
 
-        if entry_date not in spot_open:
+        if entry_date in spot_open:
+            atm = round_to_50(spot_open[entry_date])
+        elif a.allow_stale_entry and price_at(self.spot_series, entry_ts) is not None:
+            atm = round_to_50(price_at(self.spot_series, entry_ts)[0])
+        else:
             return Cycle(entry_date, exit_date, expiry, 0, lot, False,
                          "no_spot_at_entry", f"No {a.entry_time} spot candle.")
-        atm = round_to_50(spot_open[entry_date])
 
-        ce_data = self.contract_for(expiry, "CE", atm)
-        pe_data = self.contract_for(expiry, "PE", atm)
-        if ce_data is None or pe_data is None:
-            return Cycle(entry_date, exit_date, expiry, atm, lot, False,
-                         "missing_atm_contract", f"ATM {atm} CE/PE file absent for {expiry}.")
+        # Walk outward from ATM until a strike whose CE and PE are balanced enough.
+        # Nearest qualifying strike wins; if none qualifies, take the best-balanced
+        # one seen only when --balance-fallback is set, else skip the cycle.
+        need = 1.0 - a.balance_max_diff
+        offsets = [0]
+        for step in range(1, a.strike_search_steps + 1):
+            offsets.extend((-50 * step, 50 * step))
 
-        ce_got = price_at(ce_data, entry_ts)
-        pe_got = price_at(pe_data, entry_ts)
-        if ce_got is None or pe_got is None or ce_got[1] or pe_got[1]:
-            return Cycle(entry_date, exit_date, expiry, atm, lot, False,
-                         "missing_entry_bar", f"No exact {a.entry_time} bar on both ATM legs.")
-        ce_px, pe_px = ce_got[0], pe_got[0]
-        if ce_px <= 0 or pe_px <= 0:
-            return Cycle(entry_date, exit_date, expiry, atm, lot, False,
-                         "zero_entry_price", f"CE={fmt(ce_px)} PE={fmt(pe_px)}")
+        chosen = None            # (strike, ce_data, pe_data, ce_px, pe_px, balance)
+        best_seen = None
+        priceable = False
+        for off in offsets:
+            strike = atm + off
+            cd = self.contract_for(expiry, "CE", strike)
+            pd_ = self.contract_for(expiry, "PE", strike)
+            if cd is None or pd_ is None:
+                continue
+            cg, pg = price_at(cd, entry_ts), price_at(pd_, entry_ts)
+            if cg is None or pg is None:
+                continue
+            if (cg[1] or pg[1]) and not a.allow_stale_entry:
+                continue
+            if cg[0] <= 0 or pg[0] <= 0:
+                continue
+            priceable = True
+            bal = min(cg[0], pg[0]) / max(cg[0], pg[0])
+            cand = (strike, cd, pd_, cg[0], pg[0], bal)
+            if best_seen is None or bal > best_seen[5]:
+                best_seen = cand
+            if bal >= need:
+                chosen = cand
+                break
 
-        balance = min(ce_px, pe_px) / max(ce_px, pe_px)
-        if balance < (1.0 - a.balance_max_diff):
+        if chosen is None and a.balance_fallback and best_seen is not None:
+            chosen = best_seen
+
+        if chosen is None:
+            if not priceable:
+                return Cycle(entry_date, exit_date, expiry, atm, lot, False,
+                             "missing_entry_bar",
+                             f"No priceable straddle within {a.strike_search_steps} strikes of "
+                             f"ATM {atm} at {a.entry_time}.")
             return Cycle(entry_date, exit_date, expiry, atm, lot, False,
                          "balance_check_failed",
-                         f"CE={fmt(ce_px)} PE={fmt(pe_px)} within {balance * 100:.1f}%, "
-                         f"needs >= {(1 - a.balance_max_diff) * 100:.0f}%")
+                         f"Best of {len(offsets)} strikes near ATM {atm} was "
+                         f"{best_seen[0]} at {best_seen[5] * 100:.1f}%, "
+                         f"needs >= {need * 100:.0f}%")
 
-        cycle = Cycle(entry_date, exit_date, expiry, atm, lot, True)
+        strike_sel, ce_data, pe_data, ce_px, pe_px, balance = chosen
+        cycle = Cycle(entry_date, exit_date, expiry, strike_sel, lot, True)
+        cycle.entry_offset = strike_sel - atm
+        cycle.entry_balance = balance
+        atm = strike_sel
         legs: List[Leg] = []
         next_id = 1
         for side, data, px in (("CE", ce_data, ce_px), ("PE", pe_data, pe_px)):
@@ -573,6 +619,16 @@ def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging
     res = args.results_dir
     res.mkdir(parents=True, exist_ok=True)
     tag = args.mode if args.add_strike_rule == "beyond-legs" else f"{args.mode}_otm"
+    if args.expiry_type == "monthly":
+        tag = f"{tag}_monthly"
+    if args.allow_stale_entry:
+        tag = f"{tag}_stale"
+    if args.balance_max_diff >= 0.99:
+        tag = f"{tag}_nobal"
+    if args.strike_search_steps:
+        tag = f"{tag}_srch{args.strike_search_steps}"
+    if args.balance_fallback:
+        tag = f"{tag}_fb"
     if args.max_legs_per_side:
         tag = f"{tag}_cap{args.max_legs_per_side}"
 
@@ -584,13 +640,14 @@ def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging
         w.writerow(["entry_date", "exit_date", "expiry", "atm", "lot_size", "traded",
                     "skip_reason", "remarks", "legs_traded", "adds", "unwinds", "orders",
                     "max_legs", "gross_points", "gross_pnl", "costs", "net_pnl", "stale_prices",
-                    "adds_blocked", "rolls", "rolls_blocked"])
+                    "adds_blocked", "rolls", "rolls_blocked", "entry_offset", "entry_balance"])
         for c in cycles:
             w.writerow([c.entry_date, c.exit_date, c.expiry_date, c.atm_strike, c.lot_size,
                         "YES" if c.traded else "NO", c.skip_reason, c.remarks, len(c.legs),
                         c.adds, c.unwinds, c.orders, c.max_legs, fmt(c.gross_points),
                         fmt(c.gross_pnl), fmt(c.costs), fmt(c.net_pnl), c.stale_prices,
-                        c.adds_blocked, c.rolls, c.rolls_blocked])
+                        c.adds_blocked, c.rolls, c.rolls_blocked, c.entry_offset,
+                        fmt(c.entry_balance)])
 
     with (res / f"{BASE_FILENAME}_{tag}_legs.csv").open("w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh)
@@ -643,7 +700,8 @@ def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging
 
     mode_desc = ("Intraday — enter 09:20, close all legs 15:20 same session."
                  if args.mode == "intraday" else
-                 "Held to expiry — enter 09:20 the first session after the previous expiry, "
+                 "Held to expiry — enter 09:20 the first session after the previous "
+                 f"{args.expiry_type} expiry, "
                  "adjust through every session, close 15:20 on expiry day.")
 
     lines = [
@@ -683,7 +741,13 @@ def write_outputs(args: argparse.Namespace, cycles: List[Cycle], logger: logging
         f"- Total adds: `{sum(c.adds for c in traded)}`, total unwinds: `{sum(c.unwinds for c in traded)}`",
         f"- Add trigger fired but **no strike existed in the target band**: `{sum(c.adds_blocked for c in traded)}` times",
         f"- Add strike rule: `{args.add_strike_rule}`",
+        f"- Contract: **{args.expiry_type} expiry**"
+        + (" (last expiry of each calendar month)" if args.expiry_type == "monthly" else ""),
         f"- Total rolls at the leg cap: `{sum(c.rolls for c in traded)}`",
+        f"- Entry strike search: +/-`{args.strike_search_steps}` strikes around ATM"
+        + (" with best-balance fallback" if args.balance_fallback else "")
+        + f"; entries away from ATM: `{sum(1 for c in traded if c.entry_offset)}` "
+          f"of `{len(traded)}`",
         f"- Orders executed: `{sum(c.orders for c in traded)}`",
         f"- Max legs open at once: `{max((c.max_legs for c in traded), default=0)}`",
         "",
@@ -754,6 +818,11 @@ def main() -> None:
     days, spot_open, spot_series = load_spot(args.spot_file, args.entry_time)
     days = [d for d in days if args.start_date <= d <= args.end_date]
     expiries = sorted(p.name for p in args.options_dir.iterdir() if p.is_dir())
+    if args.expiry_type == "monthly":
+        by_month: Dict[str, List[str]] = {}
+        for e in expiries:
+            by_month.setdefault(e[:7], []).append(e)
+        expiries = [max(v) for v in (by_month[k] for k in sorted(by_month))]
     expiry_set = set(expiries)
 
     if args.mode == "intraday":
