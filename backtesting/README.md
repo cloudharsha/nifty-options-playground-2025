@@ -1,101 +1,106 @@
-# Backtesting Results Index
+# Backtesting
 
-This table summarizes the result files currently present under `backtesting/results`, including archived folders such as `backtesting/results/legacy`, `backtesting/results/legacy-2`, and `backtesting/results/legacy-3`.
+Every strategy in this repo lives here: the runner scripts, the generated
+results, and the index that ties them together.
 
-Notes:
+The layout has one rule — **`python/<family>/` and `results/<family>/` mirror
+each other**. Find a strategy in one and you know where its output is.
 
-- `CAGR / Return` shows **CAGR** for multi-year strategies and **total return %** for single-year strategies.
-- Most short-option and index tests use a Rs 10,00,000 reference base.
-- NIFTY futures strategies (1-lot, Rs 65/point) use a Rs 2,50,000 capital base — approximate margin required for 1 lot of NIFTY futures.
-- The 2025 long ATM weekly overnight strategy uses a Rs 1,00,000 reference base. The 6Y version (2020–2026) uses a Rs 5,00,000 base (higher due to larger premium outlay with ~300 qty).
-- Some older summaries do not report max drawdown; those rows are marked `N/A`.
-- Results are only as current as the generated files in `backtesting/results`.
-- **Adjusted ATM Straddle rows use a different capital convention.** Their capital base is the *estimated peak SPAN+exposure margin* actually reached by the position (~10% of contract value per naked short lot, same-side legs additive, cross-side netting at 30%), not a fixed reference base. Because these strategies stack up to 12 short legs, a fixed base would overstate CAGR by 2-3x — the uncapped variant shows 25.65% on a Rs 3L base versus 7.21% on the Rs 17.77L it really needs. Treat the margin model as an approximation and verify against a broker calculator before comparing these rows to the fixed-base rows above.
-- **6-year (2020–2026) backtest rows are listed first in each section** for multi-year robustness visibility, sorted by CAGR (high → low for profit, least negative → most negative for loss). Single-year and other results follow in the same CAGR order.
-- Within profit N/A rows and loss N/A rows, results are sorted by Net P/L.
+```
+backtesting/
+  docs/
+    dataset-reference.md      data schema, lot-size eras, expiry-day history
+    results/                  one index doc per strategy family
+  python/
+    _template/example.py      copy this to start a new strategy
+    <family>/                 runner scripts
+    legacy/                   archived, does not run as-is
+    tests/
+  results/
+    <family>/                 generated output
+    legacy/ legacy-2/         archived runs
+```
 
-| Source | Period | Test | Result | Capital Base | Net P/L | CAGR / Return | Max DD | Summary | Remarks |
-|---|---|---|---:|---:|---:|---:|---:|---|---|
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Intraday Trailing — 09:20 Entry, 30% Random Skip (5 runs avg) | Profit | Rs 10L | Rs 68,20,328 avg | 31.72% CAGR avg | Rs 1,14,299 avg | [Summary](results/25ma-intraday/random-skip/short_atm_nifty_ma_weekly_intraday_trailing_0920_random_summary.md) | 40% skip: 29.24%, 50% skip: 26.47%; avg of 5 seeds per rate |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Intraday Trailing (5m stop) | Profit | Rs 10L | Rs 67,11,939 | 31.48% CAGR | Rs 1,36,705 | [Summary](results/25ma-intraday/base/short_atm_nifty_ma_weekly_intraday_trailing_2020_2026_summary.md) | [2025: 66.03%](results/legacy/short_atm_nifty_ma_weekly_intraday_trailing_2025_summary.md) |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Intraday Trailing — 09:20 Entry, 2-SL/Day Cap, 30% Random Skip (5 runs avg) | Profit | Rs 10L | Rs 51,08,988 avg | 27.43% CAGR avg | Rs 1,16,493 avg | [Summary](results/25ma-intraday/with-sl-cap/short_atm_nifty_ma_weekly_intraday_trailing_0920_random_2slcap_summary.md) | 40% skip: 25.21%, 50% skip: 22.55%; halt after 2 SL/day |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Intraday Trailing — 09:20 + 2-SL Cap + MA Gap ≤150pts, 30% Skip (5 runs avg) | Profit | Rs 10L | Rs 42,92,189 avg | 24.99% CAGR avg | Rs 1,42,824 avg | [Summary](results/25ma-intraday/with-magap-filter/short_atm_nifty_ma_weekly_intraday_trailing_0920_random_2slcap_magap_summary.md) | 40% skip: 22.77%, 50% skip: 20.46%; skip entry if \|close−SMA\| > 150 |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Intraday Trailing — 09:20 + 2-SL Cap + MA Gap ≤125pts, 30% Skip (5 runs avg) | Profit | Rs 10L | Rs 39,54,349 avg | 23.88% CAGR avg | Rs 1,40,008 avg | [Summary](results/25ma-intraday/with-magap-filter/short_atm_nifty_ma_weekly_intraday_trailing_0920_random_2slcap_magap_summary.md) | 40% skip: 21.57%, 50% skip: 19.45%; skip entry if \|close−SMA\| > 125 |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Intraday Trailing — 09:20 + 2-SL Cap + MA Gap ≤100pts, 30% Skip (5 runs avg) | Profit | Rs 10L | Rs 36,49,025 avg | 22.83% CAGR avg | Rs 1,21,120 avg | [Summary](results/25ma-intraday/with-magap-filter/short_atm_nifty_ma_weekly_intraday_trailing_0920_random_2slcap_magap_summary.md) | 40% skip: 20.62%, 50% skip: 18.52%; skip entry if \|close−SMA\| > 100 |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Intraday Trailing — 09:20 + 2-SL Cap + MA Gap ≤75pts, 30% Skip (5 runs avg) | Profit | Rs 10L | Rs 32,23,660 avg | 21.26% CAGR avg | Rs 1,00,874 avg | [Summary](results/25ma-intraday/with-magap-filter/short_atm_nifty_ma_weekly_intraday_trailing_0920_random_2slcap_magap_summary.md) | 40% skip: 19.09%, 50% skip: 17.14%; skip entry if \|close−SMA\| > 75 |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Overnight Offset ITM 200 | Profit | Rs 10L | Rs 27,36,233 | 19.32% CAGR | Rs 2,70,220 | [Summary](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) | [2025: 57.88%](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Overnight Offset ITM 300 | Profit | Rs 10L | Rs 26,53,098 | 18.96% CAGR | Rs 2,96,200 | [Summary](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) | [2025: 62.38%](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Overnight Offset ITM 100 | Profit | Rs 10L | Rs 23,08,668 | 17.39% CAGR | Rs 2,28,640 | [Summary](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) | [2025: 51.50%](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Weekly, Held to Expiry (no balance filter, ATM only) | Profit | Rs 6.45L | Rs 10,57,265 | 16.28% CAGR | Rs 75,972 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_stale_nobal_cap3_summary.md) | 329 cycles; more total profit than the filtered run but 1.8x the drawdown — the balance filter is doing real work |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Weekly, Held to Expiry (±5 strike search, never skip on balance) | Profit | Rs 6.48L | Rs 10,55,508 | 16.23% CAGR | Rs 99,098 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_stale_srch5_fb_cap3_summary.md) | 331 cycles; shift entry strike until CE/PE balance, enter best available if none qualifies |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Weekly, Held to Expiry (±5 strike search, skip if none balanced) | Profit | Rs 6.48L | Rs 10,43,869 | 16.10% CAGR | Rs 99,098 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_stale_srch5_cap3_summary.md) | 322 cycles; entries: 245 at ATM, 58 at +50, 11 at −50, 7 at +100, 1 at +200. Per-cycle profit falls Rs 3,894 → Rs 3,242 vs the filtered baseline |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Weekly, Held to Expiry (1 lot, 3-leg cap + 75% roll, adds OTM vs spot) | Profit | Rs 6.45L | Rs 9,54,046 | 15.16% CAGR | Rs 41,725 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_cap3_summary.md) | **Best config.** 245 cycles, PF 2.91, win 68.98%, max 4 legs; 1,879 adds / 1,585 unwinds / 565 rolls |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Weekly, Held to Expiry (1 lot, adds only further OTM than existing legs) | Profit | Rs 5.12L | Rs 6,37,350 | 13.41% CAGR | Rs 73,688 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_summary.md) | PF 1.64; 3-leg cap never binds under this rule (0 rolls) — adjustment disengages in fast crashes |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Overnight Offset OTM 100 | Profit | Rs 10L | Rs 11,72,399 | 10.95% CAGR | Rs 2,98,630 | [Summary](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) | [2025: 36.32%](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Overnight Offset OTM 200 | Profit | Rs 10L | Rs 7,36,394 | 7.67% CAGR | Rs 2,70,775 | [Summary](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) | [2025: 28.13%](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Weekly, Held to Expiry (1 lot, uncapped adds, OTM vs spot) | Profit | Rs 17.77L | Rs 10,03,013 | 7.21% CAGR | Rs 91,539 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_summary.md) | Highest gross (PF 3.17) but stacked to 12 legs; worst cycle −Rs 81,568 |
-| Current | 2020–2026 | Long ATM NIFTY MA Weekly Overnight | Profit | Rs 5L | Rs 3,30,944 | 7.04% CAGR | Rs 5,68,615 | [Summary](results/25ma-overnight/long/long_atm_nifty_ma_weekly_overnight_2020_2026_summary.md) | [2025: 251.94%](results/legacy-2/long_atm_nifty_ma_weekly_overnight_2025_summary.md) |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Overnight Offset OTM 300 | Profit | Rs 10L | Rs 4,45,963 | 5.07% CAGR | Rs 2,05,310 | [Summary](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) | [2025: 19.99%](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Overnight Offset OTM 400 | Profit | Rs 10L | Rs 1,85,151 | 2.30% CAGR | Rs 2,06,510 | [Summary](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) | [2025: 13.55%](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Intraday (1 lot, adds only further OTM than existing legs) | Profit | Rs 4.53L | Rs 66,485 | 2.15% CAGR | Rs 1,27,548 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_intraday_summary.md) | 893 cycles; costs Rs 1,81,920 = 73% of gross |
-| Current | 2020–2026 | Short ATM MA Same-Week 15m Trailing Intraday Entry | Profit | Rs 10L | Rs 1,39,007 | 1.76% CAGR | Rs 6,38,220 | [Summary](results/25ma-intraday/same-week/short_atm_ma_same_week_15m_trailing_intraday_entry_2020_2026_summary.md) | [2025: 51.07%](results/legacy/short_atm_ma_same_week_15m_trailing_intraday_entry_2025_summary.md) |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Intraday (1 lot, 3-leg cap + 75% roll, adds OTM vs spot) | Profit | Rs 6.49L | Rs 60,386 | 1.39% CAGR | Rs 87,323 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_intraday_otm_cap3_summary.md) | Same rules as the 15.16% expiry row — the timeframe is what kills it; costs Rs 2,50,920 = 81% of gross |
-| Current | 2020–2026 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Intraday (1 lot, uncapped adds, OTM vs spot) | Profit | Rs 12.17L | Rs 41,517 | 0.52% CAGR | Rs 1,04,380 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_intraday_otm_summary.md) | Costs Rs 2,51,460 = 86% of gross |
-| Legacy-2 | 2025 | Long ATM NIFTY MA Weekly Overnight 2025 | Profit | Rs 1L | Rs 2,51,943.80 | 251.94% | Rs 1,02,323.00 | [Summary](results/legacy-2/long_atm_nifty_ma_weekly_overnight_2025_summary.md) | [6Y: 7.04% CAGR](results/25ma-overnight/long/long_atm_nifty_ma_weekly_overnight_2020_2026_summary.md) |
-| Legacy | 2025 | Long ATM NIFTY MA Weekly Overnight 2025 | Profit | Rs 1L | Rs 2,51,943.80 | 251.94% | Rs 1,02,323.00 | [Summary](results/legacy/long_atm_nifty_ma_weekly_overnight_2025_summary.md) | [6Y: 7.04% CAGR](results/25ma-overnight/long/long_atm_nifty_ma_weekly_overnight_2020_2026_summary.md) |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Intraday Trailing 2025 | Profit | Rs 10L | Rs 6,60,341.40 | 66.03% | Rs 1,30,612.40 | [Summary](results/legacy/short_atm_nifty_ma_weekly_intraday_trailing_2025_summary.md) | [6Y: 31.48% CAGR](results/25ma-intraday/base/short_atm_nifty_ma_weekly_intraday_trailing_2020_2026_summary.md) |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Offset ITM 300 | Profit | Rs 10L | Rs 6,23,772.40 | 62.38% | Rs 1,25,171.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) | [6Y: 18.96% CAGR](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Offset ITM 200 | Profit | Rs 10L | Rs 5,78,795.00 | 57.88% | Rs 1,13,666.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) | [6Y: 19.32% CAGR](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) |
-| Legacy | 4Y | NIFTY 25-SMA Continuous Trailing 15m | Profit | Rs 2.5L | Rs 11,88,295.55 | 54.88% CAGR | Rs 1,65,540.05 | [Summary](results/legacy/nifty_ma_continuous_trailing_15m_summary.md) | |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Offset ITM 100 | Profit | Rs 10L | Rs 5,14,952.00 | 51.50% | Rs 95,435.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) | [6Y: 17.39% CAGR](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) |
-| Legacy | 2025 | Short ATM MA Same-Week 15m Trailing Intraday Entry 2025 | Profit | Rs 10L | Rs 5,10,661.20 | 51.07% | N/A | [Summary](results/legacy/short_atm_ma_same_week_15m_trailing_intraday_entry_2025_summary.md) | [6Y: 1.76% CAGR](results/25ma-intraday/same-week/short_atm_ma_same_week_15m_trailing_intraday_entry_2020_2026_summary.md) |
-| Legacy | 4Y | NIFTY 25-SMA Overnight Movement 15m | Profit | Rs 2.5L | Rs 10,50,786.75 | 51.03% CAGR | Rs 74,750.00 | [Summary](results/legacy/nifty_ma_overnight_movement_15m_summary.md) | |
-| Legacy | 2025 | Short ATM MA Same-Week 15m 2025 | Profit | Rs 10L | Rs 4,93,017.00 | 49.30% | N/A | [Summary](results/legacy/short_atm_ma_same_week_15m_2025_summary.md) | |
-| Legacy | 2025 | Short ATM MA Same-Week 15m Trailing 2025 | Profit | Rs 10L | Rs 4,93,017.00 | 49.30% | N/A | [Summary](results/legacy/short_atm_ma_same_week_15m_trailing_2025_summary.md) | |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight 2025 | Profit | Rs 10L | Rs 4,46,015.60 | 44.60% | Rs 76,221.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_2025_summary.md) | |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Offset OTM 100 | Profit | Rs 10L | Rs 3,63,236.80 | 36.32% | Rs 58,480.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) | [6Y: 10.95% CAGR](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) |
-| Legacy | 4Y | NIFTY 25-SMA Intraday Trailing 15m | Profit | Rs 2.5L | Rs 5,63,707.95 | 34.31% CAGR | Rs 93,377.70 | [Summary](results/legacy/nifty_ma_intraday_trailing_15m_summary.md) | |
-| Legacy | 2025 | Long/Short ATM NIFTY MA Weekly Overnight 2025 | Profit | Rs 10L | Rs 3,36,729.70 | 33.67% | Rs 80,646.50 | [Summary](results/legacy/long_short_atm_nifty_ma_weekly_overnight_2025_summary.md) | |
-| Current | ~4Y | Long/Short ATM NIFTY MA Weekly Overnight 2022-2026 (capital-based lots, margin ≈10%) | Profit | Rs 10L | Rs 20,77,457.90 | 32.63% CAGR | Rs 6,80,802.50 | [Summary](results/legacy/long_short_atm_nifty_ma_weekly_overnight_2020_2026_summary.md) | |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Offset OTM 200 | Profit | Rs 10L | Rs 2,81,303.60 | 28.13% | Rs 45,259.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) | [6Y: 7.67% CAGR](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) |
-| Legacy-2 | 2025 | Combined Expiry + Adjusting Short Strangle 2025 | Profit | Rs 10L | Rs 2,52,042.69 | 25.20% | Rs 69,261.93 | [Summary](results/legacy-2/combined_expiry_adjusting_strangle_2025_summary.md) | |
-| Current | 2024-12–2026-05 | Adjusted ATM Straddle — Half-Trigger / 25% Add — Monthly, Held to Expiry (1 lot, 3-leg cap + 75% roll, adds OTM vs spot) | Profit | Rs 6.50L | Rs 2,25,074 | 23.30% CAGR | Rs 62,476 | [Summary](results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_stale_srch5_cap3_summary.md) | **Only 16 cycles.** Dataset carries just 3-5 days per monthly contract before 2025, so 2020–2024 is untestable; 60 of 76 cycles skipped. Weekly earned Rs 3,22,456 over the same window |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Offset OTM 300 | Profit | Rs 10L | Rs 1,99,936.00 | 19.99% | Rs 34,482.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) | [6Y: 5.07% CAGR](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) |
-| Legacy | 2025 | Intraday Adjusted Weekly Straddle 2025 | Profit | Rs 10L | Rs 1,77,017.00 | 17.70% | N/A | [Summary](results/legacy/intraday_adjusted_straddle_2025_summary.md) | |
-| Legacy-3 | ~6Y | Heads & Tails Grid — Short ATM NIFTY Weekly (20 combos × 5 runs; best: SL=40%, T=open) | Profit | Rs 5L | Rs 9,73,379 avg | 17.38% avg CAGR | Rs 4,81,637 avg | [Summary](results/heads-tails/heads_tails_nifty_grid_summary.md) | |
-| Legacy | 4Y | NIFTY 25/50 SMA Crossover 2R | Profit | Rs 2.5L | Rs 1,95,734.50 | 15.55% CAGR | Rs 1,16,119.25 | [Summary](results/legacy/nifty_ma_25_50_crossover_rr_15m_summary.md) | |
-| Legacy-2 | 2025 | Weekly Adjusting Strangle Through Expiry 2025 | Profit | Rs 10L | Rs 1,48,016.27 | 14.80% | Rs 85,510.77 | [Summary](results/legacy-2/weekly_adjusting_strangle_through_expiry_2025_summary.md) | |
-| Legacy | 4Y | NIFTY 25/50 SMA Crossover 3R | Profit | Rs 2.5L | Rs 1,76,514.00 | 14.29% CAGR | Rs 1,31,488.50 | [Summary](results/legacy/nifty_ma_25_50_crossover_rr_15m_summary.md) | |
-| Current | 2025 | Intraday ATM Straddle — Independent SL per Leg (1 lot, 09:20–15:20, 2× SL each leg) | Profit | Rs 3L | Rs 40,756.25 | 13.59% | Rs 38,647.00 | [Summary](results/legacy/intraday_atm_straddle_indep_sl_2025_summary.md) | |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Offset OTM 400 | Profit | Rs 10L | Rs 1,35,545.00 | 13.55% | Rs 26,823.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) | [6Y: 2.30% CAGR](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) |
-| Legacy-2 | 4Y | NIFTY Last 3 Same-Color Overnight 15m | Profit | Rs 2.5L | Rs 1,50,712.25 | 12.52% CAGR | Rs 46,143.50 | [Summary](results/legacy-2/nifty_last_3_green_overnight_15m_summary.md) | |
-| Current | 2025 | Intraday ATM Straddle — 25-period 15m MA Filter (1 lot, 09:40–15:20, MA entry + dynamic MA SL) | Profit | Rs 3L | Rs 35,710.36 | 11.90% | Rs 24,078.33 | [Summary](results/legacy/intraday_atm_straddle_ma25_2025_summary.md) | |
-| Legacy-3 | ~6Y | Heads & Tails — Random Short ATM NIFTY Weekly (5 runs avg; SL=20%, T=50%, 09:30–15:20, noon re-entry) | Profit | Rs 5L | Rs 4,38,958 avg | ~9.84% avg CAGR | Rs 3,25,433 avg | [Summary](results/heads-tails/heads_tails_nifty_summary.md) | |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Offset OTM 500 | Profit | Rs 10L | Rs 86,768.40 | 8.68% | Rs 28,324.00 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) | [6Y: −1.20% CAGR](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) |
-| Legacy-3 | Sep 25+ | Combined NIFTY+SENSEX ATM Straddle — Expiry-Incl., no balance filter (Mon/Tue/Fri=NIFTY ~300 qty, Wed/Thu=SENSEX 100 qty) | Profit | Rs 5L | Rs 27,012 | 6.90% CAGR | Rs 1,32,821 | [Summary](results/combined-index/combined_nifty_sensex_expiry_incl_2025_summary.md) | |
-| Current | 2025 | Intraday ATM Straddle — Joint SL (1 lot, 09:20–15:20, 2× SL exits both legs) | Profit | Rs 3L | Rs 16,595.00 | 5.53% | Rs 53,756.50 | [Summary](results/legacy/intraday_atm_straddle_joint_sl_2025_summary.md) | |
-| Legacy-3 | Sep 25+ | Combined Balanced-Strike ATM Straddle — NIFTY+SENSEX (161 days, 9 SL levels tested; best SL=50%) | Profit | Rs 5L | Rs 10,361 | 2.6% CAGR | Rs 1,57,613 | [Summary](results/combined-index/combined_nifty_sensex_balanced_strike_2025_summary.md) | |
-| Legacy-2 | 2025 | Expiry ITM 100 MA Short 09:20 2025 | Profit | Rs 10L | Rs 15,760.60 | 1.58% | Rs 2,40,921.00 | [Summary](results/legacy-2/expiry_itm100_ma_short_0920_2025_summary.md) | |
-| Legacy-3 | ~6Y | NIFTY Intraday ATM Straddle — Expiry-Inclusive (~300 qty, 09:20–15:20, 20% Ind. SL per leg, balance filter) | Profit | Rs 10L | Rs 10,48,326 | N/A | Rs 2,93,983 | [Summary](results/intraday-straddle/intraday_atm_straddle_expiry_incl_nifty_summary.md) | |
-| Legacy-3 | 2024–2026 | SENSEX Intraday ATM Straddle — Expiry-Inclusive (100 qty, 09:20–15:20, 20% Ind. SL per leg, balance filter) | Profit | Rs 5L | Rs 3,29,040 | N/A | Rs 1,70,381 | [Summary](results/intraday-straddle/intraday_atm_straddle_expiry_incl_sensex_summary.md) | |
-| Legacy-3 | 2024–2026 | SENSEX Intraday ATM Straddle — 20% Ind. SL, Monthly Expiry (100 qty, 09:20–15:20, balance filter) | Profit | Rs 5L | Rs 2,52,845 | N/A | Rs 1,12,754 | [Summary](results/intraday-straddle/intraday_atm_straddle_20pct_sl_sensex_monthly_2024_2026_summary.md) | |
-| Legacy-3 | ~6Y | NIFTY Intraday ATM Straddle — 20% Ind. SL, Weekly Expiry (~300 qty, 09:20–15:20, balance filter) | Profit | Rs 10L | Rs 2,16,384 | N/A | Rs 2,60,277 | [Summary](results/intraday-straddle/intraday_atm_straddle_20pct_sl_nifty_2020_2026_summary.md) | |
-| Legacy-3 | 2024–2026 | SENSEX Intraday ATM Straddle — 20% Ind. SL, Weekly Expiry (100 qty, 09:20–15:20, balance filter) | Profit | Rs 5L | Rs 1,44,762 | N/A | Rs 1,72,031 | [Summary](results/intraday-straddle/intraday_atm_straddle_20pct_sl_sensex_2024_2026_summary.md) | |
-| Current | 2020–2026 | Short ATM NIFTY MA Weekly Overnight Offset OTM 500 | Loss | Rs 10L | −Rs 86,223 | −1.20% CAGR | Rs 3,49,702 | [Summary](results/25ma-overnight/short-offsets/short_atm_nifty_ma_weekly_overnight_offsets_2020_2026_summary.md) | [2025: 8.68%](results/legacy/short_atm_nifty_ma_weekly_overnight_offsets_2025_summary.md) |
-| Legacy-2 | 2025 | Gap 100 ATM Option 09:16 2025 | Loss | Rs 10L | Rs -5,696.40 | -0.57% | N/A | [Summary](results/legacy-2/gap_100_atm_option_0916_2025_summary.md) | |
-| Legacy | 2025 | Short ATM Weekly Straddle 2025 | Loss | Rs 10L | Rs -10,824.00 | -1.08% | N/A | [Summary](results/legacy/short_atm_weekly_straddle_2025_summary.md) | |
-| Legacy | 2025 | Short Iron Condor Next Week 2025 | Loss | Rs 10L | Rs -21,321.20 | -2.13% | N/A | [Summary](results/legacy/short_iron_condor_next_week_2025_summary.md) | |
-| Legacy-3 | Sep 25+ | Combined Short OTM Strangle — NIFTY+SENSEX (153 days, 9 SL levels tested; best SL=90%) | Loss | Rs 5L | Rs -21,010 | -5.3% CAGR | Rs 49,425 | [Summary](results/combined-index/combined_strangle_2025_summary.md) | |
-| Legacy | 4Y | NIFTY 25/50 SMA Crossover 1R | Loss | Rs 2.5L | Rs -74,993.75 | -8.53% CAGR | Rs 1,47,403.75 | [Summary](results/legacy/nifty_ma_25_50_crossover_rr_15m_summary.md) | |
-| Current | 2025 | Overnight OTM Strangle by Day — with fallback band (1 lot, 15:20–09:20 next day) | Loss | Rs 3L | Rs -26,781.25 | -8.93% | Rs 43,118.50 | [Summary](results/legacy/overnight_strangle_by_day_2025_summary.md) | |
-| Current | 2025 | Intraday OTM Strangle Joint SL by Day — with fallback band (1 lot, 09:20–15:20, 2× joint SL) | Loss | Rs 3L | Rs -27,204.25 | -9.07% | Rs 35,332.00 | [Summary](results/legacy/intraday_joint_sl_strangle_2025_summary.md) | |
-| Legacy-2 | 2025 | Short ATM Same-Week Intraday SL 2025 | Loss | Rs 10L | Rs -1,23,796.40 | -12.38% | N/A | [Summary](results/legacy-2/short_atm_same_week_intraday_sl_2025_summary.md) | |
-| Legacy-2 | 2025 | Weekly Short Strangle 09:20 2025 | Loss | Rs 10L | Rs -1,47,728.40 | -14.77% | N/A | [Summary](results/legacy-2/weekly_short_strangle_0920_2025_summary.md) | |
-| Legacy | 2025 | Short ATM NIFTY MA Weekly Overnight Hedged 2025 | Loss | Rs 10L | Rs -2,18,490.00 | -21.85% | Rs 3,22,592.50 | [Summary](results/legacy/short_atm_nifty_ma_weekly_overnight_hedged_2025_summary.md) | |
-| Legacy-2 | 2025 | Gap Open ATM Straddle 09:15 2025 | Loss | Rs 10L | Rs -2,73,125.00 | -27.31% | N/A | [Summary](results/legacy-2/gap_open_atm_straddle_0915_2025_summary.md) | |
-| Legacy | 2025 | Short Iron Fly 2025 | Loss | Rs 10L | Rs -4,33,828.60 | -43.38% | N/A | [Summary](results/legacy/short_iron_fly_2025_summary.md) | |
-| Legacy-3 | ~6Y | Heads & Tails Grid — LONG ATM NIFTY Weekly (28 combos × 5 runs; best: SL=20%, T=90%) | Loss | Rs 5L | Rs -7,56,517 avg | -86.29% avg CAGR | N/A | [Summary](results/heads-tails/heads_tails_nifty_grid_long_summary.md) | |
-| Legacy-3 | 2024–2026 | Weekly Short Strangle — NIFTY+SENSEX Alternating (OTM, 1 lot each, 09:30–15:20, 2× SL) | Loss | Rs 5L | Rs -48,953 | N/A | Rs 66,567 | [Summary](results/legacy/weekly_strangle_nifty_sensex_2024_2026_summary.md) | |
-| Current | ~4Y | Weekly Short Iron Condor Roll 2022-2026 (1 lot, sell ±250, hedge ±450, 09:15 entry, 15:15 exit on expiry) | Loss | Rs 10L | Rs -68,495.25 | N/A | N/A | [Summary](results/legacy/weekly_iron_condor_roll_2020_2026_summary.md) | |
-| Legacy-3 | ~6Y | NIFTY Intraday ATM Straddle — 20% Ind. SL, Monthly Expiry (~300 qty, 09:20–15:20, balance filter) | Loss | Rs 10L | Rs -1,54,701 | N/A | Rs 3,49,483 | [Summary](results/intraday-straddle/intraday_atm_straddle_20pct_sl_nifty_monthly_2020_2026_summary.md) | |
-| Legacy-3 | ~4Y | NIFTY Intraday Iron Condor — Weekly (~300 qty, May 2022–2026, sell ±250, hedge ±450, 09:20–15:20, no SL) | Loss | Rs 10L | Rs -22,87,219 | N/A | N/A | [Summary](results/iron-condor/intraday_iron_condor_weekly_2020_2026_summary.md) | |
+## Results by strategy family
+
+| Family | What it tests | Runs |
+|---|---|---:|
+| [25-SMA Intraday](docs/results/25ma-intraday.md) | Short ATM on a 25-SMA signal, closed same session | 14 |
+| [25-SMA Overnight](docs/results/25ma-overnight.md) | Same signal carried overnight to weekly expiry, plus the strike-offset sweep | 23 |
+| [Adjusted Straddle](docs/results/adjusted-straddle.md) | ATM straddle that adds to the weak side as the market moves, then unwinds | 14 |
+| [Intraday Straddle](docs/results/intraday-straddle.md) | Plain ATM straddle, one session, independent or joint stops | 11 |
+| [Iron Condors & Flies](docs/results/iron-condor.md) | Defined-risk short premium | 5 |
+| [Strangles](docs/results/strangles.md) | Short OTM strangles, various holds | 6 |
+| [Combined NIFTY + SENSEX](docs/results/combined-index.md) | Routes each weekday to whichever index suits it | 3 |
+| [Human-Compatible](docs/results/combined-human.md) | 15-minute checks and GTT orders instead of constant monitoring | 3 |
+| [Heads & Tails](docs/results/heads-tails.md) | Random-entry controls | 3 |
+| [Directional & Signal Studies](docs/results/directional-studies.md) | Underlying-only signal tests | 9 |
+
+### Headline six-year runs
+
+Only 2020–2026 runs appear here, because a single-year return and a six-year
+CAGR are not comparable numbers.
+
+| Strategy | Net P/L | CAGR | Max DD |
+|---|---:|---:|---:|
+| [25-SMA intraday trailing, 09:20 entry, 30% random skip](docs/results/25ma-intraday.md) | Rs 68,20,328 | 31.72% | Rs 1,14,299 |
+| [25-SMA overnight, ITM 200 offset](docs/results/25ma-overnight.md) | Rs 27,36,233 | 19.32% | Rs 2,70,220 |
+| [Heads & Tails random-entry control](docs/results/heads-tails.md) | Rs 9,73,379 | 17.38% | Rs 4,81,637 |
+| [Adjusted straddle, held to expiry, 3-leg cap](docs/results/adjusted-straddle.md) | Rs 9,54,046 | 15.16% | Rs 41,725 |
+
+The random-entry control sits third. That is the point of running it: any
+signal-based strategy below ~17% CAGR on this instrument has not yet shown
+that its signal beats a coin flip on the same costs.
+
+## Running a backtest
+
+Python 3.13, standard library only — no dependencies to install. Every script
+is standalone and takes `--help`.
+
+```bash
+# from the repo root
+python backtesting/python/adjusted-straddle-half-add/run_adjusted_straddle_half_add_2020_2026.py \
+    --mode expiry --start-date 2025-01-01 --end-date 2025-03-31
+```
+
+Each script defaults `--results-dir` to its own `results/<family>/` folder, so
+a re-run overwrites that strategy's output and nothing else. Market data paths
+default to the layout described in the [root README](../README.md#data-layout);
+the data is not in this repo.
+
+Tests run one file at a time (there is no package, so `unittest discover` will
+not work):
+
+```bash
+python backtesting/python/tests/test_run_weekly_short_strangle_0920_2025.py
+```
+
+## Reading the numbers
+
+Read this before comparing rows across families.
+
+- **Capital Base is not consistent between strategies, on purpose.** Most rows
+  use a fixed reference base (Rs 10L for short-option runs, Rs 2.5L for futures,
+  Rs 3L for 1-lot intraday). The adjusted-straddle rows instead use the
+  *estimated peak margin the position actually reaches*, because those
+  strategies stack up to 12 short legs — on a fixed base they would report
+  25.65% where the honest figure is 7.21%. A CAGR is only as meaningful as the
+  capital it is measured against.
+- **CAGR vs total return.** Multi-year rows show CAGR; single-year rows show
+  total return for that year. Do not rank them against each other.
+- **Costs are modelled, fills are not.** Brokerage and taxes are charged per
+  order. Every backtest assumes it got filled at the recorded price, which is
+  optimistic for illiquid strikes and for gap days.
+- **Skipped days matter.** Several strategies decline to trade when an entry
+  filter fails. A high skip rate can mean the filter is doing real work, or that
+  the sample is thin — the per-strategy summaries report skip counts and reasons.
+- **Max DD is in rupees**, measured on the equity curve of that run.
+
+Contract conventions that change P/L — lot-size eras, the Thursday-to-Tuesday
+expiry switch, strike intervals — are in
+[docs/dataset-reference.md](docs/dataset-reference.md). Getting the lot size
+wrong silently scales every number in a run.
+
+## Adding a strategy
+
+See [Contributing](../README.md#contributing) in the root README.
