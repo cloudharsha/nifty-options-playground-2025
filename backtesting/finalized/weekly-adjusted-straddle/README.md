@@ -20,7 +20,7 @@ No entry filter. No strike shopping. **Every week is traded.**
 
 **2. Monitoring.** Check the position **once an hour**: 09:20, 10:20, 11:20,
 12:20, 13:20, 14:20, 15:20. Not continuously — see
-[Why hourly](#why-hourly-checking-beats-watching-continuously).
+[Check frequency](#check-frequency-same-result-less-work).
 
 At each check, compare the **total premium of all CE legs** against the **total
 premium of all PE legs**. One side is "strong" (worth more), the other "weak".
@@ -79,15 +79,15 @@ python backtesting/python/adjusted-straddle-half-add/run_adjusted_straddle_half_
 | | |
 |---|---:|
 | Weeks traded | **329 of 334** |
-| Gross P/L | Rs 10,59,594 |
+| Gross P/L | Rs 9,10,540 |
 | Costs (Rs 30/order, 3,910 orders) | Rs 1,17,300 |
-| **Net P/L** | **Rs 9,42,294** |
-| **CAGR on Rs 6.47L peak margin** | **15.00%** |
-| **Max drawdown** | **Rs 67,919** |
-| Win rate | 64.4% (212W / 117L) |
-| Profit factor | 1.92 |
-| Best week | Rs 51,045 |
-| Worst week | −Rs 57,019 |
+| **Net P/L** | **Rs 7,93,240** |
+| **CAGR on Rs 6.47L peak margin** | **13.19%** |
+| **Max drawdown** | **Rs 42,159** |
+| Win rate | 67.5% (222W / 107L) |
+| Profit factor | 2.63 |
+| Best week | Rs 48,165 |
+| Worst week | −Rs 27,619 |
 | **Adjustments** | **5.9 per week** (3.2 adds, 1.9 unwinds, 0.7 rolls) |
 
 The 5 untraded weeks are dataset gaps — no priceable ATM straddle in the files —
@@ -97,30 +97,36 @@ not the strategy declining a trade.
 
 | Year | Weeks | Net P/L | Win % |
 |---|---:|---:|---:|
-| 2020 | 52 | Rs 89,865 | 61.5% |
-| 2021 | 52 | Rs 1,97,715 | 75.0% |
-| 2022 | 52 | Rs 1,37,410 | 63.5% |
-| 2023 | 51 | Rs 59,625 | 56.9% |
-| 2024 | 51 | Rs 44,656 | 56.9% |
-| 2025 | 53 | Rs 3,77,225 | 75.5% |
-| 2026 (part) | 18 | Rs 35,799 | 55.6% |
+| 2020 | 52 | Rs 1,62,221 | 73.1% |
+| 2021 | 52 | Rs 1,38,033 | 67.3% |
+| 2022 | 52 | Rs 1,21,115 | 71.2% |
+| 2023 | 51 | Rs 8,760 | 62.7% |
+| 2024 | 51 | Rs 40,731 | 66.7% |
+| 2025 | 53 | Rs 2,57,225 | 71.7% |
+| 2026 (part) | 18 | Rs 65,156 | 44.4% |
 
-2023 and 2024 are the realistic years: low volatility, thin premiums, roughly
-Rs 50k on Rs 6.5L. 2025 was exceptional and should not be planned around.
+**2023 made almost nothing** — Rs 8,760 across 51 weeks. A full year of trading
+and adjusting for a rounding error. Low volatility means thin premiums, and the
+strategy has no answer to that. 2024 was only marginally better. Plan for the
+possibility of a flat year, not for 2025.
 
 ### The worst weeks
 
 | Week | Loss |
 |---|---:|
-| 2026-01-28 | −Rs 57,019 |
-| 2020-03-06 (COVID) | −Rs 45,101 |
-| 2025-04-11 (tariff selloff) | −Rs 33,086 |
-| 2021-01-29 | −Rs 28,661 |
-| 2020-09-18 | −Rs 28,463 |
+| 2024-11-22 | −Rs 27,619 |
+| 2021-01-29 | −Rs 25,331 |
+| 2020-05-08 | −Rs 19,658 |
+| 2023-12-01 | −Rs 18,165 |
+| 2025-04-04 (tariff selloff) | −Rs 13,684 |
 
 Losses cluster in fast directional moves, which is what a short straddle is
 structurally exposed to. The adjustment reduces that exposure; it does not
 remove it.
+
+Notably COVID does **not** appear here. Holding through expiry day, the same
+strategy lost Rs 45,101 in the week of 2020-03-06 and Rs 1,04,823 in the week of
+2026-01-28. Exiting Monday removes those.
 
 ---
 
@@ -144,44 +150,57 @@ date. See [dataset-reference.md](../../docs/dataset-reference.md).
 
 ---
 
-## Why hourly checking beats watching continuously
+## Exiting before expiry day is the single most valuable rule
 
-This was the last parameter tuned, and it mattered more than anything tuned
-before it. All rows trade every week across the full 6 years:
+This is where the risk lives. Same strategy, same entries, six years, only the
+exit differs:
 
-| Checks | Trigger | Adj/week | CAGR | Max DD |
-|---|---|---:|---:|---:|
-| Every minute (+ strike search) | 0.50 | 14.8 | 16.53% | Rs 99,098 |
-| Every 15 min | 0.50 | 9.2 | 15.60% | Rs 91,993 |
-| Every 30 min | 0.50 | 7.5 | 14.67% | Rs 68,066 |
-| **Every 60 min** | **0.50** | **5.9** | **15.00%** | **Rs 67,919** |
-| Every 60 min | 0.40 | 4.1 | 13.52% | Rs 68,889 |
-| Every 30 min | 0.40 | 4.7 | 13.15% | Rs 79,180 |
-| Every 30 min | 0.35 | 3.8 | 12.48% | Rs 75,466 |
+| | Exit Mon 15:20 | Hold through Tue (expiry day) |
+|---|---:|---:|
+| Net P/L | Rs 7,93,240 | Rs 9,35,327 |
+| CAGR | 13.19% | 14.85% |
+| **Max drawdown** | **Rs 42,159** | **Rs 1,12,597** |
+| **Worst week** | **-Rs 27,619** | **-Rs 1,04,823** |
+| Return per Rs 1L of drawdown | **31.3** | 13.2 |
 
-Minute-level to hourly cuts adjustments **60%** and drawdown **32%** for 1.5 CAGR
-points. Hourly also beats 30-minute on adjustments, profit *and* drawdown at the
-same time — 30-minute is dominated, not a trade-off.
+**Exiting a session early cuts drawdown 62% and the worst week 74%, for 1.7 CAGR
+points.** Risk-adjusted it is 2.4x better.
 
-The reason: a minute-level checker reacts to noise. It opens a leg, pays Rs 60,
-and unwinds it shortly after when the move reverses. An hourly check only sees
-moves that persisted. Checking less often is a better rule, not a concession to
-convenience.
+The clearest evidence is which weeks vanish. Holding through expiry day, the two
+worst weeks in six years are -Rs 1,04,823 (2026-01-28) and -Rs 45,101 (COVID,
+2020-03-06). Exiting Monday, neither appears at all. Expiry-day gamma was
+producing the entire tail.
 
-### If you want less work
+The control run is in
+[`results/weekly_adjusted_straddle_CONTROL_hold_through_expiry_summary.md`](results/weekly_adjusted_straddle_CONTROL_hold_through_expiry_summary.md).
 
-**Hourly checks with a 0.40 trigger** — adjust only when the weak side falls to
-40% of the strong side. **4.1 adjustments per week, 31% less work, for 1.5 CAGR
-points, with drawdown unchanged.**
+## Check frequency: same result, less work
 
-Add `--half-trigger-ratio 0.40`. Results in
-[`results/weekly_adjusted_straddle_LIGHT_summary.md`](results/weekly_adjusted_straddle_LIGHT_summary.md):
-Rs 8,16,250 net, 13.52% CAGR, Rs 68,889 max drawdown.
+Contrary to what an earlier version of this document claimed, checking more often
+does **not** meaningfully change returns or risk. All rows exit Monday and trade
+every week across the full 6 years:
 
-**Do not go below 0.40.** At 0.35 drawdown starts rising again (Rs 75,466) —
-adjusting less leaves the position under-hedged when a move runs.
+| Checks | Trigger | Adj/week | CAGR | Max DD | Worst week |
+|---|---|---:|---:|---:|---:|
+| Every 15 min | 0.50 | 9.2 | 13.29% | Rs 44,061 | -Rs 36,570 |
+| Every 30 min | 0.50 | 7.5 | 13.12% | Rs 45,094 | -Rs 29,809 |
+| **Every 60 min** | **0.50** | **5.9** | **13.18%** | **Rs 42,159** | **-Rs 27,619** |
+| Every 60 min | 0.40 | 4.1 | 12.54% | Rs 47,902 | -Rs 31,309 |
 
----
+Between 15, 30 and 60 minutes the CAGR spread is 0.17 points and drawdown varies
+by Rs 3,000 - noise. **Hourly wins because it delivers that same result with 36%
+fewer adjustments**, not because watching less is inherently better.
+
+Practically: you are not giving anything up by checking once an hour instead of
+every fifteen minutes. Do the version that you will actually execute.
+
+### If you want less work still
+
+Hourly with a **0.40 trigger** cuts to 4.1 adjustments per week, but now costs on
+both other axes: Rs 7,41,620 net (12.54%) and a *higher* Rs 47,902 drawdown.
+Adjusting less leaves the position under-hedged when a move runs. Add
+`--half-trigger-ratio 0.40` if the workload matters more than the numbers; the
+default 0.50 is the better trade.
 
 ## What was rejected
 
@@ -189,13 +208,13 @@ Each was tested, not assumed.
 
 | Rejected | Cost | Evidence |
 |---|---|---|
-| Minute-level monitoring | +60% adjustments, +32% drawdown | Table above |
+| Checking more often than hourly | 36-56% more adjustments for no gain | CAGR spread of 0.17 points across 15/30/60 min |
 | Uncapped adds (no 3-leg cap) | −8 CAGR points, 2.75x the capital | Stacked to 12 legs, Rs 17.8L peak margin |
 | Adds only further OTM than existing legs | **Silently stops adjusting in crashes** | COVID week needed a CE worth 66; the best available beyond the held leg was 27.5, so nothing was added and the week rode naked |
 | ±5 strike search at entry | +Rs 31k drawdown, more adjustments | Recovers weeks earning half what a normal week earns |
 | Skipping weeks where CE/PE differ >20% | −Rs 2,08,348 over 6 years | Those 76 weeks averaged +Rs 2,741 and won 66% of the time |
 | Trigger below 0.40 | Raises drawdown | 0.35 gives Rs 75,466 vs 0.40's Rs 68,889 |
-| Holding to expiry day instead of exiting early | Nothing either way | Under half a CAGR point, identical drawdown, identical on every stress week |
+| Holding through expiry day | **2.7x the drawdown**, 3.8x the worst week | Rs 1,12,597 vs Rs 42,159 max DD; -Rs 1,04,823 vs -Rs 27,619 worst week |
 | Intraday version | 15.00% → 2–3% | Costs consume 73–86% of gross over 893 cycles |
 | Monthly contracts | 15.00% → 3.45% | 4.4x fewer cycles for identical margin |
 | A stop loss | untested | Deliberately excluded — the cap and unwind are the risk control |

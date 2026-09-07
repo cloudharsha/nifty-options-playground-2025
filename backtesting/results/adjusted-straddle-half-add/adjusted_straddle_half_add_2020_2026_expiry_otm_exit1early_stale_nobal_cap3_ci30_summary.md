@@ -19,7 +19,7 @@
 
 ## Results
 
-- Period: `2020-01-01` to `2026-06-16` (6.46 years)
+- Period: `2020-01-01` to `2026-06-15` (6.45 years)
 - Cycles traded: `329` (skipped `5`)
 - Total adds: `1271`, total unwinds: `852`
 - Add trigger fired but **no strike existed in the target band**: `698` times
@@ -33,28 +33,28 @@
 
 | Metric | Value |
 |---|---:|
-| Gross P/L | Rs 1,048,953.50 |
+| Gross P/L | Rs 923,886.75 |
 | Costs | Rs 135,900.00 |
-| **Net P/L** | **Rs 913,053.50** |
-| CAGR | 24.16% |
-| Max drawdown | Rs 68,066.25 |
-| Win rate | 65.35% (215W / 114L) |
-| Profit factor | 1.94 |
-| Best cycle | Rs 48,529.00 |
-| Worst cycle | Rs -57,205.75 |
-| Final equity | Rs 1,213,053.50 |
+| **Net P/L** | **Rs 787,986.75** |
+| CAGR | 22.10% |
+| Max drawdown | Rs 45,093.75 |
+| Win rate | 68.09% (224W / 105L) |
+| Profit factor | 2.63 |
+| Best cycle | Rs 39,559.00 |
+| Worst cycle | Rs -29,808.75 |
+| Final equity | Rs 1,087,986.75 |
 
 ## Yearly
 
 | Year | Cycles | Net P/L | Win % |
 |---|---:|---:|---:|
-| 2020 | 52 | Rs 157,751.25 | 63.5% |
-| 2021 | 52 | Rs 203,457.50 | 71.2% |
-| 2022 | 52 | Rs 149,297.50 | 67.3% |
-| 2023 | 51 | Rs 46,662.50 | 56.9% |
-| 2024 | 51 | Rs 1,527.50 | 56.9% |
-| 2025 | 53 | Rs 323,430.75 | 79.2% |
-| 2026 | 18 | Rs 30,926.50 | 55.6% |
+| 2020 | 52 | Rs 196,931.25 | 75.0% |
+| 2021 | 52 | Rs 140,037.50 | 75.0% |
+| 2022 | 52 | Rs 132,732.50 | 71.2% |
+| 2023 | 51 | Rs 3,287.50 | 56.9% |
+| 2024 | 51 | Rs 17,141.25 | 58.8% |
+| 2025 | 53 | Rs 246,965.50 | 79.2% |
+| 2026 | 18 | Rs 50,891.25 | 44.4% |
 
 ## Skips
 
@@ -65,7 +65,7 @@
 ## Notes
 
 - Options data: `NiftyOptions_2020_2026/Options` (1-minute bars). Spot for ATM: 5-minute index file.
-- Leg prices use the last traded bar at or before the check minute; `stale_prices` in the cycle CSV counts how often a carried-forward bar was used (total 906).
+- Leg prices use the last traded bar at or before the check minute; `stale_prices` in the cycle CSV counts how often a carried-forward bar was used (total 905).
 - Candidate strikes for an add must have an exact bar at the check minute, so illiquid strikes are never selected on a stale quote.
 - Weekly expiry is taken from the options folder structure (Thursday to Aug 2025, Tuesday from Sep 2025, holiday-shifted).
 - Intraday mode rolls to the next weekly on expiry day to avoid same-day-expiry pin behaviour.

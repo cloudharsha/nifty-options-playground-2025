@@ -14,47 +14,47 @@
 - **No stop loss.** No target. Pure test.
 - Position size: 1 lot; lot size from expiry date (75/50/25/75/65 by era)
 - Costs: Rs 30 per order per leg (Rs 30 sell + Rs 30 buy), slippage 0.00 pt/order
-- Pricing: 1-minute option `open`; checks every 15 minute(s)
+- Pricing: 1-minute option `open`; checks every 60 minute(s)
 - Reference capital for CAGR/DD: Rs 300,000
 
 ## Results
 
-- Period: `2020-01-01` to `2026-06-15` (6.45 years)
+- Period: `2020-01-01` to `2026-06-16` (6.46 years)
 - Cycles traded: `329` (skipped `5`)
-- Total adds: `1503`, total unwinds: `1074`
-- Add trigger fired but **no strike existed in the target band**: `1057` times
+- Total adds: `1131`, total unwinds: `722`
+- Add trigger fired but **no strike existed in the target band**: `1156` times
 - Add strike rule: `otm-spot`
 - Held from the day after the previous expiry
 - Contract: **weekly expiry**
-- Total rolls at the leg cap: `453`
+- Total rolls at the leg cap: `238`
 - Entry strike search: +/-`0` strikes around ATM; entries away from ATM: `0` of `329`
-- Orders executed: `5228`
+- Orders executed: `4054`
 - Max legs open at once: `4`
 
 | Metric | Value |
 |---|---:|
-| Gross P/L | Rs 958,983.50 |
-| Costs | Rs 156,840.00 |
-| **Net P/L** | **Rs 802,143.50** |
-| CAGR | 22.34% |
-| Max drawdown | Rs 44,061.25 |
-| Win rate | 70.21% (231W / 98L) |
-| Profit factor | 2.78 |
-| Best cycle | Rs 35,116.25 |
-| Worst cycle | Rs -36,570.00 |
-| Final equity | Rs 1,102,143.50 |
+| Gross P/L | Rs 1,056,946.60 |
+| Costs | Rs 121,620.00 |
+| **Net P/L** | **Rs 935,326.60** |
+| CAGR | 24.51% |
+| Max drawdown | Rs 112,597.40 |
+| Win rate | 65.35% (215W / 114L) |
+| Profit factor | 1.94 |
+| Best cycle | Rs 51,045.00 |
+| Worst cycle | Rs -104,823.00 |
+| Final equity | Rs 1,235,326.60 |
 
 ## Yearly
 
 | Year | Cycles | Net P/L | Win % |
 |---|---:|---:|---:|
-| 2020 | 52 | Rs 199,106.25 | 78.8% |
-| 2021 | 52 | Rs 149,157.50 | 75.0% |
-| 2022 | 52 | Rs 118,837.50 | 73.1% |
-| 2023 | 51 | Rs 2,000.00 | 62.7% |
-| 2024 | 51 | Rs 50,134.25 | 58.8% |
-| 2025 | 53 | Rs 254,874.00 | 81.1% |
-| 2026 | 18 | Rs 28,034.00 | 44.4% |
+| 2020 | 52 | Rs 111,191.25 | 65.4% |
+| 2021 | 52 | Rs 201,707.50 | 71.2% |
+| 2022 | 52 | Rs 166,937.50 | 65.4% |
+| 2023 | 51 | Rs 57,687.50 | 56.9% |
+| 2024 | 51 | Rs 47,768.50 | 58.8% |
+| 2025 | 53 | Rs 356,494.85 | 75.5% |
+| 2026 | 18 | Rs -6,460.50 | 61.1% |
 
 ## Skips
 
@@ -65,14 +65,14 @@
 ## Notes
 
 - Options data: `NiftyOptions_2020_2026/Options` (1-minute bars). Spot for ATM: 5-minute index file.
-- Leg prices use the last traded bar at or before the check minute; `stale_prices` in the cycle CSV counts how often a carried-forward bar was used (total 1678).
+- Leg prices use the last traded bar at or before the check minute; `stale_prices` in the cycle CSV counts how often a carried-forward bar was used (total 660).
 - Candidate strikes for an add must have an exact bar at the check minute, so illiquid strikes are never selected on a stale quote.
 - Weekly expiry is taken from the options folder structure (Thursday to Aug 2025, Tuesday from Sep 2025, holiday-shifted).
 - Intraday mode rolls to the next weekly on expiry day to avoid same-day-expiry pin behaviour.
 
 ## Files
 
-- Cycles: `adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_nobal_cap3_ci15_cycles.csv`
-- Legs: `adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_nobal_cap3_ci15_legs.csv`
-- Equity: `adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_nobal_cap3_ci15_equity.csv`
-- Log: `adjusted_straddle_half_add_2020_2026_expiry_otm_exit1early_stale_nobal_cap3_ci15.log`
+- Cycles: `adjusted_straddle_half_add_2020_2026_expiry_otm_stale_nobal_cap3_ci60_cycles.csv`
+- Legs: `adjusted_straddle_half_add_2020_2026_expiry_otm_stale_nobal_cap3_ci60_legs.csv`
+- Equity: `adjusted_straddle_half_add_2020_2026_expiry_otm_stale_nobal_cap3_ci60_equity.csv`
+- Log: `adjusted_straddle_half_add_2020_2026_expiry_otm_stale_nobal_cap3_ci60.log`

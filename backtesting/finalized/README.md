@@ -9,7 +9,7 @@ a backtest overwrites `../results/`, never this folder.
 
 | Strategy | Instrument | CAGR | Max DD | Effort | Details |
 |---|---|---:|---:|---|---|
-| [Weekly Adjusted ATM Straddle](weekly-adjusted-straddle/) | NIFTY weekly options, 1 lot | 15.00% | Rs 67,919 | ~6 adjustments/week | [README](weekly-adjusted-straddle/README.md) |
+| [Weekly Adjusted ATM Straddle](weekly-adjusted-straddle/) | NIFTY weekly options, 1 lot | 13.19% | Rs 42,159 | ~6 adjustments/week | [README](weekly-adjusted-straddle/README.md) |
 
 ## Reading these
 

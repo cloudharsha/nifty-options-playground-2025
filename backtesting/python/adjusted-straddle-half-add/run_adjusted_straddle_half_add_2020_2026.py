@@ -665,7 +665,11 @@ def build_expiry_cycles(days: List[str], expiries: List[str],
                         expiry_set: Set[str], max_hold: int = 0,
                         exit_lead: int = 0
                         ) -> List[Tuple[str, str, str, List[str]]]:
-    """One cycle per weekly expiry: first session after the previous expiry -> that expiry."""
+    """One cycle per expiry: first session after the previous expiry -> that expiry.
+
+    With exit_lead > 0 the cycle both stops monitoring AND closes out that many
+    sessions early, so the position is genuinely flat on expiry day.
+    """
     out = []
     day_pos = {d: i for i, d in enumerate(days)}
     tradable = [e for e in expiries if e in day_pos]
@@ -678,7 +682,7 @@ def build_expiry_cycles(days: List[str], expiries: List[str],
         if start_idx > end_idx:
             continue
         session_days = days[start_idx:end_idx + 1]
-        out.append((session_days[0], exp, exp, session_days))
+        out.append((session_days[0], days[end_idx], exp, session_days))
     return out
 
 
