@@ -69,7 +69,7 @@ class TradeResult:
 
 
 def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     p = argparse.ArgumentParser(
         description="Backtest intraday ATM straddle with 20% independent SL — NIFTY 2020–2026."
     )
@@ -78,7 +78,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--options-dir", type=Path,
                    default=repo_root / "NiftyOptions_2020_2026" / "Options")
     p.add_argument("--results-dir", type=Path,
-                   default=repo_root / "backtesting" / "results")
+                   default=repo_root / "backtesting" / "results" / "intraday-straddle")
     p.add_argument("--entry-time", default="09:20")
     p.add_argument("--exit-time", default="15:20")
     p.add_argument("--sl-pct", type=float, default=0.20,

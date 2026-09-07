@@ -87,7 +87,7 @@ def qty_for_expiry(expiry_date: str) -> Tuple[int, int]:
 
 
 def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     parser = argparse.ArgumentParser(
         description="Backtest overnight weekly long ATM NIFTY 25-SMA strategy over 2020-2026.",
     )
@@ -96,7 +96,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--options-dir", type=Path,
                         default=repo_root / "NiftyOptions_2020_2026" / "Options")
     parser.add_argument("--results-dir", type=Path,
-                        default=repo_root / "backtesting" / "results")
+                        default=repo_root / "backtesting" / "results" / "25ma-overnight" / "long")
     parser.add_argument("--signal-time", default="15:15")
     parser.add_argument("--entry-time", default="15:29")
     parser.add_argument("--exit-time", default="09:16")

@@ -184,7 +184,7 @@ def compute_cagr(net_total: float, capital: float, first_day: str, last_day: str
 
 
 def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     parser = argparse.ArgumentParser(description="Combined human-compatible NIFTY intraday strategy.")
     parser.add_argument("--spot-15m-file", type=Path,
                         default=repo_root / "nifty" / "NIFTY50_INDEX_15m_last_7y.csv")

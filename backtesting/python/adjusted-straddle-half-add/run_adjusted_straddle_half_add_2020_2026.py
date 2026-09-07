@@ -107,7 +107,7 @@ class Cycle:
 # helpers
 # --------------------------------------------------------------------------- #
 def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     p = argparse.ArgumentParser(
         description="Adjusted ATM straddle with half-trigger / 25% adds — NIFTY 2020-2026."
     )

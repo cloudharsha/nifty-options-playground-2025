@@ -102,7 +102,7 @@ class TradeResult:
 # ---------------------------------------------------------------------------
 
 def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     p = argparse.ArgumentParser(description=f"Backtest: {STRATEGY_NAME} — {INDEX_NAME}")
 
     # Data paths

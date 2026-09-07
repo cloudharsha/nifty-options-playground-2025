@@ -199,7 +199,7 @@ def compute_cagr(net_total: float, capital: float, first_day: str, last_day: str
 
 
 def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     parser = argparse.ArgumentParser(
         description="09:20-start random-skip backtest with 2-SL/day cap.",
     )
@@ -210,7 +210,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--options-dir", type=Path,
                         default=repo_root / "NiftyOptions_2020_2026" / "Options")
     parser.add_argument("--results-dir", type=Path,
-                        default=repo_root / "backtesting" / "results")
+                        default=repo_root / "backtesting" / "results" / "25ma-intraday" / "with-sl-cap")
     parser.add_argument("--last-entry-time", default="15:00")
     parser.add_argument("--exit-time", default="15:15")
     parser.add_argument("--ma-period", type=int, default=25)

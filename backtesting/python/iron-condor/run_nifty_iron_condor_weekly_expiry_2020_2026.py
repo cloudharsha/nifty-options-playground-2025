@@ -514,7 +514,7 @@ def configure_logger(log_path: Path) -> logging.Logger:
 
 
 def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     p = argparse.ArgumentParser(
         description="NIFTY Weekly Iron Condor — expiry-day intraday — 2020-2026"
     )
@@ -523,7 +523,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--options-dir", type=Path,
                    default=repo_root / "NiftyOptions_2020_2026" / "Options")
     p.add_argument("--results-dir", type=Path,
-                   default=repo_root / "backtesting" / "results" / "legacy-3")
+                   default=repo_root / "backtesting" / "results" / "iron-condor")
     p.add_argument("--entry-time", default="09:20")
     p.add_argument("--exit-time", default="15:25")
     p.add_argument("--short-dist", type=int, default=200,

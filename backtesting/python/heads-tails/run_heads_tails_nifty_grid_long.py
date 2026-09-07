@@ -139,14 +139,14 @@ class TradeResult:
 # ---------------------------------------------------------------------------
 
 def parse_args() -> argparse.Namespace:
-    repo_root = Path(__file__).resolve().parents[2]
+    repo_root = Path(__file__).resolve().parents[3]
     p = argparse.ArgumentParser(description="Heads & Tails LONG NIFTY parameter grid.")
     p.add_argument("--spot-file", type=Path,
                    default=repo_root / "nifty" / "NIFTY50_INDEX_5m_last_7y.csv")
     p.add_argument("--options-dir", type=Path,
                    default=repo_root / "NiftyOptions_2020_2026" / "Options")
     p.add_argument("--results-dir", type=Path,
-                   default=repo_root / "backtesting" / "results")
+                   default=repo_root / "backtesting" / "results" / "heads-tails")
     p.add_argument("--capital", type=float, default=500_000.0)
     return p.parse_args()
 
