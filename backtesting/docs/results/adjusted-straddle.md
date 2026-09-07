@@ -27,6 +27,28 @@ Capital Base is what the strategy actually needs, not a fixed reference - read t
 | Current | 2020-2026 | Adjusted ATM Straddle - Weekly held to expiry (cap 3, OTM-vs-spot, stale-entry probe) | Profit | Rs 6.45L | Rs 9,54,046 | 15.16% CAGR | Rs 41,725 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_stale_cap3_summary.md) | Byte-identical traded set to the main cap-3 run: relaxing the entry-bar rule recovers zero weeks, so the data skips carry no survivorship bias |
 | Current | 2020-2026 | Adjusted ATM Straddle - Monthly contracts, intraday (cap 3, OTM-vs-spot) | Profit | Rs 6.49L | Rs 90,859 | 2.06% CAGR | Rs 35,735 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_intraday_otm_monthly_stale_srch5_cap3_summary.md) | Only 540 of 1,606 days traded - before 2025 the dataset carries just the final week of each monthly contract |
 | Current | 2020-2026 | Adjusted ATM Straddle - Monthly contracts, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 1,57,898 | 3.45% CAGR | Rs 41,016 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_monthly_hold4_stale_srch5_fb_cap3_summary.md) | All 76 monthly cycles traded, no skips. 2022 and 2023 lose; win rate 45-58% every year, barely above a coin flip |
+| Current | 2020-2026 | Adjusted ATM Straddle - Weekly, last 4 sessions to expiry (cap 3, OTM-vs-spot, +/-5 strike search, never skip) | Profit | Rs 6.49L | Rs 7,93,303 | 13.23% CAGR | Rs 63,497 | [Summary](../../results/adjusted-straddle-half-add/adjusted_straddle_half_add_2020_2026_expiry_otm_hold4_stale_srch5_fb_cap3_summary.md) | Hold-matched control for the monthly row: same capital, same 4-session hold, same rules. 333 cycles vs monthly's 76 |
+
+## Monthly vs weekly
+
+Holding the same strategy on monthly contracts is worse, and the reason is
+frequency rather than edge. Both rows below use the same capital base, the same
+4-session hold, the same rules and the same six years, so the only difference is
+the contract:
+
+| Contract | Cycles | Per cycle | Net P/L | CAGR |
+|---|---:|---:|---:|---:|
+| Weekly | 333 | Rs 2,382 | Rs 7,93,303 | 13.23% |
+| Monthly | 76 | Rs 2,078 | Rs 1,57,898 | 3.45% |
+
+A monthly cycle earns 87% of what a weekly cycle earns - close enough that the
+monthly contract is not the problem. There are simply **4.4x fewer of them** for
+the same margin commitment, and the capital sits idle between expiries. That is
+the whole gap.
+
+The corollary is that the strategy's return is roughly linear in how often it
+can be run, which is worth knowing before trying to improve it by tuning the
+adjustment rules.
 
 ## A note on the monthly rows
 
