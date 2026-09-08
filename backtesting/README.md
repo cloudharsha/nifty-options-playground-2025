@@ -37,6 +37,7 @@ rather than the exploration.
 | [Strangles](docs/results/strangles.md) | Short OTM strangles, various holds | 6 |
 | [Combined NIFTY + SENSEX](docs/results/combined-index.md) | Routes each weekday to whichever index suits it | 3 |
 | [Human-Compatible](docs/results/combined-human.md) | 15-minute checks and GTT orders instead of constant monitoring | 3 |
+| [Expiry-Day Short Premium](docs/results/expiry-day-short-premium.md) | Straddle vs strangles sold on expiry day, per-leg stop swept 50-100% | 8 |
 | [Heads & Tails](docs/results/heads-tails.md) | Random-entry controls | 3 |
 | [Directional & Signal Studies](docs/results/directional-studies.md) | Underlying-only signal tests | 9 |
 
