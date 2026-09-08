@@ -32,6 +32,7 @@ rather than the exploration.
 | [25-SMA Intraday](docs/results/25ma-intraday.md) | Short ATM on a 25-SMA signal, closed same session | 14 |
 | [25-SMA Overnight](docs/results/25ma-overnight.md) | Same signal carried overnight to weekly expiry, plus the strike-offset sweep | 23 |
 | [Adjusted Straddle](docs/results/adjusted-straddle.md) | ATM straddle that adds to the weak side as the market moves, then unwinds | 15 |
+| [Adjusted Straddle — Sleeve A](docs/results/adjusted-straddle-sleeve-a.md) | External spec replicated end to end: VIX gate, 4-leg cap, full statutory costs, margin-based sizing | 2 |
 | [Intraday Straddle](docs/results/intraday-straddle.md) | Plain ATM straddle, one session, independent or joint stops | 11 |
 | [Iron Condors & Flies](docs/results/iron-condor.md) | Defined-risk short premium | 5 |
 | [Strangles](docs/results/strangles.md) | Short OTM strangles, various holds | 6 |
@@ -49,13 +50,25 @@ CAGR are not comparable numbers.
 | Strategy | Net P/L | CAGR | Max DD |
 |---|---:|---:|---:|
 | [Heads & Tails random-entry control](docs/results/heads-tails.md) | Rs 9,73,379 | 17.38% | Rs 4,81,637 |
+| [Adjusted straddle Sleeve A, margin 0.19](docs/results/adjusted-straddle-sleeve-a.md) | Rs 54,46,185 | 33.61% | Rs 2,17,933 |
+| [Adjusted straddle Sleeve A, margin 0.50](docs/results/adjusted-straddle-sleeve-a.md) | Rs 17,36,875 | 16.95% | Rs 77,100 |
 | [Adjusted straddle, held to expiry, 3-leg cap](docs/results/adjusted-straddle.md) | Rs 9,54,046 | 15.16% | Rs 41,725 |
 | [25-SMA overnight, ITM 200 offset](docs/results/25ma-overnight.md) | Rs 18,24,282 | 14.93% | Rs 3,53,561 |
 | [25-SMA intraday trailing, 09:30 entry](docs/results/25ma-intraday.md) | −Rs 14,15,087 | −100% | Rs 19,86,026 |
 
-**The random-entry control is now first, and nothing beats it.** That is the
-point of running it: any signal-based strategy below ~17% CAGR on this
-instrument has not shown that its signal beats a coin flip on the same costs.
+**Read this table with the drawdown column, not just the CAGR column.** The
+random-entry control still leads every unlevered row on raw CAGR — that is the
+point of running it: a strategy below ~17% CAGR here has not shown its signal
+beats a coin flip on the same costs. But it earns that 17.38% while giving back
+Rs 4,81,637 of a Rs 5L base, a 96% drawdown. Sleeve A at margin 0.50 returns
+16.95% for a 7.42% drawdown, which is the first row in this table to match the
+coin flip's return without taking ruinous risk to get it.
+
+The Sleeve A margin-0.19 row heads the table on CAGR and should be read as a
+warning rather than a result: it is the *same trades* as the row below it, sized
+2.9x larger against a margin assumption the position cannot support. Leverage
+belongs in this table because it is what the numbers say, not because it is an
+edge — see [the Sleeve A write-up](docs/results/adjusted-straddle-sleeve-a.md#the-margin-rate-is-leverage-not-a-modelling-choice).
 
 The two 25-SMA rows used to head this table at 31.72% and 19.32%. Both were
 inflated by lookahead — a trailing stop that filled at a price recorded before
