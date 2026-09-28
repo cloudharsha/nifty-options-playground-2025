@@ -39,6 +39,7 @@ rather than the exploration.
 | [Combined NIFTY + SENSEX](docs/results/combined-index.md) | Routes each weekday to whichever index suits it | 3 |
 | [Human-Compatible](docs/results/combined-human.md) | 15-minute checks and GTT orders instead of constant monitoring | 3 |
 | [Expiry-Day Short Premium](docs/results/expiry-day-short-premium.md) | Straddle vs strangles sold on expiry day, per-leg stop swept 50-100%, plus a premium-band variant | 11 |
+| [Directional Intraday](docs/results/directional-intraday.md) | Gap fade/follow, opening range, previous-day levels — signal on spot vs the same signal as a long option | 4 |
 | [Heads & Tails](docs/results/heads-tails.md) | Random-entry controls | 3 |
 | [Directional & Signal Studies](docs/results/directional-studies.md) | Underlying-only signal tests | 9 |
 
