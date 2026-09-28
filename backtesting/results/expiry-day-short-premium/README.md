@@ -21,6 +21,23 @@ Without `fb` the strict filter skips 189 of 334 expiry days; see the
 [index doc](../../docs/results/expiry-day-short-premium.md#the-balance-filter-is-the-binding-constraint)
 for why the ATM strike is already the most balanced pair on expiry day.
 
+## The premium-band run
+
+`expiry_day_premium_band_strangle_*` is a separate script and a separate question:
+choose the strikes by **premium** (sell whatever is priced Rs 5–10, nearest the
+Rs 7.50 midpoint) instead of by distance from ATM, at **one lot**. Its filenames
+encode different tokens:
+
+| Token | Meaning |
+|---|---|
+| `prem5-10` | Target premium band, in rupees |
+| `lots1` | Position size in lots — flat brokerage makes this matter a lot here |
+| `e1000` | Entry time 10:00 |
+| `slip0` | Zero-slippage sensitivity run; without it, 0.50 pt/order |
+
+Do not compare its rows against the table below: it is one lot on Rs 2.56L of
+modelled margin, not ~300 quantity on Rs 11.1L.
+
 ## Files
 
 | File | Description |
@@ -53,6 +70,13 @@ straddle's drawdown by roughly a quarter, nearly triples strangle 200 and lifts
 strangle 300 almost sixfold. The further out the strike, the wider the stop has
 to be. Both the strict and full samples were swept so the chosen levels are ones
 that rank well in both, not just the luckier one.
+
+**Choosing strikes by premium instead of by distance does not rescue the far
+strikes.** The premium-band run sells Rs 5–10 at 10:00 for one lot and nets
+Rs 6,299 across 6.5 years against a Rs 12,563 drawdown — flat. Costs are 25.5% of
+everything collected, and the entire result sits inside the slippage assumption:
+at zero slippage the same trades net Rs 45,909. See the
+[index doc](../../docs/results/expiry-day-short-premium.md#premium-band-strangle--selling-rs-510-at-1000-one-lot).
 
 Produced by [`../../python/expiry-day-short-premium/`](../../python/expiry-day-short-premium/).
 Indexed in [expiry-day-short-premium.md](../../docs/results/expiry-day-short-premium.md).

@@ -16,8 +16,10 @@ Back to the [backtesting index](../../README.md).
 Capital Base is what the strategy actually needs, not a fixed reference - read the
 [index notes](../../README.md#reading-the-numbers) before comparing rows across families.
 
-All rows are ~300 quantity on the same 334 expiry days, so the peak margin is
-effectively identical (Rs 11.1L) and the columns are directly comparable.
+All rows in the table below are ~300 quantity on the same 334 expiry days, so the
+peak margin is effectively identical (Rs 11.1L) and the columns are directly
+comparable. The [premium-band strangle](#premium-band-strangle--selling-rs-510-at-1000-one-lot)
+further down is **one lot** on Rs 2.56L, and is not comparable to these rows.
 
 | Status | Period | Test | Result | Capital Base | Net P/L | CAGR / Return | Max DD | Summary | Remarks |
 |---|---|---|---:|---:|---:|---:|---:|---|---|
@@ -149,6 +151,91 @@ Skipping does buy a materially lower drawdown (Rs 75,388 vs Rs 1,17,680) but
 halves the sample and lowers the return. For strangles, balancing the two legs
 independently removes nearly every skip — but for the 100-wide strangle it lands
 in the same place as the fallback, so it is not doing much work.
+
+## Premium-band strangle — selling Rs 5–10 at 10:00, one lot
+
+A different way to choose the strikes: instead of a fixed distance from ATM, sell
+the CE and the PE whose **premium** sits in a Rs 5–10 band, picking the strike
+nearest the Rs 7.50 midpoint on each side independently. Entry 10:00, stop at 2×
+entry per leg (a 100% loss), exit 15:20, **one lot**, no balance filter.
+
+The motivation is sound: a fixed 300-point offset sells a different amount of
+premium at Nifty 12,000 than at Nifty 25,000, while a premium band sells the same
+amount throughout and lets the strike distance float with volatility. It does
+exactly that — average CE distance rises from 115 points in 2020 to 241 in 2026 —
+and the strategy still does not pay.
+
+- Script: [`run_expiry_day_premium_band_strangle_2020_2026.py`](../../python/expiry-day-short-premium/run_expiry_day_premium_band_strangle_2020_2026.py)
+
+| Status | Period | Test | Result | Capital Base | Net P/L | CAGR | Max DD | Summary | Remarks |
+|---|---|---|---:|---:|---:|---:|---:|---|---|
+| Current | 2020–2026 | Premium band Rs 5–10, 10:00 entry, 2× stop, **1 lot**, 0.50 pt/order slippage | Flat | Rs 2.56L | Rs 6,299 | 0.38% | Rs 12,563 | [Summary](../../results/expiry-day-short-premium/expiry_day_premium_band_strangle_2020_2026_sl200_prem5-10_lots1_e1000_summary.md) | **Does not pay.** 331 days, win 39.9%, PF 1.10, ret/DD 0.5 |
+| Current | 2020–2026 | Same, **zero slippage** (flat Rs 100/trade only) | Profit | Rs 2.56L | Rs 45,909 | 2.59% | Rs 5,630 | [Summary](../../results/expiry-day-short-premium/expiry_day_premium_band_strangle_2020_2026_sl200_prem5-10_lots1_e1000_slip0_summary.md) | Sensitivity, not a result — see below |
+| Current | 2020–2026 | Same, 09:20 entry | Flat | Rs 2.56L | Rs 4,132 | 0.25% | Rs 12,355 | [Summary](../../results/expiry-day-short-premium/expiry_day_premium_band_strangle_2020_2026_sl200_prem5-10_lots1_e0920_summary.md) | Entry time is not what is wrong |
+
+### The whole result lives inside the fill assumption
+
+This is the finding, and it is not a finding about the strategy:
+
+| Slippage | Net P/L | Win rate | Profit factor | Max DD |
+|---|---:|---:|---:|---:|
+| 0.50 pt/order (family default) | Rs 6,299 | 39.9% | 1.10 | Rs 12,563 |
+| 0 (flat Rs 100/trade only) | **Rs 45,909** | 47.1% | 2.06 | Rs 5,630 |
+
+Slippage alone is Rs 39,610 — **86% of the gross edge**. Half a point per order is
+a rounding error on a 106-point straddle and a seventh of the premium on a
+Rs 7 option. Nothing here is robust to a fill assumption that swings the answer
+by 7×, so this row should be read as a measurement of fill quality, not of the
+strategy. Anyone trading this needs their own fills before the backtest means
+anything.
+
+### Flat costs do not scale down, and one lot is the wrong size for this
+
+| Size | Premium collected | Brokerage | Slippage | Total costs |
+|---|---:|---:|---:|---:|
+| 1 lot | Rs 2,84,972 | 11.6% | 13.9% | **25.5%** |
+| 2 lots | Rs 5,69,944 | 5.8% | 13.9% | 19.7% |
+| 4 lots | Rs 11,39,888 | 2.9% | 13.9% | 16.8% |
+
+Rs 25/order is Rs 100 per completed position whether you sell one lot or four, so
+at one lot brokerage alone takes 11.6% of everything collected. The strategy is
+paying a fixed toll against the smallest premium in the chain. Slippage, being
+per-point, does not improve with size — which is why even four lots only gets the
+ratio to 16.8%.
+
+### Why the band is often unreachable
+
+19.3% of days could not find a strike inside Rs 5–10 on at least one side and fell
+back to the nearest available — 48 legs were **too cheap**, 19 too rich. The
+failures cluster hard in 2020 (25 of 53 days).
+
+The cause is the strike grid, not the market. NIFTY strikes are 50 points apart at
+every index level, so a strike step was ~0.4% of spot in 2020 and is ~0.2% today.
+Premium therefore falls off a cliff between adjacent strikes. The 2020-01-16 chain
+at 10:00 reads 33.60 → **8.65** → 0.80 across three consecutive strikes: the
+Rs 5–10 window contains at most one strike, and on many days it contains none —
+it falls into the gap between two.
+
+**A Rs 5–10 band is a specification written for today's index level.** Applied
+back to 2020 it quietly becomes a different strategy. Expressing the target as a
+percentage of spot, or as a delta, would travel across the sample; an absolute
+rupee band does not.
+
+### A 2× stop on a Rs 7 option is seven points away
+
+One leg is stopped on **57.7%** of days and both on 6.9%; only 35.3% of days see
+both legs run to 15:20. That is the same mechanism the
+[width comparison](#which-structure-to-sell) already identified —
+a proportional stop on a cheap option is an absolute distance measured in noise —
+and the premium band lands squarely in the territory where it bites.
+
+Year by year the sample is thin and unstable: 2024 lost Rs 6,068 and 2023 lost
+Rs 3,120, while 2025 made Rs 9,072 and carries the whole result.
+
+Three days are skipped because the contracts carry no bars at all on their own
+expiry day (2026-05-05, 2026-05-12, 2026-06-09) — a dataset gap, not a strategy
+decision. The script prices only the exact entry minute and never substitutes a
+stale quote.
 
 ## Honest caveats
 
