@@ -27,9 +27,10 @@ class IndexConfig:
     contract_prefix: str         # "NIFTY" or "SENSEX"
     lot_size_fixed: Optional[int]  # None → use expiry-aware NIFTY sizing
     num_lots_fixed: Optional[int]
+    output_suffix: str = ""
 
     def base_filename(self) -> str:
-        return f"intraday_atm_straddle_expiry_incl_{self.name.lower()}"
+        return f"intraday_atm_straddle_expiry_incl_{self.name.lower()}{self.output_suffix}"
 
     def round_to_strike(self, price: float) -> int:
         r = self.strike_rounding
@@ -503,7 +504,7 @@ def write_summary(
         )
 
     lines = [
-        f"# {index_name} Intraday ATM Straddle — 20% Independent SL, Expiry Day Included",
+        f"# {index_name} Intraday ATM Straddle — {sl_pct * 100:.0f}% Independent SL, Expiry Day Included",
         "",
         "## Strategy Details",
         "",
@@ -602,7 +603,7 @@ def write_summary(
         "",
         "## Remarks",
         "",
-        "- SL is 20% above entry price per leg. Each leg is managed independently.",
+        f"- SL is {sl_pct * 100:.0f}% above entry price per leg. Each leg is managed independently.",
         "- Gap SL: if option opens ≥ SL price, fill at candle open.",
         "- Intrabar SL: if high ≥ SL price, fill at SL price.",
         "- SL monitoring uses the option contract's 1-minute candles.",
@@ -650,6 +651,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--slippage-per-order", type=float, default=0.5)
     p.add_argument("--sensex-lot-size", type=int, default=10)
     p.add_argument("--sensex-lots", type=int, default=10)
+    p.add_argument("--output-suffix", default="",
+                   help="Appended to each output base name, e.g. _sl40")
     return p.parse_args()
 
 
@@ -667,6 +670,7 @@ def main() -> None:
             contract_prefix="NIFTY",
             lot_size_fixed=None,
             num_lots_fixed=None,
+            output_suffix=args.output_suffix,
         ))
     if args.index in ("SENSEX", "ALL"):
         configs.append(IndexConfig(
@@ -677,6 +681,7 @@ def main() -> None:
             contract_prefix="SENSEX",
             lot_size_fixed=args.sensex_lot_size,
             num_lots_fixed=args.sensex_lots,
+            output_suffix=args.output_suffix,
         ))
 
     for cfg in configs:

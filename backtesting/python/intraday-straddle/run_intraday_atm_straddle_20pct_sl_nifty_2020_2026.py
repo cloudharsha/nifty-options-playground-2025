@@ -12,9 +12,6 @@ from typing import Dict, List, Optional, Set, Tuple
 
 IST_SUFFIX = "+05:30"
 BASE_FILENAME = "intraday_atm_straddle_20pct_sl_nifty_2020_2026"
-DAYWISE_FILENAME = f"{BASE_FILENAME}_daywise.csv"
-SUMMARY_FILENAME = f"{BASE_FILENAME}_summary.md"
-LOG_FILENAME = f"{BASE_FILENAME}.log"
 WEEKDAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 
@@ -87,6 +84,8 @@ def parse_args() -> argparse.Namespace:
                    help="Max allowed |CE-PE|/max(CE,PE) (0.20 = 20%%)")
     p.add_argument("--brokerage-per-order", type=float, default=25.0)
     p.add_argument("--slippage-per-order", type=float, default=0.5)
+    p.add_argument("--output-name", default=BASE_FILENAME,
+                   help="Base name for the log, daywise CSV and summary files")
     return p.parse_args()
 
 
@@ -275,7 +274,7 @@ def make_skip(
 
 def run_backtest(args: argparse.Namespace) -> List[TradeResult]:
     args.results_dir.mkdir(parents=True, exist_ok=True)
-    logger = configure_logger(args.results_dir / LOG_FILENAME)
+    logger = configure_logger(args.results_dir / f"{args.output_name}.log")
 
     trading_days, spot_open_by_day = load_spot_data(args.spot_file, args.entry_time)
     expiries, expiry_set = load_expiry_folders(args.options_dir)
@@ -475,7 +474,7 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
         skip_by_reason[r.skip_reason] = skip_by_reason.get(r.skip_reason, 0) + 1
 
     lines = [
-        "# NIFTY Intraday ATM Straddle — 20% Independent SL (2020–2026)",
+        f"# NIFTY Intraday ATM Straddle — {args.sl_pct * 100:.0f}% Independent SL (2020–2026)",
         "",
         "## Strategy Details",
         "",
@@ -629,7 +628,7 @@ def write_summary(results: List[TradeResult], output_path: Path, args: argparse.
         "",
         "## Remarks",
         "",
-        "- SL is 20% above entry price per leg. Each leg is managed independently.",
+        f"- SL is {args.sl_pct * 100:.0f}% above entry price per leg. Each leg is managed independently.",
         "- Gap SL: if option opens ≥ SL price, fill at candle open.",
         "- Intrabar SL: if high ≥ SL price, fill at SL price.",
         "- SL monitoring uses the option contract's 1-minute candles.",
@@ -645,13 +644,15 @@ def main() -> None:
     args = parse_args()
     args.results_dir.mkdir(parents=True, exist_ok=True)
     results = run_backtest(args)
-    write_daywise_csv(results, args.results_dir / DAYWISE_FILENAME)
-    write_summary(results, args.results_dir / SUMMARY_FILENAME, args)
+    daywise_path = args.results_dir / f"{args.output_name}_daywise.csv"
+    summary_path = args.results_dir / f"{args.output_name}_summary.md"
+    write_daywise_csv(results, daywise_path)
+    write_summary(results, summary_path, args)
     traded = sum(1 for r in results if r.status == "TRADED")
     skipped = sum(1 for r in results if r.status == "SKIPPED")
     print(f"Done. Traded={traded} Skipped={skipped} Total={len(results)}")
-    print(f"Daywise CSV : {args.results_dir / DAYWISE_FILENAME}")
-    print(f"Summary     : {args.results_dir / SUMMARY_FILENAME}")
+    print(f"Daywise CSV : {daywise_path}")
+    print(f"Summary     : {summary_path}")
 
 
 if __name__ == "__main__":
