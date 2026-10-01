@@ -15,14 +15,14 @@ Capital Base is what the strategy actually needs, not a fixed reference - read t
 | Archived | 2025 | Intraday ATM Straddle — Independent SL per Leg (1 lot, 09:20–15:20, 2× SL each leg) | Profit | Rs 3L | Rs 40,756.25 | 13.59% | Rs 38,647.00 | [Summary](../../results/legacy/intraday_atm_straddle_indep_sl_2025_summary.md) |  |
 | Archived | 2025 | Intraday ATM Straddle — 25-period 15m MA Filter (1 lot, 09:40–15:20, MA entry + dynamic MA SL) | Profit | Rs 3L | Rs 35,710.36 | 11.90% | Rs 24,078.33 | [Summary](../../results/legacy/intraday_atm_straddle_ma25_2025_summary.md) |  |
 | Archived | 2025 | Intraday ATM Straddle — Joint SL (1 lot, 09:20–15:20, 2× SL exits both legs) | Profit | Rs 3L | Rs 16,595.00 | 5.53% | Rs 53,756.50 | [Summary](../../results/legacy/intraday_atm_straddle_joint_sl_2025_summary.md) |  |
-| Current | ~6Y | NIFTY Intraday ATM Straddle — Expiry-Inclusive, **50% Ind. SL** (~300 qty, 09:20–15:20, no balance filter) | Profit | Rs 10L | Rs 15,57,357 | N/A | Rs 3,50,852 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_expiry_incl_nifty_sl50_summary.md) | Best of the sweep, ret/DD 4.4. Two-thirds of the profit is expiry day. See the [stop-loss sweep](#stop-loss-sweep--20-vs-40-vs-50) |
-| Current | ~6Y | NIFTY Intraday ATM Straddle — Expiry-Inclusive, **40% Ind. SL** (~300 qty, 09:20–15:20, no balance filter) | Profit | Rs 10L | Rs 10,64,310 | N/A | Rs 3,88,168 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_expiry_incl_nifty_sl40_summary.md) | Same net as 20%, deeper drawdown. 2026 so far −Rs 3.14L |
-| Current | ~6Y | NIFTY Intraday ATM Straddle — Expiry-Inclusive (~300 qty, 09:20–15:20, 20% Ind. SL per leg, no balance filter) | Profit | Rs 10L | Rs 10,48,326 | N/A | Rs 2,93,983 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_expiry_incl_nifty_summary.md) |  |
+| Current | ~6Y | NIFTY Intraday ATM Straddle — Expiry-Inclusive, **50% Ind. SL** (~300 qty, 09:20–15:20, no balance filter) | Profit | Rs 10L | Rs 15,57,357 | 15.66% CAGR | Rs 3,50,852 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_expiry_incl_nifty_sl50_summary.md) | Best of the sweep, ret/DD 4.4. Two-thirds of the profit is expiry day. See the [stop-loss sweep](#stop-loss-sweep--20-vs-40-vs-50) |
+| Current | ~6Y | NIFTY Intraday ATM Straddle — Expiry-Inclusive, **40% Ind. SL** (~300 qty, 09:20–15:20, no balance filter) | Profit | Rs 10L | Rs 10,64,310 | 11.88% CAGR | Rs 3,88,168 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_expiry_incl_nifty_sl40_summary.md) | Same net as 20%, deeper drawdown. 2026 so far −Rs 3.14L |
+| Current | ~6Y | NIFTY Intraday ATM Straddle — Expiry-Inclusive (~300 qty, 09:20–15:20, 20% Ind. SL per leg, no balance filter) | Profit | Rs 10L | Rs 10,48,326 | 11.75% CAGR | Rs 2,93,983 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_expiry_incl_nifty_summary.md) |  |
 | Current | 2024–2026 | SENSEX Intraday ATM Straddle — Expiry-Inclusive (100 qty, 09:20–15:20, 20% Ind. SL per leg, balance filter) | Profit | Rs 5L | Rs 3,29,040 | N/A | Rs 1,70,381 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_expiry_incl_sensex_summary.md) |  |
-| Current | ~6Y | NIFTY Intraday ATM Straddle — **50% Ind. SL**, Weekly Expiry (~300 qty, 09:20–15:20, balance filter) | Profit | Rs 10L | Rs 4,84,211 | N/A | Rs 2,30,816 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_50pct_sl_nifty_2020_2026_summary.md) | Best non-expiry-day result, ret/DD 2.1. Lost in 2023, 2024 and 2026 |
-| Current | ~6Y | NIFTY Intraday ATM Straddle — **40% Ind. SL**, Weekly Expiry (~300 qty, 09:20–15:20, balance filter) | Profit | Rs 10L | Rs 1,50,263 | N/A | Rs 3,52,539 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_40pct_sl_nifty_2020_2026_summary.md) | Worse than both 20% and 50% — drawdown larger than the profit |
+| Current | ~6Y | NIFTY Intraday ATM Straddle — **50% Ind. SL**, Weekly Expiry (~300 qty, 09:20–15:20, balance filter) | Profit | Rs 10L | Rs 4,84,211 | 6.32% CAGR | Rs 2,30,816 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_50pct_sl_nifty_2020_2026_summary.md) | Best non-expiry-day result, ret/DD 2.1. Lost in 2023, 2024 and 2026 |
+| Current | ~6Y | NIFTY Intraday ATM Straddle — **40% Ind. SL**, Weekly Expiry (~300 qty, 09:20–15:20, balance filter) | Profit | Rs 10L | Rs 1,50,263 | 2.20% CAGR | Rs 3,52,539 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_40pct_sl_nifty_2020_2026_summary.md) | Worse than both 20% and 50% — drawdown larger than the profit |
 | Current | 2024–2026 | SENSEX Intraday ATM Straddle — 20% Ind. SL, Monthly Expiry (100 qty, 09:20–15:20, balance filter) | Profit | Rs 5L | Rs 2,52,845 | N/A | Rs 1,12,754 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_20pct_sl_sensex_monthly_2024_2026_summary.md) |  |
-| Current | ~6Y | NIFTY Intraday ATM Straddle — 20% Ind. SL, Weekly Expiry (~300 qty, 09:20–15:20, balance filter) | Profit | Rs 10L | Rs 2,16,384 | N/A | Rs 2,60,277 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_20pct_sl_nifty_2020_2026_summary.md) |  |
+| Current | ~6Y | NIFTY Intraday ATM Straddle — 20% Ind. SL, Weekly Expiry (~300 qty, 09:20–15:20, balance filter) | Profit | Rs 10L | Rs 2,16,384 | 3.09% CAGR | Rs 2,60,277 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_20pct_sl_nifty_2020_2026_summary.md) |  |
 | Current | 2024–2026 | SENSEX Intraday ATM Straddle — 20% Ind. SL, Weekly Expiry (100 qty, 09:20–15:20, balance filter) | Profit | Rs 5L | Rs 1,44,762 | N/A | Rs 1,72,031 | [Summary](../../results/intraday-straddle/intraday_atm_straddle_20pct_sl_sensex_2024_2026_summary.md) |  |
 | Archived | 2025 | Short ATM Weekly Straddle 2025 | Loss | Rs 10L | Rs -10,824.00 | -1.08% | N/A | [Summary](../../results/legacy/short_atm_weekly_straddle_2025_summary.md) |  |
 | Archived | 2025 | Gap Open ATM Straddle 09:15 2025 | Loss | Rs 10L | Rs -2,73,125.00 | -27.31% | N/A | [Summary](../../results/legacy-2/gap_open_atm_straddle_0915_2025_summary.md) |  |
@@ -74,6 +74,40 @@ the rest saw both legs stopped (567 / 200 / 128).
 | 2024 | 3,58,244 | 49,793 | 2,35,374 | 2,43,978 | −2,08,380 | −96,474 |
 | 2025 | 1,45,477 | 2,03,446 | 2,50,261 | −78,629 | 1,59,756 | 80,348 |
 | 2026 (to Jun) | −1,68,468 | −3,14,343 | −1,56,800 | −72,970 | −2,22,487 | −59,584 |
+
+### CAGR, streaks and time under water
+
+CAGR is on the Rs 10L reference base used for every short-option row in this index
+(see [reading the numbers](../../README.md#reading-the-numbers)), from first to last
+traded day (6.46 years). It is not a return on actual margin. Streaks count
+consecutive traded days; a day with net P/L of zero or less is a loss.
+
+| Variant | SL | CAGR | Max DD (% of base) | Longest win streak | Longest loss streak | Longest time under water |
+|---|---|---:|---:|---|---|---|
+| Exp-incl | 20% | 11.75% | 29.4% | 9 days, +Rs 93,993 (Dec 2021) | 13 days, −Rs 1,67,179 (Feb–Mar 2021) | 376 days, Jun 2025 → not recovered |
+| Exp-incl | 40% | 11.88% | 38.8% | 24 days, +Rs 1,72,554 (Apr–May 2021) | 5 days, −Rs 59,066 (Nov 2020) | 364 days, Jan 2023 → Jan 2024 |
+| **Exp-incl** | **50%** | **15.66%** | 35.1% | 20 days, +Rs 1,13,455 (Apr–May 2021) | 8 days, −Rs 62,915 (Apr 2023) | 462 days, Nov 2022 → Feb 2024 |
+| Weekly | 20% | 3.09% | 26.0% | 10 days, +Rs 1,67,305 (Mar 2026) | 12 days, −Rs 1,62,930 (Feb–Mar 2021) | 546 days, Dec 2024 → not recovered |
+| Weekly | 40% | 2.20% | 35.3% | 23 days, +Rs 1,90,171 (Mar–May 2021) | 5 days, −Rs 27,899 (Aug 2021) | 1,327 days, Oct 2022 → not recovered |
+| Weekly | 50% | 6.32% | 23.1% | 23 days, +Rs 1,50,528 (Mar–May 2021) | 7 days, −Rs 41,028 (Aug 2021) | 1,380 days, Sep 2022 → not recovered |
+
+The wider stops shorten the losing streaks (13 days at 20% against 5–8 at 40–50%)
+because fewer days end with both legs stopped. The streaks are not where the damage
+is, though: the worst streak costs Rs 0.3–1.7L while the max drawdown is Rs 2.3–3.9L,
+built from long stretches of mixed days. The expiry-inclusive 40% and 50% runs are
+also in their deepest drawdown right now (peaks in Jun 2025 and Feb 2026), and the
+weekly 40% and 50% runs have not made a new equity high since 2022.
+
+### Known data gap — April 2026
+
+Expiry day is taken from the option data folders, not from a weekday, so the move
+from Thursday to Tuesday expiry (Sep 2025) and holiday-shifted expiries are handled.
+The data has no weekly expiry folders between 2026-03-24 and 2026-04-28, though, so
+on 15 traded days (2026-03-25 to 2026-04-21) every run sold the 28 April monthly
+contract, 7–34 days from expiry, instead of the same-week one. Those days net
+−Rs 44,446 (20%), −Rs 50,530 (40%) and −Rs 60,479 (50%) in both variants. The
+figures above still include them; excluding them raises every total slightly and
+does not change the ranking.
 
 ### What it says
 
